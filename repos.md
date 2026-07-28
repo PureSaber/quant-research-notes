@@ -28,7 +28,7 @@ quant-report-hub ── reads ──► future_spread/output/
 - https://github.com/PureSaber/a-share-multifactor
 - https://github.com/PureSaber/sklearn-stock-trend
 - https://github.com/PureSaber/currency-converter
-- https://github.com/PureSaber/quant-data-kit (pending push)
-- https://github.com/PureSaber/quant-lab (pending push)
-- https://github.com/PureSaber/quant-report-hub (pending push)
-- https://github.com/PureSaber/quant-research-notes (pending push)
+- https://github.com/PureSaber/quant-data-kit
+- https://github.com/PureSaber/quant-lab
+- https://github.com/PureSaber/quant-report-hub
+- https://github.com/PureSaber/quant-research-notes
