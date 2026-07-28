@@ -12,18 +12,19 @@
 
 - [a-share-multifactor](../a-share-multifactor): IC, quantile backtest, synthesis (OLS/Ridge), param grid
 
-## Phase 3 — Shared infrastructure (current)
+## Phase 3 — Shared infrastructure ✅
 
 - [quant-data-kit](../quant-data-kit): unified data fetch/cache/validate
 - [quant-research-notes](README.md): this knowledge base
 - [quant-lab](../quant-lab): experiment index across repos
 - [quant-report-hub](../quant-report-hub): adapter-based visualization
 
-## Phase 4 — Next
+## Phase 4 — In progress
 
-- Paper trading sim (signal → simulated holdings)
-- Risk monitor (concentration, drawdown alerts)
-- Regime detector (link futures + equity)
+- [quant-futures-spread](https://github.com/PureSaber/quant-futures-spread) (private): futures spread research published
+- [quant-regime](../quant-regime): rule-based regime detector with position_scale
+- [quant-risk-monitor](../quant-risk-monitor): drawdown / concentration alerts
+- Paper trading sim (signal → simulated holdings) — next
 
 ## Skills checklist
 

@@ -8,8 +8,12 @@
 | quant-data-kit | Shared data layer | `qdk-validate` |
 | quant-lab | Experiment index | `quant-lab scan/list/compare` |
 | quant-report-hub | Charts (spread + equity) | `quant-report run` |
+| quant-regime | Market regime detector | `quant-regime detect` |
+| quant-risk-monitor | Portfolio risk alerts | `quant-risk check` |
+| quant-futures-spread | Futures spread engine (private) | `qfs-backtest`, `run_backtest.py` |
 | spread-backtest-viz | Legacy spread viz (unchanged) | `spread-viz run` |
-| future_spread_analysis-team-framework | Futures spread engine | project-specific |
+
+Local path for futures: `future_spread_analysis-team-framework`
 
 ## Dependency direction
 
@@ -21,6 +25,9 @@ quant-lab ── reads ──► */outputs/
 
 quant-report-hub ── reads ──► future_spread/output/
                            └► */outputs/ (equity adapter)
+
+quant-regime ──► position_scale JSON ──► strategies / notes
+quant-risk-monitor ── reads ──► capital_curves.csv, holdings, spread NAV
 ```
 
 ## GitHub
@@ -32,3 +39,6 @@ quant-report-hub ── reads ──► future_spread/output/
 - https://github.com/PureSaber/quant-lab
 - https://github.com/PureSaber/quant-report-hub
 - https://github.com/PureSaber/quant-research-notes
+- https://github.com/PureSaber/quant-regime
+- https://github.com/PureSaber/quant-risk-monitor
+- https://github.com/PureSaber/quant-futures-spread (private)
