@@ -24,7 +24,8 @@
 - [quant-futures-spread](https://github.com/PureSaber/quant-futures-spread) (private): futures spread research published
 - [quant-regime](../quant-regime): rule-based regime detector with position_scale
 - [quant-risk-monitor](../quant-risk-monitor): drawdown / concentration alerts
-- Paper trading sim (signal → simulated holdings) — next
+- [quant-paper-sim](../quant-paper-sim): paper trading simulator (signals → holdings → NAV)
+- Live execution adapter (vnpy/ssquant) — later
 
 ## Skills checklist
 
