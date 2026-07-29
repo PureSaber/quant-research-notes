@@ -22,9 +22,14 @@
 ## Phase 4 — In progress
 
 - [quant-futures-spread](https://github.com/PureSaber/quant-futures-spread) (private): futures spread research published
-- [quant-regime](../quant-regime): rule-based regime detector with position_scale
+- [quant-regime](../quant-regime): rule-based regime detector with position_scale + `detect-multi`
 - [quant-risk-monitor](../quant-risk-monitor): drawdown / concentration alerts
 - [quant-paper-sim](../quant-paper-sim): paper trading simulator (signals → holdings → NAV)
+- [quant-workspace](../quant-workspace): central path resolver
+- [quant-pipeline](../quant-pipeline): post-run orchestration
+- [quant-factors](../quant-factors): shared factor library
+- [quant-portfolio](../quant-portfolio): multi-strategy allocator
+- [quant-agent](https://github.com/PureSaber/quant-agent): post-run QA review layer
 - Live execution adapter (vnpy/ssquant) — later
 
 ## Skills checklist
