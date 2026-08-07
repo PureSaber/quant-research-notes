@@ -10,6 +10,8 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [repos.md](repos.md) | Repository map and dependencies |
 | [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
+| [cursor-cloud-github-private-repos.md](cursor-cloud-github-private-repos.md) | Cursor Cloud：`gh auth`、私有仓绑定、`gh api` 读写 |
+| [tasksolver-running-modes.md](tasksolver-running-modes.md) | TaskSolver：模拟 / Cloud / IDE 三种运行模式 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
 ## Repo stack (2026-07)
