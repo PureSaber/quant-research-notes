@@ -8,6 +8,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 |-----|-------------|
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |
+| [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 

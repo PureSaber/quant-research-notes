@@ -17,9 +17,20 @@
 | quant-risk-monitor | Portfolio risk alerts | `quant-risk check` |
 | quant-paper-sim | Paper trading simulator | `quant-paper step` |
 | quant-futures-spread | Futures spread engine (private) | `qfs-backtest`, `run_backtest.py` |
-| spread-backtest-viz | Legacy spread viz (unchanged) | `spread-viz run` |
+| research-workspace | Cross-product arb research (TaskSolver) | `scripts/run_backtest.py` |
+| spread-backtest-viz | Legacy spread viz (deprecating) | `spread-viz run` |
 
-Local path for futures: `future_spread_analysis-team-framework`
+Local path for futures: `quant-futures-spread` (sibling under workspace root)
+
+## Architecture docs
+
+| Doc | Location |
+|-----|----------|
+| Stack dependency graph | This file (below) |
+| research-workspace data flow | [research-workspace/docs/ARCHITECTURE.md](https://github.com/PureSaber/research-workspace/blob/main/docs/ARCHITECTURE.md) |
+| Tech debt register | [TECH_DEBT.md](TECH_DEBT.md) |
+| Viz merge plan | [quant-report-hub/docs/MERGE_PLAN.md](https://github.com/PureSaber/quant-report-hub/blob/main/docs/MERGE_PLAN.md) |
+| Workspace maintenance log | [quant-infra-workspace/docs/OPTIMIZATION_LOG.md](https://github.com/PureSaber/quant-infra-workspace/blob/main/docs/OPTIMIZATION_LOG.md) |
 
 See also [run-contract.md](run-contract.md).
 
