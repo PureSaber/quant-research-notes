@@ -25,6 +25,21 @@ spread-backtest-viz       → legacy futures viz (frozen reference)
 future_spread_analysis    → futures spread backtest engine
 ```
 
+## Local workspace (Desktop)
+
+Clone sibling repos under `C:\Users\ASUS\Desktop\quant_projects` and set:
+
+```powershell
+$env:QUANT_WORKSPACE_ROOT = "C:\Users\ASUS\Desktop\quant_projects"
+```
+
+Use `quant-workspace/configs/desktop.workspace.yaml` for path resolution. Stack health:
+
+```powershell
+cd quant-infra-workspace
+powershell -File scripts/health-check.ps1
+```
+
 ## Conventions
 
 - Config: YAML under `configs/`

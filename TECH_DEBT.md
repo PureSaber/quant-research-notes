@@ -1,7 +1,8 @@
 # Technical Debt Register — quant-agent & quant-pipeline
 
 **Review date:** 2026-08-07  
-**Scope:** `quant-agent`, `quant-pipeline`  
+**Last audit:** 2026-08-07 (local stack audit)  
+**Scope:** `quant-agent`, `quant-pipeline`, cross-stack CI  
 **Focus:** Security and maintainability
 
 ---
@@ -10,41 +11,34 @@
 
 | Package | Critical | High | Medium | Low |
 |---------|----------|------|--------|-----|
-| quant-pipeline | 1 | 2 | 4 | 2 |
-| quant-agent | 1 | 3 | 5 | 3 |
-| Cross-cutting (viz) | — | 1 | 2 | 1 |
+| quant-pipeline | 0 | 1 | 3 | 2 |
+| quant-agent | 0 | 2 | 4 | 3 |
+| Cross-cutting (viz) | — | 1 | 1 | 1 |
+
+---
+
+## Closed (2026-08-07 audit)
+
+| ID | Fix |
+|----|-----|
+| **C-01** | `quant-pipeline`: default `shell=False`; per-step `shell: true` in YAML; optional `error_log_dir` writes full failure logs |
+| **C-02** | `quant-agent`: spread projects skip IC rules; `check_spread_performance()` reads `performance/summary.csv` |
+| **H-01** | `quant-pipeline[workspace]` optional extra in `pyproject.toml`; clear ImportError when missing |
+| **M-03** | Spread vs equity rule routing in `run_all_rules()` |
+| **M-06** | Failure logs written when `error_log_dir` set in pipeline YAML |
+| **M-07** | `_resolve_notes_root()` uses `QUANT_WORKSPACE_ROOT` and walks for `quant-research-notes` |
+| **M-05** | CLI: offline by default; `--llm` enables online mode |
+| **CI** | `spread-backtest-viz`, `currency-converter` added `ci.yml`; `health-check.ps1` uses `QUANT_WORKSPACE_ROOT` |
 
 ---
 
 ## Critical
 
-### C-01 — Shell command injection via YAML pipeline configs
-
-**Package:** quant-pipeline  
-**Files:** `src/quant_pipeline/runner.py`
-
-`run_step()` uses `subprocess.run(..., shell=True)` with commands from YAML after env expansion. Treat pipeline YAML as trusted; prefer `shell=False` with argv lists.
-
-**Fix:** Replace `shell=True` with explicit argv; optional `allow_shell: true` per step; JSON Schema validation.
-
-### C-02 — Futures-spread reviews always fail deterministic rules
-
-**Package:** quant-agent  
-**Files:** `rules/engine.py`, `adapters/futures_spread.py`
-
-`check_ic_quality()` errors when `ic_summary` is empty; spread adapter always returns empty IC → exit code 2.
-
-**Fix:** Gate rules by adapter capability; add spread-specific rules from `performance/summary.csv`.
+_(none open)_
 
 ---
 
 ## High
-
-### H-01 — `quant-workspace` undeclared runtime dependency
-
-`quant-pipeline` imports `quant_workspace` when `workspace:` is set but does not declare the dependency in `pyproject.toml`.
-
-**Fix:** Add optional extra `quant-pipeline[workspace]` or hard dependency.
 
 ### H-02 — LLM nodes send full context externally
 
@@ -65,21 +59,31 @@ See `quant-report-hub/docs/MERGE_PLAN.md`.
 ## Medium (selected)
 
 - **M-01** No config schema validation (both packages)
-- **M-02** `_expand()` format-string fragility in pipeline runner
-- **M-03** Project-agnostic rule engine (multifactor rules on spread)
+- **M-02** `_expand()` format-string fragility in pipeline runner (KeyError on missing keys — documented; tests added)
 - **M-04** Unbounded file reads in adapters
-- **M-05** Confusing `--offline` CLI semantics
-- **M-06** Pipeline observability (stdout discarded)
-- **M-07** Hardcoded monorepo path in `_resolve_notes_root`
+
+---
+
+## Local workspace (Desktop)
+
+Clone siblings under `C:\Users\ASUS\Desktop\quant_projects` and set:
+
+```powershell
+$env:QUANT_WORKSPACE_ROOT = "C:\Users\ASUS\Desktop\quant_projects"
+```
+
+Use `quant-workspace/configs/desktop.workspace.yaml` or env override. Run stack health:
+
+```powershell
+cd quant-infra-workspace
+powershell -File scripts/health-check.ps1
+```
 
 ---
 
 ## Priority order
 
-1. C-02 — Unblock futures-spread reviews
-2. C-01 — Harden pipeline execution
-3. H-01 — Declare quant-workspace dependency
-4. H-04 — Viz merge (see MERGE_PLAN)
-5. H-02 — LLM data policy
-
-Full review notes in agent transcript; update as items are closed.
+1. H-04 — Viz merge (see MERGE_PLAN)
+2. H-02 — LLM data policy
+3. H-03 — Wire or remove dead config keys
+4. M-01 — Pipeline/agent config schema validation
