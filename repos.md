@@ -39,13 +39,14 @@ See also [run-contract.md](run-contract.md).
 ```text
 quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / quant-portfolio
 
-quant-data-kit ──► a-share-multifactor
+quant-data-kit v0.3 ──► a-share-multifactor
                  └► sklearn-stock-trend
                  └► qdk-catalog
 
-quant-factors ── optional input ──► research engines
+quant-factors v0.2 ── validation/factors ──► research engines
 
-quant-lab ── reads ──► */outputs/ + review_manifest.json
+research engines ── writes standard v1 ──► quant-lab v0.2
+                                           └► quant-report-hub v0.3 attribution
 
 quant-agent ── reads ──► run outputs ── writes ──► review_manifest.json
 
@@ -56,6 +57,9 @@ quant-regime detect-multi ──► position_scale JSON ──► quant-paper-si
 quant-paper-sim ── writes ──► state/holdings.csv, state/nav.csv
 quant-risk-monitor ── reads ──► capital_curves.csv, paper sim holdings, spread NAV
 quant-portfolio ── reads ──► strategy nav/holdings
+                 └─ optimization/capacity ──► target weights
+
+quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts + metrics
 ```
 
 ## GitHub
