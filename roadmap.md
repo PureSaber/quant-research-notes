@@ -42,6 +42,13 @@ See [research-integrity-v1.md](research-integrity-v1.md).
 - [quant-agent](https://github.com/PureSaber/quant-agent): post-run QA review layer
 - Live execution adapter (vnpy/ssquant) — later
 
+## Phase 6 — Cross-Asset & Multi-Frequency v2
+
+- [RFC](cross-asset-multifrequency-v2-rfc.md): instrument、symbol mapping、market clock、
+  UTC双时间、固定点数和`standard/v2`契约
+- M1：`quant-data-kit`公开数据schema与`quant-lab`严格v2运行契约
+- 后续：公共execution账本、股票/期货adapter、跨资产风险归因和DAG编排
+
 ## Skills checklist
 
 - [ ] Can explain IC vs Rank IC
