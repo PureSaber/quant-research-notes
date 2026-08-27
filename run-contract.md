@@ -2,7 +2,30 @@
 
 Each research run directory should include enough metadata for `quant-lab`, `quant-agent`, and `quant-pipeline` to consume without repo-specific code paths.
 
-## Required / recommended files
+## Standard v1 contract
+
+Every new backtest run must write an immutable `standard/` directory. Legacy files remain optional
+compatibility outputs.
+
+| File | Required content |
+|------|------------------|
+| `standard/run_manifest.json` | schema version, code/config/data versions, artifact hashes |
+| `standard/returns.csv` | gross/net/benchmark returns and NAV by date/strategy |
+| `standard/positions.csv` | dated position snapshots with quantity/value/weight/side |
+| `standard/orders.csv` | timestamped order intent and simulated/executed status |
+| `standard/costs.csv` | commission, slippage, impact, borrow and total cost |
+| `standard/exposures.csv` | factor/sector/currency or other named exposures |
+| `standard/metrics.json` | project-specific metrics |
+
+Validate before downstream use:
+
+```bash
+quant-lab validate --run-dir <run-directory>
+```
+
+See [research-integrity-v1.md](research-integrity-v1.md) for timing, validation, risk and attribution rules.
+
+## Legacy compatibility files
 
 | File | Writer | Readers |
 |------|--------|---------|
@@ -28,3 +51,5 @@ Typical daily flow (`quant-pipeline/configs/daily_paper.yaml`):
 5. `quant-lab export html`
 
 Optional offline review: `quant-review run --offline`
+
+Research backtest post-run flow: `quant-pipeline/configs/research_integrity_postrun.yaml`.
