@@ -186,10 +186,12 @@ v2使用独立不可变子目录：
 - `profile`
 - UTC格式`created_at`
 - `status="complete"`
-- `code_version`、`config_sha256`
+- `code_version`、`internal_dependencies`、`config_sha256`、`random_seed`
 - `base_currency`
 - `dataset_snapshots`
+- `instrument_master_version`、`execution_model_version`
 - `capabilities`
+- `time_range`、覆盖全部artifact且无环的`lineage`DAG
 - `artifacts`
 - `tags`
 
