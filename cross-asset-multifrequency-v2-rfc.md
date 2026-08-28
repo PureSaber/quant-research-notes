@@ -384,3 +384,67 @@ delta NAV = price + carry + funding + roll + FX
 4. 归因按区间、标的、策略和总组合四层通过NAV对账；费用、Funding、Settlement、Roll、FX和slippage均有黄金样例。
 5. `quant-report-hub`优先读取v2，v2损坏时不得回退v1；仅v2不存在时保留v1读取。
 6. 核心新增模块分支覆盖率不低于90%，全仓不低于80%，Python3.10/3.11/3.12矩阵全部通过。
+
+## 11.M6调度、版本清单与治理接口
+
+M6只编排本机研究、回测和paper trading任务，不引入分布式服务、实盘凭据或真实订单能力。`quant-workspace`是路径和版本事实的发现层，`quant-pipeline`只消费其冻结清单和已经发布的内部依赖；两者都不能反向修改研究运行的`standard/v1`或`standard/v2`。
+
+### 11.1全栈版本清单
+
+`quant-workspace`新增不可变`StackManifest`，schema版本冻结为`1.0.0`。每个仓库记录：
+
+- 配置中的稳定项目名、相对workspace根目录的仓库路径和规范化origin URL；
+- 完整40位小写commit SHA、当前branch、指向该commit的已发布tag和工作树是否dirty；
+- `pyproject.toml`中的package name/version、Python版本范围；
+- 直接内部依赖的package、仓库、精确tag或完整commit及其解析commit；
+- 仓库声明的schema ID/version和外部依赖锁文件路径/SHA-256。
+
+清单根节点记录`schema_version`、UTC`created_at`、workspace配置SHA-256、仓库记录、内部依赖DAG、允许的schema集合和清单自身SHA-256。除`created_at`外，相同workspace状态必须生成相同canonical JSON；调用者提供固定`created_at`时，完整文件hash必须确定。
+
+发布模式必须fail closed：dirty仓库、浮动内部依赖、tag无法解析到清单commit、依赖目标不在清单、循环依赖、缺少声明的schema或外部lock均拒绝。审计模式允许记录dirty/untagged状态，但不得标记`release_ready=true`。旧tag不可移动；是否为注释tag也必须记录。
+
+公开接口冻结为：
+
+- `discover_stack(workspace,mode,created_at)->StackManifest`
+- `validate_stack_manifest(manifest)->ValidationResult`
+- `write_stack_manifest(path,manifest)`：临时文件、fsync、原子rename且拒绝覆盖
+- CLI：`quant-workspace stack-manifest --mode audit|release --out <path>`和`quant-workspace verify-stack <path>`
+
+### 11.2类型化DAG契约
+
+`quant-pipeline`保留现有线性YAML读取，但v2配置必须声明`schema_version: "2.0.0"`。每个step必须包含稳定`id`、`kind`、显式`needs`、argv形式`command`、输入artifact、输出artifact、重试策略和timeout。`shell:true`仅保留给v1兼容配置；v2禁止shell字符串执行。
+
+artifact契约包含稳定`artifact_id`、规范化绝对或workspace相对path、producer step、可选schema ID/version、required、immutable和预期/实际SHA-256。同一artifact只能有一个producer；step读取另一步产物时必须同时声明`needs`和input artifact。未知依赖、重复ID、自依赖、环、路径逃逸和输出冲突在执行前失败。
+
+公开类型冻结为：
+
+- `PipelineSpec`、`StepSpec`、`ArtifactSpec`、`RetryPolicy`；
+- `StepStatus={pending,running,succeeded,failed,blocked,cached,dry_run}`；
+- `StepAttempt`记录attempt、开始/结束UTC时间、exit code、stdout/stderr日志hash；
+- `PipelineCheckpoint`记录配置hash、stack manifest hash、run ID、seed、step状态、输入/输出hash和事件序列；
+- `DagRunResult`记录确定性拓扑顺序、每步最终状态、失败隔离和产物索引。
+
+公开入口冻结为：
+
+- `load_pipeline_spec(path)->PipelineSpec`
+- `validate_pipeline_spec(spec,stack_manifest)->ValidationResult`
+- `DagRunner.run(spec,run_id,resume=False)->DagRunResult`
+- `DagRunner.resume(checkpoint)->DagRunResult`
+
+### 11.3幂等、重试与恢复
+
+step幂等键为`SHA256(run_id,step_id,step定义hash,有序input artifact hash,stack manifest hash,seed)`。成功检查点只有在幂等键相同、全部immutable输出存在且hash一致时才可标记`cached`；输出缺失、hash变化或定义变化必须fail closed，不能把旧结果当成功。
+
+每个step完成后通过临时文件、fsync和原子rename更新checkpoint；同时追加单调sequence的事件记录。checkpoint损坏、run ID/config/stack hash不匹配或出现`running`终态时，resume必须拒绝或把中断attempt明确标记为failed后重试，不能静默跳过。
+
+重试只针对配置的exit code或显式可重试异常，`max_attempts`包含首次执行。每次attempt使用同一幂等键、独立日志和确定性退避参数；默认不对参数错误、schema错误、契约/hash错误重试。一个step最终失败后，其后代标记`blocked`，无依赖的其他分支可继续；`fail_fast=true`时才停止所有尚未开始的step。
+
+### 11.4治理与资源门禁
+
+1. Python3.10、3.11、3.12统一运行lint、unit、contract和integration测试。
+2. `quant-pipeline`和`quant-workspace`全仓分支覆盖率不低于80%，DAG验证、checkpoint、hash及版本解析核心分支覆盖率不低于90%。
+3. 跨仓CI只能安装全栈清单中的已发布tag或完整commit，禁止main/master/latest和未固定VCS引用。
+4. 每个可运行仓库必须声明外部依赖lock文件及SHA-256；M6先治理解析结果，不强制所有仓库采用同一种lock工具。
+5. L2配额检查在采集前执行：热数据默认150GB；当可用空间低于`max(卷容量20%,100GB)`时返回稳定`STORAGE_QUOTA_STOP`并停止新采集，不删除已有数据。
+6. 数据质量失败分区必须作为隔离artifact进入DAG，任何curated或策略step依赖该分区时标记blocked；不能通过重试把schema、序列缺口、hash或PIT失败变成成功。
+7. 同一fixture、配置、stack manifest、seed和run ID连续3次，拓扑顺序、step状态、事件序列、artifact hash和checkpoint hash必须一致（运行时间字段使用固定测试时钟）。
