@@ -116,7 +116,7 @@ decimal_value = units × 10 ^ (-scale)
 - `CorporateActionEvent`：公司行动类型、生效日、比例或现金金额及币种。
 - `StatusEvent`：交易状态和reason。
 
-同一source、instrument和event stream中，非空sequence必须严格递增。强制满足`event_time<=received_at<=available_at`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
+M1的event stream键严格定义为`(source,instrument_id,session_id)`，不得再按`event_type`拆分；同一stream中非空sequence必须严格递增。`BookDeltaEvent.previous_sequence`必须等于同一stream中紧邻的前一个非空sequence，因此首个Delta可直接衔接Snapshot。强制满足`event_time<=received_at<=available_at`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
 
 ## 4.UTC双时间与PIT
 
@@ -153,7 +153,7 @@ available_at <= as_of < superseded_at（若superseded_at存在）
 - `puresaber.corporate-action-event`
 - `puresaber.status-event`
 
-Arrow用于Parquet物理类型，JSON Schema用于API和manifest记录。两者字段名称、nullability和固定点数含义必须一致。schema registry遇到未知ID或不支持的major版本必须失败。
+Arrow用于Parquet物理类型，JSON Schema用于API和manifest记录。两者字段名称、nullability、枚举、双时间有效期和固定点数含义必须与公开dataclass领域约束一致。schema registry遇到未知ID或不支持的major版本必须失败。
 
 ### 5.1执行、订单、成交和账本契约
 
@@ -258,7 +258,7 @@ v2使用独立不可变子目录：
 | `cash_ledger`、`margin` | 可选 | 必需 | 多币种双式账本posting和保证金 |
 | `attribution` | 可选 | 可选 | price/carry/funding/roll/FX/cost/slippage归因 |
 
-`positions`必须包含估值币种、对应时点可得的FX rate及`fx_snapshot_id`，并同时记录本币市值和基础币种市值。`cash_ledger`逐posting保存transaction/idempotency/reference ID，不得只保存余额快照；每个事务至少两个posting，index从0连续，事务元数据一致，且按币种精确平衡。orders必须记录累计成交量和version，order_events必须记录本次成交量，fills必须记录account/strategy ID；三者字段必须与`quant-execution`契约同义。可空limit/stop price、order-event fill quantity和venue trade ID的Arrow nullability必须显式冻结。
+`positions`必须包含估值币种、对应时点可得的FX rate及`fx_snapshot_id`，并同时记录本币市值和基础币种市值。`cash_ledger`逐posting保存transaction/idempotency/reference ID，不得只保存余额快照；每个事务至少两个posting，index从0连续，事务元数据一致，且按币种精确平衡。orders必须记录累计成交量和version，order_events必须记录本次成交量，fills必须记录account/strategy ID；三者字段必须与`quant-execution`契约同义。writer和reader都必须跨artifact核对order ID、账户、策略、标的、方向、scale、状态、version，以及订单累计成交量、事件成交量总和和Fill数量总和，任何超额或矛盾均失败。可空limit/stop price、order-event fill quantity和venue trade ID的Arrow nullability必须显式冻结。
 
 M1实现`research`profile；`backtest-ledger`schema在M1冻结，由后续execution里程碑实现生产适配。writer不得为未提供的必填artifact创建空文件。
 
