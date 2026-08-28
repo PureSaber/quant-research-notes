@@ -11,6 +11,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
 | [research-integrity-v1.md](research-integrity-v1.md) | PIT data, validation, run contract, risk and attribution standard |
+| [cross-asset-multifrequency-v2-rfc.md](cross-asset-multifrequency-v2-rfc.md) | Cross-asset data, time and standard/v2 contract RFC |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
 ## Repo stack (2026-07)
