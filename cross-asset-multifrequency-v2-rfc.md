@@ -48,11 +48,17 @@ decimal_value = units × 10 ^ (-scale)
 |---|---|---|
 | `instrument_id` | string | 非空稳定ID |
 | `asset_class` | enum | `cash/equity/etf/fund/future/option/bond/fx/crypto/index/other` |
+| `product_type` | string | 现货、线性永续、期货等显式产品类型 |
 | `venue` | string | 非空venue ID |
-| `currency` | string | 非空结算币种代码 |
-| `tick_size` | FixedPoint | 严格大于0 |
-| `lot_size` | FixedPoint | 严格大于0 |
+| `native_symbol` | string | venue原生代码，仅用于适配，不作为全局主键 |
+| `base_currency/quote_currency` | string/null | 资产和报价币种 |
+| `settlement_currency` | string | 非空结算币种代码 |
+| `price_tick` | FixedPoint | 严格大于0 |
+| `quantity_step` | FixedPoint | 严格大于0 |
 | `contract_multiplier` | FixedPoint | 严格大于0 |
+| `calendar_id` | string | 显式日历版本 |
+| `margin_mode` | enum | `none/cash/cross/isolated/portfolio` |
+| `inverse` | bool | 是否为反向计价合约 |
 | `effective_from` | UTC timestamp | 必填 |
 | `effective_to` | UTC timestamp/null | 若存在则大于`effective_from` |
 | `available_at` | UTC timestamp | 研究者首次可获得该规格版本的时间 |
@@ -98,14 +104,19 @@ decimal_value = units × 10 ^ (-scale)
 
 ### 3.4 MarketEvent联合类型
 
-所有event共享：`instrument_id`、`event_time`、`available_at`、`source`和可选`sequence`。联合类型由`event_type`判别：
+所有event共享：`event_id`、`instrument_id`、`event_time`、`received_at`、`available_at`、`source`、`trading_day`、`session_id`和可选`sequence`。联合类型由`event_type`判别：
 
 - `QuoteEvent`：bid/ask price和quantity。
 - `TradeEvent`：成交price、quantity和aggressor side。
 - `BarEvent`：`bar_start/bar_end`、OHLC、volume、`is_complete`；`event_time=bar_end`。
+- `BookSnapshotEvent`：严格排序、无重复价位且不交叉的bid/ask多档快照。
+- `BookDeltaEvent`：bid/ask、upsert/delete、price、quantity及`previous_sequence`。
+- `FundingRateEvent`：有限资金费率及计费区间。
+- `MarkPriceEvent`：永续和保证金估值使用的标记价格。
+- `CorporateActionEvent`：公司行动类型、生效日、比例或现金金额及币种。
 - `StatusEvent`：交易状态和reason。
 
-同一source、instrument和event stream中，非空sequence必须严格递增。`available_at>=event_time`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
+同一source、instrument和event stream中，非空sequence必须严格递增。强制满足`event_time<=received_at<=available_at`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
 
 ## 4.UTC双时间与PIT
 
@@ -135,6 +146,11 @@ available_at <= as_of < superseded_at（若superseded_at存在）
 - `puresaber.quote-event`
 - `puresaber.trade-event`
 - `puresaber.bar-event`
+- `puresaber.book-snapshot-event`
+- `puresaber.book-delta-event`
+- `puresaber.funding-rate-event`
+- `puresaber.mark-price-event`
+- `puresaber.corporate-action-event`
 - `puresaber.status-event`
 
 Arrow用于Parquet物理类型，JSON Schema用于API和manifest记录。两者字段名称、nullability和固定点数含义必须一致。schema registry遇到未知ID或不支持的major版本必须失败。
