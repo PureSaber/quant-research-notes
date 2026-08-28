@@ -1,6 +1,6 @@
 # Cross-Asset & Multi-Frequency v2 RFC
 
-状态：M1冻结候选版
+状态：M4已发布，M5接口冻结候选版
 schema版本：`2.0.0`
 所有者：`quant-data-kit`负责市场数据领域类型，`quant-lab`负责运行产物封装与验证。
 
@@ -104,7 +104,7 @@ decimal_value = units × 10 ^ (-scale)
 
 ### 3.4 MarketEvent联合类型
 
-所有event共享：`event_id`、`instrument_id`、`event_time`、`received_at`、`available_at`、`source`、`trading_day`、`session_id`和`sequence`。非L2事件的`sequence`可空；`BookSnapshotEvent`和`BookDeltaEvent`必须提供非空`sequence`。联合类型由`event_type`判别：
+所有event共享：`event_id`、`instrument_id`、`event_time`、`received_at`、`available_at`、`source`、`trading_day`、`session_id`和`sequence`。从`quant-data-kit v0.6.0`起，全部事件的`sequence`都是非空非负整数。联合类型由`event_type`判别：
 
 - `QuoteEvent`：bid/ask price和quantity。
 - `TradeEvent`：成交price、quantity和aggressor side。
@@ -116,7 +116,7 @@ decimal_value = units × 10 ^ (-scale)
 - `CorporateActionEvent`：公司行动类型、生效日、比例或现金金额及币种。
 - `StatusEvent`：交易状态和reason。
 
-M1的event stream键严格定义为`(source,instrument_id,session_id)`，不得再按`event_type`拆分；同一stream中非空sequence必须严格递增。`BookDeltaEvent.previous_sequence`必须等于同一stream中紧邻的前一个非空sequence，因此首个Delta可直接衔接Snapshot。强制满足`event_time<=received_at<=available_at`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
+事件顺序域严格定义为`(source,instrument_id,session_id,domain)`。`BookSnapshotEvent`和`BookDeltaEvent`共享`book`域，其余事件类型各自形成独立域；每个域内`sequence`必须严格递增。`BookDeltaEvent.previous_sequence`必须等于同一`book`域中紧邻的前一个sequence，因此首个Delta可直接衔接Snapshot。强制满足`event_time<=received_at<=available_at`。不完整Bar可以保存，但不得作为已完成Bar进入因果研究。
 
 ## 4.UTC双时间与PIT
 
@@ -298,3 +298,89 @@ M1完成必须满足：
 6. v1原有测试不改预期且继续通过。
 7. 订单非法状态跃迁、超额成交、非UTC事件和不平衡账本transaction全部失败。
 8. `quant-execution`只能依赖数据/契约仓库，数据仓库和`quant-lab`不得反向依赖执行实现。
+
+## 10.M5组合、风险与归因接口
+
+M5不改变`standard/v2`的`2.0.0`物理schema。现有`positions`、`portfolio_snapshots`、`exposures`、`costs`、`margin`和可选`attribution`承载全部新增结果；新增语义通过受控值、生产者版本和黄金样例冻结，不能给Parquet增加私有列。
+
+### 10.1单一真值与依赖方向
+
+1. `quant-execution.AccountSnapshot`和双式账本是现金、持仓、保证金、费用、Funding、Settlement及NAV的唯一事实来源。
+2. `quant-portfolio`只能把目标组合转换为`OrderIntent`建议，不能直接修改现金、持仓、保证金或NAV。
+3. `quant-risk-monitor`实现QExec公开的风险策略协议并由`RuleBookRiskGate`组合调用；QExec不得反向依赖风险仓库。
+4. `quant-report-hub`只读取经过`quant-lab.load_and_validate_standard_run()`严格验证的运行产物，不从策略私有文件反推账本事实。
+5. 分析层可以使用有限`float64`执行优化和统计，但所有跨仓输入输出、金额、数量、价格、保证金和归因值必须在边界转换为`FixedPoint`，并显式记录基础币种。
+
+### 10.2QExec只读风险快照
+
+`quant-execution`新增以下不可变公开类型：
+
+- `PositionRiskSnapshot`：`instrument_id`、`asset_class`、`venue`、`settlement_currency`、quantity、mark price、基础币种signed notional、initial margin和maintenance margin。
+- `PortfolioRiskSnapshot`：account/event time/base currency、NAV、基础币种现金价值、gross exposure、net exposure、initial margin、maintenance margin以及按`instrument_id`排序的position快照。
+- `RiskCheckContext`：当前`AccountSnapshot`、`PortfolioRiskSnapshot`、待检查标的的`InstrumentSpec`和因果可得reference price。
+- `PortfolioRiskPolicy`协议：`check_order(order_intent,context)->RiskDecision`与`runtime_check(context)->RiskDecision`。
+
+`ExactAccountLedger.portfolio_risk_snapshot(event_time)`负责从同一时点的mark和FX快照生成风险快照。非衍生品notional为`mark×quantity×multiplier`，衍生品notional使用相同定义但NAV仍只计入未实现损益；gross exposure为绝对notional之和，net exposure为signed notional之和。缺少mark、FX或保证金参数时必须失败，不能用0或最新未来值代替。
+
+`RuleBookRiskGate`按配置顺序组合零个或多个纯函数式`PortfolioRiskPolicy`：
+
+1. 先执行现有资产规则、现金/持仓/保证金和订单预留检查；
+2. 再对每个policy执行`check_order`，首个拒绝立即终止并保留稳定code；
+3. open-order重检、成交后检查、Funding/Settlement后运行中检查必须使用同一组policy；
+4. policy不能发送订单、修改账本或读取网络，重放capture/restore后必须产生相同决策；
+5. 构造`RiskCheckContext`失败时fail closed并记录`RISK_CONTEXT_INVALID`。
+
+### 10.3跨资产组合约束
+
+`quant-portfolio`在现有成本和流动性约束上增加：
+
+- long/short及cash-aware预算，不再强制long-only权重和为1；
+- gross/net leverage、单标的、asset class、currency、venue和strategy上限；
+- initial/maintenance margin与可用资金约束；
+- turnover、ADV参与率、days-to-liquidate、线性费用和平方根impact成本；
+- 使用显式FX快照把目标notional转换到基础币种；缺失或晚于决策时点的FX/流动性数据必须失败；
+- 目标权重转`OrderIntent`时按`price_tick`、`quantity_step`、contract multiplier和`reduce_only`规则确定性舍入，零数量订单不生成。
+
+优化结果必须同时报告可行性、绑定约束、预计换手、成本、gross/net leverage、margin utilization和未分配现金。不可行问题返回结构化失败，不得静默放宽约束。
+
+### 10.4模拟前置与运行中风险
+
+`quant-risk-monitor`提供`CrossAssetRiskPolicy`，至少覆盖：
+
+- gross/net leverage；
+- 单标的、asset class、currency、venue和strategy集中度；
+- initial margin、maintenance margin和margin utilization；
+- ADV参与率和days-to-liquidate；
+- 配置化压力场景、历史/参数VaR-CVaR及因子暴露漂移。
+
+前置检查必须按拟议订单后的projected exposure决策；reduce-only订单不能被错误计为新增风险。运行中检查在Funding、每日结算、FX/mark变化和成交后重新评估。若某条启用规则所需的PIT价格、FX、ADV或分类缺失，返回稳定拒绝码而不是跳过规则。
+
+### 10.5PnL与成本归因
+
+`attribution.component`受控值为：
+
+```text
+price,carry,funding,roll,fx,commission,tax,maker_fee,taker_fee,
+slippage,market_impact,financing,residual
+```
+
+`costs.cost_type`复用对应成本类受控值；一个账本总费用可以拆成多条成本/归因明细，但所有明细之和必须与账本费用精确一致。slippage以决策时因果可得reference price与成交价之差计算，market impact使用冻结模型参数，二者不得重复计费。
+
+每个归因区间必须满足：
+
+```text
+delta NAV = price + carry + funding + roll + FX
+            - commission - tax - maker/taker fee
+            - slippage - market impact - financing + residual
+```
+
+按account、strategy、instrument、currency和base currency分别对账。`residual`绝对值不得超过`max(abs(delta NAV)×1e-8,0.01基础币种单位)`；超过即发布失败。价格、Carry、Funding、Roll、FX和成本来源必须可追溯到v2 artifact或manifest声明的数据快照。
+
+### 10.6M5退出门禁
+
+1. 相同输入、配置和seed连续3次的风险决策、目标订单、归因和产物hash一致。
+2. 至少各有一个A股、期货和Crypto用例证明组合建议只通过`OrderIntent`进入QExec，违规订单由前置风险实际拒绝。
+3. 每个风险拒绝码覆盖接受、边界和超过边界三类测试；reduce-only、缺失PIT输入和多币种FX必须有负向测试。
+4. 归因按区间、标的、策略和总组合四层通过NAV对账；费用、Funding、Settlement、Roll、FX和slippage均有黄金样例。
+5. `quant-report-hub`优先读取v2，v2损坏时不得回退v1；仅v2不存在时保留v1读取。
+6. 核心新增模块分支覆盖率不低于90%，全仓不低于80%，Python3.10/3.11/3.12矩阵全部通过。
