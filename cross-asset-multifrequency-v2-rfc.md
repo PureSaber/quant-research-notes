@@ -236,6 +236,8 @@ v2使用独立不可变子目录：
 - `artifacts`
 - `tags`
 
+`code_version`必须是完整40位小写Git commit SHA；`internal_dependencies`的每个值必须是明确发布版本或完整commit，`main`、`master`、`latest`和其他浮动分支均不合法。
+
 每条artifact记录必须包含`name`、相对`path`、`schema_id`、`schema_version`、SHA-256、rows、columns、required以及可用的最小/最大event time和available time。path必须留在`standard/v2`内。
 
 `run_manifest.sha256`保存`run_manifest.json`的SHA-256。除manifest及其hash文件外，目录内每个普通文件必须且只能在artifact清单出现一次；额外文件、缺失文件或hash不一致均视为损坏。
