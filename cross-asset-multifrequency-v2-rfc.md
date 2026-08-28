@@ -155,6 +155,38 @@ available_at <= as_of < superseded_at（若superseded_at存在）
 
 Arrow用于Parquet物理类型，JSON Schema用于API和manifest记录。两者字段名称、nullability和固定点数含义必须一致。schema registry遇到未知ID或不支持的major版本必须失败。
 
+### 5.1执行、订单、成交和账本契约
+
+执行领域契约由`quant-execution`提供，契约预览版本为`1.0.0`，并且只依赖已发布的`quant-data-kit`契约版本。M1只冻结类型和接口，不实现撮合或发送真实订单。
+
+`OrderIntent`必须包含`idempotency_key`、account/strategy/instrument ID、side、FixedPoint quantity、order type、可空limit/stop price、time in force、`reduce_only`和UTC`created_at`。market/limit/stop/stop-limit的价格字段组合不合法时直接拒绝。
+
+订单状态固定为：
+
+```text
+created -> accepted -> partially_filled -> filled
+   |           |              |
+   v           +--------------+-> cancelled/expired
+ rejected
+```
+
+终态不可继续跃迁；每次跃迁生成独立、单调sequence的`OrderEvent`。部分成交与最终成交必须显式给出本次成交量，累计成交不能超过委托量，且所有数量使用同一scale。
+
+`Fill`是独立成交事实，包含fill/order/account/strategy/instrument ID、side、FixedPoint quantity/price、UTC event time、maker/taker角色和可空venue trade ID。`Fee`、`Funding`和`Settlement`均为独立事实，金额允许正负以表示费用、返佣、收付和结算方向。
+
+`LedgerTransaction`由至少两个`Posting`构成，每个posting包含ledger account、currency、FixedPoint amount，以及可选instrument和quantity delta。同一transaction必须在每个币种内精确借贷平衡，不允许以浮点容差通过。幂等键、reference ID和事件类型是必填字段。
+
+公开接口冻结为：
+
+- `Strategy.on_event(context,event) -> Sequence[OrderIntent]`
+- `BrokerSimulator.submit/cancel`
+- `RiskGate.check(order_intent,account_snapshot) -> RiskDecision`
+- `MatchingModel.match(market_event,open_orders) -> Sequence[Fill]`
+- `AccountLedger.apply(fill|fee|funding|settlement|corporate_action)`
+- `RunEngine.replay(event_stream,seed) -> RunResult`
+
+订单、订单事件、成交、费用、Funding、Settlement和LedgerTransaction均同时注册JSON Schema与Arrow schema，并提供提交到仓库的黄金样例。未知版本、字段、类型或nullability必须失败。
+
 ## 6.standard/v2运行契约
 
 v1保持原目录和内容：
@@ -206,13 +238,16 @@ v2使用独立不可变子目录：
 | `config`、`metrics` | 必需 | 必需 | JSON也进入完整hash清单 |
 | `returns` | 必需 | 必需 | 时间区间、策略、gross/net/nav/base currency |
 | `positions` | 必需 | 必需 | 账户/策略/instrument、数量、价格、市值和币种 |
-| `valuations` | 必需 | 必需 | 估值、FX和P&L快照 |
+| `portfolio_snapshots` | 必需 | 必需 | NAV、现金、市值、保证金和P&L快照 |
 | `exposures` | 必需 | 必需 | factor/currency/asset-class等暴露 |
 | `orders` | 可选 | 必需 | 不可由Fill反推 |
 | `order_events` | 可选 | 必需 | 完整状态历史 |
 | `fills` | 可选 | 必需 | 独立成交事实 |
 | `costs` | 可选 | 必需 | commission/slippage/impact/tax/financing |
-| `cash`、`margin` | 可选 | 必需 | 多币种现金和保证金 |
+| `cash_ledger`、`margin` | 可选 | 必需 | 多币种双式账本posting和保证金 |
+| `attribution` | 可选 | 可选 | price/carry/funding/roll/FX/cost/slippage归因 |
+
+`positions`必须包含估值币种、对应时点可得的FX rate及`fx_snapshot_id`，并同时记录本币市值和基础币种市值。`cash_ledger`逐posting保存transaction/idempotency/reference ID，不得只保存余额快照。orders/order_events/fills字段必须与`quant-execution`契约同义；可空limit/stop price和venue trade ID的Arrow nullability必须显式冻结。
 
 M1实现`research`profile；`backtest-ledger`schema在M1冻结，由后续execution里程碑实现生产适配。writer不得为未提供的必填artifact创建空文件。
 
@@ -250,3 +285,5 @@ M1完成必须满足：
 4. 缺列、额外列、nullability、类型、hash、额外文件和路径逃逸均验证失败。
 5. 同时存在v1/v2时优先返回v2；v2损坏时不回退；仅无v2时读取v1。
 6. v1原有测试不改预期且继续通过。
+7. 订单非法状态跃迁、超额成交、非UTC事件和不平衡账本transaction全部失败。
+8. `quant-execution`只能依赖数据/契约仓库，数据仓库和`quant-lab`不得反向依赖执行实现。
