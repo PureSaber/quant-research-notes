@@ -317,7 +317,7 @@ M5不改变`standard/v2`的`2.0.0`物理schema。现有`positions`、`portfolio_
 
 - `PositionRiskSnapshot`：`instrument_id`、`asset_class`、`venue`、`settlement_currency`、quantity、mark price、基础币种signed notional、initial margin和maintenance margin。
 - `PortfolioRiskSnapshot`：account/event time/base currency、NAV、基础币种现金价值、gross exposure、net exposure、initial margin、maintenance margin以及按`instrument_id`排序的position快照。
-- `RiskCheckContext`：当前`AccountSnapshot`、`PortfolioRiskSnapshot`、待检查标的的`InstrumentSpec`和因果可得reference price。
+- `RiskCheckContext`：当前`AccountSnapshot`、`PortfolioRiskSnapshot`、待检查标的的`InstrumentSpec`、因果可得reference price，以及QExec使用同一时点FX换算的signed `projected_notional_base`；运行中检查时后三项为空。
 - `PortfolioRiskPolicy`协议：`check_order(order_intent,context)->RiskDecision`与`runtime_check(context)->RiskDecision`。
 
 `ExactAccountLedger.portfolio_risk_snapshot(event_time)`负责从同一时点的mark和FX快照生成风险快照。非衍生品notional为`mark×quantity×multiplier`，衍生品notional使用相同定义但NAV仍只计入未实现损益；gross exposure为绝对notional之和，net exposure为signed notional之和。缺少mark、FX或保证金参数时必须失败，不能用0或最新未来值代替。
