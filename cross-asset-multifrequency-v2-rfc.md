@@ -104,7 +104,7 @@ decimal_value = units × 10 ^ (-scale)
 
 ### 3.4 MarketEvent联合类型
 
-所有event共享：`event_id`、`instrument_id`、`event_time`、`received_at`、`available_at`、`source`、`trading_day`、`session_id`和可选`sequence`。联合类型由`event_type`判别：
+所有event共享：`event_id`、`instrument_id`、`event_time`、`received_at`、`available_at`、`source`、`trading_day`、`session_id`和`sequence`。非L2事件的`sequence`可空；`BookSnapshotEvent`和`BookDeltaEvent`必须提供非空`sequence`。联合类型由`event_type`判别：
 
 - `QuoteEvent`：bid/ask price和quantity。
 - `TradeEvent`：成交price、quantity和aggressor side。
@@ -157,7 +157,7 @@ Arrow用于Parquet物理类型，JSON Schema用于API和manifest记录。两者�
 
 ### 5.1执行、订单、成交和账本契约
 
-执行领域契约由`quant-execution`提供，契约预览版本为`1.0.0`，并且只依赖已发布的`quant-data-kit`契约版本。M1只冻结类型和接口，不实现撮合或发送真实订单。
+执行领域契约由`quant-execution`提供，契约预览版本为`1.0.0`，并且只依赖`quant-data-kit`的精确commit或已发布tag。评审期间允许锁到待发布契约的完整commit；合并`quant-execution`前必须改为默认分支CI通过后发布的tag。M1只冻结类型和接口，不实现撮合或发送真实订单。
 
 `OrderIntent`必须包含`idempotency_key`、account/strategy/instrument ID、side、FixedPoint quantity、order type、可空limit/stop price、time in force、`reduce_only`和UTC`created_at`。market/limit/stop/stop-limit的价格字段组合不合法时直接拒绝。
 
@@ -170,7 +170,7 @@ created -> accepted -> partially_filled -> filled
  rejected
 ```
 
-终态不可继续跃迁；每次跃迁生成独立、单调sequence的`OrderEvent`。部分成交与最终成交必须显式给出本次成交量，累计成交不能超过委托量，且所有数量使用同一scale。
+终态不可继续跃迁；每次跃迁生成独立、单调sequence的`OrderEvent`。部分成交与最终成交必须在`fill_quantity`中显式给出本次成交量，其他跃迁的该字段必须为空。累计成交不能超过委托量，且所有数量使用同一scale。
 
 `Fill`是独立成交事实，包含fill/order/account/strategy/instrument ID、side、FixedPoint quantity/price、UTC event time、maker/taker角色和可空venue trade ID。`Fee`、`Funding`和`Settlement`均为独立事实，金额允许正负以表示费用、返佣、收付和结算方向。
 
@@ -238,7 +238,7 @@ v2使用独立不可变子目录：
 
 `code_version`必须是完整40位小写Git commit SHA；`internal_dependencies`的每个值必须是明确发布版本或完整commit，`main`、`master`、`latest`和其他浮动分支均不合法。
 
-每条artifact记录必须包含`name`、相对`path`、`schema_id`、`schema_version`、SHA-256、rows、columns、required以及可用的最小/最大event time和available time。path必须留在`standard/v2`内。
+每条artifact记录必须包含`name`、相对`path`、`schema_id`、`schema_version`、SHA-256、rows、columns、required以及可用的最小/最大event time和available time。artifact必须是`standard/v2`直属的单个文件，path必须严格等于`<name>.json`或`<name>.parquet`，不允许子目录。
 
 `run_manifest.sha256`保存`run_manifest.json`的SHA-256。除manifest及其hash文件外，目录内每个普通文件必须且只能在artifact清单出现一次；额外文件、缺失文件或hash不一致均视为损坏。
 
@@ -247,7 +247,7 @@ v2使用独立不可变子目录：
 | artifact | research | backtest-ledger | 说明 |
 |---|---:|---:|---|
 | `config`、`metrics` | 必需 | 必需 | JSON也进入完整hash清单 |
-| `returns` | 必需 | 必需 | 时间区间、策略、gross/net/nav/base currency |
+| `returns` | 必需 | 必需 | 时间区间、策略、gross/net、FixedPoint NAV和base currency |
 | `positions` | 必需 | 必需 | 账户/策略/instrument、数量、价格、市值和币种 |
 | `portfolio_snapshots` | 必需 | 必需 | NAV、现金、市值、保证金和P&L快照 |
 | `exposures` | 必需 | 必需 | factor/currency/asset-class等暴露 |
@@ -258,7 +258,7 @@ v2使用独立不可变子目录：
 | `cash_ledger`、`margin` | 可选 | 必需 | 多币种双式账本posting和保证金 |
 | `attribution` | 可选 | 可选 | price/carry/funding/roll/FX/cost/slippage归因 |
 
-`positions`必须包含估值币种、对应时点可得的FX rate及`fx_snapshot_id`，并同时记录本币市值和基础币种市值。`cash_ledger`逐posting保存transaction/idempotency/reference ID，不得只保存余额快照。orders/order_events/fills字段必须与`quant-execution`契约同义；可空limit/stop price和venue trade ID的Arrow nullability必须显式冻结。
+`positions`必须包含估值币种、对应时点可得的FX rate及`fx_snapshot_id`，并同时记录本币市值和基础币种市值。`cash_ledger`逐posting保存transaction/idempotency/reference ID，不得只保存余额快照；每个事务至少两个posting，index从0连续，事务元数据一致，且按币种精确平衡。orders必须记录累计成交量和version，order_events必须记录本次成交量，fills必须记录account/strategy ID；三者字段必须与`quant-execution`契约同义。可空limit/stop price、order-event fill quantity和venue trade ID的Arrow nullability必须显式冻结。
 
 M1实现`research`profile；`backtest-ledger`schema在M1冻结，由后续execution里程碑实现生产适配。writer不得为未提供的必填artifact创建空文件。
 
