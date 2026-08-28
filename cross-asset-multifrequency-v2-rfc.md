@@ -204,7 +204,16 @@ v2使用独立不可变子目录：
 ├── run_manifest.sha256
 ├── config.json
 ├── metrics.json
-└── artifacts/*.parquet
+├── returns.parquet
+├── portfolio_snapshots.parquet
+├── positions.parquet
+├── order_events.parquet
+├── fills.parquet
+├── cash_ledger.parquet
+├── costs.parquet
+├── exposures.parquet
+├── attribution.parquet
+└── 其余profile声明的Parquet产物
 ```
 
 写入必须先在`standard`下的唯一临时目录完成全部schema验证、文件哈希和manifest哈希，再原子重命名为`v2`。若`standard/v2`已经存在则失败，不能覆盖。
