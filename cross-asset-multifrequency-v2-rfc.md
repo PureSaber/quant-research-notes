@@ -1,7 +1,7 @@
 # Cross-Asset & Multi-Frequency v2 RFC
 
-状态：M1冻结候选版  
-schema版本：`2.0.0`  
+状态：M1冻结候选版
+schema版本：`2.0.0`
 所有者：`quant-data-kit`负责市场数据领域类型，`quant-lab`负责运行产物封装与验证。
 
 ## 1.目标与非目标
