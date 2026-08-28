@@ -53,3 +53,10 @@ Typical daily flow (`quant-pipeline/configs/daily_paper.yaml`):
 Optional offline review: `quant-review run --offline`
 
 Research backtest post-run flow: `quant-pipeline/configs/research_integrity_postrun.yaml`.
+
+## Standard v2 RFC
+
+Cross-asset and multi-frequency data/time semantics, the versioned`standard/v2`layout,
+strict validation and v1/v2 coexistence rules are frozen in
+[cross-asset-multifrequency-v2-rfc.md](cross-asset-multifrequency-v2-rfc.md). Standard v1
+remains immutable and supported.
