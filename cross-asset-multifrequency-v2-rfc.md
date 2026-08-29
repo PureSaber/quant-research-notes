@@ -399,7 +399,7 @@ M6只编排本机研究、回测和paper trading任务，不引入分布式服�
 - 直接内部依赖的package、仓库、精确tag或完整commit及其解析commit；
 - 仓库声明的schema ID/version和外部依赖锁文件路径/SHA-256。
 
-清单根节点记录`schema_version`、UTC`created_at`、workspace配置SHA-256、仓库记录、内部依赖DAG、允许的schema集合和清单自身SHA-256。除`created_at`外，相同workspace状态必须生成相同canonical JSON；调用者提供固定`created_at`时，完整文件hash必须确定。
+清单根节点记录`schema_version`、UTC`created_at`、workspace配置SHA-256、仓库记录、内部依赖DAG、允许的schema集合、`release_ready`和清单自身`manifest_hash`。除`created_at`外，相同workspace状态必须生成相同canonical JSON；调用者提供固定`created_at`时，完整文件hash必须确定。清单文件必须是`quant-workspace`生成的canonical JSON且以单个换行结束；缺字段、未知字段、非canonical编码、hash不一致或`release_ready=false`均不能进入v2调度。
 
 发布模式必须fail closed：dirty仓库、浮动内部依赖、tag无法解析到清单commit、依赖目标不在清单、循环依赖、缺少声明的schema或外部lock均拒绝。审计模式允许记录dirty/untagged状态，但不得标记`release_ready=true`。旧tag不可移动；是否为注释tag也必须记录。
 
@@ -412,7 +412,7 @@ M6只编排本机研究、回测和paper trading任务，不引入分布式服�
 
 ### 11.2类型化DAG契约
 
-`quant-pipeline`保留现有线性YAML读取，但v2配置必须声明`schema_version: "2.0.0"`。每个step必须包含稳定`id`、`kind`、显式`needs`、argv形式`command`、输入artifact、输出artifact、重试策略和timeout。`shell:true`仅保留给v1兼容配置；v2禁止shell字符串执行。
+`quant-pipeline`保留现有线性YAML读取，但v2配置必须声明`schema_version: "2.0.0"`。每个step必须包含稳定`id`、`kind`、显式`needs`、argv形式`command`、输入artifact、输出artifact、重试策略和timeout。`shell:true`仅保留给v1兼容配置；v2禁止shell字符串执行。v2运行只接受通过`quant-workspace.validate_stack_manifest`校验且`release_ready=true`的`StackManifest 1.0.0`；不再接受仅含`schema_version/created_at/repositories`的宽松映射。
 
 artifact契约包含稳定`artifact_id`、规范化绝对或workspace相对path、producer step、可选schema ID/version、required、immutable和预期/实际SHA-256。同一artifact只能有一个producer；step读取另一步产物时必须同时声明`needs`和input artifact。未知依赖、重复ID、自依赖、环、路径逃逸和输出冲突在执行前失败。
 
@@ -435,9 +435,9 @@ artifact契约包含稳定`artifact_id`、规范化绝对或workspace相对path�
 
 step幂等键为`SHA256(run_id,step_id,step定义hash,有序input artifact hash,stack manifest hash,seed)`。成功检查点只有在幂等键相同、全部immutable输出存在且hash一致时才可标记`cached`；输出缺失、hash变化或定义变化必须fail closed，不能把旧结果当成功。
 
-每个step完成后通过临时文件、fsync和原子rename更新checkpoint；同时追加单调sequence的事件记录。checkpoint损坏、run ID/config/stack hash不匹配或出现`running`终态时，resume必须拒绝或把中断attempt明确标记为failed后重试，不能静默跳过。
+每个step完成后通过临时文件、fsync和原子rename更新checkpoint；同时追加单调sequence的事件记录。checkpoint损坏、run ID/config/stack hash不匹配或出现`running`终态时，resume必须拒绝或把中断attempt明确标记为failed后重试，不能静默跳过。恢复任何已记录step（包括状态仍为`pending`的待重试step）前，必须重新计算全部input artifact hash和幂等键；任何变化都必须在追加resume事件或替换checkpoint前拒绝。
 
-重试只针对配置的exit code或显式可重试异常，`max_attempts`包含首次执行。每次attempt使用同一幂等键、独立日志和确定性退避参数；默认不对参数错误、schema错误、契约/hash错误重试。一个step最终失败后，其后代标记`blocked`，无依赖的其他分支可继续；`fail_fast=true`时才停止所有尚未开始的step。
+重试只针对配置的exit code或显式可重试异常，`max_attempts`包含首次执行。每次attempt使用同一幂等键、独立日志和确定性退避参数。`kind`精确等于`data_quality`、`schema_validation`、`sequence_validation`、`hash_validation`或`pit_validation`的step属于不可重试门禁；即使配置了匹配exit code或异常也必须忽略重试策略并在首次失败后阻断其后代。参数错误、契约/path/artifact hash错误同样不可重试。一个step最终失败后，其后代标记`blocked`，无依赖的其他分支可继续；`fail_fast=true`时才停止所有尚未开始的step。
 
 ### 11.4治理与资源门禁
 
