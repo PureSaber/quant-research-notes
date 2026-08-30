@@ -1,0 +1,122 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/frequency.schema.json",
+  "x-puresaber-schema-id": "puresaber.factor-frequency@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "frequency_id",
+    "kind",
+    "periods_per_year",
+    "calendar_id",
+    "session_policy_version",
+    "interval_ns",
+    "session_rollup",
+    "event_bar_basis",
+    "event_bar_threshold",
+    "market_event_types"
+  ],
+  "properties": {
+    "frequency_id": {"type": "string", "minLength": 1},
+    "kind": {
+      "enum": ["fixed_time_bar", "session_bar", "event_bar", "market_event"]
+    },
+    "periods_per_year": {
+      "type": "string",
+      "pattern": "^(?:[1-9][0-9]*(?:\\.[0-9]*[1-9])?|0\\.[0-9]*[1-9])$"
+    },
+    "calendar_id": {"type": "string", "minLength": 1},
+    "session_policy_version": {"type": "string", "minLength": 1},
+    "interval_ns": {
+      "oneOf": [
+        {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+        {"type": "null"}
+      ]
+    },
+    "session_rollup": {
+      "type": ["string", "null"],
+      "enum": ["session", "trading_day", null]
+    },
+    "event_bar_basis": {
+      "type": ["string", "null"],
+      "enum": ["trade_count", "base_volume", "quote_notional", null]
+    },
+    "event_bar_threshold": {
+      "oneOf": [{"$ref": "#/$defs/positive_fixed_point"}, {"type": "null"}]
+    },
+    "market_event_types": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "pattern": "^puresaber\\.[a-z0-9._-]+$"}
+        },
+        {"type": "null"}
+      ]
+    }
+  },
+  "$defs": {
+    "positive_fixed_point": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "scale"],
+      "properties": {
+        "units": {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+        "scale": {"type": "integer", "minimum": 0, "maximum": 18}
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"const": "fixed_time_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "integer", "minimum": 1},
+          "session_rollup": {"type": "null"},
+          "event_bar_basis": {"type": "null"},
+          "event_bar_threshold": {"type": "null"},
+          "market_event_types": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "session_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "null"},
+          "session_rollup": {"enum": ["session", "trading_day"]},
+          "event_bar_basis": {"type": "null"},
+          "event_bar_threshold": {"type": "null"},
+          "market_event_types": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "event_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "null"},
+          "session_rollup": {"type": "null"},
+          "event_bar_basis": {
+            "enum": ["trade_count", "base_volume", "quote_notional"]
+          },
+          "event_bar_threshold": {"$ref": "#/$defs/positive_fixed_point"},
+          "market_event_types": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "market_event"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "null"},
+          "session_rollup": {"type": "null"},
+          "event_bar_basis": {"type": "null"},
+          "event_bar_threshold": {"type": "null"},
+          "market_event_types": {"type": "array", "minItems": 1}
+        }
+      }
+    }
+  ]
+}
