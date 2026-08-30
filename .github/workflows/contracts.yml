@@ -25,13 +25,19 @@ jobs:
 
       - name: Install locked contract dependencies
         run: |
-          python -m pip install --requirement contracts/m8/requirements.lock
+          python -m pip install --require-hashes --requirement contracts/m8/requirements.lock
           python -m pip check
 
-      - name: Validate schemas, semantics and negative vectors
+      - name: Lint and format check
         run: |
-          python contracts/m8/validate_contracts.py
-          python -m unittest discover -s contracts/m8/tests -v
+          python -m ruff check contracts/m8
+          python -m ruff format --check contracts/m8
+
+      - name: Validate schemas, semantics, negative vectors and coverage
+        run: |
+          python -m coverage run --branch contracts/m8/validate_contracts.py
+          python -m coverage run --branch --append -m unittest discover -s contracts/m8/tests -v
+          python -m coverage report --include="contracts/m8/validate_contracts.py" --fail-under=90
 
       - name: Independently verify golden hash with Node.js
         run: |
@@ -40,6 +46,9 @@ jobs:
           const fs = require("fs");
           const golden = JSON.parse(
             fs.readFileSync("contracts/m8/golden/factor-frame-hash-v1.json", "utf8")
+          );
+          const manifest = JSON.parse(
+            fs.readFileSync(`contracts/m8/golden/${golden.manifest_file}`, "utf8")
           );
           const canonicalize = (value) => {
             if (Array.isArray(value)) return value.map(canonicalize);
@@ -50,6 +59,42 @@ jobs:
             }
             return value;
           };
+          const typedCell = (value) => {
+            if (value === null) return {t: "null"};
+            if (typeof value === "boolean") return {t: "bool", v: value};
+            if (typeof value === "number") {
+              if (!Number.isSafeInteger(value)) process.exit(4);
+              return {t: "i64", v: String(value)};
+            }
+            if (typeof value === "string") return {t: "utf8", v: value};
+            if (Array.isArray(value)) return {t: "list", v: value.map(typedCell)};
+            if (typeof value === "object") {
+              return {
+                t: "struct",
+                v: Object.keys(value).sort().map((key) => [key, typedCell(value[key])]),
+              };
+            }
+            process.exit(5);
+          };
+          const digest = (value) => crypto
+            .createHash("sha256")
+            .update(Buffer.from(JSON.stringify(canonicalize(value)), "utf8"))
+            .digest("hex");
+          const projection = Object.fromEntries(
+            Object.entries(manifest).filter(
+              ([key]) => !["logical_content_sha256", "physical_sha256"].includes(key)
+            )
+          );
+          if (digest(typedCell(projection)) !== golden.manifest_projection_sha256) {
+            process.exit(6);
+          }
+          const maxInt64Projection = structuredClone(projection);
+          maxInt64Projection.frequency.interval_ns = "9223372036854775807";
+          const precedingInt64Projection = structuredClone(projection);
+          precedingInt64Projection.frequency.interval_ns = "9223372036854775806";
+          if (digest(typedCell(maxInt64Projection)) === digest(typedCell(precedingInt64Projection))) {
+            process.exit(7);
+          }
           const payload = Buffer.from(JSON.stringify(canonicalize(golden.canonical_input)), "utf8");
           if (payload.toString("hex") !== golden.canonical_utf8_hex) process.exit(2);
           if (crypto.createHash("sha256").update(payload).digest("hex") !== golden.sha256) {

@@ -25,7 +25,7 @@
     "recipe_version": {"type": "string", "minLength": 1},
     "interval_ns": {
       "oneOf": [
-        {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+        {"type": "string", "pattern": "^[1-9][0-9]*$"},
         {"type": "null"}
       ]
     },
@@ -44,7 +44,7 @@
           "additionalProperties": false,
           "required": ["units", "scale"],
           "properties": {
-            "units": {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+            "units": {"type": "string", "pattern": "^[1-9][0-9]*$"},
             "scale": {"type": "integer", "minimum": 0, "maximum": 18}
           }
         },
@@ -92,11 +92,11 @@
             ],
             "properties": {
               "relative_path": {"type": "string", "minLength": 1},
-              "first_sequence": {"type": "integer", "minimum": 0},
-              "last_sequence": {"type": "integer", "minimum": 0},
+              "first_sequence": {"type": "string", "pattern": "^(?:0|[1-9][0-9]*)$"},
+              "last_sequence": {"type": "string", "pattern": "^(?:0|[1-9][0-9]*)$"},
               "first_event_id": {"type": "string", "minLength": 1},
               "last_event_id": {"type": "string", "minLength": 1},
-              "event_count": {"type": "integer", "minimum": 1},
+              "event_count": {"type": "string", "pattern": "^[1-9][0-9]*$"},
               "source_selection_sha256": {
                 "type": "string",
                 "pattern": "^[0-9a-f]{64}$"
@@ -113,7 +113,7 @@
       "if": {"properties": {"kind": {"const": "fixed_time_bar"}}},
       "then": {
         "properties": {
-          "interval_ns": {"type": "integer", "minimum": 1},
+          "interval_ns": {"type": "string", "pattern": "^[1-9][0-9]*$"},
           "session_rollup": {"type": "null"},
           "event_bar_basis": {"type": "null"},
           "event_bar_threshold": {"type": "null"},
