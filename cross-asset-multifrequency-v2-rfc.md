@@ -1,6 +1,6 @@
 # Cross-Asset & Multi-Frequency v2 RFC
 
-状态：M4已发布，M5接口冻结候选版
+状态：M0—M6已发布，M7软件门禁整改中，真实市场认证阻塞
 schema版本：`2.0.0`
 所有者：`quant-data-kit`负责市场数据领域类型，`quant-lab`负责运行产物封装与验证。
 
@@ -448,3 +448,34 @@ step幂等键为`SHA256(run_id,step_id,step定义hash,有序input artifact hash,
 5. L2配额检查在采集前执行：热数据默认150GB；当可用空间低于`max(卷容量20%,100GB)`时返回稳定`STORAGE_QUOTA_STOP`并停止新采集，不删除已有数据。
 6. 数据质量失败分区必须作为隔离artifact进入DAG，任何curated或策略step依赖该分区时标记blocked；不能通过重试把schema、序列缺口、hash或PIT失败变成成功。
 7. 同一fixture、配置、stack manifest、seed和run ID连续3次，拓扑顺序、step状态、事件序列、artifact hash和checkpoint hash必须一致（运行时间字段使用固定测试时钟）。
+
+## 12.M7认证、证据语义与集成政策
+
+M7把“组件软件可集成”和“平台真实市场认证”拆成两个不能互相替代的状态。组件PR可以在源码、fixture、性能、独立验证和精确HEAD三版本CI全部通过后合入默认分支；合并只表示软件能力进入主线，不表示公共网络、连续30天、合法市场数据或`v2.0 GA`通过。
+
+### 12.1认证证据必须支持声明
+
+只验证证据文件存在和SHA-256不足以通过认证。每类证据必须使用闭合JSON Schema，并将认证清单中的每个声明值与证据内容逐字段绑定：
+
+- 数据性能证据必须绑定仓库、源码commit、dirty状态、三次独立运行、每次事件数、吞吐、峰值RSS、接受/隔离数、严格重载、确定性哈希和保留策略；
+- 执行性能证据必须额外绑定订单、成交、费用、账本事件、成交密度、会计守恒和完整计时边界；
+- Crypto市场证据必须绑定Binance/OKX、冻结8流、窗口起止、完整UTC天数、Raw/Normalized快照、序列与盘口质量、归档及恢复证据；
+- 国内L2证据必须绑定授权来源、冻结范围、同等连续窗口和质量门禁；fixture证据只能产生`fixture-certified`，不得产生`market-data-certified`；
+- CI证据必须绑定仓库、workflow运行ID、事件类型、精确40位`head_sha`、总体结论及Python3.10/3.11/3.12完整job集合。
+
+证据文件哈希正确但Schema未知、字段缺失、未知字段、类型漂移、声明与内容不一致、运行commit不同、job矩阵不完整或使用自报成功字符串时必须fail closed。任意文本证据、伪造指标、伪造CI和同哈希不同语义都必须有负向测试。
+
+### 12.2合并、组件tag与平台发布
+
+1. 组件PR只有在候选精确HEAD得到独立验证`P1=0、P2=0`且三版本CI通过后才可使用merge commit合入；不得squash导致源码commit和证据commit失去默认分支可追溯性。
+2. 组件tag只能从默认分支CI通过的commit创建，必须是新的不可移动annotated tag。组件tag只发布该仓库的软件契约，不代表平台M7或真实市场认证。
+3. 下游内部依赖必须更新到已发布组件tag或完整commit，并重新执行组合CI和受影响的正确性/性能门禁；不得沿用旧tag推断兼容。
+4. `v2.0-rc`最多允许国内L2保持`fixture-certified-not-market-data-certified`，但Crypto真实市场范围、窗口和归档门禁必须由机器认证器实际校验。
+5. 平台`v2.0`tag和GA必须等待所有适用真实数据、30天、归档恢复、默认分支CI、全栈清单和独立验证通过；组件合并不能解除这些门禁。
+
+### 12.3当前里程碑状态
+
+- M0—M6已完成默认分支整合、独立验证和组件发布；
+- M7数据、执行和Crypto L2采集器的软件/fixture/本机性能证据已形成，但合并就绪审计发现认证证据语义绑定P1和执行依赖组合认证P2；
+- 公共Binance/OKX连续30天、独立归档恢复及国内合法L2仍未完成；
+- 当前权威状态、历史FAIL和修复后PASS记录位于`validation/m7/`，任何新结论必须新增证据或更新当前状态，不得改写历史审计文件。

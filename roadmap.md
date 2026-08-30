@@ -46,8 +46,11 @@ See [research-integrity-v1.md](research-integrity-v1.md).
 
 - [RFC](cross-asset-multifrequency-v2-rfc.md): instrument、symbol mapping、market clock、
   UTC双时间、固定点数和`standard/v2`契约
-- M1：`quant-data-kit`公开数据schema与`quant-lab`严格v2运行契约
-- 后续：公共execution账本、股票/期货adapter、跨资产风险归因和DAG编排
+- M0—M6：默认分支收口、契约、数据、执行、三条纵向切片、组合风险归因和DAG治理均已完成并保留独立审计链
+- M7软件/fixture：数据性能、执行性能和Crypto L2采集器软件门禁已通过独立验证
+- M7合并就绪：`quant-workspace`认证证据语义绑定存在P1，`quant-execution`尚未与`quant-data-kit 0.7.4`组合认证，整改中
+- M7真实市场：公共网络、连续30天、归档恢复及国内合法L2仍为外部/时间阻塞，不得宣称`market-data-certified`或`v2.0 GA`
+- 当前状态与证据：[validation/m7/M7_STATUS.md](validation/m7/M7_STATUS.md)
 
 ## Skills checklist
 
