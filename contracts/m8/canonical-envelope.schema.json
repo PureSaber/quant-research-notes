@@ -7,8 +7,8 @@
   "required": ["schema", "metadata", "output_schema", "records"],
   "properties": {
     "schema": {"const": "puresaber.factor-frame-canonical@1.0.0"},
-    "metadata": {"$ref": "#/$defs/cell"},
-    "output_schema": {"$ref": "#/$defs/cell"},
+    "metadata": {"$ref": "canonical-metadata.schema.json"},
+    "output_schema": {"$ref": "#/$defs/list_cell"},
     "records": {
       "type": "array",
       "items": {
@@ -68,7 +68,16 @@
       "required": ["t", "v"],
       "properties": {
         "t": {"const": "f64"},
-        "v": {"type": "string", "pattern": "^[0-9a-f]{16}$"}
+        "v": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{16}$",
+          "not": {
+            "anyOf": [
+              {"pattern": "^(?:7ff|fff)"},
+              {"const": "8000000000000000"}
+            ]
+          }
+        }
       }
     },
     "fixed_cell": {

@@ -1,6 +1,6 @@
 # Cross-Asset & Multi-Frequency v2 RFC
 
-状态：M0—M6已发布，M7软件门禁整改中，真实市场认证阻塞
+状态：M0—M7软件组件已集成，M8契约冻结中，真实市场认证阻塞
 schema版本：`2.0.0`
 所有者：`quant-data-kit`负责市场数据领域类型，`quant-lab`负责运行产物封装与验证。
 
@@ -492,7 +492,9 @@ M8把“数据聚合频率”“事件采样频率”和“因子窗口语义”
 
 M8机器契约位于`contracts/m8/`。`FrequencySpec`、`FactorSpec`、`AsOfSpec`、
 `AuxiliarySource`和`FactorFrameManifest`分别使用对应文件中的闭合JSON Schema；所有对象
-`additionalProperties=false`，未知字段拒绝。`FrequencySpec`的Schema ID固定为
+记录均拒绝未知字段，动态值列映射只允许Schema约束的字符串键值。JSON Schema不能表达的
+跨字段等值、唯一性、int64范围和位级规则由版本化`validate_contracts.py`强制执行，二者都
+是契约的一部分。`FrequencySpec`的Schema ID固定为
 `puresaber.factor-frequency@1.0.0`，字段和条件约束为：
 
 | 字段 | JSON类型 | 约束 |
@@ -531,12 +533,13 @@ fail-closed工厂；`quant-factors`必须锁定该tag，不能复制私有loader
 ```text
 load_verified_curated_bars(root,dataset,snapshot_id)->VerifiedFactorInput
 load_verified_normalized_events(
-    root,snapshot_id,event_schema_ids,market_context_snapshot_id
+    root,snapshot_id,event_schemas,market_context_snapshot_id
 )->VerifiedFactorInput
 ```
 
 `VerifiedFactorInput`是`puresaber.verified-factor-input@1.0.0`联合类型，至少绑定`layer`、
-完整源snapshot ID及逻辑hash、选择后逻辑hash、Schema ID/version集合、不可变Arrow表、
+完整源snapshot ID及逻辑hash、选择后逻辑hash、`event_schemas[{schema_id,schema_version}]`
+集合、不可变Arrow表、
 `calendar_id`、`session_policy_version`、市场上下文snapshot ID/hash和有序血缘。两个工厂均须先严格验证源快照manifest、
 分区集合、行数、每分区物理SHA-256、分区/全数据集逻辑hash和上游血缘，再在同一显式快照
 目录读取全部目标分区，复验Arrow Schema和内存表选择hash；任何读取期间变更都必须失败。
@@ -549,7 +552,7 @@ sequence/previous_sequence、快照锚点和缺口门禁。输出血缘同时保
 
 Curated manifest必须升级为带闭合`puresaber.curated-aggregation@1.0.0`元数据的内容寻址
 版本。该元数据必须绑定`calendar_id`、`session_policy_version`、`kind`、`recipe_version`、
-市场上下文snapshot ID/hash，以及和FrequencySpec相同的条件字段。`event_bar`还须按分区绑定源Schema、首末
+市场上下文snapshot ID/hash，以及和FrequencySpec相同的条件字段。`event_bar`还须按分区绑定源Schema ID/version、首末
 `sequence/event_id`、实际事件数、basis和threshold；loader必须从Normalized血缘复算。
 旧manifest永久可读，但只能产生`legacy-curated-not-m8-certified`。
 
@@ -618,7 +621,8 @@ FactorSpec版本变化必须改变配置hash和产物血缘。
 - 业务键列、`observation_time`、`effective_from/effective_to`、`available_at`、可选
   `superseded_at`及int64`revision`；revision在
   `(role,business_key,effective_from)`内严格递增；
-- 每个依赖值列到其可用时间列的强制映射，例如`pe_ratio -> pe_available_at`；
+- 每个依赖值列到其可用时间列的唯一JSON对象映射，例如
+  `{"pe_ratio":"pe_available_at"}`；重复JSON键在解析阶段拒绝；
 - join recipe及每个FactorSpec的`missing_policy=null|error`。
 
 对每个源行和业务键，候选外部版本必须同时满足：
@@ -651,6 +655,13 @@ RFC8785 JCS UTF-8字节，而不是Parquet文件字节。envelope只有固定键
 `output_schema`顺序，行按`(instrument_id,event_time,sequence,event_id)`排序。JCS负责对象
 键排序、字符串转义和无空白序列化，不再定义私有长度前缀。
 
+`metadata`不是任意cell：它固定包含`manifest_schema_id`和
+`manifest_projection_sha256`。projection是完整FactorFrame manifest移除
+`logical_content_sha256/physical_sha256`后的RFC8785 JCS对象，因而覆盖FrequencySpec、
+FactorSpec、AsOfSpec、全部来源/辅助血缘、join recipe、代码版本、行数和输出Schema，同时
+避免自引用hash。语义验证器必须同时证明projection hash、envelope metadata、manifest输出
+Schema、记录列数/类型、envelope SHA-256和manifest逻辑hash相互一致。
+
 除envelope键和固定`schema`版本字面量外，每个领域值必须转为以下唯一typed cell对象，
 原始JSON number不得直接进入envelope：
 
@@ -665,7 +676,7 @@ RFC8785 JCS UTF-8字节，而不是Parquet文件字节。envelope只有固定键
 - list：`{"t":"list","v":[cell,...]}`；struct：
   `{"t":"struct","v":[["按Arrow Schema顺序的字段名",cell],...]}`。
 
-机器Schema和`contracts/m8/golden/factor-frame-hash-v1.json`共同冻结完整envelope及黄金hash；
+机器Schema、显式交叉引用的manifest和`contracts/m8/golden/factor-frame-hash-v1.json`共同冻结完整envelope及黄金hash；
 Python和一个独立实现必须从同一`canonical_input`复算文件中的JCS字节和SHA-256。QDK合法的
 纳秒时间不得降为微秒或RFC3339文本。
 
@@ -678,7 +689,7 @@ hash输入必须包括完整FrequencySpec、FactorSpec、源和辅助快照逻�
 1. session日线、1分钟、tick派生event Bar和原生事件输入分别有黄金样例；Bar类相同period序列的非年化因子一致，年化结果只按显式`periods_per_year`变化。
 2. Curated和Normalized两个正式工厂均有内容/选择hash与TOCTOU负向测试；任意table伪配snapshot ID、快照内容篡改、Schema/recipe/日历不匹配、FixedPoint错误适配、源行乱序/重复、naive时间、不完整Bar、错误间隔和事件序列缺口全部fail closed。
 3. 每个认证因子有逐行`row_as_of`和精确窗口可用时间黄金测试；多辅助快照、重叠版本、重复revision、修订/superseded数据及故意注入未来可得值后，PIT选择或稳定错误码完全符合13.4。
-4. 同一输入、配置、代码和seed连续3次，FactorFrame逻辑hash完全一致；Python和一个独立实现复算规范hash黄金向量，JCS字节和SHA-256均匹配。
+4. 同一输入、配置、代码和seed连续3次，FactorFrame逻辑hash完全一致；Python和一个独立实现复算规范hash黄金向量，JCS字节和SHA-256均匹配；manifest projection、输出Schema和逻辑hash交叉绑定。
 5. 旧`legacy-daily`结果保持回归兼容，但认证测试不得调用legacy入口；下游不得把legacy产物升级标记为v2认证。
-6. Python3.10、3.11和3.12的lint、unit、contract、integration、`pip check`全部通过；QDK认证输入及因子频率、PIT和hash核心模块纯分支覆盖率不低于90%，各仓不低于80%。
+6. Python3.10、3.11和3.12的lint、unit、contract、integration、`pip check`全部通过；契约CI必须运行正向样例及输入层级、上下文、PIT范围、重复身份、数值范围、NaN/Infinity/负零、日期/base64和黄金绑定负向向量；QDK认证输入及因子频率、PIT和hash核心模块纯分支覆盖率不低于90%，各仓不低于80%。
 7. 先发布具备13.2能力的新`quant-data-kit`annotated组件tag；`quant-factors`锁定该tag并在默认分支CI通过后发布新tag。下游升级后重新执行契约和纵向策略回归，不能从浮动分支安装。
