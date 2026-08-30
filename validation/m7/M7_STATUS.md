@@ -1,6 +1,31 @@
 # M7认证与发布状态
 
-更新时间：2026-08-30（Asia/Shanghai）
+更新时间：2026-08-31（Asia/Shanghai）
+
+## 当前权威状态
+
+当前状态：`COMPONENTS_INTEGRATED / PLATFORM_RELEASE_BLOCKED`
+
+截至2026-08-31，M7三个软件组件候选已经关闭合并就绪审计中的P1/P2，完成精确HEAD独立验证、Python3.10/3.11/3.12 CI、merge commit集成及默认分支CI，并发布仅代表组件软件契约的annotated tag：
+
+| 组件 | 默认分支merge commit | 组件tag | 默认分支CI | 当前结论 |
+|---|---|---|---|---|
+| `quant-workspace` | `69b78f819c8c9d8fa5e9f69e57e3e9eb89dbc92d` | `v0.3.0` | `33320226752`，SUCCESS | 机器认证契约及证据语义绑定已集成 |
+| `quant-data-kit` | `ecb04bd5834aeefdf79226c15cba484337785f90` | `v0.7.4` | `33323411604`，SUCCESS | 数据、Crypto L2软件/fixture及本机性能能力已集成 |
+| `quant-execution` | `f7672cdf19aa78a66a52f0e57393bed2d4ca8d5a` | `v0.5.0` | `33327150468`，SUCCESS | 已锁定`quant-data-kit v0.7.4`并完成组合正确性、确定性和本机性能复验 |
+
+以上tag均为组件发布，不是平台`v2.0`、`v2.0-rc`或真实市场认证。平台发布仍被以下未完成门禁阻断：
+
+1. Binance/OKX冻结8流公共网络真实数据、连续30个完整UTC日和序列/盘口质量认证；
+2. 满足容量门限的独立归档、哈希校验及恢复演练；
+3. 国内L2合法授权数据及真实市场认证；
+4. 后续M8及纵向切片、组合风险、归因和全栈发布清单门禁。
+
+因此当前不得创建平台`v2.0`tag或宣称GA/market-data-certified。下面2026-08-30及更早内容是当时的不可变审计快照，已被本节取代为当前状态；其中OPEN、UNMERGED和旧候选commit只描述当时事实，不得用于判断当前合并状态。
+
+---
+
+## 历史快照：2026-08-30（已被当前权威状态取代）
 
 ## 负责人结论
 
