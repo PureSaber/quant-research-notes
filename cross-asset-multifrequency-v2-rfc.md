@@ -479,3 +479,78 @@ M7把“组件软件可集成”和“平台真实市场认证”拆成两个不
 - M7数据、执行和Crypto L2采集器的软件/fixture/本机性能证据已形成，但合并就绪审计发现认证证据语义绑定P1和执行依赖组合认证P2；
 - 公共Binance/OKX连续30天、独立归档恢复及国内合法L2仍未完成；
 - 当前权威状态、历史FAIL和修复后PASS记录位于`validation/m7/`，任何新结论必须新增证据或更新当前状态，不得改写历史审计文件。
+
+## 13.M8全频率因子与PIT特征契约
+
+M8把“数据聚合频率”和“因子窗口语义”从隐含日频假设中拆开。`quant-data-kit`
+继续独占交易日历、session边界和Bar聚合；`quant-factors`只能消费经过验证的Curated
+Bar或等价冻结fixture，不能自行按自然日重采样、猜测夜盘交易日或访问浮动数据源。
+
+### 13.1 FrequencySpec
+
+公开`FrequencySpec`至少包含：
+
+| 字段 | 约束 |
+|---|---|
+| `frequency_id` | 非空opaque ID，例如`bar-1m`；业务代码不得解析字符串推断参数 |
+| `kind` | `time_bar`或`event` |
+| `periods_per_year` | 正有限数；所有年化因子必须显式使用，禁止在实现中猜测252、365或24x7周期数 |
+| `bar_interval` | `time_bar`时为正`timedelta`，`event`时为null |
+| `calendar_id` | 时间Bar必填，必须与上游session版本一致；event频率可为null |
+| `session_policy_version` | 时间Bar必填，绑定上游聚合规则版本 |
+
+`FrequencySpec`描述因子计算语义，不创建Bar。年化周期是研究配置，不从
+`bar_interval`自动推导，因为不同市场的交易日、夜盘、24x7和停牌结构不同。
+
+### 13.2认证输入与兼容输入
+
+新认证入口固定为：
+
+```text
+compute_factor_frame(panel,frequency,source_snapshot_id,factors=None)->FactorFrame
+```
+
+`panel`必须包含`instrument_id`、`event_time`、`available_at`、`trading_day`、
+`session_id`、`bar_start`、`bar_end`、`is_complete`、`close`和`volume`；OHLC因子使用时
+还必须包含对应价格列。全部时间必须是UTC有时区时间，同一标的按
+`(event_time,available_at,session_id)`严格有序，`instrument_id+event_time+frequency_id`
+不得重复。`time_bar`输入必须满足`bar_end-bar_start=bar_interval`，不完整Bar、缺失
+session、时间倒退或无显式`source_snapshot_id`一律fail closed。
+
+`compute_factors(date/symbol/close,...)`作为`legacy-daily`兼容入口永久保留，但它不满足
+上述身份、PIT和血缘要求，不能产生`full-frequency-certified`声明。迁移期不把旧列名
+静默解释为v2列，也不根据数据间隔自动猜频率。
+
+### 13.3窗口、年化与命名
+
+新因子ID使用period语义，例如`momentum_20p`、`volatility_20p`和
+`downside_vol_20p`；后缀`p`表示输入序列的20个已完成period，不表示自然日。旧
+`*_20d`ID只属于legacy入口。
+
+所有滚动计算按`instrument_id`隔离并使用稳定输入顺序。年化波动率精确使用
+`sqrt(frequency.periods_per_year)`。`periods_per_year`变化必须改变运行配置hash和产物
+血缘；同一因子值不得在未记录该参数时跨日线、分钟或24x7频率比较。
+
+### 13.4PIT可用时间和FactorFrame
+
+`FactorFrame`必须携带`frequency`、`source_snapshot_id`、有序因子ID、输入行数、输出
+行数和确定性内容hash。输出保留输入身份列，并为每个因子`<factor_id>`生成
+`<factor_id>__available_at`：
+
+- 可用时间等于该因子实际依赖窗口内全部源行`available_at`的最大值；
+- 若因子依赖基本面等外部列，还必须合并该列自己的可用时间，不能只使用Bar时间；
+- 因子值非空时其可用时间必须非空、UTC且不早于全部来源；
+- 输出顺序、数值和可用时间必须由相同输入、spec和代码确定，禁止使用墙钟作为产物字段；
+- 消费者只能在`as_of>=factor_available_at`时使用该值，故意注入未来可得来源的负向测试必须被PIT审计捕获。
+
+因子层不得覆盖上游`event_time/available_at`，不得把输出写回原Curated快照。任何修订
+使用新的因子产物和新血缘；来源快照、频率或因子集合变化都必须改变内容hash。
+
+### 13.5M8退出门禁
+
+1. 日线、1分钟和tick派生Bar使用同一实现；相同period序列的非年化因子结果一致，年化结果只按显式`periods_per_year`变化。
+2. 源行乱序、重复、naive时间、不完整Bar、间隔不符、缺失session或快照ID全部有fail-closed负向测试。
+3. 每个认证因子有精确窗口可用时间黄金测试；未来可得来源注入后PIT审计必须失败。
+4. 旧`legacy-daily`结果保持回归兼容，但认证测试不得调用legacy入口。
+5. Python3.10、3.11和3.12的lint、unit、contract、integration、`pip check`全部通过；核心频率/PIT模块分支覆盖率不低于90%，全仓不低于80%。
+6. `quant-factors`只能在默认分支CI通过后发布新的annotated组件tag；下游升级后重新执行契约和纵向策略回归，不能从浮动分支安装。
