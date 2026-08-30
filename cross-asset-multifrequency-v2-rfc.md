@@ -504,16 +504,17 @@ M8机器契约位于`contracts/m8/`。`FrequencySpec`、`FactorSpec`、`AsOfSpec
 | `periods_per_year` | string | 正有限十进制定点字符串，禁止指数、前导`+`、尾随零和负零；只用于显式年化 |
 | `calendar_id` | string | 必填；24x7市场也必须使用版本化日历ID |
 | `session_policy_version` | string | 必填；必须与来源快照聚合或事件归属策略一致 |
-| `interval_ns` | integer/null | 仅`fixed_time_bar`为1到int64最大值；其他kind必须为null |
+| `interval_ns` | string/null | 仅`fixed_time_bar`为1到int64最大值的规范十进制字符串；其他kind必须为null |
 | `session_rollup` | string/null | 仅`session_bar`为`session`或`trading_day`；其他kind必须为null |
 | `event_bar_basis` | string/null | 仅`event_bar`为`trade_count`、`base_volume`或`quote_notional` |
-| `event_bar_threshold` | FixedPoint/null | 仅`event_bar`必填；与QDK一致为`{units:int64,scale:integer[0,18]}`且值为正 |
+| `event_bar_threshold` | FixedPoint/null | 仅`event_bar`必填；JSON适配为`{units:规范int64十进制字符串,scale:integer[0,18]}`且值为正，QDK内存对象仍使用精确int64 units |
 | `market_event_types` | array/null | 仅`market_event`为非空、去重、排序后的事件Schema ID数组 |
 
 `fixed_time_bar`只表示固定纳秒间隔；日线、半日、夜盘、午休、DST和提前收市必须使用
 `session_bar`并由版本化`TradingSession`边界决定，不能伪装成24小时`timedelta`。
 `event_bar`是`quant-data-kit`按稳定事件顺序生成的完整合成Bar，必须在来源元数据中绑定
-起止`sequence/event_id`、实际事件数、basis和threshold。`market_event`表示原生Trade、
+起止`sequence/event_id`、实际事件数、basis和threshold；JSON中的sequence和事件数均使用
+规范十进制字符串，禁止经过IEEE-754 number。`market_event`表示原生Trade、
 BBO或L2事件流，不要求Bar字段，但必须保留`event_id`、`sequence`和事件Schema ID；只接受
 声明`input_profile=market_event`的因子。OHLC滚动因子对该kind必须fail closed。
 
@@ -553,7 +554,7 @@ sequence/previous_sequence、快照锚点和缺口门禁。输出血缘同时保
 Curated manifest必须升级为带闭合`puresaber.curated-aggregation@1.0.0`元数据的内容寻址
 版本。该元数据必须绑定`calendar_id`、`session_policy_version`、`kind`、`recipe_version`、
 市场上下文snapshot ID/hash，以及和FrequencySpec相同的条件字段。`event_bar`还须按分区绑定源Schema ID/version、首末
-`sequence/event_id`、实际事件数、basis和threshold；loader必须从Normalized血缘复算。
+`sequence/event_id`、实际事件数、basis和threshold；其中int64值在JSON中使用规范十进制字符串，loader必须从Normalized血缘复算。
 旧manifest永久可读，但只能产生`legacy-curated-not-m8-certified`。
 
 因子层认证入口固定为：
@@ -645,19 +646,22 @@ Bar、事件及辅助值可用时间的最大值。值非空时该时间必须�
 
 ### 13.5`FactorFrame`和规范内容hash
 
-`FactorFrame`保留输入身份列，并携带完整`FrequencySpec`、有序`FactorSpec`、有序来源
+`FactorFrame`保留`instrument_id/event_time/sequence/event_id/source_available_at`五个固定身份列，并携带完整`FrequencySpec`、有序`FactorSpec`、有序来源
 血缘、代码commit/tag、输入/输出行数、输出Schema和`logical_content_sha256`。禁止把墙钟
 写入逻辑hash字段；生成时间只能作为非确定性物理元数据存在。
 
 逻辑hash算法固定为SHA-256，输入是`puresaber.factor-frame-canonical@1.0.0`规范envelope的
 RFC8785 JCS UTF-8字节，而不是Parquet文件字节。envelope只有固定键`schema`、`metadata`、
 `output_schema`和`records`；元数据先按闭合Schema转为typed cell，输出列按
-`output_schema`顺序，行按`(instrument_id,event_time,sequence,event_id)`排序。JCS负责对象
+`output_schema`顺序，行按`(instrument_id,event_time,sequence,event_id)`严格排序且身份唯一。
+每个非空因子值必须有非空`<factor_id>__available_at`，该时间不得早于
+`source_available_at`；JCS负责对象
 键排序、字符串转义和无空白序列化，不再定义私有长度前缀。
 
 `metadata`不是任意cell：它固定包含`manifest_schema_id`和
 `manifest_projection_sha256`。projection是完整FactorFrame manifest移除
-`logical_content_sha256/physical_sha256`后的RFC8785 JCS对象，因而覆盖FrequencySpec、
+`logical_content_sha256/physical_sha256`后，将完整对象递归转换为typed cell，再计算RFC8785
+JCS字节；原始manifest JSON不得把int64域编码为JSON number。该projection因而覆盖FrequencySpec、
 FactorSpec、AsOfSpec、全部来源/辅助血缘、join recipe、代码版本、行数和输出Schema，同时
 避免自引用hash。语义验证器必须同时证明projection hash、envelope metadata、manifest输出
 Schema、记录列数/类型、envelope SHA-256和manifest逻辑hash相互一致。
