@@ -15,7 +15,7 @@
   },
   "factor_specs": [
     {
-      "factor_id": "momentum_20p",
+      "factor_id": "momentum_1p",
       "version": "1.0.0",
       "algorithm_id": "momentum",
       "input_profile": "bar",
@@ -26,7 +26,7 @@
           "availability_column": "available_at"
         }
       ],
-      "window_periods": 20,
+      "window_periods": 1,
       "dtype": "float64",
       "annualized": false,
       "missing_policy": "null"
@@ -46,8 +46,17 @@
   "input_rows": 1,
   "output_rows": 1,
   "output_schema": [
-    {"name": "instrument_id", "arrow_type": "utf8", "nullable": false}
+    {"name": "instrument_id", "arrow_type": "utf8", "nullable": false},
+    {"name": "event_time", "arrow_type": "timestamp[ns,UTC]", "nullable": false},
+    {"name": "sequence", "arrow_type": "int64", "nullable": false},
+    {"name": "event_id", "arrow_type": "utf8", "nullable": false},
+    {"name": "momentum_1p", "arrow_type": "float64", "nullable": true},
+    {
+      "name": "momentum_1p__available_at",
+      "arrow_type": "timestamp[ns,UTC]",
+      "nullable": true
+    }
   ],
-  "logical_content_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "logical_content_sha256": "6e64e1dd36a77eeef27db09c43efd32cdb146c839e33538614a11d7dcec2fb9a",
   "physical_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
 }
