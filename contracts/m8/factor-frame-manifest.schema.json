@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/factor-frame-manifest.schema.json",
+  "x-puresaber-schema-id": "puresaber.factor-frame-manifest@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "certification_scope",
+    "frequency",
+    "factor_specs",
+    "as_of",
+    "source_lineage",
+    "auxiliary_sources",
+    "code_version",
+    "input_rows",
+    "output_rows",
+    "output_schema",
+    "logical_content_sha256",
+    "physical_sha256"
+  ],
+  "properties": {
+    "schema_id": {"const": "puresaber.factor-frame-manifest@1.0.0"},
+    "certification_scope": {
+      "enum": [
+        "full-frequency-certified",
+        "research-restated",
+        "fixture-certified",
+        "legacy-not-certified"
+      ]
+    },
+    "frequency": {"$ref": "frequency.schema.json"},
+    "factor_specs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"$ref": "factor-spec.schema.json"}
+    },
+    "as_of": {"$ref": "as-of-spec.schema.json"},
+    "source_lineage": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["role", "snapshot_id", "logical_sha256", "selection_sha256"],
+        "properties": {
+          "role": {"type": "string", "minLength": 1},
+          "snapshot_id": {"type": "string", "pattern": "^sha256-[0-9a-f]{64}$"},
+          "logical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+          "selection_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+        }
+      }
+    },
+    "auxiliary_sources": {
+      "type": "array",
+      "items": {"$ref": "auxiliary-source.schema.json"}
+    },
+    "code_version": {"type": "string", "minLength": 1},
+    "input_rows": {"type": "integer", "minimum": 0},
+    "output_rows": {"type": "integer", "minimum": 0},
+    "output_schema": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "arrow_type", "nullable"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "arrow_type": {"type": "string", "minLength": 1},
+          "nullable": {"type": "boolean"}
+        }
+      }
+    },
+    "logical_content_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "physical_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+  }
+}

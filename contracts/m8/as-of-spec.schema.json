@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/as-of-spec.schema.json",
+  "x-puresaber-schema-id": "puresaber.as-of-spec@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["mode", "fixed_at_ns"],
+  "properties": {
+    "mode": {"enum": ["source_available_at", "fixed"]},
+    "fixed_at_ns": {
+      "oneOf": [
+        {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"},
+        {"type": "null"}
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"mode": {"const": "source_available_at"}}},
+      "then": {"properties": {"fixed_at_ns": {"type": "null"}}}
+    },
+    {
+      "if": {"properties": {"mode": {"const": "fixed"}}},
+      "then": {
+        "properties": {
+          "fixed_at_ns": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"}
+        }
+      }
+    }
+  ]
+}

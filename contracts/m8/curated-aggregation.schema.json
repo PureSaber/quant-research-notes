@@ -1,0 +1,138 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/curated-aggregation.schema.json",
+  "x-puresaber-schema-id": "puresaber.curated-aggregation@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "calendar_id",
+    "session_policy_version",
+    "kind",
+    "recipe_version",
+    "interval_ns",
+    "session_rollup",
+    "event_bar_basis",
+    "event_bar_threshold",
+    "market_context_snapshot_id",
+    "source_event_schema_ids",
+    "partition_evidence"
+  ],
+  "properties": {
+    "calendar_id": {"type": "string", "minLength": 1},
+    "session_policy_version": {"type": "string", "minLength": 1},
+    "kind": {"enum": ["fixed_time_bar", "session_bar", "event_bar"]},
+    "recipe_version": {"type": "string", "minLength": 1},
+    "interval_ns": {
+      "oneOf": [
+        {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+        {"type": "null"}
+      ]
+    },
+    "session_rollup": {
+      "type": ["string", "null"],
+      "enum": ["session", "trading_day", null]
+    },
+    "event_bar_basis": {
+      "type": ["string", "null"],
+      "enum": ["trade_count", "base_volume", "quote_notional", null]
+    },
+    "event_bar_threshold": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["units", "scale"],
+          "properties": {
+            "units": {"type": "integer", "minimum": 1, "maximum": 9223372036854775807},
+            "scale": {"type": "integer", "minimum": 0, "maximum": 18}
+          }
+        },
+        {"type": "null"}
+      ]
+    },
+    "market_context_snapshot_id": {
+      "type": "string",
+      "pattern": "^sha256-[0-9a-f]{64}$"
+    },
+    "source_event_schema_ids": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^puresaber\\.[a-z0-9._-]+$"}
+    },
+    "partition_evidence": {
+      "oneOf": [
+        {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "relative_path",
+              "first_sequence",
+              "last_sequence",
+              "first_event_id",
+              "last_event_id",
+              "event_count",
+              "source_selection_sha256"
+            ],
+            "properties": {
+              "relative_path": {"type": "string", "minLength": 1},
+              "first_sequence": {"type": "integer", "minimum": 0},
+              "last_sequence": {"type": "integer", "minimum": 0},
+              "first_event_id": {"type": "string", "minLength": 1},
+              "last_event_id": {"type": "string", "minLength": 1},
+              "event_count": {"type": "integer", "minimum": 1},
+              "source_selection_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            }
+          }
+        },
+        {"type": "null"}
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"kind": {"const": "fixed_time_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "integer", "minimum": 1},
+          "session_rollup": {"type": "null"},
+          "event_bar_basis": {"type": "null"},
+          "event_bar_threshold": {"type": "null"},
+          "partition_evidence": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "session_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "null"},
+          "session_rollup": {"enum": ["session", "trading_day"]},
+          "event_bar_basis": {"type": "null"},
+          "event_bar_threshold": {"type": "null"},
+          "partition_evidence": {"type": "null"}
+        }
+      }
+    },
+    {
+      "if": {"properties": {"kind": {"const": "event_bar"}}},
+      "then": {
+        "properties": {
+          "interval_ns": {"type": "null"},
+          "session_rollup": {"type": "null"},
+          "event_bar_basis": {
+            "enum": ["trade_count", "base_volume", "quote_notional"]
+          },
+          "event_bar_threshold": {"type": "object"},
+          "partition_evidence": {"type": "array", "minItems": 1}
+        }
+      }
+    }
+  ]
+}
