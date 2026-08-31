@@ -10,6 +10,19 @@ Cross-Asset & Multi-Frequency v2的内部软件范围已经完成：14个运行�
 
 本状态不是平台`v2.0`、`v2.0-rc`或`market-data-certified`。Crypto公共网络连续30天、独立归档恢复和国内合法L2仍未完成，因此不得宣称GA。
 
+## GitHub治理P0与GA阻塞跟踪
+
+- Milestone：[M9 Market Data GA](https://github.com/PureSaber/quant-research-notes/milestone/1)，不设置虚构截止日期；三项全部关闭并经独立只读验证前，权威状态保持不变。
+- 平台控制：[P0 GitHub治理控制](../../P0_GITHUB_GOVERNANCE_CONTROLS.md)，记录14仓默认分支/tag Ruleset、单人审批边界、private仓套餐阻塞和break-glass流程。
+
+| GA阻塞 | GitHub Issue | 当前状态 |
+|---|---|---|
+| Binance/OKX、BTC/ETH现货与USDT永续8流、连续30个完整UTC日真实数据认证 | [#12](https://github.com/PureSaber/quant-research-notes/issues/12) | `BLOCKED_BY_ARCHIVE_CAPACITY / NETWORK_RUN_NOT_STARTED` |
+| 满足容量门限的独立归档、SHA-256校验和恢复演练 | [#11](https://github.com/PureSaber/quant-research-notes/issues/11) | `BLOCKED / CAPACITY_AND_ARCHIVE_NOT_READY` |
+| 国内合法授权L2数据及真实市场认证 | [#13](https://github.com/PureSaber/quant-research-notes/issues/13) | `EXTERNAL_BLOCKED / AUTHORIZED_REAL_DATA_NOT_AVAILABLE` |
+
+Issue只公开脱敏指标、哈希和审计链接；Secrets、private仓内容、内部路径、授权原件和受限Raw数据不得进入公开Issue、PR或日志。
+
 ## 14仓不可变发布清单
 
 | 仓库 | 默认分支HEAD | 组件tag | annotated tag对象 | HEAD默认分支CI |
