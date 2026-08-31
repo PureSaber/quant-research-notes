@@ -13,6 +13,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [research-integrity-v1.md](research-integrity-v1.md) | PIT data, validation, run contract, risk and attribution standard |
 | [cross-asset-multifrequency-v2-rfc.md](cross-asset-multifrequency-v2-rfc.md) | Cross-asset data, time and standard/v2 contract RFC |
 | [validation/m7/](validation/m7/) | M7状态、验收规范、历史FAIL、修复PASS和PR合并就绪审计 |
+| [validation/m8/](validation/m8/) | M8全栈软件发布、14仓不可变清单、tag、CI和独立验证证据 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
 ## Repo stack (2026-07)
