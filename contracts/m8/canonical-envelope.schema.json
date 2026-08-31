@@ -1,0 +1,157 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/canonical-envelope.schema.json",
+  "x-puresaber-schema-id": "puresaber.factor-frame-canonical@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "metadata", "output_schema", "records"],
+  "properties": {
+    "schema": {"const": "puresaber.factor-frame-canonical@1.0.0"},
+    "metadata": {"$ref": "canonical-metadata.schema.json"},
+    "output_schema": {"$ref": "#/$defs/list_cell"},
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {"$ref": "#/$defs/cell"}
+      }
+    }
+  },
+  "$defs": {
+    "cell": {
+      "oneOf": [
+        {"$ref": "#/$defs/null_cell"},
+        {"$ref": "#/$defs/bool_cell"},
+        {"$ref": "#/$defs/integer_cell"},
+        {"$ref": "#/$defs/f64_cell"},
+        {"$ref": "#/$defs/fixed_cell"},
+        {"$ref": "#/$defs/text_cell"},
+        {"$ref": "#/$defs/list_cell"},
+        {"$ref": "#/$defs/struct_cell"}
+      ]
+    },
+    "null_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t"],
+      "properties": {"t": {"const": "null"}}
+    },
+    "bool_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {"t": {"const": "bool"}, "v": {"type": "boolean"}}
+    },
+    "integer_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {
+        "t": {
+          "enum": [
+            "i8",
+            "i16",
+            "i32",
+            "i64",
+            "u8",
+            "u16",
+            "u32",
+            "u64"
+          ]
+        },
+        "v": {
+          "type": "string",
+          "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+        }
+      }
+    },
+    "f64_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {
+        "t": {"const": "f64"},
+        "v": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{16}$",
+          "not": {
+            "anyOf": [
+              {"pattern": "^(?:7ff|fff)"},
+              {"const": "8000000000000000"}
+            ]
+          }
+        }
+      }
+    },
+    "fixed_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "u", "s"],
+      "properties": {
+        "t": {"const": "fixed"},
+        "u": {
+          "type": "string",
+          "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+        },
+        "s": {"type": "string", "pattern": "^(?:[0-9]|1[0-8])$"}
+      }
+    },
+    "text_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {
+        "t": {"enum": ["ts_ns", "date", "utf8", "binary"]},
+        "v": {"type": "string"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"t": {"const": "ts_ns"}}},
+          "then": {
+            "properties": {
+              "v": {"pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"}
+            }
+          }
+        },
+        {
+          "if": {"properties": {"t": {"const": "date"}}},
+          "then": {"properties": {"v": {"format": "date"}}}
+        },
+        {
+          "if": {"properties": {"t": {"const": "binary"}}},
+          "then": {"properties": {"v": {"pattern": "^[A-Za-z0-9_-]*$"}}}
+        }
+      ]
+    },
+    "list_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {
+        "t": {"const": "list"},
+        "v": {"type": "array", "items": {"$ref": "#/$defs/cell"}}
+      }
+    },
+    "struct_cell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["t", "v"],
+      "properties": {
+        "t": {"const": "struct"},
+        "v": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "prefixItems": [
+              {"type": "string", "minLength": 1},
+              {"$ref": "#/$defs/cell"}
+            ],
+            "items": false,
+            "minItems": 2,
+            "maxItems": 2
+          }
+        }
+      }
+    }
+  }
+}

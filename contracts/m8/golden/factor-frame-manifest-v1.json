@@ -1,0 +1,70 @@
+{
+  "schema_id": "puresaber.factor-frame-manifest@1.0.0",
+  "certification_scope": "full-frequency-certified",
+  "frequency": {
+    "frequency_id": "bar-1m",
+    "kind": "fixed_time_bar",
+    "periods_per_year": "98280",
+    "calendar_id": "crypto-24x7-v1",
+    "session_policy_version": "v1",
+    "interval_ns": "60000000000",
+    "session_rollup": null,
+    "event_bar_basis": null,
+    "event_bar_threshold": null,
+    "market_event_types": null
+  },
+  "factor_specs": [
+    {
+      "factor_id": "momentum_1p",
+      "version": "1.0.0",
+      "algorithm_id": "momentum",
+      "input_profile": "bar",
+      "dependencies": [
+        {
+          "role": "market",
+          "value_column": "close_price",
+          "availability_column": "available_at"
+        }
+      ],
+      "window_periods": 1,
+      "dtype": "float64",
+      "annualized": false,
+      "missing_policy": "null"
+    }
+  ],
+  "as_of": {"mode": "source_available_at", "fixed_at_ns": null},
+  "source_lineage": [
+    {
+      "role": "market",
+      "snapshot_id": "sha256-0000000000000000000000000000000000000000000000000000000000000000",
+      "logical_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+      "selection_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "input_event_schemas": [
+    {"schema_id": "puresaber.bar-event", "schema_version": "2.0.0"}
+  ],
+  "auxiliary_sources": [],
+  "code_version": "commit:0000000000000000000000000000000000000000",
+  "input_rows": "1",
+  "output_rows": "1",
+  "output_schema": [
+    {"name": "instrument_id", "arrow_type": "utf8", "nullable": false},
+    {"name": "event_time", "arrow_type": "timestamp[ns,UTC]", "nullable": false},
+    {"name": "sequence", "arrow_type": "int64", "nullable": false},
+    {"name": "event_id", "arrow_type": "utf8", "nullable": false},
+    {
+      "name": "source_available_at",
+      "arrow_type": "timestamp[ns,UTC]",
+      "nullable": false
+    },
+    {"name": "momentum_1p", "arrow_type": "float64", "nullable": true},
+    {
+      "name": "momentum_1p__available_at",
+      "arrow_type": "timestamp[ns,UTC]",
+      "nullable": true
+    }
+  ],
+  "logical_content_sha256": "2c2de633c284afc6f3f1e7044ebe06373dc9c79769cd384a56ab49ad1cf8e157",
+  "physical_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+}
