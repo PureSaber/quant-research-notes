@@ -4,7 +4,7 @@
 
 ## 当前权威状态
 
-当前状态：`COMPONENTS_INTEGRATED / PLATFORM_RELEASE_BLOCKED`
+当前状态：`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`
 
 截至2026-08-31，M7三个软件组件候选已经关闭合并就绪审计中的P1/P2，完成精确HEAD独立验证、Python3.10/3.11/3.12 CI、merge commit集成及默认分支CI，并发布仅代表组件软件契约的annotated tag：
 
@@ -18,8 +18,9 @@
 
 1. Binance/OKX冻结8流公共网络真实数据、连续30个完整UTC日和序列/盘口质量认证；
 2. 满足容量门限的独立归档、哈希校验及恢复演练；
-3. 国内L2合法授权数据及真实市场认证；
-4. 后续M8及纵向切片、组合风险、归因和全栈发布清单门禁。
+3. 国内L2合法授权数据及真实市场认证。
+
+M8软件范围、三条纵向切片、组合风险、归因、内部依赖tag锁定和14仓不可变全栈release manifest已于2026-08-31完成，详见[`validation/m8/M8_STATUS.md`](../m8/M8_STATUS.md)。这关闭了原第4项软件阻塞，但不替代上述三项真实市场数据门禁。
 
 因此当前不得创建平台`v2.0`tag或宣称GA/market-data-certified。下面2026-08-30及更早内容是当时的不可变审计快照，已被本节取代为当前状态；其中OPEN、UNMERGED和旧候选commit只描述当时事实，不得用于判断当前合并状态。
 
