@@ -60,6 +60,7 @@ Cross-Asset & Multi-Frequency v2的内部软件范围已经完成：14个运行�
 - `puresaber.stack-manifest@1.0.0`规范hash：`51b8278226a8c550ff14e2908d1ecaf81435cd0579970acba17f8a483978420a`
 - 两个文件SHA-256：`F90889A154D1419BFB595A524FAA13D809D1BB39078AE1ABF729C2E7CAFD34AF`
 - 两次生成逐字节一致；两次`verify-stack`均返回`valid=true`、`release_ready=true`、`issues=[]`。
+- `validation/m8/*.json`固定为`eol=lf`，确保Windows的`core.autocrlf=true`检出后仍保持规范JSON并可通过`verify-stack`。
 - 清单覆盖14仓、23个允许schema、14份外部锁文件、全部内部tag解析提交和完整依赖DAG；没有dirty仓库、浮动默认分支依赖、缺失tag、轻量tag或循环依赖。
 
 ## 仍未完成的真实市场门禁
