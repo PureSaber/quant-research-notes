@@ -95,6 +95,10 @@ jobs:
           if (digest(typedCell(maxInt64Projection)) === digest(typedCell(precedingInt64Projection))) {
             process.exit(7);
           }
+          const utf16OrderedKeys = typedCell({"\uE000": 1, "😀": 2}).v.map(([key]) => key);
+          if (utf16OrderedKeys[0] !== "😀" || utf16OrderedKeys[1] !== "\uE000") {
+            process.exit(8);
+          }
           const payload = Buffer.from(JSON.stringify(canonicalize(golden.canonical_input)), "utf8");
           if (payload.toString("hex") !== golden.canonical_utf8_hex) process.exit(2);
           if (crypto.createHash("sha256").update(payload).digest("hex") !== golden.sha256) {

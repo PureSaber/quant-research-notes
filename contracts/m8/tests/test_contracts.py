@@ -265,6 +265,9 @@ class ContractTests(unittest.TestCase):
                 "partition_evidence": [
                     {
                         "relative_path": "part-000.parquet",
+                        "source": "binance",
+                        "instrument_id": "BTC-USDT",
+                        "session_id": "binance-24x7-BTC-USDT-SPOT",
                         "first_sequence": "10",
                         "last_sequence": "12",
                         "first_event_id": "event-10",
@@ -286,6 +289,18 @@ class ContractTests(unittest.TestCase):
         ):
             contracts.validate_verified_factor_input(ROOT, duplicate)
 
+        duplicate_selection = copy.deepcopy(value)
+        duplicate_selection["aggregation"]["partition_evidence"].append(
+            copy.deepcopy(duplicate_selection["aggregation"]["partition_evidence"][0])
+        )
+        duplicate_selection["aggregation"]["partition_evidence"][1]["relative_path"] = (
+            "part-001.parquet"
+        )
+        with self.assertRaisesRegex(
+            contracts.ContractViolation, "EVENT_BAR_DUPLICATE_SELECTION"
+        ):
+            contracts.validate_verified_factor_input(ROOT, duplicate_selection)
+
         reversed_range = copy.deepcopy(value)
         reversed_range["aggregation"]["partition_evidence"][0].update(
             {"first_sequence": "12", "last_sequence": "10", "event_count": "1"}
@@ -301,6 +316,34 @@ class ContractTests(unittest.TestCase):
             contracts.ContractViolation, "EVENT_BAR_COUNT_EXCEEDS_SEQUENCE_RANGE"
         ):
             contracts.validate_verified_factor_input(ROOT, excessive_count)
+
+        overlapping = copy.deepcopy(value)
+        second = copy.deepcopy(overlapping["aggregation"]["partition_evidence"][0])
+        second.update(
+            {
+                "relative_path": "part-001.parquet",
+                "first_sequence": "12",
+                "last_sequence": "14",
+                "first_event_id": "event-12",
+                "last_event_id": "event-14",
+                "source_selection_sha256": ONE,
+            }
+        )
+        overlapping["aggregation"]["partition_evidence"].append(second)
+        with self.assertRaisesRegex(
+            contracts.ContractViolation, "EVENT_BAR_OVERLAPPING_SEQUENCE_RANGE"
+        ):
+            contracts.validate_verified_factor_input(ROOT, overlapping)
+
+        adjacent = copy.deepcopy(overlapping)
+        adjacent["aggregation"]["partition_evidence"][1].update(
+            {
+                "first_sequence": "13",
+                "first_event_id": "event-13",
+                "event_count": "2",
+            }
+        )
+        contracts.validate_verified_factor_input(ROOT, adjacent)
 
     def test_auxiliary_sources_require_lineage_and_factor_binding(self) -> None:
         manifest = self.manifest()
@@ -365,6 +408,13 @@ class ContractTests(unittest.TestCase):
         ):
             contracts.validate_factor_frame_manifest(ROOT, wrong_mapping)
 
+        unicode_column = copy.deepcopy(manifest)
+        unicode_column["auxiliary_sources"][0]["value_availability"] = {
+            "估值": "pe_available_at"
+        }
+        with self.assertRaises(ValidationError):
+            contracts.validate_factor_frame_manifest(ROOT, unicode_column)
+
     def test_output_schema_and_record_semantics_are_frozen(self) -> None:
         wrong_identity = self.manifest()
         wrong_identity["output_schema"][2]["arrow_type"] = "utf8"
@@ -405,6 +455,23 @@ class ContractTests(unittest.TestCase):
             contracts.ContractViolation, "GOLDEN_FACTOR_AVAILABLE_BEFORE_SOURCE"
         ):
             contracts._validate_record_types(early_availability, manifest)
+
+        future_factor = copy.deepcopy(envelope)
+        future_factor["records"][0][6]["v"] = "1788141600123456790"
+        with self.assertRaisesRegex(
+            contracts.ContractViolation, "GOLDEN_NON_NULL_FACTOR_AFTER_AS_OF"
+        ):
+            contracts._validate_record_types(future_factor, manifest)
+
+        fixed_as_of = copy.deepcopy(manifest)
+        fixed_as_of["as_of"] = {
+            "mode": "fixed",
+            "fixed_at_ns": "1788141600123456788",
+        }
+        with self.assertRaisesRegex(
+            contracts.ContractViolation, "GOLDEN_NON_NULL_FACTOR_AFTER_AS_OF"
+        ):
+            contracts._validate_record_types(envelope, fixed_as_of)
 
         source_before_event = copy.deepcopy(envelope)
         source_before_event["records"][0][4]["v"] = "1788141600123456788"
@@ -499,6 +566,9 @@ class ContractTests(unittest.TestCase):
         invalid = [
             ({"t": "binary", "v": "!!"}, "CELL_INVALID_BASE64URL"),
             ({"t": "binary", "v": "AQ=="}, "CELL_NON_CANONICAL_BASE64URL"),
+            ({"t": "i64", "v": "-0"}, "NON_CANONICAL_NEGATIVE_ZERO"),
+            ({"t": "fixed", "u": "-0", "s": "0"}, "NON_CANONICAL_NEGATIVE_ZERO"),
+            ({"t": "ts_ns", "v": "-0"}, "NON_CANONICAL_NEGATIVE_ZERO"),
             ({"t": "unknown"}, "CELL_UNKNOWN_TAG"),
         ]
         for cell, code in invalid:
@@ -513,6 +583,24 @@ class ContractTests(unittest.TestCase):
             contracts.ContractViolation, "MANIFEST_UNSUPPORTED_TYPE"
         ):
             contracts._typed_cell(1.5)
+
+        utf16_order = contracts._typed_cell({"\ue000": 1, "😀": 2})["v"]
+        self.assertEqual([item[0] for item in utf16_order], ["😀", "\ue000"])
+
+        negative_zero_as_of = self.manifest()
+        negative_zero_as_of["as_of"] = {"mode": "fixed", "fixed_at_ns": "-0"}
+        negative_zero_as_of["certification_scope"] = "research-restated"
+        with self.assertRaises(ValidationError):
+            contracts.validate_factor_frame_manifest(ROOT, negative_zero_as_of)
+
+        negative_zero_envelope = contracts.load_contract_json(
+            ROOT / "golden" / "factor-frame-hash-v1.json"
+        )["canonical_input"]
+        negative_zero_envelope["records"][0][2]["v"] = "-0"
+        with self.assertRaises(ValidationError):
+            contracts._validate_schema(
+                ROOT, "canonical-envelope.schema.json", negative_zero_envelope
+            )
 
     def test_golden_wrapper_and_cross_bindings_fail_closed(self) -> None:
         self.assert_golden_failure(

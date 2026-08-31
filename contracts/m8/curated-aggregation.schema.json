@@ -83,6 +83,9 @@
             "additionalProperties": false,
             "required": [
               "relative_path",
+              "source",
+              "instrument_id",
+              "session_id",
               "first_sequence",
               "last_sequence",
               "first_event_id",
@@ -92,6 +95,9 @@
             ],
             "properties": {
               "relative_path": {"type": "string", "minLength": 1},
+              "source": {"type": "string", "minLength": 1},
+              "instrument_id": {"type": "string", "minLength": 1},
+              "session_id": {"type": "string", "minLength": 1},
               "first_sequence": {"type": "string", "pattern": "^(?:0|[1-9][0-9]*)$"},
               "last_sequence": {"type": "string", "pattern": "^(?:0|[1-9][0-9]*)$"},
               "first_event_id": {"type": "string", "minLength": 1},
