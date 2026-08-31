@@ -50,8 +50,8 @@ See [research-integrity-v1.md](research-integrity-v1.md).
 - M7软件/fixture：数据性能、执行性能和Crypto L2采集器软件门禁已通过独立验证
 - M7合并就绪：`quant-workspace v0.3.0`、`quant-data-kit v0.7.4`和`quant-execution v0.5.0`已从默认分支通过独立验证、CI和组件tag发布
 - M7真实市场：公共网络、连续30天、归档恢复及国内合法L2仍为外部/时间阻塞，不得宣称`market-data-certified`或`v2.0 GA`
-- M8全频率研究层：显式频率/年化、Curated Bar与Normalized事件认证输入、逐行`as_of`、PIT血缘和规范hash契约正在独立复核；实现前须先发布高于`quant-data-kit v0.7.4`的认证输入组件tag
-- 当前状态与证据：[validation/m7/M7_STATUS.md](validation/m7/M7_STATUS.md)
+- M8全频率研究层与全栈软件发布：显式频率/年化、Curated Bar与Normalized事件认证输入、逐行`as_of`、PIT血缘、规范hash、三条纵向切片、统一执行、组合风险及14仓不可变release manifest均已完成并通过独立复核
+- 当前状态与证据：[validation/m8/M8_STATUS.md](validation/m8/M8_STATUS.md)；真实市场数据阻塞沿革保留于[validation/m7/M7_STATUS.md](validation/m7/M7_STATUS.md)
 
 ## Skills checklist
 
