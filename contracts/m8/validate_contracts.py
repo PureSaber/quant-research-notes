@@ -91,6 +91,8 @@ def _require_unique(items: list[Any], key, code: str) -> None:
 
 
 def _parse_bounded_integer(value: str, minimum: int, maximum: int, code: str) -> int:
+    if value == "-0":
+        raise ContractViolation(f"{code}:NON_CANONICAL_NEGATIVE_ZERO")
     parsed = int(value)
     if not minimum <= parsed <= maximum:
         raise ContractViolation(code)
@@ -99,12 +101,25 @@ def _parse_bounded_integer(value: str, minimum: int, maximum: int, code: str) ->
 
 def _require_sorted(items: list[Any], key, code: str) -> None:
     identities = [key(item) for item in items]
-    if identities != sorted(identities):
+    if identities != sorted(identities, key=_canonical_order_key):
         raise ContractViolation(code)
 
 
 def _event_schema_key(item: dict[str, Any]) -> tuple[str, str]:
     return item["schema_id"], item["schema_version"]
+
+
+def _utf16_sort_key(value: str) -> bytes:
+    """RFC 8785 orders object keys by UTF-16 code units, as JavaScript does."""
+    return value.encode("utf-16-be", errors="surrogatepass")
+
+
+def _canonical_order_key(value: Any) -> tuple[Any, ...]:
+    if isinstance(value, str):
+        return ("string", _utf16_sort_key(value))
+    if isinstance(value, tuple):
+        return ("tuple", tuple(_canonical_order_key(item) for item in value))
+    return (type(value).__name__, value)
 
 
 def _validate_frequency(value: dict[str, Any]) -> None:
@@ -152,9 +167,24 @@ def _validate_aggregation(value: dict[str, Any]) -> None:
     _require_unique(
         evidence, lambda item: item["relative_path"], "EVENT_BAR_DUPLICATE_PARTITION"
     )
-    _require_sorted(
-        evidence, lambda item: item["relative_path"], "EVENT_BAR_PARTITIONS_NOT_SORTED"
+    _require_unique(
+        evidence,
+        lambda item: item["source_selection_sha256"],
+        "EVENT_BAR_DUPLICATE_SELECTION",
     )
+    _require_sorted(
+        evidence,
+        lambda item: (
+            item["source"],
+            item["instrument_id"],
+            item["session_id"],
+            int(item["first_sequence"]),
+            int(item["last_sequence"]),
+            item["relative_path"],
+        ),
+        "EVENT_BAR_PARTITIONS_NOT_SORTED",
+    )
+    last_by_stream: dict[tuple[str, str, str], int] = {}
     for item in evidence:
         first = _parse_bounded_integer(
             item["first_sequence"], 0, INT64_MAX, "EVENT_BAR_SEQUENCE_OUT_OF_RANGE"
@@ -169,6 +199,12 @@ def _validate_aggregation(value: dict[str, Any]) -> None:
             raise ContractViolation("EVENT_BAR_REVERSED_SEQUENCE_RANGE")
         if count > last - first + 1:
             raise ContractViolation("EVENT_BAR_COUNT_EXCEEDS_SEQUENCE_RANGE")
+        if (first == last) != (item["first_event_id"] == item["last_event_id"]):
+            raise ContractViolation("EVENT_BAR_BOUNDARY_IDENTITY_MISMATCH")
+        stream = (item["source"], item["instrument_id"], item["session_id"])
+        if stream in last_by_stream and first <= last_by_stream[stream]:
+            raise ContractViolation("EVENT_BAR_OVERLAPPING_SEQUENCE_RANGE")
+        last_by_stream[stream] = last
 
 
 def validate_verified_factor_input(root: Path, value: dict[str, Any]) -> None:
@@ -459,7 +495,10 @@ def _typed_cell(value: Any) -> dict[str, Any]:
     if isinstance(value, dict):
         return {
             "t": "struct",
-            "v": [[key, _typed_cell(value[key])] for key in sorted(value)],
+            "v": [
+                [key, _typed_cell(value[key])]
+                for key in sorted(value, key=_utf16_sort_key)
+            ],
         }
     raise ContractViolation(f"MANIFEST_UNSUPPORTED_TYPE:{type(value).__name__}")
 
@@ -536,6 +575,11 @@ def _validate_record_types(envelope: dict[str, Any], manifest: dict[str, Any]) -
         source_available_at = int(row[schema_index["source_available_at"]]["v"])
         if event_time > source_available_at:
             raise ContractViolation("GOLDEN_SOURCE_AVAILABLE_BEFORE_EVENT")
+        row_as_of = (
+            source_available_at
+            if manifest["as_of"]["mode"] == "source_available_at"
+            else int(manifest["as_of"]["fixed_at_ns"])
+        )
         for factor_index, availability_index in factor_pairs:
             factor_cell = row[factor_index]
             availability_cell = row[availability_index]
@@ -546,6 +590,11 @@ def _validate_record_types(envelope: dict[str, Any], manifest: dict[str, Any]) -
                 and int(availability_cell["v"]) < source_available_at
             ):
                 raise ContractViolation("GOLDEN_FACTOR_AVAILABLE_BEFORE_SOURCE")
+            if factor_cell["t"] != "null" and (
+                source_available_at > row_as_of
+                or int(availability_cell["v"]) > row_as_of
+            ):
+                raise ContractViolation("GOLDEN_NON_NULL_FACTOR_AFTER_AS_OF")
         identities.append(
             (
                 row[schema_index["instrument_id"]]["v"],

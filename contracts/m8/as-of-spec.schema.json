@@ -9,7 +9,10 @@
     "mode": {"enum": ["source_available_at", "fixed"]},
     "fixed_at_ns": {
       "oneOf": [
-        {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"},
+        {
+          "type": "string",
+          "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+        },
         {"type": "null"}
       ]
     }
@@ -23,7 +26,10 @@
       "if": {"properties": {"mode": {"const": "fixed"}}},
       "then": {
         "properties": {
-          "fixed_at_ns": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"}
+          "fixed_at_ns": {
+            "type": "string",
+            "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+          }
         }
       }
     }

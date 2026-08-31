@@ -43,7 +43,10 @@
     "value_availability": {
       "type": "object",
       "minProperties": 1,
-      "propertyNames": {"type": "string", "minLength": 1},
+      "propertyNames": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z0-9_.-]*$"
+      },
       "additionalProperties": {"type": "string", "minLength": 1}
     },
     "join_recipe": {"type": "string", "minLength": 1}

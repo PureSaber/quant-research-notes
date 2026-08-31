@@ -514,7 +514,9 @@ M8机器契约位于`contracts/m8/`。`FrequencySpec`、`FactorSpec`、`AsOfSpec
 `session_bar`并由版本化`TradingSession`边界决定，不能伪装成24小时`timedelta`。
 `event_bar`是`quant-data-kit`按稳定事件顺序生成的完整合成Bar，必须在来源元数据中绑定
 起止`sequence/event_id`、实际事件数、basis和threshold；JSON中的sequence和事件数均使用
-规范十进制字符串，禁止经过IEEE-754 number。`market_event`表示原生Trade、
+规范十进制字符串，禁止经过IEEE-754 number。每条分区证据还必须显式绑定
+`source/instrument_id/session_id`，同一stream的sequence范围严格递增且不重叠，选择hash全局
+唯一，不能通过更换相对路径重复声明同一事件集合。`market_event`表示原生Trade、
 BBO或L2事件流，不要求Bar字段，但必须保留`event_id`、`sequence`和事件Schema ID；只接受
 声明`input_profile=market_event`的因子。OHLC滚动因子对该kind必须fail closed。
 
@@ -623,7 +625,8 @@ FactorSpec版本变化必须改变配置hash和产物血缘。
   `superseded_at`及int64`revision`；revision在
   `(role,business_key,effective_from)`内严格递增；
 - 每个依赖值列到其可用时间列的唯一JSON对象映射，例如
-  `{"pe_ratio":"pe_available_at"}`；重复JSON键在解析阶段拒绝；
+  `{"pe_ratio":"pe_available_at"}`；动态列名只允许ASCII标识符
+  `[A-Za-z_][A-Za-z0-9_.-]*`，重复JSON键在解析阶段拒绝；
 - join recipe及每个FactorSpec的`missing_policy=null|error`。
 
 对每个源行和业务键，候选外部版本必须同时满足：
@@ -655,7 +658,8 @@ RFC8785 JCS UTF-8字节，而不是Parquet文件字节。envelope只有固定键
 `output_schema`和`records`；元数据先按闭合Schema转为typed cell，输出列按
 `output_schema`顺序，行按`(instrument_id,event_time,sequence,event_id)`严格排序且身份唯一。
 每个非空因子值必须有非空`<factor_id>__available_at`，该时间不得早于
-`source_available_at`；JCS负责对象
+`source_available_at`，也不得晚于该行`row_as_of`；`fixed`模式下
+`source_available_at>fixed_at_ns`的行不得产生非空因子。JCS负责对象
 键排序、字符串转义和无空白序列化，不再定义私有长度前缀。
 
 `metadata`不是任意cell：它固定包含`manifest_schema_id`和
@@ -670,7 +674,8 @@ Schema、记录列数/类型、envelope SHA-256和manifest逻辑hash相互一致
 原始JSON number不得直接进入envelope：
 
 - null：`{"t":"null"}`；布尔：`{"t":"bool","v":true|false}`；
-- int8/16/32/64及uint：`{"t":"<arrow-type>","v":"无前导零十进制"}`；
+- int8/16/32/64及uint：`{"t":"<arrow-type>","v":"无前导零十进制"}`，零只能编码为
+  `"0"`，所有整数、FixedPoint units、timestamp和`fixed_at_ns`均禁止`"-0"`；
 - binary64：`{"t":"f64","v":"大端IEEE-754位模式16位小写hex"}`，`-0.0`先规范为
   `0.0`，NaN和正负Infinity拒绝；
 - FixedPoint：`{"t":"fixed","u":"int64十进制","s":"0..18十进制"}`；
@@ -679,6 +684,10 @@ Schema、记录列数/类型、envelope SHA-256和manifest逻辑hash相互一致
   禁止Unicode规范化；binary：`{"t":"binary","v":"无填充base64url"}`；
 - list：`{"t":"list","v":[cell,...]}`；struct：
   `{"t":"struct","v":[["按Arrow Schema顺序的字段名",cell],...]}`。
+
+RFC8785对象键序严格按UTF-16码元比较，与ECMAScript一致；Python实现不得使用Unicode码点
+默认排序代替。动态对象键即使受ASCII限制，通用typed-cell转换仍必须通过跨语言UTF-16键序
+测试。
 
 机器Schema、显式交叉引用的manifest和`contracts/m8/golden/factor-frame-hash-v1.json`共同冻结完整envelope及黄金hash；
 Python和一个独立实现必须从同一`canonical_input`复算文件中的JCS字节和SHA-256。QDK合法的

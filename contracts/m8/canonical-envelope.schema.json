@@ -59,7 +59,10 @@
             "u64"
           ]
         },
-        "v": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"}
+        "v": {
+          "type": "string",
+          "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+        }
       }
     },
     "f64_cell": {
@@ -86,7 +89,10 @@
       "required": ["t", "u", "s"],
       "properties": {
         "t": {"const": "fixed"},
-        "u": {"type": "string", "pattern": "^-?(?:0|[1-9][0-9]*)$"},
+        "u": {
+          "type": "string",
+          "pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"
+        },
         "s": {"type": "string", "pattern": "^(?:[0-9]|1[0-8])$"}
       }
     },
@@ -101,7 +107,11 @@
       "allOf": [
         {
           "if": {"properties": {"t": {"const": "ts_ns"}}},
-          "then": {"properties": {"v": {"pattern": "^-?(?:0|[1-9][0-9]*)$"}}}
+          "then": {
+            "properties": {
+              "v": {"pattern": "^(?:0|[1-9][0-9]*|-[1-9][0-9]*)$"}
+            }
+          }
         },
         {
           "if": {"properties": {"t": {"const": "date"}}},
