@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.puresaber.dev/m8/canonical-metadata.schema.json",
+  "x-puresaber-schema-id": "puresaber.factor-frame-canonical-metadata@1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["t", "v"],
+  "properties": {
+    "t": {"const": "struct"},
+    "v": {
+      "type": "array",
+      "prefixItems": [
+        {
+          "type": "array",
+          "prefixItems": [
+            {"const": "manifest_projection_sha256"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["t", "v"],
+              "properties": {
+                "t": {"const": "utf8"},
+                "v": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+              }
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        },
+        {
+          "type": "array",
+          "prefixItems": [
+            {"const": "manifest_schema_id"},
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["t", "v"],
+              "properties": {
+                "t": {"const": "utf8"},
+                "v": {"const": "puresaber.factor-frame-manifest@1.0.0"}
+              }
+            }
+          ],
+          "items": false,
+          "minItems": 2,
+          "maxItems": 2
+        }
+      ],
+      "items": false,
+      "minItems": 2,
+      "maxItems": 2
+    }
+  }
+}

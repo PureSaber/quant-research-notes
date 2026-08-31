@@ -1,6 +1,6 @@
 # Cross-Asset & Multi-Frequency v2 RFC
 
-状态：M0—M6已发布，M7软件门禁整改中，真实市场认证阻塞
+状态：M0—M7软件组件已集成，M8契约冻结中，真实市场认证阻塞
 schema版本：`2.0.0`
 所有者：`quant-data-kit`负责市场数据领域类型，`quant-lab`负责运行产物封装与验证。
 
@@ -476,6 +476,233 @@ M7把“组件软件可集成”和“平台真实市场认证”拆成两个不
 ### 12.3当前里程碑状态
 
 - M0—M6已完成默认分支整合、独立验证和组件发布；
-- M7数据、执行和Crypto L2采集器的软件/fixture/本机性能证据已形成，但合并就绪审计发现认证证据语义绑定P1和执行依赖组合认证P2；
+- M7合并就绪审计发现的认证证据语义绑定P1和执行依赖组合认证P2已经关闭；`quant-workspace v0.3.0`、`quant-data-kit v0.7.4`和`quant-execution v0.5.0`均已通过精确HEAD独立验证、三版本CI、merge commit集成及默认分支CI；
+- 上述tag只代表组件软件契约，不能替代平台真实市场认证；
 - 公共Binance/OKX连续30天、独立归档恢复及国内合法L2仍未完成；
 - 当前权威状态、历史FAIL和修复后PASS记录位于`validation/m7/`，任何新结论必须新增证据或更新当前状态，不得改写历史审计文件。
+
+## 13.M8全频率因子与PIT特征契约
+
+M8把“数据聚合频率”“事件采样频率”和“因子窗口语义”从隐含日频假设中拆开。
+`quant-data-kit`继续独占交易日历、session边界、Bar聚合、事件顺序和Curated快照；
+`quant-factors`只消费经严格加载器验证的Curated快照或显式标记的冻结fixture，不能自行按
+自然日重采样、猜测夜盘交易日、信任调用方自报的snapshot ID或访问浮动数据源。
+
+### 13.1规范Schema与`FrequencySpec`
+
+M8机器契约位于`contracts/m8/`。`FrequencySpec`、`FactorSpec`、`AsOfSpec`、
+`AuxiliarySource`和`FactorFrameManifest`分别使用对应文件中的闭合JSON Schema；所有对象
+记录均拒绝未知字段，动态值列映射只允许Schema约束的字符串键值。JSON Schema不能表达的
+跨字段等值、唯一性、int64范围和位级规则由版本化`validate_contracts.py`强制执行，二者都
+是契约的一部分。`FrequencySpec`的Schema ID固定为
+`puresaber.factor-frequency@1.0.0`，字段和条件约束为：
+
+| 字段 | JSON类型 | 约束 |
+|---|---|---|
+| `frequency_id` | string | 非空opaque ID；业务代码不得解析字符串推断参数 |
+| `kind` | string enum | `fixed_time_bar`、`session_bar`、`event_bar`或`market_event` |
+| `periods_per_year` | string | 正有限十进制定点字符串，禁止指数、前导`+`、尾随零和负零；只用于显式年化 |
+| `calendar_id` | string | 必填；24x7市场也必须使用版本化日历ID |
+| `session_policy_version` | string | 必填；必须与来源快照聚合或事件归属策略一致 |
+| `interval_ns` | string/null | 仅`fixed_time_bar`为1到int64最大值的规范十进制字符串；其他kind必须为null |
+| `session_rollup` | string/null | 仅`session_bar`为`session`或`trading_day`；其他kind必须为null |
+| `event_bar_basis` | string/null | 仅`event_bar`为`trade_count`、`base_volume`或`quote_notional` |
+| `event_bar_threshold` | FixedPoint/null | 仅`event_bar`必填；JSON适配为`{units:规范int64十进制字符串,scale:integer[0,18]}`且值为正，QDK内存对象仍使用精确int64 units |
+| `market_event_types` | array/null | 仅`market_event`为非空、去重、排序后的事件Schema ID数组 |
+
+`fixed_time_bar`只表示固定纳秒间隔；日线、半日、夜盘、午休、DST和提前收市必须使用
+`session_bar`并由版本化`TradingSession`边界决定，不能伪装成24小时`timedelta`。
+`event_bar`是`quant-data-kit`按稳定事件顺序生成的完整合成Bar，必须在来源元数据中绑定
+起止`sequence/event_id`、实际事件数、basis和threshold；JSON中的sequence和事件数均使用
+规范十进制字符串，禁止经过IEEE-754 number。每条分区证据还必须显式绑定
+`source/instrument_id/session_id`，同一stream的sequence范围严格递增且不重叠，选择hash全局
+唯一，不能通过更换相对路径重复声明同一事件集合。`market_event`表示原生Trade、
+BBO或L2事件流，不要求Bar字段，但必须保留`event_id`、`sequence`和事件Schema ID；只接受
+声明`input_profile=market_event`的因子。OHLC滚动因子对该kind必须fail closed。
+
+年化周期是研究配置，不能从间隔、日历或样本数量推导。`periods_per_year`先按规范十进制
+字符串解析为Decimal；平方根使用precision=50、`ROUND_HALF_EVEN`的十进制上下文，再按
+IEEE-754 roundTiesToEven转换为binary64。实现中禁止常量252、365或隐式24x7推断。
+
+### 13.2QDK前置升级与统一认证输入
+
+`quant-data-kit v0.7.4`的现有Curated manifest只绑定`recipe_version`、Normalized快照血缘和
+Bar分区，未持久化日历、session策略、间隔、session rollup或event Bar聚合证据；现有
+Curated loader也只接受Bar。因此`v0.7.4`明确不能产生M8认证输入。
+
+M8实现必须先在`quant-data-kit`发布一个高于`v0.7.4`的新组件tag，并提供以下两个公共、
+fail-closed工厂；`quant-factors`必须锁定该tag，不能复制私有loader逻辑：
+
+```text
+load_verified_curated_bars(root,dataset,snapshot_id)->VerifiedFactorInput
+load_verified_normalized_events(
+    root,snapshot_id,event_schemas,market_context_snapshot_id
+)->VerifiedFactorInput
+```
+
+`VerifiedFactorInput`是`puresaber.verified-factor-input@1.0.0`联合类型，至少绑定`layer`、
+完整源snapshot ID及逻辑hash、选择后逻辑hash、`event_schemas[{schema_id,schema_version}]`
+集合、不可变Arrow表、
+`calendar_id`、`session_policy_version`、市场上下文snapshot ID/hash和有序血缘。两个工厂均须先严格验证源快照manifest、
+分区集合、行数、每分区物理SHA-256、分区/全数据集逻辑hash和上游血缘，再在同一显式快照
+目录读取全部目标分区，复验Arrow Schema和内存表选择hash；任何读取期间变更都必须失败。
+
+Normalized事件工厂只接受显式内容寻址snapshot、去重排序的事件Schema ID集合及不可变
+InstrumentSpec/TradingSession市场上下文snapshot，验证每条
+记录及同stream的`(event_time,sequence,event_id)`顺序；Trade、BBO和L2还须执行适用的
+sequence/previous_sequence、快照锚点和缺口门禁。输出血缘同时保留完整Normalized快照hash
+和选择后的事件集合hash，禁止把`read_normalized_events`返回的普通list直接升级为认证输入。
+
+Curated manifest必须升级为带闭合`puresaber.curated-aggregation@1.0.0`元数据的内容寻址
+版本。该元数据必须绑定`calendar_id`、`session_policy_version`、`kind`、`recipe_version`、
+市场上下文snapshot ID/hash，以及和FrequencySpec相同的条件字段。`event_bar`还须按分区绑定源Schema ID/version、首末
+`sequence/event_id`、实际事件数、basis和threshold；其中int64值在JSON中使用规范十进制字符串，loader必须从Normalized血缘复算。
+旧manifest永久可读，但只能产生`legacy-curated-not-m8-certified`。
+
+因子层认证入口固定为：
+
+```text
+compute_factor_frame(
+    input_ref,frequency,factors,*,as_of,auxiliary_sources=()
+)->FactorFrame
+```
+
+`input_ref`是闭合的`FactorInputRef`：`layer=curated`时包含root、dataset和snapshot ID，内部只
+调用Curated工厂；`layer=normalized`时包含root、snapshot ID、事件Schema ID集合和市场上下文snapshot ID，内部只调
+用Normalized工厂。`fixed_time_bar/session_bar/event_bar`只接受Curated Bar，
+`market_event`只接受Normalized事件；输入layer、Schema或权威聚合元数据与FrequencySpec
+任何字段不一致均失败。调用方传入任意table/panel加一个字符串ID不能进入认证路径。
+
+冻结fixture使用单独入口`compute_factor_frame_from_fixture(table,fixture_manifest,...)`。
+fixture manifest适用相同Schema、逻辑hash和时间验证，但产物只能标记
+`fixture-certified`，不能标记`curated-snapshot-certified`或`market-data-certified`。
+
+Bar输入Schema ID固定为`puresaber.bar-event`、Schema版本固定为`2.0.0`，身份字段至少包括`instrument_id`、
+`event_id`、`sequence`、`event_time`、`received_at`、`available_at`、`trading_day`、
+`session_id`、`bar_start`、`bar_end`和`is_complete`；数值字段使用上游原名
+`open_price/high_price/low_price/close_price/volume`。FixedPoint必须按
+`Decimal(units).scaleb(-scale)`精确解码，禁止先经float；只有具体因子算法声明的数值边界
+才允许一次显式转换为IEEE-754 binary64。
+
+全部时间必须是UTC有时区值。Bar逐行满足`bar_start<bar_end`、
+`event_time==bar_end`以及`event_time<=received_at<=available_at`；原生市场事件满足
+`event_time<=received_at<=available_at`。同一标的按`(event_time,sequence,event_id)`严格
+有序且身份键唯一。固定时间Bar还必须满足权威聚合元数据中的精确`interval_ns`；session Bar边界必须等于快照
+绑定的session或trading-day rollup；event Bar必须通过上游顺序范围和threshold复算。不完整
+Bar、序列缺口、重复、乱序、naive时间、策略版本不匹配或逻辑hash不一致一律拒绝。
+
+`compute_factors(date/symbol/close,...)`作为`legacy-daily`兼容入口永久保留，但不能产生
+任何v2认证声明。迁移期不把旧列名静默解释为v2列，也不根据数据间隔自动猜频率。
+
+### 13.3因子依赖和窗口
+
+`FactorSpec`必须声明稳定ID/version、`input_profile=bar|market_event`、有序源列、对应可用
+时间列、窗口period数、数值dtype和是否年化。新Bar因子ID使用period语义，例如
+`momentum_20p`、`volatility_20p`和`downside_vol_20p`；`20p`表示同一标的20个已完成
+period，不表示自然日。旧`*_20d`仅属于legacy入口。
+
+所有滚动计算按`instrument_id`隔离并使用已验证稳定顺序。年化波动率精确使用13.1规定的
+十进制平方根和binary64舍入结果。频率、年化周期、窗口、dtype或
+FactorSpec版本变化必须改变配置hash和产物血缘。
+
+### 13.4逐行`as_of`与外部PIT选择
+
+`as_of`是闭合`AsOfSpec`，必须显式传入，支持两种模式：
+
+- `source_available_at`：每行`row_as_of`严格等于该源Bar或事件的`available_at`；这是
+  backtest/paper的认证模式；
+- `fixed`：每行使用一个显式UTC纳秒时间，只能生成`research-restated`范围，不能声明
+  backtest-PIT-certified；源`available_at>fixed`的行不得产生非空因子。
+
+`observation_time`始终是当前源行`event_time`，不能用`row_as_of`替代。若窗口内任何实际
+依赖的源值在`row_as_of`后才可用，则当前因子值为null，同时保留实际最大
+`<factor_id>__available_at`；只有所有依赖均已可用时才允许非空值。
+
+每个外部基本面、FX或参考数据源必须作为`AuxiliarySource`独立绑定：
+
+- `role`、Schema ID/version、snapshot ID、物理hash及规范逻辑hash；
+- 业务键列、`observation_time`、`effective_from/effective_to`、`available_at`、可选
+  `superseded_at`及int64`revision`；revision在
+  `(role,business_key,effective_from)`内严格递增；
+- 每个依赖值列到其可用时间列的唯一JSON对象映射，例如
+  `{"pe_ratio":"pe_available_at"}`；动态列名只允许ASCII标识符
+  `[A-Za-z_][A-Za-z0-9_.-]*`，重复JSON键在解析阶段拒绝；
+- join recipe及每个FactorSpec的`missing_policy=null|error`。
+
+对每个源行和业务键，候选外部版本必须同时满足：
+
+1. `effective_from<=observation_time<effective_to`，null`effective_to`表示正无穷；
+2. `available_at<=row_as_of`；
+3. `superseded_at`为null或`row_as_of<superseded_at`。
+
+先选择最大`effective_from`，再选择最大`revision`，不得使用文件顺序、墙钟或“最后一行”。
+同一`(role,business_key,effective_from,revision)`出现完全相同的两行返回
+`AUX_DUPLICATE_VERSION`，相同身份但内容不同返回`AUX_REVISION_CONFLICT`；有效区间或superseded时间非法返回
+`AUX_INVALID_INTERVAL`；没有候选时按FactorSpec返回null或`AUX_NOT_FOUND`。这些错误码和
+选择顺序跨实现固定。
+
+一个因子可以拥有多个来源快照；血缘按`(role,snapshot_id)`排序并完整记录，不得把外部列
+并入Bar快照后只保留一个ID。对每个输出值，`<factor_id>__available_at`等于实际窗口内所有
+Bar、事件及辅助值可用时间的最大值。值非空时该时间必须非空、UTC且不早于任何依赖；
+`row_as_of`早于它时因子值必须为null，消费者也必须拒绝非空违规值。修订数据只能产生新
+快照和新因子产物，不能原地覆盖。
+
+### 13.5`FactorFrame`和规范内容hash
+
+`FactorFrame`保留`instrument_id/event_time/sequence/event_id/source_available_at`五个固定身份列，并携带完整`FrequencySpec`、有序`FactorSpec`、有序来源
+血缘、代码commit/tag、输入/输出行数、输出Schema和`logical_content_sha256`。禁止把墙钟
+写入逻辑hash字段；生成时间只能作为非确定性物理元数据存在。
+
+逻辑hash算法固定为SHA-256，输入是`puresaber.factor-frame-canonical@1.0.0`规范envelope的
+RFC8785 JCS UTF-8字节，而不是Parquet文件字节。envelope只有固定键`schema`、`metadata`、
+`output_schema`和`records`；元数据先按闭合Schema转为typed cell，输出列按
+`output_schema`顺序，行按`(instrument_id,event_time,sequence,event_id)`严格排序且身份唯一。
+每个非空因子值必须有非空`<factor_id>__available_at`，该时间不得早于
+`source_available_at`，也不得晚于该行`row_as_of`；`fixed`模式下
+`source_available_at>fixed_at_ns`的行不得产生非空因子。JCS负责对象
+键排序、字符串转义和无空白序列化，不再定义私有长度前缀。
+
+`metadata`不是任意cell：它固定包含`manifest_schema_id`和
+`manifest_projection_sha256`。projection是完整FactorFrame manifest移除
+`logical_content_sha256/physical_sha256`后，将完整对象递归转换为typed cell，再计算RFC8785
+JCS字节；原始manifest JSON不得把int64域编码为JSON number。该projection因而覆盖FrequencySpec、
+FactorSpec、AsOfSpec、全部来源/辅助血缘、join recipe、代码版本、行数和输出Schema，同时
+避免自引用hash。语义验证器必须同时证明projection hash、envelope metadata、manifest输出
+Schema、记录列数/类型、envelope SHA-256和manifest逻辑hash相互一致。
+
+除envelope键和固定`schema`版本字面量外，每个领域值必须转为以下唯一typed cell对象，
+原始JSON number不得直接进入envelope：
+
+- null：`{"t":"null"}`；布尔：`{"t":"bool","v":true|false}`；
+- int8/16/32/64及uint：`{"t":"<arrow-type>","v":"无前导零十进制"}`，零只能编码为
+  `"0"`，所有整数、FixedPoint units、timestamp和`fixed_at_ns`均禁止`"-0"`；
+- binary64：`{"t":"f64","v":"大端IEEE-754位模式16位小写hex"}`，`-0.0`先规范为
+  `0.0`，NaN和正负Infinity拒绝；
+- FixedPoint：`{"t":"fixed","u":"int64十进制","s":"0..18十进制"}`；
+- UTC timestamp[ns]：`{"t":"ts_ns","v":"相对Unix epoch的有符号纳秒十进制"}`；
+- date32：`{"t":"date","v":"YYYY-MM-DD"}`；utf8：`{"t":"utf8","v":"原值"}`，
+  禁止Unicode规范化；binary：`{"t":"binary","v":"无填充base64url"}`；
+- list：`{"t":"list","v":[cell,...]}`；struct：
+  `{"t":"struct","v":[["按Arrow Schema顺序的字段名",cell],...]}`。
+
+RFC8785对象键序严格按UTF-16码元比较，与ECMAScript一致；Python实现不得使用Unicode码点
+默认排序代替。动态对象键即使受ASCII限制，通用typed-cell转换仍必须通过跨语言UTF-16键序
+测试。
+
+机器Schema、显式交叉引用的manifest和`contracts/m8/golden/factor-frame-hash-v1.json`共同冻结完整envelope及黄金hash；
+Python和一个独立实现必须从同一`canonical_input`复算文件中的JCS字节和SHA-256。QDK合法的
+纳秒时间不得降为微秒或RFC3339文本。
+
+hash输入必须包括完整FrequencySpec、FactorSpec、源和辅助快照逻辑hash、join recipe、代码
+版本、输出Schema及全部输出记录。任何来源、频率、因子集合、可用时间、数值或顺序变化都
+必须改变hash。物理Parquet SHA-256另行记录，不能替代逻辑hash。
+
+### 13.6M8退出门禁
+
+1. session日线、1分钟、tick派生event Bar和原生事件输入分别有黄金样例；Bar类相同period序列的非年化因子一致，年化结果只按显式`periods_per_year`变化。
+2. Curated和Normalized两个正式工厂均有内容/选择hash与TOCTOU负向测试；任意table伪配snapshot ID、快照内容篡改、Schema/recipe/日历不匹配、FixedPoint错误适配、源行乱序/重复、naive时间、不完整Bar、错误间隔和事件序列缺口全部fail closed。
+3. 每个认证因子有逐行`row_as_of`和精确窗口可用时间黄金测试；多辅助快照、重叠版本、重复revision、修订/superseded数据及故意注入未来可得值后，PIT选择或稳定错误码完全符合13.4。
+4. 同一输入、配置、代码和seed连续3次，FactorFrame逻辑hash完全一致；Python和一个独立实现复算规范hash黄金向量，JCS字节和SHA-256均匹配；manifest projection、输出Schema和逻辑hash交叉绑定。
+5. 旧`legacy-daily`结果保持回归兼容，但认证测试不得调用legacy入口；下游不得把legacy产物升级标记为v2认证。
+6. Python3.10、3.11和3.12的lint、unit、contract、integration、`pip check`全部通过；契约CI必须运行正向样例及输入层级、上下文、PIT范围、重复身份、数值范围、NaN/Infinity/负零、日期/base64和黄金绑定负向向量；QDK认证输入及因子频率、PIT和hash核心模块纯分支覆盖率不低于90%，各仓不低于80%。
+7. 先发布具备13.2能力的新`quant-data-kit`annotated组件tag；`quant-factors`锁定该tag并在默认分支CI通过后发布新tag。下游升级后重新执行契约和纵向策略回归，不能从浮动分支安装。
