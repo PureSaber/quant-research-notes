@@ -1,7 +1,7 @@
 # Technical Debt Register — quant-agent & quant-pipeline
 
-**Review date:** 2026-08-07  
-**Last audit:** 2026-08-07 (local stack audit)  
+**Review date:** 2026-09-01
+**Last audit:** 2026-09-01 (GitHub governance and lifecycle audit)
 **Scope:** `quant-agent`, `quant-pipeline`, cross-stack CI  
 **Focus:** Security and maintainability
 
@@ -29,6 +29,7 @@
 | **M-07** | `_resolve_notes_root()` uses `QUANT_WORKSPACE_ROOT` and walks for `quant-research-notes` |
 | **M-05** | CLI: offline by default; `--llm` enables online mode |
 | **CI** | `spread-backtest-viz`, `currency-converter` added `ci.yml`; `health-check.ps1` uses `QUANT_WORKSPACE_ROOT` |
+| **H-04** | Visualization implementation consolidated in `quant-report-hub`; `spread-backtest-viz` reduced to a tested compatibility shim and passed Python3.10/3.11/3.12 CI. Archive and recovery-tag creation remain explicit owner decisions, not open duplication work. |
 
 ---
 
@@ -50,10 +51,6 @@ No redaction / opt-in policy when `--llm` is enabled.
 
 `temperature`, `rules.flag_nan_factors`, `enable_llm` partially wired.
 
-### H-04 — ~87% duplication spread-backtest-viz ↔ quant-report-hub
-
-See `quant-report-hub/docs/MERGE_PLAN.md`.
-
 ---
 
 ## Medium (selected)
@@ -64,12 +61,12 @@ See `quant-report-hub/docs/MERGE_PLAN.md`.
 
 ---
 
-## Local workspace (Desktop)
+## Local workspace
 
-Clone siblings under `C:\Users\ASUS\Desktop\quant_projects` and set:
+Clone siblings under a workspace root and set:
 
 ```powershell
-$env:QUANT_WORKSPACE_ROOT = "C:\Users\ASUS\Desktop\quant_projects"
+$env:QUANT_WORKSPACE_ROOT = "<workspace-root>"
 ```
 
 Use `quant-workspace/configs/desktop.workspace.yaml` or env override. Run stack health:
@@ -83,7 +80,6 @@ powershell -File scripts/health-check.ps1
 
 ## Priority order
 
-1. H-04 — Viz merge (see MERGE_PLAN)
-2. H-02 — LLM data policy
-3. H-03 — Wire or remove dead config keys
-4. M-01 — Pipeline/agent config schema validation
+1. H-02 — LLM data policy
+2. H-03 — Wire or remove dead config keys
+3. M-01 — Pipeline/agent config schema validation

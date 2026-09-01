@@ -1,6 +1,6 @@
 # M8全栈软件发布状态
 
-更新时间：2026-08-31（Asia/Shanghai）
+更新时间：2026-09-01（Asia/Shanghai）
 
 ## 当前权威状态
 
@@ -13,7 +13,7 @@ Cross-Asset & Multi-Frequency v2的内部软件范围已经完成：14个运行�
 ## GitHub治理P0与GA阻塞跟踪
 
 - Milestone：[M9 Market Data GA](https://github.com/PureSaber/quant-research-notes/milestone/1)，不设置虚构截止日期；三项全部关闭并经独立只读验证前，权威状态保持不变。
-- 平台控制：[P0 GitHub治理控制](../../P0_GITHUB_GOVERNANCE_CONTROLS.md)，记录14仓默认分支/tag Ruleset、单人审批边界、private仓套餐阻塞和break-glass流程。
+- 平台控制：[P0 GitHub治理控制](../../P0_GITHUB_GOVERNANCE_CONTROLS.md)，记录14仓默认分支/tag Ruleset、单人审批边界、公开化审计和break-glass流程。
 
 | GA阻塞 | GitHub Issue | 当前状态 |
 |---|---|---|
@@ -43,6 +43,8 @@ Issue只公开脱敏指标、哈希和审计链接；Secrets、private仓内容�
 | `quant-workspace` | `537388a4d9548b612fa1e4b306c482c04b45c433` | `v0.3.1` | `415adc712a7c7791a36ad981914e7dd5b640041a` | `33366648678`，SUCCESS |
 
 所有tag均由默认分支CI通过后创建，tag类型复核为`tag`且peeled commit与表中HEAD一致。旧tag未移动、未重建；没有创建平台`v2.0`系列tag。
+
+上表是M8软件发布时点的不可变快照，不是默认分支的永久HEAD清单。默认分支可在发布后经受保护PR、required checks和审计证据继续前进；这不会改变既有annotated tag对象、peeled commit或M8权威状态。任何tag修复仍须遵守break-glass授权，禁止历史改写、force push或移动既有tag。
 
 ## 本轮最终5个PR
 
