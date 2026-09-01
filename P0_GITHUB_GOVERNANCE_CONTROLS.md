@@ -1,22 +1,24 @@
 # P0 GitHub治理控制
 
-更新时间：2026-08-31（Asia/Shanghai）
+更新时间：2026-09-01（Asia/Shanghai）
 
 ## 结论
 
-M8的14个运行时仓库中，12个public仓已经启用两组`active`仓库Ruleset：`governance-default-branch`保护默认分支，`governance-release-tags`保护`refs/tags/v*`。两个private仓`quant-crypto-basis`和`quant-futures-spread`受当前GitHub Free套餐限制，Ruleset API返回HTTP 403；不得把流程自律描述为等效平台保护，也不得为绕过限制改变仓库可见性。
+M8的14个运行时仓库现均为public，并全部启用两组`active`仓库Ruleset：`governance-default-branch`保护默认分支，`governance-release-tags`保护`refs/tags/v*`。`quant-crypto-basis`和`quant-futures-spread`由仓库所有者明确授权从private改为public，随后通过真实PR、默认分支CI、Ruleset、Secret Scanning和Push Protection验收；这次可见性变更是经审计的治理决定，不是对套餐限制的未授权绕过。
 
 该平台控制不改变[M8权威状态](validation/m8/M8_STATUS.md)：`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`。真实市场GA阻塞由[M9 Market Data GA](https://github.com/PureSaber/quant-research-notes/milestone/1)跟踪。
 
-## 12个public仓的实时控制
+## 14个public仓的实时控制
 
 | 仓库 | 默认分支 | 默认分支Ruleset | `v*`tag Ruleset |
 |---|---|---:|---:|
 | `a-share-multifactor` | `main` | [`21930008`](https://github.com/PureSaber/a-share-multifactor/settings/rules/21930008) | [`21930010`](https://github.com/PureSaber/a-share-multifactor/settings/rules/21930010) |
 | `quant-agent` | `master` | [`21930011`](https://github.com/PureSaber/quant-agent/settings/rules/21930011) | [`21930013`](https://github.com/PureSaber/quant-agent/settings/rules/21930013) |
+| `quant-crypto-basis` | `main` | [`22001086`](https://github.com/PureSaber/quant-crypto-basis/settings/rules/22001086) | [`22001092`](https://github.com/PureSaber/quant-crypto-basis/settings/rules/22001092) |
 | `quant-data-kit` | `main` | [`21929867`](https://github.com/PureSaber/quant-data-kit/settings/rules/21929867) | [`21929882`](https://github.com/PureSaber/quant-data-kit/settings/rules/21929882) |
 | `quant-execution` | `main` | [`21930016`](https://github.com/PureSaber/quant-execution/settings/rules/21930016) | [`21930020`](https://github.com/PureSaber/quant-execution/settings/rules/21930020) |
 | `quant-factors` | `main` | [`21930024`](https://github.com/PureSaber/quant-factors/settings/rules/21930024) | [`21930029`](https://github.com/PureSaber/quant-factors/settings/rules/21930029) |
+| `quant-futures-spread` | `main` | [`22001097`](https://github.com/PureSaber/quant-futures-spread/settings/rules/22001097) | [`22001099`](https://github.com/PureSaber/quant-futures-spread/settings/rules/22001099) |
 | `quant-lab` | `main` | [`21930031`](https://github.com/PureSaber/quant-lab/settings/rules/21930031) | [`21930032`](https://github.com/PureSaber/quant-lab/settings/rules/21930032) |
 | `quant-paper-sim` | `main` | [`21930039`](https://github.com/PureSaber/quant-paper-sim/settings/rules/21930039) | [`21930041`](https://github.com/PureSaber/quant-paper-sim/settings/rules/21930041) |
 | `quant-pipeline` | `main` | [`21930043`](https://github.com/PureSaber/quant-pipeline/settings/rules/21930043) | [`21930047`](https://github.com/PureSaber/quant-pipeline/settings/rules/21930047) |
@@ -33,18 +35,17 @@ M8的14个运行时仓库中，12个public仓已经启用两组`active`仓库Rul
 - 要求各仓当前真实存在的CI检查，`strict_required_status_checks_policy=true`，即合并前必须基于最新目标分支状态通过；
 - `required_approving_review_count=0`，原因见下文。
 
-`a-share-multifactor`要求Ubuntu/Windows×Python3.10/3.11/3.12共6个检查；其余11个public仓要求Python3.10/3.11/3.12共3个现有检查。tag Ruleset共同匹配`refs/tags/v*`，禁止update和deletion，无bypass actor；已有tag不得移动、重建或删除。
+`a-share-multifactor`要求Ubuntu/Windows×Python3.10/3.11/3.12共6个检查；其余13个public仓要求Python3.10/3.11/3.12共3个现有检查。tag Ruleset共同匹配`refs/tags/v*`，禁止update和deletion，无bypass actor；已有tag不得移动、重建或删除。
 
-## 两个private仓的套餐阻塞
+## 原private仓公开化闭环
 
-以下读取均返回HTTP 403：
+授权前，两个private仓的Ruleset API均因GitHub Free套餐返回HTTP 403。2026-09-01，仓库所有者在[Issue#16](https://github.com/PureSaber/quant-research-notes/issues/16)治理审计中明确授权公开化；变更后完成以下验收：
 
-| 仓库 | API | 返回 |
-|---|---|---|
-| `quant-crypto-basis` | `GET /repos/PureSaber/quant-crypto-basis/rulesets?includes_parents=true` | `Upgrade to GitHub Pro or make this repository public to enable this feature.` |
-| `quant-futures-spread` | `GET /repos/PureSaber/quant-futures-spread/rulesets?includes_parents=true` | `Upgrade to GitHub Pro or make this repository public to enable this feature.` |
+- `quant-crypto-basis`：[PR#5](https://github.com/PureSaber/quant-crypto-basis/pull/5)合并前检查成功，默认HEAD运行[`33493519524`](https://github.com/PureSaber/quant-crypto-basis/actions/runs/33493519524)成功，Ruleset`22001086/22001092`均为`active`且无bypass actor；
+- `quant-futures-spread`：[PR#5](https://github.com/PureSaber/quant-futures-spread/pull/5)合并前检查成功，默认HEAD运行[`33493532518`](https://github.com/PureSaber/quant-futures-spread/actions/runs/33493532518)成功，Ruleset`22001097/22001099`均为`active`且无bypass actor；
+- 两仓均启用Secret Scanning和Push Protection，且未引入deploy key或Actions Secret。
 
-当前没有权限通过仓库Ruleset为这两个private仓提供等效平台强制。临时流程要求仍是PR、默认分支CI通过、annotated tag不可移动和变更留证，但它只是补偿性流程，不关闭P0平台保护缺口。解除条件为升级到支持private仓Ruleset的套餐并复用同一双Ruleset控制，或由GitHub提供可验证的等效强制能力；不得把private仓改为public作为绕过方案。
+公开化不改变软件认证边界：两个仓仍只在fixture、研究、回测或paper范围内通过验证，不得据此宣称真实市场数据认证、平台GA或实盘能力。完整审计结论保留在Issue#16最新评论，历史正文中的private状态仅表示事故发生时事实。
 
 ## 单人维护下的0审批设计
 

@@ -14,27 +14,31 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [cross-asset-multifrequency-v2-rfc.md](cross-asset-multifrequency-v2-rfc.md) | Cross-asset data, time and standard/v2 contract RFC |
 | [validation/m7/](validation/m7/) | M7状态、验收规范、历史FAIL、修复PASS和PR合并就绪审计 |
 | [validation/m8/](validation/m8/) | M8全栈软件发布、14仓不可变清单、tag、CI和独立验证证据 |
+| [P0_GITHUB_GOVERNANCE_CONTROLS.md](P0_GITHUB_GOVERNANCE_CONTROLS.md) | 14仓分支/tag平台保护与break-glass审计控制 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
-## Repo stack (2026-07)
+## Repo stack（2026-09）
 
 ```text
 currency-converter        → Python CLI warmup
 sklearn-stock-trend       → supervised learning + walk-forward
 a-share-multifactor       → factor IC + quantile + retail backtest
 quant-data-kit            → shared AKShare + Parquet + validation
+quant-execution           → deterministic execution and exact ledger
 quant-lab                 → cross-project experiment index
 quant-report-hub          → unified charts (spread + equity adapters)
-spread-backtest-viz       → legacy futures viz (frozen reference)
-future_spread_analysis    → futures spread backtest engine
+quant-crypto-basis        → fixture-certified crypto basis research
+quant-futures-spread      → fixture-certified futures spread backtest
+quant-infra-workspace     → private cross-repository health and governance tooling
+spread-backtest-viz       → deprecated compatibility shim; archive approval pending
 ```
 
-## Local workspace (Desktop)
+## Local workspace
 
-Clone sibling repos under `C:\Users\ASUS\Desktop\quant_projects` and set:
+Clone sibling repositories under a workspace root and set:
 
 ```powershell
-$env:QUANT_WORKSPACE_ROOT = "C:\Users\ASUS\Desktop\quant_projects"
+$env:QUANT_WORKSPACE_ROOT = "<workspace-root>"
 ```
 
 Use `quant-workspace/configs/desktop.workspace.yaml` for path resolution. Stack health:

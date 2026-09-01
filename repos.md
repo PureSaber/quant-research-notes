@@ -7,6 +7,8 @@
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
 | quant-agent | Post-run QA review | `quant-review run` |
+| quant-execution | Deterministic execution, risk gate, matching and exact ledger | library API |
+| quant-crypto-basis | Fixture-certified crypto basis research | project CLI |
 | currency-converter | FX utility / warmup | `python -m currency_converter` |
 | sklearn-stock-trend | ML trend prediction | `st-train`, `st-walkforward` |
 | a-share-multifactor | Multi-factor equity research | `asm-fetch`, `asm-backtest` |
@@ -16,9 +18,10 @@
 | quant-regime | Market regime detector | `quant-regime detect`, `detect-multi` |
 | quant-risk-monitor | Portfolio risk alerts | `quant-risk check` |
 | quant-paper-sim | Paper trading simulator | `quant-paper step` |
-| quant-futures-spread | Futures spread engine (private) | `qfs-backtest`, `run_backtest.py` |
+| quant-futures-spread | Public fixture-certified futures spread engine | `qfs-certified-backtest`, `run_backtest.py` |
+| quant-infra-workspace | Private cross-repository health and governance workspace | `scripts/health-check.ps1` |
 | research-workspace | Cross-product arb research (TaskSolver) | `scripts/run_backtest.py` |
-| spread-backtest-viz | Legacy spread viz (deprecating) | `spread-viz run` |
+| spread-backtest-viz | Deprecated compatibility shim；technical archive readiness complete，approval pending | `spread-viz run` |
 
 Local path for futures: `quant-futures-spread` (sibling under workspace root)
 
@@ -39,14 +42,16 @@ See also [run-contract.md](run-contract.md).
 ```text
 quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / quant-portfolio
 
-quant-data-kit v0.3 ──► a-share-multifactor
+quant-data-kit ──► a-share-multifactor / quant-futures-spread / quant-crypto-basis
                  └► sklearn-stock-trend
                  └► qdk-catalog
 
-quant-factors v0.2 ── validation/factors ──► research engines
+quant-execution ── deterministic fills/ledger ──► certified research engines
 
-research engines ── writes standard v1 ──► quant-lab v0.2
-                                           └► quant-report-hub v0.3 attribution
+quant-factors ── validation/factors ──► research engines
+
+research engines ── writes standard/v2 ──► quant-lab
+                                            └► quant-report-hub attribution
 
 quant-agent ── reads ──► run outputs ── writes ──► review_manifest.json
 
@@ -69,6 +74,8 @@ quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts
 - https://github.com/PureSaber/quant-factors
 - https://github.com/PureSaber/quant-portfolio
 - https://github.com/PureSaber/quant-agent
+- https://github.com/PureSaber/quant-execution
+- https://github.com/PureSaber/quant-crypto-basis
 - https://github.com/PureSaber/a-share-multifactor
 - https://github.com/PureSaber/sklearn-stock-trend
 - https://github.com/PureSaber/currency-converter
@@ -79,4 +86,6 @@ quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts
 - https://github.com/PureSaber/quant-regime
 - https://github.com/PureSaber/quant-risk-monitor
 - https://github.com/PureSaber/quant-paper-sim
-- https://github.com/PureSaber/quant-futures-spread (private)
+- https://github.com/PureSaber/quant-futures-spread
+- https://github.com/PureSaber/quant-infra-workspace (private)
+- https://github.com/PureSaber/spread-backtest-viz (deprecated shim; archive approval pending)

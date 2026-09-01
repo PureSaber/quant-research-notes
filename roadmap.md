@@ -29,9 +29,9 @@
 
 See [research-integrity-v1.md](research-integrity-v1.md).
 
-## Phase 5 — In progress
+## Phase 5 — Core software complete；ongoing governance
 
-- [quant-futures-spread](https://github.com/PureSaber/quant-futures-spread) (private): futures spread research published
+- [quant-futures-spread](https://github.com/PureSaber/quant-futures-spread): public fixture-certified futures spread research；backtest-only
 - [quant-regime](../quant-regime): rule-based regime detector with position_scale + `detect-multi`
 - [quant-risk-monitor](../quant-risk-monitor): drawdown / concentration / tail / stress / liquidity alerts
 - [quant-paper-sim](../quant-paper-sim): paper trading simulator (signals → holdings → NAV)
@@ -41,6 +41,8 @@ See [research-integrity-v1.md](research-integrity-v1.md).
 - [quant-portfolio](../quant-portfolio): constrained allocator and capacity model
 - [quant-agent](https://github.com/PureSaber/quant-agent): post-run QA review layer
 - Live execution adapter (vnpy/ssquant) — later
+
+以上软件组件已经纳入M8内部发布与GitHub治理。这里的“complete”不表示真实市场数据GA或实盘批准；当前权威状态仍是`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`，后续门禁由[M9 Market Data GA](https://github.com/PureSaber/quant-research-notes/milestone/1)跟踪。
 
 ## Phase 6 — Cross-Asset & Multi-Frequency v2
 
