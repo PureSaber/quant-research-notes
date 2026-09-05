@@ -21,7 +21,7 @@
 | quant-futures-spread | Public fixture-certified futures spread engine | `qfs-certified-backtest`, `run_backtest.py` |
 | quant-infra-workspace | Private cross-repository health and governance workspace | `scripts/health-check.ps1` |
 | research-workspace | Cross-product arb research (TaskSolver) | `scripts/run_backtest.py` |
-| spread-backtest-viz | Deprecated compatibility shim；technical archive readiness complete，approval pending | `spread-viz run` |
+| spread-backtest-viz | Deprecated compatibility shim；2026-09-05已归档为只读 | `spread-viz run` |
 
 Local path for futures: `quant-futures-spread` (sibling under workspace root)
 
@@ -88,4 +88,4 @@ quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts
 - https://github.com/PureSaber/quant-paper-sim
 - https://github.com/PureSaber/quant-futures-spread
 - https://github.com/PureSaber/quant-infra-workspace (private)
-- https://github.com/PureSaber/spread-backtest-viz (deprecated shim; archive approval pending)
+- https://github.com/PureSaber/spread-backtest-viz (deprecated shim; archived read-only)
