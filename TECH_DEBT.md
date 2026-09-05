@@ -29,7 +29,7 @@
 | **M-07** | `_resolve_notes_root()` uses `QUANT_WORKSPACE_ROOT` and walks for `quant-research-notes` |
 | **M-05** | CLI: offline by default; `--llm` enables online mode |
 | **CI** | `spread-backtest-viz`, `currency-converter` added `ci.yml`; `health-check.ps1` uses `QUANT_WORKSPACE_ROOT` |
-| **H-04** | Visualization implementation consolidated in `quant-report-hub`; `spread-backtest-viz` reduced to a tested compatibility shim and passed Python3.10/3.11/3.12 CI. Archive and recovery-tag creation remain explicit owner decisions, not open duplication work. |
+| **H-04** | Visualization implementation consolidated in `quant-report-hub`; `spread-backtest-viz` reduced to a tested compatibility shim, passed Python3.10/3.11/3.12 CI, received exact recovery/compatibility tags under explicit authorization, and was archived read-only on 2026-09-05. |
 
 ---
 

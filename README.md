@@ -15,6 +15,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [validation/m7/](validation/m7/) | M7状态、验收规范、历史FAIL、修复PASS和PR合并就绪审计 |
 | [validation/m8/](validation/m8/) | M8全栈软件发布、14仓不可变清单、tag、CI和独立验证证据 |
 | [P0_GITHUB_GOVERNANCE_CONTROLS.md](P0_GITHUB_GOVERNANCE_CONTROLS.md) | 14仓分支/tag平台保护与break-glass审计控制 |
+| [P2_GITHUB_METADATA_AND_LIFECYCLE.md](P2_GITHUB_METADATA_AND_LIFECYCLE.md) | 18仓GitHub元数据与deprecated shim归档证据 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
 ## Repo stack（2026-09）
@@ -30,7 +31,7 @@ quant-report-hub          → unified charts (spread + equity adapters)
 quant-crypto-basis        → fixture-certified crypto basis research
 quant-futures-spread      → fixture-certified futures spread backtest
 quant-infra-workspace     → private cross-repository health and governance tooling
-spread-backtest-viz       → deprecated compatibility shim; archive approval pending
+spread-backtest-viz       → deprecated compatibility shim; archived read-only
 ```
 
 ## Local workspace
