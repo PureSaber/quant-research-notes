@@ -1,0 +1,47 @@
+{
+  "schema": "puresaber.spread-backtest-viz.tag-evidence.v1",
+  "checked_at": "2026-09-05T06:45:32.5011672Z",
+  "repository": "PureSaber/spread-backtest-viz",
+  "archived": false,
+  "license": null,
+  "default_branch": "master",
+  "default_head": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+  "default_ci": {
+    "run_id": 33502122906,
+    "event": "push",
+    "head": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+    "status": "completed",
+    "conclusion": "success",
+    "jobs": [
+      {"name": "test (3.10)", "job_id": 99837638342, "conclusion": "success"},
+      {"name": "test (3.11)", "job_id": 99837638518, "conclusion": "success"},
+      {"name": "test (3.12)", "job_id": 99837638553, "conclusion": "success"}
+    ]
+  },
+  "tags": [
+    {
+      "ref": "refs/tags/spread-backtest-viz-v0.1.0-pre-merge",
+      "kind": "annotated",
+      "tag_object": "bed66d8f776a1d4cff0b062b8f80ebadf92f363b",
+      "peeled_commit": "cf492d3e73ceee712889e74dab0766e11cc48bee",
+      "tagger": "PureSaber <88314620+PureSaber@users.noreply.github.com>",
+      "tagger_date": "2026-09-05T06:44:07Z",
+      "message": "Recovery anchor created under explicit owner authorization on 2026-09-05; points to the pre-consolidation commit. This tag did not exist before consolidation and is not a historical release.",
+      "signed": false
+    },
+    {
+      "ref": "refs/tags/v0.2.0",
+      "kind": "annotated",
+      "tag_object": "a5bdd78e7dd789400f66b297acf5032c41d31973",
+      "peeled_commit": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+      "tagger": "PureSaber <88314620+PureSaber@users.noreply.github.com>",
+      "tagger_date": "2026-09-05T06:44:57Z",
+      "message": "Final deprecated compatibility shim for quant-report-hub. Research and backtest use only; no live-trading, market-data certification, or platform GA claim.",
+      "signed": false
+    }
+  ],
+  "existing_tag_modified": false,
+  "history_rewritten": false,
+  "force_push_used": false,
+  "verification_result": "PASS"
+}
