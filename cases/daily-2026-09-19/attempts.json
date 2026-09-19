@@ -1,0 +1,67 @@
+[
+  {
+    "study_id": "exploratory-full-126",
+    "attempt_id": "509ea7e4373b4b09adf4815fa9e902be",
+    "status": "running",
+    "payload": {
+      "context": {},
+      "parameters": {
+        "config_sha256": "ad60016fc9f4eefb7c4c6d8d79b7dd66842c217086f9ef50280ac8df7cd9655f",
+        "inputs": "480cd3c5b77d60a61821a8616dc70f4b8a80aa455d8a5b4bfdc3ddb4231f74dc",
+        "sessions": 126
+      }
+    }
+  },
+  {
+    "study_id": "exploratory-full-126",
+    "attempt_id": "509ea7e4373b4b09adf4815fa9e902be",
+    "status": "failed",
+    "payload": {
+      "error": "ValueError: Corporate-action/adjustment differences require a matching cashflow feed"
+    }
+  },
+  {
+    "study_id": "exploratory-supported-40",
+    "attempt_id": "e3052bb7ee0044009799bc96db3483a7",
+    "status": "running",
+    "payload": {
+      "context": {},
+      "parameters": {
+        "config_sha256": "ad60016fc9f4eefb7c4c6d8d79b7dd66842c217086f9ef50280ac8df7cd9655f",
+        "inputs": "480cd3c5b77d60a61821a8616dc70f4b8a80aa455d8a5b4bfdc3ddb4231f74dc",
+        "sessions": 40
+      }
+    }
+  },
+  {
+    "study_id": "exploratory-supported-40",
+    "attempt_id": "e3052bb7ee0044009799bc96db3483a7",
+    "status": "completed",
+    "payload": {
+      "case": "supported-40/case.json",
+      "sha256": "330983505906e26458460ca35e8a21b5d78020d771425e5cbb783155b2985a77"
+    }
+  },
+  {
+    "study_id": "exploratory-locked-supported-40",
+    "attempt_id": "04830e7fd384466d95fe253f644392d2",
+    "status": "running",
+    "payload": {
+      "context": {},
+      "parameters": {
+        "config_sha256": "ad60016fc9f4eefb7c4c6d8d79b7dd66842c217086f9ef50280ac8df7cd9655f",
+        "inputs": "480cd3c5b77d60a61821a8616dc70f4b8a80aa455d8a5b4bfdc3ddb4231f74dc",
+        "sessions": 40
+      }
+    }
+  },
+  {
+    "study_id": "exploratory-locked-supported-40",
+    "attempt_id": "04830e7fd384466d95fe253f644392d2",
+    "status": "completed",
+    "payload": {
+      "case": "locked-supported-40/case.json",
+      "sha256": "86535e3b7fff3ef504541c9950b6de724259464cd97a505a1d1bf34219cc7de8"
+    }
+  }
+]

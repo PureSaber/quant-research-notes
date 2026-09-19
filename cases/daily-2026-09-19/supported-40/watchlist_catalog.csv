@@ -1,0 +1,5 @@
+symbol,asset_class,product_type,venue,price_scale,price_tick,quantity_step,lot_size,commission_rate,stamp_duty_rate,effective_from,effective_to,available_at
+000001,equity,stock,SZSE,2,0.01,1,100,0,0,2026-07-27T00:00:00Z,2026-10-18T00:00:00Z,2026-07-27T00:00:00Z
+000333,equity,stock,SZSE,2,0.01,1,100,0,0,2026-07-27T00:00:00Z,2026-10-18T00:00:00Z,2026-07-27T00:00:00Z
+600036,equity,stock,SSE,2,0.01,1,100,0,0,2026-07-27T00:00:00Z,2026-10-18T00:00:00Z,2026-07-27T00:00:00Z
+601318,equity,stock,SSE,2,0.01,1,100,0,0,2026-07-27T00:00:00Z,2026-10-18T00:00:00Z,2026-07-27T00:00:00Z

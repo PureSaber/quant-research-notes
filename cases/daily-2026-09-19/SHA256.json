@@ -1,0 +1,22 @@
+{
+  "attempts.json": "397da8c8bde03631c4d1bdae191b3eeee935393f0ee6facbfa014d042e546950",
+  "inputs/actions.parquet": "5146f36837610add596cf36a5f98a9e2d4055536a606de12a194b8c3f03da239",
+  "inputs/adjusted.parquet": "00bc98623d577688b135da45dd6f9c86a2e75df036e864149b0668edd47f80e0",
+  "inputs/benchmark.parquet": "4a1c1edaece7ca1a4912a75d46d53fad0310dc24118bdd37995b82bf6ed12858",
+  "inputs/calendar.parquet": "4060fa76fa45d5fb343f093c40ff871c32cbb196695d7c1be5f03e3f9b2d68b7",
+  "inputs/manifest.json": "480cd3c5b77d60a61821a8616dc70f4b8a80aa455d8a5b4bfdc3ddb4231f74dc",
+  "inputs/raw.parquet": "728f8e93d12f40fe49d372fa294617c9d53577a3c723ace12aba127dc786450e",
+  "supported-40/baseline-cash_ledger.parquet": "a99364edad3c8353b8a91541f6349536cf7f18561b131b28b97a7e9e9935f0c0",
+  "supported-40/baseline-costs.parquet": "6131748e56df76fcbf8ce1e7c579255b67438cd50f0df7d641664f9d5f032646",
+  "supported-40/baseline-fills.parquet": "2b8d07e9750b51ac8b035d17db43f577b89fa55c1136c863fee762989f95efdd",
+  "supported-40/baseline-portfolio_snapshots.parquet": "2f89d8584d9db0ca8d21f7e284a3058f7840eb18fc7175a016ef8c46713424c6",
+  "supported-40/case.json": "86535e3b7fff3ef504541c9950b6de724259464cd97a505a1d1bf34219cc7de8",
+  "supported-40/comparison_returns.csv": "30404fb8de3beb8efc0be78cf7dfd02e699399d65ed09d6533ca8bd5df0c10d4",
+  "supported-40/fdr.csv": "f7129d6bee9aadef2f3895308be96b61da2a5f5dd03081645b74501eda38af39",
+  "supported-40/folds.csv": "fb623c2612d0efa67ee518373acb8fbfd286e06b032637e6c4385b1a39d0835e",
+  "supported-40/strategy-cash_ledger.parquet": "5ceed5af9933d012c648f4c1b668439b59c13353acdea4554f80672a3e014359",
+  "supported-40/strategy-costs.parquet": "cfa659545ae0afe52347ffd3cc3bee5d6ddd4c9c9310f9c98e109bcc1778e204",
+  "supported-40/strategy-fills.parquet": "ffee08494254864009817b6da388564d7d1ebb45d3634e8140230174aa8161c4",
+  "supported-40/strategy-portfolio_snapshots.parquet": "179bd2142d80ffe91b91ce58040c4977b324ee2812cab5bf69b03ae6cbe41b20",
+  "supported-40/watchlist_catalog.csv": "95172b4f685e2aaf717dc991cd191cd894ab3af1939a6899d5bcd6a207b2b74b"
+}

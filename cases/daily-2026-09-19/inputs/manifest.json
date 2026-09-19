@@ -1,0 +1,30 @@
+{
+  "origin": "live_public_api",
+  "captured_at": "2026-09-19T07:00:44.869927+00:00",
+  "requested_start": "2024-09-18",
+  "requested_end": "2026-09-18",
+  "files": {
+    "calendar": {
+      "file": "calendar.parquet",
+      "sha256": "4060fa76fa45d5fb343f093c40ff871c32cbb196695d7c1be5f03e3f9b2d68b7"
+    },
+    "raw": {
+      "file": "raw.parquet",
+      "sha256": "728f8e93d12f40fe49d372fa294617c9d53577a3c723ace12aba127dc786450e"
+    },
+    "adjusted": {
+      "file": "adjusted.parquet",
+      "sha256": "00bc98623d577688b135da45dd6f9c86a2e75df036e864149b0668edd47f80e0"
+    },
+    "benchmark": {
+      "file": "benchmark.parquet",
+      "sha256": "4a1c1edaece7ca1a4912a75d46d53fad0310dc24118bdd37995b82bf6ed12858"
+    },
+    "actions": {
+      "file": "actions.parquet",
+      "sha256": "5146f36837610add596cf36a5f98a9e2d4055536a606de12a194b8c3f03da239"
+    }
+  },
+  "parent_manifest_sha256": "0fc492ee15366464450e69c60cd892e077fb05427da9f5df5c970411e3be0a65",
+  "assembly_note": "Original captured bars/calendar/benchmark retained; separately captured CNInfo actions appended. No historical observation timestamps changed."
+}

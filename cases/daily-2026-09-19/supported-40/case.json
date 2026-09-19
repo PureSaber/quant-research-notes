@@ -1,0 +1,99 @@
+{
+  "scope": "retrospective exploratory fixed-watchlist case",
+  "start": "2026-07-27",
+  "end": "2026-09-18",
+  "sessions": 40,
+  "hypothesis": "20-day momentum and low volatility outperform a 50%-invested equal-weight basket after costs",
+  "study_id": "exploratory-locked-supported-40",
+  "identity": {
+    "code_version": "d5869c47815de17a7bc9836540c402dd55a8eb48",
+    "dependencies": {
+      "quant-data-kit": "5b68af566ee1d47f62caa5449719912df6e17983",
+      "quant-execution": "67164347c0a1fbb3e4f7a1b49ab9b172d02e86db",
+      "quant-lab": "938927e5bcad641d46e3bd733e6323719d44aa50",
+      "quant-factors": "0ee0bcd66a94d887dbcc6196dfb85b154550c196"
+    }
+  },
+  "inputs": {
+    "origin": "live_public_api",
+    "captured_at": "2026-09-19T07:00:44.869927+00:00",
+    "requested_start": "2024-09-18",
+    "requested_end": "2026-09-18",
+    "files": {
+      "calendar": {
+        "file": "calendar.parquet",
+        "sha256": "4060fa76fa45d5fb343f093c40ff871c32cbb196695d7c1be5f03e3f9b2d68b7"
+      },
+      "raw": {
+        "file": "raw.parquet",
+        "sha256": "728f8e93d12f40fe49d372fa294617c9d53577a3c723ace12aba127dc786450e"
+      },
+      "adjusted": {
+        "file": "adjusted.parquet",
+        "sha256": "00bc98623d577688b135da45dd6f9c86a2e75df036e864149b0668edd47f80e0"
+      },
+      "benchmark": {
+        "file": "benchmark.parquet",
+        "sha256": "4a1c1edaece7ca1a4912a75d46d53fad0310dc24118bdd37995b82bf6ed12858"
+      },
+      "actions": {
+        "file": "actions.parquet",
+        "sha256": "5146f36837610add596cf36a5f98a9e2d4055536a606de12a194b8c3f03da239"
+      }
+    },
+    "parent_manifest_sha256": "0fc492ee15366464450e69c60cd892e077fb05427da9f5df5c970411e3be0a65",
+    "assembly_note": "Original captured bars/calendar/benchmark retained; separately captured CNInfo actions appended. No historical observation timestamps changed."
+  },
+  "invested_fraction_limit": 0.5,
+  "corporate_action_count": 1,
+  "dividend_tax": "gross distributions; personal holding-period tax excluded",
+  "factor_validation": {
+    "folds": 8,
+    "mean": 0.007963160679600918,
+    "median": -0.03193525800534544,
+    "std": 0.14760003530945728,
+    "positive_fold_ratio": 0.375,
+    "worst_fold": -0.14990982343993167,
+    "method": "expanding_walk_forward",
+    "embargo_size": 5,
+    "discoveries_after_fdr": 0
+  },
+  "metrics": {
+    "strategy_net_return": {
+      "mean_return": 5.88436545205254e-05,
+      "total_return": 0.001970640999999773,
+      "ann_return": 0.012802096714149558,
+      "annual_mean_return": 0.014828600939172402,
+      "ann_vol": 0.06496340871408916,
+      "sharpe": 0.22826081993995487,
+      "max_drawdown": -0.025816953999999726
+    },
+    "equal_weight_buy_hold_net_return": {
+      "mean_return": 0.00031264089354284734,
+      "total_return": 0.011889999999999734,
+      "ann_return": 0.07936676462439873,
+      "annual_mean_return": 0.07878550517279753,
+      "ann_vol": 0.06929697301210111,
+      "sharpe": 1.1369256368389926,
+      "max_drawdown": -0.026781768362746927
+    },
+    "hs300_price_return_before_costs": {
+      "mean_return": -0.0010374042953968361,
+      "total_return": -0.0414751786683768,
+      "ann_return": -0.23944710092878374,
+      "annual_mean_return": -0.2614258824400027,
+      "ann_vol": 0.15526406341262042,
+      "sharpe": -1.6837501009184141,
+      "max_drawdown": -0.0613904205312773
+    }
+  },
+  "strategy_fills": 12,
+  "baseline_fills": 4,
+  "limitations": [
+    "watchlist selection bias",
+    "current adjusted-price vintage",
+    "daily-bar execution approximation",
+    "not independent holdout",
+    "no alpha claim"
+  ]
+}
