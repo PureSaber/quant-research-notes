@@ -1,0 +1,56 @@
+{
+  "schema": "puresaber.quant-governance.public-evidence-manifest.v1",
+  "as_of": "2026-09-05T07:25:49Z",
+  "authoritative_status": "M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED",
+  "verification": {
+    "p0": "PASS",
+    "p1": "PASS",
+    "p2": "PASS",
+    "overall": "PASS"
+  },
+  "published_evidence": [
+    {
+      "path": "evidence/2026-09-05/spread-archive-before-20260905.json",
+      "sha256": "EAD74F13D9011F29989189BF6035D43878DC8A03755B5704D6A06C810339FFB1",
+      "scope": "public repository archive preflight"
+    },
+    {
+      "path": "evidence/2026-09-05/spread-archive-tags-20260905.json",
+      "sha256": "454498F2649BEF821D199FCF8A4E2F42FE37176CAC083818C91983EFA769CC2C",
+      "scope": "public repository annotated tag evidence"
+    },
+    {
+      "path": "evidence/2026-09-05/spread-archive-after-20260905.json",
+      "sha256": "9C8FC2A4632F4D9F6EF672C6212FCE75D5EBD5C37BE4E865CEFA35E77BB77720",
+      "scope": "public repository archive postflight"
+    }
+  ],
+  "restricted_evidence_commitments": [
+    {
+      "name": "p0-remediation-evidence-20260901.json",
+      "sha256": "DCA4238BB01E8DFE78100EE102BD9BEB86F3BAC90EAD06DE608E7531001D880C",
+      "reason": "contains exact private-repository run and job state"
+    },
+    {
+      "name": "p1-security-remediation-20260901.json",
+      "sha256": "194E5F0611D77E022B58B51E1201B4C4254740BBE01EE82073C7A8960C6162E8",
+      "reason": "contains exact private-repository security and workflow state"
+    },
+    {
+      "name": "p2-remediation-evidence-20260901.json",
+      "sha256": "0BD407EC8638F271BB98DF34179DB3CCD47C59E6BC9CA37901C08E014D3B009D",
+      "reason": "contains internal evidence paths and private-repository state"
+    }
+  ],
+  "disclosure_policy": {
+    "excluded": [
+      "secrets",
+      "private repository content",
+      "internal paths",
+      "authorization originals",
+      "Codex task metadata",
+      "restricted raw data"
+    ],
+    "public_state_verification": "Use the linked public GitHub repositories, pull requests, issues, tags, rulesets, and Actions runs."
+  }
+}

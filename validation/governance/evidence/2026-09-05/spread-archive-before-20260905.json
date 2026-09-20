@@ -1,0 +1,54 @@
+{
+  "schema": "puresaber.spread-backtest-viz.archive-preflight.v1",
+  "checked_at": "2026-09-05T06:41:45.2823308Z",
+  "authorization": {
+    "no_license": true,
+    "recovery_tag": {
+      "name": "spread-backtest-viz-v0.1.0-pre-merge",
+      "target_commit": "cf492d3e73ceee712889e74dab0766e11cc48bee"
+    },
+    "compatibility_tag": {
+      "name": "v0.2.0",
+      "target_commit": "8b80ceebe84492de60133f2f9432cf7f002f8327"
+    },
+    "archive_after_evidence": true
+  },
+  "identity_gate": {
+    "github_actor": "PureSaber",
+    "remote": "https://github.com/PureSaber/spread-backtest-viz.git",
+    "user_name": "PureSaber",
+    "user_email": "88314620+PureSaber@users.noreply.github.com",
+    "user_use_config_only": true
+  },
+  "repository": {
+    "visibility": "public",
+    "archived": false,
+    "default_branch": "master",
+    "default_head": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+    "branches": [
+      {
+        "name": "master",
+        "head": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+        "protected": false
+      }
+    ],
+    "tags": [],
+    "open_pull_requests": 0,
+    "open_issues": 0,
+    "releases": 0,
+    "license": null
+  },
+  "targets": {
+    "pre_consolidation": {
+      "commit": "cf492d3e73ceee712889e74dab0766e11cc48bee",
+      "tree": "6106c4dec7697e1c24c87a408860d002cdb23b7a"
+    },
+    "final_compatibility_shim": {
+      "commit": "8b80ceebe84492de60133f2f9432cf7f002f8327",
+      "tree": "734b59eea352997ce565ed6f61d9a2691f7d32bc",
+      "default_ci_run": 33502122906,
+      "default_ci_result": "success"
+    }
+  },
+  "preflight_result": "PASS"
+}
