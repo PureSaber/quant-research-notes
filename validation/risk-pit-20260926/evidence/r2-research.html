@@ -1,0 +1,248 @@
+<!doctype html><html lang="zh-CN"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>策略研究 · etf-risk-walkforward-20260926-r2</title>
+<style>body{font:15px/1.65 system-ui,sans-serif;background:#f4f6fa;color:#182334;margin:0}main{max-width:1240px;margin:auto;padding:32px}h1{font-size:30px;margin:0}.muted{color:#64748b}section{background:white;padding:24px;border:1px solid #dfe5ee;border-radius:12px;margin:20px 0}.stats{display:flex;gap:36px}.stats b{font-size:28px;display:block}table{border-collapse:collapse;width:100%;min-width:760px}td,th{text-align:left;padding:12px;border-bottom:1px solid #e6ebf2}th{background:#f1f5fa;white-space:nowrap}.scroll{overflow:auto}input{padding:10px;border:1px solid #ccd5e1;border-radius:6px;width:280px;max-width:90%}li{margin:10px 0}pre{white-space:pre-wrap;word-break:break-word;font-size:12px}details{margin-top:16px}.badge{color:#17605c;background:#e4f4f0;padding:4px 10px;border-radius:20px}</style>
+<main><p class="muted">PURESABER / RESEARCH WORKBENCH</p><h1>etf-risk-walkforward-20260926-r2</h1>
+<p>研究假设（待验证）：固定四ETF池内，动量与低波动排序配合60日趋势筛选，在预先固定的滚动测试窗口中改善扣费收益与回撤。该假设尚未获验证。</p><span class="badge">exploratory · 全部候选留痕</span>
+<section class="stats"><div><b>4</b>预登记候选</div><div><b>4</b>完成</div><div><b>0</b>失败</div><div><b>8</b>审计事件</div></section>
+<section><h2>实验比较</h2><p class="muted">成本压力实验单独标识口径差异；不按最高收益自动晋级。收益来自模拟账本。</p><input id="filter" placeholder="筛选实验名称或状态" aria-label="筛选实验"><div class="scroll"><table id="experiments"><thead><tr><th>实验</th><th>状态</th><th>净收益</th><th>最大回撤</th><th>Sharpe</th><th>成交</th><th>费用</th><th>失败原因</th></tr></thead><tbody><tr><td>base</td><td>completed</td><td>-5.27%</td><td>-15.40%</td><td>-0.3046</td><td>66</td><td>3652</td><td></td></tr><tr><td>buy_hold</td><td>completed</td><td>7.38%</td><td>-15.48%</td><td>0.5415</td><td>16</td><td>946</td><td></td></tr><tr><td>cost_2x</td><td>completed</td><td>-5.97%</td><td>-15.06%</td><td>-0.4319</td><td>67</td><td>7299</td><td></td></tr><tr><td>delay_1</td><td>completed</td><td>-7.96%</td><td>-15.01%</td><td>-0.5662</td><td>63</td><td>3846</td><td></td></tr></tbody></table></div></section>
+<section><h2>稳健性与失败诊断</h2><ul><li><strong>NET_BASELINE_DIFFERENCE</strong> 主实验相对同投入上限买入持有的净收益差为-12.65个百分点。</li><li><strong>PAIRED_PERTURBATION</strong> cost_2x相对主实验的净收益变化为-0.70个百分点。</li><li><strong>PAIRED_PERTURBATION</strong> delay_1相对主实验的净收益变化为-2.69个百分点。</li><li><strong>SUBPERIOD_STABILITY</strong> 3个连续子区间中2个净收益为正；区间长短可能不同。</li></ul><p class="muted">诊断反映配对实验结果，不是收益预测或因果证明。未触碰留出区间须单独等待并评估。</p></section>
+<section><h2>证据与适用范围</h2><ul><li>current adjusted-price vintage</li><li>current-ledger-NAV target sizing</li><li>daily-bar execution; no order-book queue</li><li>folds restart from cash; entry costs charged each fold</li><li>gross dividends; personal dividend tax excluded</li><li>held delistings fail without a supported disposition fact</li><li>incomplete final test window is reported but not evaluated</li><li>not independent holdout performance</li><li>retrospective walk-forward is not an untouched prospective holdout</li></ul><details><summary>比较口径差异</summary><pre>[
+  {
+    &quot;candidate&quot;: &quot;cost_2x&quot;,
+    &quot;field&quot;: &quot;comparison&quot;
+  }
+]</pre></details><details><summary>冻结研究配方</summary><pre>{
+  &quot;allocation&quot;: {
+    &quot;lookback&quot;: 60,
+    &quot;max_turnover&quot;: 2.0,
+    &quot;min_observations&quot;: 20,
+    &quot;mode&quot;: &quot;cost_aware&quot;,
+    &quot;risk_aversion&quot;: 5.0,
+    &quot;turnover_penalty&quot;: 0.001
+  },
+  &quot;backend&quot;: &quot;equity&quot;,
+  &quot;costs&quot;: {
+    &quot;commission&quot;: 0.0003,
+    &quot;initial_capital&quot;: 1000000,
+    &quot;min_commission&quot;: 5,
+    &quot;participation_rate&quot;: 0.01,
+    &quot;slippage&quot;: 0.001,
+    &quot;stamp_tax&quot;: 0
+  },
+  &quot;diagnostics&quot;: {
+    &quot;cost_multipliers&quot;: [
+      2
+    ],
+    &quot;signal_delays&quot;: [
+      1
+    ]
+  },
+  &quot;factors&quot;: {
+    &quot;momentum_20d&quot;: 1,
+    &quot;volatility_20d&quot;: -1
+  },
+  &quot;hypothesis&quot;: &quot;固定四ETF池内，动量与低波动排序配合60日趋势筛选，在预先固定的滚动测试窗口中改善扣费收益与回撤。该假设尚未获验证。&quot;,
+  &quot;inputs&quot;: {
+    &quot;bundle&quot;: &quot;H:\\Documents\\ChatGPT\\temp\\quant-risk-pit-20260926\\artifacts\\pit-sources\\qdk-etf-research-v3-pit-20260925\\snapshots\\sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315&quot;,
+    &quot;catalog&quot;: &quot;H:\\Documents\\ChatGPT\\temp\\quant-risk-pit-20260926\\artifacts\\pit-sources\\qdk-etf-research-v3-pit-20260925\\snapshots\\sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315\\catalog.csv&quot;
+  },
+  &quot;interval&quot;: {
+    &quot;end&quot;: &quot;2026-09-24&quot;,
+    &quot;start&quot;: &quot;2025-05-22&quot;
+  },
+  &quot;mode&quot;: &quot;exploratory&quot;,
+  &quot;risk&quot;: {
+    &quot;drawdown_action&quot;: &quot;liquidate&quot;,
+    &quot;estimated_cost_rate_per_turnover&quot;: 0.002,
+    &quot;exposure_breach_action&quot;: &quot;liquidate&quot;,
+    &quot;max_drawdown&quot;: 0.15,
+    &quot;max_estimated_cost_rate&quot;: 0.005,
+    &quot;max_gross_weight&quot;: 0.95,
+    &quot;max_positions&quot;: 4,
+    &quot;max_single_weight&quot;: 0.45,
+    &quot;max_turnover&quot;: 2.0,
+    &quot;min_cash_weight&quot;: 0.05
+  },
+  &quot;risk_model&quot;: {
+    &quot;active_factor_bounds&quot;: {
+      &quot;market&quot;: [
+        -1.0,
+        0.0
+      ]
+    },
+    &quot;annualization&quot;: 252,
+    &quot;benchmark_weights&quot;: {
+      &quot;159915&quot;: 0.25,
+      &quot;510300&quot;: 0.25,
+      &quot;510500&quot;: 0.25,
+      &quot;588000&quot;: 0.25
+    },
+    &quot;covariance_shrinkage&quot;: 0.2,
+    &quot;exposure_fields&quot;: {},
+    &quot;factor_bounds&quot;: {
+      &quot;market&quot;: [
+        0.0,
+        0.95
+      ]
+    },
+    &quot;lookback&quot;: 60,
+    &quot;market_factor&quot;: true,
+    &quot;max_tracking_error&quot;: 0.3,
+    &quot;min_asset_observations&quot;: 40,
+    &quot;min_assets_per_period&quot;: 3,
+    &quot;min_periods&quot;: 40,
+    &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+    &quot;specific_variance_shrinkage&quot;: 0.2
+  },
+  &quot;schema_version&quot;: &quot;quant.research-recipe/v1&quot;,
+  &quot;source&quot;: {
+    &quot;limitation&quot;: &quot;官方历史文档的字段断言由人工提取，代码核验字段绑定及附件哈希，不认证原文语义。主表仅覆盖至实际核验时点，费用采用显式策略假设；固定池存在选择偏差，缺完整逐日停复牌与盘中状态。信号行情为当前复权版本，风险收益使用原始价及已公告权益；单market因子仅统计代理。历史walk-forward不是未触碰的真实前向收益。&quot;,
+    &quot;scope&quot;: &quot;retrospective-fixed-pool-human-reviewed-official-documents-real-prices&quot;
+  },
+  &quot;strategy&quot;: {
+    &quot;cash_buffer&quot;: 0.2,
+    &quot;family&quot;: &quot;etf_trend&quot;,
+    &quot;frequency&quot;: &quot;weekly&quot;,
+    &quot;max_weight&quot;: 0.4,
+    &quot;top_n&quot;: 2,
+    &quot;trend_window&quot;: 60
+  },
+  &quot;study_id&quot;: &quot;etf-risk-walkforward-20260926-r2&quot;,
+  &quot;validation&quot;: {
+    &quot;direction_policy&quot;: &quot;fixed&quot;,
+    &quot;embargo_sessions&quot;: 5,
+    &quot;expanding&quot;: false,
+    &quot;fdr_alpha&quot;: 0.05,
+    &quot;method&quot;: &quot;walk_forward&quot;,
+    &quot;selection_metric&quot;: &quot;sharpe&quot;,
+    &quot;test_sessions&quot;: 63,
+    &quot;train_sessions&quot;: 126
+  },
+  &quot;variants&quot;: []
+}</pre></details></section>
+<section><h2>滚动样本外验证</h2><p>本页指标由各折测试区间拼接；每折重新入场并计费。候选选择仅使用训练结果。</p><a href="validation.html">查看逐折选择、样本外收益与多重比较</a></section><section><h2>风险执行证据</h2><p>目标拒绝、实际持仓超限与回撤动作分别留痕。statistical_proxy为统计代理模型；不代表MSCI Barra或已获验证的基本面描述子。</p><pre>{
+  &quot;base&quot;: {
+    &quot;test_folds&quot;: [
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 1,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 32,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 31,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 2
+      }
+    ]
+  },
+  &quot;buy_hold&quot;: {
+    &quot;test_folds&quot;: [
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 32,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 31,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      }
+    ]
+  },
+  &quot;cost_2x&quot;: {
+    &quot;test_folds&quot;: [
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 1,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 38,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 37,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 1
+      }
+    ]
+  },
+  &quot;delay_1&quot;: {
+    &quot;test_folds&quot;: [
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 1,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 0,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 0,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 0
+      },
+      {
+        &quot;drawdown_halted_sessions&quot;: 28,
+        &quot;exposure_halted_sessions&quot;: 0,
+        &quot;model_kind&quot;: &quot;statistical_proxy&quot;,
+        &quot;model_snapshots&quot;: 63,
+        &quot;realized_breaches&quot;: 28,
+        &quot;runtime_risk_events&quot;: 0,
+        &quot;target_rejections&quot;: 2
+      }
+    ]
+  }
+}</pre></section></main><script>document.getElementById('filter').addEventListener('input',function(){const q=this.value.toLowerCase();document.querySelectorAll('#experiments tbody tr').forEach(r=>r.hidden=!r.textContent.toLowerCase().includes(q));});</script></html>

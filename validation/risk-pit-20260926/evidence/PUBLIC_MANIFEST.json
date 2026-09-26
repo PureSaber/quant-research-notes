@@ -1,0 +1,87 @@
+{
+  "schema_version": "quant.public-evidence-manifest/v1",
+  "study_id": "etf-risk-walkforward-20260926-r2",
+  "note": "Derived simulation artifacts and source hashes only; raw vendor history and full source attachments remain local. ZIP preserves the original Windows registry paths and exact bytes. Public evidence does not establish proprietary data redistribution rights.",
+  "files": {
+    "attempt-1-failed-study.json": {
+      "sha256": "9982ea5846c2582ddbb379573c67e2926049137169f21d80ce319d64ed421dd0",
+      "bytes": 10816
+    },
+    "attempt-1-validation.json": {
+      "sha256": "fed5cfe811bee67c212ab93b855e9691f26e23107b6357ed3b0a0c686b18d049",
+      "bytes": 593
+    },
+    "base-oos-returns.csv": {
+      "sha256": "f100dde2ab01728b56bb3ff4047e1db7387c07c3a2ded003a1eb2e18aa2a0277",
+      "bytes": 5308
+    },
+    "buy_hold-oos-returns.csv": {
+      "sha256": "d1b2152b5a08cbfb23db0f5283028bd495a7ad7334d8db72abef377d8319b517",
+      "bytes": 5434
+    },
+    "cost_2x-oos-returns.csv": {
+      "sha256": "4e477c08d7391ff5b30afa471a0bbf8278d9c6bed6ba01c982284063766cc5ed",
+      "bytes": 5213
+    },
+    "delay_1-oos-returns.csv": {
+      "sha256": "c5ba80c2e5ff8bd3ef58451348bf8964527bf640f88d49e5f97fd848f09ded66",
+      "bytes": 5161
+    },
+    "forward-registration-receipt.json": {
+      "sha256": "5275034b0448f30d6b7d5b945c4b49b5135a47badab11e67e0392efcd401083f",
+      "bytes": 2307
+    },
+    "paper-registration-check.json": {
+      "sha256": "97c7095d74dcf914805735b939431b6973db1d6414b9b22d3a7de33bd307d6f6",
+      "bytes": 369
+    },
+    "pit-evidence-manifest.json": {
+      "sha256": "cf10f810947931d1ab76e05e02227ca65048d4f2ae35b0497c71b1fabd804566",
+      "bytes": 2831
+    },
+    "preflight.json": {
+      "sha256": "f306a55995766814fb9c93f44058ed729093281d02e1c2f0428de1d787a26e45",
+      "bytes": 3582
+    },
+    "r2-derived-evidence.zip": {
+      "sha256": "0f52297167580b5b6f6bbf8f4a7fb1374530f1d8a425dde66005b3e33c436fbb",
+      "bytes": 2944767
+    },
+    "r2-research.diagnostics.json": {
+      "sha256": "50362c0996513c2b32f7614dfc687df765f58355a49f2245c196d5fc922b290f",
+      "bytes": 1044
+    },
+    "r2-research.html": {
+      "sha256": "e36fbf77b911c7256d36d344d57b395231dbe6be09e849a32762d8ef46eb6b05",
+      "bytes": 13734
+    },
+    "r2-study.json": {
+      "sha256": "169cd56bc5e58a355a4d0aba228e89df2ff1c6dc9ac49736db17c5a8309d94ad",
+      "bytes": 168043
+    },
+    "r2-validation.html": {
+      "sha256": "b33f6a6254fb55dd8604987ea5768e2e5c530af90d907459fe485a16fd1b0830",
+      "bytes": 5456
+    },
+    "r2-validation.json": {
+      "sha256": "8f3bdee29d34214e8caa1d9b8c741d5addb5aeb888d9414a4b63278d33e99587",
+      "bytes": 2632
+    },
+    "real-study-integrity.json": {
+      "sha256": "847f2502f6eb877a04b00e9f235c867c99da968e9b6d48c1b612d2391b848b68",
+      "bytes": 6981
+    },
+    "recipe-original.yaml": {
+      "sha256": "54e34e41bc8fca4162daaf6ca6d8227f0e5730cdc30877ec4cf81990f00da254",
+      "bytes": 2680
+    },
+    "source-index.json": {
+      "sha256": "69f96deb94d3ad78e1f82dda8ccc3cdabf080337f973bb130dc0df684be7006c",
+      "bytes": 24026
+    },
+    "trading-state-gaps.json": {
+      "sha256": "7a0b385045052bd22a17cb911d7751ca8eb15bfc1a89723bb9b1c597497dcd72",
+      "bytes": 2613
+    }
+  }
+}
