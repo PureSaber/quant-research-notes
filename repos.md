@@ -12,6 +12,7 @@
 | currency-converter | FX utility / warmup | `python -m currency_converter` |
 | sklearn-stock-trend | ML trend prediction | `st-train`, `st-walkforward` |
 | a-share-multifactor | Multi-factor equity research | `asm-fetch`, `asm-backtest` |
+| [quant-hk-equity](https://github.com/PureSaber/quant-hk-equity) | 港股日频现金账户探索；真实行情、滞后信号、整手税费、训练/留出期；价格收益，未获可投资认证 | `quant-hk fetch/preflight/run` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
 | quant-lab | Experiment index + HTML dashboard | `quant-lab scan/export html` |
 | quant-report-hub | Charts (spread + equity) | `quant-report run` |
@@ -43,6 +44,7 @@ See also [run-contract.md](run-contract.md).
 quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / quant-portfolio
 
 quant-data-kit ──► a-share-multifactor / quant-futures-spread / quant-crypto-basis
+                 └► quant-hk-equity（同时复用quant-factors与quant-execution）
                  └► sklearn-stock-trend
                  └► qdk-catalog
 
@@ -52,6 +54,8 @@ quant-factors ── validation/factors ──► research engines
 
 research engines ── writes standard/v2 ──► quant-lab
                                             └► quant-report-hub attribution
+
+quant-hk-equity ── exploratory standard/v1 ──► quant-lab
 
 quant-agent ── reads ──► run outputs ── writes ──► review_manifest.json
 
@@ -77,6 +81,7 @@ quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts
 - https://github.com/PureSaber/quant-execution
 - https://github.com/PureSaber/quant-crypto-basis
 - https://github.com/PureSaber/a-share-multifactor
+- https://github.com/PureSaber/quant-hk-equity
 - https://github.com/PureSaber/sklearn-stock-trend
 - https://github.com/PureSaber/currency-converter
 - https://github.com/PureSaber/quant-data-kit

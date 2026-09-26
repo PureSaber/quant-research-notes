@@ -24,6 +24,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 currency-converter        → Python CLI warmup
 sklearn-stock-trend       → supervised learning + walk-forward
 a-share-multifactor       → factor IC + quantile + retail backtest
+quant-hk-equity           → 港股日频探索性价格收益研究；真实数据与现金账本，未获可投资认证
 quant-data-kit            → shared AKShare + Parquet + validation
 quant-execution           → deterministic execution and exact ledger
 quant-lab                 → cross-project experiment index
@@ -33,6 +34,8 @@ quant-futures-spread      → fixture-certified futures spread backtest
 quant-infra-workspace     → private cross-repository health and governance tooling
 spread-backtest-viz       → deprecated compatibility shim; archived read-only
 ```
+
+港股首版说明与复现证据见[quant-hk-equity研究记录](https://github.com/PureSaber/quant-hk-equity/blob/main/docs/RESEARCH.md)。当前仅覆盖固定观察名单，不包含完整公司行动与历史PIT证券主表；该仓采用standard/v1研究产物，不属于已有standard/v2认证范围。
 
 ## Local workspace
 
