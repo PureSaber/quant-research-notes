@@ -1,8 +1,20 @@
 {
   "schema_version": "quant.public-evidence-manifest/v1",
-  "study_id": "etf-risk-walkforward-20260926-r2",
-  "note": "Derived simulation artifacts and source hashes only; raw vendor history and full source attachments remain local. ZIP preserves the original Windows registry paths and exact bytes. Public evidence does not establish proprietary data redistribution rights.",
+  "active_study_id": "etf-risk-walkforward-20260926-r3",
+  "preserved_study_ids": [
+    "etf-risk-walkforward-20260926",
+    "etf-risk-walkforward-20260926-r2"
+  ],
+  "note": "Derived simulation artifacts and source hashes only; raw vendor history and full source attachments remain local. ZIPs preserve the original Windows registry paths and exact bytes. Unprefixed base/buy_hold/cost_2x/delay_1 CSVs and forward-registration-receipt.json belong to superseded r2; active results have r3 prefix and active-forward-registration-receipt.json.",
   "files": {
+    "active-forward-registration-receipt.json": {
+      "sha256": "e36ef99577c487c14d39875cb4833257a85715a721012e6da29b3e496b09d1c0",
+      "bytes": 2357
+    },
+    "active-paper-registration-check.json": {
+      "sha256": "3c7e143893fff1acda4fc0027ed57d8a9611ddac4179eebac127d4bdd984d412",
+      "bytes": 372
+    },
     "attempt-1-failed-study.json": {
       "sha256": "9982ea5846c2582ddbb379573c67e2926049137169f21d80ce319d64ed421dd0",
       "bytes": 10816
@@ -19,6 +31,10 @@
       "sha256": "d1b2152b5a08cbfb23db0f5283028bd495a7ad7334d8db72abef377d8319b517",
       "bytes": 5434
     },
+    "code-ci.json": {
+      "sha256": "35156d2edae9352f8ab8809102d4d3f523bd129285c41595ac3e907afc588b01",
+      "bytes": 26270
+    },
     "cost_2x-oos-returns.csv": {
       "sha256": "4e477c08d7391ff5b30afa471a0bbf8278d9c6bed6ba01c982284063766cc5ed",
       "bytes": 5213
@@ -26,6 +42,10 @@
     "delay_1-oos-returns.csv": {
       "sha256": "c5ba80c2e5ff8bd3ef58451348bf8964527bf640f88d49e5f97fd848f09ded66",
       "bytes": 5161
+    },
+    "forward-automation-receipt.json": {
+      "sha256": "889d21654a5b6ac56011f336af173861165cd7339d112dca00b4b6b98548acd8",
+      "bytes": 547
     },
     "forward-registration-receipt.json": {
       "sha256": "5275034b0448f30d6b7d5b945c4b49b5135a47badab11e67e0392efcd401083f",
@@ -66,6 +86,54 @@
     "r2-validation.json": {
       "sha256": "8f3bdee29d34214e8caa1d9b8c741d5addb5aeb888d9414a4b63278d33e99587",
       "bytes": 2632
+    },
+    "r3-base-oos-returns.csv": {
+      "sha256": "1ffc6b1538742354fd2ba01f3b9abac51d873d1baaebc2ffd36ed677bc99ad7f",
+      "bytes": 5198
+    },
+    "r3-buy_hold-oos-returns.csv": {
+      "sha256": "d1b2152b5a08cbfb23db0f5283028bd495a7ad7334d8db72abef377d8319b517",
+      "bytes": 5434
+    },
+    "r3-cost_2x-oos-returns.csv": {
+      "sha256": "bcc165f8d7cdfdc5f04c107456ee5a1bc5352ddff1ffd91152cb79fbd25d7777",
+      "bytes": 5197
+    },
+    "r3-delay_1-oos-returns.csv": {
+      "sha256": "9c17cd724e0671c93d93e075bd0d175601757bb2df6b0378bc5dec7fa5ac757c",
+      "bytes": 5068
+    },
+    "r3-derived-evidence.zip": {
+      "sha256": "edf6d0cd34e390d547a280b7f8f55b22e1c36cfbe51f8cd5ab4f5cede7e19c60",
+      "bytes": 2940815
+    },
+    "r3-real-study-integrity.json": {
+      "sha256": "d5bbf4b57b3e2a5cd03af755c092136426a86891756caadcf9a414279d0eb1ac",
+      "bytes": 6984
+    },
+    "r3-recipe-original.yaml": {
+      "sha256": "1eb9dd6cdd0aad68ee9119614910bfbbbd02022be2109169a59fe3cbb8523397",
+      "bytes": 2680
+    },
+    "r3-research.diagnostics.json": {
+      "sha256": "4eba8b72c92722e29a5b0fdca036e6097ce359ea190f052922db2ac597902e85",
+      "bytes": 1047
+    },
+    "r3-research.html": {
+      "sha256": "bc2e1de1f9f030ec76dca06e97a7ac75e3284d08c62465033bb7ae080313d902",
+      "bytes": 13726
+    },
+    "r3-study.json": {
+      "sha256": "c08d6657d56bdbeaff7f7bc0d14213a172a8032e4e22b8b3a9800ddb9a5cd648",
+      "bytes": 167828
+    },
+    "r3-validation.html": {
+      "sha256": "a0d1976a544b031e42519691b98bf6204e449471043e1bcb8ebc026caf4a3168",
+      "bytes": 5452
+    },
+    "r3-validation.json": {
+      "sha256": "c582fb8b92ce2a2cc638720f59e27552f0ff24348e1340e992ef3913946ac446",
+      "bytes": 2628
     },
     "real-study-integrity.json": {
       "sha256": "847f2502f6eb877a04b00e9f235c867c99da968e9b6d48c1b612d2391b848b68",
