@@ -1,0 +1,203 @@
+{
+  "study_sha256": "c08d6657d56bdbeaff7f7bc0d14213a172a8032e4e22b8b3a9800ddb9a5cd648",
+  "validation_sha256": "c582fb8b92ce2a2cc638720f59e27552f0ff24348e1340e992ef3913946ac446",
+  "code_identity": {
+    "quant_pipeline": "d6cfec637c9cb1684bb0ffc0aa45a260afe26f02",
+    "quant_lab": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+    "quant_data_kit": "b5621379e1a15562371be31c03f354a6acf512e4",
+    "quant_factors": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+    "a_share_multifactor": "90eb322d5a99bf226e7c318e7a741a3bd302fbda",
+    "quant-data-kit": "b5621379e1a15562371be31c03f354a6acf512e4",
+    "quant-execution": "99ab9b1445d72164fa4e8c6d1ebde859b80dba1f",
+    "quant-lab": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+    "quant-factors": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+    "quant-portfolio": "3d0f8585ce62140967cfbeb4d6ed2c8d37feb325",
+    "quant-risk-monitor": "a5c5a8ee5486c42f07e1539ad92cf1fb57c1e638"
+  },
+  "verified": [
+    {
+      "candidate": "base",
+      "result_sha256": "918424d59dc1c009fc9a12db8bbfe729b3068ac2e719085bfd4aa8c8025b23dc",
+      "artifacts_verified": 125,
+      "sessions": 189,
+      "total_return_recomputed": -0.031908805596341905,
+      "metrics": {
+        "cost_total": 3657.77302,
+        "fills": 66,
+        "max_drawdown": -0.14681023764859824,
+        "sessions": 189,
+        "sharpe": -0.18727438159429013,
+        "total_return": -0.031908805596341905
+      },
+      "risk_summary": {
+        "test_folds": [
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "buy_hold",
+      "result_sha256": "eaae2b85e84ac29019724be6b4968d6911de9cd04c4a48143f13c1c48933d8c5",
+      "artifacts_verified": 125,
+      "sessions": 189,
+      "total_return_recomputed": 0.07381060433240627,
+      "metrics": {
+        "cost_total": 946.0272600000001,
+        "fills": 16,
+        "max_drawdown": -0.15484720129377938,
+        "sessions": 189,
+        "sharpe": 0.5414785285750597,
+        "total_return": 0.07381060433240627
+      },
+      "risk_summary": {
+        "test_folds": [
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 32,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "cost_2x",
+      "result_sha256": "57ea862ef76e0e4d4f08468ba8c3383c9f96d37200ef9487f54a4b1c21fa489a",
+      "artifacts_verified": 125,
+      "sessions": 189,
+      "total_return_recomputed": -0.04695492957862124,
+      "metrics": {
+        "cost_total": 7306.031220000001,
+        "fills": 67,
+        "max_drawdown": -0.14850273790811042,
+        "sessions": 189,
+        "sharpe": -0.3180035193378809,
+        "total_return": -0.04695492957862124
+      },
+      "risk_summary": {
+        "test_folds": [
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        ]
+      }
+    },
+    {
+      "candidate": "delay_1",
+      "result_sha256": "9481973bdf2d99b89e3c7635e9c364e2c688d2c072bdf79a9083993f606424e8",
+      "artifacts_verified": 125,
+      "sessions": 189,
+      "total_return_recomputed": -0.032011113904575006,
+      "metrics": {
+        "cost_total": 3859.76773,
+        "fills": 63,
+        "max_drawdown": -0.11844749405099286,
+        "sessions": 189,
+        "sharpe": -0.1869153095210545,
+        "total_return": -0.032011113904575006
+      },
+      "risk_summary": {
+        "test_folds": [
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          },
+          {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        ]
+      }
+    }
+  ]
+}

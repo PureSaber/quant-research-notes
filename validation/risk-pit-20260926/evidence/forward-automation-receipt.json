@@ -1,0 +1,12 @@
+{
+  "name": "ETF真实前向观察",
+  "kind": "heartbeat",
+  "status": "ACTIVE",
+  "schedule_local": "Monday-Friday 18:30 Asia/Shanghai",
+  "first_planned_local": "2026-09-28T18:30:00+08:00",
+  "account_id": "etf-risk-forward-20260928-r3",
+  "created_at_unix_ms": 1790416317058,
+  "notification_policy": "quiet unless new completed observation, new failure, action required or sealing",
+  "runtime_requirement": "local computer powered on and Codex app running",
+  "source": "https://learn.chatgpt.com/docs/automations?surface=app"
+}

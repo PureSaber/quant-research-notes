@@ -1,1 +1,2 @@
 validation/m8/*.json text eol=lf
+validation/risk-pit-20260926/evidence/** -text
