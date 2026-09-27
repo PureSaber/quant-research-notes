@@ -1,5 +1,7 @@
 # Quant Research Notes
 
+新增：[11–20 研究可信度使用指南](research-integrity-11-20.md) 与 [事前投资目标示例](examples/investment-objective.json)。
+
 Knowledge base and roadmap for the PureSaber quant research monorepo (local workspace).
 
 ## Contents
