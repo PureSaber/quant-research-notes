@@ -14,6 +14,7 @@ Cross-Asset & Multi-Frequency v2的内部软件范围已经完成：14个运行�
 
 - Milestone：[M9 Market Data GA](https://github.com/PureSaber/quant-research-notes/milestone/1)，不设置虚构截止日期；三项全部关闭并经独立只读验证前，权威状态保持不变。
 - 平台控制：[P0 GitHub治理控制](../../P0_GITHUB_GOVERNANCE_CONTROLS.md)，记录14仓默认分支/tag Ruleset、单人审批边界、公开化审计和break-glass流程。
+- 最终验收：[P0-P2治理结项与独立只读验收](../governance/)，记录公开结论、证据披露边界和最终SHA-256承诺。
 
 | GA阻塞 | GitHub Issue | 当前状态 |
 |---|---|---|
