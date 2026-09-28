@@ -1,0 +1,644 @@
+{
+  "schema_version": "quant.public-source-index/v1",
+  "snapshot_id": "sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315",
+  "master_bundle_sha256": "9d90dc22eb16ddf8566e2c82342608605cafa42e20f286093b5daca569487f0d",
+  "master_captured_at": "2026-09-26T08:50:36.044423400+00:00",
+  "refresh_required_after": "2026-09-26T08:50:36.044423400+00:00",
+  "semantic_validation": {
+    "assertion_origin": "human-extracted-with-locator-and-short-excerpt",
+    "attachment_integrity": "sha256-verified",
+    "attachment_text_semantically_verified_by_code": false
+  },
+  "coverage": {
+    "daily_trading_status": "unavailable-no-positive-state-inference",
+    "dynamic_universe": "unavailable-fixed-pool-only",
+    "fees": "unavailable-requires-consumer-strategy-cost-model",
+    "intraday_status": "unavailable",
+    "master_scope": "retrospective-fixed-pool",
+    "price_limit": "rule-rate-only-no-daily-limit-hit-state",
+    "static_instrument_fields": "typed-official-document-assertions",
+    "trading_rules": "versioned-2023-and-2026-through-capture",
+    "typed_assertions": "human-extracted-locator-excerpt-hash-bound-not-code-semantic-verification",
+    "validity_horizon": "current-observations-end-at-capture-refresh-required"
+  },
+  "documents": [
+    {
+      "availability_basis": "official-page-date-conservative-utc-day",
+      "available_at": "2011-12-07T00:00:00+00:00",
+      "document_id": "listing-159915",
+      "effective_from": "2011-12-09T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "listing",
+      "published_at": "2011-12-07T00:00:00+00:00",
+      "publisher": "深圳证券交易所",
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be",
+      "source_uri": "https://www.szse.cn/disclosure/notice/fund/t20111207_516231.html",
+      "title": "创业板ETF上市交易公告书",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "159915",
+          "fields": {
+            "asset_class": {
+              "locator": "页面标题及正文第1项",
+              "method": "direct",
+              "value": "etf"
+            },
+            "listing_date": {
+              "locator": "正文第1项",
+              "method": "direct",
+              "value": "2011-12-09"
+            },
+            "product_type": {
+              "locator": "页面标题及正文第1项",
+              "method": "direct",
+              "value": "etf"
+            },
+            "venue": {
+              "locator": "正文第1项及深圳证券交易所页面来源",
+              "method": "direct",
+              "value": "SZSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2020-08-30T00:00:00+00:00",
+      "document_id": "listing-510300",
+      "effective_from": "2012-05-28T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "listing",
+      "published_at": "2020-08-29T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9",
+      "source_uri": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-08-28/510300_20200829_6.pdf",
+      "title": "华泰柏瑞沪深300交易型开放式指数证券投资基金2020年中期报告",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "510300",
+          "fields": {
+            "asset_class": {
+              "locator": "2020年中期报告：基金基本情况",
+              "method": "direct",
+              "value": "etf"
+            },
+            "listing_date": {
+              "locator": "2020年中期报告：基金基本情况",
+              "method": "direct",
+              "value": "2012-05-28"
+            },
+            "product_type": {
+              "locator": "2020年中期报告：基金基本情况",
+              "method": "direct",
+              "value": "etf"
+            },
+            "venue": {
+              "locator": "2020年中期报告：基金基本情况",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2021-03-06T00:00:00+00:00",
+      "document_id": "listing-510500",
+      "effective_from": "2013-03-15T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "listing",
+      "published_at": "2021-03-05T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "0447a88ee03e64e81f2599271be63472bdaa699b5db00ee1f666a1491095aade",
+      "source_uri": "https://www.sse.com.cn/disclosure/fund/announcement/c/2021-03-04/510500_20210305_1.pdf",
+      "title": "南方中证500交易型开放式指数证券投资基金招募说明书（更新）",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "510500",
+          "fields": {
+            "asset_class": {
+              "locator": "招募说明书：基金的基本情况",
+              "method": "direct",
+              "value": "etf"
+            },
+            "listing_date": {
+              "locator": "招募说明书：基金的基本情况",
+              "method": "direct",
+              "value": "2013-03-15"
+            },
+            "product_type": {
+              "locator": "招募说明书封面及基金的基本情况",
+              "method": "direct",
+              "value": "etf"
+            },
+            "venue": {
+              "locator": "招募说明书：基金的基本情况",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2020-11-12T00:00:00+00:00",
+      "document_id": "listing-588000",
+      "effective_from": "2020-11-16T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "listing",
+      "published_at": "2020-11-11T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3",
+      "source_uri": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-11-11/588000_20201111_2.pdf",
+      "title": "华夏上证科创板50成份交易型开放式指数证券投资基金上市交易公告书",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "588000",
+          "fields": {
+            "asset_class": {
+              "locator": "上市交易公告书：基金概览",
+              "method": "direct",
+              "value": "etf"
+            },
+            "listing_date": {
+              "locator": "上市交易公告书：基金份额上市交易",
+              "method": "direct",
+              "value": "2020-11-16"
+            },
+            "product_type": {
+              "locator": "上市交易公告书封面及基金概览",
+              "method": "direct",
+              "value": "etf"
+            },
+            "venue": {
+              "locator": "上市交易公告书：基金份额上市交易",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2020-08-22T00:00:00+00:00",
+      "document_id": "sse-limit-star-fund-2020",
+      "effective_from": "2020-08-22T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "price_limit",
+      "published_at": "2020-08-21T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "44900adc87d0240d31b4d2312371c150ff34db090ec7e55d98f614238cc5281b",
+      "source_uri": "https://etf.sse.com.cn/ruleguide/business/c/5287913.shtml",
+      "title": "科创板相关基金涨跌幅比例为20%的通知",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "588000",
+          "fields": {
+            "price_limit_rate": {
+              "locator": "通知第一条第（一）项；结合listing-588000所载跟踪标的",
+              "method": "derived",
+              "value": "0.20"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "document_id": "sse-rule-2023",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-07-06T00:00:00+00:00",
+      "kind": "trading_rule",
+      "published_at": "2023-02-17T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+      "source_uri": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx",
+      "title": "上海证券交易所交易规则（2023年修订）",
+      "validity_basis": "superseded-by-next-version",
+      "assertions": [
+        {
+          "symbol": "510300",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_limit_rate": {
+              "locator": "第3.3.13条",
+              "method": "direct",
+              "value": "0.10"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        },
+        {
+          "symbol": "510500",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_limit_rate": {
+              "locator": "第3.3.13条",
+              "method": "direct",
+              "value": "0.10"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        },
+        {
+          "symbol": "588000",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2026-04-25T00:00:00+00:00",
+      "document_id": "sse-rule-2026",
+      "effective_from": "2026-07-06T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "trading_rule",
+      "published_at": "2026-04-24T00:00:00+00:00",
+      "publisher": "上海证券交易所",
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888",
+      "source_uri": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/10816482/files/959da0158c65434daa8a43a6e32be7ba.docx",
+      "title": "上海证券交易所交易规则（2026年修订）",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "510300",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_limit_rate": {
+              "locator": "第3.3.13条",
+              "method": "direct",
+              "value": "0.10"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        },
+        {
+          "symbol": "510500",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_limit_rate": {
+              "locator": "第3.3.13条",
+              "method": "direct",
+              "value": "0.10"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        },
+        {
+          "symbol": "588000",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2020-08-22T00:00:00+00:00",
+      "document_id": "szse-limit-159915-2020",
+      "effective_from": "2020-08-24T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "price_limit",
+      "published_at": "2020-08-21T00:00:00+00:00",
+      "publisher": "深圳证券交易所",
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095",
+      "source_uri": "https://docs.static.szse.cn/www/aboutus/trends/conference/W020200821767425488573.pdf",
+      "title": "涨跌幅比例为20%的基金名单",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "159915",
+          "fields": {
+            "price_limit_rate": {
+              "locator": "附件：涨跌幅比例为20%的基金名单，159915行",
+              "method": "direct",
+              "value": "0.20"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "document_id": "szse-rule-2023",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-07-06T00:00:00+00:00",
+      "kind": "trading_rule",
+      "published_at": "2023-02-17T00:00:00+00:00",
+      "publisher": "深圳证券交易所",
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+      "source_uri": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf",
+      "title": "深圳证券交易所交易规则（2023年修订）",
+      "validity_basis": "superseded-by-next-version",
+      "assertions": [
+        {
+          "symbol": "159915",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SZSE"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "availability_basis": "official-page-date-conservative-next-utc-day",
+      "available_at": "2026-04-25T00:00:00+00:00",
+      "document_id": "szse-rule-2026",
+      "effective_from": "2026-07-06T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "kind": "trading_rule",
+      "published_at": "2026-04-24T00:00:00+00:00",
+      "publisher": "深圳证券交易所",
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586",
+      "source_uri": "https://docs.static.szse.cn/www/lawrules/rule/trade/W020260424690713155663.pdf",
+      "title": "深圳证券交易所交易规则（2026年修订）",
+      "validity_basis": "observed-through-capture-refresh-required",
+      "assertions": [
+        {
+          "symbol": "159915",
+          "fields": {
+            "lot_size": {
+              "locator": "第3.3.8条",
+              "method": "direct",
+              "value": "100"
+            },
+            "price_scale": {
+              "locator": "第3.3.11条，由最小变动单位推导小数精度",
+              "method": "derived",
+              "value": "3"
+            },
+            "price_tick": {
+              "locator": "第3.3.11条",
+              "method": "direct",
+              "value": "0.001"
+            },
+            "quantity_step": {
+              "locator": "第3.3.8条，由基金份额计量及零股卖出规则推导",
+              "method": "derived",
+              "value": "1"
+            },
+            "venue": {
+              "locator": "文档标题及发布方",
+              "method": "direct",
+              "value": "SZSE"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "dataset_source": {
+    "endpoints": {
+      "announcements": "akshare.fund_announcement_dividend_em",
+      "benchmark": "akshare.stock_zh_index_daily:sh000300",
+      "calendar": "akshare.tool_trade_date_hist_sina",
+      "dividends": "akshare.fund_open_fund_info_em:分红送配详情",
+      "prices": "akshare.fund_etf_hist_sina+akshare.fund_etf_dividend_sina"
+    },
+    "mode": "live_public_api",
+    "provider": "akshare_sina_etf",
+    "provider_package": "akshare",
+    "provider_package_version": "1.18.88.post1",
+    "quant_data_kit_version": "0.8.1",
+    "request": {
+      "adjusted_start": "2025-01-02",
+      "dataset_start": "2025-01-02",
+      "end": "2026-09-25",
+      "price_start": "2026-09-18",
+      "symbols": [
+        "510300",
+        "510500",
+        "159915",
+        "588000"
+      ]
+    }
+  },
+  "dataset_files": {
+    "actions": {
+      "file": "actions.parquet",
+      "format": "parquet",
+      "provider": "akshare_eastmoney_fund_f10",
+      "rows": 5,
+      "sha256": "dc37b5d58e1e34c664bc76dbe7e68134a23c80d2947481ace0d3178afbe0ec05"
+    },
+    "adjusted": {
+      "file": "adjusted.parquet",
+      "format": "parquet",
+      "provider": "akshare_sina_etf",
+      "rows": 1684,
+      "sha256": "5eb6621239728816839e6dc460b4a64bd7cfd172710059a2b251419709bc17a3"
+    },
+    "benchmark": {
+      "file": "benchmark.parquet",
+      "format": "parquet",
+      "provider": "akshare_sina",
+      "rows": 421,
+      "sha256": "b1d52360384c381a93d14ce4e6729fce1f961ae5aa3563e96705a053bdbf1940"
+    },
+    "calendar": {
+      "file": "calendar.parquet",
+      "format": "parquet",
+      "provider": "akshare_sina",
+      "rows": 8797,
+      "sha256": "60d148765f4284f8853c80dc268a4e60800e3b9e30c6a1f2483b46d5fbebd70c"
+    },
+    "catalog": {
+      "file": "catalog.csv",
+      "format": "csv",
+      "provider": "qdk.historical-instrument-master/v2",
+      "rows": 4,
+      "sha256": "a1780cb51bd7bb4d9fffa7f33c21e87a2769273a3f2a574cf17c99ae49c7ba2e"
+    },
+    "history": {
+      "file": "history/history.parquet",
+      "format": "parquet",
+      "provider": "derived_from_actions_captured_view",
+      "rows": 18,
+      "sha256": "b41a890a1af6495c2cd0c05883ffe0ade6a1ceaa3d420e3ecb2bad444baca2db"
+    },
+    "raw": {
+      "file": "raw.parquet",
+      "format": "parquet",
+      "provider": "akshare_sina_etf",
+      "rows": 1684,
+      "sha256": "dffd9eca426c536862b2d65b146cedfcb9af13113f593b5b0f59ac1b574cb8ee"
+    }
+  },
+  "note": "Index only: original provider data and document attachments remain local; this index is not an importable source bundle."
+}

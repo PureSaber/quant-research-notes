@@ -1,0 +1,53 @@
+schema_version: quant.research-recipe/v1
+study_id: etf-risk-walkforward-20260926-r2
+hypothesis: 固定四ETF池内，动量与低波动排序配合60日趋势筛选，在预先固定的滚动测试窗口中改善扣费收益与回撤。该假设尚未获验证。
+mode: exploratory
+backend: equity
+inputs:
+  bundle: ../artifacts/pit-sources/qdk-etf-research-v3-pit-20260925/snapshots/sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315
+  catalog: ../artifacts/pit-sources/qdk-etf-research-v3-pit-20260925/snapshots/sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315/catalog.csv
+interval: {start: "2025-05-22", end: "2026-09-24"}
+factors: {momentum_20d: 1, volatility_20d: -1}
+strategy: {family: etf_trend, frequency: weekly, top_n: 2, max_weight: 0.4, cash_buffer: 0.2, trend_window: 60}
+costs: {initial_capital: 1000000, commission: 0.0003, min_commission: 5, stamp_tax: 0, slippage: 0.001, participation_rate: 0.01}
+allocation: {mode: cost_aware, lookback: 60, min_observations: 20, risk_aversion: 5.0, turnover_penalty: 0.001, max_turnover: 2.0}
+risk:
+  max_drawdown: 0.15
+  drawdown_action: liquidate
+  exposure_breach_action: liquidate
+  max_single_weight: 0.45
+  max_gross_weight: 0.95
+  min_cash_weight: 0.05
+  max_positions: 4
+  max_turnover: 2.0
+  estimated_cost_rate_per_turnover: 0.002
+  max_estimated_cost_rate: 0.005
+risk_model:
+  model_kind: statistical_proxy
+  lookback: 60
+  min_periods: 40
+  min_asset_observations: 40
+  min_assets_per_period: 3
+  market_factor: true
+  exposure_fields: {}
+  covariance_shrinkage: 0.2
+  specific_variance_shrinkage: 0.2
+  annualization: 252
+  factor_bounds: {market: [0.0, 0.95]}
+  benchmark_weights: {"510300": 0.25, "510500": 0.25, "159915": 0.25, "588000": 0.25}
+  active_factor_bounds: {market: [-1.0, 0.0]}
+  max_tracking_error: 0.30
+validation:
+  method: walk_forward
+  train_sessions: 126
+  test_sessions: 63
+  embargo_sessions: 5
+  expanding: false
+  direction_policy: fixed
+  selection_metric: sharpe
+  fdr_alpha: 0.05
+diagnostics: {cost_multipliers: [2], signal_delays: [1]}
+variants: []
+source:
+  scope: retrospective-fixed-pool-human-reviewed-official-documents-real-prices
+  limitation: 官方历史文档的字段断言由人工提取，代码核验字段绑定及附件哈希，不认证原文语义。主表仅覆盖至实际核验时点，费用采用显式策略假设；固定池存在选择偏差，缺完整逐日停复牌与盘中状态。信号行情为当前复权版本，风险收益使用原始价及已公告权益；单market因子仅统计代理。历史walk-forward不是未触碰的真实前向收益。

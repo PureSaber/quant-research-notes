@@ -1,0 +1,140 @@
+{
+  "schema_version": "asm.research-preflight/v1",
+  "passed": true,
+  "start": "2025-05-22",
+  "end": "2026-09-24",
+  "sessions": 331,
+  "coverage": [
+    {
+      "symbol": "159915",
+      "missing_sessions": [],
+      "warmup_available": 90,
+      "warmup_required": 60,
+      "missing_warmup_sessions": [],
+      "missing_columns": [],
+      "missing_values": {
+        "close": 0
+      }
+    },
+    {
+      "symbol": "510300",
+      "missing_sessions": [],
+      "warmup_available": 90,
+      "warmup_required": 60,
+      "missing_warmup_sessions": [],
+      "missing_columns": [],
+      "missing_values": {
+        "close": 0
+      }
+    },
+    {
+      "symbol": "510500",
+      "missing_sessions": [],
+      "warmup_available": 90,
+      "warmup_required": 60,
+      "missing_warmup_sessions": [],
+      "missing_columns": [],
+      "missing_values": {
+        "close": 0
+      }
+    },
+    {
+      "symbol": "588000",
+      "missing_sessions": [],
+      "warmup_available": 90,
+      "warmup_required": 60,
+      "missing_warmup_sessions": [],
+      "missing_columns": [],
+      "missing_values": {
+        "close": 0
+      }
+    }
+  ],
+  "issues": [],
+  "history_scope": "unavailable",
+  "market_data_certified": false,
+  "requirements": {
+    "momentum_20d": {
+      "columns": [
+        "close"
+      ],
+      "warmup_bars": 21,
+      "pit_required": false,
+      "dependencies": [
+        "momentum_20d"
+      ],
+      "pit_columns": []
+    },
+    "volatility_20d": {
+      "columns": [
+        "close"
+      ],
+      "warmup_bars": 21,
+      "pit_required": false,
+      "dependencies": [
+        "volatility_20d"
+      ],
+      "pit_columns": []
+    },
+    "trend_filter": {
+      "columns": [
+        "close"
+      ],
+      "warmup_bars": 60,
+      "pit_required": false,
+      "dependencies": []
+    }
+  },
+  "allocation": {
+    "mode": "cost_aware",
+    "lookback": 60,
+    "min_observations": 20,
+    "covariance_shrinkage": 0.2,
+    "risk_aversion": 5.0,
+    "turnover_penalty": 0.001,
+    "max_turnover": 2.0
+  },
+  "execution": null,
+  "instrument_master": [
+    {
+      "symbol": "159915",
+      "required_sessions": 331,
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "uncovered_count": 0,
+      "first_uncovered_session": null,
+      "last_uncovered_session": null
+    },
+    {
+      "symbol": "510300",
+      "required_sessions": 331,
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "uncovered_count": 0,
+      "first_uncovered_session": null,
+      "last_uncovered_session": null
+    },
+    {
+      "symbol": "510500",
+      "required_sessions": 331,
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "uncovered_count": 0,
+      "first_uncovered_session": null,
+      "last_uncovered_session": null
+    },
+    {
+      "symbol": "588000",
+      "required_sessions": 331,
+      "available_at": "2023-02-18T00:00:00+00:00",
+      "effective_from": "2023-04-10T00:00:00+00:00",
+      "effective_to": "2026-09-26T08:50:36.044423400+00:00",
+      "uncovered_count": 0,
+      "first_uncovered_session": null,
+      "last_uncovered_session": null
+    }
+  ]
+}

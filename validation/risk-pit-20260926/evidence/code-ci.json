@@ -1,0 +1,666 @@
+{
+  "captured_at": "2026-09-26T09:57:51.071258+00:00",
+  "scope": "ten frozen application source PRs; docs/profile commits are verified separately after publication",
+  "records": [
+    {
+      "repository": "quant-data-kit",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "b5621379e1a15562371be31c03f354a6acf512e4",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:09:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/36231780343/job/108377000508",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:06:42Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:07:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/36231780349/job/108376173351",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:06:42Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:15:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/36231780343/job/108377000026",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:12:47Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:09:42Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/36231780343/job/108377000840",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:06:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:07:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/runs/108376262957",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:07:20Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-data-kit/pull/21"
+    },
+    {
+      "repository": "quant-lab",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:29:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/36229919674/job/108371010478",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T08:29:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:30:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/36229919692/job/108371010825",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T08:29:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:29:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/36229919674/job/108371010658",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T08:29:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:29:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/36229919674/job/108371010755",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T08:29:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:30:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/runs/108371108530",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T08:30:02Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-lab/pull/11"
+    },
+    {
+      "repository": "quant-factors",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:46Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/36231836644/job/108376328358",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:07:51Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/36231836591/job/108376328259",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:07:51Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:37Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/36231836644/job/108376328299",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:07:51Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:37Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/36231836644/job/108376328437",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:07:51Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/runs/108376431440",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:08:35Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-factors/pull/11"
+    },
+    {
+      "repository": "quant-execution",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "99ab9b1445d72164fa4e8c6d1ebde859b80dba1f",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:34Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231837074/job/108376329993",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:07:52Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231837073/job/108376329728",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:07:52Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231834516/job/108376322874",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:07:49Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231837073/job/108376329579",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:07:52Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231834516/job/108376322786",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:07:48Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231837073/job/108376329751",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:07:52Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:25Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/36231834516/job/108376322880",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:07:48Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:08:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/runs/108376409708",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:08:26Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-execution/pull/16"
+    },
+    {
+      "repository": "quant-portfolio",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "3d0f8585ce62140967cfbeb4d6ed2c8d37feb325",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/36232107729/job/108377071545",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:13:17Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/36232107726/job/108377071776",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:13:17Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/36232107729/job/108377071646",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:13:17Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/36232107729/job/108377071676",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:13:17Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:13:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/runs/108377161352",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:13:54Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-portfolio/pull/12"
+    },
+    {
+      "repository": "quant-risk-monitor",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "a5c5a8ee5486c42f07e1539ad92cf1fb57c1e638",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:20:50Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/36232460930/job/108378054757",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:20:15Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:21:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/36232460934/job/108378054650",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:20:15Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:20:41Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/36232460930/job/108378054546",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:20:14Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:20:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/36232460930/job/108378054685",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:20:15Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:20:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/runs/108378148036",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:20:50Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-risk-monitor/pull/12"
+    },
+    {
+      "repository": "quant-agent",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "7c6138d5e9134961abc158fb07e6e872edc49e95",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/36232111589/job/108377082566",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:13:22Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/36232111585/job/108377082557",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:13:21Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/36232111585/job/108377082452",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:13:21Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/36232111585/job/108377082509",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:13:22Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:14:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/runs/108377193219",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:14:07Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-agent/pull/11"
+    },
+    {
+      "repository": "quant-report-hub",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "314174c86e5680e9a4129af3e1a1b8cc1ae581d3",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:45:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/36230665501/job/108373095009",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T08:44:07Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:44:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/36230665497/job/108373094872",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T08:44:07Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:45:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/36230665501/job/108373094759",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T08:44:08Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:45:22Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/36230665501/job/108373094879",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T08:44:07Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T08:44:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/runs/108373169854",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T08:44:38Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-report-hub/pull/18"
+    },
+    {
+      "repository": "a-share-multifactor",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "90eb322d5a99bf226e7c318e7a741a3bd302fbda",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914185",
+          "name": "test (ubuntu-latest, 3.10)",
+          "startedAt": "2026-09-26T09:47:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:48:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847553/job/108381914160",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:47:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:51:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914206",
+          "name": "test (ubuntu-latest, 3.11)",
+          "startedAt": "2026-09-26T09:47:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:51:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914218",
+          "name": "test (ubuntu-latest, 3.12)",
+          "startedAt": "2026-09-26T09:47:44Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:54:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914128",
+          "name": "test (windows-latest, 3.10)",
+          "startedAt": "2026-09-26T09:47:46Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:50:34Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914276",
+          "name": "test (windows-latest, 3.11)",
+          "startedAt": "2026-09-26T09:47:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:52:42Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/36233847551/job/108381914287",
+          "name": "test (windows-latest, 3.12)",
+          "startedAt": "2026-09-26T09:47:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:48:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/runs/108382003929",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:48:21Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/a-share-multifactor/pull/16"
+    },
+    {
+      "repository": "quant-pipeline",
+      "headRefName": "codex/risk-pit-workflow",
+      "headRefOid": "d6cfec637c9cb1684bb0ffc0aa45a260afe26f02",
+      "mergeable": "MERGEABLE",
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/36233877454/job/108381997084",
+          "name": "codeql (python)",
+          "startedAt": "2026-09-26T09:48:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/36233877426/job/108381997000",
+          "name": "test (3.10)",
+          "startedAt": "2026-09-26T09:48:20Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/36233877426/job/108381996949",
+          "name": "test (3.11)",
+          "startedAt": "2026-09-26T09:48:20Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:56Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/36233877426/job/108381996978",
+          "name": "test (3.12)",
+          "startedAt": "2026-09-26T09:48:20Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-09-26T09:49:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/runs/108382113673",
+          "name": "CodeQL",
+          "startedAt": "2026-09-26T09:49:06Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-pipeline/pull/14"
+    }
+  ]
+}

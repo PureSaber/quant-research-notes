@@ -1,0 +1,62 @@
+{
+  "schema_version": "quant.research-paper/v1",
+  "account_id": "etf-risk-forward-20260928-r3",
+  "definition_sha256": "5761b58a3ccc78cbf93fd23d7a3d568f910498d1980aa5ca54a47d8d6b0b82b4",
+  "created_at": "2026-09-26T17:50:49.142302+08:00",
+  "account_json_sha256": "542070234b82249437dc7a358d27bb0a29a7c135a12104204be56b237648223d",
+  "holdout_start": "2026-09-28",
+  "holdout_end": "2026-12-31",
+  "initial_input_cutoff": "2026-09-24",
+  "code_identity": {
+    "a_share_multifactor": "90eb322d5a99bf226e7c318e7a741a3bd302fbda",
+    "quant-data-kit": "b5621379e1a15562371be31c03f354a6acf512e4",
+    "quant-execution": "99ab9b1445d72164fa4e8c6d1ebde859b80dba1f",
+    "quant-factors": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+    "quant-lab": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+    "quant-portfolio": "3d0f8585ce62140967cfbeb4d6ed2c8d37feb325",
+    "quant-risk-monitor": "a5c5a8ee5486c42f07e1539ad92cf1fb57c1e638",
+    "quant_data_kit": "b5621379e1a15562371be31c03f354a6acf512e4",
+    "quant_factors": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+    "quant_lab": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+    "quant_pipeline": "d6cfec637c9cb1684bb0ffc0aa45a260afe26f02"
+  },
+  "source_study_sha256": "c08d6657d56bdbeaff7f7bc0d14213a172a8032e4e22b8b3a9800ddb9a5cd648",
+  "candidate": {
+    "allocation": {
+      "lookback": 60,
+      "max_turnover": 2.0,
+      "min_observations": 20,
+      "mode": "cost_aware",
+      "risk_aversion": 5.0,
+      "turnover_penalty": 0.001
+    },
+    "backend_parameters": {},
+    "candidate_id": "d2bfdff8e37b3ed69eb6",
+    "cost_multiplier": 1,
+    "factors": {
+      "momentum_20d": 1,
+      "volatility_20d": -1
+    },
+    "name": "base",
+    "signal_delay": 0,
+    "strategy": {
+      "cash_buffer": 0.2,
+      "family": "etf_trend",
+      "frequency": "weekly",
+      "max_weight": 0.4,
+      "top_n": 2,
+      "trend_window": 60
+    }
+  },
+  "observations_at_registration": 0,
+  "source_metrics": {
+    "cost_total": 3657.77302,
+    "fills": 66,
+    "max_drawdown": -0.14681023764859824,
+    "sessions": 189,
+    "sharpe": -0.18727438159429013,
+    "total_return": -0.031908805596341905
+  },
+  "supersedes": "etf-risk-forward-20260928",
+  "full_account_storage": "local immutable account.json and account.db; source excerpts not republished"
+}

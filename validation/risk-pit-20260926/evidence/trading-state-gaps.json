@@ -1,0 +1,47 @@
+{
+  "schema_version": "qdk.historical-status-gap-report/v1",
+  "captured_at": "2026-09-26T08:06:02.405711Z",
+  "window": {
+    "start": "2025-01-02",
+    "end": "2026-09-24"
+  },
+  "interpretation": "当前时点执行的回溯查询仅能作为负向核验，不得展开为逐日tradable=true，也不得由成交量推断全天可交易。",
+  "sse_retrospective_queries": [
+    {
+      "symbol": "510300",
+      "source_uri": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?isPagination=true&sqlId=SSE_PL_JYTS_TFPXX_JJ&secCode=510300&stopReason=&order=startStopDate%7Cdesc%2CsecCode%7Casc&startDate=20250102&endDate=20260924&pageHelp.pageSize=1000&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.cacheSize=1&pageHelp.endPage=1",
+      "file": "source/documents/sse-suspension-query-510300.json",
+      "sha256": "143d5b1608525bd505c019ecae2963c2f0e5d66210cbfb598e6043d4a92ed1fc",
+      "result_count": 0,
+      "scope": "retrospective-negative-query-not-daily-tradability"
+    },
+    {
+      "symbol": "510500",
+      "source_uri": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?isPagination=true&sqlId=SSE_PL_JYTS_TFPXX_JJ&secCode=510500&stopReason=&order=startStopDate%7Cdesc%2CsecCode%7Casc&startDate=20250102&endDate=20260924&pageHelp.pageSize=1000&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.cacheSize=1&pageHelp.endPage=1",
+      "file": "source/documents/sse-suspension-query-510500.json",
+      "sha256": "143d5b1608525bd505c019ecae2963c2f0e5d66210cbfb598e6043d4a92ed1fc",
+      "result_count": 0,
+      "scope": "retrospective-negative-query-not-daily-tradability"
+    },
+    {
+      "symbol": "588000",
+      "source_uri": "https://query.sse.com.cn/sseQuery/commonSoaQuery.do?isPagination=true&sqlId=SSE_PL_JYTS_TFPXX_JJ&secCode=588000&stopReason=&order=startStopDate%7Cdesc%2CsecCode%7Casc&startDate=20250102&endDate=20260924&pageHelp.pageSize=1000&pageHelp.pageNo=1&pageHelp.beginPage=1&pageHelp.cacheSize=1&pageHelp.endPage=1",
+      "file": "source/documents/sse-suspension-query-588000.json",
+      "sha256": "143d5b1608525bd505c019ecae2963c2f0e5d66210cbfb598e6043d4a92ed1fc",
+      "result_count": 0,
+      "scope": "retrospective-negative-query-not-daily-tradability"
+    }
+  ],
+  "szse": {
+    "symbol": "159915",
+    "complete_daily_official_status_source": "not-established",
+    "scope": "unavailable-no-positive-state-inference"
+  },
+  "unavailable": [
+    "逐日全时段停复牌状态",
+    "盘中临时停牌事件流",
+    "逐日涨跌停触发与封单状态",
+    "历史动态可投资ETF全集与历史成分",
+    "基于订单时点的可成交状态"
+  ]
+}
