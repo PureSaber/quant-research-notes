@@ -1,5 +1,7 @@
 # Quant Research Notes
 
+新增：[11–20 研究可信度使用指南](research-integrity-11-20.md) 与 [事前投资目标示例](examples/investment-objective.json)。
+
 Knowledge base and roadmap for the PureSaber quant research monorepo (local workspace).
 
 ## Contents
@@ -15,6 +17,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 | [validation/m7/](validation/m7/) | M7状态、验收规范、历史FAIL、修复PASS和PR合并就绪审计 |
 | [validation/m8/](validation/m8/) | M8全栈软件发布、14仓不可变清单、tag、CI和独立验证证据 |
 | [validation/risk-pit-20260926/](validation/risk-pit-20260926/) | 联合约束、真实PIT证据、风险模型与前向观察 |
+| [validation/governance/](validation/governance/) | P0-P2治理结项、独立只读验收与公开证据清单 |
 | [P0_GITHUB_GOVERNANCE_CONTROLS.md](P0_GITHUB_GOVERNANCE_CONTROLS.md) | 14仓分支/tag平台保护与break-glass审计控制 |
 | [P2_GITHUB_METADATA_AND_LIFECYCLE.md](P2_GITHUB_METADATA_AND_LIFECYCLE.md) | 18仓GitHub元数据与deprecated shim归档证据 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
@@ -25,6 +28,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 currency-converter        → Python CLI warmup
 sklearn-stock-trend       → supervised learning + walk-forward
 a-share-multifactor       → factor IC + quantile + retail backtest
+quant-hk-equity           → 港股日频探索性价格收益研究；真实数据与现金账本，未获可投资认证
 quant-data-kit            → shared AKShare + Parquet + validation
 quant-execution           → deterministic execution and exact ledger
 quant-lab                 → cross-project experiment index
@@ -34,6 +38,8 @@ quant-futures-spread      → fixture-certified futures spread backtest
 quant-infra-workspace     → private cross-repository health and governance tooling
 spread-backtest-viz       → deprecated compatibility shim; archived read-only
 ```
+
+港股首版说明与复现证据见[quant-hk-equity研究记录](https://github.com/PureSaber/quant-hk-equity/blob/main/docs/RESEARCH.md)。当前仅覆盖固定观察名单，不包含完整公司行动与历史PIT证券主表；该仓采用standard/v1研究产物，不属于已有standard/v2认证范围。
 
 ## Local workspace
 
