@@ -60,3 +60,12 @@ Cross-asset and multi-frequency data/time semantics, the versioned`standard/v2`l
 strict validation and v1/v2 coexistence rules are frozen in
 [cross-asset-multifrequency-v2-rfc.md](cross-asset-multifrequency-v2-rfc.md). Standard v1
 remains immutable and supported.
+
+## Factor compute pipeline (Phase 2)
+
+Post-factor migration flow (`quant-pipeline/configs/pipelines/factor_compute_postrun.yaml`):
+
+1. `qdk-catalog list` — verify `quant-factors` stack dependency
+2. `quant-factors list` / `compute` — shared factor columns
+3. `quant-lab scan` — index runs with `factor_manifest.json` (`factor_set_hash`, `git_sha`)
+4. `a-share-multifactor` IC smoke: `python -m a_share_multifactor.ic_smoke --config configs/ic_smoke.yaml`
