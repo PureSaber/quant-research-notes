@@ -2,7 +2,7 @@
 
 新增：[11–20 研究可信度使用指南](research-integrity-11-20.md) 与 [事前投资目标示例](examples/investment-objective.json)。
 
-Knowledge base and roadmap for the PureSaber quant research monorepo (local workspace).
+Knowledge base and roadmap for the PureSaber quant research multi-repository workspace.
 
 ## Contents
 
@@ -10,6 +10,7 @@ Knowledge base and roadmap for the PureSaber quant research monorepo (local work
 |-----|-------------|
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |
+| [WORKSPACE_GUIDE.md](WORKSPACE_GUIDE.md) | 日常源码同步、固定提交集成与冻结研究环境的维护边界 |
 | [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
 | [research-integrity-v1.md](research-integrity-v1.md) | PIT data, validation, run contract, risk and attribution standard |
@@ -29,6 +30,11 @@ currency-converter        → Python CLI warmup
 sklearn-stock-trend       → supervised learning + walk-forward
 a-share-multifactor       → factor IC + quantile + retail backtest
 quant-hk-equity           → 港股日频探索性价格收益研究；真实数据与现金账本，未获可投资认证
+quant-us-equity           → 美股研究扩展（private），不属于既有M8认证范围
+quant-fund                → 基金研究、场外申赎与FOF监控；合成基金验收
+quant-stat-arb            → 统计套利研究扩展（private），不属于既有M8认证范围
+quant-timing              → 指数仓位与风格择时；因果回放及样本外门禁
+quant-studio              → 本机研究模板页面；预览配置并显式执行上游CLI
 quant-data-kit            → shared AKShare + Parquet + validation
 quant-execution           → deterministic execution and exact ledger
 quant-lab                 → cross-project experiment index
