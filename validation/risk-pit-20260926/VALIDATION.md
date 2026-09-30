@@ -38,6 +38,8 @@
 
 前向账户固定base、2026-09-28至2026-12-31，在起点之前注册。只有真实日期推进并取得合格新快照后才能增加观察；登记当天观察数0。操作和不可绕过的阻断见[FORWARD_RUNBOOK.md](FORWARD_RUNBOOK.md)。
 
+2026-09-30首次更新取得完整三交易日数据，但公司行动`captured_at`刷新导致冻结历史前缀不一致，已在观察前停止，观察数仍为0。经济字段没有变化；采集元数据与前缀契约的问题尚未修复，不能把历史软件验收扩展为前向链路已通过。详见[阻断与精确哈希](evidence/forward/20260930T141242Z/README.md)。
+
 ## 本地与远端
 
 集成根目录为`H:/Documents/ChatGPT/temp/quant-risk-pit-20260926`，工作树与锁定的GitHub功能分支提交一致。精确应用SHA见Workspace的`profiles/research-workbench/stack.json`以及真实study中记录的code_identity；不能用包版本号代替提交身份。

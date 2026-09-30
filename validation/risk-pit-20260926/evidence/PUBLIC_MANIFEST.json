@@ -150,6 +150,18 @@
     "trading-state-gaps.json": {
       "sha256": "7a0b385045052bd22a17cb911d7751ca8eb15bfc1a89723bb9b1c597497dcd72",
       "bytes": 2613
+    },
+    "forward/20260930T141242Z/preflight-blocker.json": {
+      "sha256": "0d15afc4304337e85e4724f45a861e6364a664b79ce7f915f85265815b7c0e61",
+      "bytes": 11780
+    },
+    "forward/20260930T141242Z/README.md": {
+      "sha256": "43524aa21232b7de6028dce103a70b033edb2db4ce65002df6a63ed7a7067084",
+      "bytes": 4602
+    },
+    "forward/20260930T141242Z/source-refresh-index.json": {
+      "sha256": "86ea4fcab156f62356caf9784873b5154bc0bd6f91c6520fa2f50c234649007a",
+      "bytes": 12436
     }
   }
 }

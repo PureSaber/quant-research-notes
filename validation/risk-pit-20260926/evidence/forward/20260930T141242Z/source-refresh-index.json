@@ -1,0 +1,235 @@
+{
+  "schema_version": "quant.forward-source-refresh-index/v1",
+  "requested_as_of": "2026-09-30",
+  "reviewed_at": "2026-09-30T14:14:38.329559+00:00",
+  "documents": [
+    {
+      "document_id": "listing-159915",
+      "url": "https://www.szse.cn/disclosure/notice/fund/t20111207_516231.html",
+      "started_at": "2026-09-30T14:12:42.384107+00:00",
+      "expected_sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be",
+      "status_code": 200,
+      "final_url": "https://www.szse.cn/disclosure/notice/fund/t20111207_516231.html",
+      "content_type": "text/html",
+      "finished_at": "2026-09-30T14:12:42.882553+00:00",
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be",
+      "bytes": 17071,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/listing-159915.html"
+    },
+    {
+      "document_id": "listing-510300",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-08-28/510300_20200829_6.pdf",
+      "started_at": "2026-09-30T14:12:42.384107+00:00",
+      "expected_sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9",
+      "status_code": 200,
+      "final_url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-08-28/510300_20200829_6.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.045154+00:00",
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9",
+      "bytes": 1388258,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/listing-510300.pdf"
+    },
+    {
+      "document_id": "listing-510500",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2021-03-04/510500_20210305_1.pdf",
+      "started_at": "2026-09-30T14:12:42.384107+00:00",
+      "expected_sha256": "0447a88ee03e64e81f2599271be63472bdaa699b5db00ee1f666a1491095aade",
+      "status_code": 200,
+      "final_url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2021-03-04/510500_20210305_1.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.105723+00:00",
+      "sha256": "0447a88ee03e64e81f2599271be63472bdaa699b5db00ee1f666a1491095aade",
+      "bytes": 1414854,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/listing-510500.pdf"
+    },
+    {
+      "document_id": "listing-588000",
+      "url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-11-11/588000_20201111_2.pdf",
+      "started_at": "2026-09-30T14:12:42.384107+00:00",
+      "expected_sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3",
+      "status_code": 200,
+      "final_url": "https://www.sse.com.cn/disclosure/fund/announcement/c/2020-11-11/588000_20201111_2.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.001270+00:00",
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3",
+      "bytes": 430850,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/listing-588000.pdf"
+    },
+    {
+      "document_id": "sse-rule-2023",
+      "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx",
+      "started_at": "2026-09-30T14:12:42.885062+00:00",
+      "expected_sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+      "status_code": 200,
+      "final_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/repeal/rules/c/10824490/files/dcbe58edb194451d93f19b1f7dd8fb4c.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "finished_at": "2026-09-30T14:12:43.304621+00:00",
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40",
+      "bytes": 51948,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/sse-trading-rule-2023.docx"
+    },
+    {
+      "document_id": "sse-rule-2026",
+      "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/10816482/files/959da0158c65434daa8a43a6e32be7ba.docx",
+      "started_at": "2026-09-30T14:12:43.003272+00:00",
+      "expected_sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888",
+      "status_code": 200,
+      "final_url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/10816482/files/959da0158c65434daa8a43a6e32be7ba.docx",
+      "content_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "finished_at": "2026-09-30T14:12:43.382762+00:00",
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888",
+      "bytes": 65302,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/sse-trading-rule-2026.docx"
+    },
+    {
+      "document_id": "szse-rule-2023",
+      "url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf",
+      "started_at": "2026-09-30T14:12:43.048153+00:00",
+      "expected_sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+      "status_code": 200,
+      "final_url": "https://docs.static.szse.cn/www/lawrules/rule/repeal/rules/W020230217564423808793.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.523298+00:00",
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222",
+      "bytes": 620843,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-trading-rule-2023.pdf"
+    },
+    {
+      "document_id": "szse-rule-2026",
+      "url": "https://docs.static.szse.cn/www/lawrules/rule/trade/W020260424690713155663.pdf",
+      "started_at": "2026-09-30T14:12:43.108958+00:00",
+      "expected_sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586",
+      "status_code": 200,
+      "final_url": "https://docs.static.szse.cn/www/lawrules/rule/trade/W020260424690713155663.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.482435+00:00",
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586",
+      "bytes": 282084,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-trading-rule-2026.pdf"
+    },
+    {
+      "document_id": "sse-limit-star-fund-2020",
+      "url": "https://etf.sse.com.cn/ruleguide/business/c/5287913.shtml",
+      "started_at": "2026-09-30T14:12:43.306269+00:00",
+      "expected_sha256": "44900adc87d0240d31b4d2312371c150ff34db090ec7e55d98f614238cc5281b",
+      "status_code": 200,
+      "final_url": "https://etf.sse.com.cn/ruleguide/business/c/5287913.shtml",
+      "content_type": "text/html",
+      "finished_at": "2026-09-30T14:12:43.663465+00:00",
+      "sha256": "44900adc87d0240d31b4d2312371c150ff34db090ec7e55d98f614238cc5281b",
+      "bytes": 16831,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/sse-star-fund-limit-2020.html"
+    },
+    {
+      "document_id": "szse-limit-159915-2020",
+      "url": "https://docs.static.szse.cn/www/aboutus/trends/conference/W020200821767425488573.pdf",
+      "started_at": "2026-09-30T14:12:43.385273+00:00",
+      "expected_sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095",
+      "status_code": 200,
+      "final_url": "https://docs.static.szse.cn/www/aboutus/trends/conference/W020200821767425488573.pdf",
+      "content_type": "application/pdf",
+      "finished_at": "2026-09-30T14:12:43.688612+00:00",
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095",
+      "bytes": 95999,
+      "identical_to_frozen": true,
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-20pct-fund-list-2020.pdf"
+    }
+  ],
+  "current_rules_and_calendar_pages": [
+    {
+      "name": "sse-current-rule",
+      "url": "https://www.sse.com.cn/lawandrules/sselawsrules2025/stocks/exchange/c/c_20260424_10816482.shtml",
+      "http_status": 200,
+      "sha256": "428032a0963a9bb110f9d9992fd24a8d3c880f7b34fafb86b94fc55d3291dd81",
+      "started_at": "2026-09-30T14:13:41.416400+00:00",
+      "finished_at": "2026-09-30T14:13:41.815347+00:00",
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/sse-current-rule.html"
+    },
+    {
+      "name": "szse-current-rule",
+      "url": "https://investor.szse.cn/lawrules/rule/trade/t20260424_620190.html",
+      "http_status": 200,
+      "sha256": "0dcb0971ac96123f369178ce8f5397d948190d41281175694664de1d1dd4dce5",
+      "started_at": "2026-09-30T14:13:41.416400+00:00",
+      "finished_at": "2026-09-30T14:13:41.944139+00:00",
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-current-rule.html"
+    },
+    {
+      "name": "sse-holiday",
+      "url": "https://www.sse.com.cn/disclosure/announcement/general/c/c_20260915_10832273.shtml",
+      "http_status": 200,
+      "sha256": "779cbf7cc7ab2c4b34db17ceee29e266bc483e075860d8313b85c1d5d0f307bc",
+      "started_at": "2026-09-30T14:13:41.416400+00:00",
+      "finished_at": "2026-09-30T14:13:41.803345+00:00",
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/sse-holiday.html"
+    },
+    {
+      "name": "szse-holiday",
+      "url": "https://investor.szse.cn/disclosure/notice/general/t20260917_622911.html",
+      "http_status": 200,
+      "sha256": "7b0c4264d27f4ba14a1904ab31cb3b2b870e4e68d6b8d8c0f6cf4254c1a045a4",
+      "started_at": "2026-09-30T14:13:41.416400+00:00",
+      "finished_at": "2026-09-30T14:13:41.882809+00:00",
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-holiday.html"
+    },
+    {
+      "name": "szse-rule-index",
+      "url": "https://www.szse.cn/www/lawrules/index/",
+      "http_status": 200,
+      "sha256": "72e541f85365f274db4e7672858b9849aa1dab40301263f0da3082d65b86a750",
+      "started_at": "2026-09-30T14:13:41.803345+00:00",
+      "finished_at": "2026-09-30T14:13:42.322007+00:00",
+      "local_file": "artifacts/forward/20260930T141242Z/source-refresh/szse-rule-index.html"
+    }
+  ],
+  "master_refresh": {
+    "reviewed_at": "2026-09-30T14:14:38.329559+00:00",
+    "source_declaration_sha256": "9cd5d7966e647dc4244f3ee2c79e48473fe0dd41b93f1044b5a80279e1e112c9",
+    "master_bundle_sha256": "fce4d7d166346dcb3c371be57470e8cc1bec73a3cd0b7982c94a5df5fed11872",
+    "old_master_bundle_sha256": "9d90dc22eb16ddf8566e2c82342608605cafa42e20f286093b5daca569487f0d",
+    "initial_cutoff": "2026-09-24T07:00:00+00:00",
+    "initial_master_prefix_unchanged": true,
+    "changed_fields": [
+      "capture and observed-through-current effective_to",
+      "catalog_source_version"
+    ],
+    "observations_before": 0,
+    "review_basis": "10 official source files fetched again byte-identically; current 2026 exchange-rule publication pages and official holiday notices freshly retrieved. No daily/intraday tradability inference."
+  },
+  "local_receipts": {
+    "source-refresh.json": {
+      "sha256": "4e7af3ccfbe9dc289783f318f824b33237e65a1f073073d0715332a2e2826995",
+      "bytes": 8805
+    },
+    "current-rules-calendar.json": {
+      "sha256": "f06066b0648aeaa1acbda90899629af1d064095315b42706b6e339b858e49d3a",
+      "bytes": 5066
+    },
+    "master-refresh-check.json": {
+      "sha256": "a3ff4f206b790d91c1dcd55e1464b1ddc5f0974325337ad8810134a2e15f506b",
+      "bytes": 806
+    },
+    "bind-master.log": {
+      "sha256": "66b881691150b187b99e3740fa42f48220406bceea5f15689bde1bdc5f9965c5",
+      "bytes": 4988
+    },
+    "dataset-update.log": {
+      "sha256": "9551ab6d3072788761b8af01380c2ff9dba9eeb37390381a46fd0379460c58b5",
+      "bytes": 5031
+    },
+    "observation-inputs.yaml": {
+      "sha256": "5fa543fe878b60d2126cb73d4b65ad441ae2bff490de300e7bdb46bfb0fae075",
+      "bytes": 2864
+    }
+  },
+  "publication_scope": "URLs, true retrieval timestamps, status codes and hashes only. Complete attachments and raw market data remain local."
+}

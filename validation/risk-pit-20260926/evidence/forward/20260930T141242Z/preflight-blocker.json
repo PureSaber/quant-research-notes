@@ -1,0 +1,307 @@
+{
+  "schema_version": "quant.forward-preflight-blocker/v1",
+  "recorded_at": "2026-09-30T14:21:28.144478+00:00",
+  "account_id": "etf-risk-forward-20260928-r3",
+  "definition_sha256": "5761b58a3ccc78cbf93fd23d7a3d568f910498d1980aa5ca54a47d8d6b0b82b4",
+  "requested_as_of": "2026-09-30",
+  "status": "blocked-before-observe",
+  "blocker_code": "HISTORICAL_ACTION_CAPTURE_TIMESTAMP_CHANGED",
+  "blocking_stage": "FORWARD_RUNBOOK step 7: strict initial input prefix",
+  "observation_invoked": false,
+  "observations_before": 0,
+  "observations_after": 0,
+  "registry_history": [],
+  "forward_returns_generated": false,
+  "existing_returns_rewritten": false,
+  "account_json_sha256": "542070234b82249437dc7a358d27bb0a29a7c135a12104204be56b237648223d",
+  "account_db_sha256": "e3e031ffb2adfa68d1de65ce24f617e73580b67eff49ce82aecb94c9f428c3f4",
+  "frozen_code_identity_matches": true,
+  "repository_checks": {
+    "quant-data-kit": {
+      "head": "b5621379e1a15562371be31c03f354a6acf512e4",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-lab": {
+      "head": "6ad789442a5ff7b5e3f68d241ecf0ee327f7e82f",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-factors": {
+      "head": "482e184b4b9b66b47c7528b6cc01cf3077ce78d3",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-execution": {
+      "head": "99ab9b1445d72164fa4e8c6d1ebde859b80dba1f",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-risk-monitor": {
+      "head": "a5c5a8ee5486c42f07e1539ad92cf1fb57c1e638",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "a-share-multifactor": {
+      "head": "90eb322d5a99bf226e7c318e7a741a3bd302fbda",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-report-hub": {
+      "head": "314174c86e5680e9a4129af3e1a1b8cc1ae581d3",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-agent": {
+      "head": "7c6138d5e9134961abc158fb07e6e872edc49e95",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-pipeline": {
+      "head": "d6cfec637c9cb1684bb0ffc0aa45a260afe26f02",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-research-notes": {
+      "head": "4a38fdf81c26852f1372738cb14a483a23940ae2",
+      "clean": true,
+      "matches_pre_run_stack": false
+    },
+    "quant-futures-spread": {
+      "head": "e6d15ff4a9cf930ef4f6cbe251ee48c876a4b117",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-crypto-basis": {
+      "head": "224b9cde547b7e80b2f25bd941211422bcaa3d2b",
+      "clean": true,
+      "matches_pre_run_stack": true
+    },
+    "quant-portfolio": {
+      "head": "3d0f8585ce62140967cfbeb4d6ed2c8d37feb325",
+      "clean": true,
+      "matches_pre_run_stack": true
+    }
+  },
+  "notes_remote_sync": {
+    "previous_local_head": "e1ff42a5aa2dfd58190cc821175f6ba1334ff3eb",
+    "fast_forwarded_to": "4a38fdf81c26852f1372738cb14a483a23940ae2",
+    "risk_pit_files_changed_by_sync": false,
+    "workspace_reference_update_pending_publication": true
+  },
+  "initial_cutoff": "2026-09-24",
+  "lineage_matches": true,
+  "prefix_comparisons": {
+    "actions": {
+      "unchanged": false,
+      "old_hash": "629513d7914e3536592e2a094257fbf7ccff74c2d31cf380d011f4574172f149",
+      "new_hash": "592edc8b534633a0fcf92194093b3f93b9c9f968899757b38a5e70e97b2fc497"
+    },
+    "adjusted": {
+      "unchanged": true,
+      "old_hash": "623845cc3252122453bafb208a28a64c2a3689436bfb8aef4c8112f39020c740",
+      "new_hash": "623845cc3252122453bafb208a28a64c2a3689436bfb8aef4c8112f39020c740"
+    },
+    "benchmark": {
+      "unchanged": true,
+      "old_hash": "99572bd7da3e57a86ffcf4852fea7d3ba52669b207337441a863b6f047647c56",
+      "new_hash": "99572bd7da3e57a86ffcf4852fea7d3ba52669b207337441a863b6f047647c56"
+    },
+    "calendar": {
+      "unchanged": true,
+      "old_hash": "7ed1dc66fd91be341eccd511b1b186f6a97846f882a22cc049c5035d1fd66cec",
+      "new_hash": "7ed1dc66fd91be341eccd511b1b186f6a97846f882a22cc049c5035d1fd66cec"
+    },
+    "catalog": {
+      "unchanged": true,
+      "old_hash": "76643571847b0d73a64ed0fee65bbfd43561747e40eb7b1da1631d639c262889",
+      "new_hash": "76643571847b0d73a64ed0fee65bbfd43561747e40eb7b1da1631d639c262889"
+    },
+    "raw": {
+      "unchanged": true,
+      "old_hash": "f9d2360d814d53c6939b981eb9678241dc550879199c564f6cda16e64941191f",
+      "new_hash": "f9d2360d814d53c6939b981eb9678241dc550879199c564f6cda16e64941191f"
+    }
+  },
+  "latest_observation_prefix_check": "not-applicable-zero-observations",
+  "new_session_coverage": {
+    "dates": [
+      "2026-09-28",
+      "2026-09-29",
+      "2026-09-30"
+    ],
+    "symbols": [
+      "159915",
+      "510300",
+      "510500",
+      "588000"
+    ],
+    "raw_rows": 12,
+    "adjusted_rows": 12,
+    "benchmark_rows": 3,
+    "complete": true,
+    "next_session": "2026-10-08"
+  },
+  "action_change": {
+    "rows": 5,
+    "only_changed_columns": [
+      "captured_at"
+    ],
+    "old_captured_at": [
+      "2026-09-26T08:11:08.152424+00:00"
+    ],
+    "new_captured_at": [
+      "2026-09-30T14:14:44.562589+00:00"
+    ],
+    "event_ids_unchanged": true,
+    "all_other_fields_and_dtypes_unchanged": true,
+    "economic_revision_detected": false,
+    "source_record_unchanged": true,
+    "diagnostic_does_not_waive_strict_prefix_check": true
+  },
+  "snapshot": {
+    "initial_snapshot_id": "sha256-78142a01721f7cdc523fc2e728f730a185409cf0e3fdedc1ea6d424e945fa315",
+    "new_snapshot_id": "sha256-205341c5eebadcef6badc310d24d9725bd0124e3301eccaed8834101f338340d",
+    "parent_snapshot_id": "sha256-9b506c0c6b12ba402b2afa85815c1ce18ae07b1b64dbb41287d985c9d16b10fd",
+    "manifest_sha256": "39026b638a03f97cd4596d029eab7bdb0f5bcb748f79b9ef41db55931c69a21b",
+    "captured_at": "2026-09-30T14:14:44.562589+00:00",
+    "source": {
+      "endpoints": {
+        "announcements": "akshare.fund_announcement_dividend_em",
+        "benchmark": "akshare.stock_zh_index_daily:sh000300",
+        "calendar": "akshare.tool_trade_date_hist_sina",
+        "dividends": "akshare.fund_open_fund_info_em:分红送配详情",
+        "prices": "akshare.fund_etf_hist_sina+akshare.fund_etf_dividend_sina"
+      },
+      "mode": "live_public_api",
+      "provider": "akshare_sina_etf",
+      "provider_package": "akshare",
+      "provider_package_version": "1.18.88.post1",
+      "quant_data_kit_version": "0.8.1",
+      "request": {
+        "adjusted_start": "2025-01-02",
+        "dataset_start": "2025-01-02",
+        "end": "2026-09-30",
+        "price_start": "2026-09-18",
+        "symbols": [
+          "510300",
+          "510500",
+          "159915",
+          "588000"
+        ]
+      }
+    },
+    "validation_passed": true,
+    "update_evidence": {
+      "fetched_from": "2026-09-18",
+      "mode": "overlap_refresh",
+      "overlap_sessions": 5,
+      "previous_end": "2026-09-25",
+      "revised_rows": {
+        "actions": 0,
+        "adjusted": 0,
+        "benchmark": 0,
+        "raw": 0
+      }
+    },
+    "all_declared_file_and_evidence_hashes_verified": true,
+    "files": {
+      "actions": {
+        "file": "actions.parquet",
+        "format": "parquet",
+        "provider": "akshare_eastmoney_fund_f10",
+        "rows": 5,
+        "sha256": "25c657b5dc896e9132ba88278b3c4b2437e63c3c790107673aeb19507f78aaf9"
+      },
+      "adjusted": {
+        "file": "adjusted.parquet",
+        "format": "parquet",
+        "provider": "akshare_sina_etf",
+        "rows": 1696,
+        "sha256": "a0fdbfd52bf72359621c543e8418c17fe738904c76d1bb9b1f11a7829e0fc96f"
+      },
+      "benchmark": {
+        "file": "benchmark.parquet",
+        "format": "parquet",
+        "provider": "akshare_sina",
+        "rows": 424,
+        "sha256": "cbca4b9d60c64eeee53e5796534cac9f1855690b7c59c680ec72bb971a16cd00"
+      },
+      "calendar": {
+        "file": "calendar.parquet",
+        "format": "parquet",
+        "provider": "akshare_sina",
+        "rows": 8797,
+        "sha256": "60d148765f4284f8853c80dc268a4e60800e3b9e30c6a1f2483b46d5fbebd70c"
+      },
+      "catalog": {
+        "file": "catalog.csv",
+        "format": "csv",
+        "provider": "qdk.historical-instrument-master/v2",
+        "rows": 4,
+        "sha256": "a84222874a2b21609bdf62e871eebcc35134ebd8f35a9e18db74381630db11b5"
+      },
+      "history": {
+        "file": "history/history.parquet",
+        "format": "parquet",
+        "provider": "derived_from_actions_captured_view",
+        "rows": 18,
+        "sha256": "3d468043fd7a2ab2eb9e4dd2ae38e9953c033aa5ada8552fc22fa620f0c2c6c9"
+      },
+      "raw": {
+        "file": "raw.parquet",
+        "format": "parquet",
+        "provider": "akshare_sina_etf",
+        "rows": 1696,
+        "sha256": "00ad88bc831c63603c55bcb40ff69871dfe0c9504ca49c1a74670124e80553c7"
+      }
+    }
+  },
+  "master_refresh": {
+    "reviewed_at": "2026-09-30T14:14:38.329559+00:00",
+    "source_declaration_sha256": "9cd5d7966e647dc4244f3ee2c79e48473fe0dd41b93f1044b5a80279e1e112c9",
+    "master_bundle_sha256": "fce4d7d166346dcb3c371be57470e8cc1bec73a3cd0b7982c94a5df5fed11872",
+    "old_master_bundle_sha256": "9d90dc22eb16ddf8566e2c82342608605cafa42e20f286093b5daca569487f0d",
+    "initial_cutoff": "2026-09-24T07:00:00+00:00",
+    "initial_master_prefix_unchanged": true,
+    "changed_fields": [
+      "capture and observed-through-current effective_to",
+      "catalog_source_version"
+    ],
+    "observations_before": 0,
+    "review_basis": "10 official source files fetched again byte-identically; current 2026 exchange-rule publication pages and official holiday notices freshly retrieved. No daily/intraday tradability inference."
+  },
+  "recipe": {
+    "local_file": "artifacts/forward/20260930T141242Z/observation-inputs.yaml",
+    "sha256": "5fa543fe878b60d2126cb73d4b65ad441ae2bff490de300e7bdb46bfb0fae075",
+    "changes": [
+      "inputs.bundle",
+      "inputs.catalog"
+    ],
+    "used_for_observation": false
+  },
+  "root_cause": [
+    {
+      "path": "quant-data-kit/src/quant_data_kit/providers/corporate_actions.py",
+      "line": 247,
+      "finding": "Every freshly normalized historical action receives the real current capture timestamp."
+    },
+    {
+      "path": "quant-data-kit/src/quant_data_kit/research_dataset.py",
+      "line": 1038,
+      "finding": "Live update uses the full refreshed action table; actions revised_rows counts event-ID symmetric difference only."
+    },
+    {
+      "path": "quant-pipeline/src/quant_pipeline/research_paper.py",
+      "line": 259,
+      "finding": "input_prefix hashes all historical action fields, including captured_at; initial strict prefix therefore changes."
+    }
+  ],
+  "resolution_boundary": "Frozen runtime and account retained. Do not reset captures, replace action rows, waive prefix checks, change source, or silently promote a new account. Any implementation/protocol change requires separately reviewed work and explicit registration decision; routine retries do not resolve this deterministic mismatch.",
+  "limitations": [
+    "Fixed four-ETF universe; no complete historical dynamic universe, daily suspension/resumption or intraday tradability.",
+    "Market statistical proxy only; not a complete Barra style model.",
+    "Zero accepted forward observations; no forward performance, fills, fees or risk-check result created this run.",
+    "Only strictly validated source and market-data refresh completed; the new snapshot is not accepted as account observation input."
+  ]
+}
