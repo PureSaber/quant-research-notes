@@ -1,0 +1,105 @@
+{
+  "checked_at": "2026-10-01T03:29:06.4504428+00:00",
+  "scope": "local-software-integration-only",
+  "repositories": {
+    "quant-data-kit": {
+      "commit": "4d5f33fadd18d9c7200cab045b09248bff2360ea",
+      "python_path": "src"
+    },
+    "quant-lab": {
+      "commit": "737360d76c3a5081b302d888ac1a6350b529e524",
+      "python_path": "src"
+    },
+    "quant-factors": {
+      "commit": "938d9fdc5f8b3b41469e4030ef15dd9b94604643",
+      "python_path": "src"
+    },
+    "quant-execution": {
+      "commit": "bb0da30caed20dad42a6d5bdfd217913f61cc44e",
+      "python_path": "src"
+    },
+    "quant-risk-monitor": {
+      "commit": "f8d8b7a7c8fda48a9a5010918b908dbacaa8d809",
+      "python_path": "src"
+    },
+    "a-share-multifactor": {
+      "commit": "d76114bd06d0e7bb12550441da057e7272723d0f",
+      "python_path": "src"
+    },
+    "quant-report-hub": {
+      "commit": "0610249f0a6eb2c3f1b66a92cb550e8b42397013",
+      "python_path": "."
+    },
+    "quant-agent": {
+      "commit": "a97089148454f0d1a1b39bee70a205be628b09e5",
+      "python_path": "src"
+    },
+    "quant-pipeline": {
+      "commit": "83476bcaccb184842f9b760b34e66ffac172aafb",
+      "python_path": "src"
+    },
+    "quant-research-notes": {
+      "commit": "39ae978908097abb6289d580b5456073918fd90f",
+      "python_path": null
+    },
+    "quant-futures-spread": {
+      "commit": "45e7805d22b991b4f7e41650ed7168d513778410",
+      "python_path": null
+    },
+    "quant-crypto-basis": {
+      "commit": "ec5dc531a8f0816785090ede475f56233a52df6b",
+      "python_path": null
+    },
+    "quant-portfolio": {
+      "commit": "b6aea4488cef26355aa68a62acd88ec4811e91b6",
+      "python_path": "src"
+    }
+  },
+  "requirements_sha256": "060196207ab7303d2e4002a5642a81ba23a3249f6efb1590d04e8dd9147fafcc",
+  "independent": {
+    "scope": "synthetic-software-integration-only",
+    "candidates": 4,
+    "failed": 0,
+    "resume_verified": true,
+    "account_policy": "independent",
+    "cache_tamper_rejected": null,
+    "artifact_sha256": {
+      "attempts\\102e3e820b4c44d59ad48e095a168ee7\\result.json": "033e491b79af0cb7edf73b88a06104069160aa6be251274bde6faf95f3cadb10",
+      "attempts\\a9b8e6b6ef9c417eacf7b617e08e6e09\\result.json": "8379841c38df58952aecea13c55525263f15dac5864e8c0266425e9826f03a0c",
+      "attempts\\b73ff0fd9d904563a871ad302fa91f57\\result.json": "d0f8e212a47c2b3ce886bd0b6cf2f020c13b2eee37272eb1ab4553e2eded8b5e",
+      "attempts\\f315a94f637440e68f6dfecc0ce6dc5a\\result.json": "bf4d200851e728000e1e81613e6eaa0c7cf476f38d04bc868babbe57fa5be170"
+    }
+  },
+  "continuous": {
+    "scope": "synthetic-software-integration-only",
+    "candidates": 4,
+    "failed": 0,
+    "resume_verified": true,
+    "account_policy": "continuous",
+    "cache_tamper_rejected": true,
+    "artifact_sha256": {
+      "attempts\\8cbfaedc36174311967a721dc4bae20f\\result.json": "869a3d386b44395a16c2f3fa9e8ccf39673846bc7202a46c4c281070be0d3df2",
+      "attempts\\98654ee3d8c1423786aa91160901f8c1\\result.json": "efb32a5af1eca83340e12d98ac9dd269aa69a2968d36785cec4a0083e3e7c23d",
+      "attempts\\9aefb091e8f5471c972099e663fdd65b\\result.json": "7a7ad121135e5eb9946b45c828c65be5d475741d5fbbd6ddc830f00d8db82278",
+      "attempts\\c9606bc5b0a24bf28e21bff4e530228c\\result.json": "8600c9e5c604ec71ec9b7a5c3c428c327ce2fecd06f6e936686155eacf0f1d1e"
+    }
+  },
+  "fixtures": [
+    {
+      "backend": "futures_fixture",
+      "completed": 2,
+      "failed": 0,
+      "study_sha256": "a5403e37234aa4ea195d5c326c2304c088ceed8cfa73886cc69df9fd05767908"
+    },
+    {
+      "backend": "crypto_fixture",
+      "completed": 3,
+      "failed": 0,
+      "study_sha256": "86bfe78c012032368b0b599d92add1598733ecc57524ed7112564eb8d6cb485e"
+    }
+  ],
+  "initial_cross_repo_regression": "18 passed, 1 failed: cutoff exceeded verified master capture",
+  "test_correction_commit": "6ec373afae94daa572263501e2a3c5c586cb3271",
+  "corrected_cross_repo_regression": "19 passed; no skips; production code unchanged",
+  "failed_ci_evidence": "https://github.com/PureSaber/quant-workspace/actions/runs/36809909651"
+}
