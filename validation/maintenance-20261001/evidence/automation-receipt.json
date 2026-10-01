@@ -1,0 +1,13 @@
+{
+  "automation": "ETF真实前向观察",
+  "updated_at": "2026-10-01T03:38:59.3240000+00:00",
+  "status": "ACTIVE",
+  "schedule": "工作日北京时间18:30",
+  "account_id": "etf-risk-forward-20261008-r4",
+  "definition_sha256": "544aef91d598b939a2da9dc6d01da30ba630349f1edfb411a805ed60b926da2d",
+  "first_eligible_session": "2026-10-08",
+  "old_accounts": "preserved; no new observations",
+  "unchanged_state_notifications": "quiet",
+  "verified_saved_configuration": true,
+  "automation_config_sha256": "5da09a13922400b06f9b7c1232dfd19cd48950b6f919d3324b207eefa7b2a7ac"
+}
