@@ -11,6 +11,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |
 | [WORKSPACE_GUIDE.md](WORKSPACE_GUIDE.md) | 日常源码同步、固定提交集成与冻结研究环境的维护边界 |
+| [2026-10-01维护与r4登记](validation/maintenance-20261001/README.md) | 行动观察契约修复、新环境验收、旧账户保留与新前向起点 |
 | [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
 | [research-integrity-v1.md](research-integrity-v1.md) | PIT data, validation, run contract, risk and attribution standard |

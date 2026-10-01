@@ -1,6 +1,6 @@
 # 工作区维护说明
 
-更新时间：2026-09-30。
+更新时间：2026-10-01。
 
 ## 三类目录
 
@@ -39,7 +39,8 @@ M8状态保持`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`。
 
 9月26日登记的四ETF前向账户在9月30日仍为零有效观察：重新采集的五条历史分红经济字段未变，但`captured_at`更新与冻结历史前缀契约冲突。
 原账户和执行代码保留，来源及失败证据已保存于[不可变阻断记录](https://github.com/PureSaber/quant-research-notes/blob/16726b41e5dbdf11dbfb5af31e8c9c835eb65165/validation/risk-pit-20260926/evidence/forward/20260930T141242Z/README.md)。
-该阻断需要单独处理采集溯源与经济记录的版本契约、回归验证和登记安排，不能靠改写旧时间戳、放宽冻结校验或补填观察解决。
+2026-10-01已通过QDK#28修复完整行动版本的首次receipt与重复采集回执契约，并通过QDK#29及Workspace#19接入跨仓回归。真实来源修订仍阻断，旧时间戳与旧账户没有改写。
+用户选择保留旧账户，验收后新建版本化账户。当前维护验收、r4登记回执及运行手册见[2026-10-01记录](validation/maintenance-20261001/README.md)；本目录9月26日材料及其中的active回执仅代表当时的冻结历史状态。
 
 当前风险研究仍是market统计代理，完整Barra描述子、宽截面数据及校准尚未完成；既有历史结果不支持策略优于买入持有。
 具体数据与统计边界见[历史验收](validation/risk-pit-20260926/VALIDATION.md)和[历史结果](validation/risk-pit-20260926/RESULTS.md)。
