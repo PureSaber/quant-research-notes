@@ -1,0 +1,121 @@
+{
+  "scope": "synthetic-software-integration-only",
+  "checked_at": "2026-10-02T23:01:09.2577671+08:00",
+  "status": "PASS",
+  "local_tested_workspace_commit": "e74434ce9dde7dbcbdc41b22fb5a75015fae625d",
+  "release_workspace_commit": "7cc2bf77b90a619f722b8ca440177d860e31cdf0",
+  "source_pins": {
+    "quant-data-kit": {
+      "commit": "6ec373afae94daa572263501e2a3c5c586cb3271",
+      "python_path": "src"
+    },
+    "quant-lab": {
+      "commit": "737360d76c3a5081b302d888ac1a6350b529e524",
+      "python_path": "src"
+    },
+    "quant-factors": {
+      "commit": "a26c758f2e6d9bc4e6169d97df8cbc97cdaa4f9d",
+      "python_path": "src"
+    },
+    "quant-execution": {
+      "commit": "bb0da30caed20dad42a6d5bdfd217913f61cc44e",
+      "python_path": "src"
+    },
+    "quant-risk-monitor": {
+      "commit": "f8d8b7a7c8fda48a9a5010918b908dbacaa8d809",
+      "python_path": "src"
+    },
+    "a-share-multifactor": {
+      "commit": "d76114bd06d0e7bb12550441da057e7272723d0f",
+      "python_path": "src"
+    },
+    "quant-report-hub": {
+      "commit": "c2afcd3f831cd90e08abb680adaf801caa39d701",
+      "python_path": "."
+    },
+    "quant-agent": {
+      "commit": "a97089148454f0d1a1b39bee70a205be628b09e5",
+      "python_path": "src"
+    },
+    "quant-pipeline": {
+      "commit": "83476bcaccb184842f9b760b34e66ffac172aafb",
+      "python_path": "src"
+    },
+    "quant-research-notes": {
+      "commit": "39ae978908097abb6289d580b5456073918fd90f",
+      "python_path": null
+    },
+    "quant-futures-spread": {
+      "commit": "3f1195acb5421f3c4e5b780a2c63bf567bf58ef4",
+      "python_path": null
+    },
+    "quant-crypto-basis": {
+      "commit": "a84d2fbc562fb3098b86e445b8ed02ac7fa7d858",
+      "python_path": null
+    },
+    "quant-portfolio": {
+      "commit": "3ade084bebd341c2faee652ee45555a7d6fbe9b3",
+      "python_path": "src"
+    }
+  },
+  "requirements_sha256": "060196207ab7303d2e4002a5642a81ba23a3249f6efb1590d04e8dd9147fafcc",
+  "fixtures_requirements_sha256": "61f626fd614e56362435e12e779225b37d36168ef9302abc6484c811d11b4608",
+  "akshare_wheel_sha256": "de6d7f77008299b5c96e13559542e153ac58d0780523c0d5b45694ce97e2099f",
+  "research_package_count": 126,
+  "fixture_package_count": 42,
+  "pip_check": "PASS",
+  "profile_verify": "PASS",
+  "fixture_code_identity": "PASS",
+  "workspace_tests": {
+    "passed": 100,
+    "skipped": 0
+  },
+  "qdk_cross_repository_tests": {
+    "passed": 19,
+    "skipped": 0
+  },
+  "independent": {
+    "scope": "synthetic-software-integration-only",
+    "candidates": 4,
+    "failed": 0,
+    "resume_verified": true,
+    "account_policy": "independent",
+    "cache_tamper_rejected": null,
+    "artifact_sha256": {
+      "attempts\\36265425a6034d53ace4f297f0c34549\\result.json": "f938d942c5ff508a265ea2c4de6b7e2a2d94d0562314c161d65b21c22d619881",
+      "attempts\\4aea5d9ccd2848bcbe49c2a3472139a1\\result.json": "692fcbb546737d45a3a824f5a890f1805e177ea67d13152f4b097aaa74ae7363",
+      "attempts\\61d50f0566014457b593a737151f9c2c\\result.json": "8a161bf84f7c97ad6c9af52099eb819c81b142d7a3cf46c2e7f89195388c90be",
+      "attempts\\897ae8c63f1e4149a94adc8d31b9437c\\result.json": "ab2d2c24741732b225b6a1f263e1572e70c844b000655fe9f71b711ce642200c"
+    }
+  },
+  "continuous": {
+    "scope": "synthetic-software-integration-only",
+    "candidates": 4,
+    "failed": 0,
+    "resume_verified": true,
+    "account_policy": "continuous",
+    "cache_tamper_rejected": true,
+    "artifact_sha256": {
+      "attempts\\259ce9cb65654cedbb9ae5f9bb88a6fc\\result.json": "8994e27a4aa3dcf6731018db102f1e151a4ba5f27457132f4bc1a2ccf27edbb6",
+      "attempts\\9d6e3eabaa3449e19621186d2958db0f\\result.json": "159e28da4df2bf9aa5a9ba26e8be71bc71cd77574473f750d3f69a928859283e",
+      "attempts\\b4c675821a9b4bf0af831be417c9f36f\\result.json": "e452b2b5e98730a828e1327f0520c32e53c035d8c144f77a0b45f9b0c896e78a",
+      "attempts\\f978837b5cfd49408f5fbdd9ed3d7184\\result.json": "8516eb01d98502382873bbce59be500e63002726cbfe92da10b77e2094b19fbc"
+    }
+  },
+  "futures_fixture": {
+    "candidates": 2,
+    "failed": 0
+  },
+  "crypto_fixture": {
+    "candidates": 3,
+    "failed": 0
+  },
+  "market_data_ga": "BLOCKED",
+  "forward_observations_added": 0,
+  "merged_profile_verify": "PASS",
+  "differences_from_local_tested_tree": [
+    "profiles/research-workbench/VALIDATION_V4.md"
+  ],
+  "workspace_pr": "https://github.com/PureSaber/quant-workspace/pull/20",
+  "premerge_checks": "All 9 checks succeeded at 9738228191ea426ec93da325bd8ed334cf5317d8"
+}
