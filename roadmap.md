@@ -6,6 +6,8 @@
 
 后续继续原r4登记窗口中的四ETF日频观察，复用已验收环境。独立大容量归档、Crypto八流连续30日、授权国内L2和完整Barra数据列为后续阶段，不阻塞本次轻量交付；既有全市场认证仍未取得，历史认证标准和失败证据保持不变。
 
+同日追加的全栈检查采用[轻量真实数据全栈验收规范](validation/light-market-data-20261003/STACK_POLICY.md)。已扩展到港股、基金、择时、市场状态和工作台，并分别记录期货/Crypto数据层探测与尚未覆盖的策略链路；美股限流及OKX超时保留为未通过。该追加检查为基金建立了独立锁定环境，因此上段“未新增运行环境”只描述最初四ETF数据验收，不代表全栈检查的总空间。
+
 ## Phase 0 — Engineering basics ✅
 
 - [currency-converter](../currency-converter): CLI, config separation, pluggable providers, pytest
