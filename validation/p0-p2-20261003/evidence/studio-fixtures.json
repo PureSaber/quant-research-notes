@@ -1,0 +1,379 @@
+{
+  "schema_version": "quant.studio-fixtures-acceptance/v1",
+  "as_of": "2026-10-04",
+  "scope": "Offline futures and crypto Studio templates; native preflight, exact ledger views and GUI acceptance",
+  "evidence_kind": "synthetic",
+  "investable": false,
+  "studio_execution_revision": "b80abeefd6b770e18eed58f5ea54c367f31fb10c",
+  "studio_documentation_revision": "555a44c3f223b68e1f0c9a15795f64f6d56ed234",
+  "production_code_unchanged_after_gui": true,
+  "cli_runs": [
+    {
+      "template": "futures-spread-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678"
+      },
+      "run_id": "d359494d59c640658f31f92985734153",
+      "check_id": "6542c1b7860e44c2a20812da9a325491",
+      "config_sha256": "1700697c4e99facd941f5e4f044cf089426fe3c36a2a039772b887c52d4dc878",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "f01d6afd87ca0556d6e2f44e522cfecbf00cad56",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "24894ac4541af198b507fff18737c1e431cc86ecea010c94cc8a96bd878adde7",
+      "verified_artifacts": 12,
+      "currency": "CNY",
+      "initial_nav": "250000.12345678",
+      "observations": 23,
+      "table_rows": {
+        "account": 23,
+        "positions": 24,
+        "orders": 8,
+        "fills": 8,
+        "margin": 24,
+        "costs": 8,
+        "cash_ledger": 66
+      },
+      "nav_sha256": "8fcc28aae69643275a216d2a8a8d3646528b5923146b2a6be87a7991bc3c56b5",
+      "view_sha256": "9d6cf5d0c4ff00b0bfa208be141e07781a62a4b1cc5d4cd58b30051de0e1b2f2",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "d3a73b5689a62b418d09b9fafb88ac87fecbd17cbfbdfa007be7dae401cb20a6",
+      "repeated_projection_byte_identical": true,
+      "invalid_cash_preflight_rejected": true
+    },
+    {
+      "template": "crypto-basis-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678",
+        "source": "binance",
+        "liquidity": "maker",
+        "seed": 19
+      },
+      "run_id": "42e8c2bb381f4c11983850c54c63cbc9",
+      "check_id": "679cd725e4c942b6ab97be1d4715668c",
+      "config_sha256": "afe1472ff5223554cab9ec6176ff00249799dbd991f0811a1ee60797fbe8cc1c",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "02acfeb6227d8f61243b908846592af4e5b70365",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "611eb3a8f87cf78d4a5632164c66847ef94f2e140b1cb45180377eacffc364db",
+      "verified_artifacts": 12,
+      "currency": "USDT",
+      "initial_nav": "250000.12345678",
+      "observations": 16,
+      "table_rows": {
+        "account": 16,
+        "positions": 13,
+        "orders": 2,
+        "fills": 2,
+        "margin": 5,
+        "costs": 3,
+        "cash_ledger": 16
+      },
+      "nav_sha256": "84229ba944a26a031bf18e0bbf29a575a5b703afb6eac02d4dc8e225b7a49f2a",
+      "view_sha256": "31b9b2d8c3a4ad567738512fdd99e922440b5147a60b05cba2bfab7cbf1b8818",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "1ca175ee1bf6834885eb6d189fd0178c018f0d9a2048fc3ae70d159859fa374b",
+      "repeated_projection_byte_identical": true,
+      "invalid_cash_preflight_rejected": true
+    },
+    {
+      "template": "crypto-basis-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678",
+        "source": "binance",
+        "liquidity": "taker",
+        "seed": 19
+      },
+      "run_id": "a73e517d4ca24d7a928d173335bbf49b",
+      "check_id": "472801456fcb4eea8e345cd4df6376d5",
+      "config_sha256": "83c012b5f43e8a1d82be37b75bc4ea9cb097ce6c4e9b99140f47e087db5643c1",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "02acfeb6227d8f61243b908846592af4e5b70365",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "aa28b6724d15894d8c7ab82e4c72f84331eed5119050eb3806bf66cf04fabcd1",
+      "verified_artifacts": 12,
+      "currency": "USDT",
+      "initial_nav": "250000.12345678",
+      "observations": 16,
+      "table_rows": {
+        "account": 16,
+        "positions": 15,
+        "orders": 2,
+        "fills": 2,
+        "margin": 6,
+        "costs": 3,
+        "cash_ledger": 16
+      },
+      "nav_sha256": "1806c18a07d96f364d33473f75b85148a79e6bc4d8bbb543bf375f529b16022f",
+      "view_sha256": "641361ed5204920740b3137a337bc34f3a01886e2a58b763c18da8f27c021eb7",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "1eaaafdcb5177111e43256522d23209f3c595cd8c6fbeecb3b3736d9f8644a4b",
+      "repeated_projection_byte_identical": true,
+      "invalid_cash_preflight_rejected": true
+    },
+    {
+      "template": "crypto-basis-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678",
+        "source": "okx",
+        "liquidity": "maker",
+        "seed": 19
+      },
+      "run_id": "4d65cff3735847549c69c1644f8194da",
+      "check_id": "5f0b096321474bf3959a0fafc6b62063",
+      "config_sha256": "ecd4a86d81e5c8fd16bc4fd25b7022a269c767d82bfc529c72a8602fa223eb37",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "02acfeb6227d8f61243b908846592af4e5b70365",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "df8e2124db1970d36056ae409be78e6778f508eb160d2dafe1de6b2670c652ec",
+      "verified_artifacts": 12,
+      "currency": "USDT",
+      "initial_nav": "250000.12345678",
+      "observations": 16,
+      "table_rows": {
+        "account": 16,
+        "positions": 13,
+        "orders": 2,
+        "fills": 2,
+        "margin": 5,
+        "costs": 3,
+        "cash_ledger": 16
+      },
+      "nav_sha256": "83ea7267f990fb37bcec1ab319fb6ba9804934f4ce22f354b02e75bf8a61695b",
+      "view_sha256": "a3537b4eebf5e61bca64b4194dfed4765604f3905f9126be8b50ce5914925780",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "f2e657f76ea84a267fe39a6d48abadfba04cab038d20b689dd788545a735e3a4",
+      "repeated_projection_byte_identical": true,
+      "invalid_cash_preflight_rejected": true
+    },
+    {
+      "template": "crypto-basis-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678",
+        "source": "okx",
+        "liquidity": "taker",
+        "seed": 19
+      },
+      "run_id": "dd7a72b9774a45f79ff2ee3367f518a0",
+      "check_id": "ad910eaee1ae49bcae50cf474d4a0f24",
+      "config_sha256": "20f5192f9e59289a68e60f712a4aaa3c7dbf0e9b5ab2e60e6369add989bdabca",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "02acfeb6227d8f61243b908846592af4e5b70365",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "2cc2a2cc7d037a927b23514ae04695eccc504b28ee70cc7428d8212a92f0c5db",
+      "verified_artifacts": 12,
+      "currency": "USDT",
+      "initial_nav": "250000.12345678",
+      "observations": 16,
+      "table_rows": {
+        "account": 16,
+        "positions": 15,
+        "orders": 2,
+        "fills": 2,
+        "margin": 6,
+        "costs": 3,
+        "cash_ledger": 16
+      },
+      "nav_sha256": "9062965e753af8472a3d75720a5e11d7fba874f0bc4af5e8999402b10a7c6917",
+      "view_sha256": "68a2913ce5afee557d2f8b34bb55598f4eda4fbccda1b1a6340f0b956e9d19cc",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "72271bf2f0f7bd98d021e56a45aa662d08ee32c60ac45ef2a586bc7b85a7c65a",
+      "repeated_projection_byte_identical": true,
+      "invalid_cash_preflight_rejected": true
+    }
+  ],
+  "gui_runs": [
+    {
+      "template": "crypto-basis-fixture",
+      "parameters": {
+        "source": "okx",
+        "liquidity": "taker",
+        "initial_cash": "250000.12345678",
+        "seed": 7
+      },
+      "run_id": "adf03306f03b472a9db17233a8be137b",
+      "check_id": "12404ebdb21a41b58ec901443425a2dd",
+      "config_sha256": "78d1efdca386477f647a78d53a1082b585ea5eda769645c179fe5bee82d8bc9e",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "02acfeb6227d8f61243b908846592af4e5b70365",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "fc2f1b9ab48a3398b858454820eb6e1160e7d71f0975216fb95212b9b04aa6b7",
+      "verified_artifacts": 12,
+      "currency": "USDT",
+      "initial_nav": "250000.12345678",
+      "observations": 16,
+      "table_rows": {
+        "account": 16,
+        "positions": 15,
+        "orders": 2,
+        "fills": 2,
+        "margin": 6,
+        "costs": 3,
+        "cash_ledger": 16
+      },
+      "nav_sha256": "9062965e753af8472a3d75720a5e11d7fba874f0bc4af5e8999402b10a7c6917",
+      "view_sha256": "b1f132ef5438a24579faec5bb1783ce2a3acd10092e1417fe55cdcbe41a4252a",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "1aa333d6438b1361b9e34008c519c42b6ead2bc93a5c09804630f552869926b2",
+      "browser_logs": [],
+      "geometry": {
+        "scrollWidth": 1265,
+        "width": 1265
+      }
+    },
+    {
+      "template": "futures-spread-fixture",
+      "parameters": {
+        "initial_cash": "250000.12345678",
+        "random_seed": 19
+      },
+      "run_id": "9fd3a760e14a440492d8387b1f81be93",
+      "check_id": "97a7579647034ed09560cb9f94cc48bf",
+      "config_sha256": "4367156a0795ba3b3f5d10ae3c786d42294d9f32aacf8c39a72823cd0097cb63",
+      "same_config": true,
+      "no_preflight_strategy_output": true,
+      "same_python_for_preflight_run_and_projection": true,
+      "native_code_version": "f01d6afd87ca0556d6e2f44e522cfecbf00cad56",
+      "native_profile": "backtest-ledger",
+      "native_manifest_sha256": "fc6edc73775cf3487f6d07effbed163556d3e9afbf6385139646e7cc4a055302",
+      "verified_artifacts": 12,
+      "currency": "CNY",
+      "initial_nav": "250000.12345678",
+      "observations": 23,
+      "table_rows": {
+        "account": 23,
+        "positions": 24,
+        "orders": 8,
+        "fills": 8,
+        "margin": 24,
+        "costs": 8,
+        "cash_ledger": 66
+      },
+      "nav_sha256": "8fcc28aae69643275a216d2a8a8d3646528b5923146b2a6be87a7991bc3c56b5",
+      "view_sha256": "5b280d4643271fbfca2b2dd480596dd57c6a5ba34c4ecb7cb3446f2fe5413795",
+      "all_native_fixed_point_values_equal": true,
+      "all_source_hashes_match": true,
+      "preflight_sha256": "47282da9d225418d765aa3f13afb6c0b8fcbaef60047adccc87bd658478edec0",
+      "browser_logs": [],
+      "geometry": {
+        "scrollWidth": 1265,
+        "width": 1265
+      }
+    }
+  ],
+  "gui_failure": {
+    "run_id": "20075b909f6248ecb93f53af27c9e9bd",
+    "reason": "initial_cash must be finite and positive",
+    "no_strategy_output": true,
+    "same_parameters_run_button_absent": true,
+    "browser_logs": []
+  },
+  "download": {
+    "run_id": "adf03306f03b472a9db17233a8be137b",
+    "file": "fills.csv",
+    "sha256": "05987046cf420f3869dbd7258e6f5a8d7701ea987ef7bbddb67f77d6d22a8ba2",
+    "download_matches_run_file": true
+  },
+  "input_integrity": {
+    "source_files": 6,
+    "files": [
+      {
+        "file": "quant-futures-spread/config/certified_local_sample_v1.yaml",
+        "sha256": "fd23ac6fffe14856ed4606b3017c9a08ef2d290c3cf280e8cf92be18517548c3",
+        "content_mtime_length_unchanged": true
+      },
+      {
+        "file": "quant-futures-spread/data/local_sample/certified_v1/instrument_master.json",
+        "sha256": "1300957f37b9b957b44169c7c382127b9792380932c6293fdac83b9a56583c80",
+        "content_mtime_length_unchanged": true
+      },
+      {
+        "file": "quant-futures-spread/data/local_sample/certified_v1/market_events.json",
+        "sha256": "7e330fd5f1733b7429555a6bc6f6941ff17385c9963c805bb549ffe4bef19f74",
+        "content_mtime_length_unchanged": true
+      },
+      {
+        "file": "quant-crypto-basis/src/quant_crypto_basis/fixtures/index.json",
+        "sha256": "ac2bbec7d91c25cf9b12306b842939ffff3ea0f5768ba93b949df82ce0256e32",
+        "content_mtime_length_unchanged": true
+      },
+      {
+        "file": "quant-crypto-basis/src/quant_crypto_basis/fixtures/binance/events.json",
+        "sha256": "deeb9f4e009094af744186dc8de7eb09d170f011fa47e511db176f43597816b7",
+        "content_mtime_length_unchanged": true
+      },
+      {
+        "file": "quant-crypto-basis/src/quant_crypto_basis/fixtures/okx/events.json",
+        "sha256": "95a727e1f37ada4bad2e006fc1046c502bbfef7139fe0c89125a64625c5fe8a8",
+        "content_mtime_length_unchanged": true
+      }
+    ]
+  },
+  "tests": {
+    "studio-fixture-unit-final.log": {
+      "sha256": "0068fcdc3e771dddcc8ffbbd3815da26e8df2bf25c2793c987c6444e74cd89da",
+      "summary": "138 passed in 6.50s"
+    },
+    "studio-futures-integration-final.log": {
+      "sha256": "c706373fa18fa3c5e92e4bfbd2ed1450c3ff2f3a26e082ce164a944e7a81ce7a",
+      "summary": "1 passed, 4 deselected in 10.06s"
+    },
+    "studio-crypto-integration-final.log": {
+      "sha256": "fcfce06d8ae656c0ede680a7687eec41e95d13d09ca087ddbf5d6cc8f1cc4177",
+      "summary": "4 passed, 1 deselected in 35.30s"
+    },
+    "crypto-opening-tests.log": {
+      "sha256": "25bbc6f94120cf95661207f1b69b578c917c8b3869d8e4e179ed6009c84c192f",
+      "summary": "96 passed in 12.19s"
+    },
+    "workspace-fixture-tests.log": {
+      "sha256": "7d4c3b1dd72c0a71281d6608d0be47ea81797dd98541549a9b49351404229c09",
+      "summary": "110 passed in 51.80s"
+    },
+    "notes-fixture-contracts.log": {
+      "sha256": "c8d27c82748e550bf1ea30c8d55cd975482f912ce92dde633f55b8cd7d9ab072",
+      "summary": "Ran 14 tests in 4.221s; OK"
+    }
+  },
+  "screenshots": {
+    "crypto-studio-preflight.png": "b91785dea0e00155763cff7b1d73bdedb30d6d72e155cf94ec982118b7fd83c3",
+    "crypto-studio-result.png": "1412ce0c667f48556e5d2512da169cc07415b609465045df8fac28b51ec74126",
+    "futures-studio-preflight.png": "814099bde8c80cae71b6ce1b35229c0a37cddf5d78b504b03b1addb7f73e913b",
+    "futures-studio-result.png": "cab590fc37327e86577aa0d6b7dd2776c7ccb368be3cfb92155ed145c4e0f539",
+    "crypto-studio-rejected-final.png": "7bfec8f21d990325b7463b8be5b4c907176c60cdd5b0383b37a501914495a246"
+  },
+  "ci_history": {
+    "failed_run": 37144225083,
+    "reason": "Windows global CLI launcher resides in Scripts while Python is in its parent; sibling-python inference failed",
+    "fix": "Invoke upstream as selected Python -m module and reuse the identical interpreter for ledger projection",
+    "fixed_code_run": 37144638367,
+    "fixed_code_result": "success",
+    "fixed_code_integration_jobs": 14,
+    "documentation_revision_run": 37145690355,
+    "documentation_revision_result": "success",
+    "documentation_revision_integration_jobs": 14
+  },
+  "limitations": [
+    "Offline synthetic fixtures only; no real-market execution or strategy validation",
+    "P1.1 remains incomplete for A-share full real cache, remaining research entrypoints, first-use acceptance and embedded fund report console error",
+    "No r4/r5 account, registration, automation, frozen environment or historical tag changes"
+  ],
+  "studio_merge_commit": "6207b8eccd5488e028139ba5e7abf4d63c9704ef"
+}
