@@ -1,0 +1,37 @@
+{
+  "embedded_logs": [
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-03T19:03:54.946Z"
+    }
+  ],
+  "direct_logs": [],
+  "script_counts": {
+    "parent": 0,
+    "child": 0
+  },
+  "original_fund_logs": [
+    {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-03T19:03:01.359Z"
+    }
+  ],
+  "conclusion": "Same MutationObserver error occurs in a static iframe with no application JavaScript; direct static document is clean. Failure is independent of Studio, fund report and Plotly; exact host injection source remains unverified.",
+  "schema_version": "quant.fund-embed-diagnostic/v1",
+  "as_of": "2026-10-04",
+  "browser": "Codex In-app Browser",
+  "source_files": {
+    "child.html": "ed4a61b1e94a58228b49d71b63796f3edb138b25965a895b4c3cda5ad299f36c",
+    "embedded.html": "ef0137c35dda04ac19fa89ce23048a40b403fde856cf1f83da7b49944d05c66d"
+  },
+  "studio_revision": "6207b8eccd5488e028139ba5e7abf4d63c9704ef",
+  "fund_revision": "c7be45bdce66aee49762430ba93d2fc361e3c4b5",
+  "screenshot_sha256": "3c8365102e76dcb799dc1228771d418e4be0519663a099de6c65d69f333dd6be",
+  "status": "application_independent_reproduction; exact_host_source_unverified",
+  "limitations": [
+    "No cross-browser acceptance performed",
+    "No product code change; original embedded report issue remains open"
+  ]
+}
