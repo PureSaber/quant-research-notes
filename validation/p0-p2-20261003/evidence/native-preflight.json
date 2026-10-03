@@ -1,0 +1,22 @@
+{
+  "schema_version": "quant.native-preflight-acceptance/v1",
+  "checked_at": "2026-10-03T08:54:50.443441+00:00",
+  "status": "passed",
+  "paper_preflight_run": "f697dd093a1840fa99a93f7a1c80a723",
+  "paper_step_run": "161df36eae2e41cc9a83fc3f1df48066",
+  "ashare_missing_input_run": "259c17e6f7714557971b1397ffac441e",
+  "paper_initial_capital": 200000,
+  "paper_business_config_equal": true,
+  "paper_state_directories_isolated": true,
+  "preflight_created_strategy_output": false,
+  "paper_explicit_step_created_log": true,
+  "ashare_missing_price_rejected": true,
+  "source_kind": "synthetic-fixture",
+  "investable": false,
+  "scope": "Native read-only preflight, parameter preservation and missing-input rejection; not independent market research",
+  "local_screenshots": {
+    "studio-paper-preflight.jpg": "b0c91332aefceee8a975564e94a38d360fe7a8fae0a81f0855b762fc5e619fc0",
+    "studio-paper-checked-run.jpg": "2dc00bb0cffabc2d3bccf7ec640a63e932f3d9d397bef8914170dcc5ce082c3b",
+    "studio-ashare-preflight-rejected.jpg": "a1cdb17eaf9dfd9a13177af17b00c3a3c5c01b7ed4337d54e8db1acaef489940"
+  }
+}
