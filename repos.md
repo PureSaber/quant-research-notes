@@ -8,7 +8,7 @@
 | Repo | Role | Key CLI |
 |------|------|---------|
 | quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、八模板与七个业务预检入口、显式运行、只读前向账户及原生事件账本展示 | `python -m quant_studio serve/check` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、九模板与八个业务预检入口、显式运行、只读前向账户及原生事件账本展示 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
@@ -21,7 +21,7 @@
 | [quant-hk-equity](https://github.com/PureSaber/quant-hk-equity) | 港股日频现金账户探索；真实行情、滞后信号、整手税费、训练/留出期；价格收益，未获可投资认证 | `quant-hk fetch/preflight/run` |
 | [quant-us-equity](https://github.com/PureSaber/quant-us-equity) | 美股研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
 | [quant-fund](https://github.com/PureSaber/quant-fund) | 基金研究、场外申赎模拟和FOF监控；已有真实净值小样本，完整条款、分红和分用途日历仍未闭合 | `python -m quant_fund.cli`、`streamlit run app.py` |
-| [quant-stat-arb](https://github.com/PureSaber/quant-stat-arb) | 统计套利研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
+| [quant-stat-arb](https://github.com/PureSaber/quant-stat-arb) | 统计套利研究（private）、原生只读预检和Studio配置文件入口；不属于既有M8认证范围 | `python -m quant_stat_arb preflight/run` |
 | [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；按因果时点回放并保留样本外门禁 | `python -m quant_timing run/compare` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
 | quant-lab | Experiment index + HTML dashboard | `quant-lab scan/export html` |
@@ -62,6 +62,7 @@ quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / qua
 quant-studio ── declared templates / CLI ──► a-share-multifactor / quant-hk-equity / quant-paper-sim
              ├─ native preflight / CLI ──► quant-fund / quant-us-equity
              ├─ offline fixture / native ledger views ──► quant-futures-spread / quant-crypto-basis
+             ├─ research config file / native preflight ──► quant-stat-arb
              └─ read-only account inspection ──► quant-pipeline
 
 quant-fund ── independent fund research / OTC ledger ──► read-only integration snapshot

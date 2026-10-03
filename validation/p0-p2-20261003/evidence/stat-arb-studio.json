@@ -1,0 +1,164 @@
+{
+  "schema_version": "quant.stat-arb-studio-acceptance/v1",
+  "as_of": "2026-10-04",
+  "studio_execution_revision": "14229dae094f7fd0fa2a05eca8d9f8740cbb023f",
+  "native_success_execution_revision": "40e9c540f8c7e7d6f44a56ea1fa0122f43ba2498",
+  "native_blocked_execution_revision": "cc5557d180d992bdbf49876efbba5149ffbc5180",
+  "gui_runs": [
+    {
+      "case": "synthetic",
+      "check_id": "ffdfc985d11e4660bbdb31201e4a7090",
+      "run_id": "e557fd19ef144cc78dc45fbb6bb755a4",
+      "evidence_kind": "synthetic",
+      "effective_config_sha256": "f18d2ef3f251bb4acd7df7a5c9e4b2137f20fd1ee180dc56765882e756edc0c9",
+      "same_parameters": true,
+      "no_preflight_output": true,
+      "native_input_identity_matches": true,
+      "status": "succeeded",
+      "native_status": "complete",
+      "input_rows": 420,
+      "symbols": 7,
+      "folds": 7,
+      "scored_days": 281,
+      "pair_slots": 5,
+      "manifest_sha256": "1bda9f23457bcd244469db3b2e7c8483bc1cee131dc24c4b559a7225c5a11877",
+      "verified_artifacts": 6,
+      "summary_sha256": "d04d1a9f4eda83c7506e108839fa3b028438ce5dfc2e798c1c1cfa1dff67d3be",
+      "nav_return": -0.010762000521595,
+      "drawdown_magnitude": 0.011576267478857849,
+      "native_nav_matches": true,
+      "table_rows": {
+        "positions.csv": 254,
+        "orders.csv": 303,
+        "costs.csv": 281
+      },
+      "layout": {
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      "browser_errors_or_warnings": 0
+    },
+    {
+      "case": "retrospective",
+      "check_id": "d05ee807cb19449498fe4036bb65faf1",
+      "run_id": "80a091126c474be1b32a120803e47c5a",
+      "evidence_kind": "retrospective",
+      "effective_config_sha256": "669b4662d58a187b0cc63caf820b906dad54f9972c5afb153577e0994c0fc5ae",
+      "same_parameters": true,
+      "no_preflight_output": true,
+      "native_input_identity_matches": true,
+      "status": "succeeded",
+      "native_status": "complete",
+      "input_rows": 424,
+      "symbols": 4,
+      "folds": 7,
+      "scored_days": 281,
+      "pair_slots": 1,
+      "manifest_sha256": "5ac96607fd917939cab365755cd0f509a3265b09c01f2376938918a2a7bfbf6c",
+      "verified_artifacts": 6,
+      "summary_sha256": "24e57891e2b261a98193b6b2d867a00900d64bae264dd77919b740e472918750",
+      "nav_return": 0.0153001142648954,
+      "drawdown_magnitude": 0.015492613250791048,
+      "native_nav_matches": true,
+      "table_rows": {
+        "positions.csv": 46,
+        "orders.csv": 82,
+        "costs.csv": 281
+      },
+      "layout": {
+        "headings": [
+          "净值曲线 · stat_arb\n",
+          "回撤",
+          "研究持仓权重",
+          "研究目标变动",
+          "研究费用（收益比例）",
+          "生成的配置",
+          "参数列表"
+        ],
+        "scrollWidth": 1265,
+        "width": 1280
+      },
+      "browser_errors_or_warnings": 0
+    },
+    {
+      "case": "blocked",
+      "check_id": "d62175951d61413086d2441946a96dea",
+      "run_id": "ea54821bb44c40969b30943f91829d84",
+      "evidence_kind": "synthetic",
+      "effective_config_sha256": "9210460fa92b9e595b54bd059a727890a39036a89c6c6cb732fce590a474f961",
+      "same_parameters": true,
+      "no_preflight_output": true,
+      "native_input_identity_matches": true,
+      "status": "failed",
+      "native_status": "blocked",
+      "input_rows": 220,
+      "symbols": 6,
+      "folds": 6,
+      "scored_days": 121,
+      "pair_slots": 6,
+      "manifest_sha256": "4f2a247ff4ad7627728efdd365a4ae3a38f4e29695d15da10b0fa2b58481fbce",
+      "verified_artifacts": 6,
+      "summary_sha256": "f7918ece37f3168b253e4407adad28c15f86a04d7102ab571f0e475006817cbc",
+      "failure_reason_visible": true,
+      "browser_errors_or_warnings": 0
+    }
+  ],
+  "input_source_files_unchanged": 7,
+  "short_window_rejected": true,
+  "download_sha256": "1df84862aba09028d46be9e75eec616ce9bbf45d6e4350cee7aca1584d3413a1",
+  "download_matches_native": true,
+  "tests": {
+    "native": 85,
+    "studio": 153,
+    "native_cli_parameter_cases": 2,
+    "workspace": 110,
+    "notes_contracts": 14
+  },
+  "test_receipts": {
+    "integration-tests.xml": "8eaced6e6327c87b0bb0210c86f78f93ab255393a65b1046201fce847c8f53d5",
+    "native-tests.xml": "8c834008467df5f0c2b850a10a14a894d8e5f356d1d71409185e92ee280998f0",
+    "studio-tests.xml": "b611d9b9eb3b68d0a0152223e9ae7eb439460a4ecedea2e7c941f7b8543d7fbb",
+    "workspace-tests.xml": "edbe1cb1c3e0257754064b089cf79571cecb930c3b2b6ab7b2cc934ae9832265",
+    "notes-tests.txt": "9265e41a32236a40b48b59dc49a1eaf5334c66a482e05f842464b7e48d6a8276"
+  },
+  "screenshots": {
+    "blocked-run.png": "129c16e68ae84ea463258433be1e8827f4fbedbe818f7c3fef6eb1e965a9d128",
+    "invalid-preflight.png": "fe473a7ed711b6cfb7f5dfbf280419c954102c0a0ac17790ce5782de11483121",
+    "real-preflight.png": "a1951693be64bc844e08537d5ec66ca7169498e01540f48b74914892c1ba35ba",
+    "real-result.png": "e3fb18e0886fd0d70bb7afccfd284def5240086c074462989a2b23e51702e66b",
+    "synthetic-preflight.png": "e5d412defde4bcfcbe6402bc36444ac1e34883b62a66e075750c489986c84961",
+    "synthetic-result.png": "a5ba0af4e5cddc6f435bb36b84b560346662071c3859de6c2c7573c6f5fe418e"
+  },
+  "investable": false,
+  "independent_strategy_evidence_added": false,
+  "all_p0_p2_complete": false,
+  "native_merge_revision": "ae6c51447326f341fd7673f0497c5e2ca9379eb3",
+  "studio_final_pr_revision": "ffb6a8c5917dda513ef5d8042300897f17961354",
+  "studio_python_unchanged_after_gui": true,
+  "native_main_ci": [
+    {
+      "id": 37149923505,
+      "workflow": "CI",
+      "conclusion": "success"
+    },
+    {
+      "id": 37149923502,
+      "workflow": "Studio integration",
+      "conclusion": "success"
+    }
+  ],
+  "studio_final_pr_ci": [
+    {
+      "id": 37149986643,
+      "workflow": "Upstream integration",
+      "conclusion": "success",
+      "jobs": 14
+    },
+    {
+      "id": 37149986719,
+      "workflow": "tests",
+      "conclusion": "success",
+      "jobs": 2
+    }
+  ]
+}
