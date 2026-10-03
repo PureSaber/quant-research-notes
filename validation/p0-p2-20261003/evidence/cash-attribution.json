@@ -1,0 +1,360 @@
+{
+  "schema_version": "quant.etf-cash-attribution-acceptance/v1",
+  "checked_at": "2026-10-03T09:53:01.620853+00:00",
+  "study_id": "etf-risk-walkforward-20261001-r4-final",
+  "study_sha256": "16685cf0e1209dc6cd08652e41c47ccbd284d1eef599cbfa6cbe682425633b82",
+  "report_code_commit": "ccaf47416f7b62b0b5b3319c181741680ea8aad8",
+  "scope": "all four frozen candidates and all three independent test folds; accounting attribution, not causal identification",
+  "source_files_checked": 511,
+  "source_hashes_mtimes_and_inventory_unchanged": true,
+  "runs": [
+    {
+      "candidate": "base",
+      "fold": "fold-000",
+      "source_run_manifest_sha256": "8c519579942b2324933771229a6a321ed4242ce29b30316bf43eda5e83b4da55",
+      "report_manifest_sha256": "f11e40d480d6a374d22b16b9f7e10e90eb84de1af6e51e04211b3cffaab7999d",
+      "row_counts": {
+        "instrument_pnl.csv": 161,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 256,
+        "fee_details.csv": 28
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-d2bfdff8e37b3ed69eb6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1038524.77932000",
+        "net_pnl": "38524.77932000",
+        "valuation_and_trading_pnl": "26143.70000000",
+        "corporate_income": "13814.00000000",
+        "fee_cash": "-1432.92068000",
+        "first_period_end": "2025-12-02T07:00:00.000003+00:00",
+        "last_period_end": "2026-03-10T07:00:00.000251+00:00",
+        "transactions_checked": 61,
+        "entitlements_checked": 2
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "base",
+      "fold": "fold-001",
+      "source_run_manifest_sha256": "4eda7a0bf260e77e15b8b1fd34f9222ef37057129dfd6ea5dde263d010e98ab8",
+      "report_manifest_sha256": "bc6e058542e06639fe0e5ca64010490c01abef46e98259c5394018785c0df586",
+      "row_counts": {
+        "instrument_pnl.csv": 185,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 252,
+        "fee_details.csv": 24
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-d2bfdff8e37b3ed69eb6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1011231.91357000",
+        "net_pnl": "11231.91357000",
+        "valuation_and_trading_pnl": "12488.80000000",
+        "corporate_income": "0",
+        "fee_cash": "-1256.88643000",
+        "first_period_end": "2026-03-11T07:00:00.000003+00:00",
+        "last_period_end": "2026-06-11T07:00:00.000251+00:00",
+        "transactions_checked": 49,
+        "entitlements_checked": 0
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "base",
+      "fold": "fold-002",
+      "source_run_manifest_sha256": "6318e07ebeee7e1edde7f0e64e8d2eddb01e1119cccff6ef108bf9039a71ef10",
+      "report_manifest_sha256": "f485fb5f44d999d7e0aaac35b896fffa55434c0c660835ba17147615921d8b35",
+      "row_counts": {
+        "instrument_pnl.csv": 218,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 254,
+        "fee_details.csv": 14
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-d2bfdff8e37b3ed69eb6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "921825.33409000",
+        "net_pnl": "-78174.66591000",
+        "valuation_and_trading_pnl": "-84135.20000000",
+        "corporate_income": "6928.50000000",
+        "fee_cash": "-967.96591000",
+        "first_period_end": "2026-06-12T07:00:00.000003+00:00",
+        "last_period_end": "2026-09-09T07:00:00.000251+00:00",
+        "transactions_checked": 31,
+        "entitlements_checked": 1
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "buy_hold",
+      "fold": "fold-000",
+      "source_run_manifest_sha256": "01fba3928837e1405cd25e2a059270109baf23014b5e27e8b72b38ff0fa809cb",
+      "report_manifest_sha256": "f6d27ac2aac0224d52a219c090a5b271fb696af7949692000fbfe7ddb72dc48e",
+      "row_counts": {
+        "instrument_pnl.csv": 248,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 256,
+        "fee_details.csv": 4
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-17c115618f32fdcc4466",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1075217.57175000",
+        "net_pnl": "75217.57175000",
+        "valuation_and_trading_pnl": "68463.20000000",
+        "corporate_income": "6994.20000000",
+        "fee_cash": "-239.82825000",
+        "first_period_end": "2025-12-02T07:00:00.000003+00:00",
+        "last_period_end": "2026-03-10T07:00:00.000251+00:00",
+        "transactions_checked": 13,
+        "entitlements_checked": 2
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "buy_hold",
+      "fold": "fold-001",
+      "source_run_manifest_sha256": "43d368a278efcf51c336a30ebd26fdfe0072c7c4f0fcb251711d22500aa39936",
+      "report_manifest_sha256": "5bd0d9318c367e4b42d500da19db762bc5a95c5f7a32daa0f068876500e68d78",
+      "row_counts": {
+        "instrument_pnl.csv": 248,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 252,
+        "fee_details.csv": 4
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-17c115618f32fdcc4466",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1060722.42711000",
+        "net_pnl": "60722.42711000",
+        "valuation_and_trading_pnl": "60961.70000000",
+        "corporate_income": "0",
+        "fee_cash": "-239.27289000",
+        "first_period_end": "2026-03-11T07:00:00.000003+00:00",
+        "last_period_end": "2026-06-11T07:00:00.000251+00:00",
+        "transactions_checked": 9,
+        "entitlements_checked": 0
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "buy_hold",
+      "fold": "fold-002",
+      "source_run_manifest_sha256": "647571cea8ae9dc6c4b06491218650840ac46d580233a9fd7a9ccc9d945440f2",
+      "report_manifest_sha256": "24755155e83791f19d830cc49cdc766d5c242b7e70fb024f8bc04e48a070d4ce",
+      "row_counts": {
+        "instrument_pnl.csv": 248,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 254,
+        "fee_details.csv": 8
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-17c115618f32fdcc4466",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "941520.07388000",
+        "net_pnl": "-58479.92612000",
+        "valuation_and_trading_pnl": "-61618.80000000",
+        "corporate_income": "3605.80000000",
+        "fee_cash": "-466.92612000",
+        "first_period_end": "2026-06-12T07:00:00.000003+00:00",
+        "last_period_end": "2026-09-09T07:00:00.000251+00:00",
+        "transactions_checked": 19,
+        "entitlements_checked": 1
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "cost_2x",
+      "fold": "fold-000",
+      "source_run_manifest_sha256": "fca76254e77bd42ced99518d65aea94ea9fc2dcffe9cf67d8ae473166942ecee",
+      "report_manifest_sha256": "c452f72fb544af6840f637ed566507dd41818a7ebe5436bff4d6098eb350bc12",
+      "row_counts": {
+        "instrument_pnl.csv": 161,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 256,
+        "fee_details.csv": 28
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-dd9dcc675b91bd8f3d26",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1032335.33992000",
+        "net_pnl": "32335.33992000",
+        "valuation_and_trading_pnl": "21446.30000000",
+        "corporate_income": "13746.20000000",
+        "fee_cash": "-2857.16008000",
+        "first_period_end": "2025-12-02T07:00:00.000003+00:00",
+        "last_period_end": "2026-03-10T07:00:00.000251+00:00",
+        "transactions_checked": 61,
+        "entitlements_checked": 2
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "cost_2x",
+      "fold": "fold-001",
+      "source_run_manifest_sha256": "a8e147361a174711767a9917f8f85577a0316d8c34221a7d46aeb3c4cd300390",
+      "report_manifest_sha256": "017ca63d469957bee32883b754aec2e7c9ca7448895861fb13856f9c39287304",
+      "row_counts": {
+        "instrument_pnl.csv": 185,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 252,
+        "fee_details.csv": 25
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-dd9dcc675b91bd8f3d26",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1005626.64098000",
+        "net_pnl": "5626.64098000",
+        "valuation_and_trading_pnl": "8143.60000000",
+        "corporate_income": "0",
+        "fee_cash": "-2516.95902000",
+        "first_period_end": "2026-03-11T07:00:00.000003+00:00",
+        "last_period_end": "2026-06-11T07:00:00.000251+00:00",
+        "transactions_checked": 51,
+        "entitlements_checked": 0
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "cost_2x",
+      "fold": "fold-002",
+      "source_run_manifest_sha256": "ddce2ad81466077a3392ab2dd6f1c12c0e1a205e899424548b5811a4166ac06f",
+      "report_manifest_sha256": "7878f75c9a210c8342c522e73fc577bac052e2776706186b19086c8ceb6cb43d",
+      "row_counts": {
+        "instrument_pnl.csv": 218,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 254,
+        "fee_details.csv": 14
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-dd9dcc675b91bd8f3d26",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "918027.88788000",
+        "net_pnl": "-81972.11212000",
+        "valuation_and_trading_pnl": "-86953.80000000",
+        "corporate_income": "6913.60000000",
+        "fee_cash": "-1931.91212000",
+        "first_period_end": "2026-06-12T07:00:00.000003+00:00",
+        "last_period_end": "2026-09-09T07:00:00.000251+00:00",
+        "transactions_checked": 31,
+        "entitlements_checked": 1
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "delay_1",
+      "fold": "fold-000",
+      "source_run_manifest_sha256": "d7a45247ebc12f50cf6407ada6c86cb5c862ede313b496cc7bdc00535ce34814",
+      "report_manifest_sha256": "36eeecc5a13050410eccb6960c443c9092d0fb75ba3edb9a097f9ff9ce0c5f7d",
+      "row_counts": {
+        "instrument_pnl.csv": 138,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 256,
+        "fee_details.csv": 27
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-e9290a772375b36fb1d6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "1020369.28427000",
+        "net_pnl": "20369.28427000",
+        "valuation_and_trading_pnl": "8793.60000000",
+        "corporate_income": "13475.10000000",
+        "fee_cash": "-1899.41573000",
+        "first_period_end": "2025-12-02T07:00:00.000003+00:00",
+        "last_period_end": "2026-03-10T07:00:00.000251+00:00",
+        "transactions_checked": 59,
+        "entitlements_checked": 2
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "delay_1",
+      "fold": "fold-001",
+      "source_run_manifest_sha256": "6a21df9020379fc74e3e968577bfd6c7e960af3df2efa1aa4519e5ca95efe031",
+      "report_manifest_sha256": "e8ce449042df0d7e63cdd9c7f2f9eef5c6cfaa586e149da1e036b0e558012189",
+      "row_counts": {
+        "instrument_pnl.csv": 174,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 252,
+        "fee_details.csv": 21
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-e9290a772375b36fb1d6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "993158.27978000",
+        "net_pnl": "-6841.72022000",
+        "valuation_and_trading_pnl": "-5852.70000000",
+        "corporate_income": "0",
+        "fee_cash": "-989.02022000",
+        "first_period_end": "2026-03-11T07:00:00.000003+00:00",
+        "last_period_end": "2026-06-11T07:00:00.000251+00:00",
+        "transactions_checked": 43,
+        "entitlements_checked": 0
+      },
+      "status": "pass"
+    },
+    {
+      "candidate": "delay_1",
+      "fold": "fold-002",
+      "source_run_manifest_sha256": "60877cbb0b64de9a1686034c70c0904e7254a3dd3cbc416cd5881609c1616d2c",
+      "report_manifest_sha256": "56d34e745e9db2a82fb22010440fbb1af81c8fd8b609b47f77c167ea2143c1d3",
+      "row_counts": {
+        "instrument_pnl.csv": 208,
+        "period_reconciliation.csv": 63,
+        "event_reconciliation.csv": 254,
+        "fee_details.csv": 15
+      },
+      "summary": {
+        "account_id": "a-share-multifactor-account",
+        "strategy_id": "research-e9290a772375b36fb1d6",
+        "currency": "CNY",
+        "opening_nav": "1000000.00000000",
+        "closing_nav": "955200.46822000",
+        "net_pnl": "-44799.53178000",
+        "valuation_and_trading_pnl": "-50726.90000000",
+        "corporate_income": "6898.70000000",
+        "fee_cash": "-971.33178000",
+        "first_period_end": "2026-06-12T07:00:00.000003+00:00",
+        "last_period_end": "2026-09-09T07:00:00.000251+00:00",
+        "transactions_checked": 33,
+        "entitlements_checked": 1
+      },
+      "status": "pass"
+    }
+  ],
+  "remaining": [
+    "causal-reference slippage decomposition",
+    "signal/allocation/risk/cash counterfactual replay",
+    "independent natural forward evidence"
+  ],
+  "browser_acceptance": {
+    "page": "base/fold-000/report.html",
+    "summary_visible": true,
+    "period_rows_visible": 63,
+    "limitations_visible": true,
+    "screenshot_sha256": "96c7a8e48fab04a862f39777a55a87f0caa3de93b38bef59462ef5921033a625"
+  }
+}
