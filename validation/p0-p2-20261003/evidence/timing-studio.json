@@ -1,0 +1,236 @@
+{
+  "schema_version": "quant.acceptance.timing-studio/v1",
+  "as_of": "2026-10-04",
+  "scope": "P1.1增量；未完成全部P0-P2",
+  "versions": {
+    "timing_implementation": "4773d8f1ef3dac9cf86f155d9fe28f112fc9d649",
+    "timing_merge": "a2e057d9fa2b162869003153674c943259942468",
+    "studio_implementation": "3cd2ebf62a2a208fb653d879cef91950314f7f28",
+    "studio_merge": "6a6f20af58dbe468b227daa163b2984633e8abbd",
+    "workspace_implementation": "f6d20786835311fc9000770dce3b722e74a93c2d"
+  },
+  "gui_cases": {
+    "synthetic": {
+      "run_id": "8c54638ba33a4ef4aea3bdfd01470af1",
+      "preflight_id": "f7c15493fc674e14b56d70b0b77c4456",
+      "status": "succeeded",
+      "evidence_kind": "synthetic",
+      "rows": 360,
+      "symbols": 5,
+      "scored_folds": 5,
+      "fold_count": 5,
+      "publication": "use",
+      "standard_artifacts": 6,
+      "effective_config_sha256": "e6e7eb1db680955976ffdd2c18b43201e70e041ef664815b9ba6bbdc564794c4",
+      "view_sha256": "ac458943530873b805daf2bdb0688dc658af5d867528402fce25caea9716070a",
+      "fold_csv_sha256": "c8658219ca2ac1a27e910ee18f19ef01b03e02dcb6949c96df9ed6df025a5047",
+      "descriptive_full_sample_net": -0.2483763610620282,
+      "descriptive_full_sample_benchmark": -0.3811446492917251
+    },
+    "real": {
+      "run_id": "80ecbb64e095413da4538ac8c78c91a8",
+      "preflight_id": "51f49b416bf94c5aa3ebe6c3c9e07fc9",
+      "status": "succeeded",
+      "evidence_kind": "retrospective",
+      "rows": 424,
+      "symbols": 4,
+      "scored_folds": 7,
+      "fold_count": 7,
+      "publication": "use",
+      "standard_artifacts": 6,
+      "effective_config_sha256": "64d7fd4cdce806c2a67132a2da5eb3849954d7641c87036e1c1c61a6578a050a",
+      "view_sha256": "8056a4628a5b235be731fbacb0394ec6e889b9dd8d56f0cfaacd556f0a3c1e0c",
+      "fold_csv_sha256": "4d3a56ecb411ed1913c330b064fa9acf46903ae521ee888f55f6dc59e856e948",
+      "descriptive_full_sample_net": 0.0784609558095282,
+      "descriptive_full_sample_benchmark": 0.1894806257175232
+    },
+    "hold": {
+      "run_id": "261466786abc4066828b736cc2cdc3cb",
+      "preflight_id": "3eefe9ebf7c04bf48786bde369397e72",
+      "status": "succeeded",
+      "evidence_kind": "synthetic",
+      "rows": 360,
+      "symbols": 5,
+      "scored_folds": 5,
+      "fold_count": 5,
+      "publication": "hold_previous",
+      "standard_artifacts": 6,
+      "effective_config_sha256": "3fb0e1671aaf40f8389120bfcb32dd5329af1902cc0406bb1b8cdeaa795fd2c9",
+      "view_sha256": "8ee220225a98db9dfacca78e83296200f416b8453946ff98a1614868c356bca4",
+      "fold_csv_sha256": "64032bd6d06356e05338b631683d9e1405d80748fda8db26dd9754a7a142304c",
+      "descriptive_full_sample_net": -0.2327559625106455,
+      "descriptive_full_sample_benchmark": -0.3811446492917251
+    },
+    "blocked": {
+      "run_id": "724d00fe682844b2942cb830eda21a85",
+      "preflight_id": "97e65b2bc1724066a1946a8b10a3e4aa",
+      "status": "failed",
+      "evidence_kind": "synthetic",
+      "rows": 360,
+      "symbols": 5,
+      "scored_folds": 5,
+      "fold_count": 5,
+      "publication": "blocked",
+      "standard_artifacts": 6,
+      "effective_config_sha256": "b2b8c702eb6a38f40ceea526532be5fff1395724864674be0b359c8cf8964179",
+      "view_sha256": "5fb890e10762d00ff52e823b53b7e4848515966a6db7e007fd5de03e371a16eb",
+      "fold_csv_sha256": "c7332a6c7bd46f2600a505ad16350ecfbf53dec0f44798bd32055454a9987062"
+    }
+  },
+  "short_preflight_id": "2d9da1c75123425ca3dc77863e3feb13",
+  "tests": {
+    "native-tests.xml": {
+      "tests": 114,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "studio-tests.xml": {
+      "tests": 159,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "integration-tests.xml": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "workspace-tests.xml": {
+      "tests": 110,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "notes-contract-tests.log": {
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "checks": {
+    "gui_preflight_count": 5,
+    "gui_research_count": 4,
+    "native_standard_artifact_count": 24,
+    "same_preflight_run_config": true,
+    "native_curve_metrics_tolerance": 1e-12,
+    "native_csv_copies_equal": true,
+    "fold_download_equal": true,
+    "hold_and_blocked_scale_absent": true,
+    "blocked_success_curves_absent": true,
+    "short_run_button_absent": true,
+    "tampered_file_cases_rejected": 7,
+    "missing_native_fold_rejected": true,
+    "projection_rejects_damaged_fold": true,
+    "protected_input_files": 10,
+    "input_fingerprints_unchanged": true,
+    "console_error_warning_count": 0,
+    "desktop": {
+      "scrollWidth": 1265,
+      "width": 1280
+    },
+    "mobile_before": {
+      "scrollWidth": 425,
+      "tables": [
+        {
+          "containerWidth": 285,
+          "overflow": "auto",
+          "width": 1738.109375
+        },
+        {
+          "containerWidth": 285,
+          "overflow": "auto",
+          "width": 706.984375
+        },
+        {
+          "containerWidth": 285,
+          "overflow": "auto",
+          "width": 711
+        },
+        {
+          "containerWidth": 285,
+          "overflow": "auto",
+          "width": 846.859375
+        }
+      ],
+      "width": 390
+    },
+    "mobile_after": {
+      "scrollWidth": 375,
+      "stats": [
+        {
+          "width": 293,
+          "wrap": "wrap"
+        },
+        {
+          "width": 293,
+          "wrap": "wrap"
+        }
+      ],
+      "width": 390
+    }
+  },
+  "evidence_sha256": {
+    "native-tests.xml": "98b5816499540218eecd76a8ba72b4d319b1721279619122e113e78c3035b088",
+    "studio-tests.xml": "1381e881e7f1523cbe61ab9779f052307cc56aa5156ac9610686d5c0a5da3533",
+    "integration-tests.xml": "1cc0457c36e02b76cd7d9b2f01521128a1d8df0d7ffb34746efa6cdbb3d1ac95",
+    "acceptance-local.json": "1207796e7964c005af0a54c546f378f1966054daa6cff1aaabb1a66c9417bd29",
+    "gui-checks.json": "01a98b0bf78cfc879ac83c5a5b3adfc2b14298cc969aaa1b001b3b107021ddd2",
+    "workspace-tests.xml": "5e73cd1a7d391031706c811d9b0622df9d7aa7ac9b5150d8bdc652510685ace3",
+    "notes-contract-tests.log": "b99afc59baeafc4e9cc1d164471e1d9e6d277a06cb10b671e0063bf4fb7908f7",
+    "source-inventory.json": "782ef113134673a001137d92c9274b090c450e792a145004d80072533ff21d12"
+  },
+  "screenshots_sha256": {
+    "blocked-result.png": "cfbbf5c5307e0398ad6c0366e6937d0642dd58460e48c763410c9db3998ab2cb",
+    "hold-result.png": "457a571ff3259d99d75d16b2814622af73552ac3290662516dc500a0916527b5",
+    "real-curves-desktop.png": "d01b0accdb7f80aa65158d52de5120cbfe47ad93e96183efb8833f5e7737e43b",
+    "real-mobile-fixed.png": "f823e5fb36864c5af538ed93269e6cec9c5588de7f2693faca73d4c48ee3d01a",
+    "real-mobile.png": "857bccf0432af8ffc243761d6cac558b61941d0b20a53ee6164c4c98aa8bdd96",
+    "real-preflight.png": "e5b34587a6678e014b61ec84f56b12ad892a6ba98fabeb3bd4190a384a4fa9ed",
+    "real-result.png": "edfb1e4672cabaef96eca86b01431fa5881067317340ce02d487d9cc6e7efc07",
+    "short-rejected.png": "42e603033730e4e8356980c1d6192b5d018301bb1cc836ac49f6a6ee8bfa260d",
+    "synthetic-preflight.png": "79e7dc81b04604856bc0035ddbba6757f01887332b34f48ec2f5968f1760fb00",
+    "synthetic-result.png": "221bf0de0621ae4bef9fad14d48b3b2e22b6b67d8801ee46f43d5045a58551fc"
+  },
+  "limitations": [
+    "Real inputs are retrospective adjusted prices; no PIT or market certification.",
+    "Full-sample curves are descriptive and include warmup.",
+    "Average fold excess is not compounded return.",
+    "No existing account, frozen environment, automation or historical output changed.",
+    "Timing integration follows upstream dependency declarations, not a complete frozen lock."
+  ],
+  "source_inventory": {
+    "count": 23,
+    "source_inventory_complete": true,
+    "claims": {
+      "runtime_verified": false,
+      "integration_verified": false,
+      "market_data_certified": false,
+      "release_verified": false
+    }
+  },
+  "ci": {
+    "timing_pr": {
+      "run_id": 37154517243,
+      "result": "success",
+      "jobs": 6
+    },
+    "timing_main": {
+      "run_id": 37154758509,
+      "result": "success",
+      "jobs": 6
+    },
+    "studio_pr_tests": {
+      "run_id": 37154600521,
+      "result": "success",
+      "jobs": 2
+    },
+    "studio_pr_integration": {
+      "run_id": 37154600532,
+      "result": "success",
+      "jobs": 16
+    }
+  }
+}

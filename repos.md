@@ -8,7 +8,7 @@
 | Repo | Role | Key CLI |
 |------|------|---------|
 | quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、九模板与八个业务预检入口、显式运行、只读前向账户及原生事件账本展示 | `python -m quant_studio serve/check` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、十模板与九个业务预检入口、显式运行、只读前向账户、原生事件账本及择时分折/发布展示 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
@@ -22,7 +22,7 @@
 | [quant-us-equity](https://github.com/PureSaber/quant-us-equity) | 美股研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
 | [quant-fund](https://github.com/PureSaber/quant-fund) | 基金研究、场外申赎模拟和FOF监控；已有真实净值小样本，完整条款、分红和分用途日历仍未闭合 | `python -m quant_fund.cli`、`streamlit run app.py` |
 | [quant-stat-arb](https://github.com/PureSaber/quant-stat-arb) | 统计套利研究（private）、原生只读预检和Studio配置文件入口；不属于既有M8认证范围 | `python -m quant_stat_arb preflight/run` |
-| [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；原生只读预检、因果回放和独立仓位发布门禁；Studio接入待做 | `python -m quant_timing preflight/run/compare` |
+| [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；原生只读预检、因果回放、仓位发布门禁及受保护分折证据；Studio已接入 | `python -m quant_timing preflight/run/compare` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
 | quant-lab | Experiment index + HTML dashboard | `quant-lab scan/export html` |
 | quant-report-hub | Charts (spread + equity) | `quant-report run` |
@@ -63,6 +63,7 @@ quant-studio ── declared templates / CLI ──► a-share-multifactor / qua
              ├─ native preflight / CLI ──► quant-fund / quant-us-equity
              ├─ offline fixture / native ledger views ──► quant-futures-spread / quant-crypto-basis
              ├─ research config file / native preflight ──► quant-stat-arb
+             ├─ research config / verified folds and publication ──► quant-timing
              └─ read-only account inspection ──► quant-pipeline
 
 quant-fund ── independent fund research / OTC ledger ──► read-only integration snapshot
