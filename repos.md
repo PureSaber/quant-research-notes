@@ -8,7 +8,7 @@
 | Repo | Role | Key CLI |
 |------|------|---------|
 | quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、模板操作、港股原生预检、显式运行及只读前向账户 | `python -m quant_studio serve/check` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、模板操作、A股/港股/模拟盘原生预检、显式运行及只读前向账户 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
