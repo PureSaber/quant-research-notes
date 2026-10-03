@@ -1,0 +1,1435 @@
+{
+  "account_policy": "independent; 1000000 CNY opening capital for each fold",
+  "aggregate": {
+    "cash": {
+      "definition": "each effect is intervention terminal return minus baseline terminal return",
+      "limitations": [
+        "model-dependent counterfactuals, not causal identification",
+        "residual includes omitted effects and interactions",
+        "better unconstrained backtest does not authorize weaker live risk limits"
+      ],
+      "one_at_a_time_effects": {
+        "allocation": 0.0,
+        "delay": -0.00010230830823310111,
+        "fees": 0.01643692431413768,
+        "frequency": -0.018944954341473808,
+        "risk_latch": 0.0,
+        "signal": 0.08339798544055954
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "reference": "cash",
+      "return_gap": 0.031908805596341905,
+      "sessions": 189,
+      "total_returns": {
+        "allocation": -0.031908805596341905,
+        "base": -0.031908805596341905,
+        "cash": 0.0,
+        "delay": -0.032011113904575006,
+        "fees": -0.015471881282204225,
+        "frequency": -0.05085375993781571,
+        "passive": 0.13006746938145342,
+        "risk_latch": -0.031908805596341905,
+        "same_risk_constrained": 0.07381060433240627,
+        "signal": 0.051489179844217636
+      },
+      "unexplained_and_interaction_residual": -0.04887884150864841
+    },
+    "passive": {
+      "definition": "each effect is intervention terminal return minus baseline terminal return",
+      "limitations": [
+        "model-dependent counterfactuals, not causal identification",
+        "residual includes omitted effects and interactions",
+        "better unconstrained backtest does not authorize weaker live risk limits"
+      ],
+      "one_at_a_time_effects": {
+        "allocation": 0.0,
+        "delay": -0.00010230830823310111,
+        "fees": 0.01643692431413768,
+        "frequency": -0.018944954341473808,
+        "risk_latch": 0.0,
+        "signal": 0.08339798544055954
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "reference": "passive",
+      "return_gap": 0.16197627497779532,
+      "sessions": 189,
+      "total_returns": {
+        "allocation": -0.031908805596341905,
+        "base": -0.031908805596341905,
+        "cash": 0.0,
+        "delay": -0.032011113904575006,
+        "fees": -0.015471881282204225,
+        "frequency": -0.05085375993781571,
+        "passive": 0.13006746938145342,
+        "risk_latch": -0.031908805596341905,
+        "same_risk_constrained": 0.07381060433240627,
+        "signal": 0.051489179844217636
+      },
+      "unexplained_and_interaction_residual": 0.08118862787280501
+    },
+    "same_risk_constrained": {
+      "definition": "each effect is intervention terminal return minus baseline terminal return",
+      "limitations": [
+        "model-dependent counterfactuals, not causal identification",
+        "residual includes omitted effects and interactions",
+        "better unconstrained backtest does not authorize weaker live risk limits"
+      ],
+      "one_at_a_time_effects": {
+        "allocation": 0.0,
+        "delay": -0.00010230830823310111,
+        "fees": 0.01643692431413768,
+        "frequency": -0.018944954341473808,
+        "risk_latch": 0.0,
+        "signal": 0.08339798544055954
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "reference": "same_risk_constrained",
+      "return_gap": 0.10571940992874818,
+      "sessions": 189,
+      "total_returns": {
+        "allocation": -0.031908805596341905,
+        "base": -0.031908805596341905,
+        "cash": 0.0,
+        "delay": -0.032011113904575006,
+        "fees": -0.015471881282204225,
+        "frequency": -0.05085375993781571,
+        "passive": 0.13006746938145342,
+        "risk_latch": -0.031908805596341905,
+        "same_risk_constrained": 0.07381060433240627,
+        "signal": 0.051489179844217636
+      },
+      "unexplained_and_interaction_residual": 0.024931762823757864
+    }
+  },
+  "aggregate_semantics": "compound the ordered returns of three independent accounts; not a position-continuous account",
+  "artifacts_checked": 564,
+  "candidate_period_records": 1701,
+  "cash_report_code_commit": "db28ce940acdf143d14b0dbaf3cbca1aaeeac7c7",
+  "checked_at": "2026-10-03T10:47:01.623026+00:00",
+  "combined_returns_sha256": "9c0e3d771e2d72e3fd95cc03e0354f25b0f3943e204143991df59c5ede3befd0",
+  "folds": [
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.018155495049998027,
+            "fees": 0.006785620680000992,
+            "frequency": 0.0029141149999996063,
+            "risk_latch": 0.0,
+            "signal": 0.006642721129999751
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "cash",
+          "return_gap": -0.03852477932000031,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.03852477932000031,
+            "base": 0.03852477932000031,
+            "cash": 0.0,
+            "delay": 0.020369284270002286,
+            "fees": 0.045310400000001305,
+            "frequency": 0.04143889431999992,
+            "passive": 0.09406831511000235,
+            "risk_latch": 0.03852477932000031,
+            "same_risk_constrained": 0.07521757175000099,
+            "signal": 0.045167500450000064
+          },
+          "unexplained_and_interaction_residual": -0.036711741080002636
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.018155495049998027,
+            "fees": 0.006785620680000992,
+            "frequency": 0.0029141149999996063,
+            "risk_latch": 0.0,
+            "signal": 0.006642721129999751
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "passive",
+          "return_gap": 0.05554353579000204,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.03852477932000031,
+            "base": 0.03852477932000031,
+            "cash": 0.0,
+            "delay": 0.020369284270002286,
+            "fees": 0.045310400000001305,
+            "frequency": 0.04143889431999992,
+            "passive": 0.09406831511000235,
+            "risk_latch": 0.03852477932000031,
+            "same_risk_constrained": 0.07521757175000099,
+            "signal": 0.045167500450000064
+          },
+          "unexplained_and_interaction_residual": 0.05735657402999972
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.018155495049998027,
+            "fees": 0.006785620680000992,
+            "frequency": 0.0029141149999996063,
+            "risk_latch": 0.0,
+            "signal": 0.006642721129999751
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.036692792430000676,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.03852477932000031,
+            "base": 0.03852477932000031,
+            "cash": 0.0,
+            "delay": 0.020369284270002286,
+            "fees": 0.045310400000001305,
+            "frequency": 0.04143889431999992,
+            "passive": 0.09406831511000235,
+            "risk_latch": 0.03852477932000031,
+            "same_risk_constrained": 0.07521757175000099,
+            "signal": 0.045167500450000064
+          },
+          "unexplained_and_interaction_residual": 0.03850583066999835
+        }
+      },
+      "fold": "fold-000",
+      "interval": {
+        "end": "2026-03-10",
+        "start": "2025-12-02"
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "report_sha256": "dfcce83ad80d8478ea78ec2696b99a64baa4f34f422d62375ff0690b3399c665",
+      "runs": [
+        {
+          "cash_attribution_sha256": "8736eff7410097006f152c4ba035b57870628b3370f63c0f9b4a8c1b852c3204",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 28,
+            "instrument_pnl.csv": 161,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "1151d97d66190405d3916ffc83042cb448892b7fd5e7a33fe9abdb305210cc77",
+          "manifest_sha256": "89ae737b47fd92a13d6893c153a6c1e354b9cb7c5dab7f06eb853bd2f078d4a7",
+          "metrics": {
+            "cost_total": 1432.92068,
+            "fills": 28,
+            "max_drawdown": -0.044920076832724254,
+            "sharpe": 1.3347892728455495,
+            "total_return": 0.038524779319999425
+          },
+          "name": "base",
+          "result_sha256": "31df42e09fb1857f74672e6849d1f953f05397ea4ff0a4bd1f28a708933b3678",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "6a4fb60bfc33203e8108db110fe1f2ef0c9d0963bd03327f419b47cc4197f9c0",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 28,
+            "instrument_pnl.csv": 161,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "2ef37fe355e32dd15ba21c40d534736694cd3239bcf62a85a0163f3411b3868c",
+          "manifest_sha256": "057c7f429f89ce141689153a22f6abd93922f6ea4df56d4309e80f21862b142a",
+          "metrics": {
+            "cost_total": 1432.92068,
+            "fills": 28,
+            "max_drawdown": -0.044920076832724254,
+            "sharpe": 1.3347892728455495,
+            "total_return": 0.038524779319999425
+          },
+          "name": "allocation",
+          "result_sha256": "b138811d15d351dbeb515908160da3bf290485cbc0b1ae6d04cd262575e59171",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "89c165e5edbcaf0e39e9fe30f25f879f74c8270937669f0b60912344d970259a",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 27,
+            "instrument_pnl.csv": 138,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "d91072c3c84711f77d836f848ea88b7b90c31f0d0da86f6ffdd91c0a6c2f837f",
+          "manifest_sha256": "7a81d05b3dcdd5ca7c7c75d5d055d694da155a8e49723ac67b59adb3af965b6c",
+          "metrics": {
+            "cost_total": 1899.41573,
+            "fills": 27,
+            "max_drawdown": -0.03989480676493007,
+            "sharpe": 0.7050665366327438,
+            "total_return": 0.020369284270000954
+          },
+          "name": "delay",
+          "result_sha256": "4d25f772f1074e4f07167ca32ea705dd8e5f7eaffa6b70cc7f64c17aa5e0af37",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "ef7f5aada476839c22b42605871559ef506661fb1c0bb5b2e8bffb07bc3718d8",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 0,
+            "instrument_pnl.csv": 161,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "a9d051e008086fcc4092c2f929a54b306f2a78752b724f426719a92c38d8e1be",
+          "manifest_sha256": "960977dfd382e42ae02ecc2c5aeabb076c7e0058f8e36b5d9cacb3b30bc493e0",
+          "metrics": {
+            "cost_total": 0.0,
+            "fills": 28,
+            "max_drawdown": -0.04382475696117094,
+            "sharpe": 1.5556965560603049,
+            "total_return": 0.04531039999999975
+          },
+          "name": "fees",
+          "result_sha256": "a0e30b67dc720de629362250a49d23e400b0f69dfb3ad598ccfbddfbcd91935a",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "4adecb0b3b3c9251cf579d3212ee3416dbb82a3817933e428f9d97283257cc26",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 67,
+            "instrument_pnl.csv": 164,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "9b4795d4740ac0c8192390684b27eca8ce86b811c5e883f577ba768404de8836",
+          "manifest_sha256": "cbcc9edcbc669ba2067da831bd45b5629ac666d7c5a8893f6bc7d6980ccf7bd1",
+          "metrics": {
+            "cost_total": 3296.00568,
+            "fills": 67,
+            "max_drawdown": -0.03792738398055351,
+            "sharpe": 1.54225114428151,
+            "total_return": 0.04143889431999903
+          },
+          "name": "frequency",
+          "result_sha256": "aca1ab39c947ff97cc3978bda55ae9ead133f95213caff9ecd95a3646c9b2122",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 8,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "0d15c84937bc85ea2042add6d710bd3e4ad7099851efe7346625a3e639262703",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 28,
+            "instrument_pnl.csv": 161,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "b033e22bf93e541883dbc77ff1eb280b2b8db8d81791da3d82b0a6cce43c2661",
+          "manifest_sha256": "89eef43d70d1ebe33d6c67374d56dbc61f3c03a744c5501e4b73934b9409161c",
+          "metrics": {
+            "cost_total": 1432.92068,
+            "fills": 28,
+            "max_drawdown": -0.044920076832724254,
+            "sharpe": 1.3347892728455495,
+            "total_return": 0.038524779319999425
+          },
+          "name": "risk_latch",
+          "result_sha256": "9b4d6147c12f21e092bc705b9786419a36058eef8777de41a05f0353aa29a976",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "041d2d66ac728566e9e51c7f280c30014ff1efe325265d33e5d263c6999f6b80",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 27,
+            "instrument_pnl.csv": 196,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "5542ea75d6e6b59b154f0a0911147b58d2c20a47789b3aa20c0d416b9acd8852",
+          "manifest_sha256": "c2c66dfc21e9b44a91fb2ccde1486bec5dac288dcec1c8c4ea99497ea6cb3449",
+          "metrics": {
+            "cost_total": 1200.29955,
+            "fills": 27,
+            "max_drawdown": -0.05690133688825871,
+            "sharpe": 1.2018093656668334,
+            "total_return": 0.0451675004499994
+          },
+          "name": "signal",
+          "result_sha256": "60c8da21111997ce65469754832377bf5a1afdfd1bbde5d98baef643a982eab0",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "effe650768bd3e5b9fcdb32dffb9f08a11163a297fa9a1db93d6f62aca1e11d2",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 4,
+            "instrument_pnl.csv": 248,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "3581f1fa7ccba18358ad3c423744bdd44034651e6893459afda3468ebcff41f9",
+          "manifest_sha256": "6edba07cf357a33a0e242d154f49668342e93fc3b7e9595325f0cba2293f4a84",
+          "metrics": {
+            "cost_total": 299.88489,
+            "fills": 4,
+            "max_drawdown": -0.05804345624728757,
+            "sharpe": 1.9624598619896956,
+            "total_return": 0.09406831511000124
+          },
+          "name": "passive",
+          "result_sha256": "f9cf49ab4dd4245374de39fb185da2f7c0c01a1ea39267e1efcc793a0a3052be",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": null,
+            "model_snapshots": 0,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "b34544b5f916eb69731731abcf58106258008135b0a3b5a5eb3651252ab42828",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 256,
+            "fee_details.csv": 4,
+            "instrument_pnl.csv": 248,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "0c7728a05dbcb92229e15bd11116172e6beb8ea636377843de66708a27c6e30f",
+          "manifest_sha256": "547be16647e07aeb65b578478594f8c93a6c325c26bfd4245435e93ea35c40a9",
+          "metrics": {
+            "cost_total": 239.82825,
+            "fills": 4,
+            "max_drawdown": -0.047531925114532636,
+            "sharpe": 1.9348193713666646,
+            "total_return": 0.07521757174999943
+          },
+          "name": "same_risk_constrained",
+          "result_sha256": "5b0f11a8c5fbddcbbf6ece08f1f43bd2fba3bab60d66f70f9a3de83d7fc68051",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        }
+      ],
+      "sessions": 63,
+      "source_reproductions": {
+        "base": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "2056a660dd023bc4c96ad2bf8d88ed4b5f001c222c5f85c2e6d492e0c78bcc81"
+        },
+        "delay": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "bf78c83409e930ac0ec24e5b9846d6277af46fd520694ea604c76581d953b9fa"
+        },
+        "same_risk_constrained": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "5912da2661f48e91656e306d89f2c17a4f37d84a180de7e0c5be4485d935abcd"
+        }
+      }
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.01807363378999971,
+            "fees": 0.005931586429998026,
+            "frequency": -0.0035012150099988926,
+            "risk_latch": 0.0,
+            "signal": 0.04250376260000022
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "cash",
+          "return_gap": -0.011231913570001417,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.011231913570001417,
+            "base": 0.011231913570001417,
+            "cash": 0.0,
+            "delay": -0.006841720219998293,
+            "fees": 0.017163499999999443,
+            "frequency": 0.007730698560002525,
+            "passive": 0.07591985990000061,
+            "risk_latch": 0.011231913570001417,
+            "same_risk_constrained": 0.06072242711000175,
+            "signal": 0.053735676170001634
+          },
+          "unexplained_and_interaction_residual": -0.03809241380000106
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.01807363378999971,
+            "fees": 0.005931586429998026,
+            "frequency": -0.0035012150099988926,
+            "risk_latch": 0.0,
+            "signal": 0.04250376260000022
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "passive",
+          "return_gap": 0.06468794632999919,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.011231913570001417,
+            "base": 0.011231913570001417,
+            "cash": 0.0,
+            "delay": -0.006841720219998293,
+            "fees": 0.017163499999999443,
+            "frequency": 0.007730698560002525,
+            "passive": 0.07591985990000061,
+            "risk_latch": 0.011231913570001417,
+            "same_risk_constrained": 0.06072242711000175,
+            "signal": 0.053735676170001634
+          },
+          "unexplained_and_interaction_residual": 0.03782744609999955
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": -0.01807363378999971,
+            "fees": 0.005931586429998026,
+            "frequency": -0.0035012150099988926,
+            "risk_latch": 0.0,
+            "signal": 0.04250376260000022
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.049490513540000336,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": 0.011231913570001417,
+            "base": 0.011231913570001417,
+            "cash": 0.0,
+            "delay": -0.006841720219998293,
+            "fees": 0.017163499999999443,
+            "frequency": 0.007730698560002525,
+            "passive": 0.07591985990000061,
+            "risk_latch": 0.011231913570001417,
+            "same_risk_constrained": 0.06072242711000175,
+            "signal": 0.053735676170001634
+          },
+          "unexplained_and_interaction_residual": 0.022630013310000696
+        }
+      },
+      "fold": "fold-001",
+      "interval": {
+        "end": "2026-06-11",
+        "start": "2026-03-11"
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "report_sha256": "8f4e32b36444f318b33856bc3a97af1f346cb418aa932fec7f05a9595f2d5be3",
+      "runs": [
+        {
+          "cash_attribution_sha256": "a215adf56517ca64f773214bc9512192cd11b82e64bb0dea61e4e71cfdc12677",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 24,
+            "instrument_pnl.csv": 185,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "9736a8e29d7b25a3bc2043f15983926fce3baba4bc0c7e1fe8f69c8c0f0ad23a",
+          "manifest_sha256": "117a56edc4bd833d61d87f874ed41c88bba8e1a6eda9315d445603504f214d6b",
+          "metrics": {
+            "cost_total": 1256.88643,
+            "fills": 24,
+            "max_drawdown": -0.051783673405335406,
+            "sharpe": 0.35412910608119136,
+            "total_return": 0.01123191356999964
+          },
+          "name": "base",
+          "result_sha256": "4b985cac8e5d07b00359cb87cee6a16b8cf55911072459a55f402b77b66de0f2",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "f6660f37f9551ca07b83e6b52c222be547100baa91c0b1b28e096a129759a9d5",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 24,
+            "instrument_pnl.csv": 185,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "8bedadad8123f8d4041081edfc1121bd345e9d2aa73ea7a90b3bc5590624f68b",
+          "manifest_sha256": "a71cfdb168b5faba28aa1fd76e392437f3beeea32a1cf5d929c2097870902474",
+          "metrics": {
+            "cost_total": 1256.88643,
+            "fills": 24,
+            "max_drawdown": -0.051783673405335406,
+            "sharpe": 0.35412910608119136,
+            "total_return": 0.01123191356999964
+          },
+          "name": "allocation",
+          "result_sha256": "0bf73922c6a63d8a416ccf41add9f1f59424ac7c3a684c15b77dd69d79382bf3",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "7d56e9b2de11c1b39ae27f04b64ffe240a585b8c9de3be5bff9f32634f99ee5b",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 21,
+            "instrument_pnl.csv": 174,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "10377260f082d0d2713d11315f4836ba5c1acf5f1f1552c2afe58be0ba81cf48",
+          "manifest_sha256": "0e9cd0930fc5634bd98adb01f3328e1e28193c62fe284e0bb0d4a9918ed5d3a9",
+          "metrics": {
+            "cost_total": 989.02022,
+            "fills": 21,
+            "max_drawdown": -0.04906202331194054,
+            "sharpe": -0.1017337524763064,
+            "total_return": -0.006841720219999625
+          },
+          "name": "delay",
+          "result_sha256": "d1a0faf96a99345192337b9b30894ff9b79cb9c9e0a2673cb304a36af0974138",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "2faeeb9037652b452759978b283f157051d7001521bee2f550973c3e7bc0b648",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 0,
+            "instrument_pnl.csv": 185,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "ae164c576132660dfaef0a77c39b2857b0cbafbc79d67ffe9ce5dc5e2d589d53",
+          "manifest_sha256": "e75aa1b014fa46f6fafb4240ed7496a77d918875b5883212be71f1811a109653",
+          "metrics": {
+            "cost_total": 0.0,
+            "fills": 24,
+            "max_drawdown": -0.0513167618605368,
+            "sharpe": 0.4948873058152114,
+            "total_return": 0.017163499999998777
+          },
+          "name": "fees",
+          "result_sha256": "f30bdf1d67395f961ac1481a1e11a6806feadeadb8dcf51291a5020ed912e685",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "91037a0261d90bd793eb8f750de7441d51331fd1afbff1df08ec01d4aad669d4",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 69,
+            "instrument_pnl.csv": 183,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "0791a97a697b2f9d87dcab8949c2c349bf9f1309a6e079552613d3e4e8e4adcb",
+          "manifest_sha256": "caa0c99419c2a828840a9086cd3f207d2d71ea175b7cbbc71d2bc129f0d8fb7e",
+          "metrics": {
+            "cost_total": 1690.80144,
+            "fills": 69,
+            "max_drawdown": -0.05569267242999987,
+            "sharpe": 0.27465885609405094,
+            "total_return": 0.007730698560000082
+          },
+          "name": "frequency",
+          "result_sha256": "d9341687a4b02679d3cca52aa2aacd4c219d598472320c33a7122d9e1b2299c1",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 5,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "9c89e81d0f8e16b8da35c058f33d4507574071c75904bebca052223d89cb0865",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 24,
+            "instrument_pnl.csv": 185,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "27e47a2e1f84ee0ff0eac106b8829208e1192d3dd8af9775985984081dd91ead",
+          "manifest_sha256": "7d4f173ba552c661a7c0e02c0e33aabbc17801cb1e6a2b43220dccb2daded54f",
+          "metrics": {
+            "cost_total": 1256.88643,
+            "fills": 24,
+            "max_drawdown": -0.051783673405335406,
+            "sharpe": 0.35412910608119136,
+            "total_return": 0.01123191356999964
+          },
+          "name": "risk_latch",
+          "result_sha256": "d02cba2122ae921a1034f830fe19d769b701afeada17f6a490c481919bbb70f0",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "fcb33735b2a9b3ad082e0cdad3b1a2de33992e46155033c823260ab98b5f9be5",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 23,
+            "instrument_pnl.csv": 155,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "730569b42d37d0a2c3e34f45308d26dff15ed311272ecb2affdac7a3aae229a8",
+          "manifest_sha256": "4856b1bd8340eaa12b2db11ba860c63733b091e24cf2605e00e0aaf82d2fc0d0",
+          "metrics": {
+            "cost_total": 780.12383,
+            "fills": 23,
+            "max_drawdown": -0.08472706149311426,
+            "sharpe": 1.008960524082574,
+            "total_return": 0.053735676170000524
+          },
+          "name": "signal",
+          "result_sha256": "7b4c0d2f9672a255854534242afa4b14130c475f55c70cdc4d5b7006b72d0659",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "ec9e23b2263fbcc0247f0f8a2f3c9cedbdc8761a0af4cb9bd07a84e63e819382",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 4,
+            "instrument_pnl.csv": 248,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "404fdb93fbf1b5d85fbb9f6f0753e232d1aaf544cc683cc0abe7448ae004f6db",
+          "manifest_sha256": "be21022e78a1bb542b54b142d4d4d5584329d681d5b62d57c8dc62ff67325d52",
+          "metrics": {
+            "cost_total": 299.2401,
+            "fills": 4,
+            "max_drawdown": -0.08638423358519853,
+            "sharpe": 1.1993015115638805,
+            "total_return": 0.07591985989999928
+          },
+          "name": "passive",
+          "result_sha256": "d13d70d00a9433957bc4f8a53ac0efedb9c9a258da93a7ec27146e7cfd48cca4",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": null,
+            "model_snapshots": 0,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "97bdd1d5a2dafe1889b5debcdbd8379044f0444286ca37da3d2ceb77e22754a5",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 252,
+            "fee_details.csv": 4,
+            "instrument_pnl.csv": 248,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "ccb982d6cd984da93ae94453d6991d3dfd2aa59cd3e9738bd8cbe80a284a10dd",
+          "manifest_sha256": "7724ab2e268f4b7991b75a0e40303883b32248814bfbd08f36d3917f9ea5c6ac",
+          "metrics": {
+            "cost_total": 239.27289000000002,
+            "fills": 4,
+            "max_drawdown": -0.07105883295340076,
+            "sharpe": 1.172819796388137,
+            "total_return": 0.06072242710999998
+          },
+          "name": "same_risk_constrained",
+          "result_sha256": "82a59cdf0d903630b8b32374b6311cd967b35077b9a66df83e09a1102b99f72c",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        }
+      ],
+      "sessions": 63,
+      "source_reproductions": {
+        "base": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "38c5dd997d19668421f0e52f2936808c9d0d0ab239417e5eb801b806a9471e86"
+        },
+        "delay": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "2cb648cd36874ac876da1c20138a9ec83dfe0567138be36fe36ef99b1adacc69"
+        },
+        "same_risk_constrained": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "250aa05c715852c69b9c811883664242622f459a3acb5a80b722dbf3d3f6e09d"
+        }
+      }
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": 0.03337513412999982,
+            "fees": 0.0041343659100001595,
+            "frequency": -0.01743721197999959,
+            "risk_latch": 0.0,
+            "signal": 0.0329193017999998
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "cash",
+          "return_gap": 0.07817466590999944,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": -0.07817466590999944,
+            "base": -0.07817466590999944,
+            "cash": 0.0,
+            "delay": -0.044799531779999624,
+            "fees": -0.07404029999999928,
+            "frequency": -0.09561187788999903,
+            "passive": -0.03998060179999918,
+            "risk_latch": -0.07817466590999944,
+            "same_risk_constrained": -0.05847992611999919,
+            "signal": -0.04525536410999964
+          },
+          "unexplained_and_interaction_residual": 0.025183076049999253
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": 0.03337513412999982,
+            "fees": 0.0041343659100001595,
+            "frequency": -0.01743721197999959,
+            "risk_latch": 0.0,
+            "signal": 0.0329193017999998
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "passive",
+          "return_gap": 0.03819406411000026,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": -0.07817466590999944,
+            "base": -0.07817466590999944,
+            "cash": 0.0,
+            "delay": -0.044799531779999624,
+            "fees": -0.07404029999999928,
+            "frequency": -0.09561187788999903,
+            "passive": -0.03998060179999918,
+            "risk_latch": -0.07817466590999944,
+            "same_risk_constrained": -0.05847992611999919,
+            "signal": -0.04525536410999964
+          },
+          "unexplained_and_interaction_residual": -0.014797525749999929
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "allocation": 0.0,
+            "delay": 0.03337513412999982,
+            "fees": 0.0041343659100001595,
+            "frequency": -0.01743721197999959,
+            "risk_latch": 0.0,
+            "signal": 0.0329193017999998
+          },
+          "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.01969473979000025,
+          "sessions": 63,
+          "total_returns": {
+            "allocation": -0.07817466590999944,
+            "base": -0.07817466590999944,
+            "cash": 0.0,
+            "delay": -0.044799531779999624,
+            "fees": -0.07404029999999928,
+            "frequency": -0.09561187788999903,
+            "passive": -0.03998060179999918,
+            "risk_latch": -0.07817466590999944,
+            "same_risk_constrained": -0.05847992611999919,
+            "signal": -0.04525536410999964
+          },
+          "unexplained_and_interaction_residual": -0.03329685006999994
+        }
+      },
+      "fold": "fold-002",
+      "interval": {
+        "end": "2026-09-09",
+        "start": "2026-06-12"
+      },
+      "plan_sha256": "d4c415352f9521cc1d540dd791944873b8cd4a6ed144fdc065664147395d765f",
+      "report_sha256": "f5469d9c5d4f2354d17cd4227c0748ae343142da97f67c5f1334e80efe8f7d0a",
+      "runs": [
+        {
+          "cash_attribution_sha256": "75e5320529e707db89c2d98c239ff33717e2c2130c10501b69bdcf387006fcad",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 14,
+            "instrument_pnl.csv": 218,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "e9c2a645bc6ef121bdc215998ad5b2a434a56f1206152b9fd1069d4ae7bf1eb2",
+          "manifest_sha256": "d8b192a55bb83a2f3aee42b373c31fdceb88b29b6e194d45d3b2b576dd124fd4",
+          "metrics": {
+            "cost_total": 967.96591,
+            "fills": 14,
+            "max_drawdown": -0.14681023764859824,
+            "sharpe": -1.6550696179965023,
+            "total_return": -0.07817466590999977
+          },
+          "name": "base",
+          "result_sha256": "b74b07791b383aaeb03b3633933f1587226ad1941dd5b5d325db5de26536e380",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "4e4bb982e08a52b854434fb27d623e2103ae8ce303349df82f3d3bcc7eb34a3a",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 14,
+            "instrument_pnl.csv": 218,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "131ed7618ac50a0c8aeb04da0e9aa02e0395659665f080915c86b478ef2cbfb9",
+          "manifest_sha256": "ce41191782afd9af7eb094263e6ff2248384ecd835760346907f40535de51546",
+          "metrics": {
+            "cost_total": 967.96591,
+            "fills": 14,
+            "max_drawdown": -0.14681023764859824,
+            "sharpe": -1.6550696179965023,
+            "total_return": -0.07817466590999977
+          },
+          "name": "allocation",
+          "result_sha256": "5e981ffbfc5ad2a3cfa719c3d29047fee235af0dd340dc45ea33dc49714ee743",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "00f8136893d4cb552a032844680fa56be3bb574991c118434b351fe67d685527",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 15,
+            "instrument_pnl.csv": 208,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "74fc913d02dedf6bb3bc4d8ef2ac256c9421e718bccde846ba0fc2687b59d8b2",
+          "manifest_sha256": "5f464e7d9c73704e4070180b264a83644a33572e526cb05362b18e7964200466",
+          "metrics": {
+            "cost_total": 971.33178,
+            "fills": 15,
+            "max_drawdown": -0.11844749405099342,
+            "sharpe": -0.8444763298655458,
+            "total_return": -0.04479953178000007
+          },
+          "name": "delay",
+          "result_sha256": "da3748d1df1d644a426f01c5e771e1cd7a5c8fcac6d3663ef0aadcf7be4a284a",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "02fcfc28c270cd1326ffbcb524523ee6e26b15ecf0b3f87c29534300af67a9ab",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 0,
+            "instrument_pnl.csv": 218,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "8b242a04289fbfdc92eb4ab17d20ba7694820f109d79c730b6961a1dd598d3c9",
+          "manifest_sha256": "98c8d888e4a03bacfadce876fa65b0ca6d22e03d4c7786bb1e9c34c2203e81f0",
+          "metrics": {
+            "cost_total": 0.0,
+            "fills": 13,
+            "max_drawdown": -0.14485307027117944,
+            "sharpe": -1.5486701283109479,
+            "total_return": -0.07404029999999973
+          },
+          "name": "fees",
+          "result_sha256": "2841a6275b881572d8e46d63abff219277559b24e0b89d4363265e385ef864d0",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "6a75cf5d5be91a0b7a56e3132843840d089c26dc7c40e5885c22fd59acadab07",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 29,
+            "instrument_pnl.csv": 215,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "aa6ec098a36e7636b48129e216f27b23a1c2386a10562335fb33f066d7714dfa",
+          "manifest_sha256": "59e6e191a73314919849fa7dc2ce1e620a71a2bbe7b7230476ac3af7f013de59",
+          "metrics": {
+            "cost_total": 1499.27789,
+            "fills": 29,
+            "max_drawdown": -0.1549530305437622,
+            "sharpe": -2.59766583122057,
+            "total_return": -0.09561187788999925
+          },
+          "name": "frequency",
+          "result_sha256": "5550f59085c250a50589e10244fe6e9c6b67af794e2cf0d4b0673ee3e96ba692",
+          "risk_summary": {
+            "drawdown_halted_sessions": 39,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 4,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "e12c73501e449a01cec48d8d2aa6fb23be1731e5a30bba3efff56bb10843ba50",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 14,
+            "instrument_pnl.csv": 218,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "ff0da467c3bfa1f6c0de7781deae5ce195c945ef3c28172c9080670ca497c62b",
+          "manifest_sha256": "e083d122d3a93fdb525312678a41765f094b5c16d6dba983b5ce825600039ce2",
+          "metrics": {
+            "cost_total": 967.96591,
+            "fills": 14,
+            "max_drawdown": -0.14681023764859824,
+            "sharpe": -1.6550696179965023,
+            "total_return": -0.07817466590999977
+          },
+          "name": "risk_latch",
+          "result_sha256": "29cd1622eb155acd6809602cbc458017187061523c775fbb39a9900234799a2d",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "36306b29d2157d0a231fed60dfdb093d9dac9e45dec3bb9d740ef9768ea90552",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 14,
+            "instrument_pnl.csv": 233,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "022be976a0f30cd8bebf8301643443c4163ca6be5602d2220f840d52db83ce14",
+          "manifest_sha256": "c4a53cc34506231c1d053a5b639738020bfbb48bd63a2ab0b25bc97397feeae4",
+          "metrics": {
+            "cost_total": 1007.96411,
+            "fills": 14,
+            "max_drawdown": -0.16010701960480722,
+            "sharpe": -0.6332028973829842,
+            "total_return": -0.045255364110000085
+          },
+          "name": "signal",
+          "result_sha256": "9b29d5058f50aeb73d96601f611e5321daa9de7c9c3a51bd3acdd98914edd0d0",
+          "risk_summary": {
+            "drawdown_halted_sessions": 39,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "97e7b54545c91f59187c904d856def0ca551b2888231e49f6760a8334e1d2699",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 3,
+            "instrument_pnl.csv": 186,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "f48acc8ccd5a981a240314b4b4bc3d8caece0cbfad70ae58135a608b7f7172d4",
+          "manifest_sha256": "43a4bf20ffad43ee3913d620741dcc79415c9ce5986168c39f8f1eb760664680",
+          "metrics": {
+            "cost_total": 227.1018,
+            "fills": 3,
+            "max_drawdown": -0.15396406448175293,
+            "sharpe": -0.4539478106152566,
+            "total_return": -0.03998060180000018
+          },
+          "name": "passive",
+          "result_sha256": "040cfb673e2b19ee7de67ace8fb7b8c1e6c44a27893442216d65721d80d2f19e",
+          "risk_summary": {
+            "drawdown_halted_sessions": 0,
+            "exposure_halted_sessions": 0,
+            "model_kind": null,
+            "model_snapshots": 0,
+            "realized_breaches": 0,
+            "runtime_risk_events": 1,
+            "target_rejections": 0
+          }
+        },
+        {
+          "cash_attribution_sha256": "342f8ecade01f3b41250576cf9e7f61f033578ebe2e9267c7cbe3b35263c8ba0",
+          "cash_row_counts": {
+            "event_reconciliation.csv": 254,
+            "fee_details.csv": 8,
+            "instrument_pnl.csv": 248,
+            "period_reconciliation.csv": 63
+          },
+          "definition_sha256": "5a70b65c0d3b4bc9a43bdbf81f4818c05a4bd8def0c493c668cc0c6529b1680c",
+          "manifest_sha256": "2db5d06e9c0130f647694234c5879e9d55d14321018f017c07291eadf9fb571d",
+          "metrics": {
+            "cost_total": 466.92612,
+            "fills": 8,
+            "max_drawdown": -0.15484720129378082,
+            "sharpe": -0.7969433269753405,
+            "total_return": -0.058479926120000636
+          },
+          "name": "same_risk_constrained",
+          "result_sha256": "dade63cf13c0fb97faf8c798de476915c961f3d104be4d8d723cfcd89daf4923",
+          "risk_summary": {
+            "drawdown_halted_sessions": 32,
+            "exposure_halted_sessions": 0,
+            "model_kind": "statistical_proxy",
+            "model_snapshots": 63,
+            "realized_breaches": 0,
+            "runtime_risk_events": 0,
+            "target_rejections": 0
+          }
+        }
+      ],
+      "sessions": 63,
+      "source_reproductions": {
+        "base": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "566d4f6e5358e9e91668f16a2f192876a03bdcbde703ba79056b5010e7413a17"
+        },
+        "delay": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "7b6b6649e9b6332aad4fbd5ec5b4b3861c7ab91745789ce4c483c3052741a57f"
+        },
+        "same_risk_constrained": {
+          "exact_daily_return_match": true,
+          "source_return_sha256": "f795ac0af92f2172648dd452687677f53e966ae6c815d7d19a87e3f1284df4a2"
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "no new independent or natural forward observations",
+    "fixed retrospective pool and original market-data limitations remain",
+    "no return-based selection or parameter replacement",
+    "no standalone causal slippage attribution"
+  ],
+  "metrics": {
+    "allocation": {
+      "max_drawdown": -0.14681023764859824,
+      "net_return": -0.031908805596341905
+    },
+    "base": {
+      "max_drawdown": -0.14681023764859824,
+      "net_return": -0.031908805596341905
+    },
+    "cash": {
+      "max_drawdown": 0.0,
+      "net_return": 0.0
+    },
+    "delay": {
+      "max_drawdown": -0.11844749405099286,
+      "net_return": -0.032011113904575006
+    },
+    "fees": {
+      "max_drawdown": -0.14485307027117877,
+      "net_return": -0.015471881282204225
+    },
+    "frequency": {
+      "max_drawdown": -0.1549530305437622,
+      "net_return": -0.05085375993781571
+    },
+    "passive": {
+      "max_drawdown": -0.15396406448175248,
+      "net_return": 0.13006746938145342
+    },
+    "risk_latch": {
+      "max_drawdown": -0.14681023764859824,
+      "net_return": -0.031908805596341905
+    },
+    "same_risk_constrained": {
+      "max_drawdown": -0.15484720129377938,
+      "net_return": 0.07381060433240627
+    },
+    "signal": {
+      "max_drawdown": -0.1601070196048069,
+      "net_return": 0.051489179844217636
+    }
+  },
+  "non_cash_runs": 27,
+  "private_acceptance_sha256": "3bbdd19dad2b887ff8d1c2742fc58f5c30d12ee7847885f7f69ee580dec47eb5",
+  "protected_sources": {
+    "r4_account": {
+      "file_count": 3,
+      "hashes_mtimes_and_inventory_unchanged": true
+    },
+    "source_bundle": {
+      "file_count": 34,
+      "hashes_mtimes_and_inventory_unchanged": true
+    },
+    "source_study": {
+      "file_count": 511,
+      "hashes_mtimes_and_inventory_unchanged": true
+    }
+  },
+  "protocol_definitions": {
+    "acceptance": [
+      "all nine non-cash replays per fold succeed and validate as standard/v2",
+      "all comparisons share the exact 63 sessions of that fold",
+      "baseline, constrained buy_hold and delay returns reproduce frozen r4 business results",
+      "three reference decompositions reconcile with explicitly labelled unexplained and interaction residual",
+      "source study, input snapshot and frozen account files preserve hashes, mtimes and inventory"
+    ],
+    "benchmarks": {
+      "cash": "zero-interest CNY cash, not a risk-free-rate estimate",
+      "passive": "initial full-pool equal buy-and-hold without strategy risk limits or statistical risk model; same real price input and execution/cost assumptions",
+      "same_risk_constrained": "original buy_hold comparison with base strategy budget and all original risk/risk_model settings"
+    },
+    "intervention_definitions": {
+      "allocation": "equal target projected to the original absolute risk constraints; other allocation settings retained",
+      "delay": "delay the signal by one session",
+      "fees": "zero commission, minimum commission, stamp tax and execution slippage together",
+      "frequency": "weekly to daily rebalance",
+      "risk_latch": "disable only maximum-drawdown halt/liquidation; retain all other risk and model limits",
+      "signal": "remove low-volatility ranking; retain momentum and the original trend filter"
+    },
+    "limitations": [
+      "no new independent or natural forward observations",
+      "fixed retrospective pool and original market-data limitations remain",
+      "no return-based selection or parameter replacement",
+      "no standalone causal slippage attribution"
+    ]
+  },
+  "protocol_sha256": "1e4179416d15798ce985f2d8c12e311f861a6d0ea96b262ddcefff84e42e9cf1",
+  "runtime_evidence_sha256": "7b3190fdeaecb411195d8f23e86d9d464697344b5045f68cda72198145be4a3f",
+  "schema_version": "quant.etf-paired-acceptance/v1",
+  "scope": "exploratory model counterfactuals on the same 189 already-observed test dates",
+  "sessions": 189,
+  "source_code_revisions": {
+    "a_share_multifactor": "76211618c6c5073b93fafe320e9e4aa496c0fb34",
+    "quant_data_kit": "1e582d2044ea9c2d517fe7b081ad839da427d983",
+    "quant_execution": "bb0da30caed20dad42a6d5bdfd217913f61cc44e",
+    "quant_factors": "a26c758f2e6d9bc4e6169d97df8cbc97cdaa4f9d",
+    "quant_lab": "a64de83528fdb4a7b94d28bc31ff0e0de15599ae",
+    "quant_portfolio": "ca1af5a27e3f975931a48ccd11f41e1743848891",
+    "quant_risk_monitor": "f8d8b7a7c8fda48a9a5010918b908dbacaa8d809"
+  },
+  "source_study_sha256": "16685cf0e1209dc6cd08652e41c47ccbd284d1eef599cbfa6cbe682425633b82",
+  "validation": {
+    "all_six_installed_internal_vcs_commits_match_lock": true,
+    "asm_core_pure_branches": {
+      "covered": 217,
+      "total": 222
+    },
+    "asm_current_source_tests": 225,
+    "asm_locked_dependency_tests": 225,
+    "ci_urls": [
+      "https://github.com/PureSaber/quant-portfolio/actions/runs/37116752690",
+      "https://github.com/PureSaber/quant-lab/actions/runs/37116756818",
+      "https://github.com/PureSaber/a-share-multifactor/actions/runs/37117206470"
+    ],
+    "lab_tests": 118,
+    "lock_sha256": "5d1c147cbf6e71fb591cc1843916c77ae2addd6994c67996a3c9a41dc5b62686",
+    "lock_two_rebuilds_identical": true,
+    "portfolio_tests": 240
+  },
+  "zero_effect_diagnostics": {
+    "acceptance_sha256": "3bbdd19dad2b887ff8d1c2742fc58f5c30d12ee7847885f7f69ee580dec47eb5",
+    "explanation": "With top_n=2 and max_weight=.4, invested=min(.8, selected_count*.4), so every selected weight must be .4. Base never hit the per-fold drawdown latch; disabling it leaves returns unchanged.",
+    "folds": [
+      {
+        "allocation_decisions": 14,
+        "base_drawdown_halted_sessions": 0,
+        "constrained_buy_hold_halted_sessions": 0,
+        "each_selected_weight": 0.4,
+        "equal_and_cost_aware_weights_identical": true,
+        "fold": "fold-000",
+        "selected_assets_at_most_two": true
+      },
+      {
+        "allocation_decisions": 14,
+        "base_drawdown_halted_sessions": 0,
+        "constrained_buy_hold_halted_sessions": 0,
+        "each_selected_weight": 0.4,
+        "equal_and_cost_aware_weights_identical": true,
+        "fold": "fold-001",
+        "selected_assets_at_most_two": true
+      },
+      {
+        "allocation_decisions": 14,
+        "base_drawdown_halted_sessions": 0,
+        "constrained_buy_hold_halted_sessions": 32,
+        "each_selected_weight": 0.4,
+        "equal_and_cost_aware_weights_identical": true,
+        "fold": "fold-002",
+        "selected_assets_at_most_two": true
+      }
+    ],
+    "schema_version": "quant.etf-counterfactual-zero-effects/v1"
+  }
+}
