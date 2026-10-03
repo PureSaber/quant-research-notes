@@ -1,0 +1,100 @@
+{
+  "schema_version": "quant.paired-dashboard-acceptance/v1",
+  "source_acceptance_sha256": "3bbdd19dad2b887ff8d1c2742fc58f5c30d12ee7847885f7f69ee580dec47eb5",
+  "folds": 3,
+  "non_cash_runs": 27,
+  "shared_dates": 189,
+  "all_metrics_and_all_three_decompositions_match": true,
+  "input_evidence_sha256": [
+    "dfcce83ad80d8478ea78ec2696b99a64baa4f34f422d62375ff0690b3399c665",
+    "8f4e32b36444f318b33856bc3a97af1f346cb418aa932fec7f05a9595f2d5be3",
+    "f5469d9c5d4f2354d17cd4227c0748ae343142da97f67c5f1334e80efe8f7d0a"
+  ],
+  "protected_sources": {
+    "r4_account": {
+      "file_count": 3,
+      "hashes_mtimes_inventory_unchanged": true
+    },
+    "source_bundle": {
+      "file_count": 34,
+      "hashes_mtimes_inventory_unchanged": true
+    },
+    "source_study": {
+      "file_count": 511,
+      "hashes_mtimes_inventory_unchanged": true
+    }
+  },
+  "report_files": {
+    "index.alerts.json": "7ab12027aaa4905ff5f3ff38e238cac74419a5c3615b14985ac925fadfbe5c51",
+    "index.html": "b9ce1ac7e6dae08b9fbc179e01c1ec7610715e916d28736314b60face0376872",
+    "index.html.status.json": "8f5d773ef6e1c31844de0c5df9290f45b18bbfb84701c4c65bdfb6f92111682d",
+    "index.paired.json": "b10618bc7b39c2063e6880d213d3eb06a97e37ee675374936182c860af213599"
+  },
+  "benchmark_execution_limits": {
+    "passive": {
+      "max_holdings": 4,
+      "max_position_weight": 0.25,
+      "cash_buffer": 0
+    },
+    "same_risk_constrained": {
+      "max_holdings": 4,
+      "max_position_weight": 0.2,
+      "cash_buffer": 0.19999999999999996
+    }
+  },
+  "as_of": "2026-10-03",
+  "delivery": {
+    "repository": "quant-report-hub",
+    "pr": "https://github.com/PureSaber/quant-report-hub/pull/25",
+    "pr_head": "5c04a53342e5e16cb878a77e7e97e0a79495377a",
+    "merged_commit": "019f3a8233892eaeafdca21fa0793cc42e051d60",
+    "merged_tree_matches_pr_head": true,
+    "pr_checks": "all_success",
+    "lab_dependency_commit": "a923a791315312a4d9caecf3b9776f08d53bb736"
+  },
+  "tests": {
+    "passed": 206,
+    "skipped": 5,
+    "warnings": 4,
+    "coverage_percent": 89.78,
+    "new_regression_cases": 22,
+    "ruff": "pass",
+    "format": "pass",
+    "diff_check": "pass"
+  },
+  "gui": {
+    "references": [
+      {
+        "reference": "被动持有基准",
+        "text": "被动持有基准相对基础策略的收益差\n\n基准差额+16.1976个百分点 = 单项效应合计+8.0788 + 残差+8.1189。按未舍入数值守恒；显示舍入可能产生末位差。\n\n单项干预或剩余差异\t收益差/百分点\t相对基础策略的变化\n信号干预\t+8.3398\t\n\n分配干预\t+0.0000\t\n\n风险开关干预\t+0.0000\t\n\n调仓频率干预\t-1.8945\t\n\n成本干预\t+1.6437\t\n\n信号延迟干预\t-0.0102\t\n\n未解释项及交互残差\t+8.1189\t\n\n每项效应只改变一个已登记维度。残差包含未识别因素和交互，不能单独称为现金机会成本或已识别因果效应。"
+      },
+      {
+        "reference": "同风险约束持有基准",
+        "text": "同风险约束持有基准相对基础策略的收益差\n\n基准差额+10.5719个百分点 = 单项效应合计+8.0788 + 残差+2.4932。按未舍入数值守恒；显示舍入可能产生末位差。\n\n单项干预或剩余差异\t收益差/百分点\t相对基础策略的变化\n信号干预\t+8.3398\t\n\n分配干预\t+0.0000\t\n\n风险开关干预\t+0.0000\t\n\n调仓频率干预\t-1.8945\t\n\n成本干预\t+1.6437\t\n\n信号延迟干预\t-0.0102\t\n\n未解释项及交互残差\t+2.4932\t\n\n每项效应只改变一个已登记维度。残差包含未识别因素和交互，不能单独称为现金机会成本或已识别因果效应。"
+      },
+      {
+        "reference": "零息现金基准",
+        "text": "零息现金基准相对基础策略的收益差\n\n基准差额+3.1909个百分点 = 单项效应合计+8.0788 + 残差-4.8879。按未舍入数值守恒；显示舍入可能产生末位差。\n\n单项干预或剩余差异\t收益差/百分点\t相对基础策略的变化\n信号干预\t+8.3398\t\n\n分配干预\t+0.0000\t\n\n风险开关干预\t+0.0000\t\n\n调仓频率干预\t-1.8945\t\n\n成本干预\t+1.6437\t\n\n信号延迟干预\t-0.0102\t\n\n未解释项及交互残差\t-4.8879\t\n\n每项效应只改变一个已登记维度。残差包含未识别因素和交互，不能单独称为现金机会成本或已识别因果效应。"
+      }
+    ],
+    "fold_002_shared_dates": 63,
+    "aggregate_shared_dates": 189,
+    "fees_curve_selected_verified": true,
+    "wide_viewport": {
+      "width": 1280,
+      "pageWidth": 1265,
+      "plotColumns": "556.5px 556.5px",
+      "visibleViews": 1
+    },
+    "narrow_viewport_default_restored": true,
+    "failure_visible": "fees：<missing price>",
+    "failed_fold_blocks_aggregate": true,
+    "console_errors": []
+  },
+  "local_screenshot_sha256": {
+    "real-final.png": "1f4aa55b7e2f89dd860b30590a291f598df6e167bb1c16e8268927d79a564b3f",
+    "desktop.png": "0c005dad399d71f39a7600a0e65b8003c94be0d5e505f59290b87262ca1bca12",
+    "failure.png": "d1a8de4029c515bba7b8114a0c134e7fb14ab38f83e2e639b48d8558273d2340"
+  },
+  "scope": "ASM日线独立账户的真实历史模拟展示；合成失败仅为软件验收；未新增独立日期或变更冻结账户"
+}
