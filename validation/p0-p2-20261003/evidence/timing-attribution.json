@@ -1,0 +1,1365 @@
+{
+  "schema": "timing-attribution.acceptance/v1",
+  "as_of": "2026-10-04",
+  "native_implementation": "0357f83d10be769cae289f0496f3827eb90796ec",
+  "native_merge": "82a1e9c2185760e6b45c0ab621b887dffa7c28be",
+  "studio_implementation": "23f38d14340ec581f56a68d7e169a29070488c72",
+  "pull_requests": [
+    "https://github.com/PureSaber/quant-timing/pull/9",
+    "https://github.com/PureSaber/quant-studio/pull/15"
+  ],
+  "native_ci": {
+    "pr": 37157496071,
+    "main": 37157795048,
+    "conclusion": "success"
+  },
+  "tests": {
+    "native": 128,
+    "studio": 162,
+    "native_cli_integration": 4
+  },
+  "historical_runs": [
+    {
+      "run": "position_hs300-rules",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 14680,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.10875137321366253,
+            "matched": 0.10875137321366253,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.11968598577634987,
+            "matched": 0.11968598577634987,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.009469520001101805,
+            "matched": -0.009469520001101805,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.49312352404847304,
+            "matched": -0.49312352404847304,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.27415568505956367,
+        "matched_net_return": -0.27415568505956367,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.46094038970033324,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -1.2212453270876722e-15,
+        "matched_residual": -1.2212453270876722e-15
+      },
+      "native_manifest_sha256": "b67175e8915878d850e769436c2f7444fc2b16b18b86fdc474ed05e7a35b8d45",
+      "daily_sha256": "1ebc10500fd154afa4a47886fbed62089bc328578c6fabff41b21a9006250cd1",
+      "max_abs_residual": 1.2351231148954867e-15
+    },
+    {
+      "run": "position_hs300-vol_target",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 14680,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.12980344659739518,
+            "matched": 0.12980344659739518,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.09342331555363076,
+            "matched": 0.09342331555363076,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.010305499251795462,
+            "matched": -0.010305499251795462,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.5087806225129837,
+            "matched": -0.5087806225129837,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.29585935961375687,
+        "matched_net_return": -0.29585935961375687,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.48264406425452644,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -3.608224830031759e-15,
+        "matched_residual": -3.608224830031759e-15
+      },
+      "native_manifest_sha256": "b6c3843c8aaa7384fc8e2e8dbe2e6d1e613be98bbe26711d391344a29b056777",
+      "daily_sha256": "9fc2faeb595583df07129c13642d9286f0cb0a90304e85792223631cd472506f",
+      "max_abs_residual": 3.608224830031759e-15
+    },
+    {
+      "run": "position_hs300-tsmom",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 14680,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.3382110912660624,
+            "matched": 0.3382110912660624,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.17859930234035856,
+            "matched": 0.17859930234035856,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.008825874673358138,
+            "matched": -0.008825874673358138,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.38202380640633316,
+            "matched": -0.38202380640633316,
+            "difference": 0.0
+          }
+        ],
+        "net_return": 0.1259607125267237,
+        "matched_net_return": 0.1259607125267237,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.06082399211404588,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -5.995204332975845e-15,
+        "matched_residual": -5.995204332975845e-15
+      },
+      "native_manifest_sha256": "4a1d5ef187c573f5648f31ac501452b1864f5092de08d4024d2f92d417237cfc",
+      "daily_sha256": "f3eeef56491746ec89fd21d65a1bef50a477c1bc7aee890eb20c8290f2e70785",
+      "max_abs_residual": 5.995204332975845e-15
+    },
+    {
+      "run": "position_hs300-moving_average",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 14680,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": -0.11992962141401933,
+            "matched": -0.11992962141401933,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.08893030597325592,
+            "matched": 0.08893030597325592,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.007052295937808985,
+            "matched": -0.007052295937808985,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.4919798218301436,
+            "matched": -0.4919798218301436,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.5300314332087175,
+        "matched_net_return": -0.5300314332087175,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.7168161378494871,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -1.4432899320127035e-15,
+        "matched_residual": -1.4432899320127035e-15
+      },
+      "native_manifest_sha256": "0423d11dc3d2e0873c70f276e297885d3ff4eaa6c905f2f4e11d8ceae9741ed8",
+      "daily_sha256": "47727ed1fdf81ed118f325cd0e792466ac0aa4afb90693fd98bd56205dfe80cb",
+      "max_abs_residual": 2.067790383364354e-15
+    },
+    {
+      "run": "style-rules",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 58720,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "asset",
+            "component": "csi1000",
+            "strategy": 0.005088356098359358,
+            "matched": 0.018893610239786293,
+            "difference": -0.013805254141426936
+          },
+          {
+            "kind": "asset",
+            "component": "csi500",
+            "strategy": 0.026753168448132327,
+            "matched": 0.014435389064998473,
+            "difference": 0.012317779383133854
+          },
+          {
+            "kind": "asset",
+            "component": "cni_value",
+            "strategy": -0.015457039670285133,
+            "matched": -0.00815686851746366,
+            "difference": -0.007300171152821474
+          },
+          {
+            "kind": "asset",
+            "component": "cni_growth",
+            "strategy": 0.01964577481992115,
+            "matched": 0.012500320753742376,
+            "difference": 0.007145454066178773
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_value",
+            "strategy": -0.01821963281101309,
+            "matched": -0.015979564460884645,
+            "difference": -0.002240068350128445
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_growth",
+            "strategy": -0.0003380661742273352,
+            "matched": -0.004396980324166748,
+            "difference": 0.004058914149939413
+          },
+          {
+            "kind": "asset",
+            "component": "dividend",
+            "strategy": 0.008265517480876476,
+            "matched": -0.001378180731562297,
+            "difference": 0.009643698212438772
+          },
+          {
+            "kind": "asset",
+            "component": "cyclical",
+            "strategy": 0.028807304658417156,
+            "matched": 0.030403025180265823,
+            "difference": -0.0015957205218486668
+          },
+          {
+            "kind": "asset",
+            "component": "bank",
+            "strategy": -0.003483771317580521,
+            "matched": -0.003631734137636548,
+            "difference": 0.00014796282005602717
+          },
+          {
+            "kind": "asset",
+            "component": "broker",
+            "strategy": -0.001175341608987514,
+            "matched": -0.006284098806650874,
+            "difference": 0.00510875719766336
+          },
+          {
+            "kind": "asset",
+            "component": "pharma",
+            "strategy": -0.0024513182979232252,
+            "matched": -0.006626340851626961,
+            "difference": 0.004175022553703736
+          },
+          {
+            "kind": "asset",
+            "component": "electronics",
+            "strategy": 0.020207081593703546,
+            "matched": 0.025695496831972163,
+            "difference": -0.005488415238268617
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.0938674729249103,
+            "matched": 0.10601527823537828,
+            "difference": -0.012147805310467982
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.013259500749412689,
+            "matched": -0.010821247885940336,
+            "difference": -0.0024382528634723528
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.7068168446857864,
+            "matched": -0.5622739379403868,
+            "difference": -0.1445429067453996
+          }
+        ],
+        "net_return": -0.5585668392908967,
+        "matched_net_return": -0.411605833350173,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.7453515439316662,
+        "matched_excess_return": -0.1469610059407237,
+        "strategy_residual": -1.1102230246251565e-15,
+        "matched_residual": 2.4980018054066022e-15
+      },
+      "native_manifest_sha256": "0b1eef8176da0458efa6c97f49df12e4dce2a1f92ab4637f2310bd872b995a58",
+      "daily_sha256": "820d91610fb3592ff946b501adca5c5d7957f066621ffdbf3f0e2d3458dae0f2",
+      "max_abs_residual": 2.4980018054066022e-15
+    },
+    {
+      "run": "style-vol_target",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 58720,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": -0.07227659162231183,
+            "matched": -0.07227659162231183,
+            "difference": 0.0
+          },
+          {
+            "kind": "asset",
+            "component": "csi1000",
+            "strategy": 0.0032700280862141187,
+            "matched": 0.017027386300259247,
+            "difference": -0.013757358214045128
+          },
+          {
+            "kind": "asset",
+            "component": "csi500",
+            "strategy": 0.027783341999590608,
+            "matched": 0.014173906776981712,
+            "difference": 0.013609435222608896
+          },
+          {
+            "kind": "asset",
+            "component": "cni_value",
+            "strategy": -0.008782503026983138,
+            "matched": -0.0032882544837709985,
+            "difference": -0.00549424854321214
+          },
+          {
+            "kind": "asset",
+            "component": "cni_growth",
+            "strategy": 0.02797300097597686,
+            "matched": 0.021104027707632332,
+            "difference": 0.006868973268344528
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_value",
+            "strategy": -0.007505489104291617,
+            "matched": -0.008039152014427302,
+            "difference": 0.0005336629101356854
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_growth",
+            "strategy": 0.008344366261368159,
+            "matched": 0.010328023603289542,
+            "difference": -0.0019836573419213833
+          },
+          {
+            "kind": "asset",
+            "component": "dividend",
+            "strategy": 0.00904296576861741,
+            "matched": -0.0002500688018415146,
+            "difference": 0.009293034570458924
+          },
+          {
+            "kind": "asset",
+            "component": "cyclical",
+            "strategy": 0.019805143747163304,
+            "matched": 0.02244513802035597,
+            "difference": -0.002639994273192666
+          },
+          {
+            "kind": "asset",
+            "component": "bank",
+            "strategy": 0.0019422753827281936,
+            "matched": 0.0014509762002213422,
+            "difference": 0.0004912991825068514
+          },
+          {
+            "kind": "asset",
+            "component": "broker",
+            "strategy": 0.004400399225745385,
+            "matched": -8.578246198909407e-05,
+            "difference": 0.004486181687734479
+          },
+          {
+            "kind": "asset",
+            "component": "pharma",
+            "strategy": 0.00808315688522624,
+            "matched": 0.005058420487119755,
+            "difference": 0.0030247363981064854
+          },
+          {
+            "kind": "asset",
+            "component": "electronics",
+            "strategy": 0.022695120998378993,
+            "matched": 0.028960004539775507,
+            "difference": -0.006264883541396513
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.06550370330451782,
+            "matched": 0.07792401321997092,
+            "difference": -0.012420309915453093
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.012463535174308581,
+            "matched": -0.010225037020041917,
+            "difference": -0.002238498154266664
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.7206929851876325,
+            "matched": -0.6042364528777238,
+            "difference": -0.11645653230990871
+          }
+        ],
+        "net_return": -0.6228776014799978,
+        "matched_net_return": -0.4999294424264986,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.8096623061207674,
+        "matched_excess_return": -0.1229481590534992,
+        "strategy_residual": 2.6645352591003757e-15,
+        "matched_residual": 1.5543122344752192e-15
+      },
+      "native_manifest_sha256": "ce966621c151fcfb90440ee4602271779b71f223749e545edadcb026f0a6f834",
+      "daily_sha256": "25a744f5d11f451ff5f2ee795afbb8ea24156f6ed19b28548ceffaf72efc9232",
+      "max_abs_residual": 2.6645352591003757e-15
+    },
+    {
+      "run": "style-tsmom",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 58720,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "asset",
+            "component": "csi1000",
+            "strategy": 0.07390738163149455,
+            "matched": 0.07288758168232415,
+            "difference": 0.0010197999491703968
+          },
+          {
+            "kind": "asset",
+            "component": "csi500",
+            "strategy": 0.052593372473111175,
+            "matched": 0.06665151240734915,
+            "difference": -0.014058139934237976
+          },
+          {
+            "kind": "asset",
+            "component": "cni_value",
+            "strategy": 0.015451486470054033,
+            "matched": 0.02023852714886474,
+            "difference": -0.004787040678810707
+          },
+          {
+            "kind": "asset",
+            "component": "cni_growth",
+            "strategy": 0.04585006802472476,
+            "matched": 0.06498983087000586,
+            "difference": -0.0191397628452811
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_value",
+            "strategy": 0.014314795813543885,
+            "matched": 0.010600949321174093,
+            "difference": 0.0037138464923697923
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_growth",
+            "strategy": 0.027838072494091697,
+            "matched": 0.05130650826432052,
+            "difference": -0.02346843577022882
+          },
+          {
+            "kind": "asset",
+            "component": "dividend",
+            "strategy": 0.028134476988168296,
+            "matched": 0.024685574715866514,
+            "difference": 0.003448902272301782
+          },
+          {
+            "kind": "asset",
+            "component": "cyclical",
+            "strategy": 0.0704046072142381,
+            "matched": 0.06793945146187876,
+            "difference": 0.002465155752359338
+          },
+          {
+            "kind": "asset",
+            "component": "bank",
+            "strategy": 0.00906436851637234,
+            "matched": 0.01055170231726587,
+            "difference": -0.001487333800893529
+          },
+          {
+            "kind": "asset",
+            "component": "broker",
+            "strategy": 0.015558528606704874,
+            "matched": 0.013163695537811854,
+            "difference": 0.0023948330688930205
+          },
+          {
+            "kind": "asset",
+            "component": "pharma",
+            "strategy": 0.01352300371064852,
+            "matched": 0.012687528810406232,
+            "difference": 0.000835474900242288
+          },
+          {
+            "kind": "asset",
+            "component": "electronics",
+            "strategy": 0.051473629146134056,
+            "matched": 0.061850573470734395,
+            "difference": -0.010376944324600339
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.16856860826956488,
+            "matched": 0.1833248687099287,
+            "difference": -0.014756260440363822
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.013135277213238207,
+            "matched": -0.009986442966292508,
+            "difference": -0.0031488342469456997
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.6427214810321724,
+            "matched": -0.4054043872709371,
+            "difference": -0.23731709376123533
+          }
+        ],
+        "net_return": -0.06917435888655887,
+        "matched_net_return": 0.24548747448070118,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.25595906352732845,
+        "matched_excess_return": -0.31466183336726006,
+        "strategy_residual": 6.106226635438361e-16,
+        "matched_residual": -1.1102230246251565e-16
+      },
+      "native_manifest_sha256": "be3ad7aa3a08b172abd4cbb0e8286e69c4f7f0ef48665a42a303c985b9a3b101",
+      "daily_sha256": "be02dca297bc8688240c87177e1093e00b2f38c2583562e91bb5d94f5e3cf7c3",
+      "max_abs_residual": 1.85268467234323e-15
+    },
+    {
+      "run": "style-moving_average",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 58720,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "asset",
+            "component": "csi1000",
+            "strategy": -0.012209811977359063,
+            "matched": -0.006321479654083875,
+            "difference": -0.0058883323232751875
+          },
+          {
+            "kind": "asset",
+            "component": "csi500",
+            "strategy": 0.00017180468862533884,
+            "matched": -0.005942762968245142,
+            "difference": 0.006114567656870481
+          },
+          {
+            "kind": "asset",
+            "component": "cni_value",
+            "strategy": -0.012389111024155575,
+            "matched": -0.018071778551012045,
+            "difference": 0.0056826675268564705
+          },
+          {
+            "kind": "asset",
+            "component": "cni_growth",
+            "strategy": -0.01275107676176666,
+            "matched": -0.010073142807319739,
+            "difference": -0.002677933954446921
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_value",
+            "strategy": -0.028347351895286515,
+            "matched": -0.020774936877877664,
+            "difference": -0.007572415017408851
+          },
+          {
+            "kind": "asset",
+            "component": "csi300_growth",
+            "strategy": -0.007542578892047234,
+            "matched": -0.012915085041866121,
+            "difference": 0.005372506149818887
+          },
+          {
+            "kind": "asset",
+            "component": "dividend",
+            "strategy": -0.018715743861338882,
+            "matched": -0.014038734737938041,
+            "difference": -0.004677009123400841
+          },
+          {
+            "kind": "asset",
+            "component": "cyclical",
+            "strategy": -0.00641731064340912,
+            "matched": -0.011285714693510389,
+            "difference": 0.004868404050101268
+          },
+          {
+            "kind": "asset",
+            "component": "bank",
+            "strategy": -0.010272018305034701,
+            "matched": -0.008911349181519198,
+            "difference": -0.0013606691235155035
+          },
+          {
+            "kind": "asset",
+            "component": "broker",
+            "strategy": -0.011614503752705204,
+            "matched": -0.014187928619503357,
+            "difference": 0.0025734248667981536
+          },
+          {
+            "kind": "asset",
+            "component": "pharma",
+            "strategy": -0.0057145861257559905,
+            "matched": -0.005278126453928261,
+            "difference": -0.0004364596718277299
+          },
+          {
+            "kind": "asset",
+            "component": "electronics",
+            "strategy": 0.007769517761884184,
+            "matched": 0.00662418284258277,
+            "difference": 0.001145334919301414
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.0730633502927245,
+            "matched": 0.07625277756917667,
+            "difference": -0.0031894272764521753
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.00836314007452512,
+            "matched": -0.007259899274288375,
+            "difference": -0.001103240800236745
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.5772370586326736,
+            "matched": -0.5143202640320492,
+            "difference": -0.06291679460062438
+          }
+        ],
+        "net_return": -0.6305696192028237,
+        "matched_net_return": -0.5665042424813822,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.8173543238435933,
+        "matched_excess_return": -0.06406537672144152,
+        "strategy_residual": -1.1102230246251565e-16,
+        "matched_residual": -2.220446049250313e-16
+      },
+      "native_manifest_sha256": "2837ce297ba0bb854b60a10e3676a41a247e7b65f7adabc32bab526861681e50",
+      "daily_sha256": "5fa48aa676dc8e5c7f38fb3b5ddfa8a4894303943bd6711f8c8e4ae73069ea84",
+      "max_abs_residual": 1.3739009929736312e-15
+    },
+    {
+      "run": "futures_hs300-rules",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 29360,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.14463973574330263,
+            "matched": 0.14463973574330263,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IF",
+            "strategy": -0.09125426287525393,
+            "matched": -0.09125426287525393,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IC",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IM",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.014361994368519478,
+            "matched": 0.014361994368519478,
+            "difference": 0.0
+          },
+          {
+            "kind": "margin",
+            "component": "MARGIN",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.007805151686374417,
+            "matched": -0.007805151686374417,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.41183189373887424,
+            "matched": -0.41183189373887424,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.3518895781886796,
+        "matched_net_return": -0.3518895781886796,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.5386742828294492,
+        "matched_excess_return": 0.0,
+        "strategy_residual": 8.881784197001252e-16,
+        "matched_residual": 8.881784197001252e-16
+      },
+      "native_manifest_sha256": "53d27ddbd29e00d5970334ec2e0f25ad7850939940f5f28d408338442e994fff",
+      "daily_sha256": "a6a3c81fde4cb5541d323bffa47ecd4a3008c51c33b2947476ffc52ea2cb9fe9",
+      "max_abs_residual": 1.366962099069724e-15
+    },
+    {
+      "run": "futures_hs300-vol_target",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 29360,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.09740624482312456,
+            "matched": 0.09740624482312456,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IF",
+            "strategy": -0.02303116395910835,
+            "matched": -0.02303116395910835,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IC",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IM",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": -0.003038939633266898,
+            "matched": -0.003038939633266898,
+            "difference": 0.0
+          },
+          {
+            "kind": "margin",
+            "component": "MARGIN",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.008179516714089653,
+            "matched": -0.008179516714089653,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.4215232262459383,
+            "matched": -0.4215232262459383,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.3583666017292778,
+        "matched_net_return": -0.3583666017292778,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -0.5451513063700474,
+        "matched_excess_return": 0.0,
+        "strategy_residual": 8.881784197001252e-16,
+        "matched_residual": 8.881784197001252e-16
+      },
+      "native_manifest_sha256": "ce928ba1b4f939246cfadb6ec24187053a84d47303942020741bc0d28be3d0f4",
+      "daily_sha256": "5468ecdb4ae1511b5451da51cb921cfbacde4bf43dd214216289d5d67e7ebaea",
+      "max_abs_residual": 1.366962099069724e-15
+    },
+    {
+      "run": "futures_hs300-tsmom",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 29360,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.12597631269017678,
+            "matched": 0.12597631269017678,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IF",
+            "strategy": 0.00456974512909341,
+            "matched": 0.00456974512909341,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IC",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IM",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.08959520571214542,
+            "matched": 0.08959520571214542,
+            "difference": 0.0
+          },
+          {
+            "kind": "margin",
+            "component": "MARGIN",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.006128172284173813,
+            "matched": -0.006128172284173813,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -1.052135453538587,
+            "matched": -1.052135453538587,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.8381223622913454,
+        "matched_net_return": -0.8381223622913454,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -1.024907066932115,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -3.3306690738754696e-16,
+        "matched_residual": -3.3306690738754696e-16
+      },
+      "native_manifest_sha256": "f95238596134b2b2ad1e1fb243f608c46bdb58b7ff3607ded0f3d34bf7c3e72f",
+      "daily_sha256": "feab91b7f04c90b4091ae5b37decaf8f418cae8a3cf44834503a6810f4631858",
+      "max_abs_residual": 1.1934897514720433e-15
+    },
+    {
+      "run": "futures_hs300-moving_average",
+      "old_metrics_unchanged": true,
+      "folds": 10,
+      "daily_rows": 29360,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 1835,
+        "first_return_date": "2019-03-11",
+        "last_return_date": "2026-09-28",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "hs300",
+            "strategy": 0.03172964090967105,
+            "matched": 0.03172964090967105,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IF",
+            "strategy": -0.1408503204253053,
+            "matched": -0.1408503204253053,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IC",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IM",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.029473495267871526,
+            "matched": 0.029473495267871526,
+            "difference": 0.0
+          },
+          {
+            "kind": "margin",
+            "component": "MARGIN",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.005458521293909009,
+            "matched": -0.005458521293909009,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.7956606073481594,
+            "matched": -0.7956606073481594,
+            "difference": 0.0
+          }
+        ],
+        "net_return": -0.8807663128898305,
+        "matched_net_return": -0.8807663128898305,
+        "benchmark_return": 0.18678470464076957,
+        "excess_return": -1.0675510175306,
+        "matched_excess_return": 0.0,
+        "strategy_residual": 4.440892098500626e-16,
+        "matched_residual": 4.440892098500626e-16
+      },
+      "native_manifest_sha256": "8185779239dd004f8c1ff094a72878c1030fd19a2964351401ec47e9402e19a1",
+      "daily_sha256": "822febc24e02ae977faa2e0b40c2d24f1aeb2e6494cd2c1af269f4cad57f3c40",
+      "max_abs_residual": 1.6930901125533637e-15
+    }
+  ],
+  "historical_fold_count": 120,
+  "historical_daily_rows": 411040,
+  "gui_cases": {
+    "real": {
+      "run_id": "2045505c4e3b450e92c8c3472b19675e",
+      "preflight_id": "bd60e8b7ce8d419e9005679a402be0fd",
+      "evidence_kind": "retrospective",
+      "native_artifacts_verified": 6,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 423,
+        "first_return_date": "2025-01-03",
+        "last_return_date": "2026-09-30",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "510300",
+            "strategy": 0.09168008553622152,
+            "matched": 0.09168008553622152,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.013219129726693073,
+            "matched": -0.013219129726693073,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          }
+        ],
+        "net_return": 0.07846095580952817,
+        "matched_net_return": 0.07846095580952817,
+        "benchmark_return": 0.18948062571750635,
+        "excess_return": -0.11101966990797818,
+        "matched_excess_return": 0.0,
+        "strategy_residual": -2.7755575615628914e-16,
+        "matched_residual": -2.7755575615628914e-16
+      },
+      "folds": 7,
+      "daily_sha256": "4559add2ea6339f43bdbae876e25608030d8f9a1615cfea0f96c5813aa068ca8"
+    },
+    "synthetic": {
+      "run_id": "34d56a2610094c9fa02236eaff6e32c6",
+      "preflight_id": "70ccc2be6f304dd5814c75fd8708fe10",
+      "evidence_kind": "synthetic",
+      "native_artifacts_verified": 6,
+      "full": {
+        "id": "descriptive",
+        "n_decisions": 359,
+        "first_return_date": "2016-01-05",
+        "last_return_date": "2017-05-19",
+        "components": [
+          {
+            "kind": "asset",
+            "component": "market",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "asset",
+            "component": "small",
+            "strategy": -0.05385207461927173,
+            "matched": -0.04392675995763964,
+            "difference": -0.009925314661632094
+          },
+          {
+            "kind": "asset",
+            "component": "large",
+            "strategy": -0.03115549787960198,
+            "matched": -0.060508065260179295,
+            "difference": 0.029352567380577316
+          },
+          {
+            "kind": "asset",
+            "component": "value",
+            "strategy": -0.04140500359186469,
+            "matched": -0.043763364381621095,
+            "difference": 0.002358360789756403
+          },
+          {
+            "kind": "asset",
+            "component": "growth",
+            "strategy": -0.04614883083198826,
+            "matched": -0.05855128296997229,
+            "difference": 0.012402452137984035
+          },
+          {
+            "kind": "futures",
+            "component": "IF",
+            "strategy": 0.04275152764971929,
+            "matched": 0.05355886954687947,
+            "difference": -0.010807341897160178
+          },
+          {
+            "kind": "futures",
+            "component": "IC",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "futures",
+            "component": "IM",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "cash",
+            "component": "CASH",
+            "strategy": 0.007930889229473981,
+            "matched": 0.007930889229473981,
+            "difference": 0.0
+          },
+          {
+            "kind": "margin",
+            "component": "MARGIN",
+            "strategy": 0.0,
+            "matched": 0.0,
+            "difference": 0.0
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "base_cost",
+            "strategy": -0.008536325645332327,
+            "matched": -0.0061621340834096365,
+            "difference": -0.00237419156192269
+          },
+          {
+            "kind": "modeled_cost",
+            "component": "impact_cost",
+            "strategy": -0.70035467706645,
+            "matched": -0.5266630593155146,
+            "difference": -0.17369161775093545
+          }
+        ],
+        "net_return": -0.830769992755316,
+        "matched_net_return": -0.678084907191983,
+        "benchmark_return": -0.38114464929173253,
+        "excess_return": -0.4496253434635835,
+        "matched_excess_return": -0.15268508556333305,
+        "strategy_residual": -2.220446049250313e-16,
+        "matched_residual": 1.1102230246251565e-16
+      },
+      "folds": 5,
+      "daily_sha256": "396f539e56fd4248858f656ccdc396d0b28511455d75821ed5650f7a92a5c2b1"
+    }
+  },
+  "gui_layout": {
+    "desktop": {
+      "width": 1280,
+      "scrollWidth": 1265
+    },
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 375,
+      "tableClient": 285,
+      "tableScroll": 430,
+      "scrolledTo": 145
+    },
+    "expanded_real_fold": 1,
+    "method_expansion_verified": true,
+    "console_errors": 0,
+    "console_warnings": 0
+  },
+  "source_files_unchanged": 91,
+  "synthetic_gui_input_files_unchanged": 3,
+  "new_independent_forward_dates": 0,
+  "downstream_standard_runs_verified": 3,
+  "downstream_standard_artifacts_verified": 18,
+  "downstream_attribution_verifier": "native Timing, not generic Lab",
+  "local_evidence_sha256": {
+    "downstream-checks.json": "f70b7ca353527a769f8fa589d076ab2dee1472fb716c2c67e3cf75a076914029",
+    "final-result.png": "ee57731798a4383456b1e136ac977923b1f2b7d085099bd8467cb973e64aefb1",
+    "gui-checks.json": "6c1afa732d7bc5dfe061047f3915403ae93c02aca8b6f29d2b6573e4dea0e84c",
+    "gui-inputs-before.json": "07e33bd3f97ec49a0f0099f8232979e9794ba8f65f7ce276fdaa7749f357b9a9",
+    "historical-replay.json": "33fdc763e0a105bb9f62f375ad852f63679075f7e47b14f90c3bdf820ef7ca13",
+    "inputs-before.json": "783c4a87a81666a04cb8fe8a75b34b74aa44ed6b5e644281026910a6002584ab",
+    "integration-tests.xml": "40d64cd54825615cf043b16f5a5b9131ff68f0315ebcd65ada2695b67256cabd",
+    "native-replay.json": "d666913b4636a5bc609ac2b5345b739d2ccf53ced15dd8f0432f6121e0744af1",
+    "native-tests.xml": "1031926786d09e53f529289aca4b0eb68ed915fd0f8a32109592b572c4d715d2",
+    "real-attribution-desktop.png": "d00ccfeb445502dd8c980907a8dbf35f8cfab0c5ddf5128aecc5b95fd871d528",
+    "real-attribution-mobile-final.png": "9d2f96ffe44e8b56bedebadeec37b25e0b8a78592c3a846307323d2ddb232dff",
+    "real-attribution-mobile.png": "76195c48ff66f05455a52e88f806469ce9f78f2f41922e6952c3319efb489f6b",
+    "real-attribution-overview.png": "cb58729474aa016e55307801f83ec77421f188db14d5962bf5b373503a983371",
+    "real-fold-expanded.png": "79eaae9493ecc6a8b9a613c013ed83d9943c3af46a83b96c07ed488044caf462",
+    "studio-tests.xml": "2e4a19e67c6514b26237a7b548a814494ea5a142c532de6a2950a07aac5204f2",
+    "synthetic-futures-costs.png": "67d8f75724403327efada1055ab5b140d0e18e8cb564b69c58b4cca6e4311ff1"
+  },
+  "source_normalized_sha256": {
+    "quant-timing/src/quant_timing/attribution.py": "732d293283077886991d5150e3f5997703a1880dac92b16e176e7badfe5130d2",
+    "quant-timing/src/quant_timing/book.py": "9f9c33f6fa816f975213a8f18609ea0a9a75c7e13882d71f62e53368ff8a500c",
+    "quant-timing/src/quant_timing/cli.py": "e106426f54972a0080bdec498a5fb82f3f33a00c2603c8eee8c25dc82f48cef5",
+    "quant-timing/src/quant_timing/comparison.py": "90e287f582cc28beccf2cc58b634a8cd7d4d2242a96263f796e0f56fbb2c232e",
+    "quant-timing/src/quant_timing/config.py": "ee68a3a897a853d5f0550573c00210f6d5de5ef03048de34cde56438f1b87753",
+    "quant-timing/src/quant_timing/constraints.py": "a56e4d3f9c41428a38b727d269a5eb31432b6b88f9229e97b9c4c128b554fa0a",
+    "quant-timing/src/quant_timing/contract.py": "923e21cd7b21049dd6bc46a6b8bc49c1543b7a3477e0805138eb7435dbba5226",
+    "quant-timing/src/quant_timing/export.py": "e8010e1672e71fb67ea877cb1f0f89b9bb24ba720d018e652b6cefd777db3976",
+    "quant-timing/src/quant_timing/futures.py": "3217a0972b67676fed19a5a332a440f67ba94056875abdba3b3fd217be121623",
+    "quant-timing/src/quant_timing/inputs.py": "22c1747be0466429476d6685ccef33e1e91820ea8c92eb927895974da64469d2",
+    "quant-timing/src/quant_timing/io.py": "36d87012a9d5b7390430d92a8093070b41b4b63d2d0a1ff2ab3b2caacff6ea1c",
+    "quant-timing/src/quant_timing/macro_history.py": "752fde7fb52ad433a92b222901b635e8dd23bc0cc199ba5eb3f3087bdef97a42",
+    "quant-timing/src/quant_timing/macro_policy.py": "a073d93071eca0d004b80a430dcf4e6e970ca5e70d7a9ef325bbdcf961805730",
+    "quant-timing/src/quant_timing/overlay.py": "57d7b880b8b0bb7e7b1f9f3fced37db51fd74e748d91dce6944cfebf563eb755",
+    "quant-timing/src/quant_timing/position.py": "6591ed0b8a12b731328d6219e88f947f3f72ce66fca57b5cecfc32bd17649efd",
+    "quant-timing/src/quant_timing/position_models.py": "b3327401ce73ace1718e96a67be507d7cf899eb1f78344f45a0f4aed925e82c0",
+    "quant-timing/src/quant_timing/preflight.py": "9f38faf96702756b4404eed4527b45126ed01ce5020524a7c7dc354b88b4eef0",
+    "quant-timing/src/quant_timing/study.py": "7931edcc186c6c582daafbd87ff4b96a26e3c6678177bff9532d703f8866ac68",
+    "quant-timing/src/quant_timing/style.py": "38613a232fadb3b4b90146c2a857617f14d0db404e0e38ba08434b94ac63de3d",
+    "quant-timing/src/quant_timing/synthetic.py": "a316b3a0023712ac0dba327aaf8fca3da0a991ca02bcdfe0717de64b75032330",
+    "quant-timing/src/quant_timing/walkforward.py": "b0e35942cededa4670409145940d6b4b4c37c94578c0e844f0c5656f154d284b",
+    "quant-timing/src/quant_timing/__init__.py": "16c8705dbc511cb37c0ee2e5d10d4a2cc60283ecff6dd83b4853e96b013bdc6c",
+    "quant-timing/src/quant_timing/__main__.py": "f5e3c6114518a6a0dbafd783aa53a25f251e456ca7fb6dd3469076017d49fab4",
+    "quant-studio/src/quant_studio/accounts.py": "804e51a112f0fb417f85f47a2fe8cbe7d8a4d98f9f409bd43cbacacb2524d7c9",
+    "quant-studio/src/quant_studio/desk.py": "f78135dc98df6627913a98db9f251dfdab1f2d70de928c9fd9672c6736573863",
+    "quant-studio/src/quant_studio/flow.py": "c25f4941e526bb4318075b84dab8e0b94f83952143dfe44e10a4d041301ea0f3",
+    "quant-studio/src/quant_studio/nav.py": "c70f544e4ec1aa8aec329acd97180416fcf289d9ecf759205e541ebe6391f2c9",
+    "quant-studio/src/quant_studio/research_panel.py": "707c8b00fd3677939cfb4b689f22e9741409fff672e236b4507c3fcc3814bafc",
+    "quant-studio/src/quant_studio/runner.py": "72b377bae62883a40415b2fce16f4bf0e8ac7867b2f807c4a5293e5a6c342799",
+    "quant-studio/src/quant_studio/runtime.py": "022047f1f9e83ca98efeb82e93f078977e959a06fcd974d48cceba094cb01097",
+    "quant-studio/src/quant_studio/server.py": "f556ab474eccf536e5c3959c25746176d6fe9ccc181860b3495ccda1061576e3",
+    "quant-studio/src/quant_studio/standard_view.py": "2779d3d5e4e227899f5e3fe25f4b1fae4dc6ddc1841dde55ef64394d9892b9ce",
+    "quant-studio/src/quant_studio/synthetic.py": "d4a79e0b57bb62b0f6bc93ae184862fd91b0fde1f6d0cb906144f4af686f108e",
+    "quant-studio/src/quant_studio/timing_attribution_panel.py": "920e305ef525b9b7c6d144d78cc2f1f7c8f34013191834910a2576fec436cf9d",
+    "quant-studio/src/quant_studio/timing_view.py": "bf8a7007abd93405156efbf6ddfdf12209cbc43b0bddbbd6fd7a065f06fae7a9",
+    "quant-studio/src/quant_studio/__init__.py": "33602f5e48ac6767eb0def919b3b8feb7187142b98f5148170c8d49340e678c9",
+    "quant-studio/src/quant_studio/__main__.py": "853b514c3720bed187542f8ef38cd0c461c8761a27f7bf324734b5ac6ee94ee5",
+    "quant-studio/src/quant_studio/templates/__init__.py": "f87c500f0f1b49e3b930c9420ac7e221618ba8f83480c9a26237ea45aae5b225",
+    "quant-studio/src/quant_studio/templates/a-share-four-factor/base.yaml": "61517a711f28edfe66120608f8382b18fd4737b0cbee30c0dcc7806176cf7d98",
+    "quant-studio/src/quant_studio/templates/a-share-four-factor/template.json": "4721d11c3389c80b3c374eb18fadb5a1fcb5aed96d3ba99926decfc7b9ec1b67",
+    "quant-studio/src/quant_studio/templates/crypto-basis-fixture/base.json": "dda7a22e4ef837c3a7aed39eab7656621f8c4f5c5b3f063793218bd126846aa3",
+    "quant-studio/src/quant_studio/templates/crypto-basis-fixture/template.json": "e4db9d2d4cbe0a1a3b8a8c823e7ea80c236d70dfbbd1acfcf7ee5aa07e1106d9",
+    "quant-studio/src/quant_studio/templates/fund-fof/base.json": "6218dcb249748073084532adee1482b5980770884d6337a0ae01b5fbeedcec41",
+    "quant-studio/src/quant_studio/templates/fund-fof/template.json": "943df230e02be51a2e95550c78d1c631b8b786bf7f0eb7f06adbd2003279315e",
+    "quant-studio/src/quant_studio/templates/futures-spread-fixture/base.yaml": "a086a74340af3467121973134db4e58cbcd15d330c7a0a9914717b18648a4343",
+    "quant-studio/src/quant_studio/templates/futures-spread-fixture/template.json": "e99076c6be8e587e6f905844d947bd00ad8657c2c6e587b0e9f932e8a548010c",
+    "quant-studio/src/quant_studio/templates/hk-equity-daily/base.json": "3f3484373ec9bfea023503e20f6b959302753b1f09460b02c1db0a87930ca01c",
+    "quant-studio/src/quant_studio/templates/hk-equity-daily/template.json": "4a5fc18f49b4d13d4cae7518ffd941bfe202a5e102a6e4be8eac8f17250db86d",
+    "quant-studio/src/quant_studio/templates/paper-sim/base.yaml": "4f12e202664c46544d42acc90eca882c03c35f0107d7b5657c4f7f23635061c3",
+    "quant-studio/src/quant_studio/templates/paper-sim/template.json": "b36b89b607d6cdefc04a2fc12691c869ebbccdf3adc814cfae160bb88a1214d7",
+    "quant-studio/src/quant_studio/templates/stat-arb-research/base.json": "2dbb8bb2dc02fff89254e7bf63e2ca621155c19d1f8428f23021e6bddd13acb2",
+    "quant-studio/src/quant_studio/templates/stat-arb-research/template.json": "6a73f1cc0e51d77ffb4c060f21b14e150f9cf65057609f2a71c89059979773dc",
+    "quant-studio/src/quant_studio/templates/synthetic-demo/base.yaml": "a6c9ac1203ed55de67c12a2f087cc6f355cbc02f33c8a7da48d543100d251143",
+    "quant-studio/src/quant_studio/templates/synthetic-demo/template.json": "73a4ef2e0a15859d4589e1f2aba6f8427bdf67dbd8666c23abe3928a3965aae6",
+    "quant-studio/src/quant_studio/templates/timing-research/base.json": "a9e28adb41abfb6fd0bf237e96ba6a77ed927f09c30fb5492dd8926022f8d4f9",
+    "quant-studio/src/quant_studio/templates/timing-research/template.json": "9275bae7a545f37e4c3b015496ed96b5b300125cb7e5b2bc1fe966a11137e869",
+    "quant-studio/src/quant_studio/templates/us-equity-research/base.json": "7c0f2bd154a4a2790c38738100c869ecf6a0a40842dc9991dfb583aef4caca0a",
+    "quant-studio/src/quant_studio/templates/us-equity-research/template.json": "39d47b414e44bf828672231f84ec7af322ef2dc8b74c083ed2b4e8ec72e3be19"
+  },
+  "remaining_scope": [
+    "independent execution-price slippage",
+    "full cash opportunity cost",
+    "position/style causal counterfactuals",
+    "other P0-P2 items"
+  ],
+  "overall_goal_status": "active"
+}
