@@ -117,6 +117,8 @@ flowchart LR
 
 ## 接下来推进
 
+2026-10-04另完成[择时原生只读预检](TIMING_PREFLIGHT.md)：103项本地测试及六组跨平台检查通过，合成与真实四ETF输入的12份标准产物、16份CSV原API一致性和输入不变性通过。此项为原生前置能力，尚未接入Studio，模板数量保持九个。
+
 2026-10-04补齐[期货/Crypto原生只读预检](FIXTURE_PREFLIGHT.md)：分别211项通过/1项既有跳过、93项通过；5次原生CLI的60份标准产物核验成功，六份输入保持原样。随后由[Studio#12](https://github.com/PureSaber/quant-studio/pull/12)接入八模板工作台，138项单测、五组实际CLI和两条GUI流程通过；[Crypto#10](https://github.com/PureSaber/quant-crypto-basis/pull/10)补齐精确初始本金与币种。事件净值与七类原生账本表、损坏拒绝及完整CSV下载验收见[STUDIO_FIXTURES.md](STUDIO_FIXTURES.md)。这些仍只是离线样例软件验证。
 
 1. P0：r5开发验证已完成，按既有自动化明确要求等待独立登记授权；保留r4。四ETF自然观察窗口为2026-10-08至2026-12-31，不能提前补出结果或以回放代替。
