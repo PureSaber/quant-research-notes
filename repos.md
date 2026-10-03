@@ -1,11 +1,13 @@
 # Repository Map
 
-更新时间：2026-09-30。当前维护范围为23个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
+更新时间：2026-10-03。当前维护范围为23个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
 核心范围与M8的14仓不可变发布清单不同：新增研究项目及默认分支更新不会自动获得M8发布认证。
+
+[机器可读能力清单](https://github.com/PureSaber/quant-workspace/blob/main/src/quant_workspace/capabilities.json)列出23仓的资产、功能、接口、数据状态、缺口和关系。[开发配置](https://github.com/PureSaber/quant-workspace/blob/main/configs/platform.workspace.yaml)与14仓发行配置分开；`quant-workspace capabilities --inventory`只能核验源码、提交和证据文件存在性，不能替代环境、跨仓业务或市场数据认证。
 
 | Repo | Role | Key CLI |
 |------|------|---------|
-| quant-workspace | Central path resolver | `quant-workspace show/path/lab-config` |
+| quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
 | [quant-studio](https://github.com/PureSaber/quant-studio) | 本机模板操作台；先预览配置，再显式执行A股、港股或模拟盘工具 | `python -m quant_studio serve` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
@@ -18,7 +20,7 @@
 | a-share-multifactor | Multi-factor equity research | `asm-fetch`, `asm-backtest` |
 | [quant-hk-equity](https://github.com/PureSaber/quant-hk-equity) | 港股日频现金账户探索；真实行情、滞后信号、整手税费、训练/留出期；价格收益，未获可投资认证 | `quant-hk fetch/preflight/run` |
 | [quant-us-equity](https://github.com/PureSaber/quant-us-equity) | 美股研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
-| [quant-fund](https://github.com/PureSaber/quant-fund) | 基金研究、场外申赎模拟和FOF组合监控；当前验收使用合成基金 | `python -m quant_fund.cli`、`streamlit run app.py` |
+| [quant-fund](https://github.com/PureSaber/quant-fund) | 基金研究、场外申赎模拟和FOF监控；已有真实净值小样本，完整条款、分红和分用途日历仍未闭合 | `python -m quant_fund.cli`、`streamlit run app.py` |
 | [quant-stat-arb](https://github.com/PureSaber/quant-stat-arb) | 统计套利研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
 | [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；按因果时点回放并保留样本外门禁 | `python -m quant_timing run/compare` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
@@ -50,6 +52,8 @@ See also [run-contract.md](run-contract.md).
 日常源码目录、固定提交的集成环境、冻结研究账户分别管理，见[工作区维护说明](WORKSPACE_GUIDE.md)。
 M8真实市场门禁以[M8状态](validation/m8/M8_STATUS.md)和[M9里程碑](https://github.com/PureSaber/quant-research-notes/milestone/1)为准。
 
+当前功能、研究进度、视觉与操作体验、资产成熟度及后续工作见[2026-10-03平台进展](validation/p0-p2-20261003/README.md)。五个新增应用已完成七份实际产物的跨仓消费与损坏拒绝验收；这种验收不提升市场数据或策略有效性状态。
+
 ## Dependency direction
 
 ```text
@@ -72,7 +76,9 @@ quant-factors ── validation/factors ──► research engines
 research engines ── writes standard/v2 ──► quant-lab
                                             └► quant-report-hub attribution
 
-quant-hk-equity ── exploratory standard/v1 ──► quant-lab
+quant-hk-equity ── standard/v1 + exploratory standard/v2 ──► quant-lab
+quant-us-equity / quant-fund ── exploratory standard/v2 ──► quant-lab
+quant-timing / quant-stat-arb ── standard/v1研究列约定 ──► 需逐链路消费验收
 
 quant-agent ── reads ──► run outputs ── writes ──► review_manifest.json
 
@@ -87,6 +93,8 @@ quant-portfolio ── reads ──► strategy nav/holdings
 
 quant-risk-monitor ── VaR/CVaR/stress/liquidity/factor risk ──► alerts + metrics
 ```
+
+探索性v2导出表示产物接口已适配，不等于执行认证或真实公司行动证据完整。港股现有真实研究仍为价格收益；美股价格链、基金完整业务资料以及独立前向结果仍有缺口。当前推进清单见[P0—P2验收计划](validation/p0-p2-20261003/PLAN.md)。
 
 ## GitHub
 

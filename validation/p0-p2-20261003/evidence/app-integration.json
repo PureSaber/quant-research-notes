@@ -1,0 +1,254 @@
+{
+  "schema_version": "quant.application-consumer-acceptance/v1",
+  "checked_at": "2026-10-03T06:56:35.766606+00:00",
+  "scope": "artifact integrity, indexing and readonly dashboard consumption; not market certification",
+  "runs": [
+    {
+      "case": "hk-real",
+      "project": "quant-hk-equity",
+      "schema_version": "2.0.0",
+      "profile": "research",
+      "status": "complete",
+      "code_version": "247122c12572feb3890958cfc46fea738d620bbf",
+      "data_classification": "retrospective_price_only",
+      "manifest_sha256": "cad7048c946c5be0a422c8cd0e5ec197015a2a3cc569757c84a8939f481c8dda",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "adapter": "exploratory-research-v2",
+        "comparability": "current_watchlist_not_historical_universe",
+        "investable": "false",
+        "rankable": "false"
+      },
+      "display_rows": 1,
+      "measurement_basis": {
+        "annualization_periods": 252,
+        "currency": "HKD",
+        "initial_cash": "1000000",
+        "period_end": "2026-09-25",
+        "period_start": "2026-01-02",
+        "provider": "akshare_sina_hk",
+        "return_basis": "price_only_excludes_corporate_actions",
+        "sample": "holdout",
+        "sharpe_risk_free_rate": 0
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "fund-synthetic",
+      "project": "quant-fund",
+      "schema_version": "2.0.0",
+      "profile": "research",
+      "status": "complete",
+      "code_version": "d166304e30bd39129c3bef6b1ca3530b50519a79",
+      "data_classification": "synthetic",
+      "manifest_sha256": "4d32be10d6240044f229ffe8d6873d5addb4e9215b1bf60b6a1d9e5dd44a7c7b",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "adapter": "exploratory-research-v2",
+        "comparability": "not_historical_universe",
+        "investable": "false",
+        "rankable": "false"
+      },
+      "display_rows": 2,
+      "measurement_basis": {
+        "benchmark": null,
+        "currency": "CNY",
+        "first_return_month_end": "2024-02-29",
+        "last_return_month_end": "2026-08-31",
+        "monthly_annualization_periods": 12,
+        "monthly_sample": "相邻完整月末已知估值的收益；不含首个非完整月区间",
+        "period_end": "2026-08-31",
+        "period_start": "2024-01-02",
+        "sharpe_risk_free_rate": 0,
+        "valuation": "当日已获知的单位净值；陈旧估值沿用并显示滞后天数"
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "us-phase1-etf",
+      "project": "quant-us-equity",
+      "schema_version": "2.0.0",
+      "profile": "research",
+      "status": "complete",
+      "code_version": "7cc4fafb96676cb7dd8f1c0b8774a1842f27e501",
+      "data_classification": "synthetic",
+      "manifest_sha256": "508b73d819c4786cdccd67adb4905c767207705716ecf56dbb108d90b30bf37e",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "adapter": "exploratory-research-v2",
+        "comparability": "not_historical_universe",
+        "investable": "false",
+        "rankable": "false"
+      },
+      "display_rows": 2,
+      "measurement_basis": {
+        "annualization_periods": 252,
+        "benchmark": "US:DEMO:SPY",
+        "currency": "USD",
+        "initial_cash": 100000,
+        "limitations": [
+          "Cash-only long research model; no real orders or market-impact calibration",
+          "Costs are explicit research assumptions, not broker or regulatory fee schedules",
+          "Gross dividends before investor-specific taxes; zero cash interest",
+          "Benchmark uses the same cost/cash/dividend conventions",
+          "Factor IC is descriptive full-sample diagnostics; selection uses training NAV only"
+        ],
+        "period_end": "2024-04-25",
+        "period_start": "2023-08-23",
+        "sample": "continuous_out_of_sample",
+        "sharpe_risk_free_rate": 0
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "us-phase2-equity",
+      "project": "quant-us-equity",
+      "schema_version": "2.0.0",
+      "profile": "research",
+      "status": "complete",
+      "code_version": "7cc4fafb96676cb7dd8f1c0b8774a1842f27e501",
+      "data_classification": "synthetic",
+      "manifest_sha256": "64aba4cdeaa0fda36105b060f8f396a94ecc025fa3e24705b878423883b47995",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "adapter": "exploratory-research-v2",
+        "comparability": "not_historical_universe",
+        "investable": "false",
+        "rankable": "false"
+      },
+      "display_rows": 2,
+      "measurement_basis": {
+        "annualization_periods": 252,
+        "benchmark": "US:DEMO:SPY",
+        "currency": "USD",
+        "initial_cash": 100000,
+        "limitations": [
+          "Cash-only long research model; no real orders or market-impact calibration",
+          "Costs are explicit research assumptions, not broker or regulatory fee schedules",
+          "Gross dividends before investor-specific taxes; zero cash interest",
+          "Benchmark uses the same cost/cash/dividend conventions",
+          "Factor IC is descriptive full-sample diagnostics; selection uses training NAV only"
+        ],
+        "period_end": "2024-04-25",
+        "period_start": "2023-08-23",
+        "sample": "continuous_out_of_sample",
+        "sharpe_risk_free_rate": 0
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "us-phase3-quality",
+      "project": "quant-us-equity",
+      "schema_version": "2.0.0",
+      "profile": "research",
+      "status": "complete",
+      "code_version": "7cc4fafb96676cb7dd8f1c0b8774a1842f27e501",
+      "data_classification": "synthetic",
+      "manifest_sha256": "830597d89095b75136138842e3ea4c856b2569a90451d6c6cee41f5a26505cd0",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "adapter": "exploratory-research-v2",
+        "comparability": "not_historical_universe",
+        "investable": "false",
+        "rankable": "false"
+      },
+      "display_rows": 2,
+      "measurement_basis": {
+        "annualization_periods": 252,
+        "benchmark": "US:DEMO:SPY",
+        "currency": "USD",
+        "initial_cash": 100000,
+        "limitations": [
+          "Cash-only long research model; no real orders or market-impact calibration",
+          "Costs are explicit research assumptions, not broker or regulatory fee schedules",
+          "Gross dividends before investor-specific taxes; zero cash interest",
+          "Benchmark uses the same cost/cash/dividend conventions",
+          "Factor IC is descriptive full-sample diagnostics; selection uses training NAV only"
+        ],
+        "period_end": "2024-04-25",
+        "period_start": "2023-08-23",
+        "sample": "continuous_out_of_sample",
+        "sharpe_risk_free_rate": 0
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "timing-real",
+      "project": "quant-timing",
+      "schema_version": "1.0",
+      "profile": null,
+      "status": "complete",
+      "code_version": "0.1.0",
+      "data_classification": "retrospective_price_only",
+      "manifest_sha256": "f5fe359ba53e610866be4eac78927366d3b82ac47fba7f27401877cd56b0d3af",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "orders": "research_target_not_routed",
+        "asset_class": "index_style",
+        "acceptance": "walk_forward_folds",
+        "positions": "close_pretrade_after_costs",
+        "position_return_weight": "previous_decision_weight_for_return_attribution",
+        "cost_unit": "currency",
+        "futures_market_value": "signed_notional_excluded_from_funded_nav"
+      },
+      "display_rows": 2,
+      "measurement_basis": {
+        "period_start": "2025-01-03",
+        "period_end": "2026-09-30",
+        "sample": "descriptive_full_sample_not_walk_forward_acceptance",
+        "return_basis": "描述性全区间收益；样本外验收以独立测试折为准",
+        "acceptance": "walk_forward_folds"
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    },
+    {
+      "case": "stat-arb-real",
+      "project": "quant-stat-arb",
+      "schema_version": "1.0",
+      "profile": null,
+      "status": "complete",
+      "code_version": "0.2.0",
+      "data_classification": "retrospective_price_only",
+      "manifest_sha256": "5c4e5d486093dab42c51698f6b8b268e5f95b94edecbfdcc30543f93394450cf",
+      "artifacts": 6,
+      "rankable": false,
+      "tags": {
+        "orders": "research_target_not_routed",
+        "asset_class": "statistical_arbitrage",
+        "acceptance": "walk_forward_leakage_audit",
+        "cost_unit": "return"
+      },
+      "display_rows": 1,
+      "measurement_basis": {
+        "period_start": "2025-07-14",
+        "period_end": "2026-09-04",
+        "sample": "walk_forward_scored_continuous_path",
+        "annualization_periods": 252,
+        "sharpe_risk_free_rate": 0,
+        "return_basis": "price",
+        "cost_unit": "return"
+      },
+      "tampered_returns_rejected": true,
+      "source_unchanged": true
+    }
+  ],
+  "run_count": 7,
+  "projects": 5,
+  "report_hub_verified": 7,
+  "faults_rejected_without_cached_metrics": 7,
+  "all_original_sources_unchanged": true,
+  "native_metrics_unchanged": true,
+  "note": "Corrects earlier receipt label stat-arb-synthetic: its retained config declares real-retrospective-price-only, from the four-ETF source. It is not borrow or execution certification."
+}

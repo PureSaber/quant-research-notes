@@ -1,0 +1,663 @@
+{
+  "schema_version": "quant.research-readout/v1",
+  "checked_at": "2026-10-03T06:07:30.565308+00:00",
+  "scope": "historical evidence review; no new parameter search or forward observation",
+  "etf": {
+    "study_id": "etf-risk-walkforward-20261001-r4-final",
+    "study_sha256": "16685cf0e1209dc6cd08652e41c47ccbd284d1eef599cbfa6cbe682425633b82",
+    "validation_sha256": "de7eab76dd333be150efd9e06b1bc43f6eebe9c0be2c351deb7a40ad06e662a0",
+    "verified_artifacts": 500,
+    "candidate_family": 4,
+    "selection_eligible": [
+      "base"
+    ],
+    "account_policy": "independent",
+    "paired_tests": [
+      {
+        "adjusted_p_value": 0.2117882117882118,
+        "assumption": "moving-block stationary approximation; exploratory evidence",
+        "available": true,
+        "block_sessions": 13,
+        "candidate": "base",
+        "ci_95": [
+          -0.0014490241215922926,
+          0.00025084905600715246
+        ],
+        "mean_daily_excess": -0.0005922328323145225,
+        "p_value": 0.15084915084915085,
+        "reject": false
+      },
+      {
+        "adjusted_p_value": 0.2117882117882118,
+        "assumption": "moving-block stationary approximation; exploratory evidence",
+        "available": true,
+        "block_sessions": 13,
+        "candidate": "cost_2x",
+        "ci_95": [
+          -0.001536613876530808,
+          0.00018831578456415907
+        ],
+        "mean_daily_excess": -0.0006753725113063136,
+        "p_value": 0.11188811188811189,
+        "reject": false
+      },
+      {
+        "adjusted_p_value": 0.2117882117882118,
+        "assumption": "moving-block stationary approximation; exploratory evidence",
+        "available": true,
+        "block_sessions": 13,
+        "candidate": "delay_1",
+        "ci_95": [
+          -0.0015705908794280258,
+          0.0003577259050836361
+        ],
+        "mean_daily_excess": -0.0005925213853420334,
+        "p_value": 0.21178821178821178,
+        "reject": false
+      }
+    ],
+    "candidates": [
+      {
+        "candidate": "base",
+        "status": "completed",
+        "metrics": {
+          "cost_total": 3657.77302,
+          "fills": 66,
+          "max_drawdown": -0.14681023764859824,
+          "sessions": 189,
+          "sharpe": -0.18727438159429013,
+          "total_return": -0.031908805596341905
+        },
+        "folds": [
+          {
+            "test": {
+              "end": "2026-03-10",
+              "start": "2025-12-02"
+            },
+            "metrics": {
+              "cost_total": 1432.92068,
+              "fills": 28,
+              "max_drawdown": -0.044920076832724254,
+              "sharpe": 1.3347892728455495,
+              "total_return": 0.038524779319999425
+            },
+            "diagnostics_sha256": "4df6086c9644faa53333f856f73cd8a28dc44a1861861b50c05ca88463153fb3",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.6463568609328904,
+            "runtime_risk_events": [
+              "research-d2bfdff8e37b3ed69eb6:2026-03-10:510500:sell:A_SHARE_T_PLUS_ONE:sell exceeds settled T+1 position"
+            ],
+            "unfilled_orders": 1,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 1,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-06-11",
+              "start": "2026-03-11"
+            },
+            "metrics": {
+              "cost_total": 1256.88643,
+              "fills": 24,
+              "max_drawdown": -0.051783673405335406,
+              "sharpe": 0.35412910608119136,
+              "total_return": 0.01123191356999964
+            },
+            "diagnostics_sha256": "f61e93def92153f109070edc9d8983ac9488dbbb2f12fe766a0288950835732b",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.5966129312817957,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-09-09",
+              "start": "2026-06-12"
+            },
+            "metrics": {
+              "cost_total": 967.96591,
+              "fills": 14,
+              "max_drawdown": -0.14681023764859824,
+              "sharpe": -1.6550696179965023,
+              "total_return": -0.07817466590999977
+            },
+            "diagnostics_sha256": "632d8197b1dfdec21e50341770b705086138f6e96c5b6ae48e19d97edee617ca",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.29037315369476413,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          }
+        ]
+      },
+      {
+        "candidate": "buy_hold",
+        "status": "completed",
+        "metrics": {
+          "cost_total": 946.0272600000001,
+          "fills": 16,
+          "max_drawdown": -0.15484720129377938,
+          "sessions": 189,
+          "sharpe": 0.5414785285750597,
+          "total_return": 0.07381060433240627
+        },
+        "folds": [
+          {
+            "test": {
+              "end": "2026-03-10",
+              "start": "2025-12-02"
+            },
+            "metrics": {
+              "cost_total": 239.82825,
+              "fills": 4,
+              "max_drawdown": -0.047531925114532636,
+              "sharpe": 1.9348193713666646,
+              "total_return": 0.07521757174999943
+            },
+            "diagnostics_sha256": "17186dea7309fd7ec2b12b00f177d10a7429e0c8d91e48f4a8ead16d0732f928",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.794470261288409,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-06-11",
+              "start": "2026-03-11"
+            },
+            "metrics": {
+              "cost_total": 239.27289000000002,
+              "fills": 4,
+              "max_drawdown": -0.07105883295340076,
+              "sharpe": 1.172819796388137,
+              "total_return": 0.06072242710999998
+            },
+            "diagnostics_sha256": "fa7c723a2f07fcbd8bc0ed2dc8badc44609023685dd65fec8f199860ec5f1c9a",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.7910255865897062,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-09-09",
+              "start": "2026-06-12"
+            },
+            "metrics": {
+              "cost_total": 466.92612,
+              "fills": 8,
+              "max_drawdown": -0.15484720129378082,
+              "sharpe": -0.7969433269753405,
+              "total_return": -0.058479926120000636
+            },
+            "diagnostics_sha256": "88a63bffc48a7027f97ac9f39c821d545461075a537775f2f5219c40cbf0a9e2",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.4005723047818114,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 32,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          }
+        ]
+      },
+      {
+        "candidate": "cost_2x",
+        "status": "completed",
+        "metrics": {
+          "cost_total": 7306.031220000001,
+          "fills": 67,
+          "max_drawdown": -0.14850273790811042,
+          "sessions": 189,
+          "sharpe": -0.3180035193378809,
+          "total_return": -0.04695492957862124
+        },
+        "folds": [
+          {
+            "test": {
+              "end": "2026-03-10",
+              "start": "2025-12-02"
+            },
+            "metrics": {
+              "cost_total": 2857.16008,
+              "fills": 28,
+              "max_drawdown": -0.04585531633363127,
+              "sharpe": 1.1316359787568968,
+              "total_return": 0.03233533992000015
+            },
+            "diagnostics_sha256": "8d631fdcc66317bc0169720e79f31ba9c2e05368e968092a3dfd0ed2b205105f",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.6457080073231696,
+            "runtime_risk_events": [
+              "research-dd9dcc675b91bd8f3d26:2026-03-10:510500:sell:A_SHARE_T_PLUS_ONE:sell exceeds settled T+1 position"
+            ],
+            "unfilled_orders": 1,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 1,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-06-11",
+              "start": "2026-03-11"
+            },
+            "metrics": {
+              "cost_total": 2516.9590200000002,
+              "fills": 25,
+              "max_drawdown": -0.05228420924409316,
+              "sharpe": 0.21976472055627608,
+              "total_return": 0.005626640980000319
+            },
+            "diagnostics_sha256": "5104badfbc3e2b9eabf61aec958787a9bc599204ca631fc854a318ef4b6c5788",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.5960374097969584,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-09-09",
+              "start": "2026-06-12"
+            },
+            "metrics": {
+              "cost_total": 1931.91212,
+              "fills": 14,
+              "max_drawdown": -0.14850273790811097,
+              "sharpe": -1.7539878868450378,
+              "total_return": -0.08197211211999955
+            },
+            "diagnostics_sha256": "b67e802e790779e4c36a270d33469b492ad3a5954954f2e230bb0dfe2b3fa85a",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.2901537432909022,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          }
+        ]
+      },
+      {
+        "candidate": "delay_1",
+        "status": "completed",
+        "metrics": {
+          "cost_total": 3859.76773,
+          "fills": 63,
+          "max_drawdown": -0.11844749405099286,
+          "sessions": 189,
+          "sharpe": -0.1869153095210545,
+          "total_return": -0.032011113904575006
+        },
+        "folds": [
+          {
+            "test": {
+              "end": "2026-03-10",
+              "start": "2025-12-02"
+            },
+            "metrics": {
+              "cost_total": 1899.41573,
+              "fills": 27,
+              "max_drawdown": -0.03989480676493007,
+              "sharpe": 0.7050665366327438,
+              "total_return": 0.020369284270000954
+            },
+            "diagnostics_sha256": "47a0f8f6bcd7087526e8af884cc6478cdd6fea7af765e834684744500279eff1",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.5444949251018257,
+            "runtime_risk_events": [
+              "research-e9290a772375b36fb1d6:2026-03-10:510500:sell:A_SHARE_T_PLUS_ONE:sell exceeds settled T+1 position"
+            ],
+            "unfilled_orders": 1,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 1,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-06-11",
+              "start": "2026-03-11"
+            },
+            "metrics": {
+              "cost_total": 989.02022,
+              "fills": 21,
+              "max_drawdown": -0.04906202331194054,
+              "sharpe": -0.1017337524763064,
+              "total_return": -0.006841720219999625
+            },
+            "diagnostics_sha256": "d648efc83c80f73ba097a85bbabdb0832d952c06422ea9e04e09c0496862a17a",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.5711451568881561,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          },
+          {
+            "test": {
+              "end": "2026-09-09",
+              "start": "2026-06-12"
+            },
+            "metrics": {
+              "cost_total": 971.33178,
+              "fills": 15,
+              "max_drawdown": -0.11844749405099342,
+              "sharpe": -0.8444763298655458,
+              "total_return": -0.04479953178000007
+            },
+            "diagnostics_sha256": "d37465deab4509ba7a523d40a693b33a47080fa4065c04becde0d820f3f7f8c3",
+            "realized_risk_checks": 63,
+            "mean_gross_weight_over_realized_checks": 0.3238971201301929,
+            "runtime_risk_events": [],
+            "unfilled_orders": 0,
+            "risk_summary": {
+              "drawdown_halted_sessions": 0,
+              "exposure_halted_sessions": 0,
+              "model_kind": "statistical_proxy",
+              "model_snapshots": 63,
+              "realized_breaches": 0,
+              "runtime_risk_events": 0,
+              "target_rejections": 0
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "timing": {
+    "source": "quant-timing/studies/market_comparison/2026-10-01-regression",
+    "source_code_commit": "36ec2309f0beed5773a78a64f1fd1990b6fa3f08",
+    "normalized_result_sha256": "68e8a54490bf2904dba1bd8ad8184886caa201209364610627943961dd176f59",
+    "input_hashes_verified": 5,
+    "row_count": 12,
+    "negative_mean_excess": 11,
+    "all_below_full_sample_benchmark": true,
+    "rows": [
+      {
+        "book": "position_hs300",
+        "model": "rules",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.031198428012261338",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.010531487304949818",
+        "full_sample_drawdown": "-0.42285833466895617",
+        "descriptive_full_sample_net": "-0.27415568505956367",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "position_hs300",
+        "model": "vol_target",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.03156955365650982",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.01114083006446135",
+        "full_sample_drawdown": "-0.4185358101074913",
+        "descriptive_full_sample_net": "-0.29585935961375687",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "position_hs300",
+        "model": "tsmom",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "0.005943945288393382",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.007069514003718402",
+        "full_sample_drawdown": "-0.2249954453692825",
+        "descriptive_full_sample_net": "0.1259607125267237",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "position_hs300",
+        "model": "moving_average",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.028239620418835255",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.010487521166449238",
+        "full_sample_drawdown": "-0.5495922949516868",
+        "descriptive_full_sample_net": "-0.5300314332087175",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "style",
+        "model": "rules",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.06476402629719144",
+        "mean_matched_excess_return": "-0.01426268392620782",
+        "mean_turnover": "0.019587163476617542",
+        "full_sample_drawdown": "-0.5903350102546528",
+        "descriptive_full_sample_net": "-0.5585668392908967",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "style",
+        "model": "vol_target",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.06954293621051166",
+        "mean_matched_excess_return": "-0.012974699251719768",
+        "mean_turnover": "0.01807565187378955",
+        "full_sample_drawdown": "-0.6241295564632773",
+        "descriptive_full_sample_net": "-0.6228776014799978",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "style",
+        "model": "tsmom",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.0019077826255595176",
+        "mean_matched_excess_return": "-0.018893364246552146",
+        "mean_turnover": "0.012748989405903677",
+        "full_sample_drawdown": "-0.2277081365866641",
+        "descriptive_full_sample_net": "-0.06917435888655887",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "style",
+        "model": "moving_average",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.04141648488993856",
+        "mean_matched_excess_return": "-0.008827261819516319",
+        "mean_turnover": "0.013000709981114994",
+        "full_sample_drawdown": "-0.6407998255528331",
+        "descriptive_full_sample_net": "-0.6305696192028237",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "futures_hs300",
+        "model": "rules",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.027587887231608432",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.010339354140995408",
+        "full_sample_drawdown": "-0.39251725844638463",
+        "descriptive_full_sample_net": "-0.3518895781886796",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "futures_hs300",
+        "model": "vol_target",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.02680083931796372",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.010583435561758626",
+        "full_sample_drawdown": "-0.3877164386871722",
+        "descriptive_full_sample_net": "-0.3583666017292778",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "futures_hs300",
+        "model": "tsmom",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.11478954999101809",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.014225279751537954",
+        "full_sample_drawdown": "-0.8671507673067105",
+        "descriptive_full_sample_net": "-0.8381223622913454",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      },
+      {
+        "book": "futures_hs300",
+        "model": "moving_average",
+        "sample_start": "2019-03-08",
+        "sample_end": "2026-09-28",
+        "status": "complete",
+        "scored_folds": "10",
+        "mean_excess_return": "-0.10567045565331126",
+        "mean_matched_excess_return": "0.0",
+        "mean_turnover": "0.014791914044104713",
+        "full_sample_drawdown": "-0.8907674062285317",
+        "descriptive_full_sample_net": "-0.8807663128898305",
+        "descriptive_full_sample_benchmark": "0.18678470464076957",
+        "median_participation": "",
+        "capacity": "",
+        "leakage_passed": "True"
+      }
+    ]
+  }
+}

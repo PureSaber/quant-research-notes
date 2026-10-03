@@ -1,0 +1,22 @@
+{
+  "schema_version": "quant.gui-acceptance/v1",
+  "checked_at": "2026-10-03T07:02:33.977628+00:00",
+  "action": "selected US ETF and fund runs in browser, clicked comparison, inspected visible metrics and source labels",
+  "status": "passed",
+  "selected_runs": [
+    "quant-us-equity/phase1-etf",
+    "quant-fund/fund-metrics-synthetic"
+  ],
+  "verified_ui": [
+    "synthetic data label visible before metrics",
+    "US strategy and same-cost benchmark visible",
+    "fund full-valuation and complete-month samples separate",
+    "missing fund full-period annualized return and Sharpe remain empty"
+  ],
+  "artifact_acceptance_sha256": "64d1c485fa90c7902231444c68cba74686793f2ddb66265b5c61e93925bf18b9",
+  "local_screenshots": {
+    "app-integration-after-metrics.jpg": "9099886275856d7bc8dee22a10b3b0cc295e048e23a5c2117ae5c4260172b49f",
+    "fund-comparison-after.jpg": "cbe258c7bd1bd52e3aa638af9663fd775828130a7a885f495264061c3cb32b6e"
+  },
+  "temporary_tab_and_server_closed": true
+}
