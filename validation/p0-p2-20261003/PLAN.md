@@ -24,6 +24,8 @@
 
 2026-10-04后续：P1.1的期货/Crypto原生只读预检已交付，共享静态校验、5次CLI回放、60份标准产物及六份输入不变性通过，见[FIXTURE_PREFLIGHT.md](FIXTURE_PREFLIGHT.md)。该原生预检增量随后接入Studio，当前共八模板，见[STUDIO_FIXTURES.md](STUDIO_FIXTURES.md)；真实双腿业务认证继续，完整P1.1仍未完成。
 
+基金嵌入报告问题已完成[无业务脚本的最小复现](FUND_EMBED_DIAGNOSTIC.md)：静态iframe同样报错而直接子页无错误，范围缩小到宿主嵌入环境；具体来源与修复仍未确认，P1.1继续保留该项。
+
 ## 执行约束
 
 - 日常源码、集成环境和冻结账户分别维护，保留旧账户、失败证据和不可变发布标签。
