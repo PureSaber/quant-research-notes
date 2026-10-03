@@ -1,0 +1,33 @@
+{
+  "schema_version": "quant.studio-overview-acceptance/v1",
+  "checked_at": "2026-10-03T15:59:49.5289592+08:00",
+  "status": "passed",
+  "actions": [
+    "home to explicit frozen account read-only inspection",
+    "real HK snapshot data preflight",
+    "execute with identical saved configuration",
+    "tampered calendar rejected and failure retained"
+  ],
+  "account": "etf-risk-forward-20261008-r4",
+  "account_state": "pending",
+  "account_files_unchanged": true,
+  "account_files": 3,
+  "preflight_run": "7f8b5097248849a4863bd65c6d29f7cf",
+  "research_run": "4be3a614a35a411390b2242efe9fd3b1",
+  "rejected_run": "0376f3dafc044057a680f78e63eb7edf",
+  "config_sha256": "e6a2000b52f801d46d9fb3612687a8a8bd969e14400177dd33e8c3bfa1a3f89c",
+  "config_identical": true,
+  "research_artifacts_verified": 89,
+  "original_hk_files_verified": 7,
+  "source_kind": "real-retrospective-price-only",
+  "investable": false,
+  "purpose": "GUI and input-integrity acceptance; not additional independent strategy evidence",
+  "local_screenshots": {
+    "studio-account-r4.jpg": "dd17f2c3321f45b1682cab85e09f9a6592ca53d92623a6a12cadf50ce7453bdf",
+    "studio-preflight-rejected.jpg": "236a9dab2b0d75b7b5f9eb2509d788ff20c0882dbfdab427eb22452c78611a6a",
+    "studio-hk-preflight.jpg": "78df265cf36e717ab68f401e5de0f29faf87e1baa22969b792b558922525a585",
+    "studio-overview.jpg": "12a46a82a3fe18090aeb7d419ccdc95201e7c08767cac0b9bde5af74fcbf2b1a",
+    "studio-checked-run.jpg": "547a8e665c6311a38d17fc51692092df2be7479cb5cf51e65cd76146304dc4b6"
+  },
+  "temporary_tab_and_server_closed": true
+}

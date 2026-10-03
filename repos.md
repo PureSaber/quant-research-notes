@@ -8,7 +8,7 @@
 | Repo | Role | Key CLI |
 |------|------|---------|
 | quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机模板操作台；先预览配置，再显式执行A股、港股或模拟盘工具 | `python -m quant_studio serve` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、模板操作、港股原生预检、显式运行及只读前向账户 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
@@ -60,6 +60,7 @@ M8真实市场门禁以[M8状态](validation/m8/M8_STATUS.md)和[M9里程碑](ht
 quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / quant-portfolio
 
 quant-studio ── declared templates / CLI ──► a-share-multifactor / quant-hk-equity / quant-paper-sim
+             └─ read-only account inspection ──► quant-pipeline
 
 quant-fund ── independent fund research / OTC ledger ──► read-only integration snapshot
 quant-timing ── validated position_scale ──► quant-paper-sim / quant-portfolio configuration
