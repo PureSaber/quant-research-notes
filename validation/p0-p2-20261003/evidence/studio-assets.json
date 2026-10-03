@@ -1,0 +1,103 @@
+{
+  "schema_version": "quant.studio-assets-acceptance/v1",
+  "as_of": "2026-10-04",
+  "scope": "Fund and US native preflight, Studio templates, synthetic CLI and GUI acceptance",
+  "input_integrity": {
+    "content_mtime_inventory_unchanged": true,
+    "source_files": 12
+  },
+  "gui_runs": [
+    {
+      "asset": "fund",
+      "check_id": "eb76612056704181a2fb425836377d59",
+      "run_id": "5c82bd2a1fed4168b5d0369a7ee84831",
+      "same_config": true,
+      "config_sha256": "abd3f92224df05a3cd8d578c269ee607447b38f0030e04b5cd8f71c8a38e2bd6",
+      "preflight_sha256": "cc6c5166fa0e25601c880baa3c111ac83aab0ff5b5c40c959be4bbbfa6ebd0eb",
+      "no_preflight_strategy_output": true,
+      "evidence_kind": "synthetic",
+      "nav_rows": 86,
+      "initial_nav": "1",
+      "total_return": "-0.0240512629838935",
+      "max_drawdown": "0.03217919535368236939016065743",
+      "nav_sha256": "61069262866245a344d46279b527eb8bd4b2e18269ef1c2fb844dea3531f1a9a",
+      "report_sha256": "57dc7359caadab98bd289b60e3d0d5be8d64ac310d05d6eb153ab6674600279d",
+      "native_verified_files": 45
+    },
+    {
+      "asset": "us",
+      "check_id": "f1a1a183932a468899caa11137d2cc89",
+      "run_id": "5b8c3d0814174c66b18776b1382005fb",
+      "same_config": true,
+      "config_sha256": "48b1ed380dbbd1d431ea5045294093a09da278716fe0149c56454d8051578c42",
+      "preflight_sha256": "e93907ea014a557fa6fcebb4f035133a9d8d4733a638fff1e0dc74052faae8e8",
+      "no_preflight_strategy_output": true,
+      "evidence_kind": "synthetic",
+      "nav_rows": 85,
+      "initial_nav": "250000",
+      "total_return": "-0.03220127943524",
+      "max_drawdown": "0.04222196071814960632154716719",
+      "nav_sha256": "3b5a32d369cc7dcf659d3457ed5edb92e9420b39156e51fd1a4b8852b79bc366",
+      "report_sha256": "c561ef8bbce2a7ba03e43ad7e0f45aa7b32366d11c5a395b374f47728c651b0a",
+      "benchmark_total_return": "-0.02867295671668",
+      "native_verified_files": 17
+    }
+  ],
+  "gui_failure": {
+    "run_id": "d518e49d838945ba8b22215ffd0dfd86",
+    "reason": "Explicit benchmark absent from synthetic bundle",
+    "no_strategy_output": true
+  },
+  "tests": {
+    "fund-preflight-tests.log": {
+      "sha256": "91c2b8892b6ba01f77935f96d33792e2cfc8e498fa432831e0dac1d7867df7a5",
+      "summary": "57 passed in 17.33s"
+    },
+    "us-preflight-tests-final.log": {
+      "sha256": "9799571ff53fb30aea4bd5f0f7785c268d81b682a81ec5c812be96073ac3c83e",
+      "summary": "22 passed in 18.81s"
+    },
+    "studio-unit-tests-final.log": {
+      "sha256": "856f57708e352a27d1de5e34043a7148c643f4b728b349a0736187882470009a",
+      "summary": "123 passed in 6.54s"
+    },
+    "studio-fund-integration.log": {
+      "sha256": "e0a8b66306c58b1560395ad5909248f2925a9ea9388e2e1b1929fc41a62b023a",
+      "summary": "1 passed, 1 deselected in 14.43s"
+    },
+    "studio-us-integration-final.log": {
+      "sha256": "87b93ab836ff7962227828c96f90bfaf1c6f7a3f7c79a90c50de40811abea464",
+      "summary": "1 passed, 1 deselected in 55.21s"
+    }
+  },
+  "screenshots": {
+    "fund-direct-report.png": "9e1666b14a306b5d18a10e67f7543b5524e767f5659e4fa4c12173322044cd8f",
+    "fund-preflight.png": "9afa8b2f612ea906e2a911c394835201ffd231789036d9f0de3c5c652521963d",
+    "fund-result-contained.png": "0e4578c1bbd3248097bd2bbf1d8d5f0fa285bbdda3e59b33d1d9cd4b7f409879",
+    "fund-result.png": "b4fd9352b425c470f51fc6efc8cd7e3d734097fb8edcec664c7a0bcc8528b877",
+    "us-benchmark-rejected.png": "3a7912a653798511e1e4f7d7dc5a77e0a2fb47bb1078048d17e4e2fe93ea0dd4",
+    "us-preflight.png": "f3a4767a4e5fb68638f8aebf0196e1efb7204c59b3edae9f5402fd0f3a407087",
+    "us-result.png": "26cf4d0e799187ec0a445161d2ff372c9912534c8c65947eb389cad599893b27"
+  },
+  "layout": {
+    "document_client_width": 1265,
+    "document_scroll_width": 1265,
+    "table_scroll_widths": [
+      1511,
+      953,
+      1275
+    ],
+    "table_client_width": 830
+  },
+  "browser_notes": {
+    "embedded_fund_report": "MutationObserver TypeError reproduced in embedded view; source not established. Curves and tables render. Kept as a known browser integration limitation.",
+    "direct_fund_report_console": [],
+    "logs_sha256": "a90d3ae54e3d4f3db58e513b15326950c8fc7210cbcc21ffc6c3dd2b84774ef4",
+    "fresh_logs_sha256": "b6232bae0e66594cb08911875b9476fc67bb31a0cb742f90d9ec4e26961c4e99"
+  },
+  "limitations": [
+    "Synthetic inputs verify software only; no new real-market or business certification",
+    "No frozen account, r4/r5 registration or automation changes",
+    "P1.1 remains open for A-share real cache, remaining asset templates, first-use acceptance and embedded report console issue"
+  ]
+}
