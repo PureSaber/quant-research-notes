@@ -1,6 +1,6 @@
 # Repository Map
 
-更新时间：2026-10-03。当前维护范围为23个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
+更新时间：2026-10-04。当前维护范围为23个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
 核心范围与M8的14仓不可变发布清单不同：新增研究项目及默认分支更新不会自动获得M8发布认证。
 
 [机器可读能力清单](https://github.com/PureSaber/quant-workspace/blob/main/src/quant_workspace/capabilities.json)列出23仓的资产、功能、接口、数据状态、缺口和关系。[开发配置](https://github.com/PureSaber/quant-workspace/blob/main/configs/platform.workspace.yaml)与14仓发行配置分开；`quant-workspace capabilities --inventory`只能核验源码、提交和证据文件存在性，不能替代环境、跨仓业务或市场数据认证。
@@ -8,7 +8,7 @@
 | Repo | Role | Key CLI |
 |------|------|---------|
 | quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、模板操作、A股/港股/模拟盘原生预检、显式运行及只读前向账户 | `python -m quant_studio serve/check` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、八模板与七个业务预检入口、显式运行、只读前向账户及原生事件账本展示 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
@@ -60,6 +60,8 @@ M8真实市场门禁以[M8状态](validation/m8/M8_STATUS.md)和[M9里程碑](ht
 quant-workspace ── resolves paths ──► quant-lab / quant-pipeline / quant-portfolio
 
 quant-studio ── declared templates / CLI ──► a-share-multifactor / quant-hk-equity / quant-paper-sim
+             ├─ native preflight / CLI ──► quant-fund / quant-us-equity
+             ├─ offline fixture / native ledger views ──► quant-futures-spread / quant-crypto-basis
              └─ read-only account inspection ──► quant-pipeline
 
 quant-fund ── independent fund research / OTC ledger ──► read-only integration snapshot

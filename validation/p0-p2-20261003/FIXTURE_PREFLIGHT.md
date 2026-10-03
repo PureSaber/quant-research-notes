@@ -1,6 +1,6 @@
 # 期货与Crypto原生只读预检
 
-2026-10-04补齐两条离线样例路径的原生预检，作为P1.1剩余资产接入的前置能力。当前仍为synthetic、fixture-only、backtest-only；完整Studio模板、净值/报告适配和GUI首次使用验收尚未完成，不增加P0.3真实双腿或P2连续采集、L2证据。
+2026-10-04补齐两条离线样例路径的原生预检，作为P1.1剩余资产接入的前置能力。该次交付仍为synthetic、fixture-only、backtest-only；交付时完整Studio模板、净值/报告适配和GUI首次使用验收尚未完成，不增加P0.3真实双腿或P2连续采集、L2证据。
 
 ## 实现与根因
 
@@ -37,3 +37,5 @@ qcb-run-fixture --source okx --taker --preflight
 合并后两仓主线CI和CodeQL也已全部通过。
 
 下一步将原生standard/v2账户结果接入Studio，保留事件时点、币种、初始资金和样例标识，再完成模板、失败路径及GUI验收。两仓原生预检完成不意味着Studio已从六模板增加到八模板。[全部P0—P2](PLAN.md)继续进行。
+
+后续增量：同日已完成[Studio期货/Crypto模板与原生账本展示](STUDIO_FIXTURES.md)，当前共八模板；上述六模板描述保留为原生预检交付时点。真实业务与完整P0—P2仍未完成。

@@ -2,4 +2,5 @@ validation/m8/*.json text eol=lf
 validation/governance/**/*.json text eol=lf
 validation/risk-pit-20260926/evidence/** -text
 validation/p0-p2-20261003/evidence/fixture-native-preflight.json text eol=lf
+validation/p0-p2-20261003/evidence/studio-fixtures.json text eol=lf
 
