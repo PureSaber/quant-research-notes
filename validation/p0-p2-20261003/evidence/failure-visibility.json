@@ -1,0 +1,39 @@
+{
+  "schema_version": "quant.failure-visibility-acceptance/v1",
+  "checked_at": "2026-10-03T09:11:00.111083+00:00",
+  "status": "passed",
+  "source_kind": "synthetic-fixture",
+  "independent_market_evidence": false,
+  "native_family_collector": {
+    "planned_attempts_and_placeholders": 3,
+    "available": false,
+    "statistical_methods": 0,
+    "missing_study_preserved": true
+  },
+  "successful_retry": {
+    "current_candidates_complete": true,
+    "retained_unsuccessful_attempts": 1,
+    "statistical_conclusion": "requires_separate_family_evidence"
+  },
+  "failed_base": {
+    "statistical_conclusion": "unavailable_incomplete_candidates",
+    "incomplete_candidates": [
+      "base"
+    ]
+  },
+  "local_tests": {
+    "passed": 151,
+    "existing_skips": 5,
+    "coverage_percent": 88.69
+  },
+  "gui_pages": [
+    "family inventory and unavailable statistical conclusion",
+    "successful retry and retained old failure",
+    "failed baseline and incomplete candidate diagnosis"
+  ],
+  "screenshots": {
+    "report-family-unavailable.jpg": "2c280fdbba2ea8acfbbaa276536e598f1d7220afa44b648da005270cc2a60f48",
+    "report-retry-failure.jpg": "91a0308467617bf492df076eb05ddb62642ba9ce208d24dfd29aa81bb4b8acb8",
+    "report-failed-base.jpg": "ed6867ed6863bc63d9c057e6b41d3f025c47530e6843c0bb6b4b46f13fcf79ec"
+  }
+}
