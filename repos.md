@@ -22,7 +22,7 @@
 | [quant-us-equity](https://github.com/PureSaber/quant-us-equity) | 美股研究扩展（private）；不属于既有M8认证范围 | 入口与证据见授权仓库 |
 | [quant-fund](https://github.com/PureSaber/quant-fund) | 基金研究、场外申赎模拟和FOF监控；已有真实净值小样本，完整条款、分红和分用途日历仍未闭合 | `python -m quant_fund.cli`、`streamlit run app.py` |
 | [quant-stat-arb](https://github.com/PureSaber/quant-stat-arb) | 统计套利研究（private）、原生只读预检和Studio配置文件入口；不属于既有M8认证范围 | `python -m quant_stat_arb preflight/run` |
-| [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；原生只读预检、因果回放、发布门禁、分折证据及资产/现金/期货/模型成本归因；Studio已接入 | `python -m quant_timing preflight/run/compare` |
+| [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；原生只读预检、因果回放、发布门禁、分折及账本归因；Studio已接入。固定仓位/风格反事实另有原生报告，尚未接入Studio | `python -m quant_timing preflight/run/compare` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
 | quant-lab | Experiment index + HTML dashboard | `quant-lab scan/export html` |
 | quant-report-hub | Charts (spread + equity) | `quant-report run` |
