@@ -101,6 +101,8 @@ flowchart LR
 |ETF六维反事实与三个基准|[Portfolio#21](https://github.com/PureSaber/quant-portfolio/pull/21)、[Lab#17](https://github.com/PureSaber/quant-lab/pull/17)、[ASM#23](https://github.com/PureSaber/a-share-multifactor/pull/23)；27个真实历史模拟账本、564项产物哈希和6858个事件对账通过，548个来源及账户文件未变，详见[COUNTERFACTUALS.md](COUNTERFACTUALS.md)|
 |原生反事实核验与统一交互看板|[Report Hub#25](https://github.com/PureSaber/quant-report-hub/pull/25)；206项测试、5项既有条件跳过，覆盖率89.78%；三基准/分折/干预曲线切换、失败阻断及宽窄屏GUI验收通过，详见[PAIRED_DASHBOARD.md](PAIRED_DASHBOARD.md)|
 
+现金缓冲/趋势独立干预随后由[Lab#18](https://github.com/PureSaber/quant-lab/pull/18)、[ASM#24](https://github.com/PureSaber/a-share-multifactor/pull/24)和[Report Hub#26](https://github.com/PureSaber/quant-report-hub/pull/26)交付；分别128项、228项及207项测试通过。30个账本、624项源哈希、7620个事件核验与两组GUI检查完成，548个冻结来源及账户文件未变，详见[CASH_TREND_INTERVENTIONS.md](CASH_TREND_INTERVENTIONS.md)。降低缓冲到0%不改变权重或收益；提高到40%净收益−1.1797%；仅关闭趋势筛选为+9.6734%。全部重用既有189个市场日期，不选择新赢家。
+
 各测试数字属于各自明确运行，不能相加为一个完整平台认证结论。修改经过对应PR检查；冻结研究环境未追随这些展示改动滚动升级。
 
 ## 跨仓实际验收
@@ -115,7 +117,7 @@ flowchart LR
 
 1. P0：r5开发验证已完成，按既有自动化明确要求等待独立登记授权；保留r4。四ETF自然观察窗口为2026-10-08至2026-12-31，不能提前补出结果或以回放代替。
 2. P0：补齐基金真实业务资料、港股完整历史财务/行动/规则、美股可用真实行情、期货/Crypto独立双腿。每项都以账本和人工基线对账为验收标准。
-3. P1：统一总览、只读账户及A股/港股/模拟盘原生预检已完成，继续A股完整真实缓存、新资产模板和新手验收。候选/家族失败及重试历史已直接展示；ETF现金证券逐日账本归因、六维反事实、三基准比较及统一看板已完成。继续独立参考价滑点、现金/趋势独立干预、择时细归因和其他资产反事实适配，完整保留负面研究结果。
+3. P1：统一总览、只读账户及A股/港股/模拟盘原生预检已完成，继续A股完整真实缓存、新资产模板和新手验收。候选/家族失败及重试历史已直接展示；ETF现金证券逐日账本归因、六维反事实、三基准比较及统一看板已完成。现金缓冲/趋势两组30账本与交互看板也已验收，见[CASH_TREND_INTERVENTIONS.md](CASH_TREND_INTERVENTIONS.md)。继续独立参考价滑点、完整现金机会成本、择时细归因和其他资产反事实适配，完整保留负面研究结果。
 4. P2：宽截面PIT行业/风格与特异风险、ETF穿透、风险校准及独立样本外验证；独立归档与恢复、Crypto八流30个完整UTC日、国内授权L2。
 
 独立归档位置、私募业务材料和L2授权来源仍待提供；不能用合成输入或降低既有容量/授权门槛替代。当前不具备完成全部P0—P2的证据，市场数据GA和完整风险模型均未宣布完成。

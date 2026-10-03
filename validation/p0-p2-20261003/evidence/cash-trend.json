@@ -1,0 +1,1391 @@
+{
+  "acceptance_sha256": "55b6fc3746a4df0ef064e5b63574c78a0452617685d5c934679b2ca7e8ab8d70",
+  "as_of": "2026-10-03",
+  "baseline_and_benchmark_paths_exactly_reproduced": 18,
+  "eligibility": {
+    "folds": [
+      {
+        "base_eligible_rows": 185,
+        "fold": 0,
+        "rebalance_dates_equal": true,
+        "score_values_exactly_equal": true,
+        "scored_rows": 252,
+        "trend_removed_eligible_rows": 252
+      },
+      {
+        "base_eligible_rows": 172,
+        "fold": 1,
+        "rebalance_dates_equal": true,
+        "score_values_exactly_equal": true,
+        "scored_rows": 252,
+        "trend_removed_eligible_rows": 252
+      },
+      {
+        "base_eligible_rows": 80,
+        "fold": 2,
+        "rebalance_dates_equal": true,
+        "score_values_exactly_equal": true,
+        "scored_rows": 252,
+        "trend_removed_eligible_rows": 252
+      }
+    ],
+    "protocol_sha256": "4786a4b127d417027ffa6fe1bc86084da4bc5566b39d72a57145cadaed1a5b6d"
+  },
+  "folds": [
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "cash",
+          "return_gap": -0.038524779319999425,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.038524779319999425,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": -0.062372000600000366
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "passive",
+          "return_gap": 0.05554353579000182,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.038524779319999425,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": 0.03169631451000088
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.03669279243000001,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.038524779319999425,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": 0.012845571149999069
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.3525551635259418,
+          "mean_daily_gross": 0.6463568609328904,
+          "mean_target_gross": 0.7142857142857143,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.3525551635259418,
+          "mean_daily_gross": 0.6463568609328904,
+          "mean_target_gross": 0.7142857142857143,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.019229440965317233,
+          "mean_daily_gross": 0.9801161610818423,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.20499522333790146,
+          "mean_daily_gross": 0.7944702612884089,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.27076444856358695,
+          "mean_daily_gross": 0.7281469449480082,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        }
+      },
+      "evidence_sha256": "5f1df2c18529a5a8c86b62db71fc6c239267e97a6e86e8ede55fdc0d94cd3c09",
+      "fold": 0,
+      "lower_cash_daily_path_equals_base": true,
+      "lower_cash_weights_equal_base": true,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.044920076832724254,
+          "net_return": 0.038524779319999425
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.044920076832724254,
+          "net_return": 0.038524779319999425
+        },
+        "passive": {
+          "max_drawdown": -0.05804345624728757,
+          "net_return": 0.09406831511000124
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.047531925114532636,
+          "net_return": 0.07521757174999943
+        },
+        "trend_filter": {
+          "max_drawdown": -0.0449289316647451,
+          "net_return": 0.062372000600000366
+        }
+      },
+      "scenario": "lower-buffer",
+      "sessions": 63
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "cash",
+          "return_gap": -0.01123191356999964,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.01123191356999964,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.08747283768000003
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "passive",
+          "return_gap": 0.06468794632999963,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.01123191356999964,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.01155297778000075
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.049490513540000336,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.01123191356999964,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.02675041057000005
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.40338706871820423,
+          "mean_daily_gross": 0.5966129312817958,
+          "mean_target_gross": 0.6571428571428573,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.40338706871820423,
+          "mean_daily_gross": 0.5966129312817958,
+          "mean_target_gross": 0.6571428571428573,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.017992954113984244,
+          "mean_daily_gross": 0.9820070458860157,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.20897441341029369,
+          "mean_daily_gross": 0.7910255865897063,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.2513166376002024,
+          "mean_daily_gross": 0.7486833623997975,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        }
+      },
+      "evidence_sha256": "339802106d3b9fb616cded0f0a2bf74dd654ffbaae9c2d3ff39b825f2f5d0c73",
+      "fold": 1,
+      "lower_cash_daily_path_equals_base": true,
+      "lower_cash_weights_equal_base": true,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.051783673405335406,
+          "net_return": 0.01123191356999964
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.051783673405335406,
+          "net_return": 0.01123191356999964
+        },
+        "passive": {
+          "max_drawdown": -0.08638423358519853,
+          "net_return": 0.07591985989999928
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.07105883295340076,
+          "net_return": 0.06072242710999998
+        },
+        "trend_filter": {
+          "max_drawdown": -0.04906365157635173,
+          "net_return": 0.08747283768000003
+        }
+      },
+      "scenario": "lower-buffer",
+      "sessions": 63
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "cash",
+          "return_gap": 0.07817466590999977,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.07817466590999977,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": 0.05069385020999939
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "passive",
+          "return_gap": 0.03819406410999959,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.07817466590999977,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": 0.01071324840999921
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.01969473978999914,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.07817466590999977,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": -0.0077860759100012444
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.7092786966851028,
+          "mean_daily_gross": 0.29037315369476413,
+          "mean_target_gross": 0.2857142857142857,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.max_tracking_error": 47
+          },
+          "runtime_risk_events": 0
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.7092786966851028,
+          "mean_daily_gross": 0.29037315369476413,
+          "mean_target_gross": 0.2857142857142857,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.max_tracking_error": 47
+          },
+          "runtime_risk_events": 0
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.25605949682863893,
+          "mean_daily_gross": 0.7437268417119604,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {
+            "drawdown": 32
+          },
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.599254121914081,
+          "mean_daily_gross": 0.4005723047818114,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.drawdown": 32,
+            "portfolio.max_tracking_error": 31
+          },
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.23272263217372016,
+          "mean_daily_gross": 0.7669385168798153,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        }
+      },
+      "evidence_sha256": "d7c2e66e0889d1167fe01c64f4a1895dee4946d8d88e407cded7cba87a58f4da",
+      "fold": 2,
+      "lower_cash_daily_path_equals_base": true,
+      "lower_cash_weights_equal_base": true,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.14681023764859824,
+          "net_return": -0.07817466590999977
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.14681023764859824,
+          "net_return": -0.07817466590999977
+        },
+        "passive": {
+          "max_drawdown": -0.15396406448175293,
+          "net_return": -0.03998060180000018
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.15484720129378082,
+          "net_return": -0.058479926120000636
+        },
+        "trend_filter": {
+          "max_drawdown": -0.11952190187637557,
+          "net_return": -0.05069385020999939
+        }
+      },
+      "scenario": "lower-buffer",
+      "sessions": 63
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.001869278410001174,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "cash",
+          "return_gap": -0.038524779319999425,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.0403940577300006,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": -0.06424127901000154
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.001869278410001174,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "passive",
+          "return_gap": 0.05554353579000182,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.0403940577300006,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": 0.029827036099999704
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.001869278410001174,
+            "trend_filter": 0.02384722128000094
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.03669279243000001,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.038524779319999425,
+            "cash": 0.0,
+            "cash_buffer": 0.0403940577300006,
+            "passive": 0.09406831511000124,
+            "same_risk_constrained": 0.07521757174999943,
+            "trend_filter": 0.062372000600000366
+          },
+          "unexplained_and_interaction_residual": 0.010976292739997895
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.3525551635259418,
+          "mean_daily_gross": 0.6463568609328904,
+          "mean_target_gross": 0.7142857142857143,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.6000000000000001,
+          "mean_daily_cash": 0.5036591952683663,
+          "mean_daily_gross": 0.4957263447299799,
+          "mean_target_gross": 0.5571428571428572,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.019229440965317233,
+          "mean_daily_gross": 0.9801161610818423,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.20499522333790146,
+          "mean_daily_gross": 0.7944702612884089,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.27076444856358695,
+          "mean_daily_gross": 0.7281469449480082,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        }
+      },
+      "evidence_sha256": "0e74443c168689293e848c9d9764d1abbfbafa5f0cd1db25b54c04e35e0a5b98",
+      "fold": 0,
+      "lower_cash_daily_path_equals_base": null,
+      "lower_cash_weights_equal_base": null,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.044920076832724254,
+          "net_return": 0.038524779319999425
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.03655855221686288,
+          "net_return": 0.0403940577300006
+        },
+        "passive": {
+          "max_drawdown": -0.05804345624728757,
+          "net_return": 0.09406831511000124
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.047531925114532636,
+          "net_return": 0.07521757174999943
+        },
+        "trend_filter": {
+          "max_drawdown": -0.0449289316647451,
+          "net_return": 0.062372000600000366
+        }
+      },
+      "scenario": "higher-buffer",
+      "sessions": 63
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.009274672090000768,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "cash",
+          "return_gap": -0.01123191356999964,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.02050658566000041,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.0967475097700008
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.009274672090000768,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "passive",
+          "return_gap": 0.06468794632999963,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.02050658566000041,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.02082764987000152
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.009274672090000768,
+            "trend_filter": 0.07624092411000039
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.049490513540000336,
+          "sessions": 63,
+          "total_returns": {
+            "base": 0.01123191356999964,
+            "cash": 0.0,
+            "cash_buffer": 0.02050658566000041,
+            "passive": 0.07591985989999928,
+            "same_risk_constrained": 0.06072242710999998,
+            "trend_filter": 0.08747283768000003
+          },
+          "unexplained_and_interaction_residual": -0.03602508266000082
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.40338706871820423,
+          "mean_daily_gross": 0.5966129312817958,
+          "mean_target_gross": 0.6571428571428573,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.6000000000000001,
+          "mean_daily_cash": 0.5338713310052626,
+          "mean_daily_gross": 0.4661286689947375,
+          "mean_target_gross": 0.5142857142857143,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.017992954113984244,
+          "mean_daily_gross": 0.9820070458860157,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.20897441341029369,
+          "mean_daily_gross": 0.7910255865897063,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.2513166376002024,
+          "mean_daily_gross": 0.7486833623997975,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        }
+      },
+      "evidence_sha256": "e14cfb658d6e5d92f1046905ad52fb4717e1258122058fef5e0468021a62080d",
+      "fold": 1,
+      "lower_cash_daily_path_equals_base": null,
+      "lower_cash_weights_equal_base": null,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.051783673405335406,
+          "net_return": 0.01123191356999964
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.041968068720314444,
+          "net_return": 0.02050658566000041
+        },
+        "passive": {
+          "max_drawdown": -0.08638423358519853,
+          "net_return": 0.07591985989999928
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.07105883295340076,
+          "net_return": 0.06072242710999998
+        },
+        "trend_filter": {
+          "max_drawdown": -0.04906365157635173,
+          "net_return": 0.08747283768000003
+        }
+      },
+      "scenario": "higher-buffer",
+      "sessions": 63
+    },
+    {
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.008923358759999611,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "cash",
+          "return_gap": 0.07817466590999977,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.06925130715000016,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": 0.04177049144999978
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.008923358759999611,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "passive",
+          "return_gap": 0.03819406410999959,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.06925130715000016,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": 0.0017898896499995987
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.008923358759999611,
+            "trend_filter": 0.027480815700000383
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.01969473978999914,
+          "sessions": 63,
+          "total_returns": {
+            "base": -0.07817466590999977,
+            "cash": 0.0,
+            "cash_buffer": -0.06925130715000016,
+            "passive": -0.03998060180000018,
+            "same_risk_constrained": -0.058479926120000636,
+            "trend_filter": -0.05069385020999939
+          },
+          "unexplained_and_interaction_residual": -0.016709434670000856
+        }
+      },
+      "diagnostics": {
+        "base": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.7092786966851028,
+          "mean_daily_gross": 0.29037315369476413,
+          "mean_target_gross": 0.2857142857142857,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.max_tracking_error": 47
+          },
+          "runtime_risk_events": 0
+        },
+        "cash_buffer": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.6,
+          "mean_daily_cash": 0.7849214537580285,
+          "mean_daily_gross": 0.21473632716572907,
+          "mean_target_gross": 0.21428571428571427,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.max_tracking_error": 47
+          },
+          "runtime_risk_events": 0
+        },
+        "passive": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 1.0,
+          "mean_daily_cash": 0.25605949682863893,
+          "mean_daily_gross": 0.7437268417119604,
+          "mean_target_gross": 1.0,
+          "realized_risk_checks": 0,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 1
+        },
+        "same_risk_constrained": {
+          "allocation_decisions": 1,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {
+            "drawdown": 32
+          },
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.599254121914081,
+          "mean_daily_gross": 0.4005723047818114,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {
+            "portfolio.drawdown": 32,
+            "portfolio.max_tracking_error": 31
+          },
+          "runtime_risk_events": 0
+        },
+        "trend_filter": {
+          "allocation_decisions": 14,
+          "daily_ledger_observations": 63,
+          "halt_reason_counts": {},
+          "max_target_gross": 0.8,
+          "mean_daily_cash": 0.23272263217372016,
+          "mean_daily_gross": 0.7669385168798153,
+          "mean_target_gross": 0.8,
+          "realized_risk_checks": 63,
+          "risk_rule_counts": {},
+          "runtime_risk_events": 0
+        }
+      },
+      "evidence_sha256": "52a7ae84aca7a545b3d8632e5f4e2f46bc42112bd2e0631147f46710bb9e544c",
+      "fold": 2,
+      "lower_cash_daily_path_equals_base": null,
+      "lower_cash_weights_equal_base": null,
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.14681023764859824,
+          "net_return": -0.07817466590999977
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.11125650992343239,
+          "net_return": -0.06925130715000016
+        },
+        "passive": {
+          "max_drawdown": -0.15396406448175293,
+          "net_return": -0.03998060180000018
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.15484720129378082,
+          "net_return": -0.058479926120000636
+        },
+        "trend_filter": {
+          "max_drawdown": -0.11952190187637557,
+          "net_return": -0.05069385020999939
+        }
+      },
+      "scenario": "higher-buffer",
+      "sessions": 63
+    }
+  ],
+  "gui": {
+    "checks": [
+      "both scenarios: actual cash and trend definitions, intervention selection, reference selection",
+      "lower-buffer: fold-002 63 dates and combined 189 dates restored",
+      "higher-buffer: desktop net-return and drawdown charts readable"
+    ],
+    "console_errors": 0,
+    "console_warnings": 0,
+    "screenshot_sha256": {
+      "higher-buffer/charts.png": "eb29dbb00b05de41f9392c554700b0dadef29dab37b737cd3d0a5cd9186f63e2",
+      "higher-buffer/gui.png": "601109dfe67e179942c66804ab7fb88b4ea47141924fbc24b313af6524b646ae",
+      "lower-buffer/gui.png": "81bbcbd094445e7c7b689aa798c1fd41db58136d92d06ba8008d1ef7dd7cb960"
+    },
+    "source": "real-retrospective-history"
+  },
+  "ledger_row_counts": {
+    "event_reconciliation.csv": 7620,
+    "fee_details.csv": 486,
+    "instrument_pnl.csv": 6102,
+    "period_reconciliation.csv": 1890
+  },
+  "limitations": [
+    "Previously observed retrospective fixed-pool dates; no new independent evidence.",
+    "Cash buffer alone changes from 20% to 0% or 40%; position, allocation, fees and risk constraints remain fixed.",
+    "Trend filter alone switches etf_trend to rank; factors, ranking, rebalance dates and risk remain fixed.",
+    "Cash-buffer relief may have no effect because other caps bind; verify actual weights instead of assuming full investment.",
+    "Three folds are independent accounts; aggregate only non-overlapping dates within each scenario.",
+    "Two scenarios share baselines, trend intervention and all market dates; do not pool them as independent trials or add their effects."
+  ],
+  "non_cash_runs": 30,
+  "protected_sources": {
+    "r4_account": {
+      "content_mtime_inventory_unchanged": true,
+      "file_count": 3
+    },
+    "source_bundle": {
+      "content_mtime_inventory_unchanged": true,
+      "file_count": 34
+    },
+    "source_study": {
+      "content_mtime_inventory_unchanged": true,
+      "file_count": 511
+    }
+  },
+  "protocol_sha256": "4786a4b127d417027ffa6fe1bc86084da4bc5566b39d72a57145cadaed1a5b6d",
+  "runtime_sha256": "231aeadfca4d5474435bf39d23098801595d046bbc871c2e79880ecf1cca5ba6",
+  "scenarios": {
+    "higher-buffer": {
+      "dashboard_sha256": "6d61b7da898c541637dec55a1a88b5d971dba8c4fa79e69957d3d8b1f3660644",
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.02011167296134153,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "cash",
+          "return_gap": 0.03190880559634468,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.011797132635003149,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": -0.11684572678813154
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.02011167296134153,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "passive",
+          "return_gap": 0.1619762749777941,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.011797132635003149,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": 0.013221742593317876
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.02011167296134153,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "b8df0c8503e6c0cfcb1cb37b50dc819a0ec9305ec77d3f760a351e66fc10af22",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.10571940992874651,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.011797132635003149,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": -0.04303512245572971
+        }
+      },
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.14681023764859846,
+          "net_return": -0.03190880559634468
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.11125650992343183,
+          "net_return": -0.011797132635003149
+        },
+        "passive": {
+          "max_drawdown": -0.15396406448175348,
+          "net_return": 0.13006746938144942
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.15484720129378038,
+          "net_return": 0.07381060433240183
+        },
+        "trend_filter": {
+          "max_drawdown": -0.11952190187637546,
+          "net_return": 0.09673405382679001
+        }
+      },
+      "sessions": 189,
+      "sidecars": {
+        "index.alerts.json": "de737a426983c523389126b4efd1c7b151e6ec141a38fd7c69de4fd5cdcf7c1e",
+        "index.html.status.json": "463b7e33206b60d0e2978608be47236ee990fa371b80b8f7dc12d4afc4067d40",
+        "index.paired.json": "8200c9476524b7c560566c16ea6d9c221c587d3090121137bc2452556e345747"
+      }
+    },
+    "lower-buffer": {
+      "dashboard_sha256": "13c7ff79e65f1163eba0788afd13d2691799c21416ed588e2d19daf13b39496f",
+      "decompositions": {
+        "cash": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "cash",
+          "return_gap": 0.03190880559634468,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.03190880559634468,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": -0.09673405382679001
+        },
+        "passive": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "passive",
+          "return_gap": 0.1619762749777941,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.03190880559634468,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": 0.03333341555465941
+        },
+        "same_risk_constrained": {
+          "definition": "each effect is intervention terminal return minus baseline terminal return",
+          "limitations": [
+            "model-dependent counterfactuals, not causal identification",
+            "residual includes omitted effects and interactions",
+            "better unconstrained backtest does not authorize weaker live risk limits"
+          ],
+          "one_at_a_time_effects": {
+            "cash_buffer": 0.0,
+            "trend_filter": 0.1286428594231347
+          },
+          "plan_sha256": "a1efbfcb9d702c417fd3dc10527b3723e20518ec780fa213fc7e39c5599d2185",
+          "reference": "same_risk_constrained",
+          "return_gap": 0.10571940992874651,
+          "sessions": 189,
+          "total_returns": {
+            "base": -0.03190880559634468,
+            "cash": 0.0,
+            "cash_buffer": -0.03190880559634468,
+            "passive": 0.13006746938144942,
+            "same_risk_constrained": 0.07381060433240183,
+            "trend_filter": 0.09673405382679001
+          },
+          "unexplained_and_interaction_residual": -0.02292344949438818
+        }
+      },
+      "metrics": {
+        "base": {
+          "max_drawdown": -0.14681023764859846,
+          "net_return": -0.03190880559634468
+        },
+        "cash": {
+          "max_drawdown": 0.0,
+          "net_return": 0.0
+        },
+        "cash_buffer": {
+          "max_drawdown": -0.14681023764859846,
+          "net_return": -0.03190880559634468
+        },
+        "passive": {
+          "max_drawdown": -0.15396406448175348,
+          "net_return": 0.13006746938144942
+        },
+        "same_risk_constrained": {
+          "max_drawdown": -0.15484720129378038,
+          "net_return": 0.07381060433240183
+        },
+        "trend_filter": {
+          "max_drawdown": -0.11952190187637546,
+          "net_return": 0.09673405382679001
+        }
+      },
+      "sessions": 189,
+      "sidecars": {
+        "index.alerts.json": "1ff55658be2fd301f0eef5ccaa3f5c1d5a4e4cce52fc66a51be0f2073e979c8f",
+        "index.html.status.json": "dffd37918508d685acab47bf5703d9454a01af5527177ad1205fcc5051c1a41f",
+        "index.paired.json": "5260c7c57e8c93006ac1750ab7ba18dab0e18f5ff5f20a2ea2f29fab933a9b14"
+      }
+    }
+  },
+  "schema_version": "quant.cash-trend-public-evidence/v1",
+  "shared_candidate_paths_equal_between_scenarios": true,
+  "shared_market_dates": 189,
+  "software": {
+    "a-share-multifactor": {
+      "commit": "866b43bb95673f8ca46218e29f69aba4c75cdb8b",
+      "coverage_percent": 84.76,
+      "locked_passed": 228,
+      "pr": 24,
+      "source_passed": 228
+    },
+    "quant-lab": {
+      "commit": "6cf6126887ab084dd15507a287f40db571e65b95",
+      "coverage_percent": 83.72,
+      "passed": 128,
+      "pr": 18
+    },
+    "quant-report-hub": {
+      "commit": "3eb5e2153e1a208e1ed77f1c020eb5017845eead",
+      "coverage_percent": 89.78,
+      "existing_skipped": 5,
+      "passed": 207,
+      "pr": 26
+    }
+  },
+  "source_artifacts_verified": 624,
+  "source_integration_asm_commit": "4357f2c10f0e69e7c896dbc8a5eca282d653e7b8"
+}
