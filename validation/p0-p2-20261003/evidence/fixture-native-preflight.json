@@ -1,0 +1,137 @@
+{
+  "schema_version": "quant.fixture-preflight-acceptance/v1",
+  "as_of": "2026-10-04",
+  "scope": "Native futures and crypto read-only fixture preflight; Studio templates remain pending",
+  "evidence_kind": "synthetic",
+  "investable": false,
+  "input_integrity": {
+    "file_count": 6,
+    "content_mtime_inventory_unchanged": true
+  },
+  "native_runs": [
+    {
+      "run_id": "certified_local_sample_v1",
+      "profile": "backtest-ledger",
+      "code_version": "d9a918115686eee101489da3fa25fa32b1edb447",
+      "verified_artifacts": 12,
+      "inputs": {
+        "instrument_master": "sha256:1300957f37b9b957b44169c7c382127b9792380932c6293fdac83b9a56583c80",
+        "market_events": "sha256:7e330fd5f1733b7429555a6bc6f6941ff17385c9963c805bb549ffe4bef19f74",
+        "signal_plan": "sha256:fd23ac6fffe14856ed4606b3017c9a08ef2d290c3cf280e8cf92be18517548c3"
+      },
+      "same_parameters": true,
+      "preflight_sha256": "14be481fe1565c738148a42d04ff71a14cd41fef0e1b54151fc366ae0bb5dfa0",
+      "input_fingerprint": "55a2cf734e286e419f794854855e5e2dedda267b64f8d0c32b0628c7ba119ca3"
+    },
+    {
+      "run_id": "crypto-binance-maker",
+      "profile": "backtest-ledger",
+      "code_version": "cbeec78c64e4fe8373a091dc79926566fd0c371b",
+      "verified_artifacts": 12,
+      "inputs": {
+        "binance-offline-fixture": "sha256:deeb9f4e009094af744186dc8de7eb09d170f011fa47e511db176f43597816b7",
+        "crypto-fixture-catalog-index": "sha256:ac2bbec7d91c25cf9b12306b842939ffff3ea0f5768ba93b949df82ce0256e32",
+        "okx-offline-fixture": "sha256:95a727e1f37ada4bad2e006fc1046c502bbfef7139fe0c89125a64625c5fe8a8"
+      },
+      "same_parameters": true,
+      "preflight_sha256": "dec52adfae52fb9fdf1f9f5dbd8c1d67c6be75dfa64dc3c3737c3d10f76a04bb",
+      "input_fingerprint": "f9c939522a47a1e9cb3b804cd4151b2866865f059cff611bd68f9ad3fbebffa2"
+    },
+    {
+      "run_id": "crypto-binance-taker",
+      "profile": "backtest-ledger",
+      "code_version": "cbeec78c64e4fe8373a091dc79926566fd0c371b",
+      "verified_artifacts": 12,
+      "inputs": {
+        "binance-offline-fixture": "sha256:deeb9f4e009094af744186dc8de7eb09d170f011fa47e511db176f43597816b7",
+        "crypto-fixture-catalog-index": "sha256:ac2bbec7d91c25cf9b12306b842939ffff3ea0f5768ba93b949df82ce0256e32",
+        "okx-offline-fixture": "sha256:95a727e1f37ada4bad2e006fc1046c502bbfef7139fe0c89125a64625c5fe8a8"
+      },
+      "same_parameters": true,
+      "preflight_sha256": "db83316e2bc0ea33da4b66c10bf051c1bacfc5447eed3199461d39a1e1c3e659",
+      "input_fingerprint": "f9c939522a47a1e9cb3b804cd4151b2866865f059cff611bd68f9ad3fbebffa2"
+    },
+    {
+      "run_id": "crypto-okx-maker",
+      "profile": "backtest-ledger",
+      "code_version": "cbeec78c64e4fe8373a091dc79926566fd0c371b",
+      "verified_artifacts": 12,
+      "inputs": {
+        "binance-offline-fixture": "sha256:deeb9f4e009094af744186dc8de7eb09d170f011fa47e511db176f43597816b7",
+        "crypto-fixture-catalog-index": "sha256:ac2bbec7d91c25cf9b12306b842939ffff3ea0f5768ba93b949df82ce0256e32",
+        "okx-offline-fixture": "sha256:95a727e1f37ada4bad2e006fc1046c502bbfef7139fe0c89125a64625c5fe8a8"
+      },
+      "same_parameters": true,
+      "preflight_sha256": "3c40fbea43978146292c3bd55d5ec0ac8533d0f15fe26e19a81c2bad8d2c45e4",
+      "input_fingerprint": "f9c939522a47a1e9cb3b804cd4151b2866865f059cff611bd68f9ad3fbebffa2"
+    },
+    {
+      "run_id": "crypto-okx-taker",
+      "profile": "backtest-ledger",
+      "code_version": "cbeec78c64e4fe8373a091dc79926566fd0c371b",
+      "verified_artifacts": 12,
+      "inputs": {
+        "binance-offline-fixture": "sha256:deeb9f4e009094af744186dc8de7eb09d170f011fa47e511db176f43597816b7",
+        "crypto-fixture-catalog-index": "sha256:ac2bbec7d91c25cf9b12306b842939ffff3ea0f5768ba93b949df82ce0256e32",
+        "okx-offline-fixture": "sha256:95a727e1f37ada4bad2e006fc1046c502bbfef7139fe0c89125a64625c5fe8a8"
+      },
+      "same_parameters": true,
+      "preflight_sha256": "2072dc7bdc372140a65ad88f7bfeeafcad9d83c9d928c8a81b1c4e6f239bd3ee",
+      "input_fingerprint": "f9c939522a47a1e9cb3b804cd4151b2866865f059cff611bd68f9ad3fbebffa2"
+    }
+  ],
+  "negative_cli": {
+    "futures": {
+      "preflight_exit": 1,
+      "run_exit": 1,
+      "output_exists": false
+    },
+    "crypto": {
+      "output_exists": false,
+      "run_exit": 1,
+      "preflight_exit": 1
+    }
+  },
+  "tests": {
+    "futures": {
+      "passed": 211,
+      "skipped": 1,
+      "coverage": 84.49438202247191,
+      "core_branches": [
+        45,
+        46
+      ],
+      "log_sha256": "ca28a019b5ef793dcd82c9b397f80c8869937d796aa67d311f43c321c9a9d6fe"
+    },
+    "crypto": {
+      "passed": 93,
+      "skipped": 0,
+      "coverage": 96.08735213830755,
+      "core_branches": [
+        38,
+        38
+      ],
+      "log_sha256": "e31ea734531c3bd8f78daee41294ab4c429fae6a58afec71200fec39501e842d"
+    }
+  },
+  "frozen_dependencies": {
+    "quant-data-kit": {
+      "version": "0.8.1",
+      "commit": "8f258f11be8e4d8edddcd41b79b817bd6c925970"
+    },
+    "quant-execution": {
+      "version": "0.5.1",
+      "commit": "15e4e5c9dbaf2fe9b438732b2e94db295d5ea58c"
+    },
+    "quant-lab": {
+      "version": "0.3.1",
+      "commit": "27489d270e132adbec1bced93eb2ae84ad5e1a9b"
+    }
+  },
+  "limitations": [
+    "Offline fixtures only; no new real-market, continuous-capture or L2 evidence",
+    "No Studio template, result rendering or first-use acceptance in this increment",
+    "Fills, complete pair execution, liquidity and margin remain replay-time checks",
+    "No r4/r5 account or automation changes"
+  ]
+}
