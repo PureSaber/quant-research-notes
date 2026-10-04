@@ -1,0 +1,118 @@
+{
+  "schema": "p0-p2.studio-hk-benchmark/v1",
+  "checked_at": "2026-10-04T04:15:37.7040615Z",
+  "implementation_commit": "37c88adedb7fdf5f22134fd06909ffdd20d5574a",
+  "upstream_commit": "247122c12572feb3890958cfc46fea738d620bbf",
+  "implementation_pr": "https://github.com/PureSaber/quant-studio/pull/18",
+  "validation": {
+    "status": "independently_verified",
+    "native_files": 89,
+    "standard_scenarios": [
+      "train-momentum_20d",
+      "train-low_volatility_20d",
+      "holdout",
+      "benchmark",
+      "double-cost"
+    ],
+    "initial_cash": "500000",
+    "currency": "HKD",
+    "metrics": {
+      "holdout": {
+        "observations": 181,
+        "first_date": "2026-01-02",
+        "last_date": "2026-09-25",
+        "return": "0.105404456",
+        "max_drawdown": "0.07602533707988521633972540425"
+      },
+      "benchmark": {
+        "observations": 181,
+        "first_date": "2026-01-02",
+        "last_date": "2026-09-25",
+        "return": "-0.002946408",
+        "max_drawdown": "0.1438587222710829794657937772"
+      }
+    },
+    "return_difference": "0.108350864",
+    "new_forward_days": 0,
+    "investable": false
+  },
+  "invariance": {
+    "unchanged_source_files": 8,
+    "source_hash_size_mtime_set_unchanged": true,
+    "old_strategy_and_benchmark_returns_identical": true,
+    "download_sha256": "16665bc50977878bfd2208fef7e128f92ade95e1ff7f591994159efb4549989f",
+    "download_equal": true,
+    "images": [
+      {
+        "file": "gui-wide.jpg",
+        "width": 1265,
+        "height": 889,
+        "sha256": "a1b9710d97b4b36530b535c8da6cceb1a66a24a3aca2820bdba2a4839e854aee"
+      },
+      {
+        "file": "gui-narrow.jpg",
+        "width": 375,
+        "height": 812,
+        "sha256": "252c1b4146050963b13a47b77377ef35e2e63917a7feb4ada65a027eaa5da242"
+      }
+    ]
+  },
+  "gui": {
+    "wide": {
+      "clientWidth": 1265,
+      "curves": 2,
+      "innerHeight": 900,
+      "innerWidth": 1280,
+      "scrollWidth": 1265
+    },
+    "narrow": {
+      "clientWidth": 375,
+      "curves": 2,
+      "downloadLink": "/runs/ef8bf7639a234d2db0bfc92f2c48a1e4/files/benchmark_nav.csv",
+      "innerHeight": 844,
+      "innerWidth": 390,
+      "scrollWidth": 375
+    },
+    "console": [
+      {
+        "level": "error",
+        "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+        "timestamp": "2026-10-04T04:03:14.832Z"
+      },
+      {
+        "level": "error",
+        "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+        "timestamp": "2026-10-04T04:10:15.051Z"
+      }
+    ]
+  },
+  "tests": {
+    "unit_passed": 214,
+    "native_hk_integration_passed": 4,
+    "ruff": "passed",
+    "format": "passed",
+    "first_session_loss_checked": true,
+    "misaligned_dates_rejected": true,
+    "conflicting_opening_rejected": true,
+    "empty_benchmark_rejected": true,
+    "missing_native_benchmark_rejected": true
+  },
+  "limits": [
+    "retrospective exploratory price research",
+    "investable=false",
+    "known host MutationObserver error remains",
+    "no new independent forward observations",
+    "full P1.1, P1.2 and P0-P2 incomplete"
+  ],
+  "content_bindings_sha256": {
+    "config.json": "e6a2000b52f801d46d9fb3612687a8a8bd969e14400177dd33e8c3bfa1a3f89c",
+    "nav.csv": "4cd7cbf906d111cde592f0a42967fc8b8cb3685b8b8ee881c89e77c5776b1196",
+    "benchmark_nav.csv": "16665bc50977878bfd2208fef7e128f92ade95e1ff7f591994159efb4549989f",
+    "strategy-output/checksums.json": "2b02db3915fe5354601e732266134bd1668f1ce26ecabf377a5643dc2da0b6e3",
+    "strategy-output/holdout/standard/returns.csv": "23881bb0ad0b8be4c16e5bf8efa34ffceb01ab9edb972b9a173d72da7f07760d",
+    "strategy-output/benchmark/standard/returns.csv": "df45f47fe83027a086201bf5dd5e4ac0319d08dd7b7338da64595fca80926959",
+    "source_snapshot_manifest": "555a174a3cba3dc09299b0434478b72f2006fbe304ada400591f9e0c5f7caefc"
+  },
+  "implementation_merge_commit": "673823e9080f22d727521b966c50a087e71f6af6",
+  "pr_checks_success": 20
+}
