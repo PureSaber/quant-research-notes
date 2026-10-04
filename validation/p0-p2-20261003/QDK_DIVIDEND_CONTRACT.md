@@ -1,6 +1,6 @@
 # 分红生命周期与PIT汇率契约第一阶段
 
-2026-10-04。P0.3b的共享数据契约子项已由[QDK#31](https://github.com/PureSaber/quant-data-kit/pull/31)交付。验收head为`549f596bd737bb67b460d4bcf33212347288f7a4`，合并提交为`8eaa65437b0984741153de074bbf74b0efdcd40a`。六项PR检查通过，合并后CI另行核验。本项不包含QExec账本或HK应用接入。
+2026-10-04。P0.3b的共享数据契约子项已由[QDK#31](https://github.com/PureSaber/quant-data-kit/pull/31)交付。验收head为`549f596bd737bb67b460d4bcf33212347288f7a4`，合并提交为`8eaa65437b0984741153de074bbf74b0efdcd40a`。六项PR检查通过，精确合并提交的CI与CodeQL工作流均已核验成功。本项不包含QExec账本或HK应用接入。
 
 [五标的官方案例](HK_DIVIDEND_SOURCE_REVIEW.md)揭示旧单一金额/币种契约不能完整表示宣告、除息、后定换汇和账户净到账。新增`puresaber.dividend-lifecycle/1`与`puresaber.pit-fx/1`，保留旧ActionTerms、market-events及旧总收益函数语义。
 
