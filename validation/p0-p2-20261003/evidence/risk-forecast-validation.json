@@ -1,0 +1,315 @@
+{
+  "environment": {
+    "lock_regenerated_twice_identically": true,
+    "lock_sha256": "afefa7b1b670837f43f3a8f297ab4288ced0a8e7650a1bf92af1a1223eaec68e",
+    "locked_packages": {
+      "attrs": {
+        "version": "26.1.0"
+      },
+      "colorama": {
+        "version": "0.4.6"
+      },
+      "coverage": {
+        "version": "7.16.0"
+      },
+      "duckdb": {
+        "version": "1.5.5"
+      },
+      "exceptiongroup": {
+        "version": "1.3.1"
+      },
+      "iniconfig": {
+        "version": "2.3.0"
+      },
+      "jsonschema": {
+        "version": "4.26.0"
+      },
+      "jsonschema-rs": {
+        "version": "0.52.1"
+      },
+      "jsonschema-specifications": {
+        "version": "2025.9.1"
+      },
+      "numpy": {
+        "version": "2.2.6"
+      },
+      "orjson": {
+        "version": "3.12.0"
+      },
+      "packaging": {
+        "version": "26.3"
+      },
+      "pandas": {
+        "version": "2.3.3"
+      },
+      "pluggy": {
+        "version": "1.6.0"
+      },
+      "pyarrow": {
+        "version": "25.0.1"
+      },
+      "pygments": {
+        "version": "2.21.0"
+      },
+      "pytest": {
+        "version": "9.1.1"
+      },
+      "pytest-cov": {
+        "version": "7.1.0"
+      },
+      "python-dateutil": {
+        "version": "2.9.0.post0"
+      },
+      "pytz": {
+        "version": "2026.3.post1"
+      },
+      "pyyaml": {
+        "version": "6.0.3"
+      },
+      "quant-data-kit": {
+        "commit": "ba136c2fa2eea121bfb2ad7887b536c3952586f7",
+        "version": "0.8.1"
+      },
+      "quant-execution": {
+        "commit": "21aace45d2dde6458db8fcda4829f252f8c640f1",
+        "version": "0.5.1"
+      },
+      "referencing": {
+        "version": "0.37.0"
+      },
+      "rpds-py": {
+        "version": "0.30.0"
+      },
+      "ruff": {
+        "version": "0.16.8"
+      },
+      "setuptools": {
+        "version": "84.0.0"
+      },
+      "six": {
+        "version": "1.17.0"
+      },
+      "typing-extensions": {
+        "version": "4.16.0"
+      },
+      "tzdata": {
+        "version": "2026.3"
+      },
+      "websockets": {
+        "version": "15.0.1"
+      }
+    },
+    "old_m6_environment": "not used for final validation: historical QDK lacks current financial module; left unchanged",
+    "only_dependency_change": "ruff 0.16.5 -> 0.16.8 to match existing pyproject declaration",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "ruff_matches_project": true
+  },
+  "implementation": {
+    "generation_context": "historical replay ran on development source; final committed verifier recomputed all bound inputs and outputs successfully",
+    "git_file_sha256": {
+      "README.md": "adea8608369d3d3cc2e247c1d1514bfe15ada0e16b37593df9d8485b3b9560a6",
+      "docs/RISK_FORECAST_VALIDATION.md": "85eb625afd03f349c4417f466d35c2cd13b3f54f88028516082102330e624bb5",
+      "examples/risk_forecast_study.json": "c4610d962f375ad228462598b94662b7a56e2deda0d25a74adb3ab97a9370010",
+      "requirements.lock": "be52bfce80a96f2f89aba5fbda2482c503d3332e6bd71ecd2e92175281267928",
+      "src/quant_risk_monitor/__init__.py": "b3252289434c1c85a96f39fedb23d12bb6a062e0776eb96b086f7740c405a22b",
+      "src/quant_risk_monitor/cli.py": "0606c241b9890cd651139b2e32bc47b1e9c8eff34e1f7f065148b1feb4ea1dc4",
+      "src/quant_risk_monitor/risk_validation.py": "27c00791d51713f1c26d41b8aa48c53524ce2d9569875407a7064130723f1f31",
+      "tests/test_risk_validation.py": "77a2e142239e975fd094e66049108ab5ce4c4339afa2a67cac44dcb7182c012e"
+    },
+    "pull_request": "https://github.com/PureSaber/quant-risk-monitor/pull/17",
+    "repository": "quant-risk-monitor",
+    "verified_commit": "b2d48c441d61a3f31568227196ec7845e7e00da2"
+  },
+  "limits": {
+    "calibration_pass_claimed": false,
+    "evidence_kind": "retrospective",
+    "frozen_accounts_changed": false,
+    "full_p0_p2_complete": false,
+    "independent_forward_dates_added": 0,
+    "reference_portfolio_not_original_strategy": true,
+    "statistical_proxy": true
+  },
+  "local_evidence_sha256": {
+    "cli-acceptance.json": "f41998f7f68827a2af5df0ae2a6231a2d47388736d7538e2f4814174990bb037",
+    "coverage-final.json": "a1f3c421966a1bb724db13599762daccb0bd66a9d8add7e63d8ad7e5341cc80b",
+    "environment-validation.json": "e0717ba286554b8ba18c02ec5205d7c71e7baef780c95f622af854caa55ef224",
+    "native-comparison.json": "232f4e2a5ffc72b517b1dce48b53d7f670d6f17c28181a9d1485ed71a7d30a76",
+    "plan.json": "7e77322030609e589566737fd2219ea8c8db910b606daf89ea01fae30b4fed61",
+    "protocol.json": "f93556ea5ba2c1cfa63bcc9baac89bd62dee429c70ac95887766246f62edbb55",
+    "source-before.json": "bc584d01fe59538edf440e29823ddc911db7c346cd6a1e31f773040d96907e35",
+    "study.json": "33dae8f0a8275824f9ff703c70cf99c296e77f34223a712748dffac552271728",
+    "tests-final.xml": "64bd2e7cefa49f9681b7132cc123da364a53d5f7fce367c41b6f6b28b9583ed4",
+    "workspace-tests.xml": "f704827c4d8783c7801f06f333aa4fe53f12eaf674eca068ff22ad4c40c44b41"
+  },
+  "output_file_sha256": {
+    "evaluation.json": "0ed0592b97521fc845e00ebaf54a7928a058ebc3b635dda8c29a55a21941c2d4",
+    "forecasts.json": "bd0c6fd6704c55614c45d32c44f4f73ba2c17028e91a23cb28103d040cc58fd2",
+    "input.json": "33dae8f0a8275824f9ff703c70cf99c296e77f34223a712748dffac552271728",
+    "scores.csv": "a6b758b171899a62606b28f9f6f7307dc6366df861deed07047e8575084403cd"
+  },
+  "recorded_at": "2026-10-04T01:55:00.244053+00:00",
+  "schema": "p0-p2.risk-forecast-validation/v1",
+  "study_protocol": {
+    "acceptance": [
+      "all 189 forecasts and 1134 scores retained",
+      "exact native ASM model equality at every opening close",
+      "native CLI recomputation",
+      "source SHA256, size and mtime unchanged",
+      "missing outcome and artifact damage rejected"
+    ],
+    "availability": "retrospective inputs with modeled close availability; not historical PIT certification",
+    "benchmark_weights": {
+      "510300": 1.0
+    },
+    "comparison": "fixed opening reference weights; zero cash interest; no fees or financing; not original strategy account returns",
+    "config": {
+      "annualization": 252,
+      "covariance_shrinkage": 0.2,
+      "max_condition_number": 100000000.0,
+      "min_asset_observations": 40,
+      "min_assets_per_period": 3,
+      "min_periods": 40,
+      "model_kind": "statistical_proxy",
+      "specific_variance_shrinkage": 0.2
+    },
+    "created_at": "2026-10-04T01:38:33.271681+00:00",
+    "first_outcome": "2025-12-02T07:00:00+00:00",
+    "forecast_periods": 189,
+    "independent_forward_dates_added": 0,
+    "last_outcome": "2026-09-09T07:00:00+00:00",
+    "lookback": 60,
+    "portfolio_weights": {
+      "159915": 0.25,
+      "510300": 0.25,
+      "510500": 0.25,
+      "588000": 0.25
+    },
+    "reference_weights": "chosen before this evaluation but after historical research was seen; modeled availability is not real historical decision evidence",
+    "schema": "p0-p2.risk-forecast-protocol/v1",
+    "selection": "fixed inherited configuration; no tuning or risk gate changes",
+    "source_protocol_sha256": "4786a4b127d417027ffa6fe1bc86084da4bc5566b39d72a57145cadaed1a5b6d",
+    "study_sha256": "33dae8f0a8275824f9ff703c70cf99c296e77f34223a712748dffac552271728"
+  },
+  "summary": {
+    "active": {
+      "bias_statistic": 1.3077969519012913,
+      "forecast_rms_volatility_annualized": 0.1178286186348485,
+      "mean_qlike": -8.227138424958332,
+      "mean_return": 0.0005807897623413621,
+      "normalized_mean": 0.1222502007363758,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 1.310049082565835,
+      "periods": 189,
+      "realized_volatility_annualized": 0.14847281189129252,
+      "variance_mse": 1.9985919498583377e-08,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    },
+    "asset:159915": {
+      "bias_statistic": 1.1631879094541984,
+      "forecast_rms_volatility_annualized": 0.3020620723452066,
+      "mean_qlike": -6.697524852770296,
+      "mean_return": 0.000734488192570938,
+      "normalized_mean": 0.05497396806249656,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 1.1614084067906105,
+      "periods": 189,
+      "realized_volatility_annualized": 0.34940849097947557,
+      "variance_mse": 6.729723098613257e-07,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    },
+    "asset:510300": {
+      "bias_statistic": 0.6216146078403721,
+      "forecast_rms_volatility_annualized": 0.30875103746366284,
+      "mean_qlike": -7.626448330695969,
+      "mean_return": 0.00014291341489344877,
+      "normalized_mean": 0.009383315226093866,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 0.6200389486665993,
+      "periods": 189,
+      "realized_volatility_annualized": 0.17994932176574524,
+      "variance_mse": 1.4497347819447995e-07,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    },
+    "asset:510500": {
+      "bias_statistic": 1.0216556629704199,
+      "forecast_rms_volatility_annualized": 0.29692326640955824,
+      "mean_qlike": -7.039244648491384,
+      "mean_return": 0.0007005159293452866,
+      "normalized_mean": 0.04775050453583602,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 1.0200675258562297,
+      "periods": 189,
+      "realized_volatility_annualized": 0.27816151174835047,
+      "variance_mse": 2.7568545740780786e-07,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    },
+    "asset:588000": {
+      "bias_statistic": 1.3889976933764787,
+      "forecast_rms_volatility_annualized": 0.3278276194770181,
+      "mean_qlike": -5.99321222485243,
+      "mean_return": 0.0013168951721295704,
+      "normalized_mean": 0.08400817370840295,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 1.3878630882546117,
+      "periods": 189,
+      "realized_volatility_annualized": 0.4481265005699596,
+      "variance_mse": 2.02730105643516e-06,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    },
+    "portfolio": {
+      "bias_statistic": 1.0633363076050328,
+      "forecast_rms_volatility_annualized": 0.2855790649049837,
+      "mean_qlike": -7.042228753912922,
+      "mean_return": 0.0007237031772348109,
+      "normalized_mean": 0.05148653914855452,
+      "normalized_metrics_status": "available",
+      "normalized_rms": 1.0617685770509484,
+      "periods": 189,
+      "realized_volatility_annualized": 0.29436447218081224,
+      "variance_mse": 3.404150583128847e-07,
+      "zero_variance_forecasts": 0,
+      "zero_variance_nonzero_outcomes": 0
+    }
+  },
+  "validation": {
+    "cli_checks": [
+      {
+        "exit_code": 0,
+        "stdout": "{\"status\": \"complete\", \"forecast_periods\": 189, \"evidence_kind\": \"retrospective\", \"is_proxy\": true}\n"
+      },
+      {
+        "exit_code": 0,
+        "stdout": "{\"status\": \"complete\", \"forecast_periods\": 4, \"evidence_kind\": \"synthetic\", \"is_proxy\": true}\n"
+      },
+      {
+        "exit_code": 0,
+        "stdout": "{\"status\": \"complete\", \"forecast_periods\": 4, \"evidence_kind\": \"synthetic\", \"is_proxy\": true}\n"
+      },
+      {
+        "exit_code": 2,
+        "stdout": "{\"status\": \"unavailable\", \"reason\": \"risk validation output already exists\"}\n"
+      },
+      {
+        "exit_code": 2,
+        "stdout": "{\"status\": \"unavailable\", \"reason\": \"every forecast requires its exact completed, available outcome\"}\n"
+      }
+    ],
+    "core_branch_percent": 96.01449275362319,
+    "coverage_percent": 87.25154215215902,
+    "errors": 0,
+    "failures": 0,
+    "final_commit_native_reverification": "passed",
+    "native_models_exactly_equal": 189,
+    "notes_contract_tests": 14,
+    "score_rows": 1134,
+    "skips": 0,
+    "source_files_unchanged": 35,
+    "tests": 203,
+    "workspace_capabilities_tests": 9
+  }
+}
