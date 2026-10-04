@@ -1,0 +1,425 @@
+{
+  "schema": "p0-p2.fund-first-install/v1",
+  "checked_at": "2026-10-04T04:47:29.5469425Z",
+  "status": "selected_subflow_passed",
+  "overall_p1_1_signed_off": false,
+  "full_p0_p2_complete": false,
+  "full_p0_3a_complete": false,
+  "original_receipt_sha256": "f766f1af7701ca3031acfab1ea247e471a9c3d2439d8f95a1262071041fdba06",
+  "handoff_sha256": "64c1db85a32dc415f7c0806bacf1728546ba5e544c4dff04649ce69688daf383",
+  "source": {
+    "fund": {
+      "expected_commit": "cbdfb5e353bf9ab372499d5ddca3e50bb03270d0",
+      "actual_commit": "cbdfb5e353bf9ab372499d5ddca3e50bb03270d0",
+      "clone_command_used_no_hardlinks": true,
+      "detached": true,
+      "clean_after": true,
+      "production_checkout_clean_after": true,
+      "requirements_lock_sha256": "26262b71df18bfc01345f5776f3d558b938df8b3fe03b6ec2344406a5d991397"
+    },
+    "studio": {
+      "expected_commit": "673823e9080f22d727521b966c50a087e71f6af6",
+      "actual_commit": "673823e9080f22d727521b966c50a087e71f6af6",
+      "clone_command_used_no_hardlinks": true,
+      "detached": true,
+      "clean_after": true,
+      "production_checkout_clean_after": true,
+      "requirements_lock_sha256": "f2e7ad98dbbc49e80b3f34f72ad8da7b9045e022f9c826f811e80c3da4420e4a",
+      "template_upstream_ref": "c7be45bdce66aee49762430ba93d2fc361e3c4b5",
+      "actual_runtime_commit": "cbdfb5e353bf9ab372499d5ddca3e50bb03270d0"
+    }
+  },
+  "install": {
+    "python": "3.12.5",
+    "pip_index": "https://pypi.tuna.tsinghua.edu.cn/simple",
+    "pip_http_cache_mib_at_check": 1012.0,
+    "pip_wheel_cache_mib_at_check": 21.8,
+    "fresh_os_claimed": false,
+    "no_cache_claimed": false,
+    "default_pypi_claimed": false,
+    "fund": {
+      "include_system_site_packages": false,
+      "steps": [
+        {
+          "name": "venv",
+          "exit_code": 0,
+          "log": "logs/10-fund-venv.log"
+        },
+        {
+          "name": "requirements-lock",
+          "exit_code": 0,
+          "log": "logs/11-fund-requirements.log"
+        },
+        {
+          "name": "editable-project-no-deps",
+          "exit_code": 0,
+          "log": "logs/12-fund-project.log"
+        },
+        {
+          "name": "pip-check",
+          "exit_code": 0,
+          "log": "logs/13-fund-pip-check.log"
+        }
+      ],
+      "pip_check": "No broken requirements found.",
+      "editable_points_to_isolated_clone": true,
+      "size_bytes": 1118648404,
+      "packages": {
+        "quant-fund": "0.1.0",
+        "quant-data-kit": "0.8.1",
+        "quant-lab": "0.3.1",
+        "skfolio": "1.3.4",
+        "optimalportfolios": "7.8.0",
+        "qis": "5.31.0",
+        "akshare": "1.18.97",
+        "numpy": "2.2.6",
+        "pandas": "2.3.3",
+        "scipy": "1.18.1",
+        "streamlit": "1.64.0"
+      },
+      "direct_url_commits": {
+        "quant-data-kit": "271a65ee383158b3dd7570e19a3f2b4123f09f79",
+        "quant-lab": "8b87aa176d1b0eaacbe918593b83bbec6d1baa33"
+      }
+    },
+    "studio": {
+      "include_system_site_packages": false,
+      "steps": [
+        {
+          "name": "venv",
+          "exit_code": 0,
+          "log": "logs/20-studio-venv.log"
+        },
+        {
+          "name": "requirements-lock-no-deps",
+          "exit_code": 0,
+          "log": "logs/21-studio-requirements.log"
+        },
+        {
+          "name": "editable-project-no-deps-no-build-isolation",
+          "exit_code": 0,
+          "log": "logs/22-studio-project.log"
+        },
+        {
+          "name": "pip-check",
+          "exit_code": 0,
+          "log": "logs/23-studio-pip-check.log"
+        }
+      ],
+      "pip_check": "No broken requirements found.",
+      "editable_points_to_isolated_clone": true,
+      "size_bytes": 58172394,
+      "packages": {
+        "quant-studio": "0.1.0",
+        "PyYAML": "6.0.3"
+      }
+    }
+  },
+  "settings": {
+    "schema_version": "quant-studio.settings/v1",
+    "sha256": "43c9237af830e1649b8560d5e9e04aef5cfa482cdc0c4ac0a168caba7bae5e75",
+    "saved_from_empty_config": true,
+    "restart_restored": true,
+    "restored_fields": [
+      "workspace",
+      "fund-python",
+      "fund-dataset"
+    ],
+    "accounts_configured": 0
+  },
+  "synthetic_input": {
+    "generator": "quant_fund.cli demo --historical-terms",
+    "generator_exit_code": 0,
+    "classification": "synthetic",
+    "terms_mode": "historical_pit",
+    "historical_terms_pit": true,
+    "file_count_before": 7,
+    "file_count_after": 7,
+    "total_bytes_before": 518447,
+    "total_bytes_after": 518447,
+    "unchanged": true,
+    "canonical_difference_count": 0,
+    "market_fetch_requests": 0,
+    "files": [
+      {
+        "path": "calendar.csv",
+        "size": 15126,
+        "mtime_utc": "2026-10-04T04:35:28.0663582Z",
+        "mtime_ticks": 639266853280663582,
+        "sha256": "2c191a32973ee52c3ee0cb6086b33f8c296b66afa1aadf398a85483ba3f257a4"
+      },
+      {
+        "path": "dataset.json",
+        "size": 518,
+        "mtime_utc": "2026-10-04T04:35:28.0673597Z",
+        "mtime_ticks": 639266853280673597,
+        "sha256": "d1bdb465953fd7af0a3bb1dd8907ec52b8766d165a5c17b767660d558227890d"
+      },
+      {
+        "path": "distributions.csv",
+        "size": 50,
+        "mtime_utc": "2026-10-04T04:35:28.0673597Z",
+        "mtime_ticks": 639266853280673597,
+        "sha256": "e7059a99e27066831d86af35625cf18d8a3d0e17edf491480e545f20b76cd11c"
+      },
+      {
+        "path": "fund_terms.json",
+        "size": 9017,
+        "mtime_utc": "2026-10-04T04:35:27.7426889Z",
+        "mtime_ticks": 639266853277426889,
+        "sha256": "d4676d19c85a163f0b626f74f70f5b8ce3b986d1b8bc22ce8532c8bb5b93b9dc"
+      },
+      {
+        "path": "funds.json",
+        "size": 973,
+        "mtime_utc": "2026-10-04T04:35:27.7426889Z",
+        "mtime_ticks": 639266853277426889,
+        "sha256": "f8400596ef7ac33ee4d3df8ee2352ae1e599c060e9aacf02bc5cb26e655be5e6"
+      },
+      {
+        "path": "nav-import-example.xlsx",
+        "size": 5869,
+        "mtime_utc": "2026-10-04T04:35:28.0643382Z",
+        "mtime_ticks": 639266853280643382,
+        "sha256": "c3bb857f89a3d60f42d8f919e2ae18b67318b893aa9944c3ac7225b5d096ea78"
+      },
+      {
+        "path": "nav.csv",
+        "size": 486894,
+        "mtime_utc": "2026-10-04T04:35:27.7582767Z",
+        "mtime_ticks": 639266853277582767,
+        "sha256": "bae633fef3b678ebf3b05d6851e68ec0f90d88b975239424bf8762f5b92652ef"
+      }
+    ]
+  },
+  "preflight": {
+    "run_id": "1fe886d908c44c0a9b0677982399846c",
+    "status": "checked",
+    "returncode": 0,
+    "read_only": true,
+    "investable": false,
+    "classification": "synthetic",
+    "symbols": 7,
+    "rows": 5207,
+    "account_dates": 695,
+    "terms_mode": "historical_pit",
+    "historical_terms_pit": true,
+    "strategy_executed": false,
+    "config_sha256": "b9788cee2962e59eff721122091141451425bdd9f839609f65c877e457b65c5f"
+  },
+  "run": {
+    "run_id": "6fce817b6dfa443584840e071461cc49",
+    "status": "succeeded",
+    "returncode": 0,
+    "evidence_kind": "synthetic",
+    "config_sha256": "b9788cee2962e59eff721122091141451425bdd9f839609f65c877e457b65c5f",
+    "config_byte_identical_to_preflight": true,
+    "parameters": {
+      "strategy": "equal",
+      "start": "2024-01-02",
+      "end": "2026-08-31",
+      "initial_cash_cny": 1000000,
+      "frequency": "ME",
+      "lookback": 24,
+      "min_periods": 12,
+      "max_weight": 0.4,
+      "cash_buffer": 0.05,
+      "min_trade": 1000
+    },
+    "synthetic_label_before_metrics": true,
+    "unit_nav": {
+      "rows": 695,
+      "initial_nav": 1.0,
+      "ending_nav": 1.1481549550690007,
+      "account_initial_total_cny": 1000000.0,
+      "account_ending_total_cny": 1148154.9550690006,
+      "max_identity_error_nav_equals_total_over_initial_cash": 0.0
+    },
+    "metrics": {
+      "full_period_return": 0.14815495506900067,
+      "full_period_max_drawdown": -0.07573041585576468,
+      "monthly_sample_return": 0.15060661928095698,
+      "monthly_sample_max_drawdown": -0.05907905568431826,
+      "monthly_sample_annual_return": 0.05580713874012444,
+      "monthly_sample_sharpe_zero_rf": 1.182433955015955
+    },
+    "native_verify": {
+      "exit_code": 0,
+      "verified_files": 50,
+      "verified_term_bindings": 98,
+      "max_reconciliation_error": 4.656612873077393E-10
+    },
+    "native_file_set": {
+      "actual_file_count": 51,
+      "manifest_file_count": 50,
+      "hash_mismatch_count": 0,
+      "missing_count": 0,
+      "extra": [
+        "manifest.json"
+      ],
+      "total_bytes": 8906043
+    },
+    "standard_v2": {
+      "exit_code": 0,
+      "valid": true,
+      "schema_version": "2.0.0",
+      "code_version": "cbdfb5e353bf9ab372499d5ddca3e50bb03270d0",
+      "dataset_sha256": "31b6642a7260c4281960bc6d2c3d48d7f04da52696ea2b60d773585ea8055271",
+      "run_manifest_sha256": "48789688eff36bdb196a7d6bbccbad160c29dde38e63e1440cb30fb6d9e95dfa",
+      "investable": false,
+      "rankable": false
+    }
+  },
+  "report_and_download": {
+    "native_report_opened_in_browser": true,
+    "native_report_sha256": "48be124702d988773c3fdecb6b03476cd62262b5890d969dd621ad02e25d557c",
+    "holdings_csv_downloaded_via_gui": true,
+    "download_sha256": "7bd5aeb218492cbce864e0f1ba6e806ae465a25043aad83cdd460ed2aef5aeab",
+    "served_sha256": "7bd5aeb218492cbce864e0f1ba6e806ae465a25043aad83cdd460ed2aef5aeab",
+    "identical": true
+  },
+  "gui_layout": {
+    "wide": {
+      "requested_viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dom_inner_size": {
+        "width": 1280,
+        "height": 900
+      },
+      "dom_client_size": {
+        "width": 1265,
+        "height": 900
+      },
+      "document_width": 1265,
+      "horizontal_overflow": false,
+      "synthetic_label_before_metrics": true,
+      "actual_image_pixels": {
+        "width": 1265,
+        "height": 889
+      },
+      "screenshot": "gui-wide-requested-1280x900.jpg",
+      "screenshot_sha256": "67b04cbaa072e5e25367e31a6b14cb31dd601eaaf339ea05f940ae3ef7a35cec"
+    },
+    "narrow": {
+      "requested_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dom_inner_size": {
+        "width": 390,
+        "height": 844
+      },
+      "dom_client_size": {
+        "width": 375,
+        "height": 844
+      },
+      "document_width": 375,
+      "horizontal_overflow": false,
+      "synthetic_label_before_metrics": true,
+      "download_link_present": true,
+      "actual_image_pixels": {
+        "width": 375,
+        "height": 812
+      },
+      "screenshot": "gui-narrow-requested-390x844.jpg",
+      "screenshot_sha256": "1fd01c5fe4753543d07f8f217942aa32b2c486516da40ee2f8350a9503a780d0"
+    },
+    "observed_console_errors": [
+      "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'."
+    ],
+    "console_claimed_clean": false
+  },
+  "budget": {
+    "limit_gib": 2.0,
+    "measured_before_handoff_bytes": 1187515255,
+    "measured_before_handoff_mib": 1132.5,
+    "measured_before_handoff_gib": 1.106,
+    "within_budget": true
+  },
+  "cleanup": {
+    "viewport_override_reset": true,
+    "result_tab_closed": true,
+    "report_tab_closed": true,
+    "service_listener_closed": true,
+    "service_child_closed": true,
+    "service_launcher_closed": true
+  },
+  "independent_review": {
+    "native_verify_run_exit_code": 0,
+    "standard_v2_validation_exit_code": 0,
+    "pip_check_fund_exit_code": 0,
+    "pip_check_studio_exit_code": 0,
+    "source_commits_and_locks_match": true,
+    "isolated_clone_imports_verified": true,
+    "internal_dependency_commits_match_lock": true,
+    "native_file_set_exact": true,
+    "native_manifest_sha256": "0300855f62e1654f153f7ccd6c9a0f3f904c4f2f042c314b0755b6042dcf2220",
+    "declared_native_files": 50,
+    "actual_native_files": 51,
+    "verified_term_bindings": 98,
+    "native_max_reconciliation_error_cny": 4.656612873077393E-10,
+    "nav_rows": 695,
+    "display_native_dates_and_nav_exact": true,
+    "config_byte_identical": true,
+    "unit_nav_decimal_max_error": "2E-16",
+    "full_period_return_decimal": "0.1481549550690007",
+    "max_drawdown_decimal": "0.0757304158557646083465494407",
+    "source_file_set_hash_size_and_utc_ticks_unchanged": true,
+    "source_files": 7,
+    "images_visually_reviewed": true,
+    "actual_images": [
+      {
+        "file": "gui-wide-requested-1280x900.jpg",
+        "width": 1265,
+        "height": 889,
+        "sha256": "67b04cbaa072e5e25367e31a6b14cb31dd601eaaf339ea05f940ae3ef7a35cec"
+      },
+      {
+        "file": "gui-narrow-requested-390x844.jpg",
+        "width": 375,
+        "height": 812,
+        "sha256": "1fd01c5fe4753543d07f8f217942aa32b2c486516da40ee2f8350a9503a780d0"
+      }
+    ],
+    "download_matches": true,
+    "port_closed": true
+  },
+  "limitations": [
+    "Synthetic historical-terms data validates software flow only.",
+    "This does not replace P0.3a real contracts, real business calendars, or manual reconciliation.",
+    "This does not complete all of P1.1.",
+    "The install reused the host Tsinghua mirror and pip caches.",
+    "The Studio template upstream_ref is older than the explicitly selected runtime commit; actual runtime evidence is bound to cbdfb5e."
+  ],
+  "diagnostics": [
+    {
+      "kind": "clone_log_append_error",
+      "invalidated_acceptance": false,
+      "detail": "Tee-Object parameter error affected only first checkout log append; exact detached checkouts and clean HEADs were rerun and recorded."
+    },
+    {
+      "kind": "automatic_approval_block",
+      "invalidated_acceptance": false,
+      "detail": "Combined port-check/start/poll command was blocked before execution; split exact commands succeeded."
+    },
+    {
+      "kind": "browser_observation_timeout",
+      "invalidated_acceptance": false,
+      "detail": "The GUI wait timed out while the Fund process continued. The process was not restarted or resubmitted and completed successfully."
+    },
+    {
+      "kind": "outer_run_read_path_error",
+      "invalidated_acceptance": false,
+      "detail": "A read-only command first looked for native manifest and metrics in the outer Studio run directory; the correct strategy-output files were then read."
+    },
+    {
+      "kind": "powershell_type_comparison_false_positive",
+      "invalidated_acceptance": false,
+      "detail": "Object-type differences produced paired Compare-Object rows; canonical field-string comparison was zero and all values matched."
+    }
+  ],
+  "new_forward_observations": 0,
+  "image_height_difference_fully_explained": false
+}
