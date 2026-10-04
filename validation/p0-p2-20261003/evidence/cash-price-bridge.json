@@ -1,0 +1,256 @@
+{
+  "checked_at": "2026-10-04T00:07:31.117180+00:00",
+  "execution": {
+    "checked_at": "2026-10-04T00:00:42.167225+00:00",
+    "commands": [
+      {
+        "exit_code": 0,
+        "name": "generate"
+      },
+      {
+        "exit_code": 0,
+        "name": "verify"
+      },
+      {
+        "exit_code": 1,
+        "name": "reject-existing"
+      },
+      {
+        "exit_code": 1,
+        "name": "real-ledger-missing-quotes"
+      }
+    ],
+    "real_cost_calibration_complete": false,
+    "real_independent_quotes_available": false,
+    "real_native_files_unchanged": 14,
+    "report_manifest_sha256": "6ccb78eb9f442d9bf9c443af8f3823605cd796807ea7bfc5f47030d026c04aed",
+    "synthetic_input_files_unchanged": 16
+  },
+  "gui": {
+    "actual_horizontal_scroll": 375,
+    "console": [],
+    "desktop": {
+      "client": 1265,
+      "detailsOpen": true,
+      "scroll": 1265,
+      "tables": [
+        {
+          "client": 1162,
+          "scroll": 1162
+        },
+        {
+          "client": 1162,
+          "scroll": 1162
+        }
+      ],
+      "viewport": 1280
+    },
+    "download_equal": true,
+    "download_sha256": "f67eccf1212fdb3f7e403c1e7aa8dc3705858ef864930cbeae3eb2a60897fa6e",
+    "evidence_kind": "synthetic",
+    "mobile": {
+      "client": 375,
+      "scroll": 375,
+      "tables": [
+        {
+          "client": 313,
+          "scroll": 745
+        },
+        {
+          "client": 313,
+          "scroll": 587
+        }
+      ],
+      "viewport": 390
+    }
+  },
+  "implementation_commit": "2a94ee1292c414c2bf7739327b21cc8b0e2afa09",
+  "implementation_pr": "https://github.com/PureSaber/quant-report-hub/pull/27",
+  "limitations": {
+    "full_p0_p2_complete": false,
+    "new_independent_forward_dates": 0,
+    "real_cost_calibration_complete": false,
+    "real_independent_quotes_verified": false,
+    "studio_templates_added": 0
+  },
+  "local_evidence_sha256": {
+    "coverage-final.json": "d207f4c6a326863495b02f7fa1c39f46fbdcdd6278b7b5eefeeeb9ff4a6d0965",
+    "desktop.png": "81f18dc42935a1a1e90c330733a46e0a4a697275df8d56229f2ac126a9a71899",
+    "execution.json": "a689e75d4e360d9449b9adae42fd8f44267389e17d6e7d9632d67034db137888",
+    "final-report.png": "fc4a383bd207100233a25bcadced7e876f12255e56def0d2607d38adb8f1f0ea",
+    "generate.stdout.json": "f78247f4ec424521ca6866300f66dac15a9bbabd4bc5a730370f158ce3a8ae7d",
+    "gui-checks.json": "b250ef48f84ed619b23c4a45118433877df1b64324600d602686bb69fb87914e",
+    "mobile.png": "ca9415b3e93be541aa7b24ea435b626e81d4d6bbd56a7ea9214e7e90d5961299",
+    "plan.json": "57a6c9c2ac43865f10a719d1648f30bf153efc3b0271ae3bc82d6f03e9e92aa7",
+    "real-ledger-missing-quotes.stderr.txt": "1a4a090bdfdb8f3fd1c75d047592317c985ae6aa2272be62a0c5ce51faa7581b",
+    "reject-existing.stderr.txt": "52a39811e26957202e7ae311a2cd187c2f3abb7aa764ddd143d230a50084bee9",
+    "tests-final.xml": "4cacdaaca8487249ad79bfa8b55887450b6149f30b17bf3fd0c8c53041468edf",
+    "verify.stdout.json": "f78247f4ec424521ca6866300f66dac15a9bbabd4bc5a730370f158ce3a8ae7d",
+    "workspace-tests.xml": "bf3fce5f99e382bcc5fb1dc2bd770da48e0049cee80ceb66bc56335ad0575728"
+  },
+  "schema": "p0-p2.cash-price-bridge-evidence/v1",
+  "source_hash_basis": "git LF bytes; working files normalized CRLF to LF and compared exactly",
+  "source_sha256": {
+    "README.md": "e2664905aece2aabc422c3dc59cd7dfbc5fe89cc1bfd2da39a58253e432b94ed",
+    "docs/CASH_PRICE_BRIDGE.md": "ac47c909261e2981c20a3f07ffe72593bb1ee01154b461d48c6e9f23efc65d7a",
+    "pyproject.toml": "4521b9f7f7bf4a13dbf83f648a30ec086ed8f5c4f062bb03d84c5f31db9c82a8",
+    "quant_report_hub/attribution.py": "a9b2188dd36866fe464d0d08d9c45025e29ff7ef112cd8b18fe94d31eafcd38b",
+    "quant_report_hub/cash_attribution.py": "8e84fe3b942d1a02628be7b34ba0b1dd8ff597e1034ef1c6f6f22e01318c1460",
+    "quant_report_hub/cash_price_bridge.py": "288de0b332b1fb18d798e95272017508bd70acc1cdc999d681595765d11210d8",
+    "quant_report_hub/cli.py": "fa6e4453b6692ac0ded2fdea734be10d4752a6b8c90d220e5fd666d7cf566fe8",
+    "quant_report_hub/execution_references.py": "98cfd2a0843bfebbae50f64863d84ccd48ad5112f9f4a02f6c710c182ada1f33",
+    "scripts/check_coverage.py": "d276c4c419550ffe6d7c96fe0cd4e216c2cfce67cb7fe5d586c6933cbe176cd3",
+    "tests/test_cash_price_bridge.py": "9acbfd2f5530d185b7395161f8aaccb9ac858a1fc16aae46fd2d56fdc60cf3bb",
+    "tests/test_dependency_governance.py": "ab086ccf77a2e74065947bcea774e94a81578e5a5e1cd3bd3acfd429afa8b541"
+  },
+  "synthetic_report": {
+    "files": {
+      "event_reconciliation.csv": "225599dd9f4e38fd31a29137f659321728dad4d888f6bc774eb743a64c5fd33c",
+      "fee_details.csv": "93f2bda8522d55a4fccfe8e5e56447c2fbd2f27819ea061a800e528ad6d01243",
+      "fill_price_bridge.csv": "f67eccf1212fdb3f7e403c1e7aa8dc3705858ef864930cbeae3eb2a60897fa6e",
+      "instrument_pnl.csv": "65f6066d80c07712f4251181c7177dbbdb27f9bbe80cf8e3856aea42bedc683a",
+      "instrument_price_bridge.csv": "bf9b026c1fbda6436a00a7484db4c3ac3ed631205c04a85122bbd14b7a24b984",
+      "period_price_bridge.csv": "daa7a1eb980f3d97dbd86556392cf6e8b1d4bdbd98a63f34cc3387a1860bcc23",
+      "period_reconciliation.csv": "1431a687d93be56cb4118d50bf398a53192e9b924fee7d60417f5c8345baf7bd",
+      "report.html": "b3653e32c5fbc28a3e2db89e5c4e193bf3b6930f37563e929f538e1064d025b0"
+    },
+    "limitations": [
+      "保留原持仓、估值、公司行动与费用；参考价剩余项是代数分解，不是重新回测或可成交的替代账户。",
+      "成交价差损益正值为有利改善、负值为不利成本；包含订单接受至成交的价格变化，不单独识别市场冲击。",
+      "报价按订单首次接受时已可得的最新中点选取；部分成交共用同一订单参考时点；跨公司行动的报价拒绝使用。",
+      "报价来源及可得时间由提供者声明；哈希核验不独立证明其真实性。合成或模型报价仅验证软件和假设。",
+      "只覆盖单账户、单策略、同币种、单位乘数的多头现金证券；完整现金机会成本、FX和保证金不在本报告范围。"
+    ],
+    "references": {
+      "policy": {
+        "clock": "first_order_acceptance",
+        "max_quote_age_ms": 1000,
+        "price": "last_available_midquote",
+        "price_basis": "unadjusted_trade_currency"
+      },
+      "quotes": {
+        "path": "quotes.csv",
+        "sha256": "dca1c9d1502c0d8c77d647c603794caffdcb42a7c37352ecc3cf97a61034546d"
+      },
+      "schema_version": "quant-report-hub.execution-references/v1",
+      "source": {
+        "dataset_id": "cash-hand-check-v1",
+        "description": "手算报价，仅验证软件。",
+        "evidence_kind": "synthetic",
+        "provider": "synthetic fixture"
+      },
+      "source_run_manifest_sha256": "d7f61ef6a65372058f8e9f080882d899c98506563d10f0e53f47c9a7071032e4"
+    },
+    "references_sha256": "7bf0420cdc38ca4224871e228492f6118048804d11075bc8e4a662c76ecfc483",
+    "row_counts": {
+      "event_reconciliation.csv": 5,
+      "fee_details.csv": 2,
+      "fill_price_bridge.csv": 2,
+      "instrument_pnl.csv": 4,
+      "instrument_price_bridge.csv": 4,
+      "period_price_bridge.csv": 4,
+      "period_reconciliation.csv": 4
+    },
+    "schema_version": "quant-report-hub.cash-price-bridge/v1",
+    "source_code_version": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "source_project": "cash-ledger-test",
+    "source_run_id": "source",
+    "source_run_manifest_sha256": "d7f61ef6a65372058f8e9f080882d899c98506563d10f0e53f47c9a7071032e4",
+    "summary": {
+      "account_id": "account",
+      "adverse_pnl": "-1.00",
+      "bridge_residual": "0",
+      "closing_nav": "1031",
+      "corporate_income": "10.00",
+      "currency": "CNY",
+      "entitlements_checked": 1,
+      "execution_price_pnl": "1.00",
+      "favorable_pnl": "2.00",
+      "fee_cash": "-3.00",
+      "fills_checked": 2,
+      "first_period_end": "2025-01-02T07:00:00+00:00",
+      "last_period_end": "2025-01-05T07:00:00+00:00",
+      "net_pnl": "31.00",
+      "opening_nav": "1000.00",
+      "raw_adverse_cost": "-1.000",
+      "reference_price_valuation_pnl": "23.00",
+      "rounding_pnl": "0.000",
+      "strategy_id": "strategy",
+      "transactions_checked": 8,
+      "valuation_and_trading_pnl": "24.00"
+    }
+  },
+  "tests": {
+    "core": {
+      "quant_report_hub/attribution.py": {
+        "covered_branches": 226,
+        "covered_lines": 574,
+        "excluded_lines": 0,
+        "missing_branches": 16,
+        "missing_lines": 13,
+        "num_branches": 242,
+        "num_partial_branches": 16,
+        "num_statements": 587,
+        "percent_branches_covered": 93.38842975206612,
+        "percent_branches_covered_display": "93",
+        "percent_covered": 96.50180940892642,
+        "percent_covered_display": "97",
+        "percent_statements_covered": 97.78534923339012,
+        "percent_statements_covered_display": "98"
+      },
+      "quant_report_hub/cash_attribution.py": {
+        "covered_branches": 75,
+        "covered_lines": 276,
+        "excluded_lines": 0,
+        "missing_branches": 1,
+        "missing_lines": 1,
+        "num_branches": 76,
+        "num_partial_branches": 1,
+        "num_statements": 277,
+        "percent_branches_covered": 98.6842105263158,
+        "percent_branches_covered_display": "99",
+        "percent_covered": 99.43342776203966,
+        "percent_covered_display": "99",
+        "percent_statements_covered": 99.63898916967509,
+        "percent_statements_covered_display": "99"
+      },
+      "quant_report_hub/cash_price_bridge.py": {
+        "covered_branches": 28,
+        "covered_lines": 144,
+        "excluded_lines": 0,
+        "missing_branches": 0,
+        "missing_lines": 0,
+        "num_branches": 28,
+        "num_partial_branches": 0,
+        "num_statements": 144,
+        "percent_branches_covered": 100.0,
+        "percent_branches_covered_display": "100",
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      },
+      "quant_report_hub/execution_references.py": {
+        "covered_branches": 12,
+        "covered_lines": 90,
+        "excluded_lines": 0,
+        "missing_branches": 0,
+        "missing_lines": 0,
+        "num_branches": 12,
+        "num_partial_branches": 0,
+        "num_statements": 90,
+        "percent_branches_covered": 100.0,
+        "percent_branches_covered_display": "100",
+        "percent_covered": 100.0,
+        "percent_covered_display": "100",
+        "percent_statements_covered": 100.0,
+        "percent_statements_covered_display": "100"
+      }
+    },
+    "coverage_percent": 90.36281179138322,
+    "new_cases": 58,
+    "passed": 265,
+    "skipped_existing": 5,
+    "workspace_capabilities_passed": 9
+  }
+}
