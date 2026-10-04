@@ -25,7 +25,7 @@
 | [quant-timing](https://github.com/PureSaber/quant-timing) | 指数仓位和风格择时研究；原生只读预检、因果回放、发布门禁、分折及账本归因；Studio已接入。固定仓位/风格反事实另有原生报告，尚未接入Studio | `python -m quant_timing preflight/run/compare` |
 | quant-data-kit | Shared data layer + catalog | `qdk-validate`, `qdk-catalog list` |
 | quant-lab | Experiment index + HTML dashboard | `quant-lab scan/export html` |
-| quant-report-hub | Charts (spread + equity) | `quant-report run` |
+| quant-report-hub | 图表、账本及反事实归因；独立报价的有符号成交价差和原生重算 | `quant-report run/cash-price-bridge/verify-cash-price-bridge` |
 | quant-regime | Market regime detector | `quant-regime detect`, `detect-multi` |
 | quant-risk-monitor | Portfolio risk alerts | `quant-risk check` |
 | quant-paper-sim | Paper trading simulator | `quant-paper step` |
