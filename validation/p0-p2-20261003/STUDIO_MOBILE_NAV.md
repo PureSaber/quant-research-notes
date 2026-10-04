@@ -1,6 +1,6 @@
 # Studio窄屏导航验收
 
-2026-10-04。P1.1体验子项，代码见[Studio#19](https://github.com/PureSaber/quant-studio/pull/19)，验收head为`5453e7dc8784a26c249cf8fb709ccabe2c479772`。本地独立验收及20项远端PR检查通过，已合并为`11d8ce845ec0812dfba97c5fef3908c65badb94f`；合并后工作流另行核验。
+2026-10-04。P1.1体验子项，代码见[Studio#19](https://github.com/PureSaber/quant-studio/pull/19)，验收head为`5453e7dc8784a26c249cf8fb709ccabe2c479772`。本地独立验收及20项远端PR检查通过，已合并为`11d8ce845ec0812dfba97c5fef3908c65badb94f`；精确合并提交的tests和Upstream integration工作流均已核验成功。Notes#58与Workspace#45的五个合并后工作流也全部成功。
 
 原布局在窄屏只把侧栏移到页面顶部，八个链接仍全部展开，挤占结果首屏。现使用原生`details/summary`折叠导航，摘要显示当前页面；桌面仍使用侧栏。两个布局复用相同链接，当前链接提供`aria-current="page"`，键盘焦点清晰可见。概览卡片在窄屏改为单列。最终实现没有全局横向裁剪；表格、代码块沿用局部滚动容器。
 
