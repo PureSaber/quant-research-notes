@@ -1,0 +1,73 @@
+{
+  "schema": "p0-p2.publication-time-v2/v1",
+  "as_of": "2026-10-04",
+  "status": "merged_and_verified",
+  "delivery": {
+    "repo": "PureSaber/quant-data-kit",
+    "pr": 33,
+    "head": "8e8e44325ab9b8633ad4746da36a6f10192e132e",
+    "merge": "f07a51f5adff7fea7505b8b76ac92840b4ad2d1c",
+    "tree": "f73a338b71b74d2aae0f62d336c3b9b347a06bee",
+    "reviewed_tree_equals_merge": true,
+    "main_checks": [
+      {
+        "run_id": 37206388214,
+        "name": "CodeQL",
+        "conclusion": "success"
+      },
+      {
+        "run_id": 37206388232,
+        "name": "CI",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "validation": {
+    "full_passed": 789,
+    "full_skipped": 2,
+    "independent_py312_passed": 72,
+    "py310_independent_and_authored_passed": 177,
+    "root_regression_passed": 24,
+    "root_api_observations_passed": 5,
+    "sets_overlap_do_not_sum": true,
+    "acceptance_scenarios_passed": 24,
+    "root_actual_test_nodes_verified": 43,
+    "root_sealed_evidence_files_verified": 39,
+    "covered_source_branches": 4304,
+    "total_source_branches": 5210,
+    "publication_branches": [
+      309,
+      330
+    ],
+    "lifecycle_branches": [
+      179,
+      182
+    ],
+    "migration_branches": [
+      85,
+      86
+    ],
+    "all_old_branch_gates_passed": true,
+    "raw_git_files_verified": 286,
+    "public_v2_types": 25,
+    "v1_golden_exact_sha256": "9616c5730610bc46257161c4a0137a30ccf13f7f779ea81e51ca4225914d0aa6",
+    "v1_golden_date_sha256": "4444e9e58e4868f44a07d2caa1d19bbc0d28c24953512eb273511ea6972786f2",
+    "independent_receipt_sha256": "37360821fa24086c2146fca9f46ff11c0bcf2f0400e16752a62d76910335f132",
+    "independent_manifest_sha256": "d56271a7a7ad2a6a94b28d725de667b39d15bfd13ca67b45cc1002d59ceeee79"
+  },
+  "boundaries": {
+    "qexec_head": "62a75a4bfacb445cc0809b8e1b283dbe4312050a",
+    "hk_head": "18cfe93a757e93e0c89875ceff9612350f989359",
+    "current_v1_consumers_accept_v1_reject_v2": true,
+    "consumer_design_cases": 52,
+    "consumer_v2_implemented": false,
+    "shared_and_consumer_time_precision_complete": false,
+    "real_source_materials_certified": false,
+    "market_downloads": 0,
+    "new_market_backtests": 0,
+    "new_independent_forward_days": 0,
+    "consumer_locks_changed": false,
+    "p0_3b_complete": false,
+    "p0_p2_complete": false
+  }
+}
