@@ -8,6 +8,7 @@ validation/p0-p2-20261003/evidence/timing-preflight.json text eol=lf
 validation/p0-p2-20261003/evidence/timing-studio.json text eol=lf
 validation/p0-p2-20261003/evidence/timing-attribution.json text eol=lf
 validation/p0-p2-20261003/evidence/timing-counterfactual.json text eol=lf
+validation/p0-p2-20261003/evidence/timing-counterfactual-studio.json text eol=lf
 validation/p0-p2-20261003/evidence/cash-price-bridge.json text eol=lf
 validation/p0-p2-20261003/evidence/fund-embed-diagnostic.json text eol=lf
 validation/p0-p2-20261003/reproductions/fund-embed/*.html text eol=lf

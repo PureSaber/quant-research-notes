@@ -78,3 +78,5 @@ GUI发现展开分量时自动列宽挤压候选名称，已通过明确列宽�
 原生入口为`python -m quant_timing counterfactual`及`verify-counterfactual`。反事实报告尚未接入Studio模板；Studio仍为十模板、九个业务预检入口，已有账本归因入口保持不变。
 
 继续独立执行参考价与冲击模型校准、完整现金机会成本、其他资产干预、真实业务数据和自然前向观察，完整范围见[PLAN.md](PLAN.md)。
+
+后续交付：上述原生候选族已通过[Studio入口](TIMING_COUNTERFACTUAL_STUDIO.md)接入统一工作台，保留固定候选、禁止仓位发布和必需候选失败阻断。真实复验未改变原研究结果或增加独立前向。

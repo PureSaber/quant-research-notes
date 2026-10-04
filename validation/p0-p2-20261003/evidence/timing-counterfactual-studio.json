@@ -1,0 +1,152 @@
+{
+  "checked_at": "2026-10-04T00:42:20.174656+00:00",
+  "execution": {
+    "all_periods_exactly_match_previous": true,
+    "candidates": 4,
+    "downstream_publication_files": 0,
+    "native_csv_exact_matches": 37,
+    "new_independent_forward_dates": 0,
+    "periods": 11,
+    "real_family_status": "complete",
+    "source_files_unchanged": 7
+  },
+  "gui": {
+    "actual_horizontal_scroll": 69,
+    "components_expanded": "style_neutral",
+    "desktop": {
+      "client": 1265,
+      "scroll": 1265,
+      "viewport": 1280
+    },
+    "download_equal": true,
+    "download_sha256": "7a64e8749070492afd06e66227d1815ad165217ebaf6e779c92c6dd5d874181c",
+    "failure_run": "synthetic-required-failure",
+    "final_console": [],
+    "fold_expanded": 1,
+    "method_expanded": true,
+    "mobile": {
+      "client": 375,
+      "scroll": 375,
+      "tables": [
+        {
+          "client": 285,
+          "scroll": 320
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        },
+        {
+          "client": 285,
+          "scroll": 439
+        }
+      ],
+      "viewport": 390
+    },
+    "native_failure_report_opened": true,
+    "real_preflight": "89f7380e6c9340d88ba2210cc16fa3bf",
+    "real_run": "ef7a5b113e714d1ab75617682fbf0ea2",
+    "synthetic_preflight": "c90430e8bd4346e5aec19c3d34cf8254",
+    "synthetic_run": "f21611d6cc454f3fa55faff3ba8c6a5a"
+  },
+  "implementation_commit": "96d70b2c2fe2780ba222061501d2a7bd45559d84",
+  "implementation_pr": "https://github.com/PureSaber/quant-studio/pull/16",
+  "limitations": {
+    "full_p0_p2_complete": false,
+    "live_orders": false,
+    "market_data_ga": false,
+    "new_independent_forward_dates": 0,
+    "real_cost_calibration_complete": false
+  },
+  "local_evidence_sha256": {
+    "execution.json": "949f19b45f6c20583d3e745e8ee19c00d4c79b7bd362155487ee12a3008b07ca",
+    "failure.png": "0cdf0d17cb9a6104562dd0ede039127078b6beedd28bb5cd4b4ccf707db55332",
+    "final-result.png": "acf4005aecf35138cc04e34e6e3aa699d6fcb3d0841e9f7a1d22dc7b804f2ec1",
+    "gui-checks.json": "bd31be98172bbebf38595f3f9cb5225caaffda757e9844242521d56db31e2224",
+    "integration-tests.xml": "187b13ae4b827a298546441094ac9aacf8966bbe18c533a4011cca40c160a0d5",
+    "mobile-scrolled.png": "c6b10de791f96301b541067ea8a79ddb112b7dc3de0619f0402dc48cf8b2488c",
+    "plan.json": "b7dcae5cb8527539f1d42ff673e4f9d26eeedd168e8f94085dc9be581f43f117",
+    "real-fold.png": "fb2d3a0d563f0b25e53f10b75f0b09cbe9c9045d0d2c83ebb525d1afeceef8a9",
+    "real-mobile.png": "9a47708f7ab3ee36e1b1b87e2ee38cb2e05bb56ee4db04ffb5c308bbe6578956",
+    "synthetic-result.png": "5242b959714184dadab18a9c18752eb7f0a7ddbe054ac15e5919a674ccee6bee",
+    "unit-tests.xml": "60f92d22871c6415801f14568dd2ad73698b6645512d0daedd52c2c2fdde2c6c"
+  },
+  "merged_commit": "d254e711a3b40b1183f322cf358595db90d1e86b",
+  "native_timing_commit": "35058df73d079f951b5600154ee444ce66fe5fa6",
+  "product": {
+    "all_counterfactual_candidates_forbidden_to_publish": true,
+    "business_preflight_entries": 10,
+    "page_and_download_verify_full_native_file_set": true,
+    "required_candidate_failure_blocks_family_conclusions": true,
+    "studio_templates": 11
+  },
+  "schema": "p0-p2.timing-counterfactual-studio-evidence/v1",
+  "source_hash_basis": "Git LF bytes; checked against current working files after CRLF normalization",
+  "source_sha256": {
+    ".github/workflows/upstream-integration.yml": "578c01019b5fd6827d0b0857031eae2fa2c8e28e4b27d648c01e143c9fab1cb5",
+    "README.md": "1e2f5ac90dc170e8ef1cb1ae277fa8e70ce04f5d54ebe3ab2a6145224b6233ab",
+    "integration/test_timing_counterfactual.py": "df3637f88a9aae8bc53f1548431d26aca60b41c4b52c09b00eb55e837ed0a1a8",
+    "src/quant_studio/counterfactual_panel.py": "a1303ad8c5d327a5c3ab75ed7944b797c328685c3b4d8410a255361d01ec2ae4",
+    "src/quant_studio/counterfactual_view.py": "11649b02ab032b365a5b2e08ad004a9695ae9494dd0760a80063ddadef545ec9",
+    "src/quant_studio/flow.py": "f4658039a410c2d4cda3884e9353968a0f37ad5b398b513fb281bdc2caca853a",
+    "src/quant_studio/runner.py": "595af70c4b471e996d17e667ad83431e4f27cbf4eb0f87ae5e1da4ebedb6f97d",
+    "src/quant_studio/server.py": "15e4a83fdbd2df78bb98cbffc24c3b7d83bc096c3380e2f14cbb18f9afe26010",
+    "src/quant_studio/templates/timing-counterfactual/base.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "src/quant_studio/templates/timing-counterfactual/template.json": "24eae1cf831d351e8a5a5bb26c6b42bfcccf87133a0c5ed936cb9bfd8b701d68",
+    "src/quant_studio/templates/timing-research/template.json": "8d1f35b2e5bb264e870b5039893e1b869e3a016e846fea190627d95e334bd5a0",
+    "tests/test_counterfactual_template.py": "f6bc6c37c50533ce80e7913a3357e7578e6995fad27cec5c607c8cad33f7bed0",
+    "tests/test_server.py": "021df21ba737ac3de640487fc9907b4a97b737637e38ba5e5a6f105a0b4189b8"
+  },
+  "tests": {
+    "native_integration": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 7
+    },
+    "pr_windows_linux_checks": "success",
+    "studio": {
+      "errors": 0,
+      "failures": 0,
+      "skipped": 0,
+      "tests": 181
+    },
+    "upstream_integration_run": 37165463140
+  }
+}
