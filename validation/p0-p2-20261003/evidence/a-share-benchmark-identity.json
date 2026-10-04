@@ -1,0 +1,70 @@
+{
+  "schema": "p0-p2.a-share-benchmark-identity/v1",
+  "as_of": "2026-10-04",
+  "status": "merged_and_verified",
+  "deliveries": [
+    {
+      "repo": "PureSaber/a-share-multifactor",
+      "pr": 25,
+      "reviewed_head": "5693eb6f4f6065bd128400a3ca8103ac872b78d1",
+      "merge": "d47fd28f509a9e51e1d612a252e002fb06c59d5d",
+      "scope": "cache guide and correct four-factor config path",
+      "main_checks": [
+        {"run_id": 37200532530, "name": "CI", "conclusion": "success"},
+        {"run_id": 37200532534, "name": "CodeQL", "conclusion": "success"}
+      ]
+    },
+    {
+      "repo": "PureSaber/a-share-multifactor",
+      "pr": 26,
+      "reviewed_head": "606051c49404338b938e8f4c4b5282c279b58638",
+      "merge": "3c48cd28d056b6dad36fbc0041408c010912a20d",
+      "scope": "strict H00300 total-return benchmark identity",
+      "main_checks": [
+        {"run_id": 37201226996, "name": "CI", "conclusion": "success"},
+        {"run_id": 37201227035, "name": "CodeQL", "conclusion": "success"}
+      ]
+    },
+    {
+      "repo": "PureSaber/quant-studio",
+      "pr": 20,
+      "reviewed_head": "130ea9a8ae9edf32bfb301646a14e51ac49ad058",
+      "merge": "94a825d6e714fffd982102f580f42f83d4a68c77",
+      "scope": "fixed ASM reference and native preflight rejection integration",
+      "main_checks": [
+        {"run_id": 37201792615, "name": "tests", "conclusion": "success"},
+        {"run_id": 37201792611, "name": "Upstream integration", "conclusion": "success"}
+      ]
+    }
+  ],
+  "validation": {
+    "baseline_independent_rejection_failures": 5,
+    "baseline_independent_positive_passes": 1,
+    "fixed_asm_full_tests": 235,
+    "fixed_asm_targeted_tests": 41,
+    "independent_probes_in_targeted_set": 6,
+    "asm_total_coverage_percent": 84.7655624899984,
+    "asm_core_covered_branches": 217,
+    "asm_core_total_branches": 222,
+    "studio_unit_tests": 214,
+    "studio_native_integration_tests": 4,
+    "sets_overlap_do_not_sum": true,
+    "normal_total_return_compounding_verified": true,
+    "wrong_missing_mixed_null_empty_identity_rejected": true,
+    "nullable_missing_metadata_rejected": true,
+    "native_preflight_input_bytes_and_mtime_unchanged": true,
+    "preflight_did_not_create_strategy_output": true
+  },
+  "boundaries": {
+    "positive_integration_input": "synthetic cache",
+    "real_cache_success_verified": false,
+    "real_cache_status": "required price file unavailable",
+    "market_downloads": 0,
+    "new_independent_forward_days": 0,
+    "studio_templates": 11,
+    "studio_business_preflight_entries": 10,
+    "frozen_accounts_or_automation_changed": false,
+    "p1_1_complete": false,
+    "p0_p2_complete": false
+  }
+}
