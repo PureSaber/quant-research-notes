@@ -1,0 +1,181 @@
+{
+  "schema": "p0-p2.studio-setup-acceptance/v1",
+  "as_of": "2026-10-04",
+  "source_commit": "d3b176da7e08c8fa4845d211161a9f2befeecb57",
+  "merge_commit": "b6f8a9f82313650606e26636ca55dd121920625c",
+  "pull_request": "https://github.com/PureSaber/quant-studio/pull/17",
+  "templates": 11,
+  "business_preflights": 10,
+  "unit_tests_passed": 207,
+  "hk_native_integration_passed": 4,
+  "pr_checks_success": 20,
+  "real_replay_code": "4abeef79b67afb4d2ba57602bcdd0641bf2a62c4",
+  "final_commit_revalidation": [
+    "207 unit tests",
+    "4 native HK integration tests",
+    "Windows and Linux PR checks",
+    "complete desktop GUI preview"
+  ],
+  "source_files_unchanged": 8,
+  "verified_artifacts": 89,
+  "config_sha256": "e6a2000b52f801d46d9fb3612687a8a8bd969e14400177dd33e8c3bfa1a3f89c",
+  "real_symbols": 5,
+  "real_price_rows": 1535,
+  "initial_cash": "500000",
+  "rebalance_sessions": 5,
+  "independent_forward_dates_added": 0,
+  "screenshots": [
+    {
+      "File": "hk-preflight-1280.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "4E0E421BF51002DBBDF9077A5CE915F723A359921A22969F0AFAA492FA95D983",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "hk-result-1280.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "74F0EEDCF329D4986320C8CAFE538B40AADC95D56DD9E7A24CB458F810F3D2AD",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "hk-result-390.jpg",
+      "Width": 375,
+      "Height": 812,
+      "Sha256": "A740DD063B916B8EAD49C18F48A29F8271FC356F02C3D9054A49208AF9C3268D",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "hk-result-final-1280.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "74F0EEDCF329D4986320C8CAFE538B40AADC95D56DD9E7A24CB458F810F3D2AD",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "invalid-python.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "310ECC81DFD5A492F35688EC4B779776FF99605E23CEA75614287516E20E8805",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "missing-input-390.jpg",
+      "Width": 375,
+      "Height": 812,
+      "Sha256": "8A8350A5C5299C28B9B2902D4FFD81157F34D29B7251015B829B6697AA8551A1",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "restart-restored-1280.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "83945CD7CEC836F7A48F5E8139802F347BEF0AA6D1DEAAC86A330FF43242B911",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "setup-review-1280.jpg",
+      "Width": 1280,
+      "Height": 900,
+      "Sha256": "E8428E73C456519DF66EAEFF056B5C0879B102C29E8AE0121F03018D5150B4A3",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "setup-review-390.jpg",
+      "Width": 375,
+      "Height": 812,
+      "Sha256": "1B85AF9CD024EA8F073CCCD7DCEFA1ED66553A14BB6CDFB0473D719BD875E757",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "setup-review-complete-1280.jpg",
+      "Width": 1280,
+      "Height": 900,
+      "Sha256": "E8428E73C456519DF66EAEFF056B5C0879B102C29E8AE0121F03018D5150B4A3",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "setup-review-final-1280.jpg",
+      "Width": 416,
+      "Height": 900,
+      "Sha256": "094396764D228121C327CC2C11FBBB62A4D230B976C4CC80288DA88691E96F8C",
+      "EvidenceStatus": "superseded-cropped"
+    },
+    {
+      "File": "setup-saved-390.jpg",
+      "Width": 375,
+      "Height": 812,
+      "Sha256": "211A81E1E1B72E64FFBCF72F8F71BE03B752798DD556CF9D890AF941786851F6",
+      "EvidenceStatus": "retained"
+    },
+    {
+      "File": "synthetic-result.jpg",
+      "Width": 1265,
+      "Height": 889,
+      "Sha256": "29923D26545FFA656969BF22E931154448C584C124D5C32A43E0EB94AA854CD3",
+      "EvidenceStatus": "retained"
+    }
+  ],
+  "source_fingerprints": [
+    {
+      "file": "bars.parquet",
+      "sha256": "fd7cd9b0f8bd510fa97ee290e37aba3792b8815e492902a1549efcf48fb371e0",
+      "bytes": 61034
+    },
+    {
+      "file": "calendar.csv",
+      "sha256": "ead1c684d438b5771154b66d216b6d145798dabcb08ad7b6e2fbfc9f9027feb8",
+      "bytes": 20497
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "555a174a3cba3dc09299b0434478b72f2006fbe304ada400591f9e0c5f7caefc",
+      "bytes": 1192
+    },
+    {
+      "file": "raw-00005.csv",
+      "sha256": "2a1a9bb0c786fd439d365cffd358352cb3872f9e198aa990bf6a5622a41cfe2e",
+      "bytes": 403867
+    },
+    {
+      "file": "raw-00700.csv",
+      "sha256": "1394000fb6bc2947db78d3e83dcdbf179e9d1d1e9da84260edc4a7d2eaf15d23",
+      "bytes": 323513
+    },
+    {
+      "file": "raw-00939.csv",
+      "sha256": "8289191a6e9a6509f2e5bbaaa6ec127c638b238e4c06aa804c9fc3e979e4b88c",
+      "bytes": 290690
+    },
+    {
+      "file": "raw-00941.csv",
+      "sha256": "41786174aa44476bf0b3fa94e0f19118916027a124ef9034017cdfa478ee7c2e",
+      "bytes": 395543
+    },
+    {
+      "file": "raw-09988.csv",
+      "sha256": "b6095a7a136c994b43c81e4fd99511a2dc1cd317eed5fd8fafa093d7e259f53f",
+      "bytes": 100742
+    }
+  ],
+  "limitations": [
+    "Retrospective HK prices; investable=false",
+    "First dependency installation and existing account-source JSON remain explicit prerequisites",
+    "A-share complete real input flow remains pending",
+    "Fund and HK embedded report host MutationObserver error remains unresolved",
+    "No raw market data, local paths or account content published"
+  ],
+  "main_ci": [
+    {
+      "workflow": "tests",
+      "run_id": 37171394060,
+      "conclusion": "success"
+    },
+    {
+      "workflow": "Upstream integration",
+      "run_id": 37171394052,
+      "conclusion": "success"
+    }
+  ]
+}
