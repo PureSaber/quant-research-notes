@@ -1,0 +1,378 @@
+{
+  "schema": "p0-p2.cash-capacity-study/v1",
+  "checked_at": "2026-10-04T03:36:58.176014+00:00",
+  "review_status": "negative_result_verified",
+  "complete_four_arm_family": false,
+  "full_p1_2_complete": false,
+  "full_p0_p2_complete": false,
+  "protocol_sha256": "420c933ba222effe63e6ac770339e21280480b34e4b1ff8680e079caf2d374b1",
+  "runner_sha256": "0c009b9a2f8abcabdc530d68ec8d0468295fae751acd9299ad44bcd8bb983226",
+  "delivery_sha256": "325350d50f80d0793d943f68fff58a81b80940ca53b13e015d90f9fab3787e74",
+  "scope": {
+    "question": "Within the existing ASM native execution model, how do top_n and the configured cash buffer jointly change realized returns and account economics?",
+    "estimand": "A risky-asset-substitute deployment-model counterfactual under the existing eligibility, optimizer, risk, lot, fee and settlement constraints.",
+    "excluded_estimands": [
+      "cash interest or yield",
+      "complete cash opportunity cost",
+      "an optimal production strategy",
+      "a new Lab v2 framework or production flag"
+    ],
+    "observed_sessions": 189,
+    "new_forward_sessions": 0,
+    "external_data_or_network": false
+  },
+  "arms": [
+    {
+      "arm": "k2-c20",
+      "top_n": 2,
+      "cash_buffer": 0.2,
+      "candidate_name": "base",
+      "configured_gross_cap": 0.8,
+      "role": "old base reproduction"
+    },
+    {
+      "arm": "k2-c0",
+      "top_n": 2,
+      "cash_buffer": 0.0,
+      "candidate_name": "cash_buffer",
+      "configured_gross_cap": 0.8,
+      "role": "old negative-control reproduction"
+    },
+    {
+      "arm": "k3-c20",
+      "top_n": 3,
+      "cash_buffer": 0.2,
+      "candidate_name": "top3_buffer20",
+      "configured_gross_cap": 0.8,
+      "role": "top-3 at 20% configured cash"
+    },
+    {
+      "arm": "k3-c0",
+      "top_n": 3,
+      "cash_buffer": 0.0,
+      "candidate_name": "top3_buffer0",
+      "configured_gross_cap": 1.0,
+      "role": "top-3 at 0% configured cash"
+    }
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "interval": {
+        "start": "2025-12-02",
+        "end": "2026-03-10"
+      },
+      "sessions": 63,
+      "source_preregistration_sha256": "6b15ce893261707d8e73da0b4e60ef9d72c3fdcb896e87a53e41f0ed76780aae",
+      "input_manifest_sha256": "39026b638a03f97cd4596d029eab7bdb0f5bcb748f79b9ef41db55931c69a21b"
+    },
+    {
+      "fold": 1,
+      "interval": {
+        "start": "2026-03-11",
+        "end": "2026-06-11"
+      },
+      "sessions": 63,
+      "source_preregistration_sha256": "6ca1c203e400eaca2b65f19707250ba69909caf96afcdbd7a5260826ff243f7b",
+      "input_manifest_sha256": "39026b638a03f97cd4596d029eab7bdb0f5bcb748f79b9ef41db55931c69a21b"
+    },
+    {
+      "fold": 2,
+      "interval": {
+        "start": "2026-06-12",
+        "end": "2026-09-09"
+      },
+      "sessions": 63,
+      "source_preregistration_sha256": "6f9d307978951057c1c60ead5483e1a88f7f0efbe8564df3c1c74cb671872143",
+      "input_manifest_sha256": "39026b638a03f97cd4596d029eab7bdb0f5bcb748f79b9ef41db55931c69a21b"
+    }
+  ],
+  "configuration": {
+    "source": "Each fold reuses the exact frozen lower-buffer recipe and base candidate, changing only strategy.top_n and strategy.cash_buffer as declared by the arm.",
+    "max_weight": 0.4,
+    "frequency": "weekly",
+    "trend_window": 60,
+    "allocation_mode": "cost_aware",
+    "risk_and_execution": "unchanged from the source preregistration",
+    "cash_interest_assumption": "No cash-interest event exists in the native ledger. Unknown cash interest is not imputed as zero; it is outside this estimand."
+  },
+  "source_repositories": {
+    "a-share-multifactor": {
+      "head": "866b43bb95673f8ca46218e29f69aba4c75cdb8b",
+      "tree": "9917ee3d7d1987d2afab754cad68e46f257b9e37"
+    },
+    "quant-lab": {
+      "head": "6cf6126887ab084dd15507a287f40db571e65b95",
+      "tree": "2d2ef0d371abdd1f43839498178f8292426b0838"
+    },
+    "quant-execution": {
+      "head": "bb0da30caed20dad42a6d5bdfd217913f61cc44e",
+      "tree": "bea0bac452dd4b452ad0260f78365e266abb458f"
+    },
+    "quant-data-kit": {
+      "head": "1e582d2044ea9c2d517fe7b081ad839da427d983",
+      "tree": "7b19365438b35a01efbf7148f4e8c71a205c0af3"
+    },
+    "quant-factors": {
+      "head": "a26c758f2e6d9bc4e6169d97df8cbc97cdaa4f9d",
+      "tree": "5dd3dee176cae5b7b60e63ec80e3e1a2f41ca958"
+    },
+    "quant-portfolio": {
+      "head": "ca1af5a27e3f975931a48ccd11f41e1743848891",
+      "tree": "1c0cb484a6e1dfed96bd1634830f622bf5c592d6"
+    },
+    "quant-risk-monitor": {
+      "head": "6b0337cdeb83d0681b334f34be9c57d6d98fa6d8",
+      "tree": "53f48601c1cb1193b2bc3d4ee16f786ec084c387"
+    },
+    "quant-report-hub": {
+      "head": "e5138deaed093fffb899e327c9a593808f9d903d",
+      "tree": "b1aba05a603c749b7a9983a61d09dfb8781c92a0"
+    }
+  },
+  "attempted_native_runs": 12,
+  "completed_native_runs": 9,
+  "failed_native_runs": 3,
+  "independent_review": {
+    "schema": "quant.cash-capacity-independent-review/v1",
+    "checked_at": "2026-10-04T03:26:58.492636+00:00",
+    "protocol_sha256": "420c933ba222effe63e6ac770339e21280480b34e4b1ff8680e079caf2d374b1",
+    "delivery_sha256": "325350d50f80d0793d943f68fff58a81b80940ca53b13e015d90f9fab3787e74",
+    "review_status": "negative_result_verified_four_arm_estimates_unavailable",
+    "attempted": 12,
+    "completed": 9,
+    "failed": 3,
+    "raw_artifact_hashes_and_sets_verified": 189,
+    "standard_runs_verified": 9,
+    "old_controls_with_12_economic_files_equal": 6,
+    "independent_decimal_fold_metrics": [
+      {
+        "fold": 0,
+        "arm": "k2-c20",
+        "sessions": 63,
+        "net_return": "0.038524779319999405251188635570777853858",
+        "max_drawdown": "-0.0449200768327241192128531299983016270224"
+      },
+      {
+        "fold": 0,
+        "arm": "k2-c0",
+        "sessions": 63,
+        "net_return": "0.038524779319999405251188635570777853858",
+        "max_drawdown": "-0.0449200768327241192128531299983016270224"
+      },
+      {
+        "fold": 0,
+        "arm": "k3-c20",
+        "sessions": 63,
+        "net_return": "0.047686252129999642912067374177550096154",
+        "max_drawdown": "-0.0380248833794111746907665253856867923626"
+      },
+      {
+        "fold": 1,
+        "arm": "k2-c20",
+        "sessions": 63,
+        "net_return": "0.011231913569999783903089041190867365525",
+        "max_drawdown": "-0.0517836734053354900429833707353308584088"
+      },
+      {
+        "fold": 1,
+        "arm": "k2-c0",
+        "sessions": 63,
+        "net_return": "0.011231913569999783903089041190867365525",
+        "max_drawdown": "-0.0517836734053354900429833707353308584088"
+      },
+      {
+        "fold": 1,
+        "arm": "k3-c20",
+        "sessions": 63,
+        "net_return": "-0.0053533215900001599084660657521032786614",
+        "max_drawdown": "-0.0585293201533207137134608554912983999040"
+      },
+      {
+        "fold": 2,
+        "arm": "k2-c20",
+        "sessions": 63,
+        "net_return": "-0.0781746659100000705821246424652980671420",
+        "max_drawdown": "-0.1468102376485983772094085520167867370034"
+      },
+      {
+        "fold": 2,
+        "arm": "k2-c0",
+        "sessions": 63,
+        "net_return": "-0.0781746659100000705821246424652980671420",
+        "max_drawdown": "-0.1468102376485983772094085520167867370034"
+      },
+      {
+        "fold": 2,
+        "arm": "k3-c20",
+        "sessions": 63,
+        "net_return": "-0.0810657428099996195376606630369945118309",
+        "max_drawdown": "-0.1490614750856579210150788508963641303257"
+      }
+    ],
+    "independent_decimal_combined_descriptive_metrics": {
+      "k2-c20": {
+        "net_return": "-0.0319088055963447440069033069511596916344",
+        "max_drawdown": "-0.1468102376485983772094085520167867370002"
+      },
+      "k2-c0": {
+        "net_return": "-0.0319088055963447440069033069511596916344",
+        "max_drawdown": "-0.1468102376485983772094085520167867370002"
+      },
+      "k3-c20": {
+        "net_return": "-0.0423991481225198400328152468004715626771",
+        "max_drawdown": "-0.1490614750856579210150788508963641303223"
+      }
+    },
+    "estimable_top_n_effect_at_20pct_cash": "-0.0104903425261750960259119398493118710427",
+    "k3_cash_condition_effect": null,
+    "cash_capacity_interaction": null,
+    "joint_k3_c0_minus_k2_c20": null,
+    "source_files_unchanged": 34,
+    "old_evidence_files_unchanged": 883,
+    "production_repositories_unchanged": 8,
+    "new_forward_observations": 0,
+    "native_replays_added_by_review": 0,
+    "constraint_proof_sha256": "48567a548fdd1138cff287ec008e494931c61135070751303853475750183bed",
+    "scope_limit": "Three independent folds; compounded series is descriptive. Missing arms remain unavailable; no feasible cash-interest or unrestricted opportunity-cost estimate."
+  },
+  "constraint_proof": {
+    "schema": "quant.cash-capacity-independent-feasibility/v1",
+    "checked_at": "2026-10-04T03:22:50.585761+00:00",
+    "protocol_sha256": "420c933ba222effe63e6ac770339e21280480b34e4b1ff8680e079caf2d374b1",
+    "cases": [
+      {
+        "fold": 0,
+        "failure_date": "2025-12-26",
+        "selected": [
+          "510300",
+          "510500",
+          "159915"
+        ],
+        "eligible_count": 3,
+        "market_loading_by_selected": {
+          "510300": "1.0",
+          "510500": "1.0",
+          "159915": "1.0"
+        },
+        "per_asset_weight_upper": "0.4",
+        "required_budget": "1.0",
+        "minimum_market_exposure": "1.0",
+        "maximum_market_exposure": "1.0",
+        "effective_market_lower": "0.0",
+        "effective_market_upper": "0.95",
+        "strict_infeasibility_gap": "0.05",
+        "proof": "Each selected market loading is exactly 1. Therefore market exposure equals sum(weights), which the native allocation fixes at invested_limit=1. Every candidate violates the 0.95 factor upper bound independently of objective/covariance/optimizer.",
+        "input_hashes": {
+          "execution_definition": "c03df2638a6d836740799ae7b899bcd7abe55c3ca0ac389f9b0ad7dd8f2204b9",
+          "risk_models": "4fe4d5a5c00bc629091b60e8f0c4091260a2fe2e0782402cdc2caf641aabb974",
+          "selection": "86b773dfcf88ab45c28ead72179fa0c3b1c5a6413ac62d33a3f32e2f48b6b88d"
+        }
+      },
+      {
+        "fold": 1,
+        "failure_date": "2026-04-17",
+        "selected": [
+          "159915",
+          "510300",
+          "510500"
+        ],
+        "eligible_count": 4,
+        "market_loading_by_selected": {
+          "159915": "1.0",
+          "510300": "1.0",
+          "510500": "1.0"
+        },
+        "per_asset_weight_upper": "0.4",
+        "required_budget": "1.0",
+        "minimum_market_exposure": "1.0",
+        "maximum_market_exposure": "1.0",
+        "effective_market_lower": "0.0",
+        "effective_market_upper": "0.95",
+        "strict_infeasibility_gap": "0.05",
+        "proof": "Each selected market loading is exactly 1. Therefore market exposure equals sum(weights), which the native allocation fixes at invested_limit=1. Every candidate violates the 0.95 factor upper bound independently of objective/covariance/optimizer.",
+        "input_hashes": {
+          "execution_definition": "ad4ce6a0e08b97dbc5f6d4d364efdd3ec7c1a573f70d598b3cd65ee2df122af9",
+          "risk_models": "b1b2bb270728f1a7ce875c8b0eaee3925def88f08261cf9097f0b27d1e1c14f2",
+          "selection": "4f9fe804e87d54f0be919fe6d031cbd96173cf8215beaa308af796fbefcdb676"
+        }
+      },
+      {
+        "fold": 2,
+        "failure_date": "2026-06-12",
+        "selected": [
+          "510300",
+          "159915",
+          "588000"
+        ],
+        "eligible_count": 3,
+        "market_loading_by_selected": {
+          "510300": "1.0",
+          "159915": "1.0",
+          "588000": "1.0"
+        },
+        "per_asset_weight_upper": "0.4",
+        "required_budget": "1.0",
+        "minimum_market_exposure": "1.0",
+        "maximum_market_exposure": "1.0",
+        "effective_market_lower": "0.0",
+        "effective_market_upper": "0.95",
+        "strict_infeasibility_gap": "0.05",
+        "proof": "Each selected market loading is exactly 1. Therefore market exposure equals sum(weights), which the native allocation fixes at invested_limit=1. Every candidate violates the 0.95 factor upper bound independently of objective/covariance/optimizer.",
+        "input_hashes": {
+          "execution_definition": "a083e9055dbea7bf4011be9aab9407aaad7b5914c7859536da9b85b4d058dd9f",
+          "risk_models": "2a24dd166e86a30e1b82e9e9e71cdd2ae9a7a87d39248a1283098f5d94f4fd80",
+          "selection": "efc92173be04f5b6d9cd9c5b13b6a4c84651e9cff4af7bbc3e77f440c6b92cd0"
+        }
+      }
+    ],
+    "conclusion": "All three observed failures are mathematically infeasible under the unchanged full-budget contract and risk bounds; these cases do not establish an optimizer defect.",
+    "aggregate_four_arm_effects_available": false,
+    "account_replays_added": 0,
+    "independent_forward_observations_added": 0
+  },
+  "cash_reconstruction": {
+    "ledgers": 9,
+    "summaries_match": true,
+    "receipt_sha256": "925e61d21f21fcc2088c0ad5cd02fc4a56784278648327e6b260b31d1050bfc6"
+  },
+  "artifact_hashes": {
+    "HANDOFF.md": "e613f8255c2fda576819a4de27bcd6ee0b3d320957c6643e7226d102ddbf7263",
+    "attempts.json": "7fc6c808e086e69228982607b9c4e2e150936d4f26295577a502f400a458eb53",
+    "blocked-analysis.json": "f480fe3aa51e8e5f2ed90ea6370f5c42ef335db6dc34f9d7bb2c83fcc7e441de",
+    "blocked.json": "df650d2edffc34a62f8db7dd78ed4427287308ee8c14c7e8fdc30c3b38b825bd",
+    "combined-comparison.csv": "81f45bc2bc3d39a8dfed1873e3c253dc04c50664dbefff3895b4131d53efe5b5",
+    "daily-returns.csv": "b9438c91d53494bd5535213dc4c8d391d15a123324a0e1b73f877db99815f8b2",
+    "failure-feasibility.json": "90608fc0021cff5de0d7a370d89ad562db232a62297949bbf89a1c1dd9849d0e",
+    "fold-comparison.csv": "e129f6fa70a1e029a46c7ea92c42ae62ce520adae49006339cf63982dd5280a1",
+    "hand-calculation.json": "aa47a5676b2d096fc2ab54c26cfdf8e9cb7ecef30820b4af7fc13d30572d60a5",
+    "protocol.json": "420c933ba222effe63e6ac770339e21280480b34e4b1ff8680e079caf2d374b1",
+    "run_experiment.py": "0c009b9a2f8abcabdc530d68ec8d0468295fae751acd9299ad44bcd8bb983226",
+    "selection-fold-000.json": "86b773dfcf88ab45c28ead72179fa0c3b1c5a6413ac62d33a3f32e2f48b6b88d",
+    "selection-fold-001.json": "4f9fe804e87d54f0be919fe6d031cbd96173cf8215beaa308af796fbefcdb676",
+    "selection-fold-002.json": "efc92173be04f5b6d9cd9c5b13b6a4c84651e9cff4af7bbc3e77f440c6b92cd0",
+    "source-integrity-after.json": "6a5860553ccfd27906ba8a43654ef1b3c318b54396650516bff5343032379c47",
+    "source-integrity-before.json": "fea3655e639c70846b5589fa3c1fabdd9f306cc5576d6a2b0942e49ff10cee72"
+  },
+  "input_integrity": {
+    "input_files": 34,
+    "previous_evidence_files": 883,
+    "content_size_mtime_and_sets_unchanged": true,
+    "source_repositories": 8,
+    "source_state_unchanged": true
+  },
+  "missing_estimands": [
+    "k3_cash_condition_effect",
+    "cash_capacity_interaction",
+    "joint_k3_c0_minus_k2_c20"
+  ],
+  "no_new_market_data": true,
+  "limitations": [
+    "The same 189 observed sessions are reused; this experiment creates zero new forward observations.",
+    "The result is a preregistered top-3 deployment-model counterfactual, not evidence of an optimal strategy.",
+    "Cash interest is unknown and outside the native ledger; it is not set to zero and no cash-interest estimate is reported.",
+    "The comparison is conditional on the existing universe, scores, optimizer, risk controls, lot sizes, fees and settlement behavior.",
+    "Combined paths concatenate three independent 63-session accounts; fee and turnover sums across folds are descriptive."
+  ],
+  "followup_5pct_experiment_executed": false
+}

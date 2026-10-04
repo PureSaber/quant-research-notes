@@ -1,0 +1,420 @@
+{
+  "source": {
+    "studio": {
+      "expected_commit": "b6f8a9f82313650606e26636ca55dd121920625c",
+      "actual_commit": "b6f8a9f82313650606e26636ca55dd121920625c",
+      "clone_command_used_no_hardlinks": true,
+      "detached": true,
+      "clean_after": true,
+      "production_checkout_clean_after": true
+    },
+    "hk": {
+      "expected_commit": "247122c12572feb3890958cfc46fea738d620bbf",
+      "actual_commit": "247122c12572feb3890958cfc46fea738d620bbf",
+      "clone_command_used_no_hardlinks": true,
+      "detached": true,
+      "clean_after": true,
+      "production_checkout_clean_after": true
+    }
+  },
+  "locks": {
+    "studio_requirements_sha256": "f2e7ad98dbbc49e80b3f34f72ad8da7b9045e022f9c826f811e80c3da4420e4a",
+    "hk_requirements_sha256": "cf81aa376434898700f4c8dc257670d09164b140e23d532d7aae13cef274655e",
+    "hk_stack_sha256": "3e97bec34bcac5afc5ea39a192044b63740e1ca627bcc116ac73106ec6bc53c6",
+    "hk_stack_commits": {
+      "quant-data-kit": "271a65ee383158b3dd7570e19a3f2b4123f09f79",
+      "quant-execution": "1bf6a627abf5a9a0d2cd2c0b4d3ad5740d464b2a",
+      "quant-factors": "4ff2ab39f1557c6c1247c1406a007fbd923196fd",
+      "quant-lab": "8b87aa176d1b0eaacbe918593b83bbec6d1baa33"
+    }
+  },
+  "install": {
+    "interpreter": "Python 3.12.5",
+    "studio": {
+      "independent_venv": true,
+      "steps": [
+        {
+          "name": "venv",
+          "exit_code": 0,
+          "log": "logs/10-studio-venv.log"
+        },
+        {
+          "name": "requirements-lock",
+          "exit_code": 0,
+          "log": "logs/11-studio-requirements.log"
+        },
+        {
+          "name": "editable-project-no-deps-no-build-isolation",
+          "exit_code": 0,
+          "log": "logs/12-studio-project.log"
+        },
+        {
+          "name": "pip-check",
+          "exit_code": 0,
+          "log": "logs/13-studio-pip-check.log"
+        }
+      ],
+      "pip_check": "No broken requirements found.",
+      "editable_points_to_isolated_clone": true,
+      "size_bytes": 58166111,
+      "size_mib": 55.47
+    },
+    "hk": {
+      "independent_venv": true,
+      "steps": [
+        {
+          "name": "venv",
+          "exit_code": 0,
+          "log": "logs/20-hk-venv.log"
+        },
+        {
+          "name": "requirements-lock",
+          "exit_code": 0,
+          "log": "logs/21-hk-requirements.log"
+        },
+        {
+          "name": "stack-lock-no-deps",
+          "exit_code": 0,
+          "log": "logs/22-hk-stack.log"
+        },
+        {
+          "name": "editable-project-no-deps",
+          "exit_code": 0,
+          "log": "logs/23-hk-project.log"
+        },
+        {
+          "name": "pip-check",
+          "exit_code": 0,
+          "log": "logs/24-hk-pip-check.log"
+        }
+      ],
+      "pip_check": "No broken requirements found.",
+      "editable_points_to_isolated_clone": true,
+      "direct_url_stack_commits_match_lock": true,
+      "size_bytes": 412954052,
+      "size_mib": 393.82
+    }
+  },
+  "studio_synthetic_cli": {
+    "run_id": "0e68b01509354d64837bd242654f1911",
+    "status": "succeeded",
+    "returncode": 0,
+    "nav_sha256": "e4e3aa600406356d1d32e0f7781e7465a3624596e7e6f76795bc055dd6127bf8",
+    "report_sha256": "6822ea886f88bfb96c81e54f82a8824b1be697ccb6ff9826ab8c752866d9bd89",
+    "result_sha256": "f9466ed17939dd87bafe8d226161739cfb733603df1db3d9a6dd8ec39bd27c8d"
+  },
+  "settings": {
+    "schema_version": "quant-studio.settings/v1",
+    "sha256": "8af8daf4c907637d43d1f61ea06b0600db44708f9b29fd1280db003811c806e1",
+    "saved_from_empty_config": true,
+    "restart_restored": true,
+    "restored_fields": [
+      "workspace",
+      "hk-python",
+      "hk-snapshot"
+    ],
+    "accounts_configured": 0
+  },
+  "gui_preflight": {
+    "run_id": "a2941268b53942b6b6884c7aa775ff2d",
+    "status": "checked",
+    "returncode": 0,
+    "parameters": {
+      "initial_cash": 500000,
+      "rebalance_sessions": 5
+    },
+    "symbols": 5,
+    "rows": 1535,
+    "investable": false,
+    "corporate_actions_complete": false,
+    "strategy_executed": false
+  },
+  "gui_run": {
+    "run_id": "8b57165f355a483195f75df5d5e9f3c3",
+    "status": "succeeded",
+    "returncode": 0,
+    "parameters": {
+      "initial_cash": 500000,
+      "rebalance_sessions": 5
+    },
+    "selected_strategy": "low_volatility_20d",
+    "holdout": {
+      "sessions": 181,
+      "ending_nav_hkd": 552702.228,
+      "total_return": 0.10540445600000004,
+      "max_drawdown": -0.07602533707988524,
+      "sharpe_zero_rf": 1.0909858323252353
+    },
+    "investable": false,
+    "rankable": false,
+    "native_checksum_files": 89,
+    "native_checksum_mismatches": 0,
+    "artifact_hashes": {
+      "summary.json": "bd26c3ba0f1d77cd6567853b04ec74429487d8292aad9bc79a4140bd9fc7e347",
+      "study.json": "dde36d7360dcf1742b2e4de32edfedeff5e6889463315b8138b3ab6a721beb41",
+      "selection.json": "0026351264f03ab9554c574a156df5568b2f49bcde55334cfb9553d147bde28c",
+      "report.html": "452ccb9acbbd91ce70e2cf40a68c973596c54bd8c4a47efaca087036c2799a11",
+      "checksums.json": "fe090e6bf6baa5a394674af1c0082ea4b13ae7ef33bb50a909cb5a1bf04193e9"
+    }
+  },
+  "standard_v2": {
+    "validator": "new-hk-venv quant-lab validate",
+    "all_valid": true,
+    "schema_version": "2.0.0",
+    "code_version": "247122c12572feb3890958cfc46fea738d620bbf",
+    "dataset_manifest_sha256": "555a174a3cba3dc09299b0434478b72f2006fbe304ada400591f9e0c5f7caefc",
+    "runs": {
+      "train-momentum_20d": {
+        "exit_code": 0,
+        "manifest_sha256": "b37155a719534b18a6c56ddb07a3f884fe8c4590e6c4ca2e91066a44326bd8ed"
+      },
+      "train-low_volatility_20d": {
+        "exit_code": 0,
+        "manifest_sha256": "a80304e2bbfcc844b162ed4d6f45a56c4c8d2f4197582c7769607fa628744c08"
+      },
+      "holdout": {
+        "exit_code": 0,
+        "manifest_sha256": "99df7f2580f50e49e9796e7b0b06e2f17ba64fea61bbbf688e6ba2b82c3ca1cc"
+      },
+      "benchmark": {
+        "exit_code": 0,
+        "manifest_sha256": "3587e7673f21bc57b664bed7be9d736b9d6af6caeaa313b0fde717f277973722"
+      },
+      "double-cost": {
+        "exit_code": 0,
+        "manifest_sha256": "3ecfa2759d1322cf460b6724e52237c02199957160b22accaf085fa51ae69cf4"
+      }
+    }
+  },
+  "research_boundaries": {
+    "price_return_only": true,
+    "complete_corporate_actions": false,
+    "historical_pit_universe_and_lots": false,
+    "ccass_calendar_certified": false,
+    "auction_orderbook_vcm_modeled": false,
+    "forward_preregistered": false
+  },
+  "snapshot_immutability": {
+    "unchanged": true,
+    "directory_set_unchanged": true,
+    "file_count_before": 8,
+    "file_count_after": 8,
+    "total_bytes_before": 1597078,
+    "total_bytes_after": 1597078,
+    "new_market_downloads": 0,
+    "source_data_copies": 0,
+    "files": [
+      {
+        "name": "bars.parquet",
+        "size": 61034,
+        "mtime_utc": "2026-10-03T00:20:19.6065941Z",
+        "sha256": "fd7cd9b0f8bd510fa97ee290e37aba3792b8815e492902a1549efcf48fb371e0"
+      },
+      {
+        "name": "calendar.csv",
+        "size": 20497,
+        "mtime_utc": "2026-10-03T00:20:19.9041366Z",
+        "sha256": "ead1c684d438b5771154b66d216b6d145798dabcb08ad7b6e2fbfc9f9027feb8"
+      },
+      {
+        "name": "manifest.json",
+        "size": 1192,
+        "mtime_utc": "2026-10-03T00:20:19.9371380Z",
+        "sha256": "555a174a3cba3dc09299b0434478b72f2006fbe304ada400591f9e0c5f7caefc"
+      },
+      {
+        "name": "raw-00005.csv",
+        "size": 403867,
+        "mtime_utc": "2026-10-03T00:20:17.7083005Z",
+        "sha256": "2a1a9bb0c786fd439d365cffd358352cb3872f9e198aa990bf6a5622a41cfe2e"
+      },
+      {
+        "name": "raw-00700.csv",
+        "size": 323513,
+        "mtime_utc": "2026-10-03T00:20:18.0955161Z",
+        "sha256": "1394000fb6bc2947db78d3e83dcdbf179e9d1d1e9da84260edc4a7d2eaf15d23"
+      },
+      {
+        "name": "raw-00939.csv",
+        "size": 290690,
+        "mtime_utc": "2026-10-03T00:20:18.5387400Z",
+        "sha256": "8289191a6e9a6509f2e5bbaaa6ec127c638b238e4c06aa804c9fc3e979e4b88c"
+      },
+      {
+        "name": "raw-00941.csv",
+        "size": 395543,
+        "mtime_utc": "2026-10-03T00:20:19.1223715Z",
+        "sha256": "41786174aa44476bf0b3fa94e0f19118916027a124ef9034017cdfa478ee7c2e"
+      },
+      {
+        "name": "raw-09988.csv",
+        "size": 100742,
+        "mtime_utc": "2026-10-03T00:20:19.5335332Z",
+        "sha256": "b6095a7a136c994b43c81e4fd99511a2dc1cd317eed5fd8fafa093d7e259f53f"
+      }
+    ]
+  },
+  "gui_layout": {
+    "wide": {
+      "requested_viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "dom_inner_size": {
+        "width": 1280,
+        "height": 900
+      },
+      "actual_image_pixels": {
+        "width": 1265,
+        "height": 889
+      },
+      "document_width": 1265,
+      "horizontal_overflow": false,
+      "result_visible": true,
+      "screenshot": "gui-wide-1280x900.jpg",
+      "screenshot_sha256": "74f0eedcf329d4986320c8cafe538b40aadc95d56dd9e7a24cb458f810f3d2ad"
+    },
+    "narrow": {
+      "requested_viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "dom_inner_size": {
+        "width": 390,
+        "height": 844
+      },
+      "actual_image_pixels": {
+        "width": 375,
+        "height": 812
+      },
+      "document_width": 375,
+      "horizontal_overflow": false,
+      "result_reachable": true,
+      "config_save_reachable": true,
+      "screenshot": "gui-narrow-390x844.jpg",
+      "screenshot_sha256": "a740dd063b916b8ead49c18f48a29f8271fc356f02c3d9054a49208af9c3268d"
+    },
+    "capture_dimension_note": "Screenshot filenames preserve the requested viewport. Actual raster pixels are recorded separately and must not be inferred from filenames. The 15-pixel width delta is consistent with the vertical scrollbar/host content canvas; the unequal height deltas are not further attributed by the available evidence.",
+    "observed_console_errors": [
+      "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'."
+    ],
+    "console_claimed_clean": false
+  },
+  "forward_execution": {
+    "configured_accounts": 0,
+    "new_forward_runs": 0,
+    "new_forward_files": 0
+  },
+  "budget": {
+    "estimated_mib": 460,
+    "measured_before_handoff_files_mib": 451.91,
+    "measured_before_handoff_files_bytes": 473860966,
+    "within_estimate": true
+  },
+  "cleanup": {
+    "viewport_override_reset": true,
+    "agent_created_tab_closed": true,
+    "service_listener_closed": true,
+    "service_child_closed": true,
+    "service_launcher_closed": true
+  },
+  "schema": "p0-p2.studio-first-install/v1",
+  "checked_at": "2026-10-04T03:36:58.177517+00:00",
+  "status": "selected_subflow_passed",
+  "overall_p1_1_signed_off": false,
+  "full_p0_p2_complete": false,
+  "original_receipt_sha256": "a3b82c23baff0fa3cccc5536e0d743ae07ea9c363fb385ed227cf663e93dd02d",
+  "handoff_sha256": "03b0d731c9f081d5d0ad58ae5892b3644f4aa3f25254f0d6a88e5d306aef7026",
+  "independent_review": {
+    "schema": "p0-p2.first-install-independent-review/v1",
+    "checked_at": "2026-10-04T11:31:22.598116+08:00",
+    "sources": {
+      "studio": {
+        "head": "b6f8a9f82313650606e26636ca55dd121920625c",
+        "clean": true,
+        "system_site_packages": false
+      },
+      "hk": {
+        "head": "247122c12572feb3890958cfc46fea738d620bbf",
+        "clean": true,
+        "system_site_packages": false
+      }
+    },
+    "actual_new_hk_environment": true,
+    "stack_packages": {
+      "quant-data-kit": {
+        "commit_id": "271a65ee383158b3dd7570e19a3f2b4123f09f79",
+        "version": "0.8.1"
+      },
+      "quant-execution": {
+        "commit_id": "1bf6a627abf5a9a0d2cd2c0b4d3ad5740d464b2a",
+        "version": "0.5.1"
+      },
+      "quant-factors": {
+        "commit_id": "4ff2ab39f1557c6c1247c1406a007fbd923196fd",
+        "version": "0.3.0"
+      },
+      "quant-lab": {
+        "commit_id": "8b87aa176d1b0eaacbe918593b83bbec6d1baa33",
+        "version": "0.3.1"
+      }
+    },
+    "native_files": 89,
+    "native_file_set_exact": true,
+    "standard_scenarios": [
+      "train-momentum_20d",
+      "train-low_volatility_20d",
+      "holdout",
+      "benchmark",
+      "double-cost"
+    ],
+    "same_preflight_run_config": true,
+    "settings_hash_matches": true,
+    "input_hash_size_and_set_unchanged": true,
+    "source_files": 8,
+    "screenshots_visually_reviewed": true,
+    "original_image_pixels": {
+      "wide": [
+        1265,
+        889
+      ],
+      "narrow": [
+        375,
+        812
+      ]
+    },
+    "limitations": [
+      "Existing host pip mirror and cached downloads used; not a fresh uncached operating-system install",
+      "Complete P1.1 is not accepted; this verifies the Studio/HK first-install path",
+      "Known host MutationObserver error retained",
+      "Real HK price-return study remains non-investable and non-rankable"
+    ],
+    "source_mtime_utc_ticks_unchanged": true
+  },
+  "pip_source_scope": "Existing host-configured Tsinghua PyPI mirror and caches used; no claim of uncached/default-index or fresh-OS installation",
+  "native_replay_scope": "Existing retrospective HK price-return input; 0 new forward observations",
+  "actual_images_reviewed": {
+    "wide": {
+      "width": 1265,
+      "height": 889
+    },
+    "narrow": {
+      "width": 375,
+      "height": 812
+    }
+  },
+  "image_height_difference_fully_explained": false,
+  "install_log_sha256": {
+    "01-clone-studio.log": "841e9dd97edde78b68e7c882a5b01fd471b31ee78d2b1dd12fa87131391bee5b",
+    "02-clone-hk.log": "4abc09c1d8cbc10cf754b56ead110fae9f4ae0dff8771d01258fbe4dcd3e4d6d",
+    "10-studio-venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "11-studio-requirements.log": "9f21ebd44673f49ae220a71c1f322d38e4cb81fc7b1967078af4b19bef0b4b83",
+    "12-studio-project.log": "301f58914c44c5be6f9eb1eb2ff581deeadf42d73eada5ed285914b6b2be773d",
+    "13-studio-pip-check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf",
+    "20-hk-venv.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "21-hk-requirements.log": "e64f1447a28b910f8ec27851c4c5f9dec56ada4a789d1c14518058093f198a2c",
+    "22-hk-stack.log": "b0563d2e399c6906294d92f5bc7a7d82375271d6a7a5edd4636f6ca4e877a5e4",
+    "23-hk-project.log": "818d0a9941d40f6089b4eb6ad7c285b7cde16f4353e335a5b45ef759e997a892",
+    "24-hk-pip-check.log": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+  }
+}
