@@ -1,0 +1,168 @@
+{
+  "schema": "p0-p2.fund-historical-terms-acceptance/v1",
+  "checked_at": "2026-10-04T02:58:01.900791+00:00",
+  "source_commit": "9a7455e379bbb231cfdbd5cc114a90f2d302089a",
+  "merge_commit": "cbdfb5e353bf9ab372499d5ddca3e50bb03270d0",
+  "pull_request": "https://github.com/PureSaber/quant-fund/pull/9",
+  "classification": "synthetic",
+  "software_accepted": true,
+  "real_business_certified": false,
+  "full_p0_3a_complete": false,
+  "full_p0_p2_complete": false,
+  "independent_forward_observations_added": 0,
+  "tests": {
+    "independent_pytest": {
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "68",
+      "time": "26.933",
+      "timestamp": "2026-10-04T10:50:41.901429+08:00"
+    },
+    "xml_sha256": "c5745d832ae32b68fc63e9eb7203e2c0a0d4a8f3644953346f3af9f4021f2511",
+    "ruff": "passed",
+    "format_files": 22,
+    "pip_check": "passed",
+    "pr_ci": "https://github.com/PureSaber/quant-fund/actions/runs/37172052327",
+    "main_ci": "https://github.com/PureSaber/quant-fund/actions/runs/37172403496",
+    "both_platforms": "success"
+  },
+  "native_run": {
+    "schema": "quant-fund.research-run@2",
+    "input_sha256": "31b6642a7260c4281960bc6d2c3d48d7f04da52696ea2b60d773585ea8055271",
+    "config": {
+      "start": "2024-01-02",
+      "end": "2024-05-31",
+      "strategy": "equal",
+      "initial_cash": 1000000.0,
+      "frequency": "ME",
+      "lookback": 24,
+      "min_periods": 12,
+      "max_weight": 0.4,
+      "cash_buffer": 0.05,
+      "min_trade": 1000.0
+    },
+    "manifest_sha256": "c747b6c10ccced0ec6446c51cb19bfa630b0cca0a300fdabb237f398798770f8",
+    "verification": {
+      "verified_files": 50,
+      "max_reconciliation_error": 2.3283064365386963e-10,
+      "terms_mode": "historical_pit",
+      "verified_term_bindings": 15
+    },
+    "term_version_rows": 848
+  },
+  "standard": {
+    "schema_version": "2.0.0",
+    "code_version": "9a7455e379bbb231cfdbd5cc114a90f2d302089a",
+    "manifest_sha256": "f652fd5faf61e1f18cb630b47eb56e32d1fe25892022fc4b0cb97e3bc4994305",
+    "quant_lab_validated": true,
+    "investable": false,
+    "rankable": false
+  },
+  "legacy": {
+    "baseline_source_commit": "c7be45bdce66aee49762430ba93d2fc361e3c4b5",
+    "verification": {
+      "verified_files": 37,
+      "max_reconciliation_error": 2.3283064365386963e-10,
+      "terms_mode": "legacy_static",
+      "verified_term_bindings": 0
+    },
+    "nav_sha256": "fee3d2382c1c315297c0eb51b203d36c19ca2b7e03a58c1bcf0a7f9c1d76ad8b",
+    "nav_bytes_equal": true,
+    "comparisons": {
+      "trades.csv": {
+        "rows": 13,
+        "fields": [
+          "order_id",
+          "fund_id",
+          "side",
+          "submitted",
+          "deal_date",
+          "confirmed",
+          "settle_date",
+          "unit_nav",
+          "shares",
+          "gross",
+          "fee"
+        ],
+        "all_values_equal": true
+      },
+      "orders.csv": {
+        "rows": 15,
+        "fields": [
+          "order_id",
+          "fund_id",
+          "side",
+          "submitted",
+          "deal_date",
+          "confirm_date",
+          "settle_date",
+          "amount",
+          "shares",
+          "status"
+        ],
+        "all_values_equal": true
+      }
+    }
+  },
+  "negative_cases": [
+    {
+      "case": "reject-original-duplicate",
+      "exit_code": 1,
+      "error": "ValueError: 订单order_id重复或归一后冲突：15与15",
+      "file_hashes_recalculated": true
+    },
+    {
+      "case": "reject-normalized-collision",
+      "exit_code": 1,
+      "error": "ValueError: 订单order_id重复或归一后冲突：15与015",
+      "file_hashes_recalculated": true
+    }
+  ],
+  "source_files": {
+    "calendar.csv": {
+      "sha256": "2c191a32973ee52c3ee0cb6086b33f8c296b66afa1aadf398a85483ba3f257a4",
+      "bytes": 15126,
+      "included_in_run_inputs": true
+    },
+    "dataset.json": {
+      "sha256": "d1bdb465953fd7af0a3bb1dd8907ec52b8766d165a5c17b767660d558227890d",
+      "bytes": 518,
+      "included_in_run_inputs": true
+    },
+    "distributions.csv": {
+      "sha256": "e7059a99e27066831d86af35625cf18d8a3d0e17edf491480e545f20b76cd11c",
+      "bytes": 50,
+      "included_in_run_inputs": true
+    },
+    "fund_terms.json": {
+      "sha256": "d4676d19c85a163f0b626f74f70f5b8ce3b986d1b8bc22ce8532c8bb5b93b9dc",
+      "bytes": 9017,
+      "included_in_run_inputs": true
+    },
+    "funds.json": {
+      "sha256": "f8400596ef7ac33ee4d3df8ee2352ae1e599c060e9aacf02bc5cb26e655be5e6",
+      "bytes": 973,
+      "included_in_run_inputs": true
+    },
+    "nav-import-example.xlsx": {
+      "sha256": "1c98afeefec8c39c38d3e3aaad21847238f55faad2122aa3fa8e447ffc371189",
+      "bytes": 5868,
+      "included_in_run_inputs": false
+    },
+    "nav.csv": {
+      "sha256": "bae633fef3b678ebf3b05d6851e68ec0f90d88b975239424bf8762f5b92652ef",
+      "bytes": 486894,
+      "included_in_run_inputs": true
+    }
+  },
+  "source_sha_size_mtime_and_set_unchanged": true,
+  "limits": [
+    "Real contracts, their historical completeness and known_at are not certified",
+    "Real distributions and purpose calendars need manual reconciliation",
+    "Name history, ETF execution, foreign currencies and PE/VC scope unchanged",
+    "No new Studio template or independent forward sample",
+    "Semantic report verification is not a complete replay of every strategy"
+  ]
+}
