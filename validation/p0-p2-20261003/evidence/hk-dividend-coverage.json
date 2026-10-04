@@ -1,0 +1,639 @@
+{
+  "schema": "puresaber.hk-dividend-coverage-acceptance/v1",
+  "as_of": "2026-10-04",
+  "status": "bounded_official_facts_and_index_bindings_verified",
+  "event_window": {
+    "start": "2025-07-01",
+    "end": "2026-09-25",
+    "inclusion_field": "ex_date"
+  },
+  "counts_by_symbol": {
+    "00005": 5,
+    "00700": 1,
+    "00939": 2,
+    "00941": 3,
+    "09988": 1
+  },
+  "completeness_boundaries": [
+    {
+      "symbol": "00005",
+      "status": "verified_within_official_history_boundary",
+      "candidate_basis": "HSBC官方分红历史页逐项列出区间内5次中期股息，并以HKEXnews逐日标题索引绑定宣告表格和FX公告。",
+      "events_found": 5,
+      "boundary": "核对范围为官方分红历史页与每个候选日期的HKEXnews索引；未以搜索无结果推导区间外或其他公司行动不存在。"
+    },
+    {
+      "symbol": "00700",
+      "status": "bounded_verified_by_issuer_results_and_hkex_dividend_index",
+      "candidate_basis": "腾讯官方业绩页与HKEXnews年度业绩、股息表格及股东大会投票结果链。",
+      "events_found": 1,
+      "boundary": "发行人未提供覆盖该区间的独立分红历史总表；完整性限于已核的官方业绩页和HKEXnews股息相关公告索引。"
+    },
+    {
+      "symbol": "00939",
+      "status": "verified_within_official_history_boundary",
+      "candidate_basis": "建设银行官方分红历史页列出2025中期及2025末期分红，并以HKEXnews宣告、批准、更新及币种/FX文件闭环。",
+      "events_found": 2,
+      "boundary": "中期事件除息在2025年、支付在2026年；按同一事件跨年关联。"
+    },
+    {
+      "symbol": "00941",
+      "status": "verified_within_issuer_announcement_index_boundary",
+      "candidate_basis": "中国移动2025及2026官方公告索引与HKEXnews股息表格、币种/税务公告及股东大会投票结果。",
+      "events_found": 3,
+      "boundary": "2026中期股息除息日在研究区间内，支付日在区间结束后，仍按纳入规则保留。"
+    },
+    {
+      "symbol": "09988",
+      "status": "bounded_verified_by_issuer_results_and_hkex_dividend_index",
+      "candidate_basis": "阿里巴巴官方财务业绩页与HKEXnews年度业绩、股息表格及派付安排公告。",
+      "events_found": 1,
+      "boundary": "发行人未提供覆盖该区间的独立分红历史总表；完整性限于已核的官方业绩页和HKEXnews股息相关公告索引。"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "00005-2025-second-interim",
+      "symbol": "00005",
+      "dividend_label": "2025 second interim dividend",
+      "declaration_date": "2025-07-30",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2025-08-14",
+      "record_date": "2025-08-15",
+      "payment_date": "2025-09-26",
+      "amount": {
+        "value": "0.10",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0730/2025073000187.pdf",
+          "sha256": "28d168c905bb38dab4060b96cc2a6bc15df885f479d6a7e60de7204715cfe1ca",
+          "bytes": 45644,
+          "publication_display": "30/07/2025 12:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0915/2025091501244.pdf",
+          "sha256": "c710f2f2691470ce6dbf4dbeb21f15d0f718114ab839434313776198bb30adcf",
+          "bytes": 71316,
+          "publication_display": "15/09/2025 20:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00005-2025-third-interim",
+      "symbol": "00005",
+      "dividend_label": "2025 third interim dividend",
+      "declaration_date": "2025-10-28",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2025-11-06",
+      "record_date": "2025-11-07",
+      "payment_date": "2025-12-18",
+      "amount": {
+        "value": "0.10",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1028/2025102800269.pdf",
+          "sha256": "794194fa5d4314ce355af7635ab059ed35878780e3a3d331a97df44dd688044e",
+          "bytes": 45610,
+          "publication_display": "28/10/2025 12:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1208/2025120801280.pdf",
+          "sha256": "b5612e2e6e9072fc8495ab979176d0450d4966cffb40f8bb70cc675f192a5cfe",
+          "bytes": 30903,
+          "publication_display": "08/12/2025 21:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00005-2025-fourth-interim",
+      "symbol": "00005",
+      "dividend_label": "2025 fourth interim dividend",
+      "declaration_date": "2026-02-25",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2026-03-12",
+      "record_date": "2026-03-13",
+      "payment_date": "2026-04-30",
+      "amount": {
+        "value": "0.45",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0225/2026022500113.pdf",
+          "sha256": "908170c3da19512c95665cf656e349da3b77de0b16ea9e37f7c1229ad75997a7",
+          "bytes": 45989,
+          "publication_display": "25/02/2026 12:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0420/2026042001342.pdf",
+          "sha256": "d476b2fe97d944c5c9043af3fad31830fc28455c17fbc6feca53f9b7442b521b",
+          "bytes": 266296,
+          "publication_display": "20/04/2026 19:47",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00005-2026-first-interim",
+      "symbol": "00005",
+      "dividend_label": "2026 first interim dividend",
+      "declaration_date": "2026-05-05",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2026-05-14",
+      "record_date": "2026-05-15",
+      "payment_date": "2026-06-26",
+      "amount": {
+        "value": "0.10",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0505/2026050500381.pdf",
+          "sha256": "d912d0d660d19201a9ee810e21a9ae03291605a5aca455b05d5d46dc1cc4537d",
+          "bytes": 45934,
+          "publication_display": "05/05/2026 12:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0615/2026061501395.pdf",
+          "sha256": "3043b29ca663b6547510232433e303e551376a833d6e94739445d5d87095af20",
+          "bytes": 119691,
+          "publication_display": "15/06/2026 20:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00005-2026-second-interim",
+      "symbol": "00005",
+      "dividend_label": "2026 second interim dividend",
+      "declaration_date": "2026-08-04",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2026-08-13",
+      "record_date": "2026-08-14",
+      "payment_date": "2026-09-25",
+      "amount": {
+        "value": "0.10",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0804/2026080400329.pdf",
+          "sha256": "acd818686d410fe3090b7f49f49b71e61cf6ad650adc046468d9018d0fefe7da",
+          "bytes": 46247,
+          "publication_display": "04/08/2026 12:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0914/2026091401135.pdf",
+          "sha256": "4a3cb0bd18aec8894d673a590e3a595ed369929d54fb9e6d6a128e3fa2207a81",
+          "bytes": 119459,
+          "publication_display": "14/09/2026 20:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00700-2025-final",
+      "symbol": "00700",
+      "dividend_label": "2025 final dividend",
+      "declaration_date": "2026-03-18",
+      "approval": {
+        "required": true,
+        "scheduled_date": "2026-05-13",
+        "actual_date": "2026-05-13",
+        "resolution": "final dividend",
+        "votes_for_percent": "99.997"
+      },
+      "ex_date": "2026-05-15",
+      "record_date": "2026-05-20",
+      "payment_date": "2026-06-01",
+      "amount": {
+        "value": "5.3",
+        "currency": "HKD",
+        "source_unit_quantity": 1,
+        "qualifier": "approved final dividend"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0318/2026031800476.pdf",
+          "sha256": "7a44eb6a5129dc994198bfc6cb6a403ce8c7eb984322cfda060e33121199414a",
+          "bytes": 42765,
+          "publication_display": "18/03/2026 16:33",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "approval",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0513/2026051301257.pdf",
+          "sha256": "e0afaf36daeabd6c1b8f86d9c009d98d3c57aec2f0dc3a75bdffcf411c177f8a",
+          "bytes": 117041,
+          "publication_display": "13/05/2026 20:58",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00939-2025-interim",
+      "symbol": "00939",
+      "dividend_label": "2025 interim dividend",
+      "declaration_date": "2025-08-29",
+      "approval": {
+        "required": true,
+        "scheduled_date": "2025-11-27",
+        "actual_date": "2025-11-27"
+      },
+      "ex_date": "2025-12-03",
+      "record_date": "2025-12-10",
+      "payment_date": "2026-01-26",
+      "amount": {
+        "value": "1.858",
+        "currency": "RMB",
+        "source_unit_quantity": 10,
+        "qualifier": "approved interim dividend"
+      },
+      "sources": [
+        {
+          "role": "initial_declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0829/2025082901755.pdf",
+          "sha256": "60d7287252760f1610a693f9aa22aaad8771c23bdaa7915582cd3a15f4fff848",
+          "bytes": 43621,
+          "publication_display": "29/08/2025 18:14",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "schedule_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1107/2025110701210.pdf",
+          "sha256": "e665e4f7178725159b1c5207e1917dcaff22ebd90f3b1f99e16bc5e92d0b95fc",
+          "bytes": 43876,
+          "publication_display": "07/11/2025 18:24",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "approval",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1127/2025112701230.pdf",
+          "sha256": "47542e7f981f81dbe18d47c1d4b54543807cd77586e02aa79273857f5abd30d1",
+          "bytes": 403331,
+          "publication_display": "27/11/2025 19:09",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_currency_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/1212/2025121200616.pdf",
+          "sha256": "b87daf59310e8b87293b715f57c8fe23a09157dce999cfbd6ef362e6e7d8c2c2",
+          "bytes": 46586,
+          "publication_display": "12/12/2025 16:47",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00939-2025-final",
+      "symbol": "00939",
+      "dividend_label": "2025 final dividend",
+      "declaration_date": "2026-03-27",
+      "approval": {
+        "required": true,
+        "scheduled_date": "2026-06-26",
+        "actual_date": "2026-06-26"
+      },
+      "ex_date": "2026-07-02",
+      "record_date": "2026-07-10",
+      "payment_date": "2026-08-21",
+      "amount": {
+        "value": "2.029",
+        "currency": "RMB",
+        "source_unit_quantity": 10,
+        "qualifier": "approved final dividend"
+      },
+      "sources": [
+        {
+          "role": "initial_declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0327/2026032702050.pdf",
+          "sha256": "80354be73f4b22b368be60bff62d0f2eea3d6f5b8e75b3fd27e0ef7d929f9d08",
+          "bytes": 43657,
+          "publication_display": "27/03/2026 19:34",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "approval",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062602467.pdf",
+          "sha256": "4ea63ea950bcf1672c387f36d726b0723da76d9653efb49b57981563169c668c",
+          "bytes": 350527,
+          "publication_display": "26/06/2026 21:33",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "updated_form",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0626/2026062602509.pdf",
+          "sha256": "44356875f95f53cc96fe9613ca9fd4f753a125e00b8521048127e56056f9a2b6",
+          "bytes": 46609,
+          "publication_display": "26/06/2026 21:42",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "fx_currency_update",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0713/2026071300584.pdf",
+          "sha256": "59776d9f98fc64d77818d93c11d004ccd6558d362e3523a940a9d2c19bd75c34",
+          "bytes": 46574,
+          "publication_display": "13/07/2026 17:59",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00941-2025-interim",
+      "symbol": "00941",
+      "dividend_label": "2025 interim dividend",
+      "declaration_date": "2025-08-07",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2025-09-01",
+      "record_date": "2025-09-05",
+      "payment_date": "2025-09-17",
+      "amount": {
+        "value": "2.75",
+        "currency": "HKD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared interim dividend"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0807/2025080700355.pdf",
+          "sha256": "5c555cea4b2144a7129b3ec9d06c1f2fcae210a1be197bfceca9345751700467",
+          "bytes": 45520,
+          "publication_display": "07/08/2025 16:31",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "tax_and_closure",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2025/0807/2025080700383.pdf",
+          "sha256": "85438e6c61a5ca60182b0d60415244dcdd28574b4c92ed6338419863898d2cec",
+          "bytes": 94803,
+          "publication_display": "07/08/2025 16:35",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00941-2025-final",
+      "symbol": "00941",
+      "dividend_label": "2025 final dividend",
+      "declaration_date": "2026-03-26",
+      "approval": {
+        "required": true,
+        "scheduled_date": "2026-05-21",
+        "actual_date": "2026-05-21",
+        "resolution": "profit distribution plan and final dividend",
+        "votes_for_percent": "99.9766"
+      },
+      "ex_date": "2026-06-05",
+      "record_date": "2026-06-11",
+      "payment_date": "2026-06-24",
+      "amount": {
+        "value": "2.52",
+        "currency": "HKD",
+        "source_unit_quantity": 1,
+        "qualifier": "approved final dividend"
+      },
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0326/2026032600488.pdf",
+          "sha256": "22b4da23cf996ffcb35dbe476afeb751bfb2896340df661c30da7c88581f654b",
+          "bytes": 45600,
+          "publication_display": "26/03/2026 16:30",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "approval",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0521/2026052101590.pdf",
+          "sha256": "307ea87219c7fb3b42fe68c4b8850a78669903076d8aba1071438026ba417823",
+          "bytes": 90356,
+          "publication_display": "21/05/2026 21:30",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "00941-2026-interim",
+      "symbol": "00941",
+      "dividend_label": "2026 interim dividend",
+      "declaration_date": "2026-08-13",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2026-08-25",
+      "record_date": "2026-08-31",
+      "payment_date": "2026-09-30",
+      "amount": {
+        "value": "2.51",
+        "currency": "RMB",
+        "source_unit_quantity": 1,
+        "qualifier": "declared interim dividend"
+      },
+      "payment_date_qualifier": "on_or_about; after event-window end",
+      "sources": [
+        {
+          "role": "initial_declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0813/2026081300280.pdf",
+          "sha256": "8cd9b65d65becd17bf18f33f0d9dfb060565bd33b0786855c2db9558f5a261e0",
+          "bytes": 45730,
+          "publication_display": "13/08/2026 16:31",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "currency_tax",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0813/2026081300300.pdf",
+          "sha256": "8ff6e5ec1477c08e396bc500de2f81b6dd8d5d248478d016311f4c26c0946c3f",
+          "bytes": 43445,
+          "publication_display": "13/08/2026 16:33",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "updated_form",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0814/2026081400069.pdf",
+          "sha256": "ae2b76abb0c668e33118103944bfc4f96160b772551b08828b8c724c3dd9a34d",
+          "bytes": 46372,
+          "publication_display": "14/08/2026 07:27",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    },
+    {
+      "event_id": "09988-fy2026-dividend",
+      "symbol": "09988",
+      "dividend_label": "FY2026 annual dividend",
+      "declaration_date": "2026-05-13",
+      "approval": {
+        "required": false,
+        "date": null
+      },
+      "ex_date": "2026-06-10",
+      "record_date": "2026-06-11",
+      "payment_date": "2026-07-06",
+      "amount": {
+        "value": "0.13125",
+        "currency": "USD",
+        "source_unit_quantity": 1,
+        "qualifier": "declared annual dividend"
+      },
+      "payment_date_qualifier": "on_or_about for ordinary shares; ADS payment on_or_about 2026-07-13",
+      "sources": [
+        {
+          "role": "declaration",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0513/2026051300763.pdf",
+          "sha256": "fc68a9c6bb9e18bd20b1b76c5928ac0db9ca9f6b074fd9068f8cf2cfad6fe7d5",
+          "bytes": 43022,
+          "publication_display": "13/05/2026 18:07",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        },
+        {
+          "role": "payment_logistics",
+          "official_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0528/2026052801168.pdf",
+          "sha256": "4b1621259e92c7aff29fa021e3786eb798cf27159316c225dcda3e06c38de367",
+          "bytes": 70190,
+          "publication_display": "28/05/2026 18:00",
+          "publication_precision": "minute",
+          "source_timezone_status": "unverified",
+          "historical_available_at": null
+        }
+      ]
+    }
+  ],
+  "source_manifest_sha256": "9a96a68c286a1e807f10c109c51e612891e5798ab4e19cb75f2e2f3e0fc1427c",
+  "coverage_sha256": "87d18f3a70b2d6d664a31db1fbb0b63ed8e6c74ed44d8f87e2f5f9a39a1c53dd",
+  "independent_checks": {
+    "files_checked": 69,
+    "new_raw_sources_including_one_excluded_body": 56,
+    "rendered_pages": 6,
+    "old_pdfs_reused": 7,
+    "same_row_index_bindings": 29,
+    "exact_file_sets_and_hashes_match": true,
+    "wrong_july_body_bound_to_june_excluded": true,
+    "june_and_july_correct_body_difference_checked": true
+  },
+  "budget": {
+    "limit_bytes": 5242880,
+    "new_evidence_bytes": 5176895,
+    "remaining_bytes": 65985
+  },
+  "excluded_source": {
+    "reason": "local_July_body_was_misbound_to_June_index",
+    "sha256": "59776d9f98fc64d77818d93c11d004ccd6558d362e3523a940a9d2c19bd75c34",
+    "scope": "Excluded as evidence for June publication; separately verified July body retains its own later publication binding."
+  },
+  "limits": {
+    "historical_timestamp_admission": "pending_timezone_and_precision_contract",
+    "actual_account_policy_or_payment_certified": false,
+    "executable_action_inputs_created": 0,
+    "new_market_backtests": 0,
+    "new_independent_forward_observations": 0,
+    "full_p0_3b_complete": false,
+    "full_p0_p2_complete": false
+  }
+}
