@@ -36,4 +36,4 @@
 
 在既有港股结果上实际检查桌面及390×844窄屏，表格右侧能通过键盘到达，页面没有横向溢出。查看前后100份既有结果文件的SHA-256均相同。没有新增市场数据、研究回测或自然前向观察；原生集成仅运行临时合成验证样例。
 
-Studio改动已推送为`d14f06a`并创建[草稿PR#21](https://github.com/PureSaber/quant-studio/pull/21)，没有合并主线。远端Linux/Windows单仓及固定上游集成检查正在运行，最终状态需依据该提交的检查结果，不能用本地通过替代远端结果。本页是当前维护范围与第一批证据，不是全部旧P0—P2完成声明。
+Studio改动已推送为`d14f06a17108c6a2db663efd80dc2c46f5840e88`并创建[草稿PR#21](https://github.com/PureSaber/quant-studio/pull/21)，没有合并主线。该提交的20项远端检查全部成功，包含Linux/Windows单仓、七个固定应用及择时集成；这仍不是全23仓最新组合认证。维护范围和证据通过[Notes草稿PR#68](https://github.com/PureSaber/quant-research-notes/pull/68)交付。本页不是全部旧P0—P2完成声明。
