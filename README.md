@@ -16,6 +16,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 | [轻量真实数据全栈验收规范](validation/light-market-data-20261003/STACK_POLICY.md) | 各市场小样本预算、异常注入、续跑与存储验收，以及尚未覆盖的业务范围 |
 | [当前P0—P2进展](validation/p0-p2-20261003/README.md) | 23仓能力、统一入口及历史验收；Studio十一模板工作台，真实业务缺口保留，当前工作范围见低频平台维护 |
 | [2026-10-06—07低频平台维护](validation/p0-p2-20261003/LOW_FREQUENCY_MAINTENANCE.md) | 当前以界面、低频时间及账本一致性、跨仓兼容和代码运维为重点；包含正式验收和逐步合并证据，完整纳秒链路列为可选兼容工作 |
+| [2026-10-07低频后续验收](validation/p0-p2-20261003/LOW_FREQUENCY_FOLLOW_THROUGH.md) | 依赖与文档维护、报告独立入口、四只真实公募13386条净值及分红修复；A股PIT、基金真实业务和新视觉缺口继续 |
 | [TECH_DEBT.md](TECH_DEBT.md) | Security / maintainability debt register |
 | [pitfalls.md](pitfalls.md) | Common backtest / ML mistakes |
 | [research-integrity-v1.md](research-integrity-v1.md) | PIT data, validation, run contract, risk and attribution standard |
@@ -28,7 +29,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 | [P2_GITHUB_METADATA_AND_LIFECYCLE.md](P2_GITHUB_METADATA_AND_LIFECYCLE.md) | 18仓GitHub元数据与deprecated shim归档证据 |
 | [experiment-log/](experiment-log/) | Short summaries of important runs |
 
-## Repo stack（2026-09）
+## Repo stack（2026-10）
 
 ```text
 currency-converter        → Python CLI warmup
@@ -36,7 +37,7 @@ sklearn-stock-trend       → supervised learning + walk-forward
 a-share-multifactor       → factor IC + quantile + retail backtest
 quant-hk-equity           → 港股日频探索性价格收益研究；真实数据与现金账本，未获可投资认证
 quant-us-equity           → 美股研究扩展（private），不属于既有M8认证范围
-quant-fund                → 基金研究、场外申赎与FOF监控；合成基金验收
+quant-fund                → 基金研究、场外申赎与FOF监控；软件及轻量真实净值验收，真实申赎继续
 quant-stat-arb            → 统计套利研究扩展（private），不属于既有M8认证范围
 quant-timing              → 指数仓位与风格择时；因果回放及样本外门禁
 quant-studio              → 本机研究模板页面；预览配置并显式执行上游CLI
