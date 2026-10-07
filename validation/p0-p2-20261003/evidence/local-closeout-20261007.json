@@ -1,0 +1,216 @@
+{
+  "schema_version": "quant.local-closeout/v1",
+  "checked_at": "2026-10-07T11:09:26.6826104Z",
+  "local_software_scope_complete": true,
+  "total_p0_p2_goal_complete": false,
+  "local_tests": {
+    "studio": 239,
+    "workspace_capabilities": 9,
+    "native_integration": 26
+  },
+  "applications": [
+    {
+      "repository": "quant-paper-sim",
+      "application_commit": "e414264a01f8c90f218e0c544d422e88db8051c6",
+      "native_integration_passed": 1,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "2d9853955a27280d9819f6c081d79da8aba57ce1b28d21ea2ebe51f9572eab1e",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "3ddaa5b01ab07eb2aed2867908fccf112526c4823b8442a3a71515493be3d5a4"
+    },
+    {
+      "repository": "quant-hk-equity",
+      "application_commit": "18cfe93a757e93e0c89875ceff9612350f989359",
+      "native_integration_passed": 4,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "cf81aa376434898700f4c8dc257670d09164b140e23d532d7aae13cef274655e",
+      "stack_lock_sha256": "3e97bec34bcac5afc5ea39a192044b63740e1ca627bcc116ac73106ec6bc53c6",
+      "installed_freeze_sha256": "38db0702b89793a5cf7446ab144d7f2345a6bee7347b58d0c7f5bfeaec2c2fd1"
+    },
+    {
+      "repository": "a-share-multifactor",
+      "application_commit": "6b799c3e4c2871153e399a62ba0b5e1e6c68fc99",
+      "native_integration_passed": 4,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "3c9fadaa19c9ffda60048782b7c105fa198c5c362aeb044746239f8f02e0d010",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "8723af8d55ef916d7698fdb4fc2564a61f54dcde5738f9c864b310279dfff3bd"
+    },
+    {
+      "repository": "quant-pipeline",
+      "application_commit": "b1fce90b85651248e9e60ae857b88fe4d170319e",
+      "native_integration_passed": 1,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "5009406271b1fde33aa0b3a092725b0e0846320cdbd46008a0472bee8a60dd8c",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "6e4fde31026b10aa431d53bddc277f850c9f3f16bcf5d0bab431d6a952ef8d77"
+    },
+    {
+      "repository": "quant-fund",
+      "application_commit": "c0f2c5bc8d52313705a8c07f3081490800693933",
+      "native_integration_passed": 1,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "26262b71df18bfc01345f5776f3d558b938df8b3fe03b6ec2344406a5d991397",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "1e15f4400116afa013f5b10e3517d774534fc1abf961353f85726a016f2eae75"
+    },
+    {
+      "repository": "quant-us-equity",
+      "application_commit": "49cb750b01ca26b9995a22e2ecb82329f84a7a48",
+      "native_integration_passed": 1,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "d3591d7cbba786f9b0519f8c118a312981338bd8309a88f296fabbaa5e1cbb8d",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "e6d83b6e5093743e3236d531bf52ddacee8a14f376ce597cb8132ecc93bc60c8"
+    },
+    {
+      "repository": "quant-futures-spread",
+      "application_commit": "314b889455166c39611285ddd72aa73ee451ec34",
+      "native_integration_passed": 1,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "0c36e98c738e61a0d07fe73dd922b67cf25db9ac3401edf53d04b504e3aae219",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "476bd20e7f0e9bb0b5954a50277484ea692ac952531a84e77a866b367cba2ccf"
+    },
+    {
+      "repository": "quant-crypto-basis",
+      "application_commit": "3b0e68aefe2a013b9c8f8e15b47078cf19c55b54",
+      "native_integration_passed": 4,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": "a57405b8e245bc4916e611350aa2187bc8b145fbe9302f4d93b59b2723ad89db",
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "0404acb057914760ec45bdf1b263e73ffd86212bdd12757d5366a589e3aff11c"
+    },
+    {
+      "repository": "quant-stat-arb",
+      "application_commit": "ae6c51447326f341fd7673f0497c5e2ca9379eb3",
+      "native_integration_passed": 2,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": null,
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "9220478b3f97603200d1995dbfa1c4f1163b4eec1c39570553319e3365366565"
+    },
+    {
+      "repository": "quant-timing",
+      "application_commit": "35058df73d079f951b5600154ee444ce66fe5fa6",
+      "native_integration_passed": 7,
+      "dependency_closure": "pass",
+      "requirements_lock_sha256": null,
+      "stack_lock_sha256": null,
+      "installed_freeze_sha256": "e28944ee10a0292b7a2e0c5863cfd120e4d492af77c8309ca009b79a04cef535"
+    }
+  ],
+  "studio_candidate": "e9cc989cd7372485c3a2bd6624e876cdf65383e3",
+  "configuration": {
+    "saved_and_restored": true,
+    "ready_templates": 10,
+    "total_templates": 11,
+    "missing_real_input_template": "a-share-four-factor",
+    "native_preflights": [
+      {
+        "template": "crypto-basis-fixture",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "fund-fof",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "futures-spread-fixture",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "hk-equity-daily",
+        "status": "checked",
+        "evidence_kind": null
+      },
+      {
+        "template": "paper-sim",
+        "status": "checked",
+        "evidence_kind": null
+      },
+      {
+        "template": "stat-arb-research",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "timing-counterfactual",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "timing-research",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      },
+      {
+        "template": "us-equity-research",
+        "status": "checked",
+        "evidence_kind": "synthetic"
+      }
+    ],
+    "profile_sha256": "df86b7b170040a37550e6026162bdc778606f128d82487ce3cb8caf1e097f88d"
+  },
+  "browser": {
+    "desktop": {
+      "viewport_width": 1280,
+      "document_width": 1265,
+      "scroll_width": 1265
+    },
+    "mobile": {
+      "viewport_width": 390,
+      "document_width": 375,
+      "scroll_width": 375
+    },
+    "ashare_missing_cache_status": "check_failed",
+    "failure_curves": 0,
+    "failure_iframes": 0,
+    "screenshots": [
+      {
+        "name": "ashare-missing-cache-mobile.jpg",
+        "sha256": "1a218dff60f2ccdfe2186a8c6dcaef0ecd564afa6282488550f8bb1afb07f87c"
+      },
+      {
+        "name": "environment-desktop.jpg",
+        "sha256": "1311530e599a26d680181bf8f2c7d971b6e7a6c2f65fd79c0d11eeb28495f727"
+      },
+      {
+        "name": "environment-mobile.jpg",
+        "sha256": "f29e166746ca4dee663cb8f453744f652959bf886007541794f04ae57204c6b9"
+      }
+    ]
+  },
+  "integrity": {
+    "existing_gui_files_unchanged": 30,
+    "new_input_files": 13,
+    "new_input_bytes": 460959,
+    "new_market_downloads": 0,
+    "frozen_environment_updated": false,
+    "new_natural_forward_observations": 0
+  },
+  "etf_automation_status": "PAUSED",
+  "latest_23_repo_single_runtime_certified": false,
+  "deferred": [
+    "complete_real_ashare_pit",
+    "real_fund_terms_entitlement_settlement",
+    "other_assets_real_business_evidence",
+    "real_quotes_cost_borrow_calibration",
+    "full_barra_wide_pit",
+    "independent_large_archive",
+    "authorized_domestic_l2",
+    "crypto_eight_streams_30_days",
+    "paused_natural_forward",
+    "host_iframe_mutation_observer",
+    "optional_full_nanosecond_chain"
+  ],
+  "pull_requests": [
+    "https://github.com/PureSaber/quant-studio/pull/24",
+    "https://github.com/PureSaber/quant-us-equity/pull/6",
+    "https://github.com/PureSaber/quant-stat-arb/pull/6",
+    "https://github.com/PureSaber/quant-workspace/pull/50"
+  ]
+}
