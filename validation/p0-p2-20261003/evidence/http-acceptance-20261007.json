@@ -1,0 +1,36 @@
+{
+  "checked_at": "2026-10-07T04:36:18.3961889Z",
+  "results": [
+    {
+      "has_ledger_badge": true,
+      "has_diagnostic": false,
+      "run": "verified-paper-fixture",
+      "has_iframe": false,
+      "frame_policy": "DENY",
+      "has_direct_report": false,
+      "http": 200
+    },
+    {
+      "has_ledger_badge": false,
+      "has_diagnostic": true,
+      "run": "interrupted",
+      "has_iframe": false,
+      "frame_policy": "DENY",
+      "has_direct_report": false,
+      "http": 200
+    },
+    {
+      "report_http": 200,
+      "has_iframe": true,
+      "report_frame_policy": "SAMEORIGIN",
+      "has_ledger_badge": false,
+      "has_diagnostic": false,
+      "http": 200,
+      "has_direct_report": true,
+      "run": "0cbc1c4c420a4e09a42a8e1a37f93d89",
+      "frame_policy": "DENY"
+    }
+  ],
+  "visual_inspection_completed": false,
+  "saved_files_unchanged": 30
+}

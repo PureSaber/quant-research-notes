@@ -1,0 +1,11 @@
+{
+  "checked_at": "2026-10-07T04:30:58.658546+00:00",
+  "source": "AKShare stock_value_em via QDK public provider",
+  "rows": 21,
+  "known_available_at": 0,
+  "basis": [
+    "unknown"
+  ],
+  "historical_pit_accepted": false,
+  "scope": "single-stock source availability probe, not HS300 cache or four-factor acceptance"
+}

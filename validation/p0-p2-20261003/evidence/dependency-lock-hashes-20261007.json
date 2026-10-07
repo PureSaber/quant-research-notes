@@ -1,0 +1,34 @@
+{
+  "attrs": {
+    "version": "26.1.0",
+    "verified_sha256": 2
+  },
+  "coverage": {
+    "version": "7.16.2",
+    "verified_sha256": 121
+  },
+  "jsonschema": {
+    "version": "4.26.0",
+    "verified_sha256": 2
+  },
+  "jsonschema-specifications": {
+    "version": "2025.9.1",
+    "verified_sha256": 2
+  },
+  "referencing": {
+    "version": "0.37.0",
+    "verified_sha256": 2
+  },
+  "rpds-py": {
+    "version": "0.30.0",
+    "verified_sha256": 115
+  },
+  "ruff": {
+    "version": "0.16.10",
+    "verified_sha256": 18
+  },
+  "typing-extensions": {
+    "version": "4.16.0",
+    "verified_sha256": 2
+  }
+}

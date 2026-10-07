@@ -1,0 +1,560 @@
+{
+  "checked_at": "2026-10-07T04:59:18.0295515Z",
+  "scope": "Affected repository default branch checks before the acceptance-document PR",
+  "repositories": [
+    {
+      "repo": "quant-agent",
+      "branch": "master",
+      "commit": "97d2dd35047c6996f4d236e1f73c2e0428e0be13",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/37571719231/job/112631620458"
+        },
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/37571719203/job/112631620194"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/37571719203/job/112631620028"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/37571719203/job/112631619941"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-crypto-basis",
+      "branch": "main",
+      "commit": "3b0e68aefe2a013b9c8f8e15b47078cf19c55b54",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-crypto-basis/actions/runs/37569078814/job/112623401015"
+        },
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-crypto-basis/actions/runs/37569078929/job/112623401222"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-crypto-basis/actions/runs/37569078929/job/112623401281"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-crypto-basis/actions/runs/37569078929/job/112623401059"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-report-hub",
+      "branch": "main",
+      "commit": "dda4149433bee80e1fc1ff80c3f3e40477f9c0ee",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/37571691455/job/112631534621"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/37571691432/job/112631534387"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/37571691455/job/112631534865"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/37571691455/job/112631534833"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-paper-sim",
+      "branch": "main",
+      "commit": "e414264a01f8c90f218e0c544d422e88db8051c6",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-paper-sim/actions/runs/37571708997/job/112631587861"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-paper-sim/actions/runs/37571708984/job/112631587848"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-paper-sim/actions/runs/37571708997/job/112631587732"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-paper-sim/actions/runs/37571708997/job/112631587873"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-portfolio",
+      "branch": "main",
+      "commit": "1fccf3d6228a6882d7472ae7efe2f8eb4358c8bb",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/37571697216/job/112631551328"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/37571697254/job/112631551447"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/37571697216/job/112631551393"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/37571697216/job/112631551131"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-futures-spread",
+      "branch": "main",
+      "commit": "314b889455166c39611285ddd72aa73ee451ec34",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-futures-spread/actions/runs/37569086959/job/112623425310"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-futures-spread/actions/runs/37569087009/job/112623425884"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-futures-spread/actions/runs/37569086959/job/112623425484"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-futures-spread/actions/runs/37569086959/job/112623425477"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-execution",
+      "branch": "main",
+      "commit": "624e6d0fc9da157bcdc087756c0d9c647625385f",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/37571343545/job/112630453386"
+        },
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/37571343550/job/112630453375"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/37571343550/job/112630453244"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/37571343550/job/112630453374"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-risk-monitor",
+      "branch": "main",
+      "commit": "df4b2eb05a71bde150d6b89a85cc1c085e17e2cb",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/37571703247/job/112631569504"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/37571703213/job/112631569640"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/37571703247/job/112631569777"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/37571703247/job/112631569778"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-research-notes",
+      "branch": "main",
+      "commit": "4d5476a786cbedaa065ecccd6b7ef2a5c9a0a847",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011099/job/112632515515"
+        },
+        {
+          "name": "m8-release-manifest (ubuntu-24.04)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011089/job/112632515169"
+        },
+        {
+          "name": "m8-release-manifest (windows-latest)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011089/job/112632514949"
+        },
+        {
+          "name": "m8-contracts (3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011089/job/112632515112"
+        },
+        {
+          "name": "m8-contracts (3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011089/job/112632515175"
+        },
+        {
+          "name": "m8-contracts (3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-research-notes/actions/runs/37572011089/job/112632515143"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-fund",
+      "branch": "main",
+      "commit": "59c4716ab610156ad9eb98a785178f9661fa35a5",
+      "checks": [
+        {
+          "name": "test (ubuntu-24.04, py3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-fund/actions/runs/37572005281/job/112632496756"
+        },
+        {
+          "name": "test (windows-latest, py3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-fund/actions/runs/37572005281/job/112632496927"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-studio",
+      "branch": "main",
+      "commit": "98cbc590bfb6bd5cc20d41132073a570290565e7",
+      "checks": [
+        {
+          "name": "integration (ubuntu-24.04, quant-paper-sim, 55cfa0f8f12cc5419dfad664a644c5c29233ab23, paper)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604170"
+        },
+        {
+          "name": "test (ubuntu-24.04)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714271/job/112631603667"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604207"
+        },
+        {
+          "name": "test (windows-latest)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714271/job/112631603356"
+        },
+        {
+          "name": "integration (ubuntu-24.04, a-share-multifactor, 3c48cd28d056b6dad36fbc0041408c010912a20d, ashare)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604226"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604258"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-fund, ad7cffe867ae319ab546acb06f0aa32ded9e6542, fund)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604194"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-futures-spread, f01d6afd87ca0556d6e2f44e522cfecbf00cad56, futures)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604293"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-crypto-basis, 02acfeb6227d8f61243b908846592af4e5b70365, crypto)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604252"
+        },
+        {
+          "name": "integration (windows-latest, quant-paper-sim, 55cfa0f8f12cc5419dfad664a644c5c29233ab23, paper)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604238"
+        },
+        {
+          "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604005"
+        },
+        {
+          "name": "integration (windows-latest, a-share-multifactor, 3c48cd28d056b6dad36fbc0041408c010912a20d, ashare)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604261"
+        },
+        {
+          "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604271"
+        },
+        {
+          "name": "integration (windows-latest, quant-fund, ad7cffe867ae319ab546acb06f0aa32ded9e6542, fund)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604296"
+        },
+        {
+          "name": "integration (windows-latest, quant-futures-spread, f01d6afd87ca0556d6e2f44e522cfecbf00cad56, futu...",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604210"
+        },
+        {
+          "name": "integration (windows-latest, quant-crypto-basis, 02acfeb6227d8f61243b908846592af4e5b70365, crypto)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631603994"
+        },
+        {
+          "name": "timing (ubuntu-24.04)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631603768"
+        },
+        {
+          "name": "timing (windows-latest)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/37571714324/job/112631604116"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "quant-infra-workspace",
+      "branch": "main",
+      "commit": "2aa72dbf18cd9c31ae4f779dbd6f57733374b3ba",
+      "checks": [
+        {
+          "name": "stack-static",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631636638"
+        },
+        {
+          "name": "stack-linux-dev-py3.10",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920368"
+        },
+        {
+          "name": "stack-linux-dev-py3.11",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920299"
+        },
+        {
+          "name": "stack-linux-dev-py3.12",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920335"
+        },
+        {
+          "name": "stack-linux-release-py3.10",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920258"
+        },
+        {
+          "name": "stack-linux-release-py3.11",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920378"
+        },
+        {
+          "name": "stack-linux-release-py3.12",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920330"
+        },
+        {
+          "name": "stack-windows-dev-py3.11",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920172"
+        },
+        {
+          "name": "stack-windows-release-py3.11",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112631920212"
+        },
+        {
+          "name": "stack-health-required",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/quant-infra-workspace/actions/runs/37571724289/job/112632181232"
+        }
+      ],
+      "more_checks": false
+    },
+    {
+      "repo": "a-share-multifactor",
+      "branch": "main",
+      "commit": "6b799c3e4c2871153e399a62ba0b5e1e6c68fc99",
+      "checks": [
+        {
+          "name": "test (ubuntu-latest, 3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636497873"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286892/job/112636498375"
+        },
+        {
+          "name": "test (ubuntu-latest, 3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636497999"
+        },
+        {
+          "name": "test (ubuntu-latest, 3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636497989"
+        },
+        {
+          "name": "test (windows-latest, 3.10)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636498062"
+        },
+        {
+          "name": "test (windows-latest, 3.11)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636497948"
+        },
+        {
+          "name": "test (windows-latest, 3.12)",
+          "conclusion": "SUCCESS",
+          "status": "COMPLETED",
+          "detailsUrl": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37573286921/job/112636498025"
+        }
+      ],
+      "more_checks": false
+    }
+  ]
+}

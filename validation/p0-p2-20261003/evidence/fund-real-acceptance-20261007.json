@@ -1,0 +1,98 @@
+{
+  "schema_version": "quant.real-fund-acceptance/v2",
+  "checked_at": "2026-10-07T04:30:45.324737+00:00",
+  "status": "real_public_nav_and_reinvestment_checks_passed_business_acceptance_incomplete",
+  "rows": 13386,
+  "samples": [
+    {
+      "code": "110022",
+      "rows": 3897,
+      "first": "2010-08-20",
+      "last": "2026-09-30",
+      "known_at": "2026-10-07",
+      "independent_share_reinvestment_check": "pass",
+      "max_relative_error": "2.424242424242424242424242E-16",
+      "distribution_rows": 0,
+      "ex_dividend_regressions": []
+    },
+    {
+      "code": "000309",
+      "rows": 3106,
+      "first": "2013-10-29",
+      "last": "2026-09-30",
+      "known_at": "2026-10-07",
+      "independent_share_reinvestment_check": "pass",
+      "max_relative_error": "1.154734411085450346420323E-16",
+      "distribution_rows": 0,
+      "ex_dividend_regressions": []
+    },
+    {
+      "code": "000191",
+      "rows": 3201,
+      "first": "2013-06-25",
+      "last": "2026-09-30",
+      "known_at": "2026-10-07",
+      "independent_share_reinvestment_check": "pass",
+      "max_relative_error": "2.771571820042742005769364E-16",
+      "distribution_rows": 46,
+      "ex_dividend_regressions": [
+        {
+          "date": "2014-12-16",
+          "old_growth_percent": "-1.1707",
+          "reinvested_return": "-0.0009756097560976858177012520",
+          "cash_per_share": "0.0110"
+        },
+        {
+          "date": "2015-02-16",
+          "old_growth_percent": "-1.4423",
+          "reinvested_return": "0",
+          "cash_per_share": "0.0150"
+        }
+      ]
+    },
+    {
+      "code": "000171",
+      "rows": 3182,
+      "first": "2013-08-23",
+      "last": "2026-09-30",
+      "known_at": "2026-10-07",
+      "independent_share_reinvestment_check": "pass",
+      "max_relative_error": "2.902278025641430757320353E-16",
+      "distribution_rows": 2,
+      "ex_dividend_regressions": []
+    }
+  ],
+  "files": {
+    "000171.csv": "3342c57cc1fd710bed933d73aea50ee9d90c39ec2c8627569b482a27cf0370e9",
+    "000171.cumulative.raw.csv": "366a58238172a1178109a8054d4626bcfc1425bf0dec4d47949bbe38d02f3eb1",
+    "000171.dividends.raw.csv": "c19d74e46e490e48241ce62713f8d84cc41df1863c67cba726cf7cf880df4f9a",
+    "000171.raw.csv": "db8eb1d6bf266077f1b4c20a73d992d3e2324ba3df15bcd3b7f953e5d1873574",
+    "000171.splits.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "000191.csv": "168bf9c0dac8edf7c1f65409a8a2d89e1f5e568bdbc4d3f2ef69369c95e28e84",
+    "000191.cumulative.raw.csv": "9ee61415b777501846a98afe13aeb5ff4d7690d767a95a3dd0ad3da67c361ad2",
+    "000191.dividends.raw.csv": "3fd169b9142e1e2c6f33577a2b37eb301cc0de23b2cd49b62b7901c1bfee1cc2",
+    "000191.raw.csv": "1846e5603702e055924d2e4a5a0da3e5e6c0fec11f1c1aaa37f285715d1ab13a",
+    "000191.splits.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "000309.csv": "d66e85e0304ce9ebcbc6c8f055c7d4674ba6b21b9714c26b1232d40ab46bbf82",
+    "000309.cumulative.raw.csv": "dfa451930a234ccba0bab3e05a11647cc29df90bbd68c37fb2f7af9b895c80a7",
+    "000309.dividends.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "000309.raw.csv": "6afa6e38e73df76cfbb174f462fa2b896f78ab5b183762d58a705927165c9a0f",
+    "000309.splits.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "110022.csv": "ad681a062786eccd7aa8f0e2bd4819075de9d0763870f6c6425d3412667da5f7",
+    "110022.cumulative.raw.csv": "d8c7be10eac2c25843829a622d8b4e0f95a2932aa3ae960e61a5af75010ba1e9",
+    "110022.dividends.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "110022.raw.csv": "3940c1325ee471c206d19a9ee808397ee4a5cee25663af07ee26b6132766a2fc",
+    "110022.splits.raw.csv": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6",
+    "export.csv": "5adc008e466ab739d0c21c3c5dc7473988ceca75d33acd32a437c6aeea0d07f4"
+  },
+  "limitations": [
+    "Current capture is known on 2026-10-07, not historic PIT",
+    "Research reinvestment at ex-date NAV does not model cash payment or account entitlement",
+    "Verified historical terms, announcement knowledge dates and purpose calendars are incomplete"
+  ],
+  "database_export_match": "pass",
+  "duplicate_import_new_rows": 0,
+  "old_snapshot_conflict_rejected": true,
+  "conflict_database_unchanged": true,
+  "conflict_reason": "历史版本冲突，已回滚本次导入：('000191', '2013-06-25', '2026-10-07')"
+}

@@ -1,0 +1,200 @@
+{
+  "checked_at": "2026-10-07T04:50:19.7173535Z",
+  "prs": [
+    {
+      "repo": "quant-agent",
+      "pr": {
+        "number": 13,
+        "url": "https://github.com/PureSaber/quant-agent/pull/13",
+        "state": "MERGED",
+        "headRefOid": "eeb3a2793013d6ee480b7dc18976f82c7e701f40",
+        "mergedAt": "2026-10-07T04:24:52Z",
+        "mergeCommit": {
+          "oid": "5594792f6567e34a12e6340a81bf9ae3bdaf8c9a"
+        }
+      }
+    },
+    {
+      "repo": "quant-crypto-basis",
+      "pr": {
+        "number": 11,
+        "url": "https://github.com/PureSaber/quant-crypto-basis/pull/11",
+        "state": "MERGED",
+        "headRefOid": "3ab71656c0187455be618ff50db50be2e3a42f19",
+        "mergedAt": "2026-10-07T03:56:27Z",
+        "mergeCommit": {
+          "oid": "3b0e68aefe2a013b9c8f8e15b47078cf19c55b54"
+        }
+      }
+    },
+    {
+      "repo": "quant-report-hub",
+      "pr": {
+        "number": 28,
+        "url": "https://github.com/PureSaber/quant-report-hub/pull/28",
+        "state": "MERGED",
+        "headRefOid": "e94bb49150b42578bf31592f898ec4497ef51b58",
+        "mergedAt": "2026-10-07T04:29:16Z",
+        "mergeCommit": {
+          "oid": "dda4149433bee80e1fc1ff80c3f3e40477f9c0ee"
+        }
+      }
+    },
+    {
+      "repo": "quant-paper-sim",
+      "pr": {
+        "number": 11,
+        "url": "https://github.com/PureSaber/quant-paper-sim/pull/11",
+        "state": "MERGED",
+        "headRefOid": "ea0e7bd8347f28b43a27d41736571ccec0d75fc6",
+        "mergedAt": "2026-10-07T04:01:22Z",
+        "mergeCommit": {
+          "oid": "5719bc4f1887b7f25bdd65609a382703c7032670"
+        }
+      }
+    },
+    {
+      "repo": "quant-paper-sim",
+      "pr": {
+        "number": 10,
+        "url": "https://github.com/PureSaber/quant-paper-sim/pull/10",
+        "state": "MERGED",
+        "headRefOid": "53d59187327e6e926874b9a0ac07449864453017",
+        "mergedAt": "2026-10-07T04:29:29Z",
+        "mergeCommit": {
+          "oid": "e414264a01f8c90f218e0c544d422e88db8051c6"
+        }
+      }
+    },
+    {
+      "repo": "quant-portfolio",
+      "pr": {
+        "number": 22,
+        "url": "https://github.com/PureSaber/quant-portfolio/pull/22",
+        "state": "MERGED",
+        "headRefOid": "2e0c48d6d433996b7e04c1f1de15bef87bbc1800",
+        "mergedAt": "2026-10-07T04:29:20Z",
+        "mergeCommit": {
+          "oid": "1fccf3d6228a6882d7472ae7efe2f8eb4358c8bb"
+        }
+      }
+    },
+    {
+      "repo": "quant-futures-spread",
+      "pr": {
+        "number": 14,
+        "url": "https://github.com/PureSaber/quant-futures-spread/pull/14",
+        "state": "MERGED",
+        "headRefOid": "f085af897bbd48dfbabd793923aa8453cd3df440",
+        "mergedAt": "2026-10-07T03:56:33Z",
+        "mergeCommit": {
+          "oid": "314b889455166c39611285ddd72aa73ee451ec34"
+        }
+      }
+    },
+    {
+      "repo": "quant-execution",
+      "pr": {
+        "number": 25,
+        "url": "https://github.com/PureSaber/quant-execution/pull/25",
+        "state": "MERGED",
+        "headRefOid": "3577d351735b7056a87a2fbbb11c655a61368916",
+        "mergedAt": "2026-10-07T04:24:57Z",
+        "mergeCommit": {
+          "oid": "624e6d0fc9da157bcdc087756c0d9c647625385f"
+        }
+      }
+    },
+    {
+      "repo": "quant-risk-monitor",
+      "pr": {
+        "number": 18,
+        "url": "https://github.com/PureSaber/quant-risk-monitor/pull/18",
+        "state": "MERGED",
+        "headRefOid": "05b98b831eba52a6ead8991830b6442bc963e73a",
+        "mergedAt": "2026-10-07T04:29:25Z",
+        "mergeCommit": {
+          "oid": "df4b2eb05a71bde150d6b89a85cc1c085e17e2cb"
+        }
+      }
+    },
+    {
+      "repo": "quant-research-notes",
+      "pr": {
+        "number": 67,
+        "url": "https://github.com/PureSaber/quant-research-notes/pull/67",
+        "state": "MERGED",
+        "headRefOid": "035aa48b81129d7bce366a8eebeed03ae63c6e39",
+        "mergedAt": "2026-10-07T04:33:11Z",
+        "mergeCommit": {
+          "oid": "4d5476a786cbedaa065ecccd6b7ef2a5c9a0a847"
+        }
+      }
+    },
+    {
+      "repo": "quant-studio",
+      "pr": {
+        "number": 22,
+        "url": "https://github.com/PureSaber/quant-studio/pull/22",
+        "state": "MERGED",
+        "headRefOid": "9918f6090087685fa09e08eb3b5f3ed5cb2f3a2a",
+        "mergedAt": "2026-10-07T04:29:33Z",
+        "mergeCommit": {
+          "oid": "98cbc590bfb6bd5cc20d41132073a570290565e7"
+        }
+      }
+    },
+    {
+      "repo": "quant-fund",
+      "pr": {
+        "number": 11,
+        "url": "https://github.com/PureSaber/quant-fund/pull/11",
+        "state": "MERGED",
+        "headRefOid": "b4d6b8b17920d3101804a6061acef8c689a009d2",
+        "mergedAt": "2026-10-07T04:33:07Z",
+        "mergeCommit": {
+          "oid": "59c4716ab610156ad9eb98a785178f9661fa35a5"
+        }
+      }
+    },
+    {
+      "repo": "quant-agent",
+      "pr": {
+        "number": 14,
+        "url": "https://github.com/PureSaber/quant-agent/pull/14",
+        "state": "MERGED",
+        "headRefOid": "d7a23a8e632b77fe153b491fb58370e17c9d6069",
+        "mergedAt": "2026-10-07T04:29:37Z",
+        "mergeCommit": {
+          "oid": "97d2dd35047c6996f4d236e1f73c2e0428e0be13"
+        }
+      }
+    },
+    {
+      "repo": "quant-infra-workspace",
+      "pr": {
+        "number": 6,
+        "url": "https://github.com/PureSaber/quant-infra-workspace/pull/6",
+        "state": "MERGED",
+        "headRefOid": "20cc3cb7a2f3292ebec427c4f58faf2b72972cfb",
+        "mergedAt": "2026-10-07T04:29:41Z",
+        "mergeCommit": {
+          "oid": "2aa72dbf18cd9c31ae4f779dbd6f57733374b3ba"
+        }
+      }
+    },
+    {
+      "repo": "a-share-multifactor",
+      "pr": {
+        "number": 27,
+        "url": "https://github.com/PureSaber/a-share-multifactor/pull/27",
+        "state": "MERGED",
+        "headRefOid": "0ddefeaf47a6cfaa3c1ecec8d9dc7a88d667f540",
+        "mergedAt": "2026-10-07T04:49:13Z",
+        "mergeCommit": {
+          "oid": "6b799c3e4c2871153e399a62ba0b5e1e6c68fc99"
+        }
+      }
+    }
+  ]
+}

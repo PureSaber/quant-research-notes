@@ -1,0 +1,45 @@
+{
+  "schema_version": "quant.low-frequency-maintenance/v1",
+  "date": "2026-10-07",
+  "total_p0_p2_goal_complete": false,
+  "local_tests": {
+    "quant_fund": 93,
+    "quant_studio": 234,
+    "notes_unittest": 14
+  },
+  "real_public_funds": {
+    "samples": 4,
+    "rows": 13386,
+    "independent_share_reinvestment_check": "pass",
+    "database_export_check": "pass",
+    "duplicate_import_new_rows": 0,
+    "old_snapshot_conflict_rejected": true,
+    "historical_business_acceptance": "incomplete"
+  },
+  "ashare_probe": {
+    "rows": 21,
+    "known_available_at": 0,
+    "historical_pit_accepted": false,
+    "complete_real_cache_accepted": false
+  },
+  "ui": {
+    "native_report_direct_link": "implemented",
+    "http_flow": "pass",
+    "new_visual_acceptance": "incomplete",
+    "host_mutation_observer_cause_confirmed": false
+  },
+  "dependency_prs": 10,
+  "dependency_lock_official_sha256_verified": 264,
+  "latest_23_repo_runtime_combination_certified": false,
+  "etf_automation_status": "PAUSED",
+  "new_natural_forward_observations": 0,
+  "frozen_research_environments_updated": false,
+  "deferred": [
+    "full_nanosecond_consumer_chain",
+    "crypto_eight_streams_30_days",
+    "independent_large_archive",
+    "authorized_domestic_l2",
+    "full_barra_model",
+    "live_broker_execution"
+  ]
+}
