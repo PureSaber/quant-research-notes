@@ -1,0 +1,461 @@
+{
+  "schema": "quant-notes.browser-ui-acceptance/v1",
+  "date": "2026-10-07",
+  "status": "ui-and-report-operation-pass; embedded-host-error-unresolved",
+  "browser": "Codex In-app Browser",
+  "scope": "new synthetic fund demo and saved local fixtures",
+  "source_commits": {
+    "fund": "6efdd6c81762716b1e70e3240042d1105edc8f52",
+    "studio": "d7728dcee73c176916cd794e4200fc8c910fa70f"
+  },
+  "pull_requests": {
+    "fund": "https://github.com/PureSaber/quant-fund/pull/12",
+    "studio": "https://github.com/PureSaber/quant-studio/pull/23"
+  },
+  "runs": {
+    "classification": "synthetic",
+    "final": "78ee45fcef7543c5aecdc0dcf1c6cee1",
+    "preflight": "32a4064d9a6248bda93917f30a587b76",
+    "before_report_fix": "5e92b5fbf5ec45a388710263b12f5ad9",
+    "end": "2026-08-31",
+    "start": "2026-07-01",
+    "input_sha256": "31b6642a7260c4281960bc6d2c3d48d7f04da52696ea2b60d773585ea8055271",
+    "preflight_rows": 5207,
+    "preflight_funds": 7
+  },
+  "verification": {
+    "verified_files": 51,
+    "max_reconciliation_error": 2.3283064365386963E-10,
+    "terms_mode": "historical_pit",
+    "verified_term_bindings": 9,
+    "verified_ledger_days": 44,
+    "verified_ledger_orders": 9,
+    "ledger_replay": "pass"
+  },
+  "report_sha256": "aa17893399e5f50a0082bddd3d3e0ac9c33417152ed7dcb32cc452758d07eccb",
+  "layout": {
+    "fundStudioMobile": {
+      "documentWidth": 375,
+      "scrollWidth": 375,
+      "tables": [
+        {
+          "label": "持仓",
+          "scrollWidth": 2214,
+          "width": 285
+        },
+        {
+          "label": "委托",
+          "scrollWidth": 2070,
+          "width": 285
+        },
+        {
+          "label": "成交",
+          "scrollWidth": 2383,
+          "width": 285
+        }
+      ],
+      "viewport": 390
+    },
+    "fundReportMobile": {
+      "chartWidth": 343,
+      "documentWidth": 375,
+      "scrollWidth": 375,
+      "tables": [
+        {
+          "label": "期末持仓",
+          "scrollWidth": 1525,
+          "width": 343
+        },
+        {
+          "label": "监控提示",
+          "scrollWidth": 513,
+          "width": 343
+        },
+        {
+          "label": "流动性日历",
+          "scrollWidth": 1240,
+          "width": 343
+        },
+        {
+          "label": "调仓差额复核清单（非下单指令）",
+          "scrollWidth": 1321,
+          "width": 343
+        },
+        {
+          "label": "决策记录",
+          "scrollWidth": 2327,
+          "width": 343
+        }
+      ],
+      "viewport": 390,
+      "viewportMeta": "width=device-width, initial-scale=1"
+    },
+    "freshDirectMobile": {
+      "chartWidth": 343,
+      "documentWidth": 375,
+      "scrollWidth": 375,
+      "viewport": 390
+    },
+    "freshDirectLogs": [],
+    "zoomedTicks": [
+      "1.011.021.0061.0081.0121.0141.0161.018"
+    ],
+    "restoredTicks": [
+      "1.011.0211.0051.0151.025"
+    ]
+  },
+  "before_mobile": {
+    "document_width": 375,
+    "viewport": 390,
+    "scroll_width": 1500
+  },
+  "host_diagnostic": {
+    "static_parent_scripts": 0,
+    "static_direct_child_scripts": 0,
+    "source_or_stack_available": false,
+    "logs": {
+      "embedded": [
+        {
+          "level": "error",
+          "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+          "timestamp": "2026-10-07T09:27:15.942Z"
+        }
+      ],
+      "direct": [],
+      "staticEmbedded": [
+        {
+          "level": "error",
+          "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+          "timestamp": "2026-10-07T09:29:17.233Z"
+        }
+      ],
+      "staticDirect": []
+    }
+  },
+  "local_tests": {
+    "format": "pass",
+    "studio": 234,
+    "fund": 93,
+    "ruff": "pass"
+  },
+  "economic_outputs": [
+    {
+      "file": "nav.csv",
+      "before": "42b980fc1d88530b27e93afc50a08775286e48210c31d5f31724974e5975dcc6",
+      "after": "42b980fc1d88530b27e93afc50a08775286e48210c31d5f31724974e5975dcc6",
+      "same": true
+    },
+    {
+      "file": "orders.csv",
+      "before": "0bfb3275640de5817d6f47b56e6b092c06a5b852988cef805b00958dbd286772",
+      "after": "0bfb3275640de5817d6f47b56e6b092c06a5b852988cef805b00958dbd286772",
+      "same": true
+    },
+    {
+      "file": "trades.csv",
+      "before": "fd1512286587b2fd1318e9084e715cb76cbb12fa65a9fc08ef66dccae20176ba",
+      "after": "fd1512286587b2fd1318e9084e715cb76cbb12fa65a9fc08ef66dccae20176ba",
+      "same": true
+    },
+    {
+      "file": "holdings.csv",
+      "before": "4c817dde9263890c75946bb662ed5858c9b6f53b72e6c5bfb443c5a75f50fc53",
+      "after": "4c817dde9263890c75946bb662ed5858c9b6f53b72e6c5bfb443c5a75f50fc53",
+      "same": true
+    },
+    {
+      "file": "lots.csv",
+      "before": "d8ffb4823e2f6d929f1bc59ceb1fc3ae97c5093d001a2e7c810fe23eab9d04e8",
+      "after": "d8ffb4823e2f6d929f1bc59ceb1fc3ae97c5093d001a2e7c810fe23eab9d04e8",
+      "same": true
+    },
+    {
+      "file": "events.csv",
+      "before": "55a2b2d9825fae892183a1daf6035f3f59748bae6c51e411e47bd1dbc2673fef",
+      "after": "55a2b2d9825fae892183a1daf6035f3f59748bae6c51e411e47bd1dbc2673fef",
+      "same": true
+    },
+    {
+      "file": "metrics.json",
+      "before": "f31d91c558b005a8ab9c4d5584dcf8dff01ba71788133ad88ead64e88d8e09b7",
+      "after": "f31d91c558b005a8ab9c4d5584dcf8dff01ba71788133ad88ead64e88d8e09b7",
+      "same": true
+    },
+    {
+      "file": "term_versions.csv",
+      "before": "6968cd50ee38d8980efde4f09493b6645032ab4bef1ff664d322c8a284592de8",
+      "after": "6968cd50ee38d8980efde4f09493b6645032ab4bef1ff664d322c8a284592de8",
+      "same": true
+    },
+    {
+      "file": "targets.csv",
+      "before": "471638c65180ac9e9546e81f315f57127371806489a3692536343fa9831d7341",
+      "after": "471638c65180ac9e9546e81f315f57127371806489a3692536343fa9831d7341",
+      "same": true
+    },
+    {
+      "file": "decisions.csv",
+      "before": "3a5f7bd09f907c697b3aeae4754e577c065d528eac0c17ae88ed8f77023da678",
+      "after": "3a5f7bd09f907c697b3aeae4754e577c065d528eac0c17ae88ed8f77023da678",
+      "same": true
+    },
+    {
+      "file": "order_lots.csv",
+      "before": "a588a1f9195c1032e05ade55e23ac609a0f53e016997096b2fcfe9abaec0db49",
+      "after": "a588a1f9195c1032e05ade55e23ac609a0f53e016997096b2fcfe9abaec0db49",
+      "same": true
+    },
+    {
+      "file": "rebalance_review.csv",
+      "before": "fd1e2eddc13a8d22afc1502a3c0a93db04a884bb61a0de727b4929fcd5e13269",
+      "after": "fd1e2eddc13a8d22afc1502a3c0a93db04a884bb61a0de727b4929fcd5e13269",
+      "same": true
+    },
+    {
+      "file": "liquidity.csv",
+      "before": "d0c7ab3256d245120672898d5c2bcee364310d2b6f12a5e752dcf4ead5b2022b",
+      "after": "d0c7ab3256d245120672898d5c2bcee364310d2b6f12a5e752dcf4ead5b2022b",
+      "same": true
+    }
+  ],
+  "original_run_files": [
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\command.json",
+      "sha256": "e0719c17dc1acd70239ac9ef3706bcaf185a1173d89e59a20636135558c10903",
+      "unchanged": true
+    },
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\config.yaml",
+      "sha256": "b0b5b2bbdef05c0a97b3be01b21f894fe3efa5877fbeea1bf0e7db921ac7b092",
+      "unchanged": true
+    },
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\nav.csv",
+      "sha256": "e4e3aa600406356d1d32e0f7781e7465a3624596e7e6f76795bc055dd6127bf8",
+      "unchanged": true
+    },
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\report.html",
+      "sha256": "6822ea886f88bfb96c81e54f82a8824b1be697ccb6ff9826ab8c752866d9bd89",
+      "unchanged": true
+    },
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\request.json",
+      "sha256": "4c35e518c3e05c9046f698a23c0db2e644f3f0874c53756030aa9a27de259203",
+      "unchanged": true
+    },
+    {
+      "relative": "0cbc1c4c420a4e09a42a8e1a37f93d89\\result.json",
+      "sha256": "e84559fbc9b699d428afc5925fb4914e72bb64d158e50739e6146773cef3dc62",
+      "unchanged": true
+    },
+    {
+      "relative": "interrupted\\command.json",
+      "sha256": "e0719c17dc1acd70239ac9ef3706bcaf185a1173d89e59a20636135558c10903",
+      "unchanged": true
+    },
+    {
+      "relative": "interrupted\\config.yaml",
+      "sha256": "b0b5b2bbdef05c0a97b3be01b21f894fe3efa5877fbeea1bf0e7db921ac7b092",
+      "unchanged": true
+    },
+    {
+      "relative": "interrupted\\request.json",
+      "sha256": "2b5e4166b70f6f6c8ce6376829366026e14b1f6816bb993ec8a1bcb62df101a5",
+      "unchanged": true
+    },
+    {
+      "relative": "interrupted\\result.json",
+      "sha256": "2e2610c91d2d6bc7750186249bcab9cfdf447b5a0babc684a81d574b5a75eba5",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\command.json",
+      "sha256": "012f20061aeda0fe96ef53fdfeba0b754e6cc0f5d5d1affc1f22390973863abc",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\config.yaml",
+      "sha256": "79e385752f3fd519c05070412ba9ab0c528ddaf28d55e84457da714187991225",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\holdings.csv",
+      "sha256": "6f0a2e42e2c0c8682a8894c07f506ac657fef537407cc3e02422c5631e62deb1",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\nav.csv",
+      "sha256": "03edb5e1af8e2812840760e7fbc608fb09611218d99921f88d2e8991bcf07bf0",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\request.json",
+      "sha256": "3269c38df6b5d58f7a0098483d764231e41b3ebeee2bc93a01f446c6d4b7207f",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\result.json",
+      "sha256": "26aa3d18d05efe5f6b18a6bc2129db8bd8cb0d9e32ac02cfd1eea9dc301f4831",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\stdout.txt",
+      "sha256": "dea94c25b531368bf5518d171a0d37bb5f0eca5a575e7a2d753768e3868c3458",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\verification-command.json",
+      "sha256": "a90ccdec5fad8cefdf960571b890b6fa15d9aade97c8dcb0e744a56efd3b6048",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\verification-stderr.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\verification-stdout.txt",
+      "sha256": "d5bb6c28d5af23561b604a6f2910c7a0ad12bbf03bd805cb4feffe8ea27f8ac2",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\verification.json",
+      "sha256": "40c2e9180f3e8db51f1307e79b909dcb5b1b1c0bcea01c1f46fe9a6a3008f719",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\.paper_state.lock",
+      "sha256": "6e340b9cffb37a989ca544e6bb780a2c78901d3fb33738768511a30617afa01d",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\execution_artifacts.json",
+      "sha256": "b7ff566ce7d9ec7ce6fd54f1c18ec4c9fce7c606a0abe268d5838b8bb223aae0",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\execution_log.json",
+      "sha256": "ca639dadb88b717986fb693fbbd3b160028cbbd6d341c3adf4004e024b12e308",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\holdings.csv",
+      "sha256": "6f0a2e42e2c0c8682a8894c07f506ac657fef537407cc3e02422c5631e62deb1",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\nav.csv",
+      "sha256": "de95fabf98a1d2553acd3e7c3cd72298150d6649d266ece1912e0f739cb23c6c",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\portfolio.json",
+      "sha256": "9d0553d858bc92aee154cbe8e2d029086f68738befe0f71de6ca91d5bf3e7d69",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\projection_manifest.json",
+      "sha256": "db70a1f563b6815b1a166eccd0c16651fb5bd872d47a21c574799e9fd137f00c",
+      "unchanged": true
+    },
+    {
+      "relative": "verified-paper-fixture\\strategy-output\\trades.json",
+      "sha256": "df330ac95292d4682b8dfead48ee3b1875bdcaf4786be23d44e7f38cfb2f5636",
+      "unchanged": true
+    }
+  ],
+  "original_run_files_unchanged": 30,
+  "economic_outputs_identical": 13,
+  "screenshots": [
+    {
+      "name": "fund-direct-desktop-final.jpg",
+      "sha256": "b28b7b8d5cf5104b27575a560fcd0db62726244316058510ce74cf66574fa847"
+    },
+    {
+      "name": "fund-direct-mobile-before.jpg",
+      "sha256": "e9b0b9872906f7a993748a3dfec3b718d4c6255ac1f5ef4c84ff469cd6d6d6f3"
+    },
+    {
+      "name": "fund-direct-mobile-final.jpg",
+      "sha256": "a72dc947ac8ef4c42ccbbfd9e2204d8748fa1fa53812a8bb4a25bf1555a9e67f"
+    },
+    {
+      "name": "fund-embedded-before.jpg",
+      "sha256": "5feb4c4c923445cb62e78f8abb6e47c47bd95936a529e417d74293fa7df751f5"
+    },
+    {
+      "name": "fund-embedded-desktop-final.jpg",
+      "sha256": "9caaa4d0c0b8e59fb0d263be4c75c00a93225393759cff3c5d7d4dcf1f743926"
+    },
+    {
+      "name": "fund-studio-desktop-final.jpg",
+      "sha256": "e42bae611ff5db9dff534045683f441ce98707d6a077a0978714640934c012cc"
+    },
+    {
+      "name": "fund-studio-mobile-final.jpg",
+      "sha256": "0128de71451efc7e6b36e1a5a53256b353f68232da5e00aa3afd91f3697f92da"
+    },
+    {
+      "name": "paper-desktop-before.jpg",
+      "sha256": "87556400295260652ceab4d5616ca3863e83b33387c4a0061c360a53fd43a95c"
+    },
+    {
+      "name": "paper-desktop-final.jpg",
+      "sha256": "9aed4f021a964f3fbc82e8fe1998e1362de63c7b220e272309547571401e84db"
+    },
+    {
+      "name": "paper-mobile-final.jpg",
+      "sha256": "dce6ef2b49a0956a11f7c39a010efd8da6ec8db9635c9a32668531b3a13a5060"
+    },
+    {
+      "name": "setup-saved-desktop.jpg",
+      "sha256": "cafb9879b51a880797989795e824571f7b5b896362321d6c128e94e0b1ae7598"
+    },
+    {
+      "name": "static-embedded.jpg",
+      "sha256": "3c8365102e76dcb799dc1228771d418e4be0519663a099de6c65d69f333dd6be"
+    },
+    {
+      "name": "synthetic-mobile-final.jpg",
+      "sha256": "f0c2309f923da2fa01249b1c1ceb7641f45d918b1e0b084d43e5e0b3ae695bd6"
+    }
+  ],
+  "static_service_stopped": true,
+  "viewport_reset": true,
+  "frozen_environment_mutated": false,
+  "etf_automation": "PAUSED",
+  "real_business_acceptance": "incomplete",
+  "merged_code_pull_requests": {
+    "fund": {
+      "headRefOid": "6efdd6c81762716b1e70e3240042d1105edc8f52",
+      "mergeCommit": {
+        "oid": "c0f2c5bc8d52313705a8c07f3081490800693933"
+      },
+      "mergedAt": "2026-10-07T09:39:31Z",
+      "number": 12,
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-fund/pull/12"
+    },
+    "studio": {
+      "headRefOid": "d7728dcee73c176916cd794e4200fc8c910fa70f",
+      "mergeCommit": {
+        "oid": "8a26e433a265bf5102fff60f90a36f13333ee326"
+      },
+      "mergedAt": "2026-10-07T09:39:54Z",
+      "number": 23,
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-studio/pull/23"
+    }
+  },
+  "candidate_checks": {
+    "studio": 20,
+    "all_conclusions": "SUCCESS",
+    "fund": 2
+  }
+}
