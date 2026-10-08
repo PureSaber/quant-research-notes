@@ -1,0 +1,52 @@
+[
+  {
+    "file": "scratch\\disclosure-snapshot\\history.parquet",
+    "bytes": 4191,
+    "sha256": "53f1ef73bfd1cc7f6e9ad8e08ba6d1ce10d152f5c97fefb609e4c93c16497a64"
+  },
+  {
+    "file": "scratch\\disclosure-snapshot\\manifest.json",
+    "bytes": 3509,
+    "sha256": "a99b9e0fa39535d99752b8b5e151901b3e01da825c98b3b75e13614b99a742e1"
+  },
+  {
+    "file": "scratch\\disclosure-snapshot\\source.csv",
+    "bytes": 371,
+    "sha256": "f9d63f00fc0b319f84b87baa8ec1f2b130a59cc3c0662bcde15311a8dc974bb9"
+  },
+  {
+    "file": "scratch\\disclosure-snapshot\\disclosure\\input.json",
+    "bytes": 1821,
+    "sha256": "3acf3f6e33b1a7aac10c1a30af4d12e00ab8451d97bc3c8ccf210a8f049d5f4a"
+  },
+  {
+    "file": "scratch\\disclosure-snapshot\\disclosure\\sse-600519-2025H1.pdf",
+    "bytes": 805855,
+    "sha256": "c80fb7180169469053c396e65315414368bcfa9f1f1d4e3bf793c8fb327e6b0c"
+  },
+  {
+    "file": "scratch\\official\\fullgoal-000191-202606.pdf",
+    "bytes": 2128380,
+    "sha256": "5ea3effc66d73355618d628f0d88dc054aaf45c943e0bd488b58374d32206b2e"
+  },
+  {
+    "file": "scratch\\official\\fullgoal.txt",
+    "bytes": 307621,
+    "sha256": "3bd620f15ad732561aeb0e3928ab12e00f013cc628034a56341ff15a1d36a00c"
+  },
+  {
+    "file": "scratch\\official\\reviewed-input.json",
+    "bytes": 1821,
+    "sha256": "3acf3f6e33b1a7aac10c1a30af4d12e00ab8451d97bc3c8ccf210a8f049d5f4a"
+  },
+  {
+    "file": "scratch\\official\\sse-600519-2025H1.pdf",
+    "bytes": 805855,
+    "sha256": "c80fb7180169469053c396e65315414368bcfa9f1f1d4e3bf793c8fb327e6b0c"
+  },
+  {
+    "file": "scratch\\official\\sse.txt",
+    "bytes": 349033,
+    "sha256": "1279048362c24ae882bb2e7e74e12a271dab824b5ae2f8f25378399da5d687c5"
+  }
+]

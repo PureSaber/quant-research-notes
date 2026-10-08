@@ -1,0 +1,20 @@
+[
+  {
+    "name": "sse-600519-2025H1",
+    "url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-13/600519_20250813_TU6Y.pdf",
+    "historical_availability_authenticated": false,
+    "status": "downloaded",
+    "bytes": 805855,
+    "sha256": "c80fb7180169469053c396e65315414368bcfa9f1f1d4e3bf793c8fb327e6b0c",
+    "captured_at": "2026-10-08T07:55:06.861654Z"
+  },
+  {
+    "name": "fullgoal-000191-202606",
+    "url": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260608/CN_50100000_000191_FA010030_20260001.pdf",
+    "historical_availability_authenticated": false,
+    "status": "downloaded",
+    "bytes": 2128380,
+    "sha256": "5ea3effc66d73355618d628f0d88dc054aaf45c943e0bd488b58374d32206b2e",
+    "captured_at": "2026-10-08T07:55:07.652279Z"
+  }
+]

@@ -1,0 +1,152 @@
+{
+  "schema": "quant-maintenance.item3-software-validation/v1",
+  "verified_at_utc": "2026-10-08 08:21:42 UTC",
+  "scope": "Software implementation and bounded public-source acceptance; not full historical PIT or real business certification.",
+  "changes": [
+    {
+      "repository": "PureSaber/a-share-multifactor",
+      "pull_request": "https://github.com/PureSaber/a-share-multifactor/pull/28",
+      "feature_head": "d29a65ac58561140fa08d990419c0f7c39456828",
+      "merge_commit": "2bec6dbe13637be287c715b00dc8e08ce7a7e2fe",
+      "local_tests_passed": 259,
+      "new_tests": 24,
+      "total_coverage_percent": 84.94,
+      "coverage_mode": "statements and branches",
+      "warnings": 280,
+      "local_log_sha256": "145983f1034543f1d0515e8d801fdae7da8e2dda3df2630bac5f3d47b50c7a28",
+      "pr_ci": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37747025734",
+      "pr_codeql": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37747025514"
+    },
+    {
+      "repository": "PureSaber/quant-fund",
+      "pull_request": "https://github.com/PureSaber/quant-fund/pull/14",
+      "feature_head": "674f8c84473a040d45c283fe8f3e98d7ca9a75a8",
+      "merge_commit": "52042caff6fc60aa6a4b5273946ab2093ba1de5d",
+      "local_tests_passed": 133,
+      "new_tests": 22,
+      "local_log_sha256": "19c295cce2fdbefc8c7bf0582fafb873f102865f2abdff74b3be2c12c3224543",
+      "pr_ci": "https://github.com/PureSaber/quant-fund/actions/runs/37747007119"
+    }
+  ],
+  "main_checks": [
+    {
+      "repository": "PureSaber/quant-fund",
+      "run_id": 37748092169,
+      "conclusion": "success",
+      "createdAt": "2026-10-08T08:10:29Z",
+      "event": "push",
+      "headSha": "52042caff6fc60aa6a4b5273946ab2093ba1de5d",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "test (windows-latest, py3.12)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-fund/actions/runs/37748092169/job/113214314088"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (ubuntu-24.04, py3.12)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-fund/actions/runs/37748092169/job/113214314482"
+        }
+      ],
+      "name": "CI",
+      "status": "completed",
+      "updatedAt": "2026-10-08T08:16:22Z",
+      "url": "https://github.com/PureSaber/quant-fund/actions/runs/37748092169"
+    },
+    {
+      "repository": "PureSaber/a-share-multifactor",
+      "run_id": 37748102578,
+      "conclusion": "success",
+      "createdAt": "2026-10-08T08:10:35Z",
+      "event": "push",
+      "headSha": "2bec6dbe13637be287c715b00dc8e08ce7a7e2fe",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "test (ubuntu-latest, 3.10)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348378"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (ubuntu-latest, 3.12)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348630"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (ubuntu-latest, 3.11)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348648"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (windows-latest, 3.11)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348711"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (windows-latest, 3.12)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348715"
+        },
+        {
+          "conclusion": "success",
+          "name": "test (windows-latest, 3.10)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578/job/113214348739"
+        }
+      ],
+      "name": "CI",
+      "status": "completed",
+      "updatedAt": "2026-10-08T08:19:04Z",
+      "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102578"
+    },
+    {
+      "repository": "PureSaber/a-share-multifactor",
+      "run_id": 37748102740,
+      "conclusion": "success",
+      "createdAt": "2026-10-08T08:10:35Z",
+      "event": "push",
+      "headSha": "2bec6dbe13637be287c715b00dc8e08ce7a7e2fe",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "codeql (python)",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102740/job/113214350863"
+        }
+      ],
+      "name": "CodeQL",
+      "status": "completed",
+      "updatedAt": "2026-10-08T08:11:53Z",
+      "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748102740"
+    },
+    {
+      "repository": "PureSaber/a-share-multifactor",
+      "run_id": 37748118001,
+      "conclusion": "success",
+      "createdAt": "2026-10-08T08:10:44Z",
+      "event": "dynamic",
+      "headSha": "2bec6dbe13637be287c715b00dc8e08ce7a7e2fe",
+      "jobs": [
+        {
+          "conclusion": "success",
+          "name": "update-pip-graph",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748118001/job/113214413050"
+        }
+      ],
+      "name": "Configured Graph Update: pip in /. #1616933412",
+      "status": "completed",
+      "updatedAt": "2026-10-08T08:11:31Z",
+      "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/37748118001"
+    }
+  ],
+  "full_historical_PIT_certified": false,
+  "real_business_certified": false,
+  "host_iframe_root_cause_fixed": false
+}
