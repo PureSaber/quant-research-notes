@@ -1,0 +1,26 @@
+{
+  "symbols": [
+    "000001",
+    "600519"
+  ],
+  "start": "2026-09-01",
+  "end": "2026-09-30",
+  "historical_PIT_certified": false,
+  "fundamentals": {
+    "rows": 42,
+    "counts": {
+      "000001": 21,
+      "600519": 21
+    },
+    "sha256": "71eed13ac352de204900ec05157e859bdc615e7eac6c7577d5d75dc53336a264",
+    "unknown_availability_rows": 42
+  },
+  "pit_gate": {
+    "status": "correctly_rejected",
+    "reason": "PIT fundamentals require known publication timestamps; found unknown availability"
+  },
+  "prices": {
+    "status": "failed",
+    "error": "Failed to fetch akshare_eastmoney prices for 000001"
+  }
+}

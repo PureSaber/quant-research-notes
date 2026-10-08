@@ -1,0 +1,98 @@
+{
+  "classification": "public_snapshot_not_historical_PIT",
+  "funds": [
+    {
+      "code": "000191",
+      "rows": 3201,
+      "start": "2013-06-25",
+      "end": "2026-09-30",
+      "known_at": "2026-10-08",
+      "dividend_events": 46,
+      "max_independent_wealth_error": 4.440892098500626e-16,
+      "sha256": "820ae49b791118b78df5e42c4d3381cae1e09903de9da9a646be6abdda326e86"
+    },
+    {
+      "code": "003318",
+      "rows": 2328,
+      "start": "2017-03-03",
+      "end": "2026-09-30",
+      "known_at": "2026-10-08",
+      "dividend_events": 14,
+      "max_independent_wealth_error": 8.881784197001252e-16,
+      "sha256": "1f8bceb6802e71a464510085b888e2763a1c1d7160e6d5af4c160932cff914a6"
+    }
+  ],
+  "checks": {
+    "independent_total_return": "passed",
+    "idempotent_import": "passed",
+    "mixed_import_atomic_rollback": "passed",
+    "export_equals_input": "passed",
+    "invalid_cases_rejected": [
+      "nan",
+      "negative",
+      "infinity",
+      "empty_source",
+      "known_before_nav"
+    ],
+    "database_rows": 5529,
+    "historical_PIT_certified": false,
+    "real_transactions_certified": false
+  },
+  "downloaded_files": [
+    {
+      "name": "000191.csv",
+      "bytes": 384122,
+      "sha256": "820ae49b791118b78df5e42c4d3381cae1e09903de9da9a646be6abdda326e86"
+    },
+    {
+      "name": "000191.cumulative.raw.csv",
+      "bytes": 59141,
+      "sha256": "9ee61415b777501846a98afe13aeb5ff4d7690d767a95a3dd0ad3da67c361ad2"
+    },
+    {
+      "name": "000191.dividends.raw.csv",
+      "bytes": 3239,
+      "sha256": "3fd169b9142e1e2c6f33577a2b37eb301cc0de23b2cd49b62b7901c1bfee1cc2"
+    },
+    {
+      "name": "000191.raw.csv",
+      "bytes": 76671,
+      "sha256": "1846e5603702e055924d2e4a5a0da3e5e6c0fec11f1c1aaa37f285715d1ab13a"
+    },
+    {
+      "name": "000191.splits.raw.csv",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "name": "003318.csv",
+      "bytes": 258399,
+      "sha256": "1f8bceb6802e71a464510085b888e2763a1c1d7160e6d5af4c160932cff914a6"
+    },
+    {
+      "name": "003318.cumulative.raw.csv",
+      "bytes": 43991,
+      "sha256": "1e620052e7a8b688ea9f3cb8691cbb0c08431db7c09dfde66ab8ed543ddf6898"
+    },
+    {
+      "name": "003318.dividends.raw.csv",
+      "bytes": 1031,
+      "sha256": "7988cca1ff0ad0f12d8bdcf0c59ca566dbfe153f8b0de7046d5e4c8cd7dd775d"
+    },
+    {
+      "name": "003318.raw.csv",
+      "bytes": 58159,
+      "sha256": "934ff42f3778a74f278e5f79c865888ab71c96918bfdea510b87539665f567c1"
+    },
+    {
+      "name": "003318.splits.raw.csv",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "name": "synthetic-conflict.csv",
+      "bytes": 275,
+      "sha256": "53452971dbee698a62cb6d749dfa4d37163d93e05217b5c481463e4d3f2565a7"
+    }
+  ]
+}

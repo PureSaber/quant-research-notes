@@ -1,0 +1,15 @@
+{
+  "verified_at_utc": "2026-10-08T06:45:03.7927311Z",
+  "batch": "sample-acceptance-2026-10-08",
+  "files_deleted": 18,
+  "bytes_deleted": 5390234,
+  "method": "PowerShell Remove-Item -LiteralPath with inspected explicit file list, without recursion or force",
+  "empty_directories_verified": ["scratch/public-fund", "scratch/a-share", "scratch/official"],
+  "remaining_downloaded_sample_files": 0,
+  "includes": ["public NAV and four raw sidecars per fund", "A-share valuation and price samples", "official PDFs and extracted text", "acceptance SQLite and synthetic conflict input"],
+  "retained": ["software and environments", "aggregate counts, source URLs, hashes and test results", "synthetic demo/report and pytest fixtures", "empty download directories"],
+  "previous_frozen_datasets_untouched": true,
+  "broad_recursive_cleanup": "automatic approval review rejected; narrowed to the authorized downloaded files and their derivatives",
+  "temporary_http_services_stopped": true,
+  "temporary_browser_tabs_closed": true
+}

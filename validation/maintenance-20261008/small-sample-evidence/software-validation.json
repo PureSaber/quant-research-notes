@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-08",
+  "quant_fund": {
+    "pull_request": "https://github.com/PureSaber/quant-fund/pull/13",
+    "head": "c6fe215deabf930c3ed39c51d61e1cd67ce5dcf1",
+    "merge_commit": "5eafee97ccff37f152b54f9f9422f78cbf90ea8f",
+    "merged_at": "2026-10-08T06:29:07Z",
+    "new_tests_passed": 18,
+    "full_tests_passed": 111,
+    "local_full_seconds": 289.49,
+    "ruff_check": "passed",
+    "ruff_format_check": "passed",
+    "local_dependency_check": "uv pip check: 103 compatible packages",
+    "pr_ci": "https://github.com/PureSaber/quant-fund/actions/runs/37737348033",
+    "main_ci": "https://github.com/PureSaber/quant-fund/actions/runs/37737855188",
+    "pr_and_main_ubuntu_windows": "success"
+  },
+  "a_share_multifactor": {
+    "commit": "6b799c3e4c2871153e399a62ba0b5e1e6c68fc99",
+    "source_modified": false,
+    "targeted_tests_passed": 33,
+    "targeted_command_exit": "coverage gate failed because only selected tests ran; full suite subsequently passed",
+    "full_tests_passed": 235,
+    "full_seconds": 536.96,
+    "coverage_percent": 84.77,
+    "coverage_required_percent": 80,
+    "warnings": 280,
+    "warning_examples": ["constant-input correlation", "insufficient degrees of freedom in synthetic cases"],
+    "pit_missing_timestamp_rows_rejected": 42,
+    "explicit_tencent_price_rows": 42
+  },
+  "official_document_timing": {
+    "qdk_head": "61b571bdb9bba5d0a8c3aff8b406864539d0a9fc",
+    "documents": 2,
+    "capture_admitted": true,
+    "historical_admission_rejected": true,
+    "full_historical_PIT_certified": false
+  },
+  "real_fund_transactions_certified": false,
+  "host_iframe_fixed": false
+}

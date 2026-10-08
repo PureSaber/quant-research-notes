@@ -1,0 +1,12 @@
+{
+  "provider": "akshare_tencent",
+  "adjustment": "none",
+  "automatic_fallback": false,
+  "status": "passed",
+  "rows": 42,
+  "counts": {
+    "000001": 21,
+    "600519": 21
+  },
+  "sha256": "d9b49a0e08b360ed42f787bc50d5c18cb10bd8692377db447d52f94dd3389cce"
+}
