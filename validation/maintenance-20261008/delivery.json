@@ -1,0 +1,407 @@
+{
+  "scope": "PR acceptance; this documentation PR is verified separately in GitHub",
+  "pull_requests": [
+    {
+      "baseRefOid": "f07a51f5adff7fea7505b8b76ac92840b4ad2d1c",
+      "headRefOid": "61b571bdb9bba5d0a8c3aff8b406864539d0a9fc",
+      "mergeCommit": {
+        "oid": "e6b38102026cb88484f704d6b2adb0c8b22626ab"
+      },
+      "mergedAt": "2026-10-08T05:47:58Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-data-kit/pull/34",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/37229510432/job/111516015852"
+        },
+        {
+          "name": "codeql (python)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/37229510418/job/111516015605"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/37229510432/job/111516015744"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/37229510432/job/111516015554"
+        },
+        {
+          "name": "test (Windows, 3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/37229510432/job/111516015737"
+        },
+        {
+          "name": "CodeQL",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/runs/111516186979"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "624e6d0fc9da157bcdc087756c0d9c647625385f",
+      "headRefOid": "b2ab4fc8c8705b7ae0a78991318880245a47b29d",
+      "mergeCommit": {
+        "oid": "0ca7e849a78bfcf6c42002f927e98d0b81b64ba7"
+      },
+      "mergedAt": "2026-10-08T05:48:40Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-execution/pull/26",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733541941/job/113167877715"
+        },
+        {
+          "name": "test (3.10)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733542063/job/113167878373"
+        },
+        {
+          "name": "test (3.10)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733536168/job/113167864690"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733542063/job/113167878079"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733536168/job/113167866278"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733542063/job/113167878344"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/37733536168/job/113167864739"
+        },
+        {
+          "name": "CodeQL",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-execution/runs/113168085062"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "18cfe93a757e93e0c89875ceff9612350f989359",
+      "headRefOid": "c7a2ace494072e1632d24e867415a72d5b8476d2",
+      "mergeCommit": {
+        "oid": "a1dfbdd57f756d42af28025fb05086aa32436b8c"
+      },
+      "mergedAt": "2026-10-08T05:50:24Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-hk-equity/pull/6",
+      "checks": [
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734182825/job/113169883153"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734175966/job/113169861207"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734182825/job/113169882768"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734175966/job/113169860965"
+        },
+        {
+          "name": "dividend-scenario (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734182825/job/113169882951"
+        },
+        {
+          "name": "dividend-scenario (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734175966/job/113169861175"
+        },
+        {
+          "name": "dividend-scenario (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734182825/job/113169883097"
+        },
+        {
+          "name": "dividend-scenario (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-hk-equity/actions/runs/37734175966/job/113169861158"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "c29041dd68d824be50083d7e5f9ece1e98d6e3c6",
+      "headRefOid": "3587cec92753ac155fdcf8202f2f93857950c0f4",
+      "mergeCommit": {
+        "oid": "59f6fff13b9b8857ceeff801a609fa154fd7be9a"
+      },
+      "mergedAt": "2026-10-08T05:30:46Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-studio/pull/25",
+      "checks": [
+        {
+          "name": "integration (ubuntu-24.04, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621582"
+        },
+        {
+          "name": "test (ubuntu-24.04)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195927/job/113163621759"
+        },
+        {
+          "name": "test (ubuntu-24.04)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732190632/job/113163605378"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621627"
+        },
+        {
+          "name": "test (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195927/job/113163621546"
+        },
+        {
+          "name": "test (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732190632/job/113163605142"
+        },
+        {
+          "name": "integration (ubuntu-24.04, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621507"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621561"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-fund, c0f2c5bc8d52313705a8c07f3081490800693933, fund)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621584"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futures)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621402"
+        },
+        {
+          "name": "integration (ubuntu-24.04, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621560"
+        },
+        {
+          "name": "integration (windows-latest, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621631"
+        },
+        {
+          "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621538"
+        },
+        {
+          "name": "integration (windows-latest, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621539"
+        },
+        {
+          "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621660"
+        },
+        {
+          "name": "integration (windows-latest, quant-fund, c0f2c5bc8d52313705a8c07f3081490800693933, fund)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621570"
+        },
+        {
+          "name": "integration (windows-latest, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futu...",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621266"
+        },
+        {
+          "name": "integration (windows-latest, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621628"
+        },
+        {
+          "name": "timing (ubuntu-24.04)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621295"
+        },
+        {
+          "name": "timing (windows-latest)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113163621150"
+        },
+        {
+          "name": "upstream-integration",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-studio/actions/runs/37732195893/job/113164517079"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "9d2c7886c655758ebe1e1f7f3d9c0a029386de5c",
+      "headRefOid": "66b57cf555266e83508d613f99af015e847f7fe9",
+      "mergeCommit": {
+        "oid": "f697bd8fd0863f13f8cc47b97c3cddaf2cfb06be"
+      },
+      "mergedAt": "2026-10-08T05:30:51Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/currency-converter/pull/1",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/currency-converter/actions/runs/37732259276/job/113163820557"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/currency-converter/actions/runs/37732259276/job/113163820783"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "abba7f86107ca4efccabed5cb1059136f2263cfc",
+      "headRefOid": "ac12b55dce6be279ab6450360b62e5bab94b04d0",
+      "mergeCommit": {
+        "oid": "c6adf1b2a34913aa4e1d75ef2189beb0842edad4"
+      },
+      "mergedAt": "2026-10-08T05:35:46Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-interview-intelligence/pull/1",
+      "checks": [
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37732680971/job/113165169598"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37732677080/job/113165159363"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37732680971/job/113165169889"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37732677080/job/113165159097"
+        }
+      ]
+    },
+    {
+      "baseRefOid": "c6adf1b2a34913aa4e1d75ef2189beb0842edad4",
+      "headRefOid": "2e3e762873cc8c4e15e4e9a8efe38c2d47624eb8",
+      "mergeCommit": {
+        "oid": "d1b78488fa8455a3870ed197562dd723d7b2344c"
+      },
+      "mergedAt": "2026-10-08T05:41:37Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-interview-intelligence/pull/19",
+      "checks": [
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37733425849/job/113167507883"
+        },
+        {
+          "name": "test (3.11)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37733421785/job/113167495489"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37733425849/job/113167508192"
+        },
+        {
+          "name": "test (3.12)",
+          "status": "COMPLETED",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-interview-intelligence/actions/runs/37733421785/job/113167495261"
+        }
+      ]
+    }
+  ]
+}

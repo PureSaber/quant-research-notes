@@ -1,0 +1,27 @@
+{
+  "hot_root": "<existing-absolute-hot-directory>",
+  "archive_root": "<existing-absolute-directory-on-an-independent-physical-disk>",
+  "restore_root": "<existing-absolute-restore-directory>",
+  "collector_commit": "61b571bdb9bba5d0a8c3aff8b406864539d0a9fc",
+  "archive_reserve_bytes": 161061273600,
+  "rotation": {
+    "max_messages": 2000,
+    "max_wire_bytes": 16777216,
+    "max_age_seconds": 30
+  },
+  "retry": {
+    "max_attempts": 5,
+    "base_delay_seconds": 0.5,
+    "maximum_delay_seconds": 8.0,
+    "jitter_fraction": 0.2
+  },
+  "durability": {
+    "capacity_probe_messages": 256,
+    "capacity_probe_bytes": 4194304,
+    "capacity_probe_seconds": 1.0,
+    "normalized_flush_records": 256,
+    "normalized_flush_bytes": 1048576,
+    "normalized_flush_seconds": 1.0,
+    "probe_timeout_seconds": 30.0
+  }
+}

@@ -1,0 +1,340 @@
+[
+  {
+    "repo": "quant-hk-equity",
+    "rule_id": 24698560,
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "test (3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (3.12)",
+              "integration_id": 15368
+            },
+            {
+              "context": "dividend-scenario (3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "dividend-scenario (3.12)",
+              "integration_id": 15368
+            }
+          ]
+        }
+      }
+    ],
+    "default_branch_protected": true,
+    "url": "https://github.com/PureSaber/quant-hk-equity/rules/24698560"
+  },
+  {
+    "repo": "quant-regime",
+    "rule_id": 24698572,
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "test (3.10)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "codeql (python)",
+              "integration_id": 15368
+            }
+          ]
+        }
+      }
+    ],
+    "default_branch_protected": true,
+    "url": "https://github.com/PureSaber/quant-regime/rules/24698572"
+  },
+  {
+    "repo": "quant-research-notes",
+    "rule_id": 24698556,
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "m8-release-manifest (ubuntu-24.04)",
+              "integration_id": 15368
+            },
+            {
+              "context": "m8-release-manifest (windows-latest)",
+              "integration_id": 15368
+            },
+            {
+              "context": "m8-contracts (3.10)",
+              "integration_id": 15368
+            },
+            {
+              "context": "m8-contracts (3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "m8-contracts (3.12)",
+              "integration_id": 15368
+            },
+            {
+              "context": "codeql (python)",
+              "integration_id": 15368
+            }
+          ]
+        }
+      }
+    ],
+    "default_branch_protected": true,
+    "url": "https://github.com/PureSaber/quant-research-notes/rules/24698556"
+  },
+  {
+    "repo": "quant-studio",
+    "rule_id": 24698762,
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "test (ubuntu-24.04)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (windows-latest)",
+              "integration_id": 15368
+            },
+            {
+              "context": "upstream-integration",
+              "integration_id": 15368
+            }
+          ]
+        }
+      }
+    ],
+    "default_branch_protected": true,
+    "url": "https://github.com/PureSaber/quant-studio/rules/24698762"
+  },
+  {
+    "repo": "quant-timing",
+    "rule_id": 24698569,
+    "enforcement": "active",
+    "bypass_actors": [],
+    "conditions": {
+      "ref_name": {
+        "exclude": [],
+        "include": [
+          "~DEFAULT_BRANCH"
+        ]
+      }
+    },
+    "rules": [
+      {
+        "type": "deletion"
+      },
+      {
+        "type": "non_fast_forward"
+      },
+      {
+        "type": "pull_request",
+        "parameters": {
+          "required_approving_review_count": 0,
+          "dismiss_stale_reviews_on_push": false,
+          "required_reviewers": [],
+          "require_code_owner_review": false,
+          "require_last_push_approval": false,
+          "required_review_thread_resolution": true,
+          "require_extra_approval_for_unattributed_changes": true,
+          "allowed_merge_methods": [
+            "merge",
+            "squash",
+            "rebase"
+          ]
+        }
+      },
+      {
+        "type": "required_status_checks",
+        "parameters": {
+          "strict_required_status_checks_policy": true,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "test (ubuntu-latest, 3.10)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (ubuntu-latest, 3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (ubuntu-latest, 3.12)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (windows-latest, 3.10)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (windows-latest, 3.11)",
+              "integration_id": 15368
+            },
+            {
+              "context": "test (windows-latest, 3.12)",
+              "integration_id": 15368
+            }
+          ]
+        }
+      }
+    ],
+    "default_branch_protected": true,
+    "url": "https://github.com/PureSaber/quant-timing/rules/24698569"
+  }
+]
