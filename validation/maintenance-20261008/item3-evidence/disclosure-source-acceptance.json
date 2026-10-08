@@ -1,0 +1,13 @@
+{
+  "source_url": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-13/600519_20250813_TU6Y.pdf",
+  "source_sha256": "c80fb7180169469053c396e65315414368bcfa9f1f1d4e3bf793c8fb327e6b0c",
+  "captured_at": "2026-10-08T07:55:06.861654Z",
+  "reviewed_fact_rows": 3,
+  "default_capture_only": true,
+  "one_nanosecond_before_capture_rejected": true,
+  "at_capture_admitted": true,
+  "unknown_historical_publication_rejected": true,
+  "material_corruption_rejected": true,
+  "full_historical_PIT_certified": false,
+  "snapshot_manifest_sha256": "a99b9e0fa39535d99752b8b5e151901b3e01da825c98b3b75e13614b99a742e1"
+}

@@ -1,0 +1,12 @@
+{
+  "verified_at_utc": "2026-10-08T08:03:29.3257145Z",
+  "batch": "item3-development-2026-10-08",
+  "files_deleted": 10,
+  "bytes_deleted": 4408457.0,
+  "downloaded_and_derived_files_remaining": 0,
+  "method": "Inspected explicit file list, PowerShell Remove-Item -LiteralPath, no recursion or force",
+  "source_pdfs_retained": false,
+  "database_or_parquet_retained": false,
+  "code_and_aggregate_receipts_retained": true,
+  "previous_frozen_datasets_untouched": true
+}
