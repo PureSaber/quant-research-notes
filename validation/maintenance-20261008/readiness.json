@@ -1,0 +1,36 @@
+{
+  "as_of_utc": "2026-10-08T05:41:43.646112Z",
+  "scope": "software and deployment preparation; no independent archive available",
+  "collector_commit": "61b571bdb9bba5d0a8c3aff8b406864539d0a9fc",
+  "capacity": {
+    "total_bytes": 1022058893312,
+    "free_bytes": 368449511424,
+    "hot_limit_bytes": 161061273600,
+    "minimum_hot_free_bytes": 204411778662
+  },
+  "same_physical_device_preflight": {
+    "status": "PAUSED_PREFLIGHT_FAILED",
+    "streams": 8,
+    "all_paused": true,
+    "websocket_messages": 0,
+    "raw_segments": 0,
+    "archive_preflight_receipt": null,
+    "long_running_capture_started": false,
+    "continuous_days": 0,
+    "market_data_certified": false,
+    "raw_report_sha256": "25c73a3dbe51502a34095484b829ac2f9d7db0a92a415b3cbf587ac44fce6f56"
+  },
+  "remaining_gates": [
+    "independent archive and restore acceptance",
+    "eight-stream 30 continuous days",
+    "authorized domestic L2"
+  ],
+  "tests": {
+    "qdk_passed": 856,
+    "qdk_skipped": 2,
+    "qdk_core_pure_branch_gates_passed": 24,
+    "qdk_all_source_pure_branch_percent": 83.09,
+    "execution_passed": 372,
+    "interview_passed": 21
+  }
+}
