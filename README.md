@@ -11,6 +11,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |
 | [WORKSPACE_GUIDE.md](WORKSPACE_GUIDE.md) | 日常源码同步、固定提交集成与冻结研究环境的维护边界 |
+| [2026-10-08 P0—P1开发验收](validation/p0-p1-development-20261008/README.md) | 数据证据、任务中心、基金对账、前向流程、成本风险、组合穿透与独立环境管理 |
 | [2026-10-08仓库群维护](validation/maintenance-20261008/README.md) | 分支保护、纳秒消费者修复、外围仓PR验收、归档部署准备及真实业务资源评估 |
 | [2026-10-01维护与r4登记](validation/maintenance-20261001/README.md) | 行动观察契约修复、新环境验收、旧账户保留与新前向起点 |
 | [2026-10-03轻量市场数据验收](validation/maintenance-20261001/RESOURCES.md#当前阶段轻量真实行情验收) | 四ETF真实日线采集、重复一致性和下游输入检查通过；全量数据建设延期 |
