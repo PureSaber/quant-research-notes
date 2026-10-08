@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-08",
+  "browser": "Codex In-app Browser",
+  "static_iframe": {
+    "parent_script_nodes": 0,
+    "child_script_nodes": 0,
+    "child_visible": true,
+    "error": {
+      "level": "error",
+      "message": "Uncaught TypeError: Failed to execute 'observe' on 'MutationObserver': parameter 1 is not of type 'Node'.",
+      "timestamp": "2026-10-08T06:04:23.974Z"
+    },
+    "source_url_available": false,
+    "stack_available": false
+  },
+  "direct_static_child_error_logs": [],
+  "direct_synthetic_report": {
+    "error_logs": [],
+    "plotly_graph_count": 1,
+    "zoom_in_button_enabled": true,
+    "classification": "synthetic",
+    "start": "2026-07-01",
+    "end": "2026-08-31",
+    "strategy": "equal"
+  },
+  "host_root_cause_fixed": false,
+  "external_browser_comparison_performed": false,
+  "external_support_message_sent": false,
+  "temporary_tabs_closed": true
+}

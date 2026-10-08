@@ -1,0 +1,154 @@
+[
+  {
+    "name": "sse-600519-2025H1",
+    "mode": "captured_only",
+    "past_rejected": true,
+    "capture_admitted": true,
+    "timing": {
+      "schema": "puresaber.evidence-timing/2",
+      "effective_at": "2026-10-08T06:20:51.113611Z",
+      "captured_at": "2026-10-08T06:20:51.113611Z",
+      "source_materials": [
+        {
+          "material_id": "sse-600519-2025H1",
+          "kind": "official_document",
+          "archive_version": "temporary-acceptance-20261008-delete-after-verification",
+          "sha256": "c80fb7180169469053c396e65315414368bcfa9f1f1d4e3bf793c8fb327e6b0c",
+          "locator": "https://big5.sse.com.cn/site/cht/www.sse.com.cn/disclosure/listedinfo/announcement/c/new/2025-08-13/600519_20250813_TU6Y.pdf",
+          "review_citation": "Retrieved original PDF; historical publication instant not authenticated",
+          "acquired_at": "2026-10-08T06:20:51.113611Z"
+        }
+      ],
+      "source_publication": {
+        "raw_text": "Historical publication instant unverified; URL date is not clock evidence",
+        "precision": "unknown",
+        "exact_at": null,
+        "local_minute": null,
+        "local_date": null,
+        "explicit_interval": null,
+        "zone": {
+          "status": "unverified",
+          "iana_name": null,
+          "utc_offset": null,
+          "fold": null,
+          "material_ids": []
+        },
+        "display_rule": {
+          "status": "unknown",
+          "value": null,
+          "parity_reference": null,
+          "material_ids": []
+        },
+        "clock_accuracy": {
+          "status": "unknown",
+          "max_error_seconds": null,
+          "material_ids": []
+        },
+        "nominal_interval": null
+      },
+      "availability": {
+        "boundary_at": "2026-10-08T06:20:51.113611Z",
+        "admission_relation": "at_or_after",
+        "mode": "captured_only",
+        "basis": "local_capture",
+        "trust_model": "capture_receipt_only",
+        "usage_scope": "forward_and_retrospective",
+        "physical_clock_accuracy": "unknown",
+        "risk_note": null,
+        "derivation_version": "1",
+        "material_ids": [],
+        "downgrade_reasons": [
+          {
+            "code": "PRECISION_UNKNOWN",
+            "field": "source_publication.precision",
+            "material_ids": [],
+            "detail": "source precision is unknown"
+          }
+        ],
+        "legacy_timing_pointer": null
+      },
+      "revision": {
+        "revision_id": "sse-600519-2025H1",
+        "supersedes_timing_sha256": null,
+        "acquired_at": "2026-10-08T06:20:51.113611Z",
+        "usage_scope": "forward_and_retrospective"
+      }
+    }
+  },
+  {
+    "name": "fullgoal-000191-202606",
+    "mode": "captured_only",
+    "past_rejected": true,
+    "capture_admitted": true,
+    "timing": {
+      "schema": "puresaber.evidence-timing/2",
+      "effective_at": "2026-10-08T06:20:51.813215Z",
+      "captured_at": "2026-10-08T06:20:51.813215Z",
+      "source_materials": [
+        {
+          "material_id": "fullgoal-000191-202606",
+          "kind": "official_document",
+          "archive_version": "temporary-acceptance-20261008-delete-after-verification",
+          "sha256": "5ea3effc66d73355618d628f0d88dc054aaf45c943e0bd488b58374d32206b2e",
+          "locator": "https://www.fullgoal.com.cn/wbs-file/fund_report/20260608/CN_50100000_000191_FA010030_20260001.pdf",
+          "review_citation": "Retrieved original PDF; historical publication instant not authenticated",
+          "acquired_at": "2026-10-08T06:20:51.813215Z"
+        }
+      ],
+      "source_publication": {
+        "raw_text": "Historical publication instant unverified; URL date is not clock evidence",
+        "precision": "unknown",
+        "exact_at": null,
+        "local_minute": null,
+        "local_date": null,
+        "explicit_interval": null,
+        "zone": {
+          "status": "unverified",
+          "iana_name": null,
+          "utc_offset": null,
+          "fold": null,
+          "material_ids": []
+        },
+        "display_rule": {
+          "status": "unknown",
+          "value": null,
+          "parity_reference": null,
+          "material_ids": []
+        },
+        "clock_accuracy": {
+          "status": "unknown",
+          "max_error_seconds": null,
+          "material_ids": []
+        },
+        "nominal_interval": null
+      },
+      "availability": {
+        "boundary_at": "2026-10-08T06:20:51.813215Z",
+        "admission_relation": "at_or_after",
+        "mode": "captured_only",
+        "basis": "local_capture",
+        "trust_model": "capture_receipt_only",
+        "usage_scope": "forward_and_retrospective",
+        "physical_clock_accuracy": "unknown",
+        "risk_note": null,
+        "derivation_version": "1",
+        "material_ids": [],
+        "downgrade_reasons": [
+          {
+            "code": "PRECISION_UNKNOWN",
+            "field": "source_publication.precision",
+            "material_ids": [],
+            "detail": "source precision is unknown"
+          }
+        ],
+        "legacy_timing_pointer": null
+      },
+      "revision": {
+        "revision_id": "fullgoal-000191-202606",
+        "supersedes_timing_sha256": null,
+        "acquired_at": "2026-10-08T06:20:51.813215Z",
+        "usage_scope": "forward_and_retrospective"
+      }
+    }
+  }
+]
