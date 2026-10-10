@@ -1,6 +1,6 @@
 # Quant Research Notes
 
-当前日常入口：[Quant Studio 工作台](../quant-studio/README.md)、[操作指南](../quant-studio/DAILY_WORKFLOW.md)、[部署与备份](../quant-studio/DEPLOYMENT.md)。最新工程能力与本机边界见 [2026-10-10 工作台阶段记录](validation/workbench-20261010.md)。
+当前日常入口：[Quant Studio 工作台](https://github.com/PureSaber/quant-studio)、[操作指南](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md)、[部署与备份](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md)。最新工程能力与本机边界见 [2026-10-10 工作台阶段记录](validation/workbench-20261010.md)。
 
 新增：[11–20 研究可信度使用指南](research-integrity-11-20.md) 与 [事前投资目标示例](examples/investment-objective.json)。
 

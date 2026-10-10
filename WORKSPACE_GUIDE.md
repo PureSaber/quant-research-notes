@@ -2,7 +2,7 @@
 
 更新时间：2026-10-10。
 
-当前网页研究台使用 Quant Studio 的独立应用环境：数据集选择、配置保存、原生预检/运行、实验笔记及备份。统一操作说明以相邻仓库的 [DAILY_WORKFLOW.md](../quant-studio/DAILY_WORKFLOW.md) 为准，部署以 [DEPLOYMENT.md](../quant-studio/DEPLOYMENT.md) 为准；本页只维护跨仓环境与历史保留规则，避免重复参数说明失同步。当前用户没有用于访问服务电脑的组网工具；普通上网 VPN 不代表异地可达。
+当前网页研究台使用 Quant Studio 的独立应用环境：数据集选择、配置保存、原生预检/运行、实验笔记及备份。统一操作说明以 [DAILY_WORKFLOW.md](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md) 为准，部署以 [DEPLOYMENT.md](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md) 为准；本页只维护跨仓环境与历史保留规则，避免重复参数说明失同步。本机已部署 Tailscale 私有组网，实际客户端访问范围及待办见 [本阶段验收](validation/workbench-20261010.md)；普通上网 VPN 不代表异地可达。
 
 ## 三类目录
 
