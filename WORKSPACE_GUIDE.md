@@ -1,6 +1,6 @@
 # 工作区维护说明
 
-更新时间：2026-10-10。
+更新时间：2026-10-11。
 
 当前网页研究台使用 Quant Studio 的独立应用环境：数据集选择、配置保存、原生预检/运行、实验笔记及备份。统一操作说明以 [DAILY_WORKFLOW.md](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md) 为准，部署以 [DEPLOYMENT.md](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md) 为准；本页只维护跨仓环境与历史保留规则，避免重复参数说明失同步。本机已部署 Tailscale 私有组网，实际客户端访问范围及待办见 [本阶段验收](validation/workbench-20261010.md)；普通上网 VPN 不代表异地可达。
 
@@ -15,7 +15,7 @@
 工作树clean只说明没有未提交改动，不代表本地HEAD等于远端默认分支，也不代表已安装环境匹配当前源码。
 仓库版本号、源码提交和研究登记是不同的身份，不能互相替代。
 
-当前低频维护另使用各应用独立环境，通过本地Studio设置连接已有输入；不将23仓不同历史发行锁强行合并。保存并重启后的配置与原生预检、A股缓存目录选择及暂缓项目见[本机收尾](validation/p0-p2-20261003/LOCAL_CLOSEOUT.md)。真实数据资料、大规模采集及宿主问题暂缓，ETF自动化保持`PAUSED`；日常源码与冻结账户仍分别维护。
+当前低频维护另使用各应用独立环境，通过本地Studio设置连接已有输入；不将24仓不同历史发行锁强行合并。保存并重启后的配置与原生预检、A股缓存目录选择及暂缓项目见[本机收尾](validation/p0-p2-20261003/LOCAL_CLOSEOUT.md)。真实数据资料、大规模采集及宿主问题暂缓，ETF自动化保持`PAUSED`；日常源码与冻结账户仍分别维护。
 
 ## 日常源码同步
 
@@ -48,3 +48,5 @@ M8状态保持`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`。
 
 当前风险研究仍是market统计代理，完整Barra描述子、宽截面数据及校准尚未完成；既有历史结果不支持策略优于买入持有。
 具体数据与统计边界见[历史验收](validation/risk-pit-20260926/VALIDATION.md)和[历史结果](validation/risk-pit-20260926/RESULTS.md)。
+
+衍生品扩展使用单独的 [冻结安装配置](https://github.com/PureSaber/quant-workspace/tree/main/profiles/derivatives-research)。新增 quant-options 仓库；海外期货复用 quant-futures-spread 的独立子项目。日常源码共24仓，历史M8仍14仓。部署与模型边界见 [本轮验收](validation/derivatives-20261011.md)。
