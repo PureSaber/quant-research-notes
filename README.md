@@ -10,6 +10,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 
 | Doc | Description |
 |-----|-------------|
+| [衍生品研究工程验收](validation/derivatives-20261011.md) | 期权、海外期货、共享数据/账户、工作台接入与真实数据边界 |
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |
 | [WORKSPACE_GUIDE.md](WORKSPACE_GUIDE.md) | 日常源码同步、固定提交集成与冻结研究环境的维护边界 |
@@ -51,7 +52,8 @@ quant-execution           → deterministic execution and exact ledger
 quant-lab                 → cross-project experiment index
 quant-report-hub          → unified charts (spread + equity adapters)
 quant-crypto-basis        → fixture-certified crypto basis research
-quant-futures-spread      → fixture-certified futures spread backtest
+quant-futures-spread      → 原认证 fixture；独立海外期货研究
+quant-options             → 私有期权定价、风险分析和账户回放
 quant-infra-workspace     → private cross-repository health and governance tooling
 spread-backtest-viz       → deprecated compatibility shim; archived read-only
 ```

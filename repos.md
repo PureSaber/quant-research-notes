@@ -1,14 +1,14 @@
 # Repository Map
 
-更新时间：2026-10-04。当前维护范围为23个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
+更新时间：2026-10-11。当前维护范围为24个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
 核心范围与M8的14仓不可变发布清单不同：新增研究项目及默认分支更新不会自动获得M8发布认证。
 
-[机器可读能力清单](https://github.com/PureSaber/quant-workspace/blob/main/src/quant_workspace/capabilities.json)列出23仓的资产、功能、接口、数据状态、缺口和关系。[开发配置](https://github.com/PureSaber/quant-workspace/blob/main/configs/platform.workspace.yaml)与14仓发行配置分开；`quant-workspace capabilities --inventory`只能核验源码、提交和证据文件存在性，不能替代环境、跨仓业务或市场数据认证。
+[机器可读能力清单](https://github.com/PureSaber/quant-workspace/blob/main/src/quant_workspace/capabilities.json)列出24仓的资产、功能、接口、数据状态、缺口和关系。[开发配置](https://github.com/PureSaber/quant-workspace/blob/main/configs/platform.workspace.yaml)与14仓发行配置分开；`quant-workspace capabilities --inventory`只能核验源码、提交和证据文件存在性，不能替代环境、跨仓业务或市场数据认证。
 
 | Repo | Role | Key CLI |
 |------|------|---------|
-| quant-workspace | 路径解析、23仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
-| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、十一模板与十个业务预检入口、显式运行、只读前向账户、原生事件账本及择时分折/发布展示 | `python -m quant_studio serve/check` |
+| quant-workspace | 路径解析、24仓能力清单、源码盘点及不可变发布门禁 | `quant-workspace show/path/capabilities/lab-config` |
+| [quant-studio](https://github.com/PureSaber/quant-studio) | 本机统一总览、含期权与海外期货的研究模板及原生预检入口、显式运行、只读前向账户、原生事件账本及择时分折/发布展示 | `python -m quant_studio serve/check` |
 | quant-pipeline | Post-run orchestration | `quant-pipe run` |
 | quant-factors | Shared factor library | `quant-factors compute/list` |
 | quant-portfolio | Multi-strategy allocator | `quant-portfolio status` |
@@ -29,7 +29,8 @@
 | quant-regime | Market regime detector | `quant-regime detect`, `detect-multi` |
 | quant-risk-monitor | Portfolio risk alerts | `quant-risk check` |
 | quant-paper-sim | Paper trading simulator | `quant-paper step` |
-| quant-futures-spread | Public fixture-certified futures spread engine | `qfs-certified-backtest`, `run_backtest.py` |
+| quant-futures-spread | 原认证 fixture 保留；international 子项目提供独立海外期货研究 | `qfs-certified-backtest`、`python -m qfs_global.cli` |
+| [quant-options](https://github.com/PureSaber/quant-options) | 私有期权研究：定价、IV/Greeks、期权链、组合情景和账户回放 | `python -m quant_options.cli` |
 | quant-infra-workspace | Private cross-repository health and governance workspace | `scripts/health-check.ps1` |
 | quant-research-notes | 仓库地图、研究边界、治理及验收证据索引 | Markdown与`contracts/m8` |
 | research-workspace | Cross-product arb research (TaskSolver) | `scripts/run_backtest.py` |
