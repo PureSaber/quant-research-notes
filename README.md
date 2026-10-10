@@ -2,6 +2,8 @@
 
 当前日常入口：[Quant Studio 工作台](https://github.com/PureSaber/quant-studio)、[操作指南](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md)、[部署与备份](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md)。最新实测与待验收项见 [2026-10-10 工作台正式验收记录](validation/workbench-acceptance-20261010.md)；前阶段能力说明保留于 [工作台阶段记录](validation/workbench-20261010.md)。
 
+新增：[免费海外衍生品来源](validation/free-derivatives-20261011.md)。
+
 新增：[11–20 研究可信度使用指南](research-integrity-11-20.md) 与 [事前投资目标示例](examples/investment-objective.json)。
 
 Knowledge base and roadmap for the PureSaber quant research multi-repository workspace.
@@ -10,6 +12,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 
 | Doc | Description |
 |-----|-------------|
+| [免费衍生品来源验收](validation/free-derivatives-20261011.md) | Cboe VX、NSE 指数 F&O、Deribit 数据接入、网页流程与分析边界 |
 | [衍生品研究工程验收](validation/derivatives-20261011.md) | 期权、海外期货、共享数据/账户、工作台接入与真实数据边界 |
 | [roadmap.md](roadmap.md) | Learning path and project phases |
 | [repos.md](repos.md) | Repository map and dependencies |

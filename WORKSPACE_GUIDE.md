@@ -50,3 +50,5 @@ M8状态保持`M8_SOFTWARE_RELEASE_COMPLETE / MARKET_DATA_GA_BLOCKED`。
 具体数据与统计边界见[历史验收](validation/risk-pit-20260926/VALIDATION.md)和[历史结果](validation/risk-pit-20260926/RESULTS.md)。
 
 衍生品扩展使用单独的 [冻结安装配置](https://github.com/PureSaber/quant-workspace/tree/main/profiles/derivatives-research)。新增 quant-options 仓库；海外期货复用 quant-futures-spread 的独立子项目。日常源码共24仓，历史M8仍14仓。部署与模型边界见 [本轮验收](validation/derivatives-20261011.md)。
+
+免费来源扩展复用上述冻结安装配置；真实 Cboe、NSE、Deribit 输入与当前验收见 [免费源记录](validation/free-derivatives-20261011.md)。日常操作只维护 Studio 的 FREE_SOURCES.md，具体提交只维护 stack.json，避免多份文档各写一套默认参数。
