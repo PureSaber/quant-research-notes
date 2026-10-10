@@ -39,7 +39,7 @@
 
 发布激活只切换受管候选指针，不自动重启服务或回滚业务数据。迁移状态分别记录完整性、缺失配置、环境重建与研究复现，不能把哈希通过解释为所有研究已复现。凭据扫描用于常见误打包拦截，allowlist仍需逐项审查。
 
-## 最终检查
+## 首版验收（2026-10-10）
 
 | 范围 | 实际结果 |
 | --- | --- |
@@ -55,9 +55,9 @@ Workspace的1项跳过为当前Windows主机不可创建目录符号链接；远
 
 验证负责人已在QDK最终提交重新执行已报负例与OHLC字符串类型案例，确认阻断全部闭环；Workspace与Studio集中复核也没有剩余已确认阻断。
 
-## 代码与依赖
+## 首版提交与依赖（2026-10-10）
 
-| 仓库 | 最终提交 | 草稿PR |
+| 仓库 | 首版提交 | 首版草稿PR |
 | --- | --- | --- |
 | quant-data-kit | `0dae9b570cf23ee4f8c1091699194b4ec03cb2da` | [#37](https://github.com/PureSaber/quant-data-kit/pull/37) |
 | quant-workspace | `68cd33b` | [#53](https://github.com/PureSaber/quant-workspace/pull/53) |
@@ -65,4 +65,36 @@ Workspace的1项跳过为当前Windows主机不可创建目录符号链接；远
 
 Studio#30以`codex/research-workspace-v2`为base，叠加在另一开发对话的[Studio#28](https://github.com/PureSaber/quant-studio/pull/28)之上，避免重复审查其研究工作区改动。Research workspace CI固定上述QDK完整提交，使用独立Notebook/QDK/Agent环境执行真实读取；跨平台crypto上游CI另执行实际两候选批次测试。
 
-所有PR保持草稿，未合并或部署。远程CI最终结果以各PR检查页为准。
+首版交付时所有PR保持草稿，未合并或部署。以下记录用户要求继续处理后的主线同步、独立复核和合并收尾，不覆盖首版证据。
+
+## 主线同步与合并收尾（2026-10-11）
+
+本轮主线已增加衍生品能力，原功能分支需要重新整合，且Studio#30依赖尚未合并的Studio#28。处理保留原提交历史，以merge commit同步主线，再按Agent助手、Studio前置、数据准入与交付迁移、Studio整合的依赖关系合并。Studio#30已改为直接合入`main`。
+
+Workspace唯一冲突为`src/quant_workspace/capabilities.json`。逐字段整合主线24仓、衍生品能力与关系，以及本轮delivery/transfer能力、CLI入口、契约和证据。独立复核确认两个父提交的能力资产无缺项、41条关系包含双方全部关系、14仓M8发行scope不变；旧release/transfer实现和主线衍生品profile均保持原样。未以整个文件选择一方覆盖另一方。
+
+| 验证范围 | 同步后的实际结果 |
+| --- | --- |
+| Agent前置 | 独立10项测试通过；真实CLI离线子进程网络尝试为0 |
+| Studio前置 | 全量332项通过；ruff检查及95文件格式检查通过 |
+| Studio整合 | 全量381项通过，零失败、零跳过；启用真实Lab/Notebook、QDK、Agent和crypto两候选批次；独立针对37项通过；ruff检查及116文件格式检查通过 |
+| Studio主线接合 | `1eac1a90bcc3039bfc74a5dff31e6960c4b59a9f`与已测`18597d3c4900b21e312c54b9b8247877a07b4d82`源码树一致，仅接合前置PR的主线合并提交；随后`651db4a586ee0ef3b19de3a84ecac6ca22ef262b`仅修复以下独立集成测试读取器，应用源码未变 |
+| QDK | 全量894项通过、2项跳过；纯分支覆盖4804/5934=80.96%，达到80%门禁；独立intake与derivatives联合31项通过；旧intake实现及新衍生品模块完整保留 |
+| Workspace | 全量184项通过、1项跳过；覆盖率86.41%，stack_manifest纯分支90.78%、m7_certification纯分支94.06%；定向97项通过、1项跳过；独立能力目录/升级/迁移37项通过 |
+| 真实浏览器 | 再次完成上传→映射→导入→质量报告→项目连接、四曲线显隐/缩放/CSV导出、390px页面无横向溢出及无浏览器错误 |
+
+本轮JUnit位于本地证据目录的`parent-main-sync-junit.xml`和`operations-main-sync-junit.xml`；浏览器证据位于`browser-main-sync/`。QDK和Workspace覆盖率来自各独立工作树的`coverage.json`。独立验证负责人只读复核以上最终提交，没有剩余已确认阻断。原有跳过原因和离线验证边界不变。
+
+最后一轮Linux CI曾暴露独立账本验证子进程在完整打印JSON后退出崩溃，`returncode=-6`、`terminate called without an active exception`，见[失败job](https://github.com/PureSaber/quant-studio/actions/runs/38095446874/job/114340275514)。检查锁定的pandas2.3.3/pyarrow25.0.1实现确认，原`pd.read_parquet`单文件读取仍启动dataset扫描；现象与[Arrow#34314](https://github.com/apache/arrow/issues/34314)记录的解释器退出和后台线程清理问题一致。仅将`integration/test_fixture_upstream.py`中oracle改为`with ParquetFile(..., pre_buffer=False)`，读取及转换均禁用线程；保留`ArrowDtype`、逐单元格比较、时区、文件哈希与退出码断言。没有添加sleep、重试、忽略异常或修改冻结上游依赖。
+
+同版本Windows原四个crypto集成案例全部通过（29.44秒，`crypto-oracle-sync-junit.xml`）。独立复核确认四案例新旧子进程输出完全一致、均正常退出且无stderr；32次DataFrame精确比较通过，覆盖156个空值，保留类型和时间语义。本地WSL因已有磁盘挂载错误无法启动；修复后的[远程矩阵](https://github.com/PureSaber/quant-studio/actions/runs/38096100829)中Linux与Windows crypto实际CLI及真实批次检查均通过。本修复消除oracle自身末尾的异步扫描，不声称解决上游QLab或Arrow的所有同类风险。
+
+| PR | 最终功能提交 | 合并记录 |
+| --- | --- | --- |
+| [Agent#15](https://github.com/PureSaber/quant-agent/pull/15) | `887bec50d530a06171756204281c7322a4855d3c` | 已合入`master`，`474528d4a9ba005e2907651166951753dbba3178` |
+| [Studio#28](https://github.com/PureSaber/quant-studio/pull/28) | `40ae0ee8933b9c36cb99c00cd855192f1cc7b2bc` | 已合入`main`，`d28adb84f73004b4dbfc28eb8415f2417f47c9e1` |
+| [QDK#37](https://github.com/PureSaber/quant-data-kit/pull/37) | `902eb095f922429f327d7c713adde79a6787839c` | 已合入`main`，`2e1596e1c9bfde3e3a1b4e0dbe51974324ccc668` |
+| [Workspace#53](https://github.com/PureSaber/quant-workspace/pull/53) | `7aeea6c85d17c04a091f8a36e707b4c938b6367b` | 已合入`main`，`959bb91d3e5426a394a08f9ebea6170b029c3462` |
+| [Studio#30](https://github.com/PureSaber/quant-studio/pull/30) | `651db4a586ee0ef3b19de3a84ecac6ca22ef262b` | 已合入`main`，`25baa2f7550507d50c6f7ae280f06e465ac25688` |
+
+上述5个代码PR已全部合并；合并前各自最终head的全部检查均通过，其中Studio#30为24项、QDK#37为6项、Workspace#53为9项。Studio真实研究CI固定QDK功能提交`902eb095f922429f327d7c713adde79a6787839c`，并使用独立环境执行数据读取。所有合并遵循仓库保护规则，并匹配实际验收的head提交；没有管理员绕过、force push或虚构人工Approve。代码入主线与生产运行是不同阶段：本轮没有切换现有服务、升级冻结环境或执行业务数据迁移。
