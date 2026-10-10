@@ -27,6 +27,7 @@
 - CSV重复表头和字段宽度错位：在pandas自动改名或推断索引之前拒绝；实际构造的重复`close_px`和多字段行均失败，原件与失败回执保留。
 - 严格用途字段类型：`date:string`不能绕过日期规范要求；错误类型以`purpose_required_type`阻断。
 - 空日线刷新：新版本质量被阻断，`latest`保持旧有效版本；严格用途的零匹配范围被拒绝。
+- 远程Linux暴露内存采样测试的启动竞争：原测试在子进程尚未完成初始化时就拿到非零RSS并断言失败。测试现等待子进程完成分配并输出`ready`，再采样；子进程通过stdin保持存活，原断言不降低。此次仅修测试同步，没有修改资源采样实现。
 
 ## 实际证据与边界
 
@@ -48,6 +49,7 @@
 | Workspace静态最终复核 | `68cd33b`工作树干净；ruff检查通过，20个文件格式检查通过；最终格式提交未改变行为 |
 | 数据负例独立复验 | 数据准入/快照27项通过；独立重做原始重复表头、多字段错位、错误日期类型、缺省主键冲突、空刷新五个复现均关闭 |
 | 最终浏览器 | 所有7组检查通过，进程正常退出；查看了最终桌面结果截图 |
+| CI时序修复补核 | `f3952f6`资源测试6项通过，独立重跑6项通过；静态检查通过，最新Linux和Windows单元CI确认通过 |
 
 Workspace的1项跳过为当前Windows主机不可创建目录符号链接；远程Linux矩阵负责执行该路径。Studio最终全量启用了独立Notebook、QDK、Agent和crypto离线解释器，因此不存在将可选集成跳过当作通过的情况。
 
@@ -59,7 +61,7 @@ Workspace的1项跳过为当前Windows主机不可创建目录符号链接；远
 | --- | --- | --- |
 | quant-data-kit | `0dae9b570cf23ee4f8c1091699194b4ec03cb2da` | [#37](https://github.com/PureSaber/quant-data-kit/pull/37) |
 | quant-workspace | `68cd33b` | [#53](https://github.com/PureSaber/quant-workspace/pull/53) |
-| quant-studio | `7b1aadb` | [#30](https://github.com/PureSaber/quant-studio/pull/30) |
+| quant-studio | `f3952f6b6a17179960fd4d01ef5d71fd1ab360d8` | [#30](https://github.com/PureSaber/quant-studio/pull/30) |
 
 Studio#30以`codex/research-workspace-v2`为base，叠加在另一开发对话的[Studio#28](https://github.com/PureSaber/quant-studio/pull/28)之上，避免重复审查其研究工作区改动。Research workspace CI固定上述QDK完整提交，使用独立Notebook/QDK/Agent环境执行真实读取；跨平台crypto上游CI另执行实际两候选批次测试。
 
