@@ -12,6 +12,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 
 | Doc | Description |
 |-----|-------------|
+| [四条并行开发线交付](validation/four-lines-20261011/README.md) | 能力与运行状态、研究证据复核、批次与共享输入、FOF费用及多市场CTA；实际验收和人工依赖 |
 | [Windows 真实重启验收](validation/windows-reboot-20261011.md) | 自动启动、历史研究保留、新研究、备份恢复及远端登录后报告回看均通过 |
 | [免费衍生品来源验收](validation/free-derivatives-20261011.md) | Cboe VX、NSE 指数 F&O、Deribit 数据接入、网页流程与分析边界 |
 | [衍生品研究工程验收](validation/derivatives-20261011.md) | 期权、海外期货、共享数据/账户、工作台接入与真实数据边界 |
