@@ -1,0 +1,4594 @@
+{
+  "schema_version": "quant.four-lines-delivery/v1",
+  "observed_at": "2026-10-11T15:39:01.822315+00:00",
+  "status": "software_merged_private_ci_access_pending",
+  "repositories": [
+    {
+      "repository": "PureSaber/quant-workspace",
+      "line": 1,
+      "pull_request": "https://github.com/PureSaber/quant-workspace/pull/60",
+      "reviewed_head": "0695cce48f1aa74aea3180cd6d3c005cb6a468c1",
+      "base_revision": "d34a239a0a8e1eebecab06bcf6a17c0dbcd58eb5",
+      "merge_revision": "bd0dbaaf81f8b61e8aef25a84693b1522fdf4517",
+      "merged_at": "2026-10-11T15:28:15Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:35Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867854/job/114503869879",
+          "name": "private-repository-access",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Institutional research acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:08Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150833703/job/114503773646",
+          "name": "private-repository-access",
+          "startedAt": "2026-10-11T15:20:05Z",
+          "status": "COMPLETED",
+          "workflowName": "Institutional research acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867895/job/114503870273",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T15:20:33Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867855/job/114503870478",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:24:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867881/job/114503870202",
+          "name": "research (ubuntu-24.04, independent)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:42Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867895/job/114503870183",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:27:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867881/job/114503870088",
+          "name": "research (ubuntu-24.04, continuous)",
+          "startedAt": "2026-10-11T15:20:33Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867895/job/114503870006",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:27:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867881/job/114503870095",
+          "name": "research (windows-latest, independent)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:25:53Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867881/job/114503869929",
+          "name": "research (windows-latest, continuous)",
+          "startedAt": "2026-10-11T15:20:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:35Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150867854/job/114503885621",
+          "name": "acceptance",
+          "startedAt": "2026-10-11T15:20:35Z",
+          "status": "COMPLETED",
+          "workflowName": "Institutional research acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:08Z",
+          "conclusion": "SKIPPED",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38150833703/job/114503789736",
+          "name": "acceptance",
+          "startedAt": "2026-10-11T15:20:08Z",
+          "status": "COMPLETED",
+          "workflowName": "Institutional research acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:25Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/runs/114504046910",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T15:21:23Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "all_reported_checks_passed": false,
+      "snapshot_sha256": "8bdd46b25fc67231bb5917a6bf092da45d4f0c5433bfa03bf7260a89283d86dd"
+    },
+    {
+      "repository": "PureSaber/quant-factors",
+      "line": 1,
+      "pull_request": "https://github.com/PureSaber/quant-factors/pull/22",
+      "reviewed_head": "d5ab781acfa95e104a171a48085906467737a690",
+      "base_revision": "65f8e12d643e8ae6dc186966d99614938295bdc7",
+      "merge_revision": "d910df5d9d6030c9caf6bce63f4a7bd357265b6b",
+      "merged_at": "2026-10-11T15:20:53Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:16:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/38150417038/job/114502534466",
+          "name": "windows",
+          "startedAt": "2026-10-11T15:14:04Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/38150417022/job/114502534552",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T15:14:04Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/38150417038/job/114502534574",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T15:14:04Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:15:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/38150417038/job/114502534545",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T15:14:05Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:55Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/actions/runs/38150417038/job/114502534621",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T15:14:04Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:42Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-factors/runs/114502662264",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T15:14:40Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "aaa64aa62dc088d657427779447078dbfe15ea77484776ca448112b27be5ccf3"
+    },
+    {
+      "repository": "PureSaber/quant-agent",
+      "line": 2,
+      "pull_request": "https://github.com/PureSaber/quant-agent/pull/18",
+      "reviewed_head": "6b43f4f93dceb9db4f754524afa010ee2aa7878e",
+      "base_revision": "e57b15c296dc0e16cce0e01df89da72cf918f66a",
+      "merge_revision": "d461b113ccd9ff98fca3966978126a08842b135f",
+      "merged_at": "2026-10-11T15:34:18Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:30:36Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38151455878/job/114505608433",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T15:29:36Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:30:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608389",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T15:29:15Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:30:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608569",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T15:29:55Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:30:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608502",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T15:29:37Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:30:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/runs/114505888316",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T15:30:26Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "7a6016ae5f2ab1ae505818937c07a07f862211def1089874e2740e9e615f5508"
+    },
+    {
+      "repository": "PureSaber/quant-studio",
+      "line": [
+        1,
+        2,
+        3
+      ],
+      "pull_request": "https://github.com/PureSaber/quant-studio/pull/41",
+      "reviewed_head": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+      "base_revision": "6a4069412a667d07998cb5defa17ad9aaed03cd0",
+      "merge_revision": "09f36f9575423f966d803f12a4c19769f218a701",
+      "merged_at": "2026-10-11T15:37:26Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:31:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022217",
+          "name": "durable-batches (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:06Z",
+          "status": "COMPLETED",
+          "workflowName": "Durable batch integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022242",
+          "name": "macro (ubuntu-latest)",
+          "startedAt": "2026-10-11T15:31:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:31:56Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151597283/job/114506011209",
+          "name": "macro (ubuntu-latest)",
+          "startedAt": "2026-10-11T15:31:03Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:36:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601320/job/114506022130",
+          "name": "research-workspace",
+          "startedAt": "2026-10-11T15:31:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Research workspace integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:54Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022804",
+          "name": "integration (ubuntu-24.04, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "startedAt": "2026-10-11T15:33:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:31:54Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022246",
+          "name": "test (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:07Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:31:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151597183/job/114506011052",
+          "name": "test (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:03Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022422",
+          "name": "durable-batches (windows-latest)",
+          "startedAt": "2026-10-11T15:31:09Z",
+          "status": "COMPLETED",
+          "workflowName": "Durable batch integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:54Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022115",
+          "name": "macro (windows-latest)",
+          "startedAt": "2026-10-11T15:31:06Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151597283/job/114506011073",
+          "name": "macro (windows-latest)",
+          "startedAt": "2026-10-11T15:31:03Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022445",
+          "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "startedAt": "2026-10-11T15:32:02Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:53Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022089",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T15:31:06Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151597183/job/114506010864",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T15:31:03Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022426",
+          "name": "integration (ubuntu-24.04, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "startedAt": "2026-10-11T15:31:51Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022823",
+          "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "startedAt": "2026-10-11T15:33:34Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:35:17Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022793",
+          "name": "integration (ubuntu-24.04, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+          "startedAt": "2026-10-11T15:33:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022642",
+          "name": "integration (ubuntu-24.04, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futures)",
+          "startedAt": "2026-10-11T15:32:56Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022505",
+          "name": "integration (ubuntu-24.04, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "startedAt": "2026-10-11T15:33:02Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022579",
+          "name": "integration (windows-latest, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "startedAt": "2026-10-11T15:32:59Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022435",
+          "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "startedAt": "2026-10-11T15:31:28Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:25Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022448",
+          "name": "integration (windows-latest, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "startedAt": "2026-10-11T15:31:55Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022538",
+          "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "startedAt": "2026-10-11T15:32:49Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:36:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022482",
+          "name": "integration (windows-latest, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+          "startedAt": "2026-10-11T15:32:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:44Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022517",
+          "name": "integration (windows-latest, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futu...",
+          "startedAt": "2026-10-11T15:32:50Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022559",
+          "name": "integration (windows-latest, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "startedAt": "2026-10-11T15:32:57Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022462",
+          "name": "timing (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:28Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:56Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022666",
+          "name": "timing (windows-latest)",
+          "startedAt": "2026-10-11T15:33:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022601",
+          "name": "derivatives (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:33:19Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022484",
+          "name": "derivatives (windows-latest)",
+          "startedAt": "2026-10-11T15:32:54Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022424",
+          "name": "free-derivatives (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:58Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:34:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022500",
+          "name": "free-derivatives (windows-latest)",
+          "startedAt": "2026-10-11T15:32:35Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:32:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022485",
+          "name": "research-extensions (ubuntu-24.04)",
+          "startedAt": "2026-10-11T15:31:50Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:33:36Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022351",
+          "name": "research-extensions (windows-latest)",
+          "startedAt": "2026-10-11T15:32:25Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:36:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114507061911",
+          "name": "upstream-integration",
+          "startedAt": "2026-10-11T15:36:12Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "84dd3d8acf6aa46b772c65928b57d15515143dea694f4f141edec385373f934b"
+    },
+    {
+      "repository": "PureSaber/quant-pipeline",
+      "line": 3,
+      "pull_request": "https://github.com/PureSaber/quant-pipeline/pull/22",
+      "reviewed_head": "612817cef1a96724f2e13ef4c88bc46988c201dc",
+      "base_revision": "4a73f550e22d9a3521fe311ceb0b1d940843c858",
+      "merge_revision": "98585749e0aaccd4c1b2a95aca55d2bd10b06b9c",
+      "merged_at": "2026-10-11T15:24:00Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38150781798/job/114503617983",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T15:19:19Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:27Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38150781869/job/114503618290",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T15:19:19Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38150781869/job/114503618259",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T15:19:19Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38150781869/job/114503618088",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T15:19:19Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/runs/114503765107",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T15:20:01Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "59ad3d414e401e83fdc12fc1b5d2e4a34716d7bb4b65cb55a95609bc090af8c7"
+    },
+    {
+      "repository": "PureSaber/quant-data-kit",
+      "line": 3,
+      "pull_request": "https://github.com/PureSaber/quant-data-kit/pull/41",
+      "reviewed_head": "912d81c6a13663012eee948f0001724153c1ae1b",
+      "base_revision": "a1b251bcc73dc0846235144a1fffc23d2f65d235",
+      "merge_revision": "5d9d58a2b639cafac2db221216e654d883372975",
+      "merged_at": "2026-10-11T15:26:19Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:22:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38150772068/job/114503589124",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T15:19:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38150772062/job/114503589061",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T15:19:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:21:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38150772068/job/114503588968",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T15:19:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:22:35Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38150772068/job/114503588987",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T15:19:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:24:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38150772068/job/114503588776",
+          "name": "test (Windows, 3.12)",
+          "startedAt": "2026-10-11T15:19:12Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:20:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/runs/114503767196",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T15:20:02Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "0649acf041ba7d86eb51e2d71a4cd815b4fb890a1f7113f52299729ae6ba7f18"
+    },
+    {
+      "repository": "PureSaber/quant-fund",
+      "line": 4,
+      "pull_request": "https://github.com/PureSaber/quant-fund/pull/16",
+      "reviewed_head": "b8b9f7ebb56db3872c35c8639d20ca00ed6a71f6",
+      "base_revision": "270080fe3648a0e79d7fdec2805f711db6cd1dcd",
+      "merge_revision": "31b032b65b1b26232125117593880d0cf94aa6cc",
+      "merged_at": "2026-10-11T15:21:01Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:15:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-fund/actions/runs/38150159541/job/114501762188",
+          "name": "test (ubuntu-24.04, py3.12)",
+          "startedAt": "2026-10-11T15:10:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:16:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-fund/actions/runs/38150159541/job/114501762382",
+          "name": "test (windows-latest, py3.12)",
+          "startedAt": "2026-10-11T15:10:20Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "ac530479baf69566ef23b18271407f3591b95b7bd5abfe1fa28be883f0d58ddc"
+    },
+    {
+      "repository": "PureSaber/quant-strategy-adapters",
+      "line": 4,
+      "pull_request": "https://github.com/PureSaber/quant-strategy-adapters/pull/2",
+      "reviewed_head": "e74cccf5d831d60581e71fb5fa9ce6cce9ff3580",
+      "base_revision": "f47b0952ff4c78247e81ca9ced1d556ee5ca86df",
+      "merge_revision": "ba46b008a80b22bd5f9073cc85e49ebd20c0b414",
+      "merged_at": "2026-10-11T15:21:08Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:11:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38150166392/job/114501782303",
+          "name": "CTA (ubuntu-24.04, py3.12)",
+          "startedAt": "2026-10-11T15:10:26Z",
+          "status": "COMPLETED",
+          "workflowName": "CTA acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:12:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38150166392/job/114501782390",
+          "name": "CTA (windows-latest, py3.12)",
+          "startedAt": "2026-10-11T15:10:26Z",
+          "status": "COMPLETED",
+          "workflowName": "CTA acceptance"
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "7d758a97ff002b9fc32cb1c582e2ef9f11dc1a2e3dccd05925b203199fadbbe0"
+    },
+    {
+      "repository": "PureSaber/quant-options",
+      "line": 4,
+      "pull_request": "https://github.com/PureSaber/quant-options/pull/7",
+      "reviewed_head": "f3ceef438948f97f6f20be92805bc10acab4ec56",
+      "base_revision": "bd8cc5df3242b996a5d5ba6316575f8a12e25cd9",
+      "merge_revision": "ba34ab011ca359b0f402ea04a15feddd9624984c",
+      "merged_at": "2026-10-11T15:21:15Z",
+      "state": "MERGED",
+      "checks": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-options/actions/runs/38150407920/job/114502504577",
+          "name": "test (ubuntu-latest)",
+          "startedAt": "2026-10-11T15:13:57Z",
+          "status": "COMPLETED",
+          "workflowName": "options research"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:14:39Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-options/actions/runs/38150403481/job/114502489995",
+          "name": "test (ubuntu-latest)",
+          "startedAt": "2026-10-11T15:13:53Z",
+          "status": "COMPLETED",
+          "workflowName": "options research"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:15:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-options/actions/runs/38150407920/job/114502504701",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T15:13:56Z",
+          "status": "COMPLETED",
+          "workflowName": "options research"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T15:15:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-options/actions/runs/38150403481/job/114502489782",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T15:13:53Z",
+          "status": "COMPLETED",
+          "workflowName": "options research"
+        }
+      ],
+      "all_reported_checks_passed": true,
+      "snapshot_sha256": "9266759b6f42b25795b420ec511da638c292523aa990250615ed8865b1a953d8"
+    }
+  ],
+  "tests": [
+    {
+      "scope": "workspace final full local suite",
+      "result": {
+        "passed": 208,
+        "skipped": 1,
+        "coverage_percent": 87.44,
+        "skip": "Windows directory symlink privilege unavailable"
+      },
+      "local_relative_path": "line1-governance/workspace-tests-final02.log",
+      "sha256": "c9a80fdbd78e4d40fc051355c3f88c923f03e894716f0550a246f1e067d64407"
+    },
+    {
+      "scope": "factors full local suite",
+      "result": {
+        "passed": 231,
+        "skipped": 0,
+        "coverage_percent": 89.43
+      },
+      "local_relative_path": "line1-governance/factors-tests-01.log",
+      "sha256": "e519690d475e341a59d3b085028dc79cb93d04f277f746f9cfb1bedb685f072e"
+    },
+    {
+      "scope": "pipeline final full local suite",
+      "result": {
+        "passed": 267,
+        "skipped": 1
+      },
+      "local_relative_path": "line3-runtime/pipeline-full.log",
+      "sha256": "565416c60966abd3edaa50e2fa55786d82cbd761b2cc9a724f38b7becf1e5b6e"
+    },
+    {
+      "scope": "QDK final full local suite",
+      "result": {
+        "passed": 1018,
+        "skipped": 7
+      },
+      "local_relative_path": "line3-runtime/qdk-full.log",
+      "sha256": "6aa1b2093b0613f132cfdfb490aa3f46b938706ca7c7a3fccc31ce736e3d4719"
+    },
+    {
+      "scope": "FOF committed full local suite",
+      "result": {
+        "passed": 155,
+        "skipped": 0
+      },
+      "local_relative_path": "line4-business/fund-committed.log",
+      "sha256": "2e1a96910190b16c1c0998db3156885f1cbe5ed9584f31cd1d2da573541d4030"
+    },
+    {
+      "scope": "adapters full local suite including private SEC path",
+      "result": {
+        "passed": 16,
+        "skipped": 0
+      },
+      "local_relative_path": "line4-business/adapters-final2.log",
+      "sha256": "d18fdeef44658c8ab79348fe79c731294bce89e836a64b54d4f10788ba2796cc"
+    },
+    {
+      "scope": "Agent final full local suite",
+      "result": {
+        "passed": 131,
+        "skipped": 0
+      },
+      "local_relative_path": "line2-research/logs/agent-final.txt",
+      "sha256": "238d4acc61617637f5ba477da14cdb54e165c42d5747c07754499433c283ee2e"
+    },
+    {
+      "scope": "Studio final full local suite",
+      "result": {
+        "passed": 536,
+        "skipped": 11
+      },
+      "local_relative_path": "line2-research/logs/studio-final.txt",
+      "sha256": "1d892fb75eddd775cc10d18e2655d910b585f8f068dc85b44a2778138dabb3d2"
+    }
+  ],
+  "independent_root_verification": [
+    {
+      "scope": "pipeline atomic batches and shared inputs",
+      "passed": 20,
+      "boundary": "Isolated Windows subprocess termination required normal host permission"
+    },
+    {
+      "scope": "QDK input bundles",
+      "passed": 13
+    },
+    {
+      "scope": "CTA sizing and account invariants",
+      "passed": 7
+    },
+    {
+      "scope": "FOF archived report replay",
+      "account_days": 109,
+      "orders": 15,
+      "max_reconciliation_error_cny": 2.3283064365386963e-10
+    },
+    {
+      "scope": "peer review of workspace platform status and factor catalog",
+      "passed": 19
+    }
+  ],
+  "capacity": {
+    "repository_path": "validation/durable-batches-20261011/capacity.json",
+    "sha256": "12f633060cc37f2469fff7b651af2b707ec93eca2e08e7774276d97bdffb395a",
+    "scales": [
+      1000,
+      5000,
+      20000
+    ],
+    "windows": [
+      5,
+      20,
+      60
+    ],
+    "cold_and_warm_candidates": 18,
+    "all_succeeded": true,
+    "target": null
+  },
+  "capacity_source_combination": {
+    "quant-pipeline": "612817cef1a96724f2e13ef4c88bc46988c201dc",
+    "quant-data-kit": "912d81c6a13663012eee948f0001724153c1ae1b",
+    "quant-studio": "895872fda396d199e6e3bb0fdd2890b179472e3e",
+    "quant-lab": "5d8c2336c1222696bdda6ab73cdd9c4e341f4ff7",
+    "quant-factors": "65f8e12d643e8ae6dc186966d99614938295bdc7",
+    "quant-workspace": "d34a239a0a8e1eebecab06bcf6a17c0dbcd58eb5",
+    "a-share-multifactor": "160165c9407b2e125e73a4de891b1b7ef62fe556",
+    "quant-report-hub": "a98f13eb5d42e522e3a27d7cd329a8118e379deb",
+    "quant-execution": "652d310d2573a58161ca7b8c5eb3210fcb220866",
+    "quant-portfolio": "33123fcc5d64d62e01c25b74043f72d472b45459",
+    "quant-risk-monitor": "b9c7a91ae2d9c4b9db1a22ac2538332c426b4eeb"
+  },
+  "business_boundaries": [
+    {
+      "PureSaber/quant-fund": [
+        "Fixed investor capital; no external investor flows or equalization",
+        "CNY; ACT/365F only; frozen declared policy",
+        "Existing floating-point account precision; no tax"
+      ]
+    },
+    {
+      "PureSaber/quant-strategy-adapters": [
+        "Fixed capital known at first decision, no equity reinvestment",
+        "Single currency, synchronized observed bars, explicit annualization",
+        "Conservative sum-absolute standalone risk budget, no covariance forecast",
+        "QExec next-open margin rejection preserved",
+        "CI covers public CTA path; private SEC full suite verified locally"
+      ]
+    },
+    {
+      "PureSaber/quant-options": "Documentation only: distinguish base CLI limits from existing advanced market models"
+    }
+  ],
+  "human_dependencies": [
+    {
+      "repository": "PureSaber/quant-workspace",
+      "workflow": "Institutional research acceptance",
+      "blocked_on": "Missing QUANT_RESEARCH_READ_TOKEN for pinned private repositories",
+      "action": "Owner configures read-only access in GitHub Actions secrets and reruns this workflow",
+      "result": "access failed; dependent acceptance skipped and never counted as passed"
+    }
+  ],
+  "claims": {
+    "production_deployed": false,
+    "live_trading_connected": false,
+    "market_data_certified": false,
+    "whole_local_workspace_backed_up": false,
+    "m8_historical_membership_changed": false
+  },
+  "line2_receipt_sha256": "3e39566496698cb475aa3352a0cd5275618808a5c1cbd0f3ab94a81df1aca41b",
+  "line2": {
+    "schema_version": "quant.line-delivery/v1",
+    "line": 2,
+    "state": "completed-merged-by-parent",
+    "repositories": [
+      {
+        "repo": "PureSaber/quant-agent",
+        "base": "e57b15c296dc0e16cce0e01df89da72cf918f66a",
+        "head": "6b43f4f93dceb9db4f754524afa010ee2aa7878e",
+        "branch": "codex/research-federation",
+        "base_branch": "master",
+        "pr": "https://github.com/PureSaber/quant-agent/pull/18",
+        "merged_by_parent": true,
+        "merge_commit": "d461b113ccd9ff98fca3966978126a08842b135f"
+      },
+      {
+        "repo": "PureSaber/quant-studio",
+        "base": "6a4069412a667d07998cb5defa17ad9aaed03cd0",
+        "head": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "branch": "codex/research-evidence-workbench",
+        "base_branch": "main",
+        "pr": "https://github.com/PureSaber/quant-studio/pull/41",
+        "merged_by_parent": true,
+        "merge_commit": "09f36f9575423f966d803f12a4c19769f218a701",
+        "integrated_peer_commits": [
+          "222d061d8dd0648018fca3a8a80aa7c9b2803fc2",
+          "895872fda396d199e6e3bb0fdd2890b179472e3e"
+        ]
+      }
+    ],
+    "entrypoints": {
+      "agent": "quant-research-workflow federate --manifest PATH --review-directory DIR",
+      "studio": "/projects/PROJECT_ID/evidence",
+      "studio_cli": "python -m quant_studio.project_evidence --runs-root ROOT --project ID",
+      "platform": "/platform-status and /delivery platform-status action",
+      "batch": "/durable-research",
+      "docs": [
+        "quant-agent/docs/RESEARCH_FEDERATION.md",
+        "quant-studio/RESEARCH_EVIDENCE.md",
+        "quant-studio/PLATFORM_STATUS.md",
+        "quant-studio/DURABLE_RESEARCH.md"
+      ]
+    },
+    "tests": [
+      {
+        "suite": "Agent full",
+        "passed": 131,
+        "skipped": 0,
+        "command": "runtime/Scripts/python.exe -m coverage run --branch --source=quant_agent -m pytest -q -rs --basetemp SCRATCH/q2afinal2 --tb=short -p no:cacheprovider (cwd quant-agent)",
+        "evidence": {
+          "sha256": "238d4acc61617637f5ba477da14cdb54e165c42d5747c07754499433c283ee2e"
+        },
+        "coverage": {
+          "sha256": "151969bc35fca280add3bc5911845a5c86dc210ae1487a9ab8f0d958a618f737"
+        }
+      },
+      {
+        "suite": "Studio full with installed research runtimes",
+        "passed": 536,
+        "skipped": 11,
+        "command": "run_studio_acceptance.ps1 -BaseTemp SCRATCH/NEW_SHORT_DIRECTORY",
+        "evidence": {
+          "sha256": "1d892fb75eddd775cc10d18e2655d910b585f8f068dc85b44a2778138dabb3d2"
+        },
+        "skip_scope": "10 market templates replayed separately; 1 crypto native batch covered by exact-head upstream CI"
+      },
+      {
+        "suite": "Workspace platform-status real CLI through Studio Delivery Job",
+        "passed": 6,
+        "command": "QUANT_TEST_PLATFORM_WORKSPACE_PYTHON=line1 Workspace venv; pytest tests/test_platform_status_web.py",
+        "evidence": {
+          "sha256": "53f731f562423b4f2d4e85bcbabe25f1209b87b46db06854229fbb3d8040daab"
+        },
+        "asserted": "attention_required is retained as a failed job with readable diagnostic JSON; acceptance not_run and services not_observed"
+      }
+    ],
+    "independent_review": "[local evidence retained in delivery workspace]",
+    "resolved_review_findings": [
+      "Stale actual_sha256 fields after deleted/unreadable/linked evidence could pass snapshot freshness; derived fields cleared and verified/hash rechecked",
+      "Corrupt linked Lab DB aborted history; now original review survives as source_changed/needs_review",
+      "Unreadable recipe HEAD aborted all attempts; now missing current source preserves old attempts/reviews and blocks observe"
+    ],
+    "ci_pins": {
+      "quant-agent": "6b43f4f93dceb9db4f754524afa010ee2aa7878e",
+      "quant-workspace": "0695cce48f1aa74aea3180cd6d3c005cb6a468c1",
+      "quant-pipeline": "612817cef1a96724f2e13ef4c88bc46988c201dc",
+      "quant-data-kit": "912d81c6a13663012eee948f0001724153c1ae1b",
+      "quant-factors": "65f8e12d643e8ae6dc186966d99614938295bdc7",
+      "quant-lab": "5d8c2336c1222696bdda6ab73cdd9c4e341f4ff7"
+    },
+    "coverage": {
+      "covered_lines": 2003,
+      "num_statements": 2266,
+      "percent_covered": 84.71615720524018,
+      "percent_covered_display": "85",
+      "missing_lines": 263,
+      "excluded_lines": 6,
+      "percent_statements_covered": 88.3936451897617,
+      "percent_statements_covered_display": "88",
+      "num_branches": 940,
+      "num_partial_branches": 191,
+      "covered_branches": 713,
+      "missing_branches": 227,
+      "percent_branches_covered": 75.85106382978724,
+      "percent_branches_covered_display": "76"
+    },
+    "environment": {
+      "sha256": "dcf6d26d684352bc25cc65a85cb537068b5ce0da7c4fc3fb0efebf0b36adc7ac"
+    },
+    "human_items": [],
+    "deployment_status": "not deployed; configuration/runtime switch requires target-environment operations",
+    "boundaries": [
+      "Byte identity does not certify PIT correctness, statistical significance, or investment performance",
+      "Explicit local reviewer names are assertions, not authenticated multi-user authorization",
+      "Research lifecycle never activates execution; Lab/account databases remain separate and read-only",
+      "Complete static manifests must be regenerated to discover unlisted attempts; Studio does this for every GET/POST",
+      "Source tracking covers registered inputs, Notebook drafts and probed native entry points, not hidden dependencies",
+      "Historical native runs without project IDs retain explicit exact-recipe association; new jobs carry project ID/revision",
+      "No production restart, live trading, automatic data migration or statistical acceptance was performed"
+    ],
+    "market_replay": {
+      "passed": 20,
+      "skipped": 0,
+      "runner": "[local evidence retained in delivery workspace]",
+      "evidence": {
+        "sha256": "16bf30660bf87c56b9d2956e1812f190c78cfd3f58121062fdcdedf44ecc06f5"
+      },
+      "scope": "Current Studio source asserted by path; native options/swaps processes use frozen read-only environment and synthetic bundle"
+    },
+    "agent_ci": [
+      {
+        "link": "https://github.com/PureSaber/quant-agent/runs/114505888316",
+        "name": "CodeQL",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608569",
+        "name": "test (3.11)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608502",
+        "name": "test (3.12)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-agent/actions/runs/38151455878/job/114505608433",
+        "name": "codeql (python)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-agent/actions/runs/38151455858/job/114505608389",
+        "name": "test (3.10)",
+        "state": "SUCCESS"
+      }
+    ],
+    "agent_merge": {
+      "headRefOid": "6b43f4f93dceb9db4f754524afa010ee2aa7878e",
+      "mergeCommit": {
+        "oid": "d461b113ccd9ff98fca3966978126a08842b135f"
+      },
+      "mergedAt": "2026-10-11T15:34:18Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-agent/pull/18"
+    },
+    "studio_merge": {
+      "headRefOid": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+      "mergeCommit": {
+        "oid": "09f36f9575423f966d803f12a4c19769f218a701"
+      },
+      "mergedAt": "2026-10-11T15:37:26Z",
+      "state": "MERGED",
+      "url": "https://github.com/PureSaber/quant-studio/pull/41"
+    },
+    "studio_all_checks": [
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114507061911",
+        "name": "upstream-integration",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022823",
+        "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022793",
+        "name": "integration (ubuntu-24.04, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022666",
+        "name": "timing (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022804",
+        "name": "integration (ubuntu-24.04, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022601",
+        "name": "derivatives (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022505",
+        "name": "integration (ubuntu-24.04, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022579",
+        "name": "integration (windows-latest, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022559",
+        "name": "integration (windows-latest, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022642",
+        "name": "integration (ubuntu-24.04, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futures)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022484",
+        "name": "derivatives (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022517",
+        "name": "integration (windows-latest, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futu...",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022538",
+        "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022500",
+        "name": "free-derivatives (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022351",
+        "name": "research-extensions (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022482",
+        "name": "integration (windows-latest, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022445",
+        "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022424",
+        "name": "free-derivatives (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022448",
+        "name": "integration (windows-latest, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022426",
+        "name": "integration (ubuntu-24.04, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022485",
+        "name": "research-extensions (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022462",
+        "name": "timing (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022435",
+        "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022422",
+        "name": "durable-batches (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601320/job/114506022130",
+        "name": "research-workspace",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022246",
+        "name": "test (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022242",
+        "name": "macro (ubuntu-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022217",
+        "name": "durable-batches (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022115",
+        "name": "macro (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022089",
+        "name": "test (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151597283/job/114506011073",
+        "name": "macro (windows-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151597283/job/114506011209",
+        "name": "macro (ubuntu-latest)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151597183/job/114506011052",
+        "name": "test (ubuntu-24.04)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-studio/actions/runs/38151597183/job/114506010864",
+        "name": "test (windows-latest)",
+        "state": "SUCCESS"
+      }
+    ],
+    "studio_ci": [
+      {
+        "conclusion": "success",
+        "databaseId": 38151601320,
+        "headSha": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "jobs": [
+          {
+            "completedAt": "2026-10-11T15:36:52Z",
+            "conclusion": "success",
+            "databaseId": 114506022130,
+            "name": "research-workspace",
+            "startedAt": "2026-10-11T15:31:07Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:08Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:15Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:20Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:20Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:25Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:31Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:25Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:07Z",
+                "conclusion": "success",
+                "name": "Install Studio and four independent locked runtimes",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:42Z",
+                "conclusion": "success",
+                "name": "Exercise real Lab, data admission, frozen reads and agent subprocess",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:43Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:36:42Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:45Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 13,
+                "startedAt": "2026-10-11T15:36:43Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:36:45Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:48Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:36:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:49Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:36:48Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:49Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:36:49Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601320/job/114506022130"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601320"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38151601367,
+        "headSha": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "jobs": [
+          {
+            "completedAt": "2026-10-11T15:31:49Z",
+            "conclusion": "success",
+            "databaseId": 114506022217,
+            "name": "durable-batches (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:31:06Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:08Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:09Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:11Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:09Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:12Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:11Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:13Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:13Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:14Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:14Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 8,
+                "startedAt": "2026-10-11T15:31:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:40Z",
+                "conclusion": "success",
+                "name": "Install locked research dependencies and exact local sources",
+                "number": 9,
+                "startedAt": "2026-10-11T15:31:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Require installed batch API and exercise real CLI and worker",
+                "number": 10,
+                "startedAt": "2026-10-11T15:31:40Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 17,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:46Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 18,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:47Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 19,
+                "startedAt": "2026-10-11T15:31:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:47Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 20,
+                "startedAt": "2026-10-11T15:31:47Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:47Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "startedAt": "2026-10-11T15:31:47Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022217"
+          },
+          {
+            "completedAt": "2026-10-11T15:33:17Z",
+            "conclusion": "success",
+            "databaseId": 114506022422,
+            "name": "durable-batches (windows-latest)",
+            "startedAt": "2026-10-11T15:31:09Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:10Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:09Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:18Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:23Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:18Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:28Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:32Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:28Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:37Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:41Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:41Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 8,
+                "startedAt": "2026-10-11T15:31:41Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:54Z",
+                "conclusion": "success",
+                "name": "Install locked research dependencies and exact local sources",
+                "number": 9,
+                "startedAt": "2026-10-11T15:31:41Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:04Z",
+                "conclusion": "success",
+                "name": "Require installed batch API and exercise real CLI and worker",
+                "number": 10,
+                "startedAt": "2026-10-11T15:32:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:05Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:33:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:06Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:33:05Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:08Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:33:06Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:10Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 17,
+                "startedAt": "2026-10-11T15:33:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 18,
+                "startedAt": "2026-10-11T15:33:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:14Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 19,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:15Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 20,
+                "startedAt": "2026-10-11T15:33:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:15Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 21,
+                "startedAt": "2026-10-11T15:33:15Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367/job/114506022422"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601367"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38151601322,
+        "headSha": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "jobs": [
+          {
+            "completedAt": "2026-10-11T15:32:53Z",
+            "conclusion": "success",
+            "databaseId": 114506022089,
+            "name": "test (windows-latest)",
+            "startedAt": "2026-10-11T15:31:06Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:08Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:14Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:14Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:29Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps -r requirements.lock",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:31Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:29Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:32Z",
+                "conclusion": "success",
+                "name": "Run python -m pip check",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:33Z",
+                "conclusion": "success",
+                "name": "Run python -m ruff check src tests integration",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:33Z",
+                "conclusion": "success",
+                "name": "Run python -m ruff format --check src tests integration",
+                "number": 8,
+                "startedAt": "2026-10-11T15:31:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:49Z",
+                "conclusion": "success",
+                "name": "Run python -m pytest -q",
+                "number": 9,
+                "startedAt": "2026-10-11T15:31:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:49Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 17,
+                "startedAt": "2026-10-11T15:32:49Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:52Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 18,
+                "startedAt": "2026-10-11T15:32:49Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:52Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 19,
+                "startedAt": "2026-10-11T15:32:52Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022089"
+          },
+          {
+            "completedAt": "2026-10-11T15:31:54Z",
+            "conclusion": "success",
+            "databaseId": 114506022246,
+            "name": "test (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:31:07Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:09Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:10Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:09Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:10Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:14Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps -r requirements.lock",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:15Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps --no-build-isolation -e .",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:15Z",
+                "conclusion": "success",
+                "name": "Run python -m pip check",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:15Z",
+                "conclusion": "success",
+                "name": "Run python -m ruff check src tests integration",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:15Z",
+                "conclusion": "success",
+                "name": "Run python -m ruff format --check src tests integration",
+                "number": 8,
+                "startedAt": "2026-10-11T15:31:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:51Z",
+                "conclusion": "success",
+                "name": "Run python -m pytest -q",
+                "number": 9,
+                "startedAt": "2026-10-11T15:31:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:51Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 17,
+                "startedAt": "2026-10-11T15:31:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:52Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 18,
+                "startedAt": "2026-10-11T15:31:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:52Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 19,
+                "startedAt": "2026-10-11T15:31:52Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322/job/114506022246"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601322"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38151601335,
+        "headSha": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "jobs": [
+          {
+            "completedAt": "2026-10-11T15:32:54Z",
+            "conclusion": "success",
+            "databaseId": 114506022115,
+            "name": "macro (windows-latest)",
+            "startedAt": "2026-10-11T15:31:06Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:08Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:20Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:25Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:25Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:25Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:14Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps -r quant-futures-spread/international/requirements.lock",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:25Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:19Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps --no-build-isolation -e quant-futures-spread/macro -e quant-futures-spread/international -e quant-studio",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:20Z",
+                "conclusion": "success",
+                "name": "Run python -m pip check",
+                "number": 7,
+                "startedAt": "2026-10-11T15:32:19Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:48Z",
+                "conclusion": "success",
+                "name": "Exercise actual dispatcher and independent interpreters",
+                "number": 8,
+                "startedAt": "2026-10-11T15:32:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:49Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:32:48Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:50Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:32:49Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:52Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:32:50Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:53Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:32:52Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022115"
+          },
+          {
+            "completedAt": "2026-10-11T15:32:00Z",
+            "conclusion": "success",
+            "databaseId": 114506022242,
+            "name": "macro (ubuntu-latest)",
+            "startedAt": "2026-10-11T15:31:07Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:08Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:09Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:08Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:10Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:09Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:11Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:33Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps -r quant-futures-spread/international/requirements.lock",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:11Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:35Z",
+                "conclusion": "success",
+                "name": "Run python -m pip install --no-deps --no-build-isolation -e quant-futures-spread/macro -e quant-futures-spread/international -e quant-studio",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:35Z",
+                "conclusion": "success",
+                "name": "Run python -m pip check",
+                "number": 7,
+                "startedAt": "2026-10-11T15:31:35Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:57Z",
+                "conclusion": "success",
+                "name": "Exercise actual dispatcher and independent interpreters",
+                "number": 8,
+                "startedAt": "2026-10-11T15:31:35Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:57Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:31:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:58Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:31:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:58Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:31:58Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:58Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:31:58Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335/job/114506022242"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601335"
+      },
+      {
+        "conclusion": "success",
+        "databaseId": 38151601306,
+        "headSha": "ae1fef0cef73c54d20c66f7552fb29093495cf06",
+        "jobs": [
+          {
+            "completedAt": "2026-10-11T15:33:36Z",
+            "conclusion": "success",
+            "databaseId": 114506022351,
+            "name": "research-extensions (windows-latest)",
+            "startedAt": "2026-10-11T15:32:25Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:26Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:26Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:33Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:26Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:37Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:38Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:25Z",
+                "conclusion": "success",
+                "name": "Install exact shared research environment",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:38Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:30Z",
+                "conclusion": "success",
+                "name": "Verify public portfolio native processes",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:25Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:30Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:33:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:32Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:33:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:34Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:33:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:34Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:33:34Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022351"
+          },
+          {
+            "completedAt": "2026-10-11T15:32:33Z",
+            "conclusion": "success",
+            "databaseId": 114506022424,
+            "name": "free-derivatives (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:31:58Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:59Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:00Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:01Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:01Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:27Z",
+                "conclusion": "success",
+                "name": "Install isolated overseas module and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Verify derivative research and account artifacts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:27Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:32:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:32:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:32:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:32:31Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022424"
+          },
+          {
+            "completedAt": "2026-10-11T15:32:57Z",
+            "conclusion": "success",
+            "databaseId": 114506022426,
+            "name": "integration (ubuntu-24.04, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+            "startedAt": "2026-10-11T15:31:51Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:53Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:54Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:55Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:55Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:45Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:47Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:45Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:54Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:32:47Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:54Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:32:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:54Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:32:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:55Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:32:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:55Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:32:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:55Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:32:55Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022426"
+          },
+          {
+            "completedAt": "2026-10-11T15:33:19Z",
+            "conclusion": "success",
+            "databaseId": 114506022435,
+            "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+            "startedAt": "2026-10-11T15:31:28Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:30Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:29Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:37Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:42Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:42Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:42Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:52Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:42Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:55Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:13Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:32:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:13Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:33:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:13Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:33:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:15Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:33:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:17Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:33:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:17Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:33:17Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022435"
+          },
+          {
+            "completedAt": "2026-10-11T15:33:00Z",
+            "conclusion": "success",
+            "databaseId": 114506022445,
+            "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+            "startedAt": "2026-10-11T15:32:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:04Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:03Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:06Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:06Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:06Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:07Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:06Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:45Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:46Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:45Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:57Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:32:46Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:57Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:32:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:58Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:32:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:58Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:32:58Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:58Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:32:58Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:58Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:32:58Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022445"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:25Z",
+            "conclusion": "success",
+            "databaseId": 114506022448,
+            "name": "integration (windows-latest, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+            "startedAt": "2026-10-11T15:31:55Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:57Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:56Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:04Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:10Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:10Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:04Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:07Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:19Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:19Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:19Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:19Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:19Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:21Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:19Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:24Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:24Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:24Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022448"
+          },
+          {
+            "completedAt": "2026-10-11T15:32:23Z",
+            "conclusion": "success",
+            "databaseId": 114506022462,
+            "name": "timing (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:31:28Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:30Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:29Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:31Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:31Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:32Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:47Z",
+                "conclusion": "success",
+                "name": "Install native timing and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:21Z",
+                "conclusion": "success",
+                "name": "Verify timing publication and evidence contracts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:31:47Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:21Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:32:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:22Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:32:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:22Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:32:22Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:22Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:32:22Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022462"
+          },
+          {
+            "completedAt": "2026-10-11T15:36:10Z",
+            "conclusion": "success",
+            "databaseId": 114506022482,
+            "name": "integration (windows-latest, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+            "startedAt": "2026-10-11T15:32:20Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:22Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:31Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:22Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:36Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:36Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:36Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:12Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:36Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:15Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:35:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:04Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:35:15Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:04Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:36:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:04Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:36:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:06Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:36:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:08Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:36:06Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:08Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:36:08Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022482"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:26Z",
+            "conclusion": "success",
+            "databaseId": 114506022484,
+            "name": "derivatives (windows-latest)",
+            "startedAt": "2026-10-11T15:32:54Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:56Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:05Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:56Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:05Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:12Z",
+                "conclusion": "success",
+                "name": "Install isolated overseas module and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:21Z",
+                "conclusion": "success",
+                "name": "Verify derivative research and account artifacts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:21Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:34:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:23Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:34:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:25Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:34:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:25Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:34:25Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022484"
+          },
+          {
+            "completedAt": "2026-10-11T15:32:18Z",
+            "conclusion": "success",
+            "databaseId": 114506022485,
+            "name": "research-extensions (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:31:50Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:31:52Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:31:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:53Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:31:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:54Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:31:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:31:54Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:31:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:14Z",
+                "conclusion": "success",
+                "name": "Install exact shared research environment",
+                "number": 5,
+                "startedAt": "2026-10-11T15:31:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:16Z",
+                "conclusion": "success",
+                "name": "Verify public portfolio native processes",
+                "number": 6,
+                "startedAt": "2026-10-11T15:32:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:17Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:32:16Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:17Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:32:17Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:17Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:32:17Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:17Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:32:17Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022485"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:06Z",
+            "conclusion": "success",
+            "databaseId": 114506022500,
+            "name": "free-derivatives (windows-latest)",
+            "startedAt": "2026-10-11T15:32:35Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:37Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:36Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:54Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:55Z",
+                "conclusion": "success",
+                "name": "Install isolated overseas module and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:00Z",
+                "conclusion": "success",
+                "name": "Verify derivative research and account artifacts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:00Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:34:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:34:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:05Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:34:02Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:05Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:34:05Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022500"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:04Z",
+            "conclusion": "success",
+            "databaseId": 114506022505,
+            "name": "integration (ubuntu-24.04, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+            "startedAt": "2026-10-11T15:33:02Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:03Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:03Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:04Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:03Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:05Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:05Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:05Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:05Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:32Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:33:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:01Z",
+                "conclusion": "success",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:02Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:02Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:02Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022505"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:44Z",
+            "conclusion": "success",
+            "databaseId": 114506022517,
+            "name": "integration (windows-latest, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futu...",
+            "startedAt": "2026-10-11T15:32:50Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:52Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:04Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:04Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:26Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:04Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:30Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:26Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:39Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:39Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:39Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:39Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:39Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:41Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:39Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:43Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:41Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:43Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:43Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022517"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:05Z",
+            "conclusion": "success",
+            "databaseId": 114506022538,
+            "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+            "startedAt": "2026-10-11T15:32:49Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:50Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:50Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:55Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:50Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:55Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:56Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:58Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:56Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:01Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:33:58Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:01Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:01Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:02Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:01Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:04Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:02Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:04Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:04Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022538"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:58Z",
+            "conclusion": "success",
+            "databaseId": 114506022559,
+            "name": "integration (windows-latest, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+            "startedAt": "2026-10-11T15:32:57Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:00Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:07Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:13Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:09Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:12Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:09Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:40Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:52Z",
+                "conclusion": "success",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:40Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:52Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:54Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:56Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:54Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:56Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:56Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022559"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:16Z",
+            "conclusion": "success",
+            "databaseId": 114506022579,
+            "name": "integration (windows-latest, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+            "startedAt": "2026-10-11T15:32:59Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:00Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:07Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:12Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:03Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:06Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:03Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:11Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:06Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:11Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:11Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:11Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:11Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:13Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:11Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:15Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:15Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:15Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022579"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:02Z",
+            "conclusion": "success",
+            "databaseId": 114506022601,
+            "name": "derivatives (ubuntu-24.04)",
+            "startedAt": "2026-10-11T15:33:19Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:20Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:22Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:23Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:22Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:23Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:52Z",
+                "conclusion": "success",
+                "name": "Install isolated overseas module and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:59Z",
+                "conclusion": "success",
+                "name": "Verify derivative research and account artifacts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:52Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:59Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:33:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:59Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:33:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:59Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:33:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:59Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:33:59Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022601"
+          },
+          {
+            "completedAt": "2026-10-11T15:33:33Z",
+            "conclusion": "success",
+            "databaseId": 114506022642,
+            "name": "integration (ubuntu-24.04, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futures)",
+            "startedAt": "2026-10-11T15:32:56Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:32:57Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:32:57Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:32:59Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:32:58Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:00Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:32:59Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:00Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:24Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:00Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:25Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:24Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:33:25Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022642"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:56Z",
+            "conclusion": "success",
+            "databaseId": 114506022666,
+            "name": "timing (windows-latest)",
+            "startedAt": "2026-10-11T15:33:20Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:21Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:28Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:33Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:28Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:33Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:10Z",
+                "conclusion": "success",
+                "name": "Install native timing and Studio",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:33Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:51Z",
+                "conclusion": "success",
+                "name": "Verify timing publication and evidence contracts",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:51Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 10,
+                "startedAt": "2026-10-11T15:34:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:53Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 11,
+                "startedAt": "2026-10-11T15:34:51Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:55Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 12,
+                "startedAt": "2026-10-11T15:34:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:55Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 13,
+                "startedAt": "2026-10-11T15:34:55Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022666"
+          },
+          {
+            "completedAt": "2026-10-11T15:35:17Z",
+            "conclusion": "success",
+            "databaseId": 114506022793,
+            "name": "integration (ubuntu-24.04, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+            "startedAt": "2026-10-11T15:33:29Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:30Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:31Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:30Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:32Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:31Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:32Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:32Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:34Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:32Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:34Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:35:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:35:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:35:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:35:14Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:35:14Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:35:14Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022793"
+          },
+          {
+            "completedAt": "2026-10-11T15:33:54Z",
+            "conclusion": "success",
+            "databaseId": 114506022804,
+            "name": "integration (ubuntu-24.04, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+            "startedAt": "2026-10-11T15:33:20Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:21Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:20Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:22Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:21Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:23Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:22Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:23Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:47Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:23Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:48Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:33:47Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:33:48Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:53Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:33:53Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022804"
+          },
+          {
+            "completedAt": "2026-10-11T15:34:13Z",
+            "conclusion": "success",
+            "databaseId": 114506022823,
+            "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+            "startedAt": "2026-10-11T15:33:34Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:33:35Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:33:35Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:36Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 2,
+                "startedAt": "2026-10-11T15:33:36Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:37Z",
+                "conclusion": "success",
+                "name": "Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 3,
+                "startedAt": "2026-10-11T15:33:36Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:33:37Z",
+                "conclusion": "success",
+                "name": "Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 4,
+                "startedAt": "2026-10-11T15:33:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:07Z",
+                "conclusion": "success",
+                "name": "Install frozen upstream dependencies",
+                "number": 5,
+                "startedAt": "2026-10-11T15:33:37Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:07Z",
+                "conclusion": "success",
+                "name": "Install Studio and verify dependency closure",
+                "number": 6,
+                "startedAt": "2026-10-11T15:34:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:10Z",
+                "conclusion": "success",
+                "name": "Exercise actual upstream output and CLI contracts",
+                "number": 7,
+                "startedAt": "2026-10-11T15:34:07Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:10Z",
+                "conclusion": "skipped",
+                "name": "Exercise real batch dispatch and resource accounting",
+                "number": 8,
+                "startedAt": "2026-10-11T15:34:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:10Z",
+                "conclusion": "success",
+                "name": "Post Run actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97",
+                "number": 14,
+                "startedAt": "2026-10-11T15:34:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:10Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 15,
+                "startedAt": "2026-10-11T15:34:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:11Z",
+                "conclusion": "success",
+                "name": "Post Run actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1",
+                "number": 16,
+                "startedAt": "2026-10-11T15:34:10Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:34:11Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 17,
+                "startedAt": "2026-10-11T15:34:11Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114506022823"
+          },
+          {
+            "completedAt": "2026-10-11T15:36:15Z",
+            "conclusion": "success",
+            "databaseId": 114507061911,
+            "name": "upstream-integration",
+            "startedAt": "2026-10-11T15:36:12Z",
+            "status": "completed",
+            "steps": [
+              {
+                "completedAt": "2026-10-11T15:36:13Z",
+                "conclusion": "success",
+                "name": "Set up job",
+                "number": 1,
+                "startedAt": "2026-10-11T15:36:12Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:13Z",
+                "conclusion": "success",
+                "name": "Require every upstream matrix to succeed",
+                "number": 2,
+                "startedAt": "2026-10-11T15:36:13Z",
+                "status": "completed"
+              },
+              {
+                "completedAt": "2026-10-11T15:36:13Z",
+                "conclusion": "success",
+                "name": "Complete job",
+                "number": 3,
+                "startedAt": "2026-10-11T15:36:13Z",
+                "status": "completed"
+              }
+            ],
+            "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306/job/114507061911"
+          }
+        ],
+        "status": "completed",
+        "url": "https://github.com/PureSaber/quant-studio/actions/runs/38151601306"
+      }
+    ],
+    "ci_all_success": true
+  }
+}
