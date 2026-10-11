@@ -12,7 +12,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 
 | Doc | Description |
 |-----|-------------|
-| [Windows 真实重启验收](validation/windows-reboot-20261011.md) | 登录后自动启动、历史研究保留、新研究与备份恢复；本次重启后的远端确认待补 |
+| [Windows 真实重启验收](validation/windows-reboot-20261011.md) | 自动启动、历史研究保留、新研究与备份恢复；手机及 ROG 可访问，远端登录后报告确认待补 |
 | [免费衍生品来源验收](validation/free-derivatives-20261011.md) | Cboe VX、NSE 指数 F&O、Deribit 数据接入、网页流程与分析边界 |
 | [衍生品研究工程验收](validation/derivatives-20261011.md) | 期权、海外期货、共享数据/账户、工作台接入与真实数据边界 |
 | [roadmap.md](roadmap.md) | Learning path and project phases |

@@ -1,7 +1,8 @@
 # Windows 真实重启验收（2026-10-11）
 
 服务电脑真实重启并登录 Windows 后，工作台自动启动验收通过。此次检查前未手动启动工作台。
-Tailscale、HTTPS、原有研究与新研究执行均正常；本次重启后的另一台设备访问仍待用户确认。
+Tailscale、HTTPS、原有研究与新研究执行均正常；本次重启后手机恢复访问，ROG 刷新后正常显示登录页。
+远端设备重新登录并打开已有报告的补充确认仍待完成。
 此前 ROG 跨网络及安卓手机的完整操作验收继续以[原记录](workbench-acceptance-20261010.md)为准。
 
 ## 现场证据
@@ -20,12 +21,17 @@ Tailscale、HTTPS、原有研究与新研究执行均正常；本次重启后的
 | 历史报告 | Cboe VX、NSE 指数期货、NSE 指数期权、Deribit 历史成交、Deribit 参考快照五份报告可读取，内容哈希一致 |
 | 新研究 | 通过已保存的 synthetic-demo 方案提交新任务，执行成功并从结果列表重新打开 |
 | 备份恢复 | 新备份恢复至全新目录，2223 个文件的 SHA-256 逐一匹配 |
-| 本次重启后远端访问 | 已请求用户用 ROG 或手机登录并打开报告，确认待补；服务端请求不算远端证据 |
+| 本次重启后远端访问 | 手机原先 Tailscale 离线，用户连接后确认能打开；通过 UU 查看 ROG，刷新 Edge 后登录页正常且无证书警告。远端重新登录和报告回看确认待补；服务端请求不算远端证据 |
 
 新样例运行标识：`08044a7c96b94feda2304d5f2ece93f5`。
 备份文件：`workbench-20261011T010203Z-ff462200.zip`，SHA-256：
 `81dfb39ffc3fec620a50659840df5df2ef6d4b61da54e24eba702a9d699999e8`。
 备份包括工作台状态、已管理快照及模块声明；外部数据、源码环境和私密凭据需单独保存。
+
+用户最初反馈远端似乎打不开。服务端核对手机 Tailscale 离线约 7 小时；连接后设备重新上线，
+用户明确确认“连接 Tailscale 后能打开了”。ROG 的原问题在现场检查时未复现，实际刷新 HTTPS
+登录页正常；此次没有修改客户端代理、网络或服务端防火墙配置。服务重启会使已有登录会话失效，
+需要重新输入工作台密码；看到登录页本身不代表服务故障。
 
 ## 首次失败与修复
 
@@ -46,7 +52,8 @@ HKCU Run 值位于应用私有注册表视图，Windows 原生启动枚举未发
 ## 证据与适用范围
 
 原始本机证据位于 `D:/qe6-reboot-20261011/`：`windows-after.json`、
-`post-reboot-verification.json`、`after-backup-restore.json`、`startup-ci.json`；
+`post-reboot-verification.json`、`after-backup-restore.json`、`startup-ci.json`、
+`remote-connectivity-observation.json`；
 首次失败、原生注册修复、未完成的重启请求及手动恢复记录一并保留。
 归档目录为 `F:/QuantArchive/windows-reboot-20261011/`，包含证据与 SHA-256 清单。
 账号标识、私密配置、密码、私钥和研究数据不提交到文档仓。
