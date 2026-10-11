@@ -1,0 +1,227 @@
+{
+  "schema": "quant.independent-linux-artifact-review/v1",
+  "suites": {
+    "isolation": {
+      "run_url": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870872",
+      "head": "b7534624b818e301ea63bd43901d00a613f50086",
+      "junit": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "30",
+        "time": "9.858",
+        "timestamp": "2026-10-11T17:16:07.620370+00:00",
+        "hostname": "runnervmmprz5"
+      },
+      "cases": [
+        "test_policy_rejects_weak_or_unbounded_modes[change0]",
+        "test_policy_rejects_weak_or_unbounded_modes[change1]",
+        "test_policy_rejects_weak_or_unbounded_modes[change2]",
+        "test_policy_rejects_weak_or_unbounded_modes[change3]",
+        "test_policy_rejects_weak_or_unbounded_modes[change4]",
+        "test_policy_rejects_weak_or_unbounded_modes[change5]",
+        "test_policy_rejects_weak_or_unbounded_modes[change6]",
+        "test_windows_refuses_and_records_failure",
+        "test_malicious_tar_never_writes_outside_output[../escape-file]",
+        "test_malicious_tar_never_writes_outside_output[/absolute-file]",
+        "test_malicious_tar_never_writes_outside_output[link-symlink]",
+        "test_malicious_tar_never_writes_outside_output[pipe-fifo]",
+        "test_tar_byte_budget",
+        "test_special_input_refused_before_open_can_block[fifo]",
+        "test_special_input_refused_before_open_can_block[file-link]",
+        "test_special_input_refused_before_open_can_block[directory-link]",
+        "test_directory_swapped_for_link_during_open_refused",
+        "test_pipeline_real_entry_refuses_on_windows",
+        "test_docker_empty_client_config_ignores_home",
+        "test_files_network_cpu_pid_and_proxy_boundaries",
+        "test_real_memory_limit_kills_workload",
+        "test_real_process_limit",
+        "test_real_tmpfs_and_file_limit",
+        "test_hostile_pid_exhaustion_cannot_claim_success_and_is_cleaned",
+        "test_output_budget_and_untrusted_symlink",
+        "test_total_output_budget_across_multiple_regular_files",
+        "test_log_flood_stopped",
+        "test_timeout_removes_descendants",
+        "test_cancel_removes_container_and_all_children",
+        "test_real_isolation_and_pipeline_cli_entrypoints"
+      ],
+      "actual_container_results": [
+        {
+          "file": "containment-evidence/test_cancel_removes_container_0/result/isolation.json",
+          "status": "cancelled",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "caaa7009ae6a0a9a579eefd33097121fa262f34bd2fcb68e26f3e07cbb74b535",
+          "retained_file": "linux/isolation-00.json"
+        },
+        {
+          "file": "containment-evidence/test_files_network_cpu_pid_and0/result/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "1b24a9cb641cff2d63197f9f0876e25067b335872f914ee68f672b9aef4e51bd",
+          "retained_file": "linux/isolation-01.json"
+        },
+        {
+          "file": "containment-evidence/test_hostile_pid_exhaustion_ca0/result/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "b74e5037172418436bcdf1ff9f7337f77ab950a495a019cee3ee66675c0b5ece",
+          "retained_file": "linux/isolation-02.json"
+        },
+        {
+          "file": "containment-evidence/test_log_flood_stopped0/result/isolation.json",
+          "status": "stream_limit",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "99c400e81333bca9f3bb21e2ac6ec6346fdb9c67497a75b8bd1222e80fb5bb9a",
+          "retained_file": "linux/isolation-03.json"
+        },
+        {
+          "file": "containment-evidence/test_output_budget_and_untrust0/result/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "d3ca15495957337ea12b35a587661ad997301c27e2bb2a68c327b14d39df2ba8",
+          "retained_file": "linux/isolation-04.json"
+        },
+        {
+          "file": "containment-evidence/test_real_isolation_and_pipeli0/pipeline/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "bf8804ee86ef241165bf2cac4a5618c4573cbcdb1e968050d1570c4815178883",
+          "retained_file": "linux/isolation-05.json"
+        },
+        {
+          "file": "containment-evidence/test_real_isolation_and_pipeli0/standalone/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "63c7e398721c2bb08ed82b8d369500b6c2fd14714715ac341460f3e7d81f6ebf",
+          "retained_file": "linux/isolation-06.json"
+        },
+        {
+          "file": "containment-evidence/test_real_memory_limit_kills_w0/result/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "4375e226740641ddd5853de03aa88b4841c1f68047e2fa1aacb218cb7119bbca",
+          "retained_file": "linux/isolation-07.json"
+        },
+        {
+          "file": "containment-evidence/test_real_process_limit0/result/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "b0100f026ba94ea34c9bce33e04b680bd90da6c2c82ee8175bd21aef620401ad",
+          "retained_file": "linux/isolation-08.json"
+        },
+        {
+          "file": "containment-evidence/test_real_tmpfs_and_file_limit0/result/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "7e6f479018f8574af6c6fcf3d70e42fb77358288a8f8ffe14dc8a8f5c9dca1bd",
+          "retained_file": "linux/isolation-09.json"
+        },
+        {
+          "file": "containment-evidence/test_timeout_removes_descendan0/result/isolation.json",
+          "status": "timeout",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "aee780eec9ed850b3f9c63c06514bfd62f3412be0c10b356d3a589de3af01f2f",
+          "retained_file": "linux/isolation-10.json"
+        },
+        {
+          "file": "containment-evidence/test_total_output_budget_acros0/result/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+          "sha256": "bf3c93cd702189c53b19e7f435afbfd0ce3971b35b463cd487d332c7680d5aba",
+          "retained_file": "linux/isolation-11.json"
+        }
+      ],
+      "junit_sha256": "23198a051a60d52f502e920c4b16035e8e0da4f9f7e0d81e840a971f1c01affb"
+    },
+    "notebook": {
+      "run_url": "https://github.com/PureSaber/quant-studio/actions/runs/38158918166",
+      "head": "3527449ebc7f5e2cc1ed7cfdb05732f747362949",
+      "junit": {
+        "name": "pytest",
+        "errors": "0",
+        "failures": "0",
+        "skipped": "0",
+        "tests": "5",
+        "time": "5.388",
+        "timestamp": "2026-10-11T17:17:30.076278+00:00",
+        "hostname": "runnervmmprz5"
+      },
+      "cases": [
+        "test_unsupported_host_is_visible_and_never_falls_back",
+        "test_invalid_isolation_is_not_treated_as_local_mode",
+        "test_actual_notebook_execution_and_error_evidence[import os, socket, random\\nfrom pathlib import Path\\nassert 'PRIVATE_API_KEY' not in os.environ\\nassert random.randint(0, 100) == 66\\ntry:\\n    Path('inputs.json').write_text('bad')\\nexcept OSError:\\n    pass\\nelse:\\n    raise AssertionError('input writable')\\ns = socket.socket(); s.settimeout(1)\\ntry:\\n    s.connect(('1.1.1.1', 53))\\nexcept OSError:\\n    pass\\nelse:\\n    raise AssertionError('network escape')\\nresearch.metric('answer', 42, unit='count', definition='6 times 7')\\nprint('isolated-notebook-42')\\n-succeeded]",
+        "test_actual_notebook_execution_and_error_evidence[raise ValueError('intentional-notebook-failure')-failed]",
+        "test_job_manager_cancel_removes_kernel_and_container"
+      ],
+      "actual_container_results": [
+        {
+          "file": "notebook-evidence/test_actual_notebook_execution0/.projects/6643c69976d14391828b67e3ef333ca9/executions/891915ba26da4703bdec1a04b68e9595/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "2c2db66bf94764df5439595b27e654dd87d9459ace9be9f325f2b23383e40c44",
+          "retained_file": "linux/notebook-00.json"
+        },
+        {
+          "file": "notebook-evidence/test_actual_notebook_execution0/.projects/6643c69976d14391828b67e3ef333ca9/executions/891915ba26da4703bdec1a04b68e9595/isolation-run/isolation.json",
+          "status": "succeeded",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "2c2db66bf94764df5439595b27e654dd87d9459ace9be9f325f2b23383e40c44",
+          "retained_file": "linux/notebook-01.json"
+        },
+        {
+          "file": "notebook-evidence/test_actual_notebook_execution1/.projects/ccec9572a1b248ebac9c4bc0cfb9a84c/executions/288b50c0a8a042df92de464304fb4cc6/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "8e15ce7f5560c53f0dee1938b27daa2dc765a21896c9bf62711b4de6c027344a",
+          "retained_file": "linux/notebook-02.json"
+        },
+        {
+          "file": "notebook-evidence/test_actual_notebook_execution1/.projects/ccec9572a1b248ebac9c4bc0cfb9a84c/executions/288b50c0a8a042df92de464304fb4cc6/isolation-run/isolation.json",
+          "status": "failed",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "8e15ce7f5560c53f0dee1938b27daa2dc765a21896c9bf62711b4de6c027344a",
+          "retained_file": "linux/notebook-03.json"
+        },
+        {
+          "file": "notebook-evidence/test_job_manager_cancel_remove0/.projects/ef971731e8484e7f9287b1fd16d3a1a4/executions/3d671b7423104a9a8f5274a2cb53cc31/isolation.json",
+          "status": "cancelled",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "20eb7757bad1829027444bc45b059305816b6b79e5c28af1bc07c52b69d192be",
+          "retained_file": "linux/notebook-04.json"
+        },
+        {
+          "file": "notebook-evidence/test_job_manager_cancel_remove0/.projects/ef971731e8484e7f9287b1fd16d3a1a4/executions/3d671b7423104a9a8f5274a2cb53cc31/isolation-run/isolation.json",
+          "status": "cancelled",
+          "cleanup_verified": true,
+          "image": "sha256:f801f0c78e7e4397d9cb74e4f8a218594ff2b8886da3705b2976893d23d59bf2",
+          "sha256": "20eb7757bad1829027444bc45b059305816b6b79e5c28af1bc07c52b69d192be",
+          "retained_file": "linux/notebook-05.json"
+        }
+      ],
+      "junit_sha256": "55c21d204fe6f99c146a22ab0dfbd63bef945316d02ad3f27e1beca2f9c6eacc"
+    }
+  },
+  "passed": true,
+  "limitations": [
+    "Linux CI artifacts, not local Windows container support.",
+    "JUnit includes policy/unit controls as well as real-container tests; counts do not all represent attacks."
+  ]
+}

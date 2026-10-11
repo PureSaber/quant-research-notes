@@ -1,0 +1,88 @@
+{
+  "schema": "quant.eight-upgrades-source-snapshot/v1",
+  "captured_at": "2026-10-11T17:27:24.139486+00:00",
+  "repositories": {
+    "quant-lab": {
+      "head": "27159095d6b10a06753c0d61d043d9423a082e2f",
+      "branch": "codex/measurement-benchmarks",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-lab",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-lab/pull/20"
+    },
+    "quant-report-hub": {
+      "head": "b122c20123c5ee75e64cb24c4b2a2d75040fda89",
+      "branch": "codex/measurement-comparison",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-report-hub/pull/31"
+    },
+    "quant-strategy-adapters": {
+      "head": "2bfaa5b85593bb1c040f9406201d4b1bc6aa40f2",
+      "branch": "codex/frozen-forecast-replay",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-b\\quant-strategy-adapters",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-strategy-adapters/pull/3"
+    },
+    "quant-risk-monitor": {
+      "head": "a04544565f5e5da9b30a2c1dce45a4ce208bae1f",
+      "branch": "codex/chronological-model-diagnostics",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-b\\quant-risk-monitor",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-risk-monitor/pull/21"
+    },
+    "quant-data-kit": {
+      "head": "f85128307dd0e3407d24350282fe7b679b591309",
+      "branch": "codex/revision-impact",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-data-kit",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-data-kit/pull/42"
+    },
+    "quant-execution": {
+      "head": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+      "branch": "codex/shared-capital-events",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-execution",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-execution/pull/32"
+    },
+    "quant-portfolio": {
+      "head": "ec9fff26d43b263e1378cd281db6da99477755b1",
+      "branch": "codex/continuous-capital-revision",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-portfolio",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-portfolio/pull/24"
+    },
+    "quant-pipeline": {
+      "head": "b7534624b818e301ea63bd43901d00a613f50086",
+      "branch": "codex/research-isolation-20261012",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-pipeline",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-pipeline/pull/23"
+    },
+    "quant-agent": {
+      "head": "5f91a56cbdb94bfe3c52af033eae16a1d9039a82",
+      "branch": "codex/assistant-assessment-20261012",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-agent",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-agent/pull/19"
+    },
+    "quant-studio": {
+      "head": "3527449ebc7f5e2cc1ed7cfdb05732f747362949",
+      "branch": "codex/research-isolation-20261012",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-studio",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-studio/pull/42"
+    },
+    "quant-workspace": {
+      "head": "3e9d63182bd56bc4088fd83957c1f20fd5dc3622",
+      "branch": "codex/eight-upgrades-integration",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\coordinator\\quant-workspace",
+      "dirty": false,
+      "pr": "https://github.com/PureSaber/quant-workspace/pull/61"
+    }
+  },
+  "deployed": false,
+  "merged": false,
+  "market_validity_claim": false,
+  "model": "gpt-6-astra",
+  "thinking": "xhigh"
+}

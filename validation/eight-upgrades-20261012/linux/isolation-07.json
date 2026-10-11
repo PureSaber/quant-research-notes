@@ -1,0 +1,57 @@
+{
+  "argv": [
+    "/usr/local/bin/python",
+    "-I",
+    "/inputs/research.py"
+  ],
+  "cleanup_verified": true,
+  "code_sha256": "9d760bc4a6766669273541e47e064f173583d9f05caa875c8537eb6510f308f4",
+  "collector_sha256": "bdfd4a64ad2ec5d7e16494f884984c5514f516c791def24e5c8ab942331345f9",
+  "container_id": "ab88317a3dd7dc13893b400926f86be01c4be2fc3491f3c2425d2cf2d7e9ca4c",
+  "container_name": "quant-isolate-536e5618cbe040a690157ffc7fc22df3",
+  "created_at": "2026-10-11T17:16:08.464169+00:00",
+  "duration_seconds": 0.552,
+  "environment": {
+    "backend": "docker-linux",
+    "cgroup_version": "2",
+    "docker_version": "28.0.4",
+    "image_architecture": "amd64",
+    "image_id": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+    "kernel": "6.17.0-1022-azure",
+    "security_options": [
+      "name=apparmor",
+      "name=seccomp,profile=builtin",
+      "name=cgroupns"
+    ]
+  },
+  "evidence_kind": "container-execution",
+  "inputs": {
+    "data.txt": "c13c514e192e98ba3ab67abc6474678a569e28b402a3fabd835912ee660a80f8",
+    "research.py": "aa42260639a94379f6c94c65dadffd63d80c1a9d9bf2f5e578470828751ecf6a"
+  },
+  "logs": {
+    "stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "output_collection": "quiesced_container_regular_file_archive",
+  "outputs": {},
+  "policy": {
+    "backend": "docker-linux",
+    "cpus": 1,
+    "image": "sha256:df18428df8a0f9189c84e7424d214b4c50092af1f9dca5842a00c41c39bda316",
+    "input_bytes": 268435456,
+    "log_bytes": 1048576,
+    "memory_mb": 128,
+    "output_bytes": 1048576,
+    "pids": 32,
+    "schema": "quant.research-isolation/v1",
+    "seed": 42,
+    "timeout_seconds": 20,
+    "tmp_mb": 32,
+    "work_mb": 2
+  },
+  "returncode": 137,
+  "schema": "quant.research-isolation-result/v1",
+  "seed": 42,
+  "status": "failed"
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "quant.group-delivery/v1",
+  "group": "D",
+  "items": [
+    7,
+    8
+  ],
+  "state": "delivered-for-coordinator-review",
+  "repositories": [
+    {
+      "repository": "quant-pipeline",
+      "base": "98585749e0aaccd4c1b2a95aca55d2bd10b06b9c",
+      "default_branch": "main",
+      "head": "b7534624b818e301ea63bd43901d00a613f50086",
+      "branch": "codex/research-isolation-20261012",
+      "pr": "https://github.com/PureSaber/quant-pipeline/pull/23",
+      "worktree": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-pipeline",
+      "uncommitted_status": ""
+    },
+    {
+      "repository": "quant-studio",
+      "base": "09f36f9575423f966d803f12a4c19769f218a701",
+      "default_branch": "main",
+      "head": "3527449ebc7f5e2cc1ed7cfdb05732f747362949",
+      "branch": "codex/research-isolation-20261012",
+      "pr": "https://github.com/PureSaber/quant-studio/pull/42",
+      "worktree": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-studio",
+      "uncommitted_status": ""
+    },
+    {
+      "repository": "quant-agent",
+      "base": "d461b113ccd9ff98fca3966978126a08842b135f",
+      "default_branch": "master",
+      "head": "5f91a56cbdb94bfe3c52af033eae16a1d9039a82",
+      "branch": "codex/assistant-assessment-20261012",
+      "pr": "https://github.com/PureSaber/quant-agent/pull/19",
+      "worktree": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\quant-agent",
+      "uncommitted_status": ""
+    }
+  ],
+  "entrypoints": {
+    "isolation_cli": "quant-isolate --policy policy.json --inputs frozen-inputs --output new-result -- /usr/local/bin/python -I /inputs/research.py",
+    "isolation_api": "quant_pipeline.isolation.run_isolated(argv, inputs, output, policy, cancelled=None)",
+    "pipeline": "quant-pipe run --config pipeline.yaml --json; explicit step.isolation + inputs/output + argv",
+    "notebook": "QUANT_STUDIO_NOTEBOOK_CONFIG isolation mapping; existing POST /projects/{id}/notebook-run and NotebookStore.prepare/execute; queued JobManager cancellation supported",
+    "assessment": "quant-assistant-eval export | baseline | score | self-test"
+  },
+  "supported_behavior": {
+    "7": [
+      "Linux local Docker cgroup v2 + builtin seccomp enforced; immutable preinstalled image ID only; no automatic service installation/start/image pull or weak fallback.",
+      "Read-only input staging with no-follow descriptors; reject FIFO/symlinks/directory replacement, bounded input count/bytes, no writable host mount.",
+      "Network none, no capabilities/new privileges, nonroot, readonly rootfs, bounded memory/no swap, CPU, PIDs, work/tmp tmpfs, file/aggregate output and stdout/stderr.",
+      "Quiesced in-container collector obtains tmpfs artifacts; host validates regular-file archive. Whole-container force removal and verified cleanup on normal completion, failure, timeout and explicit cancellation.",
+      "Notebook UI labels the actual mode; blocked unsupported-host records and downloadable isolation/image/seed/environment/input-output identities; QDK host-interpreter intake explicitly rejected.",
+      "Actual standalone CLI and existing pipeline CLI exercised in real Linux containers; strict pipeline config validator and JSON schema accept only enforced policy."
+    ],
+    "8": [
+      "13 versioned synthetic financial-research evidence cases, 18 required claims, separately authored literal annotations with scalar/Decimal rationales.",
+      "Explicit public packet excludes answers/rationales; deterministic evidence reasoner accepts public data only, no case-ID answer lookup.",
+      "Structured scoring checks financial arithmetic, costs/cashflows, evidence pointers, decision, missing failures, conflicts, comparable basis, timing, sufficiency, multiple testing and abstention.",
+      "JSON/HTML reports retain exact public/label/submission/scorer identities and per-case rationales/errors; missing cases remain in denominator, extra unsupported claims fail.",
+      "Actual offline baseline 13/13 cases and 18/18 claims; evaluator correctly accepts one positive and rejects ten independent error controls. Online model quality is explicitly not measured."
+    ]
+  },
+  "local_tests": [
+    {
+      "repo": "quant-agent",
+      "command": "../runtime/Scripts/python.exe -m pytest -q --basetemp=../a1 --tb=short --junitxml=../logs/agent-full.xml",
+      "results": {
+        "tests": 148,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "log": "logs/agent-full.log"
+    },
+    {
+      "repo": "quant-studio",
+      "command": "QUANT_TEST_NOTEBOOK_PYTHON=<D>/runtime/Scripts/python.exe; ../runtime/Scripts/python.exe -m pytest -q --basetemp=../s2 --tb=short --junitxml=../logs/studio-full-final.xml",
+      "results": {
+        "tests": 552,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 26
+      },
+      "log": "logs/studio-full-final.log",
+      "notes": "Includes actual local Notebook success/error/environment drift/cancellation and JupyterLab save/submit/plot/download. 26 optional platform/upstream tests explicitly skipped; actual Docker runs are separate Linux CI. Final later changes are backend pin metadata and CI evidence upload only."
+    },
+    {
+      "repo": "quant-pipeline",
+      "command": "../runtime-pipe/Scripts/python.exe -m pytest -q --basetemp=../p1 --tb=short --junitxml=../logs/pipeline-full.xml",
+      "results": {
+        "tests": 298,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 18
+      },
+      "log": "logs/pipeline-full.log",
+      "notes": "Separate lock-consistent environment; Windows skips Linux descriptor/Docker tests. Exact candidate Linux CI supplies real backend verification."
+    }
+  ],
+  "cli_acceptance": {
+    "commands": [
+      "python -m quant_agent.assistant_assessment export --cases quant-agent/benchmarks/assistant-v1/public/cases.json --output acceptance/candidate-packet.json",
+      "python -m quant_agent.assistant_assessment baseline --cases acceptance/candidate-packet.json --output acceptance/baseline-submission.json",
+      "python -m quant_agent.assistant_assessment score --cases acceptance/candidate-packet.json --labels quant-agent/benchmarks/assistant-v1/evaluator/labels.json --submission acceptance/baseline-submission.json --output acceptance/quality-report",
+      "python -m quant_agent.assistant_assessment self-test --suite quant-agent/benchmarks/assistant-v1 --output acceptance/evaluator-regression",
+      "python verify_windows_refusal.py"
+    ],
+    "baseline_report": "acceptance/quality-report/report.html",
+    "baseline_json": "acceptance/quality-report/report.json",
+    "regression_report": "acceptance/evaluator-regression/index.html",
+    "regression_json": "acceptance/evaluator-regression/self-test.json",
+    "windows": {
+      "host": "Windows-11-10.0.26200-SP0",
+      "cli_exit_code": 2,
+      "cli_status": "blocked",
+      "notebook_status": "blocked",
+      "notebook_record": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-d\\acceptance\\windows\\notebook\\.projects\\e40ace8cd7bf483684645db43d534ecc\\executions\\9e1075480d5f4918a095dbbb614fd775\\run.json",
+      "host_fallback_executed": false,
+      "evidence_kind": "unsupported_host_refusal",
+      "linux_containment_claimed": false
+    }
+  },
+  "independent_controls": [
+    "Actual Linux attacks: unmapped host sentinel, readonly inputs/rootfs, external TCP/DNS rejection, cgroup limits, memory exhaustion, PID limit, deliberately unclean hostile PID saturation, tmpfs/per-file/aggregate output bounds, symlink output, log flood, timeout and cancellation with live descendants.",
+    "Docker HOME/config proxy credential sentinel absent from payload; fresh empty client config, no inherited host API sentinel.",
+    "FIFO and directory-swap negative cases are real Linux filesystem operations, not mocks.",
+    "Numeric annotations independently recomputed with Decimal; wrong conclusion with correct evidence, incorrect net return, naive cashflow return, omitted failures, conflict denial, wrong evidence, missing abstention and caveat gaming are rejected.",
+    "Coordinator independently perturbed IDs and unseen ledger numbers (200/20/25); baseline returned -5 / -0.025 and independent negative submissions failed. Coordinator evidence lives in its review directory, not edited here."
+  ],
+  "environment": {
+    "agent_studio": "runtime",
+    "pipeline": "runtime-pipe",
+    "freezes": [
+      "logs/runtime-freeze.txt",
+      "logs/pipeline-runtime-freeze.txt"
+    ],
+    "pip_check": [
+      "logs/runtime-pip-check.txt",
+      "logs/pipeline-runtime-pip-check.txt"
+    ],
+    "dependency_note": "Pipeline and agent locks pin incompatible pandas/pyarrow versions; final local tests use separate environments. After two GitHub partial-clone TLS failures, quant-workspace v0.3.1 was fetched without partial clone at 537388a4d9548b612fa1e4b306c482c04b45c433 and built into wheels/quant_workspace-0.3.1-py3-none-any.whl. pipeline-local-validation.lock changes only that transport to the verified same-source local wheel; repository lock files unchanged."
+  },
+  "review_repairs": [
+    "Empty Docker client configuration + proxy sentinel",
+    "Nonblocking descriptor staging rejects FIFOs and symlink replacement",
+    "Trusted quiesced collector replaces Docker copy API for tmpfs",
+    "Hostile PID saturation fails honestly and cleans all descendants",
+    "Narrow hidden-file upload retains actual Notebook run/isolation/environment/log records",
+    "Strict YAML/JSON policy declaration and both actual product CLI paths"
+  ],
+  "failed_attempts_retained": [
+    "logs/isolation-ci-first.log",
+    "logs/isolation-ci-second.log",
+    "logs/pipeline-ci-first.log",
+    "logs/pipeline-ci-second.log",
+    "logs/notebook-focused.xml",
+    "logs/studio-full.log",
+    "logs/pipeline-separate-install.log",
+    "logs/pipeline-separate-install-retry.log"
+  ],
+  "limits": [
+    "Linux Docker local daemon/cgroup v2 only; Windows refuses actual isolation, and interactive JupyterLab is trusted-local.",
+    "Daemon/kernel/image/operator trusted; no claim against their compromise. Host crash or SIGKILL can prevent cleanup and requires operator inspection of labeled containers.",
+    "Finite Notebook mode rejects host-only QDK intake interpreters; typed v2 pipeline DAG isolation is not included.",
+    "Benchmark is a public synthetic regression specification, not an external human audit, unseen model holdout, arbitrary prose grading, online LLM quality result or real-market certification.",
+    "No live orders, production deployment, paid model/data calls, account recovery, default-branch merges or changes to F:/Quant/older scratch workspaces."
+  ],
+  "human_items": [],
+  "ci": {
+    "quant-pipeline": {
+      "head": "b7534624b818e301ea63bd43901d00a613f50086",
+      "isolation_run": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870872",
+      "isolation_tests": {
+        "passed": 30,
+        "skipped": 0,
+        "failed": 0
+      },
+      "full_run": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870742",
+      "full_matrix": "Python 3.10/3.11/3.12, each 296 passed and 2 unrelated skips, >=80% combined branch coverage; separate v2 core gates passed",
+      "status": "success",
+      "raw_artifacts": "ci/pipeline-final"
+    },
+    "quant-studio": {
+      "head": "3527449ebc7f5e2cc1ed7cfdb05732f747362949",
+      "isolation_run": "https://github.com/PureSaber/quant-studio/actions/runs/38158918166",
+      "isolation_tests": {
+        "passed": 5,
+        "skipped": 0,
+        "failed": 0
+      },
+      "isolation_status": "success",
+      "check_snapshot": "logs/studio-pr-checks-latest.json",
+      "raw_artifacts": "ci/notebook-final",
+      "hidden_evidence": "run/isolation/environment/execution records downloaded and independently audited; see ci-artifact-index.json and coordinator review/linux-artifact-review.json",
+      "status": "success",
+      "completed_successful_checks": 36,
+      "full_run": "https://github.com/PureSaber/quant-studio/actions/runs/38158918191",
+      "upstream_run": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181",
+      "research_workspace_run": "https://github.com/PureSaber/quant-studio/actions/runs/38158918168"
+    },
+    "quant-agent": {
+      "head": "5f91a56cbdb94bfe3c52af033eae16a1d9039a82",
+      "offline_run": "https://github.com/PureSaber/quant-agent/actions/runs/38158230300",
+      "offline_tests": {
+        "passed": 17,
+        "skipped": 0,
+        "failed": 0
+      },
+      "full_run": "https://github.com/PureSaber/quant-agent/actions/runs/38158230307",
+      "full_matrix": "Python 3.10/3.11/3.12, each 148 passed, coverage gates passed",
+      "status": "success",
+      "raw_artifacts": "ci/agent-final"
+    }
+  },
+  "ci_artifact_index": "ci-artifact-index.json",
+  "totals": {
+    "local_passed": 954,
+    "local_skipped": 44,
+    "local_failed": 0,
+    "backend_ci_tests": 30,
+    "notebook_ci_tests": 5,
+    "offline_assessment_ci_tests": 17,
+    "unique_real_container_executions": 15,
+    "all_real_containers_cleanup_verified": true,
+    "online_model_quality": "not_measured"
+  }
+}
