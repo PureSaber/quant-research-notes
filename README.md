@@ -1,6 +1,6 @@
 # Quant Research Notes
 
-当前日常入口：[Quant Studio 工作台](https://github.com/PureSaber/quant-studio)、[操作指南](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md)、[部署与备份](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md)。最新实测与待验收项见 [2026-10-10 工作台正式验收记录](validation/workbench-acceptance-20261010.md)；前阶段能力说明保留于 [工作台阶段记录](validation/workbench-20261010.md)。
+当前日常入口：[Quant Studio 工作台](https://github.com/PureSaber/quant-studio)、[操作指南](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md)、[部署与备份](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md)。工程及跨设备实测见 [2026-10-10 工作台正式验收记录](validation/workbench-acceptance-20261010.md)，后续真实重启的自动启动结果见 [2026-10-11 重启验收](validation/windows-reboot-20261011.md)；前阶段能力说明保留于 [工作台阶段记录](validation/workbench-20261010.md)。
 
 新增：[免费海外衍生品来源](validation/free-derivatives-20261011.md)。
 
@@ -12,6 +12,7 @@ Knowledge base and roadmap for the PureSaber quant research multi-repository wor
 
 | Doc | Description |
 |-----|-------------|
+| [Windows 真实重启验收](validation/windows-reboot-20261011.md) | 登录后自动启动、历史研究保留、新研究与备份恢复；本次重启后的远端确认待补 |
 | [免费衍生品来源验收](validation/free-derivatives-20261011.md) | Cboe VX、NSE 指数 F&O、Deribit 数据接入、网页流程与分析边界 |
 | [衍生品研究工程验收](validation/derivatives-20261011.md) | 期权、海外期货、共享数据/账户、工作台接入与真实数据边界 |
 | [roadmap.md](roadmap.md) | Learning path and project phases |
