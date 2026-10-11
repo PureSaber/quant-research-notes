@@ -86,3 +86,8 @@ powershell -File scripts/health-check.ps1
 - CLI: `pip install -e .` then project-specific commands
 - Tests: `pytest -q` before push
 
+## 机构研究扩展（2026-10-11）
+
+新增三类机构常见研究能力，交付记录见 [institutional-research-20261011](validation/institutional-research-20261011.md)。
+
+统一入口与合成输入用法见相邻仓库 [quant-workspace/profiles/institutional-research](../quant-workspace/profiles/institutional-research/README.md)。此增量提供离线合成验收、账户回放和独立 Studio 入口；真实市场数据与权限仍须明确提供。验收命令及边界见上述入口。
