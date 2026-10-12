@@ -1,0 +1,91 @@
+{
+  "schema": "quant.eight-upgrades-findings/v1",
+  "findings": [
+    {
+      "id": "C-03",
+      "priority": 2,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_data_kit/revision_impact.py impact",
+      "finding": "affected_dependencies is frozen on first graph visit and can omit an input found affected later in the transitive closure, depending on descriptor hash ordering.",
+      "required": "Compute complete affected closure before reporting all affected edges; test diamond graph and alternate traversal order.",
+      "evidence": "../integration/root-probe-final/report.json"
+    },
+    {
+      "id": "A-01",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_lab/measurement.py read_measured_run and compare.py",
+      "finding": "Validation followed by independent rereads can use metrics/config/returns from different source generations; compare_runs also combines scan_run metrics with separately read measurement.",
+      "required": "Bind all actually used bytes to one validated manifest snapshot; use metrics and measurement from same snapshot; add source replacement negative.",
+      "evidence": "measurement-replacement-tests-02.xml"
+    },
+    {
+      "id": "C-02",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_execution/continuous.py margin state",
+      "finding": "margin_call is derived from initial-margin buying power; declared maintenance rate is only validated at construction. Initial shortfall can therefore be mislabeled as maintenance breach.",
+      "required": "Separate initial buying power from maintenance call, independently test cash250/long10@100/mark90/initial20%/maintenance10%; verify partial internal funding remediation.",
+      "evidence": "margin-probe-final.json",
+      "reviewed_source_sha256": "fbc44c9258abf210af01d347379409b96f4d939a8b994439d117459f7b0af7da"
+    },
+    {
+      "id": "B-01",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_risk_monitor/model_diagnostics.py missing block handling",
+      "finding": "Dropping blocks with missing domain observations can produce full-window confidence decisions from selectively observed favorable samples.",
+      "required": "Keep descriptive complete-case statistics but mark incomplete observation and avoid whole-window confidence claims; add unfavorable-observation removal negative.",
+      "evidence": "../integration/root-probe-final/report.json"
+    },
+    {
+      "id": "D-01",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_pipeline/isolation.py Docker client configuration",
+      "finding": "Keeping host HOME without isolated --config permits Docker's user proxy configuration to inject proxy variables/credentials into new containers.",
+      "required": "Use isolated empty Docker client configuration, and demonstrate sentinel host proxy config does not enter container.",
+      "reference": "https://docs.docker.com/engine/cli/proxy/",
+      "evidence": "linux-isolation-final/isolation-tests.xml"
+    },
+    {
+      "id": "D-02",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_pipeline/isolation.py _stage",
+      "finding": "Blocking O_RDONLY open precedes fstat regular-file rejection; a FIFO can hang staging before containment starts.",
+      "required": "Use lstat/nonblocking safe open/fstat checks and actual FIFO negative test; handle symlink/directory replacement safely.",
+      "evidence": "linux-isolation-final/isolation-tests.xml"
+    },
+    {
+      "id": "C-01",
+      "priority": 1,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant_execution/continuous.py checkpoint and restore",
+      "finding": "Checkpoint binds event journal only. A fresh account with different allocations/specs/owners/currency/FX/opening time can restore it without verifying the original account configuration.",
+      "required": "Bind complete canonical opening configuration hash, reject mismatches before applying any event, independently test changed capital and instrument specification.",
+      "evidence": "checkpoint-probe-final.json",
+      "reviewed_source_sha256": "fbc44c9258abf210af01d347379409b96f4d939a8b994439d117459f7b0af7da"
+    },
+    {
+      "id": "C-04",
+      "priority": 2,
+      "state": "fixed_code_reviewed_group_regression_and_final_CI_verified",
+      "discovered_by": "Group C final self-review",
+      "component": "quant_execution/continuous.py native futures collateral",
+      "finding": "Converting rounded base-currency PnL back into native currency could lose 1e-8 of collateral loss.",
+      "resolution": "Calculate the native unrealized loss from native position cost before FX reporting rounding.",
+      "commit": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+      "evidence": "../group-c/quant-execution/tests/test_continuous.py::test_native_futures_loss_is_reserved_before_fx_reporting_rounding"
+    },
+    {
+      "id": "D-03",
+      "priority": 2,
+      "state": "fixed_verified_on_candidate",
+      "component": "quant-studio/.github/workflows/notebook-isolation.yml",
+      "finding": "Artifact upload excluded hidden .quant-studio directories; JUnit passed but downloadable original execution records were absent.",
+      "required": "Include controlled hidden fixture evidence, rerun Linux CI, independently download and verify actual run/isolation/environment outputs.",
+      "evidence": "linux-artifact-review.json"
+    }
+  ]
+}

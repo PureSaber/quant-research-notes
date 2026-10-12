@@ -1,0 +1,152 @@
+{
+  "schema": "quant.capability-evidence-review/v1",
+  "added_files": [
+    {
+      "project": "quant-data-kit",
+      "evidence": "docs/REVISION_IMPACT.md",
+      "exists": true
+    },
+    {
+      "project": "quant-data-kit",
+      "evidence": "src/quant_data_kit/revision_impact.py",
+      "exists": true
+    },
+    {
+      "project": "quant-data-kit",
+      "evidence": "tests/test_revision_impact.py",
+      "exists": true
+    },
+    {
+      "project": "quant-execution",
+      "evidence": "docs/CONTINUOUS_REPLAY.md",
+      "exists": true
+    },
+    {
+      "project": "quant-execution",
+      "evidence": "src/quant_execution/continuous.py",
+      "exists": true
+    },
+    {
+      "project": "quant-execution",
+      "evidence": "tests/test_continuous.py",
+      "exists": true
+    },
+    {
+      "project": "quant-portfolio",
+      "evidence": "docs/CONTINUOUS_CAPITAL.md",
+      "exists": true
+    },
+    {
+      "project": "quant-portfolio",
+      "evidence": "scripts/run_continuous_demo.py",
+      "exists": true
+    },
+    {
+      "project": "quant-portfolio",
+      "evidence": "src/quant_portfolio/continuous_study.py",
+      "exists": true
+    },
+    {
+      "project": "quant-risk-monitor",
+      "evidence": "docs/MODEL_DIAGNOSTICS.md",
+      "exists": true
+    },
+    {
+      "project": "quant-risk-monitor",
+      "evidence": "examples/model_diagnostics_demo.py",
+      "exists": true
+    },
+    {
+      "project": "quant-risk-monitor",
+      "evidence": "src/quant_risk_monitor/model_diagnostics.py",
+      "exists": true
+    },
+    {
+      "project": "quant-pipeline",
+      "evidence": "docs/research-isolation.md",
+      "exists": true
+    },
+    {
+      "project": "quant-pipeline",
+      "evidence": "src/quant_pipeline/isolation.py",
+      "exists": true
+    },
+    {
+      "project": "quant-pipeline",
+      "evidence": "src/quant_pipeline/isolation_collect.py",
+      "exists": true
+    },
+    {
+      "project": "quant-pipeline",
+      "evidence": "tests/test_isolation_docker.py",
+      "exists": true
+    },
+    {
+      "project": "quant-lab",
+      "evidence": "docs/financial-benchmarks.md",
+      "exists": true
+    },
+    {
+      "project": "quant-lab",
+      "evidence": "docs/measurement.md",
+      "exists": true
+    },
+    {
+      "project": "quant-lab",
+      "evidence": "src/quant_benchmarks/oracle.py",
+      "exists": true
+    },
+    {
+      "project": "quant-lab",
+      "evidence": "src/quant_lab/measurement.py",
+      "exists": true
+    },
+    {
+      "project": "quant-lab",
+      "evidence": "src/quant_measurement/__init__.py",
+      "exists": true
+    },
+    {
+      "project": "quant-agent",
+      "evidence": "benchmarks/assistant-v1/evaluator/labels.json",
+      "exists": true
+    },
+    {
+      "project": "quant-agent",
+      "evidence": "benchmarks/assistant-v1/public/cases.json",
+      "exists": true
+    },
+    {
+      "project": "quant-agent",
+      "evidence": "src/quant_agent/assessment_baseline.py",
+      "exists": true
+    },
+    {
+      "project": "quant-agent",
+      "evidence": "src/quant_agent/assistant_assessment.py",
+      "exists": true
+    },
+    {
+      "project": "quant-workspace",
+      "evidence": "profiles/evidence-research/README.md",
+      "exists": true
+    },
+    {
+      "project": "quant-strategy-adapters",
+      "evidence": "docs/FROZEN_FORECAST.md",
+      "exists": true
+    },
+    {
+      "project": "quant-strategy-adapters",
+      "evidence": "examples/forecast_demo.py",
+      "exists": true
+    },
+    {
+      "project": "quant-strategy-adapters",
+      "evidence": "src/quant_strategy_adapters/forecast.py",
+      "exists": true
+    }
+  ],
+  "passed": true,
+  "runtime_certification": false
+}

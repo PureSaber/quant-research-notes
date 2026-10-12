@@ -1,0 +1,18 @@
+{
+  "schema": "quant.independent-margin-review/v1",
+  "evidence_kind": "synthetic",
+  "source_sha256": "fbc44c9258abf210af01d347379409b96f4d939a8b994439d117459f7b0af7da",
+  "source_unchanged": true,
+  "mid_expected_pnl": "-100",
+  "mid_actual_pnl": "-100.00000000",
+  "mid_actual_margin_call": false,
+  "mid_expected_initial_free": "-30.0",
+  "mid_expected_maintenance_free": "60.0",
+  "low_expected_pnl": "-180",
+  "low_actual_pnl": "-180.00000000",
+  "low_actual_margin_call": true,
+  "partial_transfer_accepted": true,
+  "partial_transfer_error": null,
+  "partial_transfer_changes_no_total_pnl": true,
+  "passed": true
+}
