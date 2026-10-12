@@ -1,7 +1,10 @@
 # Repository Map
 
-更新时间：2026-10-11。当前维护范围为26个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
+更新时间：2026-10-12。当前维护范围为26个核心仓库；下面同时保留学习工具、历史工作区和已归档兼容层。
 核心范围与M8的14仓不可变发布清单不同：新增研究项目及默认分支更新不会自动获得M8发布认证。
+
+本批八项研究完整性升级的候选提交、实际入口和独立验收见
+[eight-upgrades-20261012](validation/eight-upgrades-20261012/README.md)。新增能力在 PR 中，合成验收与真实市场有效性分别声明。
 
 [机器可读能力清单](https://github.com/PureSaber/quant-workspace/blob/main/src/quant_workspace/capabilities.json)列出26仓的资产、功能、接口、数据状态、缺口和关系。[开发配置](https://github.com/PureSaber/quant-workspace/blob/main/configs/platform.workspace.yaml)与14仓发行配置分开；`quant-workspace capabilities --inventory`只能核验源码、提交和证据文件存在性。`platform-status`另外核对指定的环境、候选验收和发布指针，未观测服务保持未观测。四线新增入口和复核边界见[本轮交付记录](validation/four-lines-20261011/README.md)。
 

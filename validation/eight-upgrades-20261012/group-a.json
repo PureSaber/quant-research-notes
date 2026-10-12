@@ -1,0 +1,385 @@
+{
+  "schema": "quant.group-delivery/v1",
+  "group": "A",
+  "date": "2026-10-12",
+  "state": "ready-for-coordinator-review-with-ci-access-dependency",
+  "repositories": [
+    {
+      "repository": "PureSaber/quant-lab",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-lab",
+      "base": "5d8c2336c1222696bdda6ab73cdd9c4e341f4ff7",
+      "head": "27159095d6b10a06753c0d61d043d9423a082e2f",
+      "branch": "codex/measurement-benchmarks",
+      "PR": "https://github.com/PureSaber/quant-lab/pull/20",
+      "uncommitted": ""
+    },
+    {
+      "repository": "PureSaber/quant-report-hub",
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "base": "a98f13eb5d42e522e3a27d7cd329a8118e379deb",
+      "head": "b122c20123c5ee75e64cb24c4b2a2d75040fda89",
+      "branch": "codex/measurement-comparison",
+      "PR": "https://github.com/PureSaber/quant-report-hub/pull/31",
+      "uncommitted": ""
+    }
+  ],
+  "items": {
+    "1": {
+      "status": "implemented-and-verified",
+      "features": [
+        "Stdlib-only quant_measurement/v1 JSON validator with 26 exact economic basis dimensions, original evidence/sample kinds, market/code identity and explicit unavailable reasons.",
+        "Native standard/v2 bridge verifies and parses the same bytes under a validated manifest; self-consistent source replacement negative covered.",
+        "Ordinary quant-lab compare and CLI revalidate sources, explicit exit 2, --view-only retains historical metrics. Ranking requires complete nonsynthetic measurement and existing ledger/universe eligibility.",
+        "Research compare retains failed candidate inventory; report workbench suppresses unknown/incompatible economic differences.",
+        "Report-hub native standard comparison compounds decimal net TWR, includes opening wealth in drawdown, suppresses annualization, exports JSON evidence. Dashboard shared basis keys gate multi-selection while legacy metrics remain readable."
+      ],
+      "entrypoints": [
+        "quant_measurement.validate_measurement",
+        "quant_measurement.compare_measurements",
+        "quant_measurement.validate_observations",
+        "quant_lab.measurement.read_measured_run",
+        "quant-lab --db DB compare --project PROJECT RUN_A RUN_B --json",
+        "quant-report compare --adapter standard --output-root ROOT --run-ids RUN_A RUN_B --out-dir OUT"
+      ],
+      "independent_controls": [
+        "Every basis dimension missing/changed blocks comparison; evidence/input differences, failed/missing candidates and irregular-event annualization blocked.",
+        "Validation followed by replacement of metrics or returns plus a self-consistent new manifest cannot certify mixed source versions.",
+        "CLI synthetic +10% then -10% produces -1% cumulative return, -10% relative drawdown including opening wealth; additive 0% is rejected by expected assertion.",
+        "Mismatched currency CLI returns 2 and no comparison chart; same-basis candidate/cash returns 0."
+      ],
+      "evidence": [
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\cli-compare-positive.json",
+          "sha256": "4b781d94a3243749230afccdee6d1dcf69b74dc0a0c18e3e967e0726def296a1"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\cli-compare-negative.json",
+          "sha256": "21f40dbfeee99b64ba3d53d8c5c097e348af601cc1b47518b8fe87a532dc98ae"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\cli-report-positive\\measurement-comparison.json",
+          "sha256": "d18f02a43102be597662db61dc93c07fc6fd45f73bab485ff6a29ab4de1be23c"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\cli-report-negative.log",
+          "sha256": "09cb4aa94d7c7c2c7cfb823e5635a4a34cd474898b266a01241ce086e2d2944e"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\peer-measurement-check.json",
+          "sha256": "36133629c6abe069f09ee6f64bbdea47272b3771899808d8cdf24aa3c8ccd5a5"
+        }
+      ]
+    },
+    "2": {
+      "status": "implemented-local-real-adapter-pass-ci-unavailable",
+      "features": [
+        "Independent Decimal oracle written before adapter invocation.",
+        "Real QExec split/dividend entitlement/payment/priced-delisting API with idempotency and changed-content rejection.",
+        "Real QExec futures daily settlement, margin and roll; insufficient-margin atomic rejection.",
+        "Real quant-fund FOF ACT/365F fixed expenses/cash interest, reversal/crystallization/post-fee HWM.",
+        "Real report-hub FX internal transfer evaluator/report writer and unpaired-transfer rejection.",
+        "Exclusive JSON/Markdown/raw journal artifacts; full source commit and clean-state checks before and after; explicit missing-adapter failures and environment evidence."
+      ],
+      "entrypoints": [
+        "quant-lab financial-benchmarks --sources benchmark-sources.json --out NEW_OUTPUT",
+        "python -m quant_benchmarks --sources benchmark-sources.json --out NEW_OUTPUT"
+      ],
+      "independent_expected": {
+        "corporate_final_cash": "1790",
+        "futures_final_cash": "1191",
+        "fof_fixed_fee_net": "1200.288",
+        "fx_portfolio_pnl_base": "69"
+      },
+      "controls": [
+        "Futures roll spread never counted as notional cash payment; margin encumbered rather than expensed.",
+        "Dividend entitlement receivable is not spendable cash; ex-mark adjustment preserves NAV; payment not income twice.",
+        "FOF negative performance reverses uncrystallized reserves; next fee only above post-fee HWM.",
+        "Paired FX transfers net to zero external flow without losing flow-FX P&L.",
+        "Wrong expected amount residual fails; missing/dirty/changed-source checkouts never pass."
+      ],
+      "evidence": [
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\benchmark-final-01\\report.json",
+          "sha256": "ef3f739fc4bab4f8f832e407ad17f7de95e379a70d34b70fc26e00a1138d559c"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\benchmark-final-01\\report.md",
+          "sha256": "9acbc0c3cddd086d3cbb9167a3f9f2c87a3e1d00216dce55868d56f0b5177be4"
+        },
+        {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\benchmark-final-01\\expected.json",
+          "sha256": "b31e2003e5a4f4f43f0496b9f76281b7e559f5fe678d700630e3301ed59754c3"
+        }
+      ],
+      "sources": {
+        "quant-data-kit": {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-data-kit",
+          "commit": "5d9d58a2b639cafac2db221216e654d883372975",
+          "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-data-kit\\src\\quant_data_kit\\__init__.py",
+          "dirty": false,
+          "verified_after_execution": true
+        },
+        "quant-execution": {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-execution",
+          "commit": "652d310d2573a58161ca7b8c5eb3210fcb220866",
+          "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-execution\\src\\quant_execution\\__init__.py",
+          "dirty": false,
+          "verified_after_execution": true
+        },
+        "quant-fund": {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-fund",
+          "commit": "31b032b65b1b26232125117593880d0cf94aa6cc",
+          "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-fund\\src\\quant_fund\\__init__.py",
+          "dirty": false,
+          "verified_after_execution": true
+        },
+        "quant-report-hub": {
+          "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+          "commit": "b122c20123c5ee75e64cb24c4b2a2d75040fda89",
+          "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub\\quant_report_hub\\__init__.py",
+          "dirty": false,
+          "verified_after_execution": true
+        }
+      }
+    }
+  },
+  "commands": [
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-lab",
+      "command": "$env:PYTHONPATH=\"<group-a>/quant-lab/src;<group-a>/quant-data-kit/src;<group-a>/quant-factors/src;<group-a>/quant-execution/src;<group-a>/quant-fund/src;<group-a>/quant-report-hub\"; ../.venv/Scripts/python.exe -m pytest -q --basetemp <new-group-a-temp> --cov=quant_benchmarks --cov-report=json:../lab-coverage-03.json --junitxml=../lab-full-03.xml",
+      "result": "206 passed; combined coverage 85.54%; exit 0",
+      "log": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\lab-full-03.log"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "command": "$env:MPLBACKEND=\"Agg\"; ../.venv/Scripts/python.exe -m pytest -q --basetemp <new-group-a-temp> --cov-report=json:../report-coverage-02.json --junitxml=../report-full-02.xml",
+      "result": "316 passed, 5 skipped; 91.11%; exit 0",
+      "log": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\report-full-02.log"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "command": "../.venv/Scripts/python.exe scripts/check_coverage.py ../report-coverage-02.json",
+      "result": "all 80% total and branch gates passed"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-lab",
+      "command": "../.venv/Scripts/python.exe -m ruff check src tests; ../.venv/Scripts/python.exe -m ruff format --check src tests",
+      "result": "passed"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "command": "../.venv/Scripts/python.exe -m ruff check quant_report_hub tests scripts; ../.venv/Scripts/python.exe -m ruff format --check quant_report_hub tests scripts",
+      "result": "passed"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/quant-lab.exe financial-benchmarks --sources benchmark-sources.json --out benchmark-final-01",
+      "result": "exit 0, all four supported cases passed"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/quant-lab.exe --db cli-fixtures/index.db compare --project cli-acceptance candidate cash --json",
+      "result": "exit 0"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/quant-lab.exe --db cli-fixtures/index.db compare --project cli-acceptance candidate usd --json",
+      "result": "exit 2; basis.currency mismatch"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/quant-report.exe compare --adapter standard --output-root cli-fixtures --run-ids candidate cash --out-dir cli-report-positive",
+      "result": "exit 0; two plots + JSON, visually inspected"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/quant-report.exe compare --adapter standard --output-root cli-fixtures --run-ids candidate usd --out-dir cli-report-negative",
+      "result": "exit 2; no economic comparison plots"
+    },
+    {
+      "cwd": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a",
+      "command": ".venv/Scripts/python.exe check-peer-measurements.py",
+      "result": "B/C actual JSON declarations accepted; B grid accepted; C revision ordinary comparison blocked on input_identity"
+    }
+  ],
+  "tests": {
+    "lab": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\lab-full-03.xml",
+      "sha256": "267957a7628b75e20266dc95eb9658da010bc7e4deee8c38b612ee5296bb15df",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "0",
+      "tests": "206",
+      "time": "16.145",
+      "timestamp": "2026-10-12T00:52:29.166631+08:00",
+      "hostname": "DESKTOP-0LQ42M6",
+      "skips": []
+    },
+    "report": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\report-full-02.xml",
+      "sha256": "65024402e6fee829f9cc7e11845bcbdd98a60736fb6acc8a165d56e6c6fe9b95",
+      "name": "pytest",
+      "errors": "0",
+      "failures": "0",
+      "skipped": "5",
+      "tests": "321",
+      "time": "136.666",
+      "timestamp": "2026-10-12T00:48:49.545548+08:00",
+      "hostname": "DESKTOP-0LQ42M6",
+      "skips": [
+        {
+          "name": "test_replaced_evidence_symlink_is_rejected",
+          "reason": "Creating symlinks is unavailable on this host"
+        },
+        {
+          "name": "test_load_portfolio_columns",
+          "reason": "baseline_dev fixture missing"
+        },
+        {
+          "name": "test_load_run_bundle",
+          "reason": "baseline_dev fixture missing"
+        },
+        {
+          "name": "test_spread_pair_folder",
+          "reason": "无本地行情目录"
+        },
+        {
+          "name": "test_load_spread_bars_marketdata_layout",
+          "reason": "无本地行情目录"
+        }
+      ]
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "root": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\.venv",
+    "freeze": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\environment-freeze.txt",
+      "sha256": "998182540a0fbfc8417bcbb9cbfa44ee6e1c48d9270fcff70581a5ab76a12a68"
+    },
+    "pip_check": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\pip-check.txt",
+      "sha256": "672aec65a45bed50e70229c70934a7eebf0462595c459b83023027645d57cccf"
+    },
+    "note": "Local integration uses report-hub locked public runtime plus arch/scipy/statistics and local source overlays. Quant-lab native lock is tested separately by GitHub Python 3.10/3.11/3.12 CI; local integration is not mislabeled byte-identical to the lab lock."
+  },
+  "CI": {
+    "lab": [
+      {
+        "link": "https://github.com/PureSaber/quant-lab/runs/114523255587",
+        "name": "CodeQL",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-lab/actions/runs/38157389588/job/114523073342",
+        "name": "test (3.12)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-lab/actions/runs/38157389630/job/114523073125",
+        "name": "financial-benchmarks",
+        "state": "FAILURE"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-lab/actions/runs/38157389588/job/114523073210",
+        "name": "test (3.10)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-lab/actions/runs/38157389572/job/114523073119",
+        "name": "codeql (python)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-lab/actions/runs/38157389588/job/114523073549",
+        "name": "test (3.11)",
+        "state": "SUCCESS"
+      }
+    ],
+    "report": [
+      {
+        "link": "https://github.com/PureSaber/quant-report-hub/runs/114523420492",
+        "name": "CodeQL",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228347",
+        "name": "test (3.10)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442386/job/114523228550",
+        "name": "codeql (python)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228491",
+        "name": "test (3.11)",
+        "state": "SUCCESS"
+      },
+      {
+        "link": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228541",
+        "name": "test (3.12)",
+        "state": "SUCCESS"
+      }
+    ],
+    "pinned_pr_evidence": [
+      {
+        "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\lab-pr-final.json",
+        "sha256": "f91d8372bf1cb1a7d908f84b288472cec88a499fcaac0256d189680ef8ceaf3a"
+      },
+      {
+        "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\report-pr-final.json",
+        "sha256": "37e0c8a607c3bdd60a4918b77b922a27a11718e75976e145eb16762f21de6763"
+      }
+    ],
+    "lab_evidence_head": "fa90bd6e2709fdd831bda8ac5fa93137dbba5723",
+    "lab_documentation_head": "27159095d6b10a06753c0d61d043d9423a082e2f",
+    "lab_documentation_head_status": "pending"
+  },
+  "limits": [
+    "All financial cases are synthetic deterministic fixtures through real APIs; no real-market certification.",
+    "Native measured report bridge supports one nonempty strategy stream per standard/v2 run. It does not invent contracts for old producer outputs.",
+    "B/C nonstandard JSON reports can consume the stdlib validator directly; native report plotting additionally requires the explicit standard/v2 artifact bridge.",
+    "Common compatibility is declared economic comparability, not proof that code truly implements a policy or input data is correct.",
+    "Event measurements are not annualized. No automatic currencies/date grids/cost/flow/return conversions.",
+    "FOF float API uses fixed absolute 1e-9 tolerance; QExec/FX Decimal comparisons exact.",
+    "Unsupported: unpriced delisting, SPAN offsets, FOF investor flows/tax, causal claims on FX components, live execution.",
+    "Five report skips: one host symlink privilege test, two baseline_dev fixtures and two local market-directory fixtures; explicit reasons retained in JUnit.",
+    "CI financial benchmark unavailable until private read token exists; local pass is separate evidence."
+  ],
+  "human_items": [
+    {
+      "id": "cross-private-ci-access",
+      "status": "unavailable",
+      "action": "Repository owner must provision QUANT_RESEARCH_READ_TOKEN with read access to the pinned upstream repositories, then rerun financial-benchmarks CI. No secret was changed.",
+      "evidence": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\benchmark-ci-failure.log",
+      "job": "https://github.com/PureSaber/quant-lab/actions/runs/38157389630/job/114523073125",
+      "impact": "Independent cross-repository CI did not execute; complete local clean-source real-adapter run passed separately."
+    }
+  ],
+  "uncommitted_status": {
+    "PureSaber/quant-lab": "",
+    "PureSaber/quant-report-hub": ""
+  },
+  "preservation": "No edits to F:/Quant, earlier scratch directories, other group worktrees, secrets, accounts or live order systems. No merge/deploy.",
+  "coordinator_handoff": {
+    "interface": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\interface-proposals.json",
+    "example": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\measurement-example.json",
+    "candidate_pins": {
+      "PureSaber/quant-lab": "27159095d6b10a06753c0d61d043d9423a082e2f",
+      "PureSaber/quant-report-hub": "b122c20123c5ee75e64cb24c4b2a2d75040fda89"
+    },
+    "benchmark_sources": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\benchmark-sources.json",
+    "note": "Coordinator can replace source mapping with final B/C candidate pins and rerun into a NEW output directory; retain failed attempts and inspect before/after source checks."
+  },
+  "documentation_review_fix": {
+    "commit": "27159095d6b10a06753c0d61d043d9423a082e2f",
+    "code_commit": "fa90bd6e2709fdd831bda8ac5fa93137dbba5723",
+    "actual_basis_count_checked": 26,
+    "change": "docs/measurement.md now references quant_measurement.BASIS_FIELDS instead of a hard-coded count.",
+    "verification": "Imported BASIS_FIELDS and checked len=26; git diff --check passed; diff since prior candidate is docs/measurement.md only.",
+    "test_scope": "No runtime/test/dependency changes. Existing full local and CI evidence pertains to unchanged implementation commit fa90bd6. New-head CI is separately pending."
+  }
+}

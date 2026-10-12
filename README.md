@@ -92,3 +92,9 @@ powershell -File scripts/health-check.ps1
 新增三类机构常见研究能力，交付记录见 [institutional-research-20261011](validation/institutional-research-20261011.md)。
 
 统一入口与合成输入用法见相邻仓库 [quant-workspace/profiles/institutional-research](../quant-workspace/profiles/institutional-research/README.md)。此增量提供离线合成验收、账户回放和独立 Studio 入口；真实市场数据与权限仍须明确提供。验收命令及边界见上述入口。
+
+## 研究证据升级（2026-10-12）
+
+经济可比性、独立金融基准、冻结预测到执行、连续共享资金、数据修订影响、模型诊断、
+Linux 执行隔离与助手语义评测见 [八项交付与独立验收](validation/eight-upgrades-20261012/README.md)。
+该记录提供候选提交、PR、实际跨仓复验和 CI 原始证据，并单独列出私有读取凭据依赖。

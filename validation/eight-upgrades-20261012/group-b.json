@@ -1,0 +1,258 @@
+{
+  "schema": "quant.group-b-delivery/v1",
+  "group": "B",
+  "state": "ready-for-review-with-human-item",
+  "repositories": [
+    {
+      "repository": "quant-strategy-adapters",
+      "base": "ba46b008a80b22bd5f9073cc85e49ebd20c0b414",
+      "head": "2bfaa5b85593bb1c040f9406201d4b1bc6aa40f2",
+      "branch": "codex/frozen-forecast-replay",
+      "pr": "https://github.com/PureSaber/quant-strategy-adapters/pull/3",
+      "uncommitted": ""
+    },
+    {
+      "repository": "quant-risk-monitor",
+      "base": "b9c7a91ae2d9c4b9db1a22ac2538332c426b4eeb",
+      "head": "a04544565f5e5da9b30a2c1dce45a4ce208bae1f",
+      "branch": "codex/chronological-model-diagnostics",
+      "pr": "https://github.com/PureSaber/quant-risk-monitor/pull/21",
+      "uncommitted": ""
+    }
+  ],
+  "entrypoints": {
+    "3": [
+      "strategy-adapters freeze-forecast-policy --config POLICY --out NEW_POLICY_DIR",
+      "strategy-adapters forecast-replay --archive ML_ARCHIVE --policy FROZEN_POLICY_DIR --bundle QDK_BUNDLE --out NEW_RESULT_DIR",
+      "quant_strategy_adapters.forecast.run_forecast_replay"
+    ],
+    "6": [
+      "quant-risk diagnose-model --input INPUT_JSON --out NEW_REPORT_DIR",
+      "quant_risk_monitor.model_diagnostics.diagnose_models"
+    ]
+  },
+  "items": {
+    "3": [
+      "Existing immutable quant-agent archive and ML split verification",
+      "Frozen declared policy; no evaluation-label fitting/selection",
+      "Actual QExec fills/cash/margin/settlement/costs and matched baseline",
+      "A revision-2 measurement plus observation grid; exact source/input/policy hashes",
+      "C event mapping of real modeled fills and posted variation margin"
+    ],
+    "6": [
+      "Chronological fixed reference/nonoverlapping windows and fixed monitoring horizon",
+      "Seven separated domain diagnostics with specific labels",
+      "Bounded-block Hoeffding intervals with finite Bonferroni budget",
+      "Missingness/low sample/unfinished window/regime/dependence controls",
+      "No automatic trading, retraining, recovery or strategy-invalid inference"
+    ]
+  },
+  "commands": {
+    "adapters_full": "../.venv/Scripts/python.exe -m pytest -q --basetemp=../t-afull5 --junitxml=../evidence/adapters-tests-5.xml",
+    "risk_full": "../.venv/Scripts/python.exe -m pytest -q --cov=quant_risk_monitor --cov-branch --cov-report=json:../evidence/risk-coverage-3.json --cov-report=term-missing --cov-fail-under=80 --basetemp=../t-rfull3 --junitxml=../evidence/risk-tests-3.xml",
+    "lint": {
+      "adapters": [
+        "../.venv/Scripts/python.exe -m ruff check src tests examples",
+        "../.venv/Scripts/python.exe -m ruff format --check src tests examples"
+      ],
+      "risk": [
+        "../.venv/Scripts/python.exe -m ruff check src tests",
+        "../.venv/Scripts/python.exe -m ruff format --check src tests"
+      ]
+    },
+    "forecast_fixture": ".venv/Scripts/python.exe quant-strategy-adapters/examples/forecast_demo.py evidence/forecast-demo-3",
+    "forecast_cli": ".venv/Scripts/strategy-adapters.exe forecast-replay --archive evidence/forecast-demo-3/ml/frozen-demo --policy evidence/forecast-demo-3/policy --bundle evidence/forecast-demo-3/bundle --out evidence/forecast-run-3",
+    "diagnostic_cli": [
+      ".venv/Scripts/quant-risk.exe diagnose-model --input evidence/diagnostic-inputs-1/change.json --out evidence/diagnostic-change-3",
+      ".venv/Scripts/quant-risk.exe diagnose-model --input evidence/diagnostic-inputs-1/null.json --out evidence/diagnostic-null-3"
+    ],
+    "integration": ".venv/Scripts/python.exe validate_integration.py evidence/integration-new.json",
+    "pip_check": ".venv/Scripts/python.exe -m pip check"
+  },
+  "tests": {
+    "adapters": {
+      "passed": 32,
+      "log": "evidence/adapters-tests-5.log",
+      "junit": "evidence/adapters-tests-5.xml"
+    },
+    "risk": {
+      "passed": 279,
+      "coverage_percent": 88.69047619047619,
+      "core_branch_percent": 96.01449275362319,
+      "new_module_percent": 97.16312056737588,
+      "log": "evidence/risk-tests-3.log",
+      "junit": "evidence/risk-tests-3.xml",
+      "coverage": "evidence/risk-coverage-3.json"
+    },
+    "lint": "passed for both repositories",
+    "pip_check": "passed",
+    "CI": {
+      "adapters": {
+        "headRefOid": "2bfaa5b85593bb1c040f9406201d4b1bc6aa40f2",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:58:06Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607193/job/114523721775",
+            "name": "CTA (ubuntu-24.04, py3.12)",
+            "startedAt": "2026-10-11T16:57:34Z",
+            "status": "COMPLETED",
+            "workflowName": "CTA acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:58:23Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700740",
+            "name": "forecast (ubuntu-24.04)",
+            "startedAt": "2026-10-11T16:57:28Z",
+            "status": "COMPLETED",
+            "workflowName": "Frozen forecast acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:58:47Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607193/job/114523721875",
+            "name": "CTA (windows-latest, py3.12)",
+            "startedAt": "2026-10-11T16:57:34Z",
+            "status": "COMPLETED",
+            "workflowName": "CTA acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:59:49Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700607",
+            "name": "forecast (windows-latest)",
+            "startedAt": "2026-10-11T16:57:28Z",
+            "status": "COMPLETED",
+            "workflowName": "Frozen forecast acceptance"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:57:32Z",
+            "conclusion": "FAILURE",
+            "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700785",
+            "name": "full-suite",
+            "startedAt": "2026-10-11T16:57:28Z",
+            "status": "COMPLETED",
+            "workflowName": "Frozen forecast acceptance"
+          }
+        ]
+      },
+      "risk": {
+        "headRefOid": "a04544565f5e5da9b30a2c1dce45a4ce208bae1f",
+        "statusCheckRollup": [
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:54:26Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522842182",
+            "name": "test (3.10)",
+            "startedAt": "2026-10-11T16:53:12Z",
+            "status": "COMPLETED",
+            "workflowName": "CI"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:54:10Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311419/job/114522842203",
+            "name": "codeql (python)",
+            "startedAt": "2026-10-11T16:53:13Z",
+            "status": "COMPLETED",
+            "workflowName": "CodeQL"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:54:33Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522842076",
+            "name": "test (3.11)",
+            "startedAt": "2026-10-11T16:53:12Z",
+            "status": "COMPLETED",
+            "workflowName": "CI"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:54:09Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522841868",
+            "name": "test (3.12)",
+            "startedAt": "2026-10-11T16:53:12Z",
+            "status": "COMPLETED",
+            "workflowName": "CI"
+          },
+          {
+            "__typename": "CheckRun",
+            "completedAt": "2026-10-11T16:54:24Z",
+            "conclusion": "SUCCESS",
+            "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/runs/114523011574",
+            "name": "CodeQL",
+            "startedAt": "2026-10-11T16:54:00Z",
+            "status": "COMPLETED",
+            "workflowName": ""
+          }
+        ]
+      }
+    },
+    "CI_summary": {
+      "adapters": "Ubuntu and Windows forecast + CTA jobs all passed; retained full-suite FAILED explicitly for missing QUANT_RESEARCH_READ_TOKEN; no private full-suite CI success claimed",
+      "risk": "Python 3.10/3.11/3.12 full CI and both CodeQL checks all passed"
+    }
+  },
+  "independent_controls": {
+    "report": "evidence/integration-3.json",
+    "script": "validate_integration.py",
+    "forecast_oracle": "1000 + 2*(101.29-100.21)*10 - 4 = 1017.60; return 0.0176",
+    "diagnostic_oracle": "null means 0 and changed regression error 1; radius sqrt(log(2/(.05/28))/(2*256))",
+    "A": "actual validator, observation-grid validator, same-basis positive, changed cost and unknown-basis negatives",
+    "C": "actual SharedCapitalAccount consumer, 9 source-identified fill/variation-margin events, ending NAV 1017.60 under explicitly different margin scenario",
+    "root_coordinator": "../integration/root-probe-02/report.json (actual A/C/D composition; separately run by coordinator)"
+  },
+  "limits": [
+    "Item 3: one future/one currency/long-flat integer quantity; fixed initial-capital caps; no rolls, FX or reinvestment. Daily-bar next-open execution is a declared simulation.",
+    "Frozen model holdout is batch research, not independent forward financial validation. Policy commitments precede each replay; report separately states whether before ML export. Local archives do not prove global preregistration.",
+    "Item 6: one feature mean proxy, regression MAE, direction-classification deterioration, absolute-return exceedance, cost and active-return bounded scores. Not generic distribution detection or causal strategy invalidity.",
+    "Confidence coverage is conditional on independent bounded blocks. Any missing observations suppress domain intervals/inference; structural-change and low-sample outputs are explicit.",
+    "C cross-group run explicitly uses notional margin rates 10%/8%, differing from B fixed USD100/USD80 per contract. Nine genuine QExec modeled fill/settlement events consumed; equal ending NAV is not a same-margin/buying-power comparability claim.",
+    "All independent examples are synthetic software controls, not real-market efficacy or measured market false-positive frequency."
+  ],
+  "human_items": [
+    {
+      "id": "private-full-suite-ci-access",
+      "status": "open",
+      "scope": "quant-strategy-adapters full existing suite CI",
+      "reason": "CI could not clone private quant-us-equity. New full-suite job explicitly requires existing operator-provided QUANT_RESEARCH_READ_TOKEN with repo read access; no secret changes made.",
+      "unaffected": "Full suite locally passed 32 tests; forecast/CTA public CI remains independently executable.",
+      "evidence": "evidence/private-full-suite-ci-final.log",
+      "operator_action": "Provide QUANT_RESEARCH_READ_TOKEN with read access to PureSaber/quant-us-equity through the repository secret settings, then rerun the full-suite CI job at the exact candidate head. This task did not change secrets.",
+      "ci_job": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700785"
+    }
+  ],
+  "preserved_failed_attempts": [
+    "evidence/adapters-tests-1.log",
+    "evidence/risk-tests-1.log",
+    "evidence/forecast-ubuntu-ci-1.log",
+    "t-fa1/",
+    "evidence/adapters-tests-3.log",
+    "t-afull3/"
+  ],
+  "uncommitted_status": "Both owned repositories clean at listed candidate heads.",
+  "artifacts": {
+    "forecast": "evidence/forecast-run-3/result.json",
+    "forecast_events": "evidence/forecast-run-3/continuous-events.json",
+    "diagnostic_change": "evidence/diagnostic-change-3/result.json",
+    "diagnostic_null": "evidence/diagnostic-null-3/result.json"
+  },
+  "review_note": "Final adapter heads add real synthetic label/price horizon consistency and explicit terminal-liquidation handling; no unused annualization setting. Final source guard rejects unknown archive schema. All 32 local tests passed again.",
+  "runtime_identity": {
+    "python": "3.12.14",
+    "profile": "quant-strategy-adapters/requirements-forecast.lock",
+    "source_pins": "quant-strategy-adapters/requirements-forecast-sources.in",
+    "additional_private_local_source": "quant-us-equity@1ec3e375b9eac29e9c82c38fe757a39f6fa0648a"
+  },
+  "completed_at": "2026-10-11T17:07:16.361072+00:00"
+}

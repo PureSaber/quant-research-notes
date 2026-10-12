@@ -1,0 +1,93 @@
+{
+  "schema": "quant.independent-assessment-review/v1",
+  "evidence_kind": "synthetic",
+  "baseline_cases": {
+    "cases": 13,
+    "cases_passed": 13,
+    "claims_expected": 18,
+    "claims_correct_and_grounded": 18,
+    "dimensions": {
+      "abstention": {
+        "passed": 7,
+        "total": 7
+      },
+      "cashflow_timing": {
+        "passed": 1,
+        "total": 1
+      },
+      "comparability": {
+        "passed": 2,
+        "total": 2
+      },
+      "costs": {
+        "passed": 2,
+        "total": 2
+      },
+      "evidence_conflict": {
+        "passed": 1,
+        "total": 1
+      },
+      "failure_history": {
+        "passed": 2,
+        "total": 2
+      },
+      "financial_arithmetic": {
+        "passed": 3,
+        "total": 3
+      },
+      "grounding": {
+        "passed": 1,
+        "total": 1
+      },
+      "missing_evidence": {
+        "passed": 2,
+        "total": 2
+      },
+      "omissions": {
+        "passed": 1,
+        "total": 1
+      },
+      "scope_honesty": {
+        "passed": 1,
+        "total": 1
+      },
+      "statistical_reasoning": {
+        "passed": 1,
+        "total": 1
+      },
+      "temporal_reasoning": {
+        "passed": 1,
+        "total": 1
+      },
+      "uncertainty": {
+        "passed": 1,
+        "total": 1
+      },
+      "untrusted_source": {
+        "passed": 1,
+        "total": 1
+      },
+      "wrong_conclusion": {
+        "passed": 3,
+        "total": 3
+      }
+    }
+  },
+  "new_numeric_case": {
+    "case_id": "reviewer-unseen-numbers",
+    "net_pnl": "-5",
+    "net_return": "-0.025"
+  },
+  "controls": {
+    "correct_citation_wrong_financial_claim_rejected": true,
+    "omitted_failed_attempts_rejected": true,
+    "unresolved_conflict_without_abstention_rejected": true
+  },
+  "sources": {
+    "assistant_assessment.py": "3c20d805aa7b3cb0c9a5c72190bcd34305b231f4321156a87177db2ecbff1c02",
+    "assessment_baseline.py": "db1d10a1f3d81a086cf593e7b3f4cd8ec6908b37b7849c6785e125b64294ed9c"
+  },
+  "source_unchanged": true,
+  "online_model_quality": "not_measured",
+  "passed": true
+}

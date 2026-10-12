@@ -1,0 +1,367 @@
+{
+  "schema": "quant.independent-financial-benchmarks/v1",
+  "sources": {
+    "quant-data-kit": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-data-kit",
+      "commit": "f85128307dd0e3407d24350282fe7b679b591309",
+      "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-data-kit\\src\\quant_data_kit\\__init__.py",
+      "dirty": false,
+      "verified_after_execution": true
+    },
+    "quant-execution": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-execution",
+      "commit": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+      "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c\\quant-execution\\src\\quant_execution\\__init__.py",
+      "dirty": false,
+      "verified_after_execution": true
+    },
+    "quant-fund": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-fund",
+      "commit": "31b032b65b1b26232125117593880d0cf94aa6cc",
+      "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-fund\\src\\quant_fund\\__init__.py",
+      "dirty": false,
+      "verified_after_execution": true
+    },
+    "quant-report-hub": {
+      "path": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub",
+      "commit": "b122c20123c5ee75e64cb24c4b2a2d75040fda89",
+      "module": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\quant-report-hub\\quant_report_hub\\__init__.py",
+      "dirty": false,
+      "verified_after_execution": true
+    }
+  },
+  "status": "pass",
+  "evidence_kind": "synthetic",
+  "cases": [
+    {
+      "case": "corporate_actions",
+      "evidence_kind": "synthetic",
+      "sample_kind": "deterministic_fixture",
+      "derivation": "800 cash + 40 shares x 30 = 2000; 3-for-1 -> 120 x 10. Ex price 9.75 and receivable 120 x .25 = 30 preserve NAV. Pay moves receivable to cash. Terminal settlement 8 retires all 120 shares: 800+30+960=1790.",
+      "status": "pass",
+      "checks": {
+        "opening_nav": {
+          "expected": "2000",
+          "observed": "2000.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "split_quantity": {
+          "expected": "120",
+          "observed": "120.00",
+          "residual": "0.00",
+          "tolerance": "0",
+          "pass": true
+        },
+        "split_nav": {
+          "expected": "2000",
+          "observed": "2000.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "receivable": {
+          "expected": "30.00",
+          "observed": "30.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "ex_nav": {
+          "expected": "2000.00",
+          "observed": "2000.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "paid_cash": {
+          "expected": "830.00",
+          "observed": "830.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_cash": {
+          "expected": "1790.00",
+          "observed": "1790.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_nav": {
+          "expected": "1790.00",
+          "observed": "1790.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_position": {
+          "expected": "0",
+          "observed": "0.00",
+          "residual": "0.00",
+          "tolerance": "0",
+          "pass": true
+        }
+      },
+      "negative_controls": {
+        "idempotent_terminal": true,
+        "changed_event_rejected": true
+      }
+    },
+    {
+      "case": "futures_roll",
+      "evidence_kind": "synthetic",
+      "sample_kind": "deterministic_fixture",
+      "derivation": "Three contracts, multiplier 5. P&L = 3*5*((83-80)+(84-86)) = 15. Four legs cost 3*2 each = 24. Final cash 1200+15-24=1191. Roll spread is not cash notional payment. Margin 3*75=225 is encumbered, not an expense.",
+      "status": "pass",
+      "checks": {
+        "open_cash": {
+          "expected": "1194",
+          "observed": "1194.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "open_margin": {
+          "expected": "225",
+          "observed": "225.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "settled_cash": {
+          "expected": "1224",
+          "observed": "1224.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "roll_cash": {
+          "expected": "1227",
+          "observed": "1227.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_cash": {
+          "expected": "1191",
+          "observed": "1191.00000000",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_margin": {
+          "expected": "0",
+          "observed": "0E-8",
+          "residual": "0E-8",
+          "tolerance": "0",
+          "pass": true
+        },
+        "final_position": {
+          "expected": "0",
+          "observed": "0",
+          "residual": "0",
+          "tolerance": "0",
+          "pass": true
+        }
+      },
+      "negative_controls": {
+        "insufficient_margin_atomic_rejection": true
+      }
+    },
+    {
+      "case": "fof_fees",
+      "evidence_kind": "synthetic",
+      "sample_kind": "deterministic_fixture",
+      "derivation": "ACT/365F Friday-to-Monday gap is 3 calendar days: management .36, custody .072, interest .72, closing 1200.288. Separate performance example: HWM 200, 230 reserves 6; 190 reverses to zero; 250 crystallizes 10 and sets post-fee HWM 240; next 255 charges 3, net 252.",
+      "status": "pass",
+      "checks": {
+        "management": {
+          "expected": "0.3600",
+          "observed": "0.35999999999999993",
+          "residual": "-7E-17",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "custody": {
+          "expected": "0.0720",
+          "observed": "0.072",
+          "residual": "0.0000",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "interest": {
+          "expected": "0.720",
+          "observed": "0.7199999999999999",
+          "residual": "-1E-16",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "fixed_fee_net": {
+          "expected": "1200.28800",
+          "observed": "1200.288",
+          "residual": "0.00000",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "reserve_gain": {
+          "expected": "6.0",
+          "observed": "6.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "reserve_loss": {
+          "expected": "0",
+          "observed": "0.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "crystallized": {
+          "expected": "10.0",
+          "observed": "10.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "post_fee_hwm": {
+          "expected": "240",
+          "observed": "240.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "next_fee": {
+          "expected": "3.0",
+          "observed": "3.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        },
+        "next_net": {
+          "expected": "252.0",
+          "observed": "252.0",
+          "residual": "0.0",
+          "tolerance": "1E-9",
+          "pass": true
+        }
+      },
+      "negative_controls": {
+        "unsupported_day_count_rejected": true
+      }
+    },
+    {
+      "case": "fx_transfer",
+      "evidence_kind": "synthetic",
+      "sample_kind": "deterministic_fixture",
+      "derivation": "USD-funded internal EUR transfer: +10 EUR at 1.2 pairs with -12 USD. EUR 200->230 gives local P&L 20, translated 26; opening FX 40; flow FX 1; cash interest 2. Base opening 320, closing 389, P&L 69, external flow 0.",
+      "status": "pass",
+      "checks": {
+        "opening_base": {
+          "expected": "320.0",
+          "observed": "320.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "closing_base": {
+          "expected": "389.0",
+          "observed": "389.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "external_flow_base": {
+          "expected": "0",
+          "observed": "0",
+          "residual": "0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "eur_local_pnl_translated": {
+          "expected": "26.0",
+          "observed": "26.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "fx_opening": {
+          "expected": "40.0",
+          "observed": "40.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "fx_flow": {
+          "expected": "1.0",
+          "observed": "1.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        },
+        "pnl_base": {
+          "expected": "69.0",
+          "observed": "69.0",
+          "residual": "0.0",
+          "tolerance": "0",
+          "pass": true
+        }
+      },
+      "negative_controls": {
+        "unpaired_transfer_rejected": true
+      }
+    }
+  ],
+  "source_errors": {},
+  "environment": {
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-a\\.venv\\Scripts\\python.exe",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.3.3",
+      "pyarrow": "25.0.1",
+      "quant-lab": "0.3.1",
+      "quant-data-kit": "0.8.1",
+      "quant-report-hub": "0.5.0"
+    }
+  },
+  "units": {
+    "money": "major_currency",
+    "returns": "decimal"
+  },
+  "oracle_sha256": "b31e2003e5a4f4f43f0496b9f76281b7e559f5fe678d700630e3301ed59754c3",
+  "harness_sha256": {
+    "adapters.py": "2921173e42895466e84b9527db69808ca9ca339197b611458a758132ee5d2a75",
+    "oracle.py": "2638bfa91a62d97a0931b258ed38f59ceafe190405cc4e9403119a57c43adef0",
+    "__init__.py": "b0f7ec255f4921ead9e6b9610dfddf9a19df59f17cba31cb75b90d74bfa48984",
+    "__main__.py": "0e1dad16164d3af52c74d0a903dfee7e662dada9228dbffd42182b4a9f18ca9c"
+  },
+  "unsupported_scopes": [
+    "live orders",
+    "real market validity",
+    "unpriced delistings",
+    "SPAN margin offsets",
+    "FOF investor subscriptions/redemptions and tax",
+    "causal attribution of reported FX components"
+  ],
+  "limitations": [
+    "Real repository APIs execute deterministic synthetic fixtures; arithmetic agreement does not certify market effectiveness.",
+    "FOF public API uses float; absolute tolerance is 1e-9 major currency units. QExec and FX require exact Decimal equality.",
+    "Reported FX component adapter is an accounting bridge, not independent observed market evidence."
+  ],
+  "artifacts": {
+    "expected.json": "b31e2003e5a4f4f43f0496b9f76281b7e559f5fe678d700630e3301ed59754c3",
+    "corporate_actions/journal.json": "ff13e77b460cdfb5d4af1bea786fec6932ae6ff5526e23f87dfc6de3f6b0754a",
+    "fof_fees/trace.json": "675fa7c1a3ddcb0f88098fd0fc9662b2b86684df81f4bd862fca00c98b794e38",
+    "futures_roll/journal.json": "0114d799bd3cd5255115bdbbbb50ad0f84bdb822db76d40dce7edd139348e242",
+    "futures_roll/trace.json": "55dced79a916657e619db54ca14d3217db3e279320266a0eea3761d12bb963ec",
+    "fx_transfer/input.json": "fdba11e2500d0bcbec53c6c05f6b8c96b8c9a9fb3a683617680abcddb823ab41",
+    "fx_transfer/report/components.csv": "b46610a63979135f37997acc7ef1aba97ba2489220afd69fbf942a6cca6c5c9f",
+    "fx_transfer/report/input.json": "fdba11e2500d0bcbec53c6c05f6b8c96b8c9a9fb3a683617680abcddb823ab41",
+    "fx_transfer/report/manifest.json": "d69473027a439eced308dd977dc8429301157e43bd6fa0a095809043a2f4e207",
+    "fx_transfer/report/report.html": "9810dcbd1cb7f18cf562751c153d91a8e38f94b41ebc1920e5de0651df53944d",
+    "fx_transfer/report/result.json": "560c4ffcf1f57cb6ae265fc089ab04108ccfffd0dcaeaa3a70692eccdeae1ee6"
+  }
+}

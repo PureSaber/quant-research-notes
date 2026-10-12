@@ -1,0 +1,1116 @@
+{
+  "repositories": {
+    "quant-risk-monitor": {
+      "baseRefOid": "b9c7a91ae2d9c4b9db1a22ac2538332c426b4eeb",
+      "headRefName": "codex/chronological-model-diagnostics",
+      "headRefOid": "a04544565f5e5da9b30a2c1dce45a4ce208bae1f",
+      "mergeStateStatus": "CLEAN",
+      "number": 21,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522842182",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T16:53:12Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311419/job/114522842203",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T16:53:13Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522842076",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T16:53:12Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:09Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/actions/runs/38157311384/job/114522841868",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T16:53:12Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:24Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-risk-monitor/runs/114523011574",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T16:54:00Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-risk-monitor/pull/21"
+    },
+    "quant-execution": {
+      "baseRefOid": "652d310d2573a58161ca7b8c5eb3210fcb220866",
+      "headRefName": "codex/shared-capital-events",
+      "headRefOid": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+      "mergeStateStatus": "CLEAN",
+      "number": 32,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:02:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157877055/job/114524485719",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:01:39Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:03:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157876977/job/114524485839",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:02:16Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:03:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157872202/job/114524471323",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:02:36Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:02:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157876977/job/114524486029",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:02:01Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:02:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157872202/job/114524471128",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:01:48Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:02:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157876977/job/114524485995",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:01:30Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:03:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/actions/runs/38157872202/job/114524471344",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:02:39Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:02:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-execution/runs/114524746935",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:02:28Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-execution/pull/32"
+    },
+    "quant-portfolio": {
+      "baseRefOid": "33123fcc5d64d62e01c25b74043f72d472b45459",
+      "headRefName": "codex/continuous-capital-revision",
+      "headRefOid": "ec9fff26d43b263e1378cd281db6da99477755b1",
+      "mergeStateStatus": "CLEAN",
+      "number": 24,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:02Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170539/job/114525340897",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:05:21Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:21Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170536/job/114525340939",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:05:21Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170539/job/114525340678",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:05:21Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170539/job/114525340912",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:05:21Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-portfolio/runs/114525522090",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:06:12Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-portfolio/pull/24"
+    },
+    "quant-report-hub": {
+      "baseRefOid": "a98f13eb5d42e522e3a27d7cd329a8118e379deb",
+      "headRefName": "codex/measurement-comparison",
+      "headRefOid": "b122c20123c5ee75e64cb24c4b2a2d75040fda89",
+      "mergeStateStatus": "CLEAN",
+      "number": 31,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:57:14Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228347",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T16:55:06Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:56:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442386/job/114523228550",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T16:55:06Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:57:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228491",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T16:55:06Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:57:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/actions/runs/38157442376/job/114523228541",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T16:55:06Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:56:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-report-hub/runs/114523420492",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T16:56:01Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-report-hub/pull/31"
+    },
+    "quant-lab": {
+      "baseRefOid": "5d8c2336c1222696bdda6ab73cdd9c4e341f4ff7",
+      "headRefName": "codex/measurement-benchmarks",
+      "headRefOid": "27159095d6b10a06753c0d61d043d9423a082e2f",
+      "mergeStateStatus": "UNSTABLE",
+      "number": 20,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:05:19Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/38158157322/job/114525303267",
+          "name": "financial-benchmarks",
+          "startedAt": "2026-10-11T17:05:11Z",
+          "status": "COMPLETED",
+          "workflowName": "Independent financial benchmarks"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:05:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/38158157329/job/114525303290",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:05:10Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/38158157407/job/114525303579",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:05:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:05:56Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/38158157329/job/114525303086",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:05:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:05Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/actions/runs/38158157329/job/114525303317",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:05:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-lab/runs/114525508651",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:06:08Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-lab/pull/20"
+    },
+    "quant-agent": {
+      "baseRefOid": "d461b113ccd9ff98fca3966978126a08842b135f",
+      "headRefName": "codex/assistant-assessment-20261012",
+      "headRefOid": "5f91a56cbdb94bfe3c52af033eae16a1d9039a82",
+      "mergeStateStatus": "CLEAN",
+      "number": 19,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38158230312/job/114525512947",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:06:11Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38158230307/job/114525512495",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:06:11Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38158230300/job/114525512398",
+          "name": "offline-assessment",
+          "startedAt": "2026-10-11T17:06:11Z",
+          "status": "COMPLETED",
+          "workflowName": "offline assistant assessment"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:01:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38157864110/job/114524448154",
+          "name": "offline-assessment",
+          "startedAt": "2026-10-11T17:01:32Z",
+          "status": "COMPLETED",
+          "workflowName": "offline assistant assessment"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38158230307/job/114525512771",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:06:11Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:07:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/actions/runs/38158230307/job/114525512653",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:06:11Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:06:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-agent/runs/114525671914",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:06:56Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-agent/pull/19"
+    },
+    "quant-pipeline": {
+      "baseRefOid": "98585749e0aaccd4c1b2a95aca55d2bd10b06b9c",
+      "headRefName": "codex/research-isolation-20261012",
+      "headRefOid": "b7534624b818e301ea63bd43901d00a613f50086",
+      "mergeStateStatus": "CLEAN",
+      "number": 23,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:16:37Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870788/job/114527403278",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:15:43Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870742/job/114527403205",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:15:44Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:16:22Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870872/job/114527403396",
+          "name": "docker-boundary",
+          "startedAt": "2026-10-11T17:15:45Z",
+          "status": "COMPLETED",
+          "workflowName": "real research isolation"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:16:16Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158859775/job/114527373321",
+          "name": "docker-boundary",
+          "startedAt": "2026-10-11T17:15:49Z",
+          "status": "COMPLETED",
+          "workflowName": "real research isolation"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870742/job/114527402882",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:15:24Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/actions/runs/38158870742/job/114527403170",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:15:39Z",
+          "status": "COMPLETED",
+          "workflowName": "ci"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:04Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-pipeline/runs/114527633210",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:16:28Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-pipeline/pull/23"
+    },
+    "quant-workspace": {
+      "baseRefOid": "bd0dbaaf81f8b61e8aef25a84693b1522fdf4517",
+      "headRefName": "codex/eight-upgrades-integration",
+      "headRefOid": "3e9d63182bd56bc4088fd83957c1f20fd5dc3622",
+      "mergeStateStatus": "CLEAN",
+      "number": 61,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:09:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393221/job/114525994393",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T17:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:09:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393212/job/114525994067",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T17:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:11:41Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393264/job/114525994017",
+          "name": "research (ubuntu-24.04, independent)",
+          "startedAt": "2026-10-11T17:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:09:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393221/job/114525994079",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T17:08:29Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:15:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393264/job/114525994165",
+          "name": "research (ubuntu-24.04, continuous)",
+          "startedAt": "2026-10-11T17:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:09:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393221/job/114525994268",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T17:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:15:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393264/job/114525994264",
+          "name": "research (windows-latest, independent)",
+          "startedAt": "2026-10-11T17:08:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:15:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/actions/runs/38158393264/job/114525994230",
+          "name": "research (windows-latest, continuous)",
+          "startedAt": "2026-10-11T17:08:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:09:20Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-workspace/runs/114526163630",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T17:09:17Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-workspace/pull/61"
+    },
+    "quant-studio": {
+      "baseRefOid": "09f36f9575423f966d803f12a4c19769f218a701",
+      "headRefName": "codex/research-isolation-20261012",
+      "headRefOid": "3527449ebc7f5e2cc1ed7cfdb05732f747362949",
+      "mergeStateStatus": "CLEAN",
+      "number": 42,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:24Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918158/job/114527544271",
+          "name": "durable-batches (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:16:34Z",
+          "status": "COMPLETED",
+          "workflowName": "Durable batch integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918213/job/114527544572",
+          "name": "macro (ubuntu-latest)",
+          "startedAt": "2026-10-11T17:16:10Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158914572/job/114527533530",
+          "name": "macro (ubuntu-latest)",
+          "startedAt": "2026-10-11T17:16:18Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:23:33Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918168/job/114527544332",
+          "name": "research-workspace",
+          "startedAt": "2026-10-11T17:16:24Z",
+          "status": "COMPLETED",
+          "workflowName": "Research workspace integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544789",
+          "name": "integration (ubuntu-24.04, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "startedAt": "2026-10-11T17:18:00Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:38Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918166/job/114527544246",
+          "name": "notebook-boundary",
+          "startedAt": "2026-10-11T17:17:03Z",
+          "status": "COMPLETED",
+          "workflowName": "isolated Notebook execution"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:01Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158914565/job/114527533534",
+          "name": "notebook-boundary",
+          "startedAt": "2026-10-11T17:16:24Z",
+          "status": "COMPLETED",
+          "workflowName": "isolated Notebook execution"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918191/job/114527544935",
+          "name": "test (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:16:16Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158914615/job/114527533518",
+          "name": "test (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:16:35Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:43Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918158/job/114527544429",
+          "name": "durable-batches (windows-latest)",
+          "startedAt": "2026-10-11T17:17:25Z",
+          "status": "COMPLETED",
+          "workflowName": "Durable batch integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:27Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918213/job/114527544354",
+          "name": "macro (windows-latest)",
+          "startedAt": "2026-10-11T17:16:39Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:13Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158914572/job/114527533379",
+          "name": "macro (windows-latest)",
+          "startedAt": "2026-10-11T17:17:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Macro research integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:31Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544758",
+          "name": "integration (ubuntu-24.04, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "startedAt": "2026-10-11T17:18:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:28Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918191/job/114527544703",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T17:17:41Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:36Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158914615/job/114527533634",
+          "name": "test (windows-latest)",
+          "startedAt": "2026-10-11T17:17:03Z",
+          "status": "COMPLETED",
+          "workflowName": "tests"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:15Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544759",
+          "name": "integration (ubuntu-24.04, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "startedAt": "2026-10-11T17:18:08Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:20:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544752",
+          "name": "integration (ubuntu-24.04, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "startedAt": "2026-10-11T17:19:14Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:21:08Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544743",
+          "name": "integration (ubuntu-24.04, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+          "startedAt": "2026-10-11T17:19:15Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544570",
+          "name": "integration (ubuntu-24.04, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futures)",
+          "startedAt": "2026-10-11T17:18:29Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:30Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544663",
+          "name": "integration (ubuntu-24.04, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "startedAt": "2026-10-11T17:17:40Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:26Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544808",
+          "name": "integration (windows-latest, quant-paper-sim, e414264a01f8c90f218e0c544d422e88db8051c6, paper)",
+          "startedAt": "2026-10-11T17:18:17Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:20:29Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544677",
+          "name": "integration (windows-latest, quant-hk-equity, 18cfe93a757e93e0c89875ceff9612350f989359, hk)",
+          "startedAt": "2026-10-11T17:18:00Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:21:52Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544800",
+          "name": "integration (windows-latest, a-share-multifactor, 6b799c3e4c2871153e399a62ba0b5e1e6c68fc99, ashare)",
+          "startedAt": "2026-10-11T17:19:17Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544498",
+          "name": "integration (windows-latest, quant-pipeline, b1fce90b85651248e9e60ae857b88fe4d170319e, account)",
+          "startedAt": "2026-10-11T17:17:27Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:22:00Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544977",
+          "name": "integration (windows-latest, quant-fund, 52042caff6fc60aa6a4b5273946ab2093ba1de5d, fund)",
+          "startedAt": "2026-10-11T17:18:32Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:57Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544859",
+          "name": "integration (windows-latest, quant-futures-spread, 314b889455166c39611285ddd72aa73ee451ec34, futu...",
+          "startedAt": "2026-10-11T17:18:13Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:20:07Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544687",
+          "name": "integration (windows-latest, quant-crypto-basis, 3b0e68aefe2a013b9c8f8e15b47078cf19c55b54, crypto)",
+          "startedAt": "2026-10-11T17:17:59Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:18:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544301",
+          "name": "timing (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:17:16Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:18Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544484",
+          "name": "timing (windows-latest)",
+          "startedAt": "2026-10-11T17:17:27Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544470",
+          "name": "derivatives (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:18:59Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:12Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544496",
+          "name": "derivatives (windows-latest)",
+          "startedAt": "2026-10-11T17:17:52Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:17:59Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544549",
+          "name": "free-derivatives (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:17:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:20:32Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544511",
+          "name": "free-derivatives (windows-latest)",
+          "startedAt": "2026-10-11T17:19:08Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:20:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544908",
+          "name": "research-extensions (ubuntu-24.04)",
+          "startedAt": "2026-10-11T17:19:20Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:19:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114527544476",
+          "name": "research-extensions (windows-latest)",
+          "startedAt": "2026-10-11T17:18:38Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T17:22:11Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-studio/actions/runs/38158918181/job/114528782894",
+          "name": "upstream-integration",
+          "startedAt": "2026-10-11T17:22:07Z",
+          "status": "COMPLETED",
+          "workflowName": "Upstream integration"
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-studio/pull/42"
+    },
+    "quant-data-kit": {
+      "baseRefOid": "5d9d58a2b639cafac2db221216e654d883372975",
+      "headRefName": "codex/revision-impact",
+      "headRefOid": "f85128307dd0e3407d24350282fe7b679b591309",
+      "mergeStateStatus": "CLEAN",
+      "number": 42,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:19Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206463/job/114522536582",
+          "name": "test (3.10)",
+          "startedAt": "2026-10-11T16:51:41Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:52:48Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206499/job/114522536900",
+          "name": "codeql (python)",
+          "startedAt": "2026-10-11T16:51:41Z",
+          "status": "COMPLETED",
+          "workflowName": "CodeQL"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:53:27Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206463/job/114522536720",
+          "name": "test (3.11)",
+          "startedAt": "2026-10-11T16:51:40Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:54:03Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206463/job/114522536743",
+          "name": "test (3.12)",
+          "startedAt": "2026-10-11T16:51:41Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:57:50Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206463/job/114522536736",
+          "name": "test (Windows, 3.12)",
+          "startedAt": "2026-10-11T16:51:41Z",
+          "status": "COMPLETED",
+          "workflowName": "CI"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:52:40Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-data-kit/runs/114522733667",
+          "name": "CodeQL",
+          "startedAt": "2026-10-11T16:52:38Z",
+          "status": "COMPLETED",
+          "workflowName": ""
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-data-kit/pull/42"
+    },
+    "quant-strategy-adapters": {
+      "baseRefOid": "ba46b008a80b22bd5f9073cc85e49ebd20c0b414",
+      "headRefName": "codex/frozen-forecast-replay",
+      "headRefOid": "2bfaa5b85593bb1c040f9406201d4b1bc6aa40f2",
+      "mergeStateStatus": "UNSTABLE",
+      "number": 3,
+      "state": "OPEN",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:58:06Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607193/job/114523721775",
+          "name": "CTA (ubuntu-24.04, py3.12)",
+          "startedAt": "2026-10-11T16:57:34Z",
+          "status": "COMPLETED",
+          "workflowName": "CTA acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:58:23Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700740",
+          "name": "forecast (ubuntu-24.04)",
+          "startedAt": "2026-10-11T16:57:28Z",
+          "status": "COMPLETED",
+          "workflowName": "Frozen forecast acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:58:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607193/job/114523721875",
+          "name": "CTA (windows-latest, py3.12)",
+          "startedAt": "2026-10-11T16:57:34Z",
+          "status": "COMPLETED",
+          "workflowName": "CTA acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:59:49Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700607",
+          "name": "forecast (windows-latest)",
+          "startedAt": "2026-10-11T16:57:28Z",
+          "status": "COMPLETED",
+          "workflowName": "Frozen forecast acceptance"
+        },
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-11T16:57:32Z",
+          "conclusion": "FAILURE",
+          "detailsUrl": "https://github.com/PureSaber/quant-strategy-adapters/actions/runs/38157607130/job/114523700785",
+          "name": "full-suite",
+          "startedAt": "2026-10-11T16:57:28Z",
+          "status": "COMPLETED",
+          "workflowName": "Frozen forecast acceptance"
+        }
+      ],
+      "url": "https://github.com/PureSaber/quant-strategy-adapters/pull/3"
+    }
+  },
+  "captured_at": "2026-10-11T17:26:05.3559746Z"
+}

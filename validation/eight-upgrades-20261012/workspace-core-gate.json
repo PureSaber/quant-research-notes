@@ -1,0 +1,14 @@
+{
+  "m7_certification.py": {
+    "covered": 190,
+    "total": 202,
+    "ratio": 0.9405940594059405,
+    "passed": true
+  },
+  "stack_manifest.py": {
+    "covered": 256,
+    "total": 282,
+    "ratio": 0.9078014184397163,
+    "passed": true
+  }
+}

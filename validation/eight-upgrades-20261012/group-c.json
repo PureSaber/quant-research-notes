@@ -1,0 +1,284 @@
+{
+  "schema": "quant.group-delivery/v1",
+  "group": "C",
+  "state": "delivered-all-candidate-CI-passed-ready-for-coordinator-review",
+  "date": "2026-10-12",
+  "repositories": {
+    "quant-data-kit": {
+      "base": "5d9d58a2b639cafac2db221216e654d883372975",
+      "head": "f85128307dd0e3407d24350282fe7b679b591309",
+      "branch": "codex/revision-impact",
+      "pr": "https://github.com/PureSaber/quant-data-kit/pull/42",
+      "uncommitted_status": "clean",
+      "ci": [
+        {
+          "conclusion": "success",
+          "databaseId": 38157206499,
+          "headSha": "f85128307dd0e3407d24350282fe7b679b591309",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206499",
+          "workflowName": "CodeQL"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38157206463,
+          "headSha": "f85128307dd0e3407d24350282fe7b679b591309",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/38157206463",
+          "workflowName": "CI"
+        }
+      ],
+      "commits": [
+        "f85128307dd0e3407d24350282fe7b679b591309"
+      ]
+    },
+    "quant-execution": {
+      "base": "652d310d2573a58161ca7b8c5eb3210fcb220866",
+      "head": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+      "branch": "codex/shared-capital-events",
+      "pr": "https://github.com/PureSaber/quant-execution/pull/32",
+      "uncommitted_status": "clean",
+      "ci": [
+        {
+          "conclusion": "success",
+          "databaseId": 38157877055,
+          "headSha": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/38157877055",
+          "workflowName": "CodeQL"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38157876977,
+          "headSha": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/38157876977",
+          "workflowName": "ci"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38157872202,
+          "headSha": "49ef53d2c502ad6faad6818f853dadd1f8b8b182",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-execution/actions/runs/38157872202",
+          "workflowName": "ci"
+        }
+      ],
+      "commits": [
+        "42e0854b1988d4d056d3597a92b343f8a046f8e3",
+        "49ef53d2c502ad6faad6818f853dadd1f8b8b182"
+      ]
+    },
+    "quant-portfolio": {
+      "base": "33123fcc5d64d62e01c25b74043f72d472b45459",
+      "head": "ec9fff26d43b263e1378cd281db6da99477755b1",
+      "branch": "codex/continuous-capital-revision",
+      "pr": "https://github.com/PureSaber/quant-portfolio/pull/24",
+      "uncommitted_status": "clean",
+      "ci": [
+        {
+          "conclusion": "success",
+          "databaseId": 38158170536,
+          "headSha": "ec9fff26d43b263e1378cd281db6da99477755b1",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170536",
+          "workflowName": "CodeQL"
+        },
+        {
+          "conclusion": "success",
+          "databaseId": 38158170539,
+          "headSha": "ec9fff26d43b263e1378cd281db6da99477755b1",
+          "status": "completed",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/38158170539",
+          "workflowName": "CI"
+        }
+      ],
+      "commits": [
+        "f5ba5263ea9dd1753daee04a76ef6461158c6a36",
+        "ec9fff26d43b263e1378cd281db6da99477755b1"
+      ]
+    }
+  },
+  "entrypoints": [
+    "quant_execution.continuous.SharedCapitalAccount(...) -> replay/apply/checkpoint/restore/report",
+    "quant-portfolio freeze-capital-plan --plan DRAFT --out FROZEN",
+    "quant-portfolio continuous-study --plan FROZEN --market MARKET --out RESULT",
+    "quant-portfolio revision-study --request REQUEST --out RESULT",
+    "python -m quant_data_kit.revision_impact --store STORE --old-ref OLD --new-ref NEW --out REPORT",
+    "python scripts/run_continuous_demo.py --out NEW_ABSOLUTE_DIRECTORY"
+  ],
+  "items": {
+    "4": {
+      "status": "implemented-and-locally-verified",
+      "behavior": [
+        "One authoritative exact ledger with disjoint sleeve attribution, explicit transfers and common cash competition",
+        "Cash-unit/proceeds settlement holds and reinvestment, explicit FX marks/conversions and external cashflows",
+        "Long cash assets plus linear futures, exact fee and variation-margin postings",
+        "Initial buying-power shortfall separate from maintenance call; explicit partial funding and reduction without automatic liquidation",
+        "Deterministic UTC/sequence ordering, conflicting ID refusal, atomic events and configuration-bound atomic checkpoint restoration"
+      ],
+      "independent_controls": [
+        "17 QExec continuous tests; one-shot, chunk and restore equality",
+        "Decimal hand reconciliation USD434 + EUR(59+40)*1.3 + USD550 = NAV1112.7; outside flow50 => PnL62.7",
+        "Two sleeves cannot reuse total cash: 501 first buy leaves499 globally; second501 buy rejected even after internal transfer",
+        "Initial250/long10@100/mark90: initial shortfall30 but maintenance excess60 => no maintenance call",
+        "B produced9 execution/settlement events: 2*10*(101.29-100.21)-4=17.60 USD; actual finalcash1017.60; deliberately different declared margin not equivalent",
+        "Native-FX boundary: 100EUR cash, 1future@100 marked99.99999999, margin20%, FX0.1; reserve native loss1e-8 even when USDreport rounds to0; expected free79.999999992EUR, regression passes"
+      ]
+    },
+    "5": {
+      "status": "implemented-and-locally-verified",
+      "behavior": [
+        "Reuses QDK ArtifactStore, ArtifactRef, SHA256 and existing snapshot dependency edges",
+        "Immutable pinned derivation manifests; complete transitive affected dependencies independent of traversal order, including member-to-snapshot edges",
+        "Frozen identical plan/code/runtime applied to old/new immutable data with actual CLI ledger recomputation",
+        "Report changes in signals/orders/history/cash/NAV/returns and explicitly unavailable features/forecasts",
+        "Changed controls/code/other input rejected; prior decisions/results never overwritten; reachability and sensitivity not causal attribution"
+      ],
+      "independent_controls": [
+        "Scalar old policy PnL34 and revised26, delta-8 via real subprocess CLI",
+        "Identical input pair has no changed fields or impact",
+        "Corruption, cycles, altered code/controls and overwrite refusal tested",
+        "Later observation revision leaves earlier signals/orders/history unchanged; missing input price fails",
+        "Actual A validator and policy hash checks pass; old/new identity prevents ordinary comparability"
+      ]
+    }
+  },
+  "validation": [
+    {
+      "repository": "quant-data-kit",
+      "command": "python -m coverage run --branch --source=quant_data_kit -m pytest -q --basetemp=../t/df1 --tb=short; python -m coverage json -o coverage.json; python tools/check_branch_coverage.py coverage.json",
+      "result": "1023 passed, 8 skipped; all core branch gates >=90%; tracked source pure branches5261/6522=80.67%",
+      "logs": [
+        "validation/qdk-full-01.log",
+        "validation/qdk-branch-gates.log"
+      ]
+    },
+    {
+      "repository": "quant-execution",
+      "command": "python -m pytest --cov=quant_execution --cov-branch --cov-report=term-missing --cov-report=json:coverage.json -q --basetemp=../t/ef2 --tb=short; python tools/check_branch_coverage.py coverage.json --threshold 90 artifacts broker contracts schemas engine matching state_machine ledger rules dividends",
+      "result": "411 passed; total coverage87.44%; all required core pure branch gates passed",
+      "logs": [
+        "validation/qexec-full-02.log",
+        "validation/qexec-final-branch-gates.log"
+      ]
+    },
+    {
+      "repository": "quant-portfolio",
+      "command": "python -m pytest -q --cov-report=json:coverage.json --basetemp=../t/pf1 --tb=short",
+      "result": "295 passed, 1 skipped; total coverage83.90%; cross_asset pure branches193/196=98.47%",
+      "logs": [
+        "validation/portfolio-full-01.log",
+        "validation/portfolio-branch-gate.json",
+        "validation/portfolio-final-pin-tests.log",
+        "validation/portfolio-final-tests-02.log"
+      ]
+    },
+    {
+      "repository": "all",
+      "command": "python -m ruff check <repository CI paths>; python -m ruff format --check <repository CI paths>; python -m pip check",
+      "result": "passed; final editable candidate installation; locked public dependencies and psutil in group-c/.venv",
+      "logs": [
+        "validation/environment.txt"
+      ]
+    },
+    {
+      "repository": "quant-portfolio",
+      "command": "python scripts/run_continuous_demo.py --out C:/Users/51076/Documents/ChatGPT/SCRATCH/quant-eight-upgrades-20261012/group-c/validation/demo-final",
+      "result": "passed actual freeze/continuous/revision CLIs and independent scalar expectations; added to CI",
+      "logs": [
+        "validation/demo-final.log",
+        "validation/demo-final/acceptance.json",
+        "validation/demo-final/README.md"
+      ]
+    },
+    {
+      "repository": "quant-portfolio",
+      "command": "python scripts/run_synthetic_demo.py --out C:/Users/51076/Documents/ChatGPT/SCRATCH/quant-eight-upgrades-20261012/group-c/validation/synthetic-01",
+      "result": "passed existing required synthetic demo",
+      "logs": [
+        "validation/portfolio-synthetic-demo.log"
+      ]
+    },
+    {
+      "repository": "integration",
+      "command": "python validation/final_controls.py; python validation/consume_b_events.py",
+      "result": "passed actual A validators, actual cost/valuation hashes, future-revision causality negative, checkpoint spec mismatch and B event consumption",
+      "logs": [
+        "validation/final-controls-02.json",
+        "validation/b-events-integration-02.json"
+      ]
+    },
+    {
+      "repository": "all",
+      "command": "gh run list --branch BRANCH --commit EXACT_HEAD; gh run view RUN --json jobs; gh run view final-portfolio-run --log",
+      "result": "All three exact-head CI and CodeQL workflows successful. QDK Ubuntu Python3.10/3.11/3.12 and Windows3.12; QExec/Portfolio Python3.10/3.11/3.12. Portfolio actual continuous+revision CLI acceptance passed at final head.",
+      "logs": [
+        "validation/qdk-ci-final-jobs.json",
+        "validation/qexec-final-ci-jobs.json",
+        "validation/portfolio-final-ci-jobs.json",
+        "validation/portfolio-final-ci.log"
+      ]
+    }
+  ],
+  "limits": [
+    "Synthetic deterministic implementation evidence, not real-market validity or live readiness",
+    "Fixed instrument-to-sleeve ownership; no cross-sleeve position/margin offsets",
+    "No short spot, options, inverse/quanto, broker-specific margin, automatic liquidation, order-book matching or inferred corporate actions in this adapter",
+    "Positive futures unrealized PnL cannot be spent before variation settlement; per-currency margin, explicit FX conversions",
+    "Generic derivation code identities are producer declarations; portfolio adapter additionally hashes actual code/runtime",
+    "Impact limited to registered ArtifactStore graph; features/forecasts unavailable in finite portfolio adapter",
+    "B consumed-event integration changes margin model explicitly and is not matched buying-power comparison",
+    "Local Windows suite includes platform/optional integration skips; skipped tests not certified",
+    "No default-branch merge, deployment, real order, account recovery, paid model/data use or alteration of F:/Quant/older scratch",
+    "Journal retained in memory and checkpoint restored by deterministic full-prefix replay; no large-stream throughput or O(1) resume claim"
+  ],
+  "human_items": [],
+  "failed_attempts": [
+    "Initial shell gh sandbox could not read auth config; authorized escalated gh succeeded",
+    "Initial tests used inaccessible shared pytest temp directory, then nonexistent parent of basetemp; rerun with isolated group-c/t succeeded",
+    "First continuous demo used ../ path rejected by existing ArtifactStore traversal guard; retained validation/demo-01.log and reran absolute new path",
+    "Early targeted failures found overfunded fee admission, an import missing after formatting and margin/checkpoint/graph review issues; fixes and successful full suites recorded",
+    "Final CI metadata fetch briefly hit GitHub EOF/TLS timeout; retry succeeded, all exact-head jobs verified and final CLI logs saved."
+  ],
+  "uncommitted_status": "All three repositories clean; supporting delivery/status/evidence remain in Group C workspace",
+  "coordinator_review_fixes": {
+    "C-01": "configuration hash plus atomic restore; independent final changed-spec control passed",
+    "C-02": "separate initial/maintenance thresholds and partial transfers; coordinator independent probe passed",
+    "C-03": "closure-complete affected_dependencies; diamond-order test passed",
+    "C-native-FX": "Independent 1e-8 EUR underreserve probe fixed with native cost reserve; final regression test and full411-suite pass"
+  },
+  "paths_are_relative_to": "C:\\Users\\51076\\Documents\\ChatGPT\\SCRATCH\\quant-eight-upgrades-20261012\\group-c",
+  "local_skips": {
+    "quant-data-kit": [
+      "6 symlink rejection cases skipped because local Windows host cannot create symbolic links",
+      "1 POSIX-only symbolic-link case skipped on Windows",
+      "1 optional quant_pipeline.research_paper integration unavailable"
+    ],
+    "quant-portfolio": [
+      "1 optional quant_regime integration unavailable"
+    ]
+  },
+  "evidence_files": {
+    "validation\\b-events-integration-01.json": "cbd3fdf02052e783932a3c7fb04facb92ba6b614cb9e8d35656ce5435884f443",
+    "validation\\b-events-integration-02.json": "97c54a60c1c1f2a7e14d8929efcdad56594eac9b09e8ff3593440c752524537f",
+    "validation\\currency-rounding-probe-old.json": "3bef876232f3fbcece5b3ee96b172a1a6ecd28a439b328e37571369add1a6d9a",
+    "validation\\final-controls-02.json": "4d9fd67bbe451054166ef707e2f456f4a05b8ef2a1e11312de945c48504a19b9",
+    "validation\\final-controls.json": "9bc96770b3f997c3e014c2edfabe19c0eb03424bd72b43f9d38231a2cd904dc2",
+    "validation\\measurement-integration-01.json": "78ca3c3f3ec28861eaa3c0ff2b3327aaca9fc91fada2a74fe5b558781a233916",
+    "validation\\portfolio-branch-gate.json": "c7144e41217970501b20d8422e284c766a00ac1fee5b497e5b2f35d78bb75009",
+    "validation\\portfolio-ci-jobs.json": "c629785af11888112d525310b0ac1c17b6ff4e66684da4a9a853cbea095a70a1",
+    "validation\\portfolio-final-ci-jobs.json": "e76007eeb59cef743e3521851417f8de8f888bd6062ff404b1aa04b76f7454a2",
+    "validation\\qdk-ci-final-jobs.json": "657cf141a552659459ba7f05fd1e19e2b47eaf545cba1d70290a933fb1e8f915",
+    "validation\\qdk-ci-jobs-pending.json": "60553151c410d0554c3c118b19ca1b91dbb2e2d0332635567ad8f8afe8e8e033",
+    "validation\\qexec-ci-jobs.json": "0e3955a41c24ad8646623067cbf09be2961abede39460e7e18ecb0f22d68f1f4",
+    "validation\\qexec-final-ci-jobs.json": "3b63e4e7685826d8f4393e3a18c9919159809200c944b96924c0b263d14cadb6",
+    "validation\\quant-data-kit-ci.json": "046cf5021a53ed9368c4e6ff60cde935cec0c907850700ac136f20048455bf6c",
+    "validation\\quant-execution-ci.json": "7f39d1c44f2c5d7450aebc2055d301692855aa6b9627cd1e18e63c75cde5d601",
+    "validation\\quant-execution-final-ci.json": "4fa95e537adb423cf5506727434bbb66166a661522ddd7ebc9ba3a2da2c0726c",
+    "validation\\quant-portfolio-ci.json": "ff8d5d7c2fc1cf40c0c138382768c00772f3f503cb3e0ad2cd2ded6196a515c6",
+    "validation\\quant-portfolio-final-ci.json": "4fa6fc900b4df8b1c899ee1f2c7e63cba6870ef19508171a4dd3a9b9a730dd87"
+  },
+  "additional_review_fix": "Native-currency futures collateral loss uses exact native memo cost before FX reporting rounding; final QExec49ef53d and Portfolioec9fff2 complete local/CI validation passed.",
+  "ci_summary": "All three exact-head CI and CodeQL workflows successful. QDK Ubuntu Python3.10/3.11/3.12 and Windows3.12; QExec/Portfolio Python3.10/3.11/3.12. Portfolio actual continuous+revision CLI acceptance passed at final head."
+}
