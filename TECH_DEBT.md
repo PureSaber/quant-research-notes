@@ -2,12 +2,17 @@
 
 **Review date:** 2026-09-01
 **Last audit:** 2026-09-01 (GitHub governance and lifecycle audit)
+**Targeted source refresh:** 2026-10-19 (`quant-agent` `a3b5ff39d7b78dd4f423214b8077de31d83c07b7`)
 **Scope:** `quant-agent`, `quant-pipeline`, cross-stack CI  
 **Focus:** Security and maintainability
 
 ---
 
 ## Summary
+
+The counts below are the historical 2026-09-01 inventory, not current open-item
+counts. The 2026-10-19 refresh checks H-02 and the named H-03 configuration paths
+only; it is not a new complete security audit.
 
 | Package | Critical | High | Medium | Low |
 |---------|----------|------|--------|-----|
@@ -41,15 +46,29 @@ _(none open)_
 
 ## High
 
-### H-02 — LLM nodes send full context externally
+### H-02 — Explicit opt-in and default path redaction implemented
 
-No redaction / opt-in policy when `--llm` is enabled.
+The original missing-control finding is closed for the reviewed source:
+`llm_enabled()` requires both `enable_llm` and `QUANT_AGENT_LLM_OK=1`;
+`_llm_user_payload()` defaults `llm.send_paths` to false. The shared LLM draft
+node checks the gate before invocation. Evidence:
+[`nodes/pipeline.py`](https://github.com/PureSaber/quant-agent/blob/a3b5ff39d7b78dd4f423214b8077de31d83c07b7/src/quant_agent/nodes/pipeline.py),
+[`DATA_POLICY.md`](https://github.com/PureSaber/quant-agent/blob/a3b5ff39d7b78dd4f423214b8077de31d83c07b7/docs/DATA_POLICY.md), and
+[`test_llm_policy.py`](https://github.com/PureSaber/quant-agent/blob/a3b5ff39d7b78dd4f423214b8077de31d83c07b7/tests/test_llm_policy.py).
 
-**Fix:** `llm.send_paths: false`, require `QUANT_AGENT_LLM_OK=1`, document data policy.
+This redacts the explicit run-directory field, not arbitrary secrets embedded
+in findings or source text. Authorized online review still sends its documented
+context. No claim of comprehensive content sanitization or online-model quality
+is made.
 
 ### H-03 — Dead / ignored config keys
 
-`temperature`, `rules.flag_nan_factors`, `enable_llm` partially wired.
+`temperature` is passed to `ChatOpenAI` by the shared draft node, and
+`enable_llm` participates in the explicit opt-in gate. They are no longer
+unwired findings at the reviewed commit. `rules.flag_nan_factors` remains an
+open configuration-wiring item; no implementation read of this key was found
+outside the default configuration. Full rule/configuration consistency remains
+to be reviewed.
 
 ---
 
@@ -80,6 +99,7 @@ powershell -File scripts/health-check.ps1
 
 ## Priority order
 
-1. H-02 — LLM data policy
-2. H-03 — Wire or remove dead config keys
-3. M-01 — Pipeline/agent config schema validation
+1. H-03 — Wire or remove the remaining `rules.flag_nan_factors` key
+2. M-01 — Review remaining pipeline/agent config schema coverage
+3. Retain H-02 opt-in/path-redaction regression coverage and review any newly
+   added outbound context separately
