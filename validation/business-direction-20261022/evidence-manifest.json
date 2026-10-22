@@ -1,0 +1,212 @@
+[
+  {
+    "path": "akshare_eastmoney_etf/159915/receipt.json",
+    "bytes": 324,
+    "sha256": "d7508daa7c1e021a5904edbcfece77a74a8e39133a33335b35eb4a91e777223d"
+  },
+  {
+    "path": "akshare_eastmoney_etf/510300/receipt.json",
+    "bytes": 324,
+    "sha256": "d186187edc4536bcf7090fc0869e4415be9f135b00a8789ec62c77fc41e25ad3"
+  },
+  {
+    "path": "akshare_eastmoney_etf/510500/receipt.json",
+    "bytes": 324,
+    "sha256": "328a77d3ba0ba2cc71a1888d4047b348d96a96b9c34eddbb08cf6b059f1f3bde"
+  },
+  {
+    "path": "akshare_eastmoney_etf/588000/23329c723b84ceb2bb37768f6aa3ced9bf4a60e1137bc4cbc9f7fd25d1b239f6.bin",
+    "bytes": 118825,
+    "sha256": "23329c723b84ceb2bb37768f6aa3ced9bf4a60e1137bc4cbc9f7fd25d1b239f6"
+  },
+  {
+    "path": "akshare_eastmoney_etf/588000/bars.parquet",
+    "bytes": 66168,
+    "sha256": "052b7a5185b63429823552f3cdd97615f64e05f7821924482824c27e40fa8108"
+  },
+  {
+    "path": "akshare_eastmoney_etf/588000/receipt.json",
+    "bytes": 802,
+    "sha256": "019a96c939dd49cbb09afe3d77405a07d920e166123416d8f91f03f326f663d0"
+  },
+  {
+    "path": "akshare_sina_etf/159915/17a4259dcf45b2eaf1905e4d8139f6ce2c9f5b0f78382f1bc4202845f33d0426.bin",
+    "bytes": 50232,
+    "sha256": "17a4259dcf45b2eaf1905e4d8139f6ce2c9f5b0f78382f1bc4202845f33d0426"
+  },
+  {
+    "path": "akshare_sina_etf/159915/bars.parquet",
+    "bytes": 71887,
+    "sha256": "13336dcf1b73b9dedab2342f139d67d335a7f845e75d2a0f4fd43706b4b7ca29"
+  },
+  {
+    "path": "akshare_sina_etf/159915/receipt.json",
+    "bytes": 614,
+    "sha256": "44b70cfaca2c20f4fb81a2c01876043913bfcd79e01fb4b0c5dfbf83d347beb9"
+  },
+  {
+    "path": "akshare_sina_etf/510300/29e6671c791014923d43a0bd9660cc46a3f31d89652f061ee040920b0e04234a.bin",
+    "bytes": 50262,
+    "sha256": "29e6671c791014923d43a0bd9660cc46a3f31d89652f061ee040920b0e04234a"
+  },
+  {
+    "path": "akshare_sina_etf/510300/bars.parquet",
+    "bytes": 71712,
+    "sha256": "9e50f0ce3fe6b15c7b679473ff6a11b0065fe3497fe649ca8f15c4a569e2d4d0"
+  },
+  {
+    "path": "akshare_sina_etf/510300/receipt.json",
+    "bytes": 614,
+    "sha256": "02c3162136aabeb6cd413b22cda836713416cbaaad24ef599f8cb846434671e3"
+  },
+  {
+    "path": "akshare_sina_etf/510500/9ce89585f462a075ceef416c98af7b10ce846713d5665c634f5d6f6cae4a8e00.bin",
+    "bytes": 47730,
+    "sha256": "9ce89585f462a075ceef416c98af7b10ce846713d5665c634f5d6f6cae4a8e00"
+  },
+  {
+    "path": "akshare_sina_etf/510500/bars.parquet",
+    "bytes": 75610,
+    "sha256": "36e7ffa2cb598142da710736c3f3724f8278a98d11f0e79bd79b535b17caf5c3"
+  },
+  {
+    "path": "akshare_sina_etf/510500/receipt.json",
+    "bytes": 614,
+    "sha256": "75422d81b978c5d00ed4570745da77627a5bf1630a80501edcd83bf0fee67c91"
+  },
+  {
+    "path": "akshare_sina_etf/588000/bars.parquet",
+    "bytes": 66951,
+    "sha256": "2d20a75edf93dd0f0fa9348b199f7e80c89b6f48fc23b0ebe4b6152fef560eec"
+  },
+  {
+    "path": "akshare_sina_etf/588000/dd6adc846b5c8687d12bf5d193b32b4348ee1bc41680b6a709187a072d808079.bin",
+    "bytes": 20801,
+    "sha256": "dd6adc846b5c8687d12bf5d193b32b4348ee1bc41680b6a709187a072d808079"
+  },
+  {
+    "path": "akshare_sina_etf/588000/receipt.json",
+    "bytes": 614,
+    "sha256": "72644fbf58fce285f8ce00bc69f75eae53c5e720e985064b8661db1d4e05e5da"
+  },
+  {
+    "path": "validation/078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9.bin",
+    "bytes": 44617,
+    "sha256": "078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9"
+  },
+  {
+    "path": "validation/159915-20210208-suspension.pdf",
+    "bytes": 986,
+    "sha256": "ae2588cde92c050444eb244f185b04b09e9a19ece63f6efdd5206efb77e2c305"
+  },
+  {
+    "path": "validation/159915-eastmoney-dividends.csv",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  {
+    "path": "validation/159915-sina-dividends.csv",
+    "bytes": 21,
+    "sha256": "50eb2124ccb8c928821958afbdae4b5839924252ea962d3c1b398357c878229a"
+  },
+  {
+    "path": "validation/1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889.bin",
+    "bytes": 44022,
+    "sha256": "1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889"
+  },
+  {
+    "path": "validation/510300-eastmoney-dividends.csv",
+    "bytes": 1031,
+    "sha256": "977cfe45a766fc78c9e9dab627ae77e10c4ff49b2055dfb96d548b47d322a152"
+  },
+  {
+    "path": "validation/510300-sina-dividends.csv",
+    "bytes": 270,
+    "sha256": "c56cd33f17ae887f592810a776e147833d169d4eea9d55ce23b5d59cd671ede6"
+  },
+  {
+    "path": "validation/510500-eastmoney-dividends.csv",
+    "bytes": 341,
+    "sha256": "210ea7666429d4c664f3638435f86a8ae07dcee2fdff2c71182aa0efaf41e993"
+  },
+  {
+    "path": "validation/510500-sina-dividends.csv",
+    "bytes": 140,
+    "sha256": "69a7d96dcd07e3465f8d8f35626f2827aceb35d6787af38303e03b0aec944a8a"
+  },
+  {
+    "path": "validation/588000-eastmoney-dividends.csv",
+    "bytes": 2,
+    "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  {
+    "path": "validation/588000-sina-dividends.csv",
+    "bytes": 21,
+    "sha256": "50eb2124ccb8c928821958afbdae4b5839924252ea962d3c1b398357c878229a"
+  },
+  {
+    "path": "validation/706075745df95d9041a201468989648b3707b87d8e1a605718b6628672ba9441.bin",
+    "bytes": 45775,
+    "sha256": "706075745df95d9041a201468989648b3707b87d8e1a605718b6628672ba9441"
+  },
+  {
+    "path": "validation/7c1038a70077c4a9a35df5ff02631f92ab41e252112389553f244d04c4e88103.bin",
+    "bytes": 522774,
+    "sha256": "7c1038a70077c4a9a35df5ff02631f92ab41e252112389553f244d04c4e88103"
+  },
+  {
+    "path": "validation/7f92708019835e23b4856d693e5ecd0815d79637c6b9194cd23edcc5ba198e8e.bin",
+    "bytes": 395,
+    "sha256": "7f92708019835e23b4856d693e5ecd0815d79637c6b9194cd23edcc5ba198e8e"
+  },
+  {
+    "path": "validation/a3718e78d17cfcee7b90b72ed12ad4482fce5f473e765a66d98e994732c56a78.bin",
+    "bytes": 37382,
+    "sha256": "a3718e78d17cfcee7b90b72ed12ad4482fce5f473e765a66d98e994732c56a78"
+  },
+  {
+    "path": "validation/a6b5081db14000155c5c507e6890a186c22b4e6e77a5e1589710fc9e23988155.bin",
+    "bytes": 1516,
+    "sha256": "a6b5081db14000155c5c507e6890a186c22b4e6e77a5e1589710fc9e23988155"
+  },
+  {
+    "path": "validation/c6d67deabe72c1929367e0830026c0919a6bced3c19fc4c144e209617897f8d7.bin",
+    "bytes": 395,
+    "sha256": "c6d67deabe72c1929367e0830026c0919a6bced3c19fc4c144e209617897f8d7"
+  },
+  {
+    "path": "validation/calendar.csv",
+    "bytes": 105576,
+    "sha256": "172f3b5360876bb7cf1ce714da28124390690d25b002814c2c43fc971c434e2d"
+  },
+  {
+    "path": "validation/cb39f55bbbb6d367beae5852dc38c3ab7cf9cf3ef64eb6d65188e0ba98a1bb41.bin",
+    "bytes": 233692,
+    "sha256": "cb39f55bbbb6d367beae5852dc38c3ab7cf9cf3ef64eb6d65188e0ba98a1bb41"
+  },
+  {
+    "path": "validation/cdd6af03506c693c593124d2d6582ffedb481988c26b2710b2d1b9aa1e2a47c6.bin",
+    "bytes": 544870,
+    "sha256": "cdd6af03506c693c593124d2d6582ffedb481988c26b2710b2d1b9aa1e2a47c6"
+  },
+  {
+    "path": "validation/d5112e08726ecc435092fb63547a34fc514b071b1a4a84f9e2c29fb9023726a9.bin",
+    "bytes": 508,
+    "sha256": "d5112e08726ecc435092fb63547a34fc514b071b1a4a84f9e2c29fb9023726a9"
+  },
+  {
+    "path": "validation/e0fd24a36ef170bc71fce96cc425cde8c0b8098517721cb686ea9d3d5b5c7278.bin",
+    "bytes": 955,
+    "sha256": "e0fd24a36ef170bc71fce96cc425cde8c0b8098517721cb686ea9d3d5b5c7278"
+  },
+  {
+    "path": "validation/ee11b764e492dfbef301cb9434df554e9e4165b38c4a6331fb19c4e57ead051b.bin",
+    "bytes": 556244,
+    "sha256": "ee11b764e492dfbef301cb9434df554e9e4165b38c4a6331fb19c4e57ead051b"
+  },
+  {
+    "path": "validation/quality.json",
+    "bytes": 6881,
+    "sha256": "0cd1d7bc752a43bdf15952dd9bfd789eee077b8af98c8a80714e7ff578251cfd"
+  }
+]
