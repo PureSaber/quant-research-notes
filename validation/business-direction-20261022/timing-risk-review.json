@@ -1,5 +1,6 @@
 {
   "scope": "Retrospective descriptive comparison, not a preregistered risk objective or promotion.",
+  "source_commit": "7349838bb480f1b93acf37a7bdef2abee2a5e00f",
   "book": "position_hs300",
   "model": "tsmom",
   "start": "2019-03-11 00:00:00",

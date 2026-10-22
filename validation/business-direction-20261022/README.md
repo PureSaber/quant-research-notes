@@ -18,6 +18,8 @@
 这使“历史上回撤是否较低”可回答，但不足以决定未来降险目标已成立。没有事前主要
 风险阈值、效能校准及配对风险差异区间；不据此推广，保留风险用途的进一步研究。
 见 [回执](timing-risk-review.json)、[配对日收益](timing-paired-returns.csv)。
+可用 `python review_timing.py <quant-timing 仓库绝对路径>` 重算；脚本先验证原输入哈希，
+只输出到本证据目录。需要原研究运行依赖及 pandas、numpy、PyYAML。
 
 ## ETF 长历史初检
 
@@ -55,3 +57,4 @@
 数据核验代码和证据入口见 [可重算检查](quality-checks.ipynb)、[质量摘要](etf-quality.json)、
 [输入摘要](evidence-manifest.json)。原始 HTTP 字节和行情表保存在本机独立采集目录，
 不覆盖正式研究快照。Notebook 的 `DATA_ROOT` 指向该目录后可离线核对。
+Notebook 已实际执行通过；运行需要 pandas、pyarrow 及 Jupyter Python kernel。

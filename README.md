@@ -102,4 +102,3 @@ powershell -File scripts/health-check.ps1
 经济可比性、独立金融基准、冻结预测到执行、连续共享资金、数据修订影响、模型诊断、
 Linux 执行隔离与助手语义评测见 [八项交付与独立验收](validation/eight-upgrades-20261012/README.md)。
 该记录提供候选提交、PR、实际跨仓复验和 CI 原始证据，并单独列出私有读取凭据依赖。
-
