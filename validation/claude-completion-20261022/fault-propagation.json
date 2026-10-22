@@ -1,5 +1,13 @@
 [
   {
+    "kind": "candidate_price_missing",
+    "tier": "account_block",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
     "kind": "entitlement_unresolved",
     "tier": "account_block",
     "evidence_status": "provisional",
@@ -19,6 +27,14 @@
     "kind": "held_price_unknown",
     "tier": "account_block",
     "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
+    "kind": "held_suspended_price",
+    "tier": "account_block",
+    "evidence_status": "provisional",
     "registry_and_findings_preserved": true,
     "completed_attempts": 0,
     "gate_credit": false
@@ -48,7 +64,39 @@
     "gate_credit": false
   },
   {
+    "kind": "optimizer_infeasible_reported",
+    "tier": "account_block",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
+    "kind": "optimizer_proven_infeasible",
+    "tier": "account_block",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
+    "kind": "optimizer_search_failed",
+    "tier": "account_block",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
     "kind": "rule_changed",
+    "tier": "account_block",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
+    "kind": "rules_unknown",
     "tier": "account_block",
     "evidence_status": "unknown",
     "registry_and_findings_preserved": true,
@@ -66,6 +114,14 @@
   {
     "kind": "second_writer",
     "tier": "hard_stop",
+    "evidence_status": "unknown",
+    "registry_and_findings_preserved": true,
+    "completed_attempts": 0,
+    "gate_credit": false
+  },
+  {
+    "kind": "template_changed",
+    "tier": "account_block",
     "evidence_status": "unknown",
     "registry_and_findings_preserved": true,
     "completed_attempts": 0,

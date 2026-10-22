@@ -1,4 +1,12 @@
 {
+  "archive_roots": {
+    "new_sources": "F:/qclaude1022/history-evidence",
+    "new_prices": "F:/qclaude1022/prices",
+    "prior_prices": "F:/qbiz1022/etf-history",
+    "cash_events": "F:/qclaude1022/cash-actions",
+    "master_early": "F:/qclaude1022/master-bundle-early",
+    "master_later": "F:/qclaude1022/master-bundle-later"
+  },
   "files": [
     {
       "archive": "new_sources",
@@ -1121,6 +1129,18 @@
       "path": "source/documents/szse-rule-2026.pdf",
       "bytes": 282084,
       "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586"
+    },
+    {
+      "archive": "new_prices",
+      "path": "sina-kline-recheck/receipt.json",
+      "bytes": 293,
+      "sha256": "da3047d7267cab108ed3122f155fe6cf7424cda91d676faaaf1b69907c73765c"
+    },
+    {
+      "archive": "new_prices",
+      "path": "sina-kline-recheck/response.bin",
+      "bytes": 201491,
+      "sha256": "16ba605db14a703401c0d3f2f8cc7d075f9b7bcf78d6102ba6a2658a63b1f394"
     }
   ],
   "note": "Original bytes retained in isolated local evidence archive; no frozen runtime input replaced."

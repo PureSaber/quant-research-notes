@@ -9,7 +9,9 @@ from quant_lab.findings import research_findings
 root=Path(__file__).parent/'fault-propagation'
 root.mkdir(exist_ok=True)
 cases=[]
-for kind in sorted(HARD_STOPS | {'held_price_unknown','entitlement_unresolved','rule_changed','unparsed'}):
+for kind in sorted(HARD_STOPS | {'held_suspended_price','held_price_unknown','entitlement_unresolved',
+                               'candidate_price_missing','optimizer_search_failed','optimizer_infeasible_reported',
+                               'optimizer_proven_infeasible','rules_unknown','rule_changed','unparsed','template_changed'}):
     recipe={'schema_version':'quant.research-recipe/v1','study_id':'injection-'+kind,'hypothesis':'software fault injection only',
             'mode':'exploratory','backend':'equity','inputs':{'bundle':'synthetic-unused'},
             'interval':{'start':'2024-01-01','end':'2024-06-01'},'factors':{'momentum_20d':1},
