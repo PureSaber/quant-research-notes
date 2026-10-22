@@ -1,0 +1,1127 @@
+{
+  "files": [
+    {
+      "archive": "new_sources",
+      "path": "510500-listing-2015/receipt.json",
+      "bytes": 346,
+      "sha256": "d8dca0a4047a49eb3bce37d2b05de7625b5ed95b83caf0af20eddbc17d971c56"
+    },
+    {
+      "archive": "new_sources",
+      "path": "510500-listing-2015/source.html",
+      "bytes": 986,
+      "sha256": "15c47ee7624dfbee14dc36c594bfa91b6c5f891c2727515073c4c9eabdf303d5"
+    },
+    {
+      "archive": "new_sources",
+      "path": "510500-listing-2015/text.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive": "new_sources",
+      "path": "listing-510500-2020/receipt.json",
+      "bytes": 319,
+      "sha256": "d4d0185346db98c01a30efd9698475e739bead10f8f146b6ce7730f4508bc7c4"
+    },
+    {
+      "archive": "new_sources",
+      "path": "listing-510500-2020-verified/receipt.json",
+      "bytes": 389,
+      "sha256": "60520c775eba1973cd162d64347058209f6545b7f1b2b0c6ffc35a5870c48bad"
+    },
+    {
+      "archive": "new_sources",
+      "path": "listing-510500-2020-verified/source.pdf",
+      "bytes": 375873,
+      "sha256": "4175c1d973bb5c5fb8989a82467f2df3fa6236a3a2df2dfb7b3232b965ac78ce"
+    },
+    {
+      "archive": "new_sources",
+      "path": "listing-510500-2020-verified/text.txt",
+      "bytes": 16412,
+      "sha256": "3786e21f9db46ea59c6324e9371b0e262d700c8663d3eacbd0dbfc77a1b54040"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-plan/receipt.json",
+      "bytes": 452,
+      "sha256": "d6a85d7b1acb15ba288600e63df34a8c963761886d5d9344288ae829ef2e4fe3"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-plan/source.pdf",
+      "bytes": 69505,
+      "sha256": "af9a35f59f6029bc19e0fc239ec13911d94c0b352d7acbef4e2470e1381c6d57"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-plan/text.txt",
+      "bytes": 5206,
+      "sha256": "0911865af5c832eabb3ca02fd6aac9db891df3dd42f79d8c34339b434d4e5b9c"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-result/receipt.json",
+      "bytes": 346,
+      "sha256": "d174933aaf95b206c29a6df8c21ab97bc00ed5bbe85c2b1b6fb3326fd142ebb2"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-result/source.html",
+      "bytes": 985,
+      "sha256": "8d667399ed55c49da02bd4af146c7511845a60a87724b0c256c140f413400302"
+    },
+    {
+      "archive": "new_sources",
+      "path": "split-result/text.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020/receipt.json",
+      "bytes": 454,
+      "sha256": "7668558d183f0a81dc1a05e08c68d656680e77c0257c23d99944b70e45ddeeab"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020/source.docx",
+      "bytes": 37763,
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020/text.txt",
+      "bytes": 43013,
+      "sha256": "5cb1b61578f5f61dfde7942f3b20e3c4e97f7623f37c6ac27c056f90d227233a"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020-page/receipt.json",
+      "bytes": 1769,
+      "sha256": "62789c770158ab1813a79fb267329c30f3603052ba6a63ff58f8fc88a120c5ba"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020-page/source.html",
+      "bytes": 28797,
+      "sha256": "702c6a4bda818bdee5ddf683149a1b146587cce3422f85292ca2b1092d74fa11"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-2020-page/text.txt",
+      "bytes": 4134,
+      "sha256": "294e976b0e20266b3bf3157fc28c5333aefb8f892dc8abe04575114aa0cc605d"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-star-limit/receipt.json",
+      "bytes": 412,
+      "sha256": "5415bb750dd4983eb43589a862da6442a02f2341c8c8e974708b599a90051b9b"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-star-limit/source.html",
+      "bytes": 27029,
+      "sha256": "b3353eeca19b9ea71cb0970a1f244d157461dbbd2c09c98f76f549d6bd2fac20"
+    },
+    {
+      "archive": "new_sources",
+      "path": "sse-star-limit/text.txt",
+      "bytes": 3416,
+      "sha256": "34c4c14b2717764b18464963a40047606b392ec5085bfc5fba726e8d0b4347e5"
+    },
+    {
+      "archive": "new_sources",
+      "path": "suspension/receipt.json",
+      "bytes": 384,
+      "sha256": "9038c7563ace8b9b4f8fcef20187e55a3576267394b5368e437603acdbe00a67"
+    },
+    {
+      "archive": "new_sources",
+      "path": "suspension/source.html",
+      "bytes": 983,
+      "sha256": "5dfe764b898887711e8800c5bddd6a655791bd59e903d9fa1b23bb5bed498c1e"
+    },
+    {
+      "archive": "new_sources",
+      "path": "suspension/text.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "archive": "new_sources",
+      "path": "suspension-advance-newspaper/receipt.json",
+      "bytes": 359,
+      "sha256": "9887719872b74ac377168a133ba739a0200542abc3867421c6e4d1d54c7c6de5"
+    },
+    {
+      "archive": "new_sources",
+      "path": "suspension-advance-newspaper/source.pdf",
+      "bytes": 498867,
+      "sha256": "7d8b7e6676eb4c2a5d9cf6fd60c7e6cc4b4cd85f1b579a707ba2ebc34890e72f"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020/receipt.json",
+      "bytes": 363,
+      "sha256": "7e3817aa6062ffbd605ea4228f228cd8eee4f27f328c98ee513a665766facb2e"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020/source.pdf",
+      "bytes": 279523,
+      "sha256": "348218aab3164083e52057f7313d7d9d7e29f3701b464bc3cc030b600fc23215"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020/text.txt",
+      "bytes": 56386,
+      "sha256": "514ae4fd1a81246ecf359bfb1b669c14f9bc7c291a5d1b6387674be6f5017633"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec/receipt.json",
+      "bytes": 385,
+      "sha256": "fc0f649f403ccc40e4b14ee3d7e704b49f78e36838c1f22d3262640343d2739f"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec/source.pdf",
+      "bytes": 529318,
+      "sha256": "eead38ae76a326f8457fe81dfb5d7aba0ff57dd5783899d1d7d816969e6e5d93"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec/text.txt",
+      "bytes": 53053,
+      "sha256": "84999ce61337d1ce457758d25712791d66dac11396e1db913d5d83f4b52ac4fe"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec-page/receipt.json",
+      "bytes": 866,
+      "sha256": "8de845a9bc4b276a57131f629c6c261efda3c1f419077caa0cd1d967328ce9cf"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec-page/source.html",
+      "bytes": 16499,
+      "sha256": "5b72177b6f43c01d54f9b75a61f3aa6e6dcfafb8a4f88b3058efff8390bbbd2e"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2020-dec-page/text.txt",
+      "bytes": 1630,
+      "sha256": "858e9ac5b3a4bbd849da5f327b91e4076fbd44e74c06648bef37fc254256df23"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2021/receipt.json",
+      "bytes": 363,
+      "sha256": "2bc76daca51cc1874b324953f3606b11f3024aca548640d7ddf5b0c0bcde7180"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2021/source.pdf",
+      "bytes": 287964,
+      "sha256": "3a7e3e378b169248bb9314accd749586a10af24028909e66ae0f1759d5151c3d"
+    },
+    {
+      "archive": "new_sources",
+      "path": "szse-2021/text.txt",
+      "bytes": 58871,
+      "sha256": "72dc8378cbd67e3131021e179501a48900bac63e9d421d1c7d8369359c4b84fc"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_eastmoney_etf/159915/receipt.json",
+      "bytes": 7939,
+      "sha256": "25bf1d509e6817da49c694e904fd2daaf030b26a84f73cc0b8a6fb38569132da"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_eastmoney_etf/510300/receipt.json",
+      "bytes": 7957,
+      "sha256": "36b83bc93c75cc5cd3cfc81d9e066da2613ac2a4a9c7a232250c3bd8576d883c"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_eastmoney_etf/510500/receipt.json",
+      "bytes": 7957,
+      "sha256": "07262d3e3d9059d718a179e2df59b3560289fa83107deaa4bd919ab079647ee0"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/0980a531951e82ebb60b1f06d70073709020eadf6cae47a910f54ee8fb496ff5.bin",
+      "bytes": 64646,
+      "sha256": "0980a531951e82ebb60b1f06d70073709020eadf6cae47a910f54ee8fb496ff5"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/288a35620a1b45b882a8a47f195141b77ecb041decfd030faf28ddd146b3d814.bin",
+      "bytes": 64905,
+      "sha256": "288a35620a1b45b882a8a47f195141b77ecb041decfd030faf28ddd146b3d814"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/87284ccf8c29b8869862912de55af3d627ba96aece2f63109f8aabd2aa590eee.bin",
+      "bytes": 64381,
+      "sha256": "87284ccf8c29b8869862912de55af3d627ba96aece2f63109f8aabd2aa590eee"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/b52d537c75a31a61b2d82e1ed718ae9ed292e289aeda21665dc921caca53e0fb.bin",
+      "bytes": 64037,
+      "sha256": "b52d537c75a31a61b2d82e1ed718ae9ed292e289aeda21665dc921caca53e0fb"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/bars.parquet",
+      "bytes": 70823,
+      "sha256": "ccb09bb9c538dd3e53071517d73f892a808828932d3a8895afafa1238c0d7654"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/c427844ac2fec924c30144b99313055674894c4d5bb0ae99876ede0a04fc2264.bin",
+      "bytes": 18352,
+      "sha256": "c427844ac2fec924c30144b99313055674894c4d5bb0ae99876ede0a04fc2264"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/d0fe556e9d9a28647c6ba5d30ed1599750b26686fc129f296c8359a7eef8cb44.bin",
+      "bytes": 63893,
+      "sha256": "d0fe556e9d9a28647c6ba5d30ed1599750b26686fc129f296c8359a7eef8cb44"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/d8959fc6875da2822b061e778a0be030328686ce09b5fc78d644a744ac90725a.bin",
+      "bytes": 63819,
+      "sha256": "d8959fc6875da2822b061e778a0be030328686ce09b5fc78d644a744ac90725a"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/e4d7435098dd206eabe622985f1b1226aad1b7d8d96542c12460772447ba4626.bin",
+      "bytes": 64905,
+      "sha256": "e4d7435098dd206eabe622985f1b1226aad1b7d8d96542c12460772447ba4626"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/159915/receipt.json",
+      "bytes": 3112,
+      "sha256": "70834294e96ef69b2ff9c374759878f549ed408cae6df58eb0fe78eea62d4f1d"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/107a01e075bc48db2dda08e6b8f5d8b0acc2dded66e552ab57d4240ec031cde6.bin",
+      "bytes": 64688,
+      "sha256": "107a01e075bc48db2dda08e6b8f5d8b0acc2dded66e552ab57d4240ec031cde6"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/15a6391e80028a18aaaf3966b191f5bf8603db75c20f3d37554966438c1426c5.bin",
+      "bytes": 64688,
+      "sha256": "15a6391e80028a18aaaf3966b191f5bf8603db75c20f3d37554966438c1426c5"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/1d60cd70ef857b457f0073b0bcfca9af3f02d22ebde944856eb1762f59dc7fe7.bin",
+      "bytes": 64405,
+      "sha256": "1d60cd70ef857b457f0073b0bcfca9af3f02d22ebde944856eb1762f59dc7fe7"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/21782425ec59d90d0ab9d788940d6e28cc2fcb422e13a025173e04f1c7618bf4.bin",
+      "bytes": 64340,
+      "sha256": "21782425ec59d90d0ab9d788940d6e28cc2fcb422e13a025173e04f1c7618bf4"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/63fa19baa1e6c7a3e63f857b63af6c3e81add99eee9b45460129d84d7c0ff826.bin",
+      "bytes": 17776,
+      "sha256": "63fa19baa1e6c7a3e63f857b63af6c3e81add99eee9b45460129d84d7c0ff826"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/87ef2f02162d03bcbd2f33b03bce421a1bcbad85bdd9cf04f1544b1f4add7710.bin",
+      "bytes": 64272,
+      "sha256": "87ef2f02162d03bcbd2f33b03bce421a1bcbad85bdd9cf04f1544b1f4add7710"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/9432c64ba57441a35d6284bc1aa57d06e4c77f1ef3a6cb3f74f374e64a9736ab.bin",
+      "bytes": 64586,
+      "sha256": "9432c64ba57441a35d6284bc1aa57d06e4c77f1ef3a6cb3f74f374e64a9736ab"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/bars.parquet",
+      "bytes": 70721,
+      "sha256": "24c0336fb794d8382b110c42ce139f9fac2f18d0542b14e96e5b5770427afa86"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/e2be420b7a249734490c9fadeceacd310b4da984fc66a2b28b63744a032f33f8.bin",
+      "bytes": 64666,
+      "sha256": "e2be420b7a249734490c9fadeceacd310b4da984fc66a2b28b63744a032f33f8"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510300/receipt.json",
+      "bytes": 3112,
+      "sha256": "fcb90f683129ff6c93c9ee8ffe342157dccbbdf9340877bf4020b4fb055c9587"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/21ce3a3933334bb797844ac8bbe427a92c9af38b1891db710dfe2508e709732f.bin",
+      "bytes": 64108,
+      "sha256": "21ce3a3933334bb797844ac8bbe427a92c9af38b1891db710dfe2508e709732f"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/33273b4bd4f7019b74d3efb149619596fdccb9dffa4f57f57b8347b2b52716da.bin",
+      "bytes": 64087,
+      "sha256": "33273b4bd4f7019b74d3efb149619596fdccb9dffa4f57f57b8347b2b52716da"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/6c1a536d2b9f4b0c535f19a19133a6fb2e4437d7203b7c976ad181162937309d.bin",
+      "bytes": 64365,
+      "sha256": "6c1a536d2b9f4b0c535f19a19133a6fb2e4437d7203b7c976ad181162937309d"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/773257f650fdd68539f1bf3b38df16b940a263cc483df85b719c915cbc518535.bin",
+      "bytes": 64233,
+      "sha256": "773257f650fdd68539f1bf3b38df16b940a263cc483df85b719c915cbc518535"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/99876d67adf24764858400486c33028f188bf7880672d21e5fd105cc0809d418.bin",
+      "bytes": 64364,
+      "sha256": "99876d67adf24764858400486c33028f188bf7880672d21e5fd105cc0809d418"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/bars.parquet",
+      "bytes": 74754,
+      "sha256": "a3866fce5e6d447a4cf022fbdc3ca277f31ce429beceb60b28fa463767235167"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/d9ceac29edf364462ef9f62e6672ec9835680c71c883631d6da20a13c78285c5.bin",
+      "bytes": 64257,
+      "sha256": "d9ceac29edf364462ef9f62e6672ec9835680c71c883631d6da20a13c78285c5"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/e86fd538bdab45f76e75b38b1d0a80843c3f1f4d6b343d1a75cd54e2656512dc.bin",
+      "bytes": 64089,
+      "sha256": "e86fd538bdab45f76e75b38b1d0a80843c3f1f4d6b343d1a75cd54e2656512dc"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/f05bc66be349a9e88eff9b3286db7958f491f44252149b9791a00c5afada1a38.bin",
+      "bytes": 16840,
+      "sha256": "f05bc66be349a9e88eff9b3286db7958f491f44252149b9791a00c5afada1a38"
+    },
+    {
+      "archive": "new_prices",
+      "path": "akshare_tencent/510500/receipt.json",
+      "bytes": 3112,
+      "sha256": "97281c099944712c94689169070abcd2278e720e92387b3ecbff902b4e0e6b5e"
+    },
+    {
+      "archive": "cash_events",
+      "path": "078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9.bin",
+      "bytes": 44617,
+      "sha256": "078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9"
+    },
+    {
+      "archive": "cash_events",
+      "path": "159915.parquet",
+      "bytes": 5828,
+      "sha256": "0fcc32dd236925d6afe987c846c923d8447c63a33934de80003b6ffff2d40e4b"
+    },
+    {
+      "archive": "cash_events",
+      "path": "1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889.bin",
+      "bytes": 44022,
+      "sha256": "1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889"
+    },
+    {
+      "archive": "cash_events",
+      "path": "335448252662dc81b42c419b6008a935e2dace77d1f92c755d1fe379059168b6.bin",
+      "bytes": 522774,
+      "sha256": "335448252662dc81b42c419b6008a935e2dace77d1f92c755d1fe379059168b6"
+    },
+    {
+      "archive": "cash_events",
+      "path": "510300.parquet",
+      "bytes": 10111,
+      "sha256": "5a5d3ffe19f9582e61057b46f60a74b6c35a024613ee91e5b64d2d67ecaa0d09"
+    },
+    {
+      "archive": "cash_events",
+      "path": "510500.parquet",
+      "bytes": 9743,
+      "sha256": "63e0a3e904c27ccd6cf1ad62f2148bac7f929fb7b58ca9d58a8ad99cb55f353e"
+    },
+    {
+      "archive": "cash_events",
+      "path": "588000.parquet",
+      "bytes": 5828,
+      "sha256": "0fcc32dd236925d6afe987c846c923d8447c63a33934de80003b6ffff2d40e4b"
+    },
+    {
+      "archive": "cash_events",
+      "path": "7cc68bd7851a754696a0e0ffb7251b8e560cc5644c286358a1f69bcebf655110.bin",
+      "bytes": 4311,
+      "sha256": "7cc68bd7851a754696a0e0ffb7251b8e560cc5644c286358a1f69bcebf655110"
+    },
+    {
+      "archive": "cash_events",
+      "path": "d9c0a7a4f9c18190ce4cbff263d6e6e7edd1b3679436fb26484d7f077f269f1b.bin",
+      "bytes": 233691,
+      "sha256": "d9c0a7a4f9c18190ce4cbff263d6e6e7edd1b3679436fb26484d7f077f269f1b"
+    },
+    {
+      "archive": "cash_events",
+      "path": "dff44156ecbd237414ce21362ec7a1d059e806041368bb30d0d7593250954153.bin",
+      "bytes": 45736,
+      "sha256": "dff44156ecbd237414ce21362ec7a1d059e806041368bb30d0d7593250954153"
+    },
+    {
+      "archive": "cash_events",
+      "path": "e6ece40d7e608f2726f123e2c72d6deeb620ba1124650e4a683f1af4fb0d594f.bin",
+      "bytes": 44058,
+      "sha256": "e6ece40d7e608f2726f123e2c72d6deeb620ba1124650e4a683f1af4fb0d594f"
+    },
+    {
+      "archive": "cash_events",
+      "path": "f0d2801952ff414079e3d5f889046c7904baa209c2425028c88bf8c08d63f16c.bin",
+      "bytes": 544870,
+      "sha256": "f0d2801952ff414079e3d5f889046c7904baa209c2425028c88bf8c08d63f16c"
+    },
+    {
+      "archive": "cash_events",
+      "path": "f5a835398bb2ef39f7094f837d9e53e02345bdf9560649514c2dabbe003ee1e7.bin",
+      "bytes": 4252,
+      "sha256": "f5a835398bb2ef39f7094f837d9e53e02345bdf9560649514c2dabbe003ee1e7"
+    },
+    {
+      "archive": "cash_events",
+      "path": "f8ff219346d644640a7a55a23d5299d7d1c25c11eae1dd6e5dc9ca29ea71ecbe.bin",
+      "bytes": 556244,
+      "sha256": "f8ff219346d644640a7a55a23d5299d7d1c25c11eae1dd6e5dc9ca29ea71ecbe"
+    },
+    {
+      "archive": "cash_events",
+      "path": "receipt.json",
+      "bytes": 2965,
+      "sha256": "0f22ee81ec0424e01404cd0147a89671aa1e3f89c45322234f7cd8ce8539077a"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/159915/receipt.json",
+      "bytes": 324,
+      "sha256": "d7508daa7c1e021a5904edbcfece77a74a8e39133a33335b35eb4a91e777223d"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/510300/receipt.json",
+      "bytes": 324,
+      "sha256": "d186187edc4536bcf7090fc0869e4415be9f135b00a8789ec62c77fc41e25ad3"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/510500/receipt.json",
+      "bytes": 324,
+      "sha256": "328a77d3ba0ba2cc71a1888d4047b348d96a96b9c34eddbb08cf6b059f1f3bde"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/588000/23329c723b84ceb2bb37768f6aa3ced9bf4a60e1137bc4cbc9f7fd25d1b239f6.bin",
+      "bytes": 118825,
+      "sha256": "23329c723b84ceb2bb37768f6aa3ced9bf4a60e1137bc4cbc9f7fd25d1b239f6"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/588000/bars.parquet",
+      "bytes": 66168,
+      "sha256": "052b7a5185b63429823552f3cdd97615f64e05f7821924482824c27e40fa8108"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_eastmoney_etf/588000/receipt.json",
+      "bytes": 802,
+      "sha256": "019a96c939dd49cbb09afe3d77405a07d920e166123416d8f91f03f326f663d0"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/159915/17a4259dcf45b2eaf1905e4d8139f6ce2c9f5b0f78382f1bc4202845f33d0426.bin",
+      "bytes": 50232,
+      "sha256": "17a4259dcf45b2eaf1905e4d8139f6ce2c9f5b0f78382f1bc4202845f33d0426"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/159915/bars.parquet",
+      "bytes": 71887,
+      "sha256": "13336dcf1b73b9dedab2342f139d67d335a7f845e75d2a0f4fd43706b4b7ca29"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/159915/receipt.json",
+      "bytes": 614,
+      "sha256": "44b70cfaca2c20f4fb81a2c01876043913bfcd79e01fb4b0c5dfbf83d347beb9"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510300/29e6671c791014923d43a0bd9660cc46a3f31d89652f061ee040920b0e04234a.bin",
+      "bytes": 50262,
+      "sha256": "29e6671c791014923d43a0bd9660cc46a3f31d89652f061ee040920b0e04234a"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510300/bars.parquet",
+      "bytes": 71712,
+      "sha256": "9e50f0ce3fe6b15c7b679473ff6a11b0065fe3497fe649ca8f15c4a569e2d4d0"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510300/receipt.json",
+      "bytes": 614,
+      "sha256": "02c3162136aabeb6cd413b22cda836713416cbaaad24ef599f8cb846434671e3"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510500/9ce89585f462a075ceef416c98af7b10ce846713d5665c634f5d6f6cae4a8e00.bin",
+      "bytes": 47730,
+      "sha256": "9ce89585f462a075ceef416c98af7b10ce846713d5665c634f5d6f6cae4a8e00"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510500/bars.parquet",
+      "bytes": 75610,
+      "sha256": "36e7ffa2cb598142da710736c3f3724f8278a98d11f0e79bd79b535b17caf5c3"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/510500/receipt.json",
+      "bytes": 614,
+      "sha256": "75422d81b978c5d00ed4570745da77627a5bf1630a80501edcd83bf0fee67c91"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/588000/bars.parquet",
+      "bytes": 66951,
+      "sha256": "2d20a75edf93dd0f0fa9348b199f7e80c89b6f48fc23b0ebe4b6152fef560eec"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/588000/dd6adc846b5c8687d12bf5d193b32b4348ee1bc41680b6a709187a072d808079.bin",
+      "bytes": 20801,
+      "sha256": "dd6adc846b5c8687d12bf5d193b32b4348ee1bc41680b6a709187a072d808079"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "akshare_sina_etf/588000/receipt.json",
+      "bytes": 614,
+      "sha256": "72644fbf58fce285f8ce00bc69f75eae53c5e720e985064b8661db1d4e05e5da"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9.bin",
+      "bytes": 44617,
+      "sha256": "078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/159915-20210208-suspension.pdf",
+      "bytes": 986,
+      "sha256": "ae2588cde92c050444eb244f185b04b09e9a19ece63f6efdd5206efb77e2c305"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/159915-eastmoney-dividends.csv",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/159915-sina-dividends.csv",
+      "bytes": 21,
+      "sha256": "50eb2124ccb8c928821958afbdae4b5839924252ea962d3c1b398357c878229a"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889.bin",
+      "bytes": 44022,
+      "sha256": "1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/510300-eastmoney-dividends.csv",
+      "bytes": 1031,
+      "sha256": "977cfe45a766fc78c9e9dab627ae77e10c4ff49b2055dfb96d548b47d322a152"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/510300-sina-dividends.csv",
+      "bytes": 270,
+      "sha256": "c56cd33f17ae887f592810a776e147833d169d4eea9d55ce23b5d59cd671ede6"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/510500-eastmoney-dividends.csv",
+      "bytes": 341,
+      "sha256": "210ea7666429d4c664f3638435f86a8ae07dcee2fdff2c71182aa0efaf41e993"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/510500-sina-dividends.csv",
+      "bytes": 140,
+      "sha256": "69a7d96dcd07e3465f8d8f35626f2827aceb35d6787af38303e03b0aec944a8a"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/588000-eastmoney-dividends.csv",
+      "bytes": 2,
+      "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/588000-sina-dividends.csv",
+      "bytes": 21,
+      "sha256": "50eb2124ccb8c928821958afbdae4b5839924252ea962d3c1b398357c878229a"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/706075745df95d9041a201468989648b3707b87d8e1a605718b6628672ba9441.bin",
+      "bytes": 45775,
+      "sha256": "706075745df95d9041a201468989648b3707b87d8e1a605718b6628672ba9441"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/7c1038a70077c4a9a35df5ff02631f92ab41e252112389553f244d04c4e88103.bin",
+      "bytes": 522774,
+      "sha256": "7c1038a70077c4a9a35df5ff02631f92ab41e252112389553f244d04c4e88103"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/7f92708019835e23b4856d693e5ecd0815d79637c6b9194cd23edcc5ba198e8e.bin",
+      "bytes": 395,
+      "sha256": "7f92708019835e23b4856d693e5ecd0815d79637c6b9194cd23edcc5ba198e8e"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/a3718e78d17cfcee7b90b72ed12ad4482fce5f473e765a66d98e994732c56a78.bin",
+      "bytes": 37382,
+      "sha256": "a3718e78d17cfcee7b90b72ed12ad4482fce5f473e765a66d98e994732c56a78"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/a6b5081db14000155c5c507e6890a186c22b4e6e77a5e1589710fc9e23988155.bin",
+      "bytes": 1516,
+      "sha256": "a6b5081db14000155c5c507e6890a186c22b4e6e77a5e1589710fc9e23988155"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/c6d67deabe72c1929367e0830026c0919a6bced3c19fc4c144e209617897f8d7.bin",
+      "bytes": 395,
+      "sha256": "c6d67deabe72c1929367e0830026c0919a6bced3c19fc4c144e209617897f8d7"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/calendar.csv",
+      "bytes": 105576,
+      "sha256": "172f3b5360876bb7cf1ce714da28124390690d25b002814c2c43fc971c434e2d"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/cb39f55bbbb6d367beae5852dc38c3ab7cf9cf3ef64eb6d65188e0ba98a1bb41.bin",
+      "bytes": 233692,
+      "sha256": "cb39f55bbbb6d367beae5852dc38c3ab7cf9cf3ef64eb6d65188e0ba98a1bb41"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/cdd6af03506c693c593124d2d6582ffedb481988c26b2710b2d1b9aa1e2a47c6.bin",
+      "bytes": 544870,
+      "sha256": "cdd6af03506c693c593124d2d6582ffedb481988c26b2710b2d1b9aa1e2a47c6"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/d5112e08726ecc435092fb63547a34fc514b071b1a4a84f9e2c29fb9023726a9.bin",
+      "bytes": 508,
+      "sha256": "d5112e08726ecc435092fb63547a34fc514b071b1a4a84f9e2c29fb9023726a9"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/e0fd24a36ef170bc71fce96cc425cde8c0b8098517721cb686ea9d3d5b5c7278.bin",
+      "bytes": 955,
+      "sha256": "e0fd24a36ef170bc71fce96cc425cde8c0b8098517721cb686ea9d3d5b5c7278"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/ee11b764e492dfbef301cb9434df554e9e4165b38c4a6331fb19c4e57ead051b.bin",
+      "bytes": 556244,
+      "sha256": "ee11b764e492dfbef301cb9434df554e9e4165b38c4a6331fb19c4e57ead051b"
+    },
+    {
+      "archive": "prior_prices",
+      "path": "validation/quality.json",
+      "bytes": 6881,
+      "sha256": "0cd1d7bc752a43bdf15952dd9bfd789eee077b8af98c8a80714e7ff578251cfd"
+    },
+    {
+      "archive": "master_early",
+      "path": "catalog.csv",
+      "bytes": 1708,
+      "sha256": "bff970ab7e4ab832aa06d29cb7ed6b9b000c0faa8e83311f7dce77d5450aecf1"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/listing-159915.html",
+      "bytes": 17071,
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/listing-510300.pdf",
+      "bytes": 1388258,
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/listing-510500.pdf",
+      "bytes": 375873,
+      "sha256": "4175c1d973bb5c5fb8989a82467f2df3fa6236a3a2df2dfb7b3232b965ac78ce"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/listing-588000.pdf",
+      "bytes": 430850,
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/sse-rule-2020.docx",
+      "bytes": 37763,
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/sse-rule-2023.docx",
+      "bytes": 51948,
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/sse-rule-2026.docx",
+      "bytes": 65302,
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/sse-star-limit-2020.html",
+      "bytes": 27029,
+      "sha256": "b3353eeca19b9ea71cb0970a1f244d157461dbbd2c09c98f76f549d6bd2fac20"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/szse-limit-159915-2020.pdf",
+      "bytes": 95999,
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/szse-rule-2020.pdf",
+      "bytes": 279523,
+      "sha256": "348218aab3164083e52057f7313d7d9d7e29f3701b464bc3cc030b600fc23215"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/szse-rule-2023.pdf",
+      "bytes": 620843,
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222"
+    },
+    {
+      "archive": "master_early",
+      "path": "documents/szse-rule-2026.pdf",
+      "bytes": 282084,
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586"
+    },
+    {
+      "archive": "master_early",
+      "path": "manifest.json",
+      "bytes": 44489,
+      "sha256": "0d542cf72d6e405aec869856b8a9401165bdfc901e292f8e8a272ab577a432e4"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/catalog.csv",
+      "bytes": 1708,
+      "sha256": "c0ec74c2c07203972aae7772aac3084a26fad3571c698aab97d62610c280b928"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/declaration.json",
+      "bytes": 55028,
+      "sha256": "b71d0b549f5ceb757f2f856fc24b4dc654f3c180fb948b30304ae511286e41f0"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/listing-159915.html",
+      "bytes": 17071,
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/listing-510300.pdf",
+      "bytes": 1388258,
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/listing-510500.pdf",
+      "bytes": 375873,
+      "sha256": "4175c1d973bb5c5fb8989a82467f2df3fa6236a3a2df2dfb7b3232b965ac78ce"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/listing-588000.pdf",
+      "bytes": 430850,
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/sse-rule-2020.docx",
+      "bytes": 37763,
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/sse-rule-2023.docx",
+      "bytes": 51948,
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/sse-rule-2026.docx",
+      "bytes": 65302,
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/sse-star-limit-2020.html",
+      "bytes": 27029,
+      "sha256": "b3353eeca19b9ea71cb0970a1f244d157461dbbd2c09c98f76f549d6bd2fac20"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/szse-limit-159915-2020.pdf",
+      "bytes": 95999,
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/szse-rule-2020.pdf",
+      "bytes": 279523,
+      "sha256": "348218aab3164083e52057f7313d7d9d7e29f3701b464bc3cc030b600fc23215"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/szse-rule-2023.pdf",
+      "bytes": 620843,
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222"
+    },
+    {
+      "archive": "master_early",
+      "path": "source/documents/szse-rule-2026.pdf",
+      "bytes": 282084,
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586"
+    },
+    {
+      "archive": "master_later",
+      "path": "catalog.csv",
+      "bytes": 5836,
+      "sha256": "dfa31474523ac728de63c364208b88adb6c451d2cd26c0bce53aac05340f1fee"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/listing-159915.html",
+      "bytes": 17071,
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/listing-510300.pdf",
+      "bytes": 1388258,
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/listing-510500.pdf",
+      "bytes": 375873,
+      "sha256": "4175c1d973bb5c5fb8989a82467f2df3fa6236a3a2df2dfb7b3232b965ac78ce"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/listing-588000.pdf",
+      "bytes": 430850,
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/sse-rule-2020.docx",
+      "bytes": 37763,
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/sse-rule-2023.docx",
+      "bytes": 51948,
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/sse-rule-2026.docx",
+      "bytes": 65302,
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/sse-star-limit-2020.html",
+      "bytes": 27029,
+      "sha256": "b3353eeca19b9ea71cb0970a1f244d157461dbbd2c09c98f76f549d6bd2fac20"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/szse-limit-159915-2020.pdf",
+      "bytes": 95999,
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/szse-rule-2020-dec.pdf",
+      "bytes": 529318,
+      "sha256": "eead38ae76a326f8457fe81dfb5d7aba0ff57dd5783899d1d7d816969e6e5d93"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/szse-rule-2021.pdf",
+      "bytes": 287964,
+      "sha256": "3a7e3e378b169248bb9314accd749586a10af24028909e66ae0f1759d5151c3d"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/szse-rule-2023.pdf",
+      "bytes": 620843,
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222"
+    },
+    {
+      "archive": "master_later",
+      "path": "documents/szse-rule-2026.pdf",
+      "bytes": 282084,
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586"
+    },
+    {
+      "archive": "master_later",
+      "path": "manifest.json",
+      "bytes": 46410,
+      "sha256": "fa5aa98a4128582689496655d474dbc02af4f19439eba15801e1f1bfd8483bd9"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/catalog.csv",
+      "bytes": 5836,
+      "sha256": "eae8fa070ab5b7a5330de1d2387b88a4269fdb5848bf95620fa7c96edd877d0e"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/declaration.json",
+      "bytes": 57617,
+      "sha256": "7622479ceb7289ab74a9213982df178b14c2cdeb05e31f9f82bf5994c1439970"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/listing-159915.html",
+      "bytes": 17071,
+      "sha256": "7dcce60eba66dd4d6c3e80ad6aed76b1682d53d4f8e83c31ae6b92102a9852be"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/listing-510300.pdf",
+      "bytes": 1388258,
+      "sha256": "e2b1fa91f3a6734d5fdfd756f55b18534dda2b581e26a50d416ff0ac03547bc9"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/listing-510500.pdf",
+      "bytes": 375873,
+      "sha256": "4175c1d973bb5c5fb8989a82467f2df3fa6236a3a2df2dfb7b3232b965ac78ce"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/listing-588000.pdf",
+      "bytes": 430850,
+      "sha256": "46af95b681fe58d9c409d2252be57404c5191fd2b678ba4a9781c588f852f2c3"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/sse-rule-2020.docx",
+      "bytes": 37763,
+      "sha256": "bc0abb073a0463e3b9e0a3d8d0fa190ffee44286fdae8bf431f1f64fb8eccb2f"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/sse-rule-2023.docx",
+      "bytes": 51948,
+      "sha256": "7aa2319f6dcf597be1e86b3b69d7c2ad0e6acb2a5d0cc6be48a01af602fded40"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/sse-rule-2026.docx",
+      "bytes": 65302,
+      "sha256": "fc922c433438b2636cb631eab25cca405209712acbb6aaded768c45456ff8888"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/sse-star-limit-2020.html",
+      "bytes": 27029,
+      "sha256": "b3353eeca19b9ea71cb0970a1f244d157461dbbd2c09c98f76f549d6bd2fac20"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/szse-limit-159915-2020.pdf",
+      "bytes": 95999,
+      "sha256": "ff0a569fede5cb1d4cb09d7aa878c8970fe8c0c74c083beb2b4dfdbe6d71b095"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/szse-rule-2020-dec.pdf",
+      "bytes": 529318,
+      "sha256": "eead38ae76a326f8457fe81dfb5d7aba0ff57dd5783899d1d7d816969e6e5d93"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/szse-rule-2021.pdf",
+      "bytes": 287964,
+      "sha256": "3a7e3e378b169248bb9314accd749586a10af24028909e66ae0f1759d5151c3d"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/szse-rule-2023.pdf",
+      "bytes": 620843,
+      "sha256": "7018114a6e11deb239c2a72e71e49defc6e8841b3e2c093b3bbf809282c67222"
+    },
+    {
+      "archive": "master_later",
+      "path": "source/documents/szse-rule-2026.pdf",
+      "bytes": 282084,
+      "sha256": "9b66f8b0db70f84a25ef1ccb4ee2351001724e408117552d75f6d8993483c586"
+    }
+  ],
+  "note": "Original bytes retained in isolated local evidence archive; no frozen runtime input replaced."
+}

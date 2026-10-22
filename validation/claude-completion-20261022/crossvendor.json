@@ -1,0 +1,38 @@
+[
+  {
+    "symbol": "510300",
+    "rows": 1437,
+    "max_absolute_delta": {
+      "open": 0.0,
+      "high": 0.0,
+      "low": 0.0,
+      "close": 0.0,
+      "volume": 50.0,
+      "amount": 50.0
+    }
+  },
+  {
+    "symbol": "510500",
+    "rows": 1437,
+    "max_absolute_delta": {
+      "open": 0.0,
+      "high": 0.0,
+      "low": 0.0,
+      "close": 0.0,
+      "volume": 50.0,
+      "amount": 50.00000023841858
+    }
+  },
+  {
+    "symbol": "159915",
+    "rows": 1436,
+    "max_absolute_delta": {
+      "open": 0.0,
+      "high": 0.0,
+      "low": 0.0,
+      "close": 0.0,
+      "volume": 2388576800.0,
+      "amount": 5027417600.0
+    }
+  }
+]
