@@ -1,0 +1,64 @@
+{
+  "scope": "Retrospective descriptive comparison, not a preregistered risk objective or promotion.",
+  "source_commit": "7349838bb480f1b93acf37a7bdef2abee2a5e00f",
+  "book": "position_hs300",
+  "model": "tsmom",
+  "start": "2019-03-11 00:00:00",
+  "end": "2026-09-28 00:00:00",
+  "inputs": {
+    "configs/market_comparison.yaml": "d3386e68c94bfa656496a3cefdab34d11a873f876858d31cbe33e221ae94226d",
+    "data/public/indices.csv": "2e4dbd54e478c9d62bdc41b3e58e126c5c13dcb0f0c0cb5ae8510239c7876430",
+    "data/public/amounts.csv": "ed95eb28c1eb54f1efb8c02d4cfdc85f2ddee66e9c92d5b4967543f9a237369c",
+    "data/public/signals.csv": "6c95c2914908e421beb4f056c26c3fe281641a39d257711c1bcdc9c35bf4d691",
+    "data/public/futures.csv": "aab4f3918f52d8cc242cab8709c79bec54ad641f69bde69ed382bac8bf9a189f"
+  },
+  "original_return_metrics_reproduced": true,
+  "leakage": {
+    "passed": true,
+    "reason": "ok",
+    "checks": [
+      {
+        "as_of": "2022-03-16",
+        "max_abs_weight_diff": 0.0,
+        "scale_diff": 0.0,
+        "regime_match": true
+      },
+      {
+        "as_of": "2023-09-14",
+        "max_abs_weight_diff": 0.0,
+        "scale_diff": 0.0,
+        "regime_match": true
+      },
+      {
+        "as_of": "2025-03-27",
+        "max_abs_weight_diff": 0.0,
+        "scale_diff": 0.0,
+        "regime_match": true
+      }
+    ]
+  },
+  "strategy": {
+    "sessions": 1835,
+    "return": 0.1259607125267237,
+    "drawdown": -0.2249954453692825,
+    "annualized_volatility": 0.09963274705890611,
+    "annualized_downside_deviation_zero_target": 0.07264852025193884,
+    "daily_historical_var_5pct": -0.009823818005873364,
+    "daily_historical_cvar_5pct": -0.01606068410669608
+  },
+  "benchmark": {
+    "sessions": 1835,
+    "return": 0.18678470464076957,
+    "drawdown": -0.45602577259234256,
+    "annualized_volatility": 0.1889456035750005,
+    "annualized_downside_deviation_zero_target": 0.13304805788639354,
+    "daily_historical_var_5pct": -0.01791066770603177,
+    "daily_historical_cvar_5pct": -0.027446926363120946
+  },
+  "risk_objective_verdict": "insufficient_evidence",
+  "limitations": [
+    "No preregistered risk-reduction threshold or power calibration.",
+    "No uncertainty interval for the paired risk difference.",
+    "Maximum drawdown is one observed path, not proof of risk reduction."
+  ]
+}

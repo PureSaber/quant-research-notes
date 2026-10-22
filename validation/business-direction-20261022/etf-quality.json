@@ -1,0 +1,274 @@
+{
+  "grain": "one unadjusted daily bar per symbol and session",
+  "start": "2020-11-16",
+  "end": "2026-10-21",
+  "research_admitted": false,
+  "calendar_basis": "Sina exchange-calendar redistribution, not independent exchange validation",
+  "prices": [
+    {
+      "provider": "akshare_sina_etf",
+      "symbol": "510300",
+      "acquisition": "fetched_unvalidated",
+      "rows": 1437,
+      "duplicates": 0,
+      "required_nulls": 0,
+      "missing_dates": [],
+      "unexpected_dates": []
+    },
+    {
+      "provider": "akshare_sina_etf",
+      "symbol": "510500",
+      "acquisition": "fetched_unvalidated",
+      "rows": 1437,
+      "duplicates": 0,
+      "required_nulls": 0,
+      "missing_dates": [],
+      "unexpected_dates": []
+    },
+    {
+      "provider": "akshare_sina_etf",
+      "symbol": "159915",
+      "acquisition": "fetched_unvalidated",
+      "rows": 1436,
+      "duplicates": 0,
+      "required_nulls": 0,
+      "missing_dates": [
+        "2021-02-08"
+      ],
+      "unexpected_dates": []
+    },
+    {
+      "provider": "akshare_sina_etf",
+      "symbol": "588000",
+      "acquisition": "fetched_unvalidated",
+      "rows": 1437,
+      "duplicates": 0,
+      "required_nulls": 0,
+      "missing_dates": [],
+      "unexpected_dates": []
+    },
+    {
+      "provider": "akshare_eastmoney_etf",
+      "symbol": "510300",
+      "acquisition": "failed"
+    },
+    {
+      "provider": "akshare_eastmoney_etf",
+      "symbol": "510500",
+      "acquisition": "failed"
+    },
+    {
+      "provider": "akshare_eastmoney_etf",
+      "symbol": "159915",
+      "acquisition": "failed"
+    },
+    {
+      "provider": "akshare_eastmoney_etf",
+      "symbol": "588000",
+      "acquisition": "fetched_unvalidated",
+      "rows": 1437,
+      "duplicates": 0,
+      "required_nulls": 0,
+      "missing_dates": [],
+      "unexpected_dates": []
+    }
+  ],
+  "events": [
+    {
+      "symbol": "510300",
+      "vendor": "sina",
+      "status": "captured_unreconciled",
+      "rows": 14
+    },
+    {
+      "symbol": "510300",
+      "vendor": "eastmoney",
+      "status": "captured_unreconciled",
+      "rows": 14
+    },
+    {
+      "symbol": "510500",
+      "vendor": "sina",
+      "status": "captured_unreconciled",
+      "rows": 7
+    },
+    {
+      "symbol": "510500",
+      "vendor": "eastmoney",
+      "status": "captured_unreconciled",
+      "rows": 4
+    },
+    {
+      "symbol": "159915",
+      "vendor": "sina",
+      "status": "captured_unreconciled",
+      "rows": 0
+    },
+    {
+      "symbol": "159915",
+      "vendor": "eastmoney",
+      "status": "captured_unreconciled",
+      "rows": 0
+    },
+    {
+      "symbol": "588000",
+      "vendor": "sina",
+      "status": "captured_unreconciled",
+      "rows": 0
+    },
+    {
+      "symbol": "588000",
+      "vendor": "eastmoney",
+      "status": "captured_unreconciled",
+      "rows": 0
+    }
+  ],
+  "cross_vendor": [
+    {
+      "symbol": "588000",
+      "joined_rows": 1437,
+      "unmatched_rows": 0,
+      "maximum_absolute_difference": {
+        "open": 0.0,
+        "high": 0.0,
+        "low": 0.0,
+        "close": 0.0,
+        "volume": 55.0,
+        "amount": 8.0
+      }
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://finance.sina.com.cn/realstock/company/klc_td_sh.txt",
+      "status": 200,
+      "sha256": "d5112e08726ecc435092fb63547a34fc514b071b1a4a84f9e2c29fb9023726a9",
+      "captured_at": "2026-10-22T03:32:54.688678+00:00"
+    },
+    {
+      "url": "https://finance.sina.com.cn/realstock/company/sh510300/hfq.js",
+      "status": 200,
+      "sha256": "a6b5081db14000155c5c507e6890a186c22b4e6e77a5e1589710fc9e23988155",
+      "captured_at": "2026-10-22T03:32:55.374417+00:00"
+    },
+    {
+      "url": "https://fund.eastmoney.com/pingzhongdata/510300.js",
+      "status": 200,
+      "sha256": "cdd6af03506c693c593124d2d6582ffedb481988c26b2710b2d1b9aa1e2a47c6",
+      "captured_at": "2026-10-22T03:32:55.975915+00:00"
+    },
+    {
+      "url": "https://fundf10.eastmoney.com/fhsp_510300.html",
+      "status": 200,
+      "sha256": "706075745df95d9041a201468989648b3707b87d8e1a605718b6628672ba9441",
+      "captured_at": "2026-10-22T03:32:56.410641+00:00"
+    },
+    {
+      "url": "https://finance.sina.com.cn/realstock/company/sh510500/hfq.js",
+      "status": 200,
+      "sha256": "e0fd24a36ef170bc71fce96cc425cde8c0b8098517721cb686ea9d3d5b5c7278",
+      "captured_at": "2026-10-22T03:32:56.666685+00:00"
+    },
+    {
+      "url": "https://fund.eastmoney.com/pingzhongdata/510500.js",
+      "status": 200,
+      "sha256": "7c1038a70077c4a9a35df5ff02631f92ab41e252112389553f244d04c4e88103",
+      "captured_at": "2026-10-22T03:32:57.042984+00:00"
+    },
+    {
+      "url": "https://fundf10.eastmoney.com/fhsp_510500.html",
+      "status": 200,
+      "sha256": "078db470ef1d760d22ff05f23395ccf4bfc43752eb93189add1500f260e309c9",
+      "captured_at": "2026-10-22T03:32:57.372714+00:00"
+    },
+    {
+      "url": "https://finance.sina.com.cn/realstock/company/sz159915/hfq.js",
+      "status": 200,
+      "sha256": "7f92708019835e23b4856d693e5ecd0815d79637c6b9194cd23edcc5ba198e8e",
+      "captured_at": "2026-10-22T03:32:57.811846+00:00"
+    },
+    {
+      "url": "https://fund.eastmoney.com/pingzhongdata/159915.js",
+      "status": 200,
+      "sha256": "ee11b764e492dfbef301cb9434df554e9e4165b38c4a6331fb19c4e57ead051b",
+      "captured_at": "2026-10-22T03:32:58.163081+00:00"
+    },
+    {
+      "url": "https://fundf10.eastmoney.com/fhsp_159915.html",
+      "status": 200,
+      "sha256": "a3718e78d17cfcee7b90b72ed12ad4482fce5f473e765a66d98e994732c56a78",
+      "captured_at": "2026-10-22T03:32:58.495801+00:00"
+    },
+    {
+      "url": "https://finance.sina.com.cn/realstock/company/sh588000/hfq.js",
+      "status": 200,
+      "sha256": "c6d67deabe72c1929367e0830026c0919a6bced3c19fc4c144e209617897f8d7",
+      "captured_at": "2026-10-22T03:32:58.903784+00:00"
+    },
+    {
+      "url": "https://fund.eastmoney.com/pingzhongdata/588000.js",
+      "status": 200,
+      "sha256": "cb39f55bbbb6d367beae5852dc38c3ab7cf9cf3ef64eb6d65188e0ba98a1bb41",
+      "captured_at": "2026-10-22T03:32:59.172476+00:00"
+    },
+    {
+      "url": "https://fundf10.eastmoney.com/fhsp_588000.html",
+      "status": 200,
+      "sha256": "1ce6468d78c4c7391d7030a180bc095c92cf51c4af0aa0a74cb0345099fc7889",
+      "captured_at": "2026-10-22T03:32:59.512440+00:00"
+    }
+  ],
+  "blocking_gaps": [
+    "Historical typed trading-rule master is not available for the complete period.",
+    "ETF splits/consolidations and effective/availability dates require issuer evidence.",
+    "Cash date/amount matches for two dividend-paying ETFs; issuer publication/entitlement dates and split precision still require native admission."
+  ],
+  "calendar_sessions": 1437,
+  "cash_reconciliation": [
+    {
+      "symbol": "510300",
+      "sina_positive_events": 6,
+      "eastmoney_events": 6,
+      "date_and_cash_equal": true,
+      "events": {
+        "2021-01-18": "0.072",
+        "2022-01-19": "0.075",
+        "2023-01-16": "0.064",
+        "2024-01-18": "0.069",
+        "2025-06-18": "0.088",
+        "2026-01-19": "0.123"
+      }
+    },
+    {
+      "symbol": "510500",
+      "sina_positive_events": 4,
+      "eastmoney_events": 4,
+      "date_and_cash_equal": true,
+      "events": {
+        "2024-05-17": "0.087",
+        "2025-01-16": "0.091",
+        "2026-01-16": "0.062",
+        "2026-07-15": "0.149"
+      }
+    }
+  ],
+  "missing_date_review": {
+    "symbol": "159915",
+    "date": "2021-02-08",
+    "classification": "issuer_announced_suspension",
+    "source": "https://pdf.dfcfw.com/pdf/H2_AN202102081459963456_1.pdf?1612777675000.pdf=",
+    "source_inspection": "Full issuer PDF text inspected using web tool; direct unparameterized download returned invalid PDF and is not admitted.",
+    "native_event_admitted": false
+  },
+  "split_review": {
+    "symbol": "510500",
+    "registration_date": "2022-08-26",
+    "effective_basis": "End of registration date; first post-event session 2022-08-29.",
+    "announced_date": "2022-08-23",
+    "ratio": "1.14539",
+    "fractional_entitlement": "ceiling",
+    "vendor_display_ratio": "1.1454",
+    "native_event_admitted": false,
+    "source": "https://www.nffund.com/DownLoader.java?filePath=%252Fmain%252Ffiles%252F2022%252F08%252F22%252F513929807319.pdf&utf8=1"
+  }
+}
