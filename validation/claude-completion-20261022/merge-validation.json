@@ -1,0 +1,249 @@
+{
+  "schema": "quant.claude-completion-merge-receipt/v1",
+  "verified_at": "2026-10-22T06:21:39.6725650Z",
+  "components": [
+    {
+      "repository": "quant-lab",
+      "pull_request": "https://github.com/PureSaber/quant-lab/pull/27",
+      "tested_head": "44fdb93d1265cfa6b6ac7b6fc319c04158a2cf74",
+      "merge_commit": "1638f7bfe57526155da99c219bae1607460178df",
+      "merged_at": "2026-10-22T05:31:51Z",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301620"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314740/job/119657348380"
+        },
+        {
+          "name": "financial-benchmarks",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314545/job/119657301006"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301577"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301593"
+        },
+        {
+          "name": "test (Windows, 3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301340"
+        },
+        {
+          "name": "test (Windows, 3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301615"
+        },
+        {
+          "name": "test (Windows, 3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/actions/runs/39728314583/job/119657301569"
+        },
+        {
+          "name": "CodeQL",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-lab/runs/119657558861"
+        }
+      ]
+    },
+    {
+      "repository": "quant-data-kit",
+      "pull_request": "https://github.com/PureSaber/quant-data-kit/pull/49",
+      "tested_head": "19307f611b2175bdbd2c95a90c019e4ddbc1941a",
+      "merge_commit": "c1b8ceca49c1c235768f994821f1b74ba0cbaf1d",
+      "merged_at": "2026-10-22T05:33:08Z",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655681772"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811809/job/119655681886"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655682136"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655681767"
+        },
+        {
+          "name": "test (Windows, 3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655681841"
+        },
+        {
+          "name": "test (Windows, 3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655682011"
+        },
+        {
+          "name": "test (Windows, 3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/actions/runs/39727811724/job/119655681443"
+        },
+        {
+          "name": "CodeQL",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-data-kit/runs/119655933794"
+        }
+      ]
+    },
+    {
+      "repository": "quant-portfolio",
+      "pull_request": "https://github.com/PureSaber/quant-portfolio/pull/33",
+      "tested_head": "4fd1ec64028f9db01eab6ae06902bcbb9d185b90",
+      "merge_commit": "1f95b427443282c9133963867ee81c510d081bc1",
+      "merged_at": "2026-10-22T05:33:20Z",
+      "checks": [
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317250"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319610/job/119657317455"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317056"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317216"
+        },
+        {
+          "name": "test (3.10) Windows",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317261"
+        },
+        {
+          "name": "test (3.11) Windows",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317212"
+        },
+        {
+          "name": "test (3.12) Windows",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/actions/runs/39728319595/job/119657317120"
+        },
+        {
+          "name": "CodeQL",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-portfolio/runs/119657538435"
+        }
+      ]
+    },
+    {
+      "repository": "a-share-multifactor",
+      "pull_request": "https://github.com/PureSaber/a-share-multifactor/pull/42",
+      "tested_head": "c6c850935d9d692da3acd4dcf4203fddc91bdeeb",
+      "merge_commit": "456240d1b034f4b8997a79eeb19d7178d6e1018f",
+      "merged_at": "2026-10-22T06:14:21Z",
+      "checks": [
+        {
+          "name": "test (ubuntu-latest, 3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667538285"
+        },
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561432/job/119667538656"
+        },
+        {
+          "name": "test (ubuntu-latest, 3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667538246"
+        },
+        {
+          "name": "test (ubuntu-latest, 3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667538226"
+        },
+        {
+          "name": "test (windows-latest, 3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667538283"
+        },
+        {
+          "name": "test (windows-latest, 3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667538210"
+        },
+        {
+          "name": "test (windows-latest, 3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/actions/runs/39731561401/job/119667537937"
+        },
+        {
+          "name": "CodeQL",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/a-share-multifactor/runs/119667829183"
+        }
+      ]
+    },
+    {
+      "repository": "quant-pipeline",
+      "pull_request": "https://github.com/PureSaber/quant-pipeline/pull/36",
+      "tested_head": "d602dd98eb113166ad5cd021c54c885ab943acd2",
+      "merge_commit": "df9c3b2b8e566e99cc3af9940a01a3c436aa5d17",
+      "merged_at": "2026-10-22T06:21:13Z",
+      "checks": [
+        {
+          "name": "codeql (python)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/actions/runs/39732751032/job/119671311712"
+        },
+        {
+          "name": "test (3.10)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/actions/runs/39732750814/job/119671310904"
+        },
+        {
+          "name": "docker-boundary",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/actions/runs/39732750930/job/119671311135"
+        },
+        {
+          "name": "test (3.11)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/actions/runs/39732750814/job/119671310943"
+        },
+        {
+          "name": "test (3.12)",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/actions/runs/39732750814/job/119671310626"
+        },
+        {
+          "name": "CodeQL",
+          "conclusion": "SUCCESS",
+          "url": "https://github.com/PureSaber/quant-pipeline/runs/119671590911"
+        }
+      ]
+    }
+  ],
+  "full_etf_history_admitted": false,
+  "frozen_runtime_modified": false,
+  "native_gate_credit": false
+}

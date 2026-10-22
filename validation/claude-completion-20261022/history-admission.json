@@ -1,0 +1,324 @@
+{
+  "schema": "qdk.etf-history-admission/v1",
+  "admitted": false,
+  "start": "2020-11-16",
+  "end": "2026-10-21",
+  "sessions": 1437,
+  "symbols": [
+    "510300",
+    "510500",
+    "159915",
+    "588000"
+  ],
+  "checks": {
+    "open": {
+      "max_absolute_delta": 0.0,
+      "tolerance": 1e-10,
+      "conflicts": 0
+    },
+    "high": {
+      "max_absolute_delta": 0.0,
+      "tolerance": 1e-10,
+      "conflicts": 0
+    },
+    "low": {
+      "max_absolute_delta": 0.0,
+      "tolerance": 1e-10,
+      "conflicts": 0
+    },
+    "close": {
+      "max_absolute_delta": 0.0,
+      "tolerance": 1e-10,
+      "conflicts": 0
+    },
+    "volume": {
+      "max_absolute_delta": 2388576800.0,
+      "tolerance": 100,
+      "conflicts": 4
+    },
+    "amount": {
+      "max_absolute_delta": 5027417600.0,
+      "tolerance": 100,
+      "conflicts": 4
+    },
+    "cash_and_share_adjustment": {
+      "passed": true,
+      "events": 11,
+      "rows": 5747
+    }
+  },
+  "blocking_issues": [
+    {
+      "kind": "invalid_traded_bar",
+      "provider": "primary",
+      "symbol": "159915",
+      "date": "2023-12-12"
+    },
+    {
+      "kind": "invalid_traded_bar",
+      "provider": "primary",
+      "symbol": "159915",
+      "date": "2023-12-14"
+    },
+    {
+      "kind": "invalid_traded_bar",
+      "provider": "primary",
+      "symbol": "159915",
+      "date": "2023-12-15"
+    },
+    {
+      "kind": "invalid_traded_bar",
+      "provider": "primary",
+      "symbol": "159915",
+      "date": "2024-11-01"
+    },
+    {
+      "kind": "unexplained_missing_session",
+      "provider": "primary",
+      "symbol": "159915",
+      "date": "2021-02-08"
+    },
+    {
+      "kind": "unexplained_missing_session",
+      "provider": "comparison",
+      "symbol": "159915",
+      "date": "2021-02-08"
+    },
+    {
+      "kind": "independent_provider_required"
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "volume",
+      "symbol": "159915",
+      "date": "2023-12-12",
+      "primary": 0.0,
+      "comparison": 657303300.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "volume",
+      "symbol": "159915",
+      "date": "2023-12-14",
+      "primary": 0.0,
+      "comparison": 531726800.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "volume",
+      "symbol": "159915",
+      "date": "2023-12-15",
+      "primary": 0.0,
+      "comparison": 735592200.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "volume",
+      "symbol": "159915",
+      "date": "2024-11-01",
+      "primary": 0.0,
+      "comparison": 2388576800.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "amount",
+      "symbol": "159915",
+      "date": "2023-12-12",
+      "primary": 0.0,
+      "comparison": 1220686900.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "amount",
+      "symbol": "159915",
+      "date": "2023-12-14",
+      "primary": 0.0,
+      "comparison": 971479800.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "amount",
+      "symbol": "159915",
+      "date": "2023-12-15",
+      "primary": 0.0,
+      "comparison": 1331806800.0
+    },
+    {
+      "kind": "provider_conflict",
+      "field": "amount",
+      "symbol": "159915",
+      "date": "2024-11-01",
+      "primary": 0.0,
+      "comparison": 5027417600.0
+    },
+    {
+      "kind": "historical_master_invalid",
+      "reason": "Historical instrument master does not cover 510300 dataset interval"
+    }
+  ],
+  "evidenced_nontrading_sessions": 0,
+  "synthetic_bars": 0,
+  "scope": "retrospective fixed pool selected later; no capacity, daily tradability or future-research claim",
+  "native_action_validation": {
+    "rows": 11,
+    "symbols": 2,
+    "deferred_payments": 10
+  },
+  "native_adjustment_validation": {
+    "passed": true,
+    "symbols": [
+      {
+        "symbol": "159915",
+        "model": "multiplicative",
+        "factor_changes": 0,
+        "cash_actions": 0,
+        "max_normalized_multiplicative_error": 0.0,
+        "max_affine_price_error": 0.0
+      },
+      {
+        "symbol": "510300",
+        "model": "multiplicative",
+        "factor_changes": 6,
+        "cash_actions": 6,
+        "max_normalized_multiplicative_error": 9.72377733887697e-14,
+        "max_affine_price_error": 0.13455259310816547
+      },
+      {
+        "symbol": "510500",
+        "model": "multiplicative",
+        "factor_changes": 5,
+        "cash_actions": 5,
+        "max_normalized_multiplicative_error": 1.3017142919125036e-13,
+        "max_affine_price_error": 0.13519512387883648
+      },
+      {
+        "symbol": "588000",
+        "model": "multiplicative",
+        "factor_changes": 0,
+        "cash_actions": 0,
+        "max_normalized_multiplicative_error": 0.0,
+        "max_affine_price_error": 0.0
+      }
+    ]
+  },
+  "cash_crossvendor": [
+    {
+      "symbol": "510300",
+      "ex_date": "2021-01-18",
+      "native_cash_per_share": "0.072",
+      "sina_increment": 0.07200000000000001,
+      "passed": true
+    },
+    {
+      "symbol": "510300",
+      "ex_date": "2022-01-19",
+      "native_cash_per_share": "0.075",
+      "sina_increment": 0.07500000000000001,
+      "passed": true
+    },
+    {
+      "symbol": "510300",
+      "ex_date": "2023-01-16",
+      "native_cash_per_share": "0.064",
+      "sina_increment": 0.06399999999999995,
+      "passed": true
+    },
+    {
+      "symbol": "510300",
+      "ex_date": "2024-01-18",
+      "native_cash_per_share": "0.069",
+      "sina_increment": 0.06900000000000006,
+      "passed": true
+    },
+    {
+      "symbol": "510300",
+      "ex_date": "2025-06-18",
+      "native_cash_per_share": "0.088",
+      "sina_increment": 0.08799999999999997,
+      "passed": true
+    },
+    {
+      "symbol": "510300",
+      "ex_date": "2026-01-19",
+      "native_cash_per_share": "0.123",
+      "sina_increment": 0.123,
+      "passed": true
+    },
+    {
+      "symbol": "510500",
+      "ex_date": "2024-05-17",
+      "native_cash_per_share": "0.087",
+      "sina_increment": 0.087,
+      "passed": true
+    },
+    {
+      "symbol": "510500",
+      "ex_date": "2025-01-16",
+      "native_cash_per_share": "0.091",
+      "sina_increment": 0.091,
+      "passed": true
+    },
+    {
+      "symbol": "510500",
+      "ex_date": "2026-01-16",
+      "native_cash_per_share": "0.062",
+      "sina_increment": 0.062,
+      "passed": true
+    },
+    {
+      "symbol": "510500",
+      "ex_date": "2026-07-15",
+      "native_cash_per_share": "0.149",
+      "sina_increment": 0.14900000000000002,
+      "passed": true
+    }
+  ],
+  "split_declaration": {
+    "event_id": "510500-split-20220826-exact",
+    "symbol": "510500",
+    "announced_date": "2022-08-23",
+    "record_date": "2022-08-26",
+    "ex_date": "2022-08-29",
+    "credit_at": "2022-08-26T16:00:00+08:00",
+    "known_at": "2022-08-24T00:00:00+08:00",
+    "sellable_date": "2022-08-29",
+    "ratio": "1.14539",
+    "fractional_rule": "ceil",
+    "source": "https://www.nffund.com/DownLoader.java?filePath=%252Fmain%252Ffiles%252F2022%252F08%252F22%252F513929807319.pdf&utf8=1",
+    "file": "split-plan/source.pdf",
+    "sha256": "af9a35f59f6029bc19e0fc239ec13911d94c0b352d7acbef4e2470e1381c6d57"
+  },
+  "credit_time_basis": "issuer states end of record date; 16:00 China is a daily-replay convention, not an observed registry timestamp",
+  "source_identities": {
+    "reviewed-actions.parquet": "698d22318fe9c3c9b8b4cc621731bfbfd4c2c71a878937c6db3f3a994393afb4",
+    "adjusted-reviewed.parquet": "a5a6d860f541564dc2862969ff1f8b98c64118d6af9c658a8c0d3781c4a9817f",
+    "calendar.csv": "172f3b5360876bb7cf1ce714da28124390690d25b002814c2c43fc971c434e2d"
+  },
+  "additional_blockers": [
+    "2021-02-08 issuer suspension is located, but the direct downloaded attachment is an HTML challenge; not admissible as a hash-verified PDF.",
+    "2020-12-31 SZSE rule publication time is date-only; separate validated masters cover through 2020-12-30 and from 2021-01-04. The trading-day boundary remains uncovered.",
+    "Current rule evidence is retained only through its original 2026-10-14 capture. 2026-10-14 through 2026-10-21 needs a complete current directory/attachment refresh.",
+    "Calendar is a Sina redistribution; it has not been independently reconciled against every official annual holiday notice."
+  ],
+  "new_retrospective_study": "not_started_data_admission_failed",
+  "native_unit_replays": [
+    {
+      "record_quantity": 100,
+      "post_split_quantity": 115,
+      "expected_quantity": 115,
+      "cash": "9999280.00000000",
+      "nav": "10000003.35000000",
+      "balanced": true,
+      "repeatable": true
+    },
+    {
+      "record_quantity": 100000,
+      "post_split_quantity": 114539,
+      "expected_quantity": 114539,
+      "cash": "9280000.00000000",
+      "nav": "10000450.31000000",
+      "balanced": true,
+      "repeatable": true
+    }
+  ]
+}
