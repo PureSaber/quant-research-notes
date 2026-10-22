@@ -1,5 +1,9 @@
 # Quant Research Notes
 
+最新：[2026-10-22 业务决定与研究门槛](BUSINESS_DIRECTION_20261022.md)、
+[故障分级契约](FAILURE_HANDLING_20261022.md)、
+[Timing 与四 ETF 数据核验](validation/business-direction-20261022/README.md)。
+
 当前日常入口：[Quant Studio 工作台](https://github.com/PureSaber/quant-studio)、[操作指南](https://github.com/PureSaber/quant-studio/blob/main/DAILY_WORKFLOW.md)、[部署与备份](https://github.com/PureSaber/quant-studio/blob/main/DEPLOYMENT.md)。工程及跨设备实测见 [2026-10-10 工作台正式验收记录](validation/workbench-acceptance-20261010.md)，后续真实重启的自动启动结果见 [2026-10-11 重启验收](validation/windows-reboot-20261011.md)；前阶段能力说明保留于 [工作台阶段记录](validation/workbench-20261010.md)。
 
 新增：[免费海外衍生品来源](validation/free-derivatives-20261011.md)。
